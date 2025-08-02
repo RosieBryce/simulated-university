@@ -1,0 +1,10 @@
+# Prior educational experience distribution by race for Stonegrove University
+# Each race's percentages must sum to 1.0 (100%)
+
+Dwarf:
+  Academic: 0.12     # 12% of Dwarves have academic background
+  Vocational: 0.88   # 88% of Dwarves have vocational background
+
+Elf:
+  Academic: 0.78     # 78% of Elves have academic background
+  Vocational: 0.22   # 22% of Elves have vocational background 

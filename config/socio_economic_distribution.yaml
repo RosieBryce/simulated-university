@@ -1,0 +1,89 @@
+# Socio-economic class rank distribution by race and ethnicity for Stonegrove University
+# Scale: 1 (low) to 5 (high)
+# Each ethnicity's percentages must sum to 1.0 (100%)
+
+Dwarf:
+  Malachite:
+    1: 0.15  # 15% of Malachite Dwarves are class 1
+    2: 0.16  # 16% of Malachite Dwarves are class 2
+    3: 0.22  # 22% of Malachite Dwarves are class 3
+    4: 0.22  # 22% of Malachite Dwarves are class 4
+    5: 0.25  # 25% of Malachite Dwarves are class 5
+  
+  Granite:
+    1: 0.08  # 8% of Granite Dwarves are class 1
+    2: 0.16  # 16% of Granite Dwarves are class 2
+    3: 0.32  # 32% of Granite Dwarves are class 3
+    4: 0.33  # 33% of Granite Dwarves are class 4
+    5: 0.11  # 11% of Granite Dwarves are class 5
+  
+  Gypsum:
+    1: 0.08  # 8% of Gypsum Dwarves are class 1
+    2: 0.16  # 16% of Gypsum Dwarves are class 2
+    3: 0.32  # 32% of Gypsum Dwarves are class 3
+    4: 0.28  # 28% of Gypsum Dwarves are class 4
+    5: 0.16  # 16% of Gypsum Dwarves are class 5
+  
+  Flint:
+    1: 0.08  # 8% of Flint Dwarves are class 1
+    2: 0.16  # 16% of Flint Dwarves are class 2
+    3: 0.32  # 32% of Flint Dwarves are class 3
+    4: 0.33  # 33% of Flint Dwarves are class 4
+    5: 0.11  # 11% of Flint Dwarves are class 5
+  
+  Alabaster:
+    1: 0.12  # 12% of Alabaster Dwarves are class 1
+    2: 0.35  # 35% of Alabaster Dwarves are class 2
+    3: 0.20  # 20% of Alabaster Dwarves are class 3
+    4: 0.25  # 25% of Alabaster Dwarves are class 4
+    5: 0.08  # 8% of Alabaster Dwarves are class 5
+  
+  Sandstone:
+    1: 0.08  # 8% of Sandstone Dwarves are class 1
+    2: 0.16  # 16% of Sandstone Dwarves are class 2
+    3: 0.32  # 32% of Sandstone Dwarves are class 3
+    4: 0.28  # 28% of Sandstone Dwarves are class 4
+    5: 0.16  # 16% of Sandstone Dwarves are class 5
+
+Elf:
+  Holly:
+    1: 0.04  # 4% of Holly Elves are class 1
+    2: 0.12  # 12% of Holly Elves are class 2
+    3: 0.35  # 35% of Holly Elves are class 3
+    4: 0.31  # 31% of Holly Elves are class 4
+    5: 0.18  # 18% of Holly Elves are class 5
+  
+  Yew:
+    1: 0.04  # 4% of Yew Elves are class 1
+    2: 0.12  # 12% of Yew Elves are class 2
+    3: 0.35  # 35% of Yew Elves are class 3
+    4: 0.31  # 31% of Yew Elves are class 4
+    5: 0.18  # 18% of Yew Elves are class 5
+  
+  Rowan:
+    1: 0.04  # 4% of Rowan Elves are class 1
+    2: 0.12  # 12% of Rowan Elves are class 2
+    3: 0.35  # 35% of Rowan Elves are class 3
+    4: 0.31  # 31% of Rowan Elves are class 4
+    5: 0.18  # 18% of Rowan Elves are class 5
+  
+  Ash:
+    1: 0.04  # 4% of Ash Elves are class 1
+    2: 0.12  # 12% of Ash Elves are class 2
+    3: 0.35  # 35% of Ash Elves are class 3
+    4: 0.31  # 31% of Ash Elves are class 4
+    5: 0.18  # 18% of Ash Elves are class 5
+  
+  Baobab:
+    1: 0.00  # 0% of Baobab Elves are class 1
+    2: 0.08  # 8% of Baobab Elves are class 2
+    3: 0.26  # 26% of Baobab Elves are class 3
+    4: 0.35  # 35% of Baobab Elves are class 4
+    5: 0.31  # 31% of Baobab Elves are class 5
+  
+  Palm:
+    1: 0.04  # 4% of Palm Elves are class 1
+    2: 0.12  # 12% of Palm Elves are class 2
+    3: 0.28  # 28% of Palm Elves are class 3
+    4: 0.31  # 31% of Palm Elves are class 4
+    5: 0.25  # 25% of Palm Elves are class 5 

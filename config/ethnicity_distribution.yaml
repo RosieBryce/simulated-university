@@ -1,0 +1,18 @@
+# Ethnicity distribution by race for Stonegrove University
+# Each race's percentages must sum to 1.0 (100%)
+
+Dwarf:
+  Malachite: 0.10    # 10% of Dwarves are Malachite
+  Granite: 0.15      # 15% of Dwarves are Granite
+  Gypsum: 0.125      # 12.5% of Dwarves are Gypsum
+  Flint: 0.35        # 35% of Dwarves are Flint
+  Alabaster: 0.125   # 12.5% of Dwarves are Alabaster
+  Sandstone: 0.15    # 15% of Dwarves are Sandstone
+
+Elf:
+  Holly: 0.10        # 10% of Elves are Holly
+  Yew: 0.15          # 15% of Elves are Yew
+  Rowan: 0.125       # 12.5% of Elves are Rowan
+  Ash: 0.125         # 12.5% of Elves are Ash
+  Baobab: 0.35       # 35% of Elves are Baobab
+  Palm: 0.15         # 15% of Elves are Palm 
