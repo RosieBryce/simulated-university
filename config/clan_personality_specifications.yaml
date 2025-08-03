@@ -335,40 +335,204 @@ clans:
       community_engagement: [0.7, 0.9]         # High - community celebration
 
 # Health and Disability Tendencies by Clan
+# These are base probabilities that can be modified by individual circumstances
 health_tendencies:
   # Cave-dwelling dwarves (higher risk of acquired disabilities)
   flint:
-    physical_disability_acquired: 0.08    # Mining, forging injuries
-    respiratory_issues: 0.12              # Cave dust exposure
-    hearing_impairment: 0.06              # Loud forging environments
-    stress_related_mental_health: 0.05    # High-pressure work
+    physical_disability: 0.12             # Mining, forging injuries
+    mental_health_disability: 0.08        # High-pressure work stress
+    specific_learning_disability: 0.02    # Limited early education
+    autistic_spectrum: 0.02               # Lower diagnosis rates
+    adhd: 0.15                            # High energy work environment
+    dyslexia: 0.05                        # Limited literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.08        # Loud forging environments
+    wheelchair_user: 0.02                 # Mining accidents
+    requires_personal_care: 0.03          # Severe injuries
+    blind_or_visually_impaired: 0.05      # Cave work hazards
+    communication_difficulties: 0.04      # Blunt communication style
   
   malachite:
-    physical_disability_acquired: 0.05    # Stonecrafting injuries
-    respiratory_issues: 0.08              # Mineral dust
-    stress_related_mental_health: 0.03    # Balanced lifestyle
+    physical_disability: 0.08             # Stonecrafting injuries
+    mental_health_disability: 0.06        # Balanced but some stress
+    specific_learning_disability: 0.02    # Moderate education access
+    autistic_spectrum: 0.04               # Scholarly nature
+    adhd: 0.08                            # Moderate energy
+    dyslexia: 0.03                        # Some literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.04        # Crafting noise
+    wheelchair_user: 0.01                 # Rare accidents
+    requires_personal_care: 0.01          # Rare severe injuries
+    blind_or_visually_impaired: 0.03      # Some visual strain
+    communication_difficulties: 0.02      # Generally good communication
   
   granite:
-    physical_disability_acquired: 0.04    # Traditional work
-    stress_related_mental_health: 0.04    # Hierarchical pressure
+    physical_disability: 0.06             # Traditional work
+    mental_health_disability: 0.07        # Hierarchical pressure
+    specific_learning_disability: 0.02    # Good education access
+    autistic_spectrum: 0.03               # Structured environment
+    adhd: 0.06                            # Disciplined environment
+    dyslexia: 0.03                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.03        # Some noise exposure
+    wheelchair_user: 0.01                 # Rare accidents
+    requires_personal_care: 0.01          # Rare severe injuries
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Formal communication
+  
+  alabaster:
+    physical_disability: 0.10             # Poor working conditions
+    mental_health_disability: 0.12        # Marginalization stress
+    specific_learning_disability: 0.03    # Limited education access
+    autistic_spectrum: 0.05               # Scholarly introversion
+    adhd: 0.10                            # Stress-related
+    dyslexia: 0.04                        # Limited literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.04        # Poor environments
+    wheelchair_user: 0.02                 # Poor conditions
+    requires_personal_care: 0.03          # Limited healthcare
+    blind_or_visually_impaired: 0.05      # Poor lighting
+    communication_difficulties: 0.04      # Social anxiety
   
   # Surface-dwelling elves (different health patterns)
   baobab:
-    skin_conditions: 0.04                 # Sun exposure
-    stress_related_mental_health: 0.03    # Elite pressure
+    physical_disability: 0.04             # Elite healthcare
+    mental_health_disability: 0.06        # Elite pressure
+    specific_learning_disability: 0.02    # Excellent education
+    autistic_spectrum: 0.08               # Sophisticated environment
+    adhd: 0.02                            # Structured environment
+    dyslexia: 0.01                        # Excellent literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Good environments
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Formal communication
   
   palm:
-    stress_related_mental_health: 0.05    # Survivor trauma
-    seasonal_affective_disorder: 0.03     # Weather sensitivity
+    physical_disability: 0.05             # Seafaring injuries
+    mental_health_disability: 0.09        # Survivor trauma
+    specific_learning_disability: 0.03    # Disrupted education
+    autistic_spectrum: 0.04               # Adaptive environment
+    adhd: 0.05                            # High energy celebration
+    dyslexia: 0.03                        # Some literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.03        # Seafaring noise
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.03      # Some visual strain
+    communication_difficulties: 0.02      # Generally good communication
   
-  # Marginalized groups (higher stress-related issues)
-  alabaster:
-    stress_related_mental_health: 0.08    # Marginalization stress
-    physical_disability_acquired: 0.06    # Poor working conditions
-    respiratory_issues: 0.05              # Dust exposure
+  # Other dwarf clans (moderate patterns)
+  obsidian:
+    physical_disability: 0.07             # Crafting injuries
+    mental_health_disability: 0.08        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.03               # Structured work
+    adhd: 0.07                            # Moderate energy
+    dyslexia: 0.03                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.04        # Some noise
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.03      # Good lighting
+    communication_difficulties: 0.02      # Good communication
   
-  # All populations
-  all:
-    stress_related_mental_health: 0.05    # Academic pressure baseline
-    repetitive_strain_injury: 0.03        # Study-related
-    seasonal_affective_disorder: 0.02     # Weather changes 
+  sandstone:
+    physical_disability: 0.06             # Construction work
+    mental_health_disability: 0.07        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.03               # Structured work
+    adhd: 0.06                            # Moderate energy
+    dyslexia: 0.03                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.03        # Some noise
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Good communication
+  
+  slate:
+    physical_disability: 0.05             # Administrative work
+    mental_health_disability: 0.06        # Low stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.04               # Structured environment
+    adhd: 0.04                            # Low energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Quiet environment
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.01      # Excellent communication
+  
+  bismuth:
+    physical_disability: 0.04             # Light craft work
+    mental_health_disability: 0.05        # Low stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.05               # Scholarly environment
+    adhd: 0.03                            # Low energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Quiet environment
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.01      # Excellent communication
+  
+  # Other elf clans (moderate patterns)
+  holly:
+    physical_disability: 0.04             # Good healthcare
+    mental_health_disability: 0.07        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.06               # Scholarly environment
+    adhd: 0.03                            # Moderate energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Good environments
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Good communication
+  
+  rowan:
+    physical_disability: 0.04             # Good healthcare
+    mental_health_disability: 0.06        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.05               # Scholarly environment
+    adhd: 0.03                            # Moderate energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Good environments
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Good communication
+  
+  ash:
+    physical_disability: 0.05             # Moderate healthcare
+    mental_health_disability: 0.08        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.04               # Moderate environment
+    adhd: 0.04                            # Moderate energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.02           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Good environments
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Good communication
+  
+  yew:
+    physical_disability: 0.04             # Good healthcare
+    mental_health_disability: 0.06        # Moderate stress
+    specific_learning_disability: 0.02    # Good education
+    autistic_spectrum: 0.05               # Scholarly environment
+    adhd: 0.03                            # Moderate energy
+    dyslexia: 0.02                        # Good literacy support
+    other_neurodivergence: 0.03           # Various conditions
+    deaf_or_hearing_impaired: 0.02        # Good environments
+    wheelchair_user: 0.01                 # Rare
+    requires_personal_care: 0.01          # Rare
+    blind_or_visually_impaired: 0.02      # Good lighting
+    communication_difficulties: 0.02      # Good communication 
