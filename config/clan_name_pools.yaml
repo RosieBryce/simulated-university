@@ -1,1020 +1,2156 @@
-# Clan Name Pools for Stonegrove University
-# Based on name patterns Excel file
-# Frequency weights: Common (0.6), Uncommon (0.3), Rare (0.1)
-
 clans:
-  # ===== DWARF CLANS =====
-  
-  malachite:
-    name: "Malachite Dwarves"
-    forenames:
-      male:
-        - name: "Thorin"
-          frequency: 0.6
-        - name: "Balin"
-          frequency: 0.6
-        - name: "Dwalin"
-          frequency: 0.6
-        - name: "Gloin"
-          frequency: 0.6
-        - name: "Oin"
-          frequency: 0.6
-        - name: "Bifur"
-          frequency: 0.3
-        - name: "Bofur"
-          frequency: 0.3
-        - name: "Bombur"
-          frequency: 0.3
-        - name: "Dori"
-          frequency: 0.3
-        - name: "Nori"
-          frequency: 0.3
-        - name: "Ori"
-          frequency: 0.3
-        - name: "Fili"
-          frequency: 0.3
-        - name: "Kili"
-          frequency: 0.3
-        - name: "Gimli"
-          frequency: 0.1
-        - name: "Thrain"
-          frequency: 0.1
-        - name: "Thror"
-          frequency: 0.1
-      female:
-        - name: "Dís"
-          frequency: 0.6
-        - name: "Anra"
-          frequency: 0.6
-        - name: "Frida"
-          frequency: 0.6
-        - name: "Helga"
-          frequency: 0.6
-        - name: "Ingrid"
-          frequency: 0.6
-        - name: "Sigrid"
-          frequency: 0.3
-        - name: "Thora"
-          frequency: 0.3
-        - name: "Vera"
-          frequency: 0.3
-        - name: "Ylva"
-          frequency: 0.3
-        - name: "Astrid"
-          frequency: 0.1
-        - name: "Brunhild"
-          frequency: 0.1
-        - name: "Gudrun"
-          frequency: 0.1
-      neuter:
-        - name: "Alin"
-          frequency: 0.1
-        - name: "Elin"
-          frequency: 0.1
-        - name: "Rin"
-          frequency: 0.1
-    surnames:
-      - name: "Alloycloak"
-        frequency: 0.3
-      - name: "Copperforge"
-        frequency: 0.6
-      - name: "Emeraldheart"
-        frequency: 0.6
-      - name: "Greenstone"
-        frequency: 0.6
-      - name: "Malachite"
-        frequency: 0.6
-      - name: "Mossbeard"
-        frequency: 0.3
-      - name: "Stonewhisper"
-        frequency: 0.3
-      - name: "Verdant"
-        frequency: 0.3
-      - name: "Crystalweave"
-        frequency: 0.1
-      - name: "Luminescent"
-        frequency: 0.1
-
-  granite:
-    name: "Granite Dwarves"
-    forenames:
-      male:
-        - name: "Thrain"
-          frequency: 0.6
-        - name: "Thror"
-          frequency: 0.6
-        - name: "Dain"
-          frequency: 0.6
-        - name: "Nain"
-          frequency: 0.6
-        - name: "Gror"
-          frequency: 0.6
-        - name: "Fror"
-          frequency: 0.3
-        - name: "Gror"
-          frequency: 0.3
-        - name: "Nar"
-          frequency: 0.3
-        - name: "Anar"
-          frequency: 0.3
-        - name: "Durin"
-          frequency: 0.1
-        - name: "Azaghal"
-          frequency: 0.1
-        - name: "Telchar"
-          frequency: 0.1
-      female:
-        - name: "Agda"
-          frequency: 0.6
-        - name: "Aldra"
-          frequency: 0.6
-        - name: "Hilda"
-          frequency: 0.6
-        - name: "Runa"
-          frequency: 0.6
-        - name: "Saga"
-          frequency: 0.6
-        - name: "Thora"
-          frequency: 0.3
-        - name: "Valka"
-          frequency: 0.3
-        - name: "Yrsa"
-          frequency: 0.3
-        - name: "Brynhild"
-          frequency: 0.1
-        - name: "Gudrun"
-          frequency: 0.1
-        - name: "Sigrun"
-          frequency: 0.1
-      neuter:
-        - name: "Stein"
-          frequency: 0.1
-        - name: "Berg"
-          frequency: 0.1
-    surnames:
-      - name: "Ancestrail"
-        frequency: 0.1
-      - name: "Ironbeard"
-        frequency: 0.6
-      - name: "Stonefist"
-        frequency: 0.6
-      - name: "Granite"
-        frequency: 0.6
-      - name: "Ironfoot"
-        frequency: 0.6
-      - name: "Stonehelm"
-        frequency: 0.3
-      - name: "Ironhand"
-        frequency: 0.3
-      - name: "Stoneaxe"
-        frequency: 0.3
-      - name: "Durinson"
-        frequency: 0.1
-      - name: "Longbeard"
-        frequency: 0.1
-
-  flint:
-    name: "Flint Dwarves"
-    forenames:
-      male:
-        - name: "Grim"
-          frequency: 0.6
-        - name: "Harsh"
-          frequency: 0.6
-        - name: "Rough"
-          frequency: 0.6
-        - name: "Sharp"
-          frequency: 0.6
-        - name: "Stout"
-          frequency: 0.6
-        - name: "Bold"
-          frequency: 0.3
-        - name: "Hard"
-          frequency: 0.3
-        - name: "Sturdy"
-          frequency: 0.3
-        - name: "Thick"
-          frequency: 0.3
-        - name: "Flint"
-          frequency: 0.1
-        - name: "Spark"
-          frequency: 0.1
-        - name: "Ember"
-          frequency: 0.1
-      female:
-        - name: "Brittle"
-          frequency: 0.6
-        - name: "Hardy"
-          frequency: 0.6
-        - name: "Rough"
-          frequency: 0.6
-        - name: "Sharp"
-          frequency: 0.6
-        - name: "Stout"
-          frequency: 0.6
-        - name: "Bold"
-          frequency: 0.3
-        - name: "Firm"
-          frequency: 0.3
-        - name: "Solid"
-          frequency: 0.3
-        - name: "Spark"
-          frequency: 0.1
-        - name: "Flame"
-          frequency: 0.1
-        - name: "Ash"
-          frequency: 0.1
-      neuter:
-        - name: "Flint"
-          frequency: 0.1
-        - name: "Spark"
-          frequency: 0.1
-    surnames:
-      - name: "Flintspark"
-        frequency: 0.6
-      - name: "Ironforge"
-        frequency: 0.6
-      - name: "Steelhand"
-        frequency: 0.6
-      - name: "Firebeard"
-        frequency: 0.6
-      - name: "Ashbeard"
-        frequency: 0.3
-      - name: "Emberbeard"
-        frequency: 0.3
-      - name: "Flamebeard"
-        frequency: 0.3
-      - name: "Sparkbeard"
-        frequency: 0.3
-      - name: "Volcanobeard"
-        frequency: 0.1
-      - name: "Magmabeard"
-        frequency: 0.1
-
   alabaster:
-    name: "Alabaster Dwarves"
     forenames:
-      male:
-        - name: "Pale"
-          frequency: 0.6
-        - name: "White"
-          frequency: 0.6
-        - name: "Chalk"
-          frequency: 0.6
-        - name: "Dust"
-          frequency: 0.6
-        - name: "Powder"
-          frequency: 0.6
-        - name: "Ash"
-          frequency: 0.3
-        - name: "Frost"
-          frequency: 0.3
-        - name: "Ice"
-          frequency: 0.3
-        - name: "Snow"
-          frequency: 0.3
-        - name: "Alabaster"
-          frequency: 0.1
-        - name: "Marble"
-          frequency: 0.1
-        - name: "Pearl"
-          frequency: 0.1
       female:
-        - name: "Pale"
-          frequency: 0.6
-        - name: "White"
-          frequency: 0.6
-        - name: "Chalk"
-          frequency: 0.6
-        - name: "Dust"
-          frequency: 0.6
-        - name: "Powder"
-          frequency: 0.6
-        - name: "Ash"
-          frequency: 0.3
-        - name: "Frost"
-          frequency: 0.3
-        - name: "Ice"
-          frequency: 0.3
-        - name: "Snow"
-          frequency: 0.3
-        - name: "Alabaster"
-          frequency: 0.1
-        - name: "Marble"
-          frequency: 0.1
-        - name: "Pearl"
-          frequency: 0.1
-      neuter:
-        - name: "Alin"
-          frequency: 0.1
-        - name: "Pale"
-          frequency: 0.1
-        - name: "White"
-          frequency: 0.1
-    surnames:
-      - name: "Alabaster"
-        frequency: 0.6
-      - name: "Palebeard"
-        frequency: 0.6
-      - name: "Whitebeard"
-        frequency: 0.6
-      - name: "Chalkbeard"
-        frequency: 0.6
-      - name: "Dustbeard"
-        frequency: 0.3
-      - name: "Powderbeard"
-        frequency: 0.3
-      - name: "Ashbeard"
-        frequency: 0.3
-      - name: "Frostbeard"
-        frequency: 0.3
-      - name: "Marblebeard"
-        frequency: 0.1
-      - name: "Pearlbeard"
-        frequency: 0.1
-
-  sandstone:
-    name: "Sandstone Dwarves"
-    forenames:
+      - frequency: 0.3
+        name: Caldra
+      - frequency: 0.6
+        name: Calla
+      - frequency: 0.1
+        name: Doma
+      - frequency: 0.3
+        name: Elsha
+      - frequency: 0.6
+        name: Enia
+      - frequency: 0.6
+        name: Eska
+      - frequency: 0.3
+        name: Felya
+      - frequency: 0.6
+        name: Hesta
+      - frequency: 0.3
+        name: Illa
+      - frequency: 0.6
+        name: Lira
+      - frequency: 0.6
+        name: Merra
+      - frequency: 0.1
+        name: Mirel
+      - frequency: 0.3
+        name: Nayra
+      - frequency: 0.3
+        name: Noria
+      - frequency: 0.3
+        name: Renya
+      - frequency: 0.3
+        name: Selka
+      - frequency: 0.6
+        name: Serra
+      - frequency: 0.6
+        name: Solva
+      - frequency: 0.1
+        name: Sylra
+      - frequency: 0.6
+        name: Tilda
+      - frequency: 0.1
+        name: Tirra
+      - frequency: 0.6
+        name: Vara
+      - frequency: 0.6
+        name: Yana
       male:
-        - name: "Sand"
-          frequency: 0.6
-        - name: "Stone"
-          frequency: 0.6
-        - name: "Rock"
-          frequency: 0.6
-        - name: "Gravel"
-          frequency: 0.6
-        - name: "Pebble"
-          frequency: 0.6
-        - name: "Boulder"
-          frequency: 0.3
-        - name: "Crag"
-          frequency: 0.3
-        - name: "Ridge"
-          frequency: 0.3
-        - name: "Cliff"
-          frequency: 0.3
-        - name: "Sandstone"
-          frequency: 0.1
-        - name: "Quartz"
-          frequency: 0.1
-        - name: "Feldspar"
-          frequency: 0.1
-      female:
-        - name: "Sand"
-          frequency: 0.6
-        - name: "Stone"
-          frequency: 0.6
-        - name: "Rock"
-          frequency: 0.6
-        - name: "Gravel"
-          frequency: 0.6
-        - name: "Pebble"
-          frequency: 0.6
-        - name: "Boulder"
-          frequency: 0.3
-        - name: "Crag"
-          frequency: 0.3
-        - name: "Ridge"
-          frequency: 0.3
-        - name: "Cliff"
-          frequency: 0.3
-        - name: "Sandstone"
-          frequency: 0.1
-        - name: "Quartz"
-          frequency: 0.1
-        - name: "Feldspar"
-          frequency: 0.1
+      - frequency: 0.3
+        name: Anric
+      - frequency: 0.3
+        name: Brenik
+      - frequency: 0.6
+        name: Darel
+      - frequency: 0.1
+        name: Davi
+      - frequency: 0.1
+        name: Donrik
+      - frequency: 0.6
+        name: Edrik
+      - frequency: 0.1
+        name: Elvor
+      - frequency: 0.3
+        name: Emrin
+      - frequency: 0.1
+        name: Grellin
+      - frequency: 0.6
+        name: Halem
+      - frequency: 0.6
+        name: Harnel
+      - frequency: 0.3
+        name: Jemin
+      - frequency: 0.3
+        name: Jonel
+      - frequency: 0.6
+        name: Kallin
+      - frequency: 0.3
+        name: Omren
+      - frequency: 0.3
+        name: Rivin
+      - frequency: 0.3
+        name: Torrel
+      - frequency: 0.1
+        name: Vask
       neuter:
-        - name: "Sand"
-          frequency: 0.1
-        - name: "Stone"
-          frequency: 0.1
+      - frequency: 0.1
+        name: Alin
+      - frequency: 0.3
+        name: Braniel
+      - frequency: 0.6
+        name: Lior
+      - frequency: 0.3
+        name: Lomel
+      - frequency: 0.3
+        name: Orien
+      - frequency: 0.1
+        name: Vennel
+    name: Alabaster Dwarfs
+    race: Dwarf
     surnames:
-      - name: "Sandstone"
-        frequency: 0.6
-      - name: "Sandbeard"
-        frequency: 0.6
-      - name: "Stonebeard"
-        frequency: 0.6
-      - name: "Rockbeard"
-        frequency: 0.6
-      - name: "Gravelbeard"
-        frequency: 0.3
-      - name: "Pebblebeard"
-        frequency: 0.3
-      - name: "Boulderbeard"
-        frequency: 0.3
-      - name: "Cragbeard"
-        frequency: 0.3
-      - name: "Quartzbeard"
-        frequency: 0.1
-      - name: "Feldsparbeard"
-        frequency: 0.1
-
-  obsidian:
-    name: "Obsidian Dwarves"
-    forenames:
-      male:
-        - name: "Aerik"
-          frequency: 0.6
-        - name: "Dark"
-          frequency: 0.6
-        - name: "Shadow"
-          frequency: 0.6
-        - name: "Night"
-          frequency: 0.6
-        - name: "Black"
-          frequency: 0.6
-        - name: "Obsidian"
-          frequency: 0.3
-        - name: "Onyx"
-          frequency: 0.3
-        - name: "Jet"
-          frequency: 0.3
-        - name: "Coal"
-          frequency: 0.3
-        - name: "Void"
-          frequency: 0.1
-        - name: "Abyss"
-          frequency: 0.1
-        - name: "Eclipse"
-          frequency: 0.1
-      female:
-        - name: "Dark"
-          frequency: 0.6
-        - name: "Shadow"
-          frequency: 0.6
-        - name: "Night"
-          frequency: 0.6
-        - name: "Black"
-          frequency: 0.6
-        - name: "Obsidian"
-          frequency: 0.6
-        - name: "Onyx"
-          frequency: 0.3
-        - name: "Jet"
-          frequency: 0.3
-        - name: "Coal"
-          frequency: 0.3
-        - name: "Void"
-          frequency: 0.1
-        - name: "Abyss"
-          frequency: 0.1
-        - name: "Eclipse"
-          frequency: 0.1
-      neuter:
-        - name: "Obsidian"
-          frequency: 0.1
-        - name: "Dark"
-          frequency: 0.1
-    surnames:
-      - name: "Obsidian"
-        frequency: 0.6
-      - name: "Darkbeard"
-        frequency: 0.6
-      - name: "Shadowbeard"
-        frequency: 0.6
-      - name: "Nightbeard"
-        frequency: 0.6
-      - name: "Blackbeard"
-        frequency: 0.3
-      - name: "Onyxbeard"
-        frequency: 0.3
-      - name: "Jetbeard"
-        frequency: 0.3
-      - name: "Coalbeard"
-        frequency: 0.3
-      - name: "Voidbeard"
-        frequency: 0.1
-      - name: "Abyssbeard"
-        frequency: 0.1
-
-  bismuth:
-    name: "Bismuth Dwarves"
-    forenames:
-      male:
-        - name: "Bismuth"
-          frequency: 0.6
-        - name: "Iridescent"
-          frequency: 0.6
-        - name: "Shimmer"
-          frequency: 0.6
-        - name: "Glow"
-          frequency: 0.6
-        - name: "Sparkle"
-          frequency: 0.6
-        - name: "Prism"
-          frequency: 0.3
-        - name: "Crystal"
-          frequency: 0.3
-        - name: "Gem"
-          frequency: 0.3
-        - name: "Jewel"
-          frequency: 0.3
-        - name: "Rainbow"
-          frequency: 0.1
-        - name: "Spectrum"
-          frequency: 0.1
-        - name: "Aurora"
-          frequency: 0.1
-      female:
-        - name: "Bismuth"
-          frequency: 0.6
-        - name: "Iridescent"
-          frequency: 0.6
-        - name: "Shimmer"
-          frequency: 0.6
-        - name: "Glow"
-          frequency: 0.6
-        - name: "Sparkle"
-          frequency: 0.6
-        - name: "Prism"
-          frequency: 0.3
-        - name: "Crystal"
-          frequency: 0.3
-        - name: "Gem"
-          frequency: 0.3
-        - name: "Jewel"
-          frequency: 0.3
-        - name: "Rainbow"
-          frequency: 0.1
-        - name: "Spectrum"
-          frequency: 0.1
-        - name: "Aurora"
-          frequency: 0.1
-      neuter:
-        - name: "Bismuth"
-          frequency: 0.1
-        - name: "Iridescent"
-          frequency: 0.1
-    surnames:
-      - name: "Bismuth"
-        frequency: 0.6
-      - name: "Alloyvane"
-        frequency: 0.1
-      - name: "Iridescentbeard"
-        frequency: 0.6
-      - name: "Shimmerbeard"
-        frequency: 0.6
-      - name: "Glowbeard"
-        frequency: 0.6
-      - name: "Sparklebeard"
-        frequency: 0.3
-      - name: "Prismbeard"
-        frequency: 0.3
-      - name: "Crystalbeard"
-        frequency: 0.3
-      - name: "Rainbowbeard"
-        frequency: 0.1
-      - name: "Spectrumbeard"
-        frequency: 0.1
-
-  slate:
-    name: "Slate Dwarves"
-    forenames:
-      male:
-        - name: "Slate"
-          frequency: 0.6
-        - name: "Grey"
-          frequency: 0.6
-        - name: "Stone"
-          frequency: 0.6
-        - name: "Rock"
-          frequency: 0.6
-        - name: "Brittle"
-          frequency: 0.6
-        - name: "Sharp"
-          frequency: 0.3
-        - name: "Hard"
-          frequency: 0.3
-        - name: "Firm"
-          frequency: 0.3
-        - name: "Solid"
-          frequency: 0.3
-        - name: "Precision"
-          frequency: 0.1
-        - name: "Exact"
-          frequency: 0.1
-        - name: "Accurate"
-          frequency: 0.1
-      female:
-        - name: "Slate"
-          frequency: 0.6
-        - name: "Grey"
-          frequency: 0.6
-        - name: "Stone"
-          frequency: 0.6
-        - name: "Rock"
-          frequency: 0.6
-        - name: "Brittle"
-          frequency: 0.6
-        - name: "Sharp"
-          frequency: 0.3
-        - name: "Hard"
-          frequency: 0.3
-        - name: "Firm"
-          frequency: 0.3
-        - name: "Solid"
-          frequency: 0.3
-        - name: "Precision"
-          frequency: 0.1
-        - name: "Exact"
-          frequency: 0.1
-        - name: "Accurate"
-          frequency: 0.1
-      neuter:
-        - name: "Slate"
-          frequency: 0.1
-        - name: "Grey"
-          frequency: 0.1
-    surnames:
-      - name: "Slate"
-        frequency: 0.6
-      - name: "Greybeard"
-        frequency: 0.6
-      - name: "Stonebeard"
-        frequency: 0.6
-      - name: "Rockbeard"
-        frequency: 0.6
-      - name: "Brittlebeard"
-        frequency: 0.3
-      - name: "Sharpbeard"
-        frequency: 0.3
-      - name: "Hardbeard"
-        frequency: 0.3
-      - name: "Firmbeard"
-        frequency: 0.3
-      - name: "Precisionbeard"
-        frequency: 0.1
-      - name: "Exactbeard"
-        frequency: 0.1
-
-  # ===== ELF CLANS =====
-  
-  holly:
-    name: "Holly Elves"
-    forenames:
-      male:
-        - name: "Aelrin"
-          frequency: 0.6
-        - name: "Aeren"
-          frequency: 0.3
-        - name: "Aeriel"
-          frequency: 0.6
-        - name: "Aerion"
-          frequency: 0.6
-        - name: "Aerthorn"
-          frequency: 0.3
-        - name: "Aluin"
-          frequency: 0.3
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      female:
-        - name: "Aelrin"
-          frequency: 0.6
-        - name: "Aeriel"
-          frequency: 0.6
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alenya"
-          frequency: 0.3
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      neuter:
-        - name: "Aeren"
-          frequency: 0.3
-        - name: "Aiven"
-          frequency: 0.6
-        - name: "Aluin"
-          frequency: 0.3
-    surnames:
-      - name: "Moonwhisper"
-        frequency: 0.1
-      - name: "Starlight"
-        frequency: 0.1
-      - name: "Dawnweaver"
-        frequency: 0.1
-      - name: "Holly"
-        frequency: 0.6
-      - name: "Winterwatch"
-        frequency: 0.6
-      - name: "Thornwarden"
-        frequency: 0.6
-      - name: "Crimson"
-        frequency: 0.3
-      - name: "Berry"
-        frequency: 0.3
-      - name: "Frost"
-        frequency: 0.3
-      - name: "Snow"
-        frequency: 0.3
-
-  yew:
-    name: "Yew Elves"
-    forenames:
-      male:
-        - name: "Aerthorn"
-          frequency: 0.3
-        - name: "Aluin"
-          frequency: 0.3
-        - name: "Aerion"
-          frequency: 0.6
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      female:
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alenya"
-          frequency: 0.3
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      neuter:
-        - name: "Aiven"
-          frequency: 0.6
-        - name: "Aluin"
-          frequency: 0.3
-    surnames:
-      - name: "Yew"
-        frequency: 0.6
-      - name: "Ancient"
-        frequency: 0.6
-      - name: "Memory"
-        frequency: 0.6
-      - name: "Guardian"
-        frequency: 0.6
-      - name: "Stern"
-        frequency: 0.3
-      - name: "Political"
-        frequency: 0.3
-      - name: "Power"
-        frequency: 0.3
-      - name: "Legacy"
-        frequency: 0.1
-      - name: "Heritage"
-        frequency: 0.1
-
-  rowan:
-    name: "Rowan Elves"
-    forenames:
-      male:
-        - name: "Aiven"
-          frequency: 0.6
-        - name: "Alenya"
-          frequency: 0.3
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      female:
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alenya"
-          frequency: 0.3
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
-      neuter:
-        - name: "Aiven"
-          frequency: 0.6
-    surnames:
-      - name: "Rowan"
-        frequency: 0.6
-      - name: "Hearthbinder"
-        frequency: 0.6
-      - name: "Emberkin"
-        frequency: 0.6
-      - name: "Firegrove"
-        frequency: 0.6
-      - name: "Warm"
-        frequency: 0.3
-      - name: "Hospitable"
-        frequency: 0.3
-      - name: "Welcoming"
-        frequency: 0.3
-      - name: "Storyteller"
-        frequency: 0.1
-      - name: "Poet"
-        frequency: 0.1
-
+    - frequency: 0.1
+      name: Ashbarrow
+    - frequency: 0.1
+      name: Basketmark
+    - frequency: 0.1
+      name: Blanchedge
+    - frequency: 0.3
+      name: Bloomjoint
+    - frequency: 0.3
+      name: Chalkhaven
+    - frequency: 0.6
+      name: Claymantle
+    - frequency: 0.1
+      name: Crumblevale
+    - frequency: 0.3
+      name: Dusktiller
+    - frequency: 0.3
+      name: Emberlin
+    - frequency: 0.6
+      name: Gracestone
+    - frequency: 0.6
+      name: Greyfold
+    - frequency: 0.6
+      name: Hearthbind
+    - frequency: 0.1
+      name: Hollowpick
+    - frequency: 0.6
+      name: Homehewer
+    - frequency: 0.3
+      name: Hopegrind
+    - frequency: 0.1
+      name: Hushfallow
+    - frequency: 0.6
+      name: Kindgrip
+    - frequency: 0.1
+      name: Kinscuttle
+    - frequency: 0.3
+      name: Lightburrow
+    - frequency: 0.1
+      name: Lowbrace
+    - frequency: 0.1
+      name: Marshshade
+    - frequency: 0.1
+      name: Mildclasp
+    - frequency: 0.1
+      name: Mirebind
+    - frequency: 0.6
+      name: Mosshearth
+    - frequency: 0.1
+      name: Palegrit
+    - frequency: 0.1
+      name: Patchvein
+    - frequency: 0.6
+      name: Plainbrow
+    - frequency: 0.1
+      name: Quietbluff
+    - frequency: 0.3
+      name: Quietlock
+    - frequency: 0.1
+      name: Raincoat
+    - frequency: 0.1
+      name: Safecradle
+    - frequency: 0.1
+      name: Sheltergrim
+    - frequency: 0.1
+      name: Shygravel
+    - frequency: 0.6
+      name: Softmarch
+    - frequency: 0.3
+      name: Steadmarble
+    - frequency: 0.1
+      name: Stoepbrace
+    - frequency: 0.3
+      name: Threadstone
+    - frequency: 0.3
+      name: Wallmantle
+    - frequency: 0.1
+      name: Washcloak
+    - frequency: 0.1
+      name: Wovenroot
   ash:
-    name: "Ash Elves"
     forenames:
-      male:
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
       female:
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Alira
+      - frequency: 0.1
+        name: Eira
+      - frequency: 0.6
+        name: Elsha
+      - frequency: 0.6
+        name: Emberyn
+      - frequency: 0.3
+        name: Irith
+      - frequency: 0.3
+        name: Maelis
+      - frequency: 0.3
+        name: Noriel
+      - frequency: 0.6
+        name: Saelith
+      - frequency: 0.6
+        name: Sylra
+      - frequency: 0.1
+        name: Syrris
+      - frequency: 0.1
+        name: Vaela
+      - frequency: 0.1
+        name: Velra
+      - frequency: 0.6
+        name: Ysolde
+      - frequency: 0.3
+        name: Zira
+      male:
+      - frequency: 0.3
+        name: Caedros
+      - frequency: 0.6
+        name: Corven
+      - frequency: 0.3
+        name: Fenrik
+      - frequency: 0.6
+        name: Kaelen
+      - frequency: 0.3
+        name: Kaevan
+      - frequency: 0.1
+        name: Orren
+      - frequency: 0.1
+        name: Rhaelan
+      - frequency: 0.6
+        name: Riven
+      - frequency: 0.1
+        name: Solan
+      - frequency: 0.6
+        name: Varek
+      - frequency: 0.6
+        name: Vareth
       neuter:
-        - name: "Ash"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Ashen
+      - frequency: 0.3
+        name: Brynn
+      - frequency: 0.1
+        name: Invar
+      - frequency: 0.6
+        name: Talien
+      - frequency: 0.6
+        name: Thorne
+    name: Ash Elfs
+    race: Elf
     surnames:
-      - name: "Ash"
-        frequency: 0.6
-      - name: "Stormwalker"
-        frequency: 0.6
-      - name: "Fireborn"
-        frequency: 0.6
-      - name: "Resilient"
-        frequency: 0.6
-      - name: "Passionate"
-        frequency: 0.3
-      - name: "Rebirth"
-        frequency: 0.3
-      - name: "Adversity"
-        frequency: 0.3
-      - name: "Phoenix"
-        frequency: 0.1
-      - name: "Ember"
-        frequency: 0.1
-
+    - frequency: 0.3
+      name: Ashenline
+    - frequency: 0.6
+      name: Ashmantle
+    - frequency: 0.3
+      name: Blazewind
+    - frequency: 0.1
+      name: Burnthread
+    - frequency: 0.6
+      name: Cinderwake
+    - frequency: 0.1
+      name: Coalwhisper
+    - frequency: 0.6
+      name: Emberthorn
+    - frequency: 0.6
+      name: Firestride
+    - frequency: 0.6
+      name: Flameborn
+    - frequency: 0.1
+      name: Furnacegrace
+    - frequency: 0.1
+      name: Hotsigil
+    - frequency: 0.3
+      name: Kindlebloom
+    - frequency: 0.3
+      name: Pyrelatch
+    - frequency: 0.1
+      name: Riftbrand
+    - frequency: 0.1
+      name: Shardflicker
+    - frequency: 0.1
+      name: Smokeveil
+    - frequency: 0.1
+      name: Smoulderloop
+    - frequency: 0.1
+      name: Sootlace
+    - frequency: 0.3
+      name: Stormbark
+    - frequency: 0.3
+      name: Stormgleam
+    - frequency: 0.3
+      name: Thunderroot
+    - frequency: 0.1
+      name: Wakesoot
   baobab:
-    name: "Baobab Elves"
     forenames:
-      male:
-        - name: "Aerion"
-          frequency: 0.6
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
       female:
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Alionae
+      - frequency: 0.1
+        name: Delarae
+      - frequency: 0.6
+        name: Elshira
+      - frequency: 0.6
+        name: Inyara
+      - frequency: 0.1
+        name: Maeressa
+      - frequency: 0.1
+        name: Nalyra
+      - frequency: 0.6
+        name: Nirella
+      - frequency: 0.6
+        name: Qiraen
+      - frequency: 0.6
+        name: Serenya
+      - frequency: 0.6
+        name: Yllessa
+      - frequency: 0.6
+        name: Ysari
+      - frequency: 0.3
+        name: Zirelya
+      male:
+      - frequency: 0.6
+        name: Aerion
+      - frequency: 0.1
+        name: Arivor
+      - frequency: 0.6
+        name: Cyranor
+      - frequency: 0.6
+        name: Daevor
+      - frequency: 0.1
+        name: Eldair
+      - frequency: 0.6
+        name: Olyrion
+      - frequency: 0.6
+        name: Taelon
+      - frequency: 0.6
+        name: Thareon
+      - frequency: 0.3
+        name: Toravel
+      - frequency: 0.3
+        name: Vaeren
+      - frequency: 0.3
+        name: Virellan
       neuter:
-        - name: "Baobab"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Caerion
+      - frequency: 0.6
+        name: Lumael
+      - frequency: 0.3
+        name: Phirael
+      - frequency: 0.3
+        name: Sylion
+      - frequency: 0.6
+        name: Vaedriel
+    name: Baobab Elfs
+    race: Elf
     surnames:
-      - name: "Baobab"
-        frequency: 0.6
-      - name: "Vaulted"
-        frequency: 0.6
-      - name: "Skyrooted"
-        frequency: 0.6
-      - name: "Eldest"
-        frequency: 0.6
-      - name: "Majestic"
-        frequency: 0.3
-      - name: "Powerful"
-        frequency: 0.3
-      - name: "Elite"
-        frequency: 0.3
-      - name: "Ceremonial"
-        frequency: 0.1
-      - name: "Grace"
-        frequency: 0.1
-
+    - frequency: 0.3
+      name: Bloomthrone
+    - frequency: 0.6
+      name: Ceremleaf
+    - frequency: 0.1
+      name: Cloakcypress
+    - frequency: 0.6
+      name: Crownweaver
+    - frequency: 0.3
+      name: Deepveil
+    - frequency: 0.1
+      name: Diademshade
+    - frequency: 0.6
+      name: Goldmantle
+    - frequency: 0.6
+      name: Highbark
+    - frequency: 0.1
+      name: Hushbough
+    - frequency: 0.3
+      name: Ironlace
+    - frequency: 0.3
+      name: Ivoryscroll
+    - frequency: 0.1
+      name: Lumebastion
+    - frequency: 0.1
+      name: Myrrowane
+    - frequency: 0.1
+      name: Palecrown
+    - frequency: 0.1
+      name: Regalspore
+    - frequency: 0.1
+      name: Rootedict
+    - frequency: 0.6
+      name: Silkenroot
+    - frequency: 0.1
+      name: Thronepetal
+    - frequency: 0.1
+      name: Vaultblossom
+    - frequency: 0.1
+      name: Venerationbloom
+  bismuth:
+    forenames:
+      female:
+      - frequency: 0.1
+        name: Ferra
+      - frequency: 0.3
+        name: Ivelle
+      - frequency: 0.3
+        name: Nessa
+      - frequency: 0.1
+        name: Nirra
+      - frequency: 0.1
+        name: Telys
+      - frequency: 0.6
+        name: Thessa
+      - frequency: 0.6
+        name: Tirra
+      - frequency: 0.3
+        name: Vilya
+      - frequency: 0.1
+        name: Wenni
+      - frequency: 0.1
+        name: Zellie
+      male:
+      - frequency: 0.3
+        name: Calo
+      - frequency: 0.3
+        name: Dremel
+      - frequency: 0.1
+        name: Jaskel
+      - frequency: 0.3
+        name: Marn
+      - frequency: 0.1
+        name: Ossel
+      neuter:
+      - frequency: 0.3
+        name: Axil
+      - frequency: 0.6
+        name: Bryn
+      - frequency: 0.1
+        name: Dashi
+      - frequency: 0.6
+        name: Elrex
+      - frequency: 0.6
+        name: Emiri
+      - frequency: 0.3
+        name: Emra
+      - frequency: 0.6
+        name: Enver
+      - frequency: 0.6
+        name: Farael
+      - frequency: 0.1
+        name: Halven
+      - frequency: 0.6
+        name: Irin
+      - frequency: 0.1
+        name: Jorien
+      - frequency: 0.6
+        name: Kael
+      - frequency: 0.3
+        name: Kairen
+      - frequency: 0.1
+        name: Karrel
+      - frequency: 0.6
+        name: Lioren
+      - frequency: 0.6
+        name: Lume
+      - frequency: 0.3
+        name: Lynne
+      - frequency: 0.6
+        name: Orli
+      - frequency: 0.6
+        name: Oryn
+      - frequency: 0.6
+        name: Quen
+      - frequency: 0.6
+        name: Rem
+      - frequency: 0.6
+        name: Rix
+      - frequency: 0.6
+        name: Sariol
+      - frequency: 0.3
+        name: Solrin
+      - frequency: 0.6
+        name: Sylen
+      - frequency: 0.6
+        name: Temin
+      - frequency: 0.1
+        name: Trissin
+      - frequency: 0.3
+        name: Vasra
+      - frequency: 0.3
+        name: Velden
+      - frequency: 0.6
+        name: Vexel
+      - frequency: 0.3
+        name: Ylior
+      - frequency: 0.6
+        name: Zeffel
+    name: Bismuth Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.1
+      name: Alloyvane
+    - frequency: 0.1
+      name: Blazebuckle
+    - frequency: 0.1
+      name: Bloomshard
+    - frequency: 0.1
+      name: Boltmaze
+    - frequency: 0.1
+      name: Brainflare
+    - frequency: 0.6
+      name: Brightloop
+    - frequency: 0.3
+      name: Brillstripe
+    - frequency: 0.1
+      name: Castscroll
+    - frequency: 0.3
+      name: Colorpulse
+    - frequency: 0.1
+      name: Doodlehook
+    - frequency: 0.1
+      name: Dreamtether
+    - frequency: 0.1
+      name: Echofoil
+    - frequency: 0.1
+      name: Fizzthread
+    - frequency: 0.3
+      name: Gemlace
+    - frequency: 0.3
+      name: Gildspark
+    - frequency: 0.6
+      name: Glimmerlock
+    - frequency: 0.1
+      name: Glowratchet
+    - frequency: 0.1
+      name: Hologlint
+    - frequency: 0.3
+      name: Inkspill
+    - frequency: 0.1
+      name: Iridshaper
+    - frequency: 0.6
+      name: Ironglint
+    - frequency: 0.1
+      name: Jumbletwist
+    - frequency: 0.1
+      name: Mindtwister
+    - frequency: 0.3
+      name: Notegrip
+    - frequency: 0.1
+      name: Oddglyph
+    - frequency: 0.3
+      name: Patterncatcher
+    - frequency: 0.6
+      name: Prismweft
+    - frequency: 0.1
+      name: Quantumdrop
+    - frequency: 0.1
+      name: Schemelight
+    - frequency: 0.1
+      name: Scraphalo
+    - frequency: 0.1
+      name: Scribeglint
+    - frequency: 0.1
+      name: Scribemark
+    - frequency: 0.3
+      name: Shinebinder
+    - frequency: 0.3
+      name: Spiralhex
+    - frequency: 0.6
+      name: Thoughtcoil
+    - frequency: 0.1
+      name: Tintmirror
+    - frequency: 0.1
+      name: Trickjoin
+    - frequency: 0.1
+      name: Varnishcoil
+    - frequency: 0.3
+      name: Whirlgrace
+  flint:
+    forenames:
+      female:
+      - frequency: 0.6
+        name: Brena
+      - frequency: 0.6
+        name: Dagna
+      - frequency: 0.3
+        name: Droga
+      - frequency: 0.3
+        name: Elka
+      - frequency: 0.3
+        name: Elska
+      - frequency: 0.6
+        name: Enna
+      - frequency: 0.6
+        name: Erla
+      - frequency: 0.3
+        name: Grinna
+      - frequency: 0.3
+        name: Grisel
+      - frequency: 0.3
+        name: Halna
+      - frequency: 0.6
+        name: Inna
+      - frequency: 0.1
+        name: Kelza
+      - frequency: 0.1
+        name: Krissa
+      - frequency: 0.6
+        name: Marnie
+      - frequency: 0.6
+        name: Mira
+      - frequency: 0.1
+        name: Narna
+      - frequency: 0.6
+        name: Rilka
+      - frequency: 0.1
+        name: Skarna
+      - frequency: 0.6
+        name: Tanni
+      - frequency: 0.6
+        name: Tilda
+      - frequency: 0.6
+        name: Ulfa
+      - frequency: 0.3
+        name: Ylva
+      - frequency: 0.1
+        name: Zelna
+      male:
+      - frequency: 0.6
+        name: Bolrik
+      - frequency: 0.6
+        name: Brann
+      - frequency: 0.3
+        name: Brevik
+      - frequency: 0.6
+        name: Bruk
+      - frequency: 0.3
+        name: Dorrik
+      - frequency: 0.6
+        name: Drask
+      - frequency: 0.6
+        name: Durgan
+      - frequency: 0.6
+        name: Fennik
+      - frequency: 0.1
+        name: Grusk
+      - frequency: 0.3
+        name: Hask
+      - frequency: 0.6
+        name: Jarn
+      - frequency: 0.3
+        name: Jast
+      - frequency: 0.6
+        name: Jorrik
+      - frequency: 0.6
+        name: Karn
+      - frequency: 0.6
+        name: Kragg
+      - frequency: 0.1
+        name: Kurn
+      - frequency: 0.3
+        name: Orgrin
+      - frequency: 0.6
+        name: Rorik
+      - frequency: 0.3
+        name: Skarn
+      - frequency: 0.3
+        name: Skeldi
+      - frequency: 0.6
+        name: Storn
+      - frequency: 0.6
+        name: Thorkel
+      - frequency: 0.6
+        name: Ulrik
+      - frequency: 0.3
+        name: Varg
+      neuter:
+      - frequency: 0.3
+        name: Doni
+    name: Flint Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.1
+      name: Blisterknock
+    - frequency: 0.1
+      name: Brickgrind
+    - frequency: 0.3
+      name: Brimspade
+    - frequency: 0.1
+      name: Chalkbite
+    - frequency: 0.6
+      name: Chiselhand
+    - frequency: 0.1
+      name: Cloutgrit
+    - frequency: 0.6
+      name: Coaljaw
+    - frequency: 0.6
+      name: Cragburrow
+    - frequency: 0.1
+      name: Crumbfall
+    - frequency: 0.6
+      name: Deepgrit
+    - frequency: 0.3
+      name: Dustmantle
+    - frequency: 0.1
+      name: Dustshard
+    - frequency: 0.1
+      name: Faultbar
+    - frequency: 0.1
+      name: Firechisel
+    - frequency: 0.6
+      name: Flintroot
+    - frequency: 0.3
+      name: Gravelhack
+    - frequency: 0.6
+      name: Greymine
+    - frequency: 0.3
+      name: Hardfall
+    - frequency: 0.6
+      name: Ironboot
+    - frequency: 0.6
+      name: Ironclout
+    - frequency: 0.1
+      name: Knuckleblast
+    - frequency: 0.1
+      name: Loadknuckle
+    - frequency: 0.3
+      name: Masonflare
+    - frequency: 0.6
+      name: Oregrind
+    - frequency: 0.3
+      name: Pickface
+    - frequency: 0.6
+      name: Pickshard
+    - frequency: 0.1
+      name: Pitgrub
+    - frequency: 0.3
+      name: Quarryhook
+    - frequency: 0.3
+      name: Rockcleave
+    - frequency: 0.1
+      name: Rockspit
+    - frequency: 0.3
+      name: Rubbletoe
+    - frequency: 0.3
+      name: Shaftbinder
+    - frequency: 0.3
+      name: Shardback
+    - frequency: 0.1
+      name: Skarnsplit
+    - frequency: 0.3
+      name: Slagvein
+    - frequency: 0.1
+      name: Spallvein
+    - frequency: 0.6
+      name: Stonebar
+    - frequency: 0.1
+      name: Thudchain
+    - frequency: 0.6
+      name: Tunnelbrace
+  granite:
+    forenames:
+      female:
+      - frequency: 0.6
+        name: Agda
+      - frequency: 0.6
+        name: Aldra
+      - frequency: 0.1
+        name: Astri
+      - frequency: 0.6
+        name: Baldra
+      - frequency: 0.3
+        name: Brynja
+      - frequency: 0.6
+        name: Dirga
+      - frequency: 0.6
+        name: Elda
+      - frequency: 0.3
+        name: Enna
+      - frequency: 0.6
+        name: Gilda
+      - frequency: 0.6
+        name: Grenda
+      - frequency: 0.1
+        name: Halli
+      - frequency: 0.6
+        name: Hilda
+      - frequency: 0.3
+        name: Irna
+      - frequency: 0.1
+        name: Kelda
+      - frequency: 0.3
+        name: Kerta
+      - frequency: 0.6
+        name: Murna
+      - frequency: 0.3
+        name: Silda
+      - frequency: 0.3
+        name: Skara
+      - frequency: 0.6
+        name: Strilda
+      - frequency: 0.1
+        name: Targa
+      - frequency: 0.6
+        name: Thrida
+      - frequency: 0.6
+        name: Tilda
+      - frequency: 0.1
+        name: Ulna
+      - frequency: 0.3
+        name: Ygra
+      male:
+      - frequency: 0.6
+        name: Bromdir
+      - frequency: 0.6
+        name: Bronrik
+      - frequency: 0.6
+        name: Drogar
+      - frequency: 0.3
+        name: Farnir
+      - frequency: 0.1
+        name: Grogar
+      - frequency: 0.3
+        name: Grorim
+      - frequency: 0.6
+        name: Gudrik
+      - frequency: 0.3
+        name: Harvik
+      - frequency: 0.6
+        name: Hrogar
+      - frequency: 0.6
+        name: Hrolf
+      - frequency: 0.6
+        name: Jarvik
+      - frequency: 0.3
+        name: Jorran
+      - frequency: 0.6
+        name: Karik
+      - frequency: 0.6
+        name: Keldrak
+      - frequency: 0.3
+        name: Krorik
+      - frequency: 0.3
+        name: Marnik
+      - frequency: 0.6
+        name: Norvik
+      - frequency: 0.1
+        name: Olgrik
+      - frequency: 0.6
+        name: Rodrik
+      - frequency: 0.1
+        name: Stefnir
+      - frequency: 0.6
+        name: Thurn
+      - frequency: 0.3
+        name: Torgrim
+      - frequency: 0.6
+        name: Varnok
+      - frequency: 0.6
+        name: Yorvin
+      neuter:
+      - frequency: 0.3
+        name: Varnim
+    name: Granite Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.1
+      name: Ancestrail
+    - frequency: 0.3
+      name: Bannerstone
+    - frequency: 0.6
+      name: Bastionhold
+    - frequency: 0.6
+      name: Bouldershield
+    - frequency: 0.1
+      name: Chainrock
+    - frequency: 0.3
+      name: Cliffmarch
+    - frequency: 0.6
+      name: Cragshield
+    - frequency: 0.3
+      name: Crestguard
+    - frequency: 0.3
+      name: Deepmarrow
+    - frequency: 0.6
+      name: Dourstone
+    - frequency: 0.1
+      name: Dreadvault
+    - frequency: 0.3
+      name: Fortbinding
+    - frequency: 0.3
+      name: Frostmantle
+    - frequency: 0.1
+      name: Garrisonveil
+    - frequency: 0.6
+      name: Graniteborn
+    - frequency: 0.1
+      name: Gravemark
+    - frequency: 0.6
+      name: Grimward
+    - frequency: 0.3
+      name: Halberdfist
+    - frequency: 0.1
+      name: Hammerpost
+    - frequency: 0.6
+      name: Hearthstone
+    - frequency: 0.6
+      name: Honourforge
+    - frequency: 0.6
+      name: Ironroot
+    - frequency: 0.3
+      name: Ironsanct
+    - frequency: 0.6
+      name: Ironspire
+    - frequency: 0.6
+      name: Keepwright
+    - frequency: 0.1
+      name: Obsidianline
+    - frequency: 0.3
+      name: Pikehold
+    - frequency: 0.6
+      name: Rockward
+    - frequency: 0.6
+      name: Rockwarden
+    - frequency: 0.1
+      name: Sealbreaker
+    - frequency: 0.6
+      name: Shieldbrow
+    - frequency: 0.1
+      name: Spinekeep
+    - frequency: 0.6
+      name: Steelforge
+    - frequency: 0.6
+      name: Stonehelm
+    - frequency: 0.6
+      name: Stonelaw
+    - frequency: 0.6
+      name: Stormhall
+    - frequency: 0.3
+      name: Strongmark
+    - frequency: 0.3
+      name: Thornbarrow
+    - frequency: 0.1
+      name: Tombhold
+    - frequency: 0.1
+      name: Vowmantle
+    - frequency: 0.1
+      name: Wardriven
+  holly:
+    forenames:
+      female:
+      - frequency: 0.6
+        name: Aelrin
+      - frequency: 0.1
+        name: Aeriel
+      - frequency: 0.6
+        name: Elenna
+      - frequency: 0.6
+        name: Elira
+      - frequency: 0.6
+        name: Lirien
+      - frequency: 0.6
+        name: Meluin
+      - frequency: 0.6
+        name: Neria
+      - frequency: 0.3
+        name: Nyari
+      - frequency: 0.6
+        name: Riella
+      - frequency: 0.6
+        name: Sirella
+      - frequency: 0.3
+        name: Solenya
+      - frequency: 0.3
+        name: Thessa
+      - frequency: 0.3
+        name: Thirel
+      - frequency: 0.6
+        name: Vanya
+      - frequency: 0.3
+        name: Venia
+      - frequency: 0.1
+        name: Yselda
+      - frequency: 0.1
+        name: Ysilwen
+      male:
+      - frequency: 0.6
+        name: Caerel
+      - frequency: 0.3
+        name: Calion
+      - frequency: 0.3
+        name: Corlen
+      - frequency: 0.6
+        name: Elarion
+      - frequency: 0.6
+        name: Emroth
+      - frequency: 0.1
+        name: Erthon
+      - frequency: 0.3
+        name: Ferion
+      - frequency: 0.6
+        name: Halion
+      - frequency: 0.3
+        name: Lomir
+      - frequency: 0.3
+        name: Ollir
+      - frequency: 0.6
+        name: Orien
+      - frequency: 0.6
+        name: Thalion
+      - frequency: 0.6
+        name: Vaelis
+      neuter:
+      - frequency: 0.3
+        name: Aeren
+      - frequency: 0.6
+        name: Arlin
+      - frequency: 0.3
+        name: Faelen
+      - frequency: 0.3
+        name: Ilyen
+      - frequency: 0.6
+        name: Maerin
+      - frequency: 0.3
+        name: Nerien
+      - frequency: 0.6
+        name: Serel
+      - frequency: 0.3
+        name: Sylri
+      - frequency: 0.6
+        name: Ysil
+    name: Holly Elfs
+    race: Elf
+    surnames:
+    - frequency: 0.1
+      name: Archivevine
+    - frequency: 0.1
+      name: Birchquorum
+    - frequency: 0.3
+      name: Boughchant
+    - frequency: 0.1
+      name: Boundecho
+    - frequency: 0.3
+      name: Candletome
+    - frequency: 0.3
+      name: Dewscroll
+    - frequency: 0.1
+      name: Elmscriptor
+    - frequency: 0.3
+      name: Emberhymn
+    - frequency: 0.1
+      name: Ferntext
+    - frequency: 0.1
+      name: Glossfeather
+    - frequency: 0.1
+      name: Glyphpetal
+    - frequency: 0.6
+      name: Greenquill
+    - frequency: 0.3
+      name: Hearthpage
+    - frequency: 0.1
+      name: Illumenbark
+    - frequency: 0.6
+      name: Inkweaver
+    - frequency: 0.1
+      name: Leafillum
+    - frequency: 0.6
+      name: Lorebloom
+    - frequency: 0.1
+      name: Lumisigil
+    - frequency: 0.3
+      name: Memorybraid
+    - frequency: 0.3
+      name: Quietscribe
+    - frequency: 0.3
+      name: Ritualthorn
+    - frequency: 0.1
+      name: Rootchronicler
+    - frequency: 0.6
+      name: Scrollwarden
+    - frequency: 0.1
+      name: Shardlumen
+    - frequency: 0.1
+      name: Songindex
+    - frequency: 0.3
+      name: Tomeflower
+    - frequency: 0.1
+      name: Whisperfolio
+  malachite:
+    forenames:
+      female:
+      - frequency: 0.6
+        name: Anra
+      - frequency: 0.6
+        name: Belga
+      - frequency: 0.6
+        name: Brekka
+      - frequency: 0.3
+        name: Brimma
+      - frequency: 0.6
+        name: Brina
+      - frequency: 0.3
+        name: Bronna
+      - frequency: 0.3
+        name: Elda
+      - frequency: 0.1
+        name: Eska
+      - frequency: 0.3
+        name: Fenra
+      - frequency: 0.1
+        name: Granda
+      - frequency: 0.6
+        name: Grelka
+      - frequency: 0.1
+        name: Navra
+      - frequency: 0.6
+        name: Orna
+      - frequency: 0.3
+        name: Rokka
+      - frequency: 0.3
+        name: Rokna
+      - frequency: 0.3
+        name: Skarna
+      - frequency: 0.3
+        name: Stenna
+      - frequency: 0.6
+        name: Thera
+      - frequency: 0.6
+        name: Tilda
+      - frequency: 0.1
+        name: Torra
+      - frequency: 0.6
+        name: Urda
+      - frequency: 0.3
+        name: Varka
+      - frequency: 0.6
+        name: Vuldra
+      - frequency: 0.1
+        name: Zilda
+      male:
+      - frequency: 0.6
+        name: Bolvik
+      - frequency: 0.6
+        name: Dorek
+      - frequency: 0.6
+        name: Drogan
+      - frequency: 0.6
+        name: Durnan
+      - frequency: 0.6
+        name: Frunn
+      - frequency: 0.6
+        name: Garrun
+      - frequency: 0.3
+        name: Halrik
+      - frequency: 0.6
+        name: Harnik
+      - frequency: 0.3
+        name: Igrin
+      - frequency: 0.6
+        name: Jorvik
+      - frequency: 0.1
+        name: Kendrak
+      - frequency: 0.6
+        name: Korrik
+      - frequency: 0.6
+        name: Marrik
+      - frequency: 0.6
+        name: Meldrak
+      - frequency: 0.3
+        name: Morlen
+      - frequency: 0.1
+        name: Ordur
+      - frequency: 0.6
+        name: Ralik
+      - frequency: 0.6
+        name: Tovik
+      - frequency: 0.3
+        name: Ulgar
+      - frequency: 0.3
+        name: Wurin
+      - frequency: 0.1
+        name: Yorrik
+      neuter:
+      - frequency: 0.1
+        name: Enni
+      - frequency: 0.3
+        name: Kellin
+      - frequency: 0.3
+        name: Kimmil
+      - frequency: 0.3
+        name: Lomni
+      - frequency: 0.1
+        name: Zellin
+    name: Malachite Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.3
+      name: Alloycloak
+    - frequency: 0.1
+      name: Anvildancer
+    - frequency: 0.1
+      name: Bellmantle
+    - frequency: 0.1
+      name: Bellowsmoke
+    - frequency: 0.1
+      name: Bellowtwist
+    - frequency: 0.6
+      name: Brighthaft
+    - frequency: 0.6
+      name: Bronzeband
+    - frequency: 0.6
+      name: Bronzeheel
+    - frequency: 0.3
+      name: Buckleflare
+    - frequency: 0.1
+      name: Castgrip
+    - frequency: 0.3
+      name: Chainshaft
+    - frequency: 0.1
+      name: Chiselwake
+    - frequency: 0.1
+      name: Cogsunder
+    - frequency: 0.3
+      name: Copperlash
+    - frequency: 0.3
+      name: Cragturner
+    - frequency: 0.6
+      name: Deepforge
+    - frequency: 0.3
+      name: Draftcoil
+    - frequency: 0.3
+      name: Emberbit
+    - frequency: 0.3
+      name: Emberthread
+    - frequency: 0.3
+      name: Filigree
+    - frequency: 0.3
+      name: Firegrind
+    - frequency: 0.3
+      name: Forgehook
+    - frequency: 0.3
+      name: Furnaceborn
+    - frequency: 0.3
+      name: Gearmantle
+    - frequency: 0.6
+      name: Glowhammer
+    - frequency: 0.1
+      name: Greasehaft
+    - frequency: 0.1
+      name: Grimebinder
+    - frequency: 0.1
+      name: Grindsoul
+    - frequency: 0.1
+      name: Heatgrip
+    - frequency: 0.1
+      name: Ingotroot
+    - frequency: 0.6
+      name: Ironcoil
+    - frequency: 0.6
+      name: Ironloop
+    - frequency: 0.1
+      name: Knotvane
+    - frequency: 0.1
+      name: Magmabind
+    - frequency: 0.1
+      name: Muckiron
+    - frequency: 0.6
+      name: Orevein
+    - frequency: 0.6
+      name: Rivetbrow
+    - frequency: 0.6
+      name: Rockmantle
+    - frequency: 0.3
+      name: Shardcloak
+    - frequency: 0.3
+      name: Shearstone
+    - frequency: 0.1
+      name: Slagfall
+    - frequency: 0.1
+      name: Smeltlash
+    - frequency: 0.1
+      name: Smeltwhistle
+    - frequency: 0.1
+      name: Sparkclasp
+    - frequency: 0.6
+      name: Steelshaper
+    - frequency: 0.6
+      name: Stonebrow
+    - frequency: 0.6
+      name: Stonejoint
+    - frequency: 0.1
+      name: Torchhaft
+    - frequency: 0.3
+      name: Weldspark
+  obsidian:
+    forenames:
+      female:
+      - frequency: 0.1
+        name: Cassira
+      - frequency: 0.6
+        name: Elura
+      - frequency: 0.6
+        name: Enali
+      - frequency: 0.3
+        name: Evara
+      - frequency: 0.3
+        name: Ilyss
+      - frequency: 0.6
+        name: Lyra
+      - frequency: 0.1
+        name: Mireya
+      - frequency: 0.1
+        name: Naeria
+      - frequency: 0.6
+        name: Neris
+      - frequency: 0.6
+        name: Nyssa
+      - frequency: 0.6
+        name: Selene
+      - frequency: 0.6
+        name: Syra
+      - frequency: 0.6
+        name: Telsa
+      - frequency: 0.1
+        name: Teryn
+      - frequency: 0.3
+        name: Thalra
+      - frequency: 0.3
+        name: Thalya
+      - frequency: 0.3
+        name: Velra
+      - frequency: 0.6
+        name: Velsa
+      - frequency: 0.3
+        name: Yssra
+      male:
+      - frequency: 0.6
+        name: Aerik
+      - frequency: 0.3
+        name: Brynden
+      - frequency: 0.6
+        name: Daineth
+      - frequency: 0.3
+        name: Drelan
+      - frequency: 0.6
+        name: Edrien
+      - frequency: 0.6
+        name: Eldrik
+      - frequency: 0.6
+        name: Elrik
+      - frequency: 0.6
+        name: Idran
+      - frequency: 0.3
+        name: Morthen
+      - frequency: 0.3
+        name: Nyrek
+      - frequency: 0.6
+        name: Orrik
+      - frequency: 0.1
+        name: Quorin
+      - frequency: 0.3
+        name: Rhunel
+      - frequency: 0.6
+        name: Silas
+      - frequency: 0.1
+        name: Sorneth
+      - frequency: 0.6
+        name: Thoren
+      - frequency: 0.1
+        name: Uvren
+      - frequency: 0.6
+        name: Vareth
+      - frequency: 0.1
+        name: Vyrren
+      - frequency: 0.3
+        name: Zareth
+      neuter:
+      - frequency: 0.6
+        name: Aurel
+      - frequency: 0.6
+        name: Kaelen
+      - frequency: 0.3
+        name: Lorin
+      - frequency: 0.1
+        name: Oryen
+      - frequency: 0.6
+        name: Sorell
+      - frequency: 0.1
+        name: Vion
+    name: Obsidian Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.3
+      name: Blackbloom
+    - frequency: 0.1
+      name: Candledusk
+    - frequency: 0.1
+      name: Chantgrave
+    - frequency: 0.1
+      name: Cryptscroll
+    - frequency: 0.3
+      name: Deepchant
+    - frequency: 0.1
+      name: Deepmirror
+    - frequency: 0.6
+      name: Dusksigil
+    - frequency: 0.1
+      name: Echochant
+    - frequency: 0.1
+      name: Glassenclave
+    - frequency: 0.1
+      name: Gloomspire
+    - frequency: 0.1
+      name: Glyphroot
+    - frequency: 0.1
+      name: Inkthread
+    - frequency: 0.6
+      name: Lorebinder
+    - frequency: 0.1
+      name: Memoryvault
+    - frequency: 0.3
+      name: Mindshade
+    - frequency: 0.3
+      name: Mirrorbind
+    - frequency: 0.1
+      name: Moonclasp
+    - frequency: 0.1
+      name: Murkwatch
+    - frequency: 0.1
+      name: Murmurblood
+    - frequency: 0.6
+      name: Nightmantle
+    - frequency: 0.6
+      name: Obsidianmark
+    - frequency: 0.1
+      name: Oraclegaze
+    - frequency: 0.3
+      name: Palechant
+    - frequency: 0.1
+      name: Ritualmark
+    - frequency: 0.3
+      name: Runeveil
+    - frequency: 0.1
+      name: Sablegrace
+    - frequency: 0.6
+      name: Scrollkeeper
+    - frequency: 0.1
+      name: Seerstrand
+    - frequency: 0.6
+      name: Shadewarden
+    - frequency: 0.1
+      name: Shadowglyph
+    - frequency: 0.6
+      name: Sigilstone
+    - frequency: 0.1
+      name: Soulcarve
+    - frequency: 0.3
+      name: Spiritforge
+    - frequency: 0.1
+      name: Starliturn
+    - frequency: 0.3
+      name: Thoughtwell
+    - frequency: 0.3
+      name: Truthloom
+    - frequency: 0.1
+      name: Umbraflame
+    - frequency: 0.6
+      name: Veilwhisper
+    - frequency: 0.1
+      name: Voidkeeper
+    - frequency: 0.1
+      name: Voidscript
   palm:
-    name: "Palm Elves"
     forenames:
-      male:
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
       female:
-        - name: "Aivena"
-          frequency: 0.6
-        - name: "Alionae"
-          frequency: 0.6
-        - name: "Alira"
-          frequency: 0.6
-        - name: "Aelar"
-          frequency: 0.1
-        - name: "Thalindra"
-          frequency: 0.1
-        - name: "Lysara"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Aivena
+      - frequency: 0.6
+        name: Elenya
+      - frequency: 0.6
+        name: Enali
+      - frequency: 0.6
+        name: Ilara
+      - frequency: 0.1
+        name: Issira
+      - frequency: 0.3
+        name: Liora
+      - frequency: 0.3
+        name: Lissel
+      - frequency: 0.6
+        name: Marra
+      - frequency: 0.6
+        name: Mirani
+      - frequency: 0.3
+        name: Mireya
+      - frequency: 0.6
+        name: Nyela
+      - frequency: 0.6
+        name: Selari
+      - frequency: 0.6
+        name: Thessa
+      - frequency: 0.1
+        name: Vesra
+      male:
+      - frequency: 0.1
+        name: Caelio
+      - frequency: 0.6
+        name: Coren
+      - frequency: 0.6
+        name: Drenel
+      - frequency: 0.6
+        name: Jaro
+      - frequency: 0.6
+        name: Kelren
+      - frequency: 0.6
+        name: Nahlor
+      - frequency: 0.3
+        name: Orven
+      - frequency: 0.1
+        name: Tivan
+      - frequency: 0.3
+        name: Tyrell
+      - frequency: 0.6
+        name: Vaelo
       neuter:
-        - name: "Palm"
-          frequency: 0.1
+      - frequency: 0.6
+        name: Ivin
+      - frequency: 0.1
+        name: Naren
+      - frequency: 0.6
+        name: Solen
+    name: Palm Elfs
+    race: Elf
     surnames:
-      - name: "Palm"
-        frequency: 0.6
-      - name: "Seafaring"
-        frequency: 0.6
-      - name: "Survivor"
-        frequency: 0.6
-      - name: "Joyful"
-        frequency: 0.6
-      - name: "Tragic"
-        frequency: 0.3
-      - name: "Celebration"
-        frequency: 0.3
-      - name: "Beauty"
-        frequency: 0.3
-      - name: "Ocean"
-        frequency: 0.1
-      - name: "Wave"
-        frequency: 0.1
-
-# Name generation settings
+    - frequency: 0.6
+      name: Breakwave
+    - frequency: 0.1
+      name: Brinestep
+    - frequency: 0.6
+      name: Coralshade
+    - frequency: 0.1
+      name: Driftfeather
+    - frequency: 0.3
+      name: Duneweaver
+    - frequency: 0.1
+      name: Foamveil
+    - frequency: 0.1
+      name: Gullsigh
+    - frequency: 0.1
+      name: Horizonchant
+    - frequency: 0.3
+      name: Lamentbloom
+    - frequency: 0.3
+      name: Lanternwake
+    - frequency: 0.1
+      name: Mangroveloom
+    - frequency: 0.1
+      name: Mooncatcher
+    - frequency: 0.3
+      name: Palmshadow
+    - frequency: 0.6
+      name: Reefgrace
+    - frequency: 0.1
+      name: Sandcymbal
+    - frequency: 0.1
+      name: Seasilk
+    - frequency: 0.1
+      name: Shardjoy
+    - frequency: 0.3
+      name: Shellmantle
+    - frequency: 0.1
+      name: Shoalspirit
+    - frequency: 0.6
+      name: Tidesong
+  rowan:
+    forenames:
+      female:
+      - frequency: 0.3
+        name: Alenya
+      - frequency: 0.6
+        name: Alira
+      - frequency: 0.1
+        name: Arilith
+      - frequency: 0.1
+        name: Cyrissa
+      - frequency: 0.6
+        name: Elenna
+      - frequency: 0.6
+        name: Elowen
+      - frequency: 0.6
+        name: Feyra
+      - frequency: 0.6
+        name: Liora
+      - frequency: 0.3
+        name: Lyselle
+      - frequency: 0.3
+        name: Mialin
+      - frequency: 0.6
+        name: Naela
+      - frequency: 0.6
+        name: Rhialla
+      - frequency: 0.6
+        name: Rhosen
+      - frequency: 0.6
+        name: Solwyn
+      - frequency: 0.3
+        name: Veira
+      male:
+      - frequency: 0.3
+        name: Coren
+      - frequency: 0.3
+        name: Jerren
+      - frequency: 0.6
+        name: Neren
+      - frequency: 0.1
+        name: Olyen
+      - frequency: 0.6
+        name: Orien
+      - frequency: 0.3
+        name: Thairon
+      - frequency: 0.6
+        name: Thalen
+      - frequency: 0.1
+        name: Thandor
+      - frequency: 0.6
+        name: Viren
+      neuter:
+      - frequency: 0.6
+        name: Aiven
+      - frequency: 0.6
+        name: Caelan
+      - frequency: 0.3
+        name: Eiran
+      - frequency: 0.6
+        name: Faelen
+      - frequency: 0.3
+        name: Ivrin
+      - frequency: 0.6
+        name: Mirien
+      - frequency: 0.1
+        name: Rhunel
+      - frequency: 0.6
+        name: Sylrie
+      - frequency: 0.3
+        name: Teylin
+    name: Rowan Elfs
+    race: Elf
+    surnames:
+    - frequency: 0.1
+      name: Ashbud
+    - frequency: 0.1
+      name: Bloomshiver
+    - frequency: 0.3
+      name: Blossomvow
+    - frequency: 0.3
+      name: Brambletale
+    - frequency: 0.3
+      name: Cloudwhistle
+    - frequency: 0.1
+      name: Dustpetal
+    - frequency: 0.1
+      name: Fernlace
+    - frequency: 0.3
+      name: Fogwhisper
+    - frequency: 0.6
+      name: Gladeweaver
+    - frequency: 0.1
+      name: Gleamsap
+    - frequency: 0.1
+      name: Hearthdrift
+    - frequency: 0.3
+      name: Leafchant
+    - frequency: 0.1
+      name: Moondrift
+    - frequency: 0.6
+      name: Nightfern
+    - frequency: 0.1
+      name: Petalshade
+    - frequency: 0.6
+      name: Songroot
+    - frequency: 0.6
+      name: Starpetal
+    - frequency: 0.1
+      name: Storyfen
+    - frequency: 0.1
+      name: Threadgrove
+    - frequency: 0.6
+      name: Windpoem
+  sandstone:
+    forenames:
+      female:
+      - frequency: 0.3
+        name: Brina
+      - frequency: 0.3
+        name: Elsha
+      - frequency: 0.6
+        name: Enna
+      - frequency: 0.6
+        name: Freya
+      - frequency: 0.3
+        name: Ilyra
+      - frequency: 0.6
+        name: Jessa
+      - frequency: 0.6
+        name: Kila
+      - frequency: 0.6
+        name: Mara
+      - frequency: 0.6
+        name: Mira
+      - frequency: 0.6
+        name: Mirra
+      - frequency: 0.1
+        name: Nelka
+      - frequency: 0.3
+        name: Niska
+      - frequency: 0.6
+        name: Reya
+      - frequency: 0.6
+        name: Saela
+      - frequency: 0.6
+        name: Selka
+      - frequency: 0.6
+        name: Tessa
+      - frequency: 0.1
+        name: Thessa
+      - frequency: 0.3
+        name: Tyla
+      - frequency: 0.1
+        name: Una
+      - frequency: 0.6
+        name: Velna
+      - frequency: 0.3
+        name: Yira
+      - frequency: 0.3
+        name: Zanna
+      male:
+      - frequency: 0.6
+        name: Bram
+      - frequency: 0.6
+        name: Calrik
+      - frequency: 0.6
+        name: Davi
+      - frequency: 0.1
+        name: Dolen
+      - frequency: 0.6
+        name: Drek
+      - frequency: 0.6
+        name: Elbin
+      - frequency: 0.6
+        name: Fenik
+      - frequency: 0.3
+        name: Garril
+      - frequency: 0.6
+        name: Halden
+      - frequency: 0.3
+        name: Harnin
+      - frequency: 0.6
+        name: Javin
+      - frequency: 0.6
+        name: Jostin
+      - frequency: 0.6
+        name: Kelwin
+      - frequency: 0.3
+        name: Korran
+      - frequency: 0.3
+        name: Larnel
+      - frequency: 0.3
+        name: Linric
+      - frequency: 0.6
+        name: Ludo
+      - frequency: 0.6
+        name: Orlin
+      - frequency: 0.6
+        name: Rodan
+      - frequency: 0.3
+        name: Stellan
+      - frequency: 0.6
+        name: Tonvik
+      - frequency: 0.6
+        name: Torrik
+      neuter:
+      - frequency: 0.3
+        name: Remi
+      - frequency: 0.1
+        name: Sylen
+    name: Sandstone Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.1
+      name: Bargestone
+    - frequency: 0.1
+      name: Beaconbrace
+    - frequency: 0.1
+      name: Brickcloak
+    - frequency: 0.1
+      name: Brickrelay
+    - frequency: 0.6
+      name: Bridgeglen
+    - frequency: 0.6
+      name: Cartvale
+    - frequency: 0.1
+      name: Claydancer
+    - frequency: 0.1
+      name: Clayhaven
+    - frequency: 0.3
+      name: Clayreach
+    - frequency: 0.1
+      name: Cobblecloak
+    - frequency: 0.1
+      name: Crossgrip
+    - frequency: 0.3
+      name: Dealroot
+    - frequency: 0.3
+      name: Dustline
+    - frequency: 0.1
+      name: Farbind
+    - frequency: 0.1
+      name: Folkgrip
+    - frequency: 0.3
+      name: Grainbrace
+    - frequency: 0.3
+      name: Guildmark
+    - frequency: 0.1
+      name: Hearthcrosser
+    - frequency: 0.3
+      name: Hearthtrader
+    - frequency: 0.6
+      name: Hillbanner
+    - frequency: 0.1
+      name: Kinbarter
+    - frequency: 0.1
+      name: Lightload
+    - frequency: 0.3
+      name: Loambinder
+    - frequency: 0.1
+      name: Loamthread
+    - frequency: 0.1
+      name: Minglebraid
+    - frequency: 0.1
+      name: Mixhand
+    - frequency: 0.6
+      name: Pathstitch
+    - frequency: 0.3
+      name: Rambleforge
+    - frequency: 0.6
+      name: Rivermason
+    - frequency: 0.6
+      name: Sandfellow
+    - frequency: 0.6
+      name: Sandspire
+    - frequency: 0.1
+      name: Spanmantle
+    - frequency: 0.1
+      name: Stepgrind
+    - frequency: 0.6
+      name: Stonebroker
+    - frequency: 0.3
+      name: Suntrail
+    - frequency: 0.1
+      name: Talkwhistle
+    - frequency: 0.3
+      name: Tarryvale
+    - frequency: 0.1
+      name: Tongueforge
+    - frequency: 0.1
+      name: Trestleborn
+    - frequency: 0.6
+      name: Wayweaver
+  slate:
+    forenames:
+      female:
+      - frequency: 0.3
+        name: Avelda
+      - frequency: 0.3
+        name: Brenna
+      - frequency: 0.6
+        name: Delra
+      - frequency: 0.1
+        name: Denvra
+      - frequency: 0.3
+        name: Erra
+      - frequency: 0.1
+        name: Esra
+      - frequency: 0.1
+        name: Helra
+      - frequency: 0.6
+        name: Idria
+      - frequency: 0.6
+        name: Ilka
+      - frequency: 0.3
+        name: Kilda
+      - frequency: 0.1
+        name: Mersa
+      - frequency: 0.6
+        name: Nerra
+      - frequency: 0.3
+        name: Nira
+      - frequency: 0.1
+        name: Salda
+      - frequency: 0.6
+        name: Sela
+      - frequency: 0.6
+        name: Thernis
+      - frequency: 0.6
+        name: Tilna
+      - frequency: 0.3
+        name: Vessa
+      - frequency: 0.6
+        name: Vilda
+      - frequency: 0.3
+        name: Yslin
+      male:
+      - frequency: 0.1
+        name: Arken
+      - frequency: 0.3
+        name: Brondel
+      - frequency: 0.6
+        name: Donrik
+      - frequency: 0.3
+        name: Droven
+      - frequency: 0.6
+        name: Elrek
+      - frequency: 0.6
+        name: Ernin
+      - frequency: 0.6
+        name: Fenn
+      - frequency: 0.6
+        name: Frinn
+      - frequency: 0.3
+        name: Grevik
+      - frequency: 0.6
+        name: Haskel
+      - frequency: 0.6
+        name: Jarn
+      - frequency: 0.3
+        name: Jorel
+      - frequency: 0.6
+        name: Korrik
+      - frequency: 0.1
+        name: Luthen
+      - frequency: 0.6
+        name: Morten
+      - frequency: 0.3
+        name: Orsen
+      - frequency: 0.3
+        name: Tarn
+      - frequency: 0.3
+        name: Tolmar
+      - frequency: 0.6
+        name: Torvik
+      - frequency: 0.3
+        name: Varnel
+      neuter: []
+    name: Slate Dwarfs
+    race: Dwarf
+    surnames:
+    - frequency: 0.1
+      name: Bluechalk
+    - frequency: 0.6
+      name: Boltline
+    - frequency: 0.1
+      name: Brickscribe
+    - frequency: 0.1
+      name: Chalklace
+    - frequency: 0.1
+      name: Chamfergrip
+    - frequency: 0.3
+      name: Dowelturn
+    - frequency: 0.1
+      name: Draftbit
+    - frequency: 0.6
+      name: Edgefitter
+    - frequency: 0.3
+      name: Etchbrace
+    - frequency: 0.6
+      name: Greylatch
+    - frequency: 0.6
+      name: Gridforge
+    - frequency: 0.1
+      name: Linevault
+    - frequency: 0.1
+      name: Measurine
+    - frequency: 0.1
+      name: Metricmantle
+    - frequency: 0.1
+      name: Mortisebrow
+    - frequency: 0.1
+      name: Notchtask
+    - frequency: 0.1
+      name: Pencildraw
+    - frequency: 0.6
+      name: Planeforge
+    - frequency: 0.1
+      name: Quarryscribe
+    - frequency: 0.1
+      name: Rivetfile
+    - frequency: 0.1
+      name: Ruleleaf
+    - frequency: 0.6
+      name: Rulestone
+    - frequency: 0.3
+      name: Scalejoint
+    - frequency: 0.3
+      name: Scrivenstone
+    - frequency: 0.1
+      name: Sealcaliper
+    - frequency: 0.3
+      name: Sealnotch
+    - frequency: 0.6
+      name: Steelmark
+    - frequency: 0.1
+      name: Threadset
+    - frequency: 0.1
+      name: Tightfit
+    - frequency: 0.6
+      name: Truelock
+  yew:
+    forenames:
+      female:
+      - frequency: 0.1
+        name: Cyrinel
+      - frequency: 0.6
+        name: Elindra
+      - frequency: 0.3
+        name: Faereth
+      - frequency: 0.6
+        name: Ithira
+      - frequency: 0.3
+        name: Marenel
+      - frequency: 0.1
+        name: Nethira
+      - frequency: 0.3
+        name: Nyssra
+      - frequency: 0.1
+        name: Ollith
+      - frequency: 0.6
+        name: Saelith
+      - frequency: 0.6
+        name: Silrien
+      - frequency: 0.3
+        name: Thalira
+      - frequency: 0.6
+        name: Virella
+      - frequency: 0.3
+        name: Yselyn
+      - frequency: 0.6
+        name: Ysira
+      male:
+      - frequency: 0.3
+        name: Aerthorn
+      - frequency: 0.1
+        name: Aruvian
+      - frequency: 0.6
+        name: Corviel
+      - frequency: 0.1
+        name: Delthorn
+      - frequency: 0.6
+        name: Eredor
+      - frequency: 0.3
+        name: Galrian
+      - frequency: 0.3
+        name: Ilrian
+      - frequency: 0.6
+        name: Oloran
+      - frequency: 0.1
+        name: Qorundel
+      - frequency: 0.6
+        name: Thendrel
+      - frequency: 0.3
+        name: Therenil
+      - frequency: 0.6
+        name: Vaerion
+      - frequency: 0.6
+        name: Valreth
+      - frequency: 0.1
+        name: Yreldan
+      neuter:
+      - frequency: 0.3
+        name: Aluin
+      - frequency: 0.1
+        name: Envel
+      - frequency: 0.3
+        name: Melvaen
+      - frequency: 0.6
+        name: Saenil
+      - frequency: 0.1
+        name: Vayen
+    name: Yew Elfs
+    race: Elf
+    surnames:
+    - frequency: 0.1
+      name: Barkscroll
+    - frequency: 0.1
+      name: Boughwitness
+    - frequency: 0.1
+      name: Cloaksigil
+    - frequency: 0.3
+      name: Crownbark
+    - frequency: 0.3
+      name: Deeppledge
+    - frequency: 0.1
+      name: Duskthorn
+    - frequency: 0.6
+      name: Everjudged
+    - frequency: 0.3
+      name: Gravethorn
+    - frequency: 0.1
+      name: Gravevigil
+    - frequency: 0.1
+      name: Honorflame
+    - frequency: 0.1
+      name: Lawglimmer
+    - frequency: 0.1
+      name: Linejudge
+    - frequency: 0.1
+      name: Loreshadow
+    - frequency: 0.3
+      name: Oathbarrow
+    - frequency: 0.6
+      name: Pactweaver
+    - frequency: 0.3
+      name: Quietbark
+    - frequency: 0.1
+      name: Remembrace
+    - frequency: 0.6
+      name: Sealbough
+    - frequency: 0.6
+      name: Thorncounsel
+    - frequency: 0.1
+      name: Tribunalshade
+    - frequency: 0.3
+      name: Veilkeeper
+    - frequency: 0.1
+      name: Verdictsong
+    - frequency: 0.6
+      name: Vowroot
+    - frequency: 0.6
+      name: Yewmantle
 settings:
-  # Gender distribution (approximate)
-  gender_distribution:
-    male: 0.45
-    female: 0.45
-    neuter: 0.10
-  
-  # Frequency weights (from Excel data)
   frequency_weights:
     Common: 0.6
-    Uncommon: 0.3
     Rare: 0.1
-  
-  # Name generation rules
+    Uncommon: 0.3
+  gender_distribution:
+    female: 0.45
+    male: 0.45
+    neuter: 0.1
   rules:
-    # Some clans have specific naming conventions
     clan_specific_rules:
       alabaster:
-        # Alabaster dwarves often have more neutral/androgynous names
         neuter_probability: 0.2
-      palm:
-        # Palm elves are more likely to have joyful/celebratory names
-        positive_name_bias: 0.7
       baobab:
-        # Baobab elves have more formal/ceremonial names
-        formal_name_bias: 0.8 
+        formal_name_bias: 0.8
+      palm:
+        positive_name_bias: 0.7

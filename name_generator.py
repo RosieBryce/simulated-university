@@ -89,30 +89,27 @@ class ClanNameGenerator:
         weights = list(gender_dist.values())
         return np.random.choice(genders, p=weights)
     
-    def generate_name(self, clan_key: str, gender: Optional[str] = None) -> GeneratedName:
+    def generate_name(self, clan_key: str, student_gender: str) -> GeneratedName:
         """
         Generate a complete name for a student of a specific clan.
         
         Args:
             clan_key: The clan identifier (e.g., 'malachite', 'baobab')
-            gender: Optional gender override. If None, will be determined automatically.
+            student_gender: The student's gender ('male', 'female', 'neuter')
         
         Returns:
             GeneratedName object with forename, surname, gender, clan, and full name
         """
         clan_data = self._get_clan_data(clan_key)
         
-        # Determine gender if not provided
-        if gender is None:
-            gender = self._determine_gender(clan_key)
+        # Get forename options for the student's gender
+        forename_options = clan_data.get('forenames', {}).get(student_gender, [])
         
-        # Get forename options for the gender
-        forename_options = clan_data.get('forenames', {}).get(gender, [])
+        # If no gender-specific names available, fall back to neuter names
         if not forename_options:
-            # Fallback to neuter names if gender-specific names not available
             forename_options = clan_data.get('forenames', {}).get('neuter', [])
             if not forename_options:
-                raise ValueError(f"No forename options available for clan '{clan_key}' and gender '{gender}'")
+                raise ValueError(f"No forename options available for clan '{clan_key}' and gender '{student_gender}'")
         
         # Get surname options
         surname_options = clan_data.get('surnames', [])
@@ -129,7 +126,7 @@ class ClanNameGenerator:
         return GeneratedName(
             forename=forename,
             surname=surname,
-            gender=gender,
+            gender=student_gender,
             clan=clan_key,
             full_name=full_name
         )
@@ -149,7 +146,9 @@ class ClanNameGenerator:
         for clan_key, count in clan_counts.items():
             for _ in range(count):
                 try:
-                    name = self.generate_name(clan_key)
+                    # Determine gender for this student
+                    student_gender = self._determine_gender(clan_key)
+                    name = self.generate_name(clan_key, student_gender)
                     names.append(name)
                 except Exception as e:
                     print(f"Warning: Could not generate name for clan '{clan_key}': {e}")
@@ -237,7 +236,9 @@ def main():
         # Generate 3 names for each clan
         for i in range(3):
             try:
-                name = generator.generate_name(clan_key)
+                # Determine gender for this test
+                student_gender = generator._determine_gender(clan_key)
+                name = generator.generate_name(clan_key, student_gender)
                 print(f"  {i+1}. {name.full_name} ({name.gender})")
             except Exception as e:
                 print(f"  {i+1}. Error: {e}")
