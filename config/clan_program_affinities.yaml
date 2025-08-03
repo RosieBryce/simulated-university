@@ -1,0 +1,726 @@
+# Clan Program Affinities for Stonegrove University
+# Based on programme propensity data
+# Affinity scores range from 0.0 (no affinity) to 1.0 (strongest affinity)
+# Top 5 programs per clan get high affinity scores, others get lower scores
+
+clans:
+  # ===== DWARF CLANS =====
+  
+  malachite:
+    name: "Malachite Dwarves"
+    description: "The Verdant Forgefolk - Balanced, cooperative, spiritually attuned craftspeople"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Pedagogies of the Hand": 0.95
+      "Earth-Aligned Agriculture": 0.90
+      "Mycelial Cultivation and Biotech": 0.85
+      "Wisdom Traditions and Moral Craft": 0.80
+      "Care, Craft and Continuity": 0.75
+      
+      # Moderate affinity programs (related to their values)
+      "Hospitality as Praxis": 0.60
+      "Intergenerational Learning": 0.55
+      "Integrated Mind-Body": 0.50
+      "Folkloric Transmission and Archiving": 0.45
+      "Storyweaving & Community Histories": 0.40
+      
+      # Lower affinity programs
+      "Strategic Rituals and Civic Memory": 0.30
+      "Ancient Tongues and Translation": 0.25
+      "Elven Ethics in Modern Governance": 0.20
+      "Critical Power": 0.15
+      "Consensus Systems in Hybrid Societies": 0.10
+      
+      # Minimal affinity programs
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Multispecies Semantics": 0.05
+      "Epistemological Justice": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Knowledge System Prototyping": 0.05
+      "Embodied Research Methods": 0.05
+      "Runic Infrastructure": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Timekeeping in Plural Cultures": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  granite:
+    name: "Granite Dwarves"
+    description: "Stoic, hierarchical, tradition-bound warriors and civic leaders"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Strategic Rituals and Civic Memory": 0.95
+      "Narrative Governance and Institution Building": 0.90
+      "Conflict Transformation through Cultural Design": 0.85
+      "Ancient Tongues and Translation": 0.80
+      "Comparative Runes and Scripts": 0.75
+      
+      # Moderate affinity programs
+      "Critical Power": 0.60
+      "Consensus Systems in Hybrid Societies": 0.55
+      "Elven Ethics in Modern Governance": 0.50
+      "Wisdom Traditions and Moral Craft": 0.45
+      "Pedagogies for Uncertain Times": 0.40
+      
+      # Lower affinity programs
+      "Runic Infrastructure": 0.30
+      "Lorekeeper Apprenticeship": 0.25
+      "Epistemological Justice": 0.20
+      "Timekeeping in Plural Cultures": 0.15
+      "Mutual Aid and Guild Governance": 0.10
+      
+      # Minimal affinity programs
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Care, Craft and Continuity": 0.05
+      "Hospitality as Praxis": 0.05
+      "Intergenerational Learning": 0.05
+      "Integrated Mind-Body": 0.05
+      "Folkloric Transmission and Archiving": 0.05
+      "Storyweaving & Community Histories": 0.05
+      "Knowledge System Prototyping": 0.05
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  flint:
+    name: "Flint Dwarves"
+    description: "Gritty, tough, blunt miners, frontline workers, and pragmatists"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Earth-Aligned Agriculture": 0.95
+      "Mycelial Cultivation and Biotech": 0.90
+      "Food System Resilience": 0.85
+      "Herbal Practice and Energy Work": 0.80
+      "Pedagogies of the Hand": 0.75
+      
+      # Moderate affinity programs
+      "Care, Craft and Continuity": 0.60
+      "Integrated Mind-Body": 0.55
+      "Resilience Studies and Crisis Pedagogies": 0.50
+      "Wisdom Traditions and Moral Craft": 0.45
+      "Pedagogies for Uncertain Times": 0.40
+      
+      # Lower affinity programs
+      "Mutual Aid and Guild Governance": 0.30
+      "Intergenerational Learning": 0.25
+      "Hospitality as Praxis": 0.20
+      "Folkloric Transmission and Archiving": 0.15
+      "Storyweaving & Community Histories": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Ancient Tongues and Translation": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Epistemological Justice": 0.05
+      "Knowledge System Prototyping": 0.05
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Timekeeping in Plural Cultures": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  alabaster:
+    name: "Alabaster Dwarves"
+    description: "Marginalized, dignified, enduring - often in lower-status roles, value community. Includes former Gypsum clan characteristics: scholarly, gentle, introspective healers, alchemists, and archivists"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Hospitality as Praxis": 0.95
+      "Intergenerational Learning": 0.90
+      "Mutual Aid and Guild Governance": 0.85
+      "Timekeeping in Plural Cultures": 0.80
+      "Folkloric Transmission and Archiving": 0.75
+      
+      # Moderate affinity programs
+      "Care, Craft and Continuity": 0.60
+      "Storyweaving & Community Histories": 0.55
+      "Integrated Mind-Body": 0.50
+      "Pedagogies of the Hand": 0.45
+      "Wisdom Traditions and Moral Craft": 0.40
+      
+      # Lower affinity programs
+      "Ancient Tongues and Translation": 0.30
+      "Knowledge System Prototyping": 0.25
+      "Embodied Research Methods": 0.20
+      "Multispecies Semantics": 0.15
+      "Epistemological Justice": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  sandstone:
+    name: "Sandstone Dwarves"
+    description: "Adaptable and upbeat traders, messengers, and builders of bridges"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Distributed Workshop Economies": 0.95
+      "Mutual Aid and Guild Governance": 0.90
+      "Listening Circles Facilitation": 0.85
+      "Mediation": 0.80
+      "Elven Ethics in Modern Governance": 0.75
+      
+      # Moderate affinity programs
+      "Hospitality as Praxis": 0.60
+      "Intergenerational Learning": 0.55
+      "Storyweaving & Community Histories": 0.50
+      "Care, Craft and Continuity": 0.45
+      "Integrated Mind-Body": 0.40
+      
+      # Lower affinity programs
+      "Narrative Governance and Institution Building": 0.30
+      "Strategic Rituals and Civic Memory": 0.25
+      "Consensus Systems in Hybrid Societies": 0.20
+      "Timekeeping in Plural Cultures": 0.15
+      "Folkloric Transmission and Archiving": 0.10
+      
+      # Minimal affinity programs
+      "Conflict Transformation through Cultural Design": 0.05
+      "Ancient Tongues and Translation": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Critical Power": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Epistemological Justice": 0.05
+      "Knowledge System Prototyping": 0.05
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Wisdom Traditions and Moral Craft": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  obsidian:
+    name: "Obsidian Dwarves"
+    description: "Mysterious, elegant, philosophical spiritual leaders and lorekeepers"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Comparative Runes and Scripts": 0.95
+      "Multispecies Semantics": 0.90
+      "Epistemological Justice": 0.85
+      "Lorekeeper Apprenticeship": 0.80
+      "Wisdom Traditions and Moral Craft": 0.75
+      
+      # Moderate affinity programs
+      "Ancient Tongues and Translation": 0.60
+      "Knowledge System Prototyping": 0.55
+      "Embodied Research Methods": 0.50
+      "Storyweaving & Community Histories": 0.45
+      "Folkloric Transmission and Archiving": 0.40
+      
+      # Lower affinity programs
+      "Strategic Rituals and Civic Memory": 0.30
+      "Runic Infrastructure": 0.25
+      "Timekeeping in Plural Cultures": 0.20
+      "Integrated Mind-Body": 0.15
+      "Care, Craft and Continuity": 0.10
+      
+      # Minimal affinity programs
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Hospitality as Praxis": 0.05
+      "Intergenerational Learning": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  bismuth:
+    name: "Bismuth Dwarves"
+    description: "Iridescent and enigmatic creatives, polymaths, and eccentric thinkers"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Knowledge System Prototyping": 0.95
+      "Embodied Research Methods": 0.90
+      "Storyweaving & Community Histories": 0.85
+      "Integrated Mind-Body": 0.80
+      "Folkloric Transmission and Archiving": 0.75
+      
+      # Moderate affinity programs
+      "Multispecies Semantics": 0.60
+      "Epistemological Justice": 0.55
+      "Wisdom Traditions and Moral Craft": 0.50
+      "Care, Craft and Continuity": 0.45
+      "Intergenerational Learning": 0.40
+      
+      # Lower affinity programs
+      "Ancient Tongues and Translation": 0.30
+      "Comparative Runes and Scripts": 0.25
+      "Lorekeeper Apprenticeship": 0.20
+      "Timekeeping in Plural Cultures": 0.15
+      "Hospitality as Praxis": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  slate:
+    name: "Slate Dwarves"
+    description: "Quiet, brittle, and focused planners, engineers, and precision workers"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Runic Infrastructure": 0.95
+      "Critical Power": 0.90
+      "Consensus Systems in Hybrid Societies": 0.85
+      "Strategic Rituals and Civic Memory": 0.80
+      "Pedagogies for Uncertain Times": 0.75
+      
+      # Moderate affinity programs
+      "Narrative Governance and Institution Building": 0.60
+      "Elven Ethics in Modern Governance": 0.55
+      "Ancient Tongues and Translation": 0.50
+      "Comparative Runes and Scripts": 0.45
+      "Epistemological Justice": 0.40
+      
+      # Lower affinity programs
+      "Knowledge System Prototyping": 0.30
+      "Lorekeeper Apprenticeship": 0.25
+      "Timekeeping in Plural Cultures": 0.20
+      "Multispecies Semantics": 0.15
+      "Wisdom Traditions and Moral Craft": 0.10
+      
+      # Minimal affinity programs
+      "Conflict Transformation through Cultural Design": 0.05
+      "Embodied Research Methods": 0.05
+      "Storyweaving & Community Histories": 0.05
+      "Integrated Mind-Body": 0.05
+      "Care, Craft and Continuity": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Hospitality as Praxis": 0.05
+      "Intergenerational Learning": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Folkloric Transmission and Archiving": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  # ===== ELF CLANS =====
+  
+  holly:
+    name: "Holly Elves"
+    description: "Scholarly and devout caretakers of knowledge and ritual, balanced by warmth"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Care, Craft and Continuity": 0.95
+      "Ritual and Recollection": 0.90
+      "Ancient Tongues and Translation": 0.85
+      "Hospitality as Praxis": 0.80
+      "Pedagogies for Uncertain Times": 0.75
+      
+      # Moderate affinity programs
+      "Intergenerational Learning": 0.60
+      "Wisdom Traditions and Moral Craft": 0.55
+      "Folkloric Transmission and Archiving": 0.50
+      "Integrated Mind-Body": 0.45
+      "Strategic Rituals and Civic Memory": 0.40
+      
+      # Lower affinity programs
+      "Comparative Runes and Scripts": 0.30
+      "Lorekeeper Apprenticeship": 0.25
+      "Timekeeping in Plural Cultures": 0.20
+      "Care, Craft and Continuity": 0.15
+      "Storyweaving & Community Histories": 0.10
+      
+      # Minimal affinity programs
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Epistemological Justice": 0.05
+      "Knowledge System Prototyping": 0.05
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  yew:
+    name: "Yew Elves"
+    description: "Stern, ancient, and politically savvy guardians of long memory and cultural power"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Elven Ethics in Modern Governance": 0.95
+      "Narrative Governance and Institution Building": 0.90
+      "Strategic Rituals and Civic Memory": 0.85
+      "Critical Power": 0.80
+      "Consensus Systems in Hybrid Societies": 0.75
+      
+      # Moderate affinity programs
+      "Ancient Tongues and Translation": 0.60
+      "Timekeeping in Plural Cultures": 0.55
+      "Comparative Runes and Scripts": 0.50
+      "Epistemological Justice": 0.45
+      "Lorekeeper Apprenticeship": 0.40
+      
+      # Lower affinity programs
+      "Runic Infrastructure": 0.30
+      "Pedagogies for Uncertain Times": 0.25
+      "Conflict Transformation through Cultural Design": 0.20
+      "Wisdom Traditions and Moral Craft": 0.15
+      "Knowledge System Prototyping": 0.10
+      
+      # Minimal affinity programs
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Storyweaving & Community Histories": 0.05
+      "Integrated Mind-Body": 0.05
+      "Care, Craft and Continuity": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Hospitality as Praxis": 0.05
+      "Intergenerational Learning": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Folkloric Transmission and Archiving": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  rowan:
+    name: "Rowan Elves"
+    description: "Expressive, curious, and poetic nature-linked seers and storytellers"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Storyweaving & Community Histories": 0.95
+      "Multispecies Semantics": 0.90
+      "Embodied Research Methods": 0.85
+      "Intergenerational Learning": 0.80
+      "Folkloric Transmission and Archiving": 0.75
+      
+      # Moderate affinity programs
+      "Integrated Mind-Body": 0.60
+      "Care, Craft and Continuity": 0.55
+      "Hospitality as Praxis": 0.50
+      "Wisdom Traditions and Moral Craft": 0.45
+      "Knowledge System Prototyping": 0.40
+      
+      # Lower affinity programs
+      "Ancient Tongues and Translation": 0.30
+      "Comparative Runes and Scripts": 0.25
+      "Epistemological Justice": 0.20
+      "Timekeeping in Plural Cultures": 0.15
+      "Lorekeeper Apprenticeship": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  ash:
+    name: "Ash Elves"
+    description: "Resilient and passionate storm-walkers who see rebirth through fire and adversity"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Food System Resilience": 0.95
+      "Herbal Practice and Energy Work": 0.90
+      "Resilience Studies and Crisis Pedagogies": 0.85
+      "Earth-Aligned Agriculture": 0.80
+      "Pedagogies for Uncertain Times": 0.75
+      
+      # Moderate affinity programs
+      "Integrated Mind-Body": 0.60
+      "Care, Craft and Continuity": 0.55
+      "Mycelial Cultivation and Biotech": 0.50
+      "Wisdom Traditions and Moral Craft": 0.45
+      "Storyweaving & Community Histories": 0.40
+      
+      # Lower affinity programs
+      "Intergenerational Learning": 0.30
+      "Folkloric Transmission and Archiving": 0.25
+      "Hospitality as Praxis": 0.20
+      "Knowledge System Prototyping": 0.15
+      "Embodied Research Methods": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Ancient Tongues and Translation": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Epistemological Justice": 0.05
+      "Multispecies Semantics": 0.05
+      "Timekeeping in Plural Cultures": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  baobab:
+    name: "Baobab Elves"
+    description: "Majestic and powerful deeply rooted elites with ceremonial grace and social control"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Elven Ethics in Modern Governance": 0.95
+      "Timekeeping in Plural Cultures": 0.90
+      "Ancient Tongues and Translation": 0.85
+      "Critical Power": 0.80
+      "Strategic Rituals and Civic Memory": 0.75
+      
+      # Moderate affinity programs
+      "Narrative Governance and Institution Building": 0.60
+      "Consensus Systems in Hybrid Societies": 0.55
+      "Comparative Runes and Scripts": 0.50
+      "Epistemological Justice": 0.45
+      "Lorekeeper Apprenticeship": 0.40
+      
+      # Lower affinity programs
+      "Runic Infrastructure": 0.30
+      "Pedagogies for Uncertain Times": 0.25
+      "Conflict Transformation through Cultural Design": 0.20
+      "Wisdom Traditions and Moral Craft": 0.15
+      "Knowledge System Prototyping": 0.10
+      
+      # Minimal affinity programs
+      "Embodied Research Methods": 0.05
+      "Multispecies Semantics": 0.05
+      "Storyweaving & Community Histories": 0.05
+      "Integrated Mind-Body": 0.05
+      "Care, Craft and Continuity": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Hospitality as Praxis": 0.05
+      "Intergenerational Learning": 0.05
+      "Mutual Aid and Guild Governance": 0.05
+      "Folkloric Transmission and Archiving": 0.05
+      "Distributed Workshop Economies": 0.05
+      "Listening Circles Facilitation": 0.05
+      "Mediation": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+  palm:
+    name: "Palm Elves"
+    description: "Joyful yet tragic seafaring survivors who turn hardship into celebration and beauty"
+    program_affinities:
+      # Top 5 programs (high affinity)
+      "Listening Circles Facilitation": 0.95
+      "Mediation": 0.90
+      "Integrated Mind-Body": 0.85
+      "Storyweaving & Community Histories": 0.80
+      "Hospitality as Praxis": 0.75
+      
+      # Moderate affinity programs
+      "Care, Craft and Continuity": 0.60
+      "Intergenerational Learning": 0.55
+      "Folkloric Transmission and Archiving": 0.50
+      "Mutual Aid and Guild Governance": 0.45
+      "Distributed Workshop Economies": 0.40
+      
+      # Lower affinity programs
+      "Wisdom Traditions and Moral Craft": 0.30
+      "Knowledge System Prototyping": 0.25
+      "Embodied Research Methods": 0.20
+      "Multispecies Semantics": 0.15
+      "Timekeeping in Plural Cultures": 0.10
+      
+      # Minimal affinity programs
+      "Strategic Rituals and Civic Memory": 0.05
+      "Narrative Governance and Institution Building": 0.05
+      "Conflict Transformation through Cultural Design": 0.05
+      "Ancient Tongues and Translation": 0.05
+      "Comparative Runes and Scripts": 0.05
+      "Critical Power": 0.05
+      "Consensus Systems in Hybrid Societies": 0.05
+      "Elven Ethics in Modern Governance": 0.05
+      "Runic Infrastructure": 0.05
+      "Lorekeeper Apprenticeship": 0.05
+      "Epistemological Justice": 0.05
+      "Pedagogies of the Hand": 0.05
+      "Earth-Aligned Agriculture": 0.05
+      "Mycelial Cultivation and Biotech": 0.05
+      "Food System Resilience": 0.05
+      "Herbal Practice and Energy Work": 0.05
+      "Resilience Studies and Crisis Pedagogies": 0.05
+      "Pedagogies for Uncertain Times": 0.05
+      "Ritual and Recollection": 0.05
+      "Brewcraft and Fermentation Systems": 0.05
+      "Transdisciplinary Design and Praxis": 0.05
+      "Language and Symbol": 0.05
+
+# Program affinity settings
+settings:
+  # Affinity score interpretation
+  affinity_levels:
+    very_high: [0.90, 1.00]    # Top 5 programs per clan
+    high: [0.75, 0.89]         # Strong affinity
+    moderate: [0.50, 0.74]     # Moderate affinity
+    low: [0.20, 0.49]          # Lower affinity
+    minimal: [0.05, 0.19]      # Minimal affinity
+    
+  # Program selection rules
+  selection_rules:
+    # Base probability of selecting a program based on affinity
+    base_selection_probability: 0.3
+    
+    # Multiplier for each affinity level
+    affinity_multipliers:
+      very_high: 3.0
+      high: 2.0
+      moderate: 1.5
+      low: 1.0
+      minimal: 0.5
+    
+    # Maximum number of programs to consider per student
+    max_programs_per_student: 8
+    
+    # Minimum affinity threshold for consideration
+    minimum_affinity_threshold: 0.05 
