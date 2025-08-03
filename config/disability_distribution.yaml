@@ -15,7 +15,7 @@ Dwarf:
   requires_personal_care: 0.02           # 2% of Dwarves require personal care
   blind_or_visually_impaired: 0.04       # 4% of Dwarves are blind or visually impaired
   communication_difficulties: 0.03       # 3% of Dwarves have communication difficulties
-  no_known_disabilities: 0.45            # 45% of Dwarves have no known disabilities
+  no_known_disabilities: 0.55            # 55% of Dwarves have no known disabilities
 
 Elf:
   physical_disability: 0.03              # 3% of Elves have physical disabilities
@@ -30,4 +30,4 @@ Elf:
   requires_personal_care: 0.01           # 1% of Elves require personal care
   blind_or_visually_impaired: 0.03       # 3% of Elves are blind or visually impaired
   communication_difficulties: 0.03       # 3% of Elves have communication difficulties
-  no_known_disabilities: 0.62            # 62% of Elves have no known disabilities 
+  no_known_disabilities: 0.72            # 72% of Elves have no known disabilities 

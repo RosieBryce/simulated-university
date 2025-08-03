@@ -1951,7 +1951,39 @@ clans:
         name: Torvik
       - frequency: 0.3
         name: Varnel
-      neuter: []
+      neuter:
+      - frequency: 0.3
+        name: Alin
+      - frequency: 0.6
+        name: Bren
+      - frequency: 0.3
+        name: Deln
+      - frequency: 0.1
+        name: Erlin
+      - frequency: 0.6
+        name: Feln
+      - frequency: 0.3
+        name: Heln
+      - frequency: 0.1
+        name: Keln
+      - frequency: 0.6
+        name: Lorn
+      - frequency: 0.3
+        name: Mern
+      - frequency: 0.1
+        name: Neln
+      - frequency: 0.6
+        name: Orin
+      - frequency: 0.3
+        name: Peln
+      - frequency: 0.1
+        name: Reln
+      - frequency: 0.6
+        name: Seln
+      - frequency: 0.3
+        name: Teln
+      - frequency: 0.1
+        name: Veln
     name: Slate Dwarfs
     race: Dwarf
     surnames:

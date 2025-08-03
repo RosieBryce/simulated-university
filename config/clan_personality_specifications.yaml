@@ -30,6 +30,17 @@ clans:
       extra_curricular_propensity: [0.6, 0.8]  # High - community activities
       career_ambition: [0.5, 0.7]              # Moderate - balanced approach
       community_engagement: [0.7, 0.9]         # Very High - cooperative values
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.7, 0.9]               # High - scholarly nature
+      values_based_motivation: [0.8, 0.95]     # Very High - community enhancement
+      career_focus: [0.5, 0.7]                 # Moderate - balanced approach
+      cultural_experience: [0.6, 0.8]          # High - open to new ideas
+      personal_growth: [0.7, 0.9]              # High - spiritual development
+      social_connection: [0.6, 0.8]            # High - community-oriented
+      intellectual_curiosity: [0.7, 0.9]       # High - mystical interests
+      practical_skills: [0.8, 0.95]            # Very High - craftsmanship focus
 
   granite:
     name: "Granite Dwarves"
@@ -53,6 +64,17 @@ clans:
       extra_curricular_propensity: [0.5, 0.7]  # Moderate - structured activities
       career_ambition: [0.6, 0.8]              # High - leadership roles
       community_engagement: [0.5, 0.7]         # Moderate - hierarchical engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.4, 0.7]               # Moderate - traditional learning
+      values_based_motivation: [0.6, 0.8]      # High - civic duty
+      career_focus: [0.7, 0.9]                 # High - leadership roles
+      cultural_experience: [0.3, 0.6]          # Low-Moderate - tradition-bound
+      personal_growth: [0.5, 0.8]              # Moderate-High - hierarchical advancement
+      social_connection: [0.4, 0.7]            # Moderate - formal networks
+      intellectual_curiosity: [0.4, 0.7]       # Moderate - traditional knowledge
+      practical_skills: [0.6, 0.8]             # High - warrior/civic skills
 
 
 
@@ -78,6 +100,17 @@ clans:
       extra_curricular_propensity: [0.4, 0.7]  # Moderate - practical activities
       career_ambition: [0.5, 0.8]              # Moderate-High - career focused
       community_engagement: [0.4, 0.7]         # Moderate - practical engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.4, 0.7]               # Moderate - practical learning
+      values_based_motivation: [0.5, 0.8]      # Moderate-High - worker solidarity
+      career_focus: [0.6, 0.9]                 # High - practical careers
+      cultural_experience: [0.4, 0.7]          # Moderate - practical innovation
+      personal_growth: [0.5, 0.8]              # Moderate-High - skill development
+      social_connection: [0.5, 0.8]            # Moderate-High - direct communication
+      intellectual_curiosity: [0.4, 0.7]       # Moderate - practical innovation
+      practical_skills: [0.8, 0.95]            # Very High - mining/crafting focus
 
   alabaster:
     name: "Alabaster Dwarves"
@@ -101,6 +134,17 @@ clans:
       extra_curricular_propensity: [0.3, 0.6]  # Low-Moderate - cautious participation, quiet activities
       career_ambition: [0.3, 0.6]              # Low-Moderate - realistic goals, scholarly careers
       community_engagement: [0.6, 0.8]         # High - community values, caring professions
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.6, 0.8]               # High - scholarly nature
+      values_based_motivation: [0.7, 0.9]      # High - community service
+      career_focus: [0.4, 0.7]                 # Moderate - caring professions
+      cultural_experience: [0.5, 0.8]          # Moderate-High - scholarly curiosity
+      personal_growth: [0.6, 0.8]              # High - gentle strength
+      social_connection: [0.6, 0.8]            # High - community support
+      intellectual_curiosity: [0.6, 0.8]       # High - scholarly interests
+      practical_skills: [0.4, 0.7]             # Moderate - healing/caring skills
 
   sandstone:
     name: "Sandstone Dwarves"
@@ -124,6 +168,17 @@ clans:
       extra_curricular_propensity: [0.6, 0.8]  # High - social activities
       career_ambition: [0.5, 0.7]              # Moderate - balanced approach
       community_engagement: [0.7, 0.9]         # High - bridge-building
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.5, 0.8]               # Moderate-High - adaptable learning
+      values_based_motivation: [0.6, 0.8]      # High - bridge-building values
+      career_focus: [0.5, 0.7]                 # Moderate - balanced approach
+      cultural_experience: [0.7, 0.9]          # High - cultural exchange
+      personal_growth: [0.6, 0.8]              # High - adaptability
+      social_connection: [0.7, 0.9]            # High - social networking
+      intellectual_curiosity: [0.6, 0.8]       # High - open to new ideas
+      practical_skills: [0.5, 0.8]             # Moderate-High - communication skills
 
   obsidian:
     name: "Obsidian Dwarves"
@@ -147,6 +202,17 @@ clans:
       extra_curricular_propensity: [0.4, 0.6]  # Moderate - selective activities
       career_ambition: [0.5, 0.7]              # Moderate - philosophical careers
       community_engagement: [0.4, 0.7]         # Moderate - spiritual engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.8, 0.95]              # Very High - philosophical inquiry
+      values_based_motivation: [0.7, 0.9]      # High - spiritual values
+      career_focus: [0.4, 0.7]                 # Moderate - spiritual leadership
+      cultural_experience: [0.6, 0.8]          # High - mystical exploration
+      personal_growth: [0.8, 0.95]             # Very High - spiritual development
+      social_connection: [0.4, 0.7]            # Moderate - spiritual community
+      intellectual_curiosity: [0.8, 0.95]      # Very High - philosophical curiosity
+      practical_skills: [0.3, 0.6]             # Low-Moderate - spiritual focus
 
   bismuth:
     name: "Bismuth Dwarves"
@@ -170,6 +236,17 @@ clans:
       extra_curricular_propensity: [0.6, 0.8]  # High - creative activities
       career_ambition: [0.4, 0.7]              # Moderate - creative careers
       community_engagement: [0.5, 0.7]         # Moderate - creative engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.8, 0.95]              # Very High - polymath interests
+      values_based_motivation: [0.5, 0.8]      # Moderate-High - creative expression
+      career_focus: [0.4, 0.7]                 # Moderate - creative careers
+      cultural_experience: [0.7, 0.9]          # High - creative exploration
+      personal_growth: [0.7, 0.9]              # High - creative development
+      social_connection: [0.5, 0.8]            # Moderate-High - creative community
+      intellectual_curiosity: [0.8, 0.95]      # Very High - polymath curiosity
+      practical_skills: [0.4, 0.7]             # Moderate - creative skills
 
   slate:
     name: "Slate Dwarves"
@@ -193,6 +270,17 @@ clans:
       extra_curricular_propensity: [0.3, 0.6]  # Low-Moderate - focused activities
       career_ambition: [0.5, 0.8]              # Moderate-High - technical careers
       community_engagement: [0.3, 0.6]         # Low-Moderate - focused engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.5, 0.8]               # Moderate-High - focused learning
+      values_based_motivation: [0.4, 0.7]      # Moderate - precision work
+      career_focus: [0.6, 0.9]                 # High - technical careers
+      cultural_experience: [0.3, 0.6]          # Low-Moderate - focused approach
+      personal_growth: [0.5, 0.8]              # Moderate-High - skill mastery
+      social_connection: [0.3, 0.6]            # Low-Moderate - focused work
+      intellectual_curiosity: [0.5, 0.8]       # Moderate-High - technical curiosity
+      practical_skills: [0.8, 0.95]            # Very High - precision skills
 
   # ===== ELF CLANS =====
   
@@ -218,6 +306,17 @@ clans:
       extra_curricular_propensity: [0.5, 0.7]  # Moderate - structured activities
       career_ambition: [0.5, 0.7]              # Moderate - scholarly careers
       community_engagement: [0.6, 0.8]         # High - protective engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.7, 0.9]               # High - scholarly nature
+      values_based_motivation: [0.7, 0.9]      # High - protective values
+      career_focus: [0.5, 0.7]                 # Moderate - scholarly careers
+      cultural_experience: [0.6, 0.8]          # High - ritual knowledge
+      personal_growth: [0.7, 0.9]              # High - spiritual development
+      social_connection: [0.6, 0.8]            # High - protective community
+      intellectual_curiosity: [0.7, 0.9]       # High - scholarly curiosity
+      practical_skills: [0.5, 0.8]             # Moderate-High - ritual skills
 
   yew:
     name: "Yew Elves"
@@ -241,6 +340,17 @@ clans:
       extra_curricular_propensity: [0.4, 0.6]  # Moderate - political activities
       career_ambition: [0.6, 0.8]              # High - political careers
       community_engagement: [0.5, 0.7]         # Moderate - political engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.6, 0.8]               # High - political knowledge
+      values_based_motivation: [0.6, 0.8]      # High - cultural preservation
+      career_focus: [0.7, 0.9]                 # High - political careers
+      cultural_experience: [0.5, 0.8]          # Moderate-High - cultural memory
+      personal_growth: [0.6, 0.8]              # High - political advancement
+      social_connection: [0.5, 0.8]            # Moderate-High - political networks
+      intellectual_curiosity: [0.6, 0.8]       # High - political knowledge
+      practical_skills: [0.5, 0.8]             # Moderate-High - political skills
 
   rowan:
     name: "Rowan Elves"
@@ -264,6 +374,17 @@ clans:
       extra_curricular_propensity: [0.7, 0.9]  # High - expressive activities
       career_ambition: [0.5, 0.7]              # Moderate - creative careers
       community_engagement: [0.7, 0.9]         # High - hospitable engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.7, 0.9]               # High - curious nature
+      values_based_motivation: [0.7, 0.9]      # High - hospitable values
+      career_focus: [0.5, 0.7]                 # Moderate - creative careers
+      cultural_experience: [0.8, 0.95]         # Very High - storytelling
+      personal_growth: [0.7, 0.9]              # High - expressive development
+      social_connection: [0.8, 0.95]           # Very High - hospitable community
+      intellectual_curiosity: [0.7, 0.9]       # High - curious nature
+      practical_skills: [0.4, 0.7]             # Moderate - storytelling skills
 
   ash:
     name: "Ash Elves"
@@ -287,6 +408,17 @@ clans:
       extra_curricular_propensity: [0.6, 0.8]  # High - passionate activities
       career_ambition: [0.6, 0.8]              # High - passionate careers
       community_engagement: [0.5, 0.7]         # Moderate - passionate engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.6, 0.9]               # High - passionate learning
+      values_based_motivation: [0.6, 0.8]      # High - transformative values
+      career_focus: [0.6, 0.8]                 # High - passionate careers
+      cultural_experience: [0.6, 0.8]          # High - storm-walking
+      personal_growth: [0.8, 0.95]             # Very High - rebirth through adversity
+      social_connection: [0.5, 0.8]            # Moderate-High - passionate community
+      intellectual_curiosity: [0.6, 0.9]       # High - passionate curiosity
+      practical_skills: [0.5, 0.8]             # Moderate-High - storm-walking skills
 
   baobab:
     name: "Baobab Elves"
@@ -310,6 +442,17 @@ clans:
       extra_curricular_propensity: [0.5, 0.7]  # Moderate - selective activities
       career_ambition: [0.7, 0.9]              # High - elite careers
       community_engagement: [0.4, 0.6]         # Moderate - controlled engagement
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.6, 0.8]               # High - sophisticated learning
+      values_based_motivation: [0.5, 0.7]      # Moderate - elite values
+      career_focus: [0.8, 0.95]                # Very High - elite careers
+      cultural_experience: [0.4, 0.6]          # Moderate - controlled exploration
+      personal_growth: [0.6, 0.8]              # High - elite development
+      social_connection: [0.4, 0.6]            # Moderate - controlled networks
+      intellectual_curiosity: [0.6, 0.8]       # High - sophisticated curiosity
+      practical_skills: [0.4, 0.6]             # Moderate - elite skills
 
   palm:
     name: "Palm Elves"
@@ -333,6 +476,17 @@ clans:
       extra_curricular_propensity: [0.7, 0.9]  # High - celebratory activities
       career_ambition: [0.4, 0.7]              # Moderate - joyful careers
       community_engagement: [0.7, 0.9]         # High - community celebration
+    
+    # Study Motivation Dimensions
+    motivation_dimensions:
+      academic_drive: [0.5, 0.8]               # Moderate-High - adaptable learning
+      values_based_motivation: [0.7, 0.9]      # High - survivor values
+      career_focus: [0.4, 0.7]                 # Moderate - joyful careers
+      cultural_experience: [0.8, 0.95]         # Very High - seafaring exploration
+      personal_growth: [0.7, 0.9]              # High - survivor strength
+      social_connection: [0.8, 0.95]           # Very High - celebratory community
+      intellectual_curiosity: [0.6, 0.8]       # High - adaptable curiosity
+      practical_skills: [0.5, 0.8]             # Moderate-High - seafaring skills
 
 # Health and Disability Tendencies by Clan
 # These are base probabilities that can be modified by individual circumstances

@@ -1,241 +1,220 @@
-# Stonegrove University Population Generator
+# Stonegrove University Individual-Level Modeling System
 
-A comprehensive Python tool for generating fictional student population data for Stonegrove University, a fantasy institution that admits Dwarves and Elves.
+A sophisticated simulation system for modeling individual student behavior, engagement, and academic progression at Stonegrove University.
 
-## 🏛️ About Stonegrove University
+## 🎯 Project Overview
 
-Stonegrove is a hybrid institution that blends the high academic standards and arcane traditions of the Elven university, Eldergrove, with the modern pedagogic and person-centred values of the Dwarven university, Stoneborn.
+This system generates unique students with personality traits, motivations, and behavioral patterns that influence their academic journey. It models individual-level characteristics including:
 
-## 📊 Generated Population
+- **Personality profiles** (Big Five + academic dimensions)
+- **Motivation dimensions** (8 types with personality nudging)
+- **Health/disability status** with realistic distributions
+- **Program enrollment** based on clan affinities and personality
+- **Weekly engagement** patterns with module-specific modifiers
+- **Semester-level summaries** with trends and risk factors
 
-- **Total Students**: 12,000
-- **Races**: Dwarves (55%) and Elves (45%)
-- **Data Fields**: 26 columns including demographics, disabilities, socio-economic information, and academic enrollment
-- **Academic Structure**: 4 Faculties, 16 Departments, 44 Programs
+## 📁 Project Structure
+
+```
+simulated-university/
+├── config/                          # Configuration files
+│   ├── clan_personality_specifications.yaml
+│   ├── clan_name_pools.yaml
+│   ├── clan_program_affinities.yaml
+│   ├── disability_distribution.yaml
+│   ├── module_characteristics.yaml   # Needs implementation
+│   └── program_characteristics.yaml  # Needs implementation
+├── core_systems/                     # Main modeling systems
+│   ├── student_generation_pipeline.py
+│   ├── program_enrollment_system.py
+│   ├── engagement_system.py
+│   └── assessment_system.py         # Next to implement
+├── supporting_systems/               # Utility systems
+│   ├── name_generator.py
+│   ├── personality_refinement_system.py
+│   └── motivation_profile_system.py
+├── data/                            # Generated data
+│   ├── stonegrove_individual_students.csv
+│   ├── stonegrove_enrolled_students.csv
+│   ├── stonegrove_weekly_engagement.csv
+│   └── stonegrove_semester_engagement.csv
+├── visualizations/                   # Analysis outputs
+│   ├── stonegrove_enrollment_analysis.png
+│   └── stonegrove_engagement_analysis.png
+├── Instructions and guides/          # Source materials
+│   ├── Stonegrove_University_Curriculum.xlsx
+│   └── World-building/
+├── archive_population_model/         # Archived population-level files
+└── PROJECT_SUMMARY.md               # Detailed project documentation
+```
 
 ## 🚀 Quick Start
 
-### Installation
-
+### Prerequisites
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
 ```
 
-### Generate Population
-
+### Generate Student Population
 ```bash
-python population_generator.py
+cd core_systems
+python student_generation_pipeline.py
 ```
 
-This will create `stonegrove_university_population.csv` with 12,000 student records.
-
-### Enroll Students
-
+### Enroll Students in Programs
 ```bash
-python enrollment_system.py
+python program_enrollment_system.py
 ```
 
-This will assign students to programs based on race, gender, and educational background preferences, creating `stonegrove_enrolled_population.csv`.
-
-### Analyze Population
-
+### Generate Engagement Data
 ```bash
-python population_analysis.py
+python engagement_system.py
 ```
 
-This will generate detailed statistics and create `stonegrove_population_analysis.png`.
-
-### Visualize Enrollment
-
+### Create Visualizations
 ```bash
+cd ..
 python enrollment_visualization.py
+python engagement_visualization.py
 ```
 
-This will create enrollment visualizations and analysis charts.
+## 📊 Current System Capabilities
 
-### Edit Configuration
+### Student Generation
+- **500 individual students** with complete characteristics
+- **Race distribution**: 60% Dwarf, 40% Elf
+- **14 clans** with unique personality ranges and motivations
+- **Realistic name generation** from clan-specific pools
+- **Personality refinement** based on disabilities, socio-economic rank, education, age
 
-```bash
-python config_editor.py
-```
+### Program Enrollment
+- **44 programs** across 4 faculties
+- **Clan-program affinities** driving selection
+- **Personality/motivation modifiers** for realistic choices
+- **Year 1 modules** automatically assigned
 
-This interactive tool helps you easily modify distribution percentages without editing YAML files directly.
+### Engagement Modeling
+- **23,916 weekly engagement records** (12 weeks × ~2 modules × 500 students)
+- **500 semester engagement summaries** with trends and risk factors
+- **Module-specific modifiers** for difficulty, social requirements, creativity
+- **Weekly variation** with realistic fluctuations
+
+## 📈 Key Statistics
+
+### Engagement Performance
+- **Average attendance rate**: 68.7%
+- **Average participation score**: 51.7%
+- **Average academic engagement**: 66.8%
+- **Average social engagement**: 63.2%
+- **Average stress level**: 48.8%
+
+### Strong Personality-Engagement Correlations
+- **Conscientiousness vs Attendance**: 0.856 (very strong)
+- **Extraversion vs Participation**: 0.923 (very strong)
+- **Openness vs Academic Engagement**: 0.820 (very strong)
+
+### Risk Factors
+- **175 students** with low attendance
+- **143 students** with low participation
+- **88 students** with no risk factors
+
+## 🎯 Next Development Phase
+
+### Phase 1: Data Quality & Validation
+- [ ] Fix module name parsing issues
+- [ ] Review module difficulty estimation
+- [ ] Clarify engagement metrics (social vs participation)
+- [ ] Define motivation dimensions (intellectual vs academic)
+- [ ] Implement program characteristics
+
+### Phase 2: Assessment System
+- [ ] Create assessment modeling system
+- [ ] Implement mark generation with realistic distributions
+- [ ] Add performance modifiers (disability, clan, personality)
+
+### Phase 3: Longitudinal Progression
+- [ ] Year 2-3 progression logic
+- [ ] Graduation modeling
+- [ ] Career outcomes
+
+### Phase 4: Intervention Framework
+- [ ] Extra-curricular activities
+- [ ] Support programs
+- [ ] Evaluation methods
+
+## 🔧 Configuration
+
+### Clan Personality Specifications
+Edit `config/clan_personality_specifications.yaml` to modify:
+- Personality ranges for each clan
+- Health/disability tendencies
+- Motivation dimensions
+
+### Program Affinities
+Edit `config/clan_program_affinities.yaml` to adjust:
+- Clan preferences for specific programs
+- Affinity scores and selection rules
+
+### Disability Distributions
+Edit `config/disability_distribution.yaml` to change:
+- Disability prevalence by race
+- Overall proportions
+
+## 📋 Files Overview
+
+### Core Systems
+- **`student_generation_pipeline.py`**: Main student generation system
+- **`program_enrollment_system.py`**: Program selection and enrollment
+- **`engagement_system.py`**: Weekly and semester engagement modeling
+
+### Supporting Systems
+- **`name_generator.py`**: Clan-specific name generation
+- **`personality_refinement_system.py`**: Personality trait modification
+- **`motivation_profile_system.py`**: Motivation dimension generation
+
+### Data Files
+- **`stonegrove_individual_students.csv`**: Base student population
+- **`stonegrove_enrolled_students.csv`**: Students with program enrollment
+- **`stonegrove_weekly_engagement.csv`**: Weekly engagement data
+- **`stonegrove_semester_engagement.csv`**: Semester summaries
+
+### Visualizations
+- **`stonegrove_enrollment_analysis.png`**: Program enrollment patterns
+- **`stonegrove_engagement_analysis.png`**: Engagement trends and correlations
 
 ## 🎓 Academic Structure
 
-### Four Faculties
+### Faculties
+1. **Faculty of Applied Forging** (23% of students)
+2. **Faculty of Hearth and Transformation** (28.6% of students)
+3. **Faculty of Integrative Inquiry** (13% of students)
+4. **Faculty of Living Lore** (35.4% of students)
 
-1. **Faculty of Applied Forging** - Practical crafts and engineering
-2. **Faculty of Hearth and Transformation** - Healing, hospitality, and community
-3. **Faculty of Integrative Inquiry** - Research and interdisciplinary studies
-4. **Faculty of Living Lore** - Language, philosophy, and cultural studies
+### Programs
+- 44 unique programs across all faculties
+- Clan-specific affinities influence program selection
+- Personality and motivation provide individual variation
 
-### Enrollment Preferences
+### Modules
+- Year 1 modules automatically assigned based on program
+- Module characteristics (difficulty, social requirements, creativity) affect engagement
+- Average 2.1 modules per student
 
-- **Dwarves** prefer Applied Forging and Living Lore
-- **Elves** prefer Integrative Inquiry and Hearth and Transformation
-- **Elves in Applied Forging** are very rare
-- **Female Elves** with academic backgrounds prefer Integrative Inquiry
-- **Critical Power** program is female-dominated
-- **Brewcraft and Fermentation Systems** is the most popular program
-- **Language and Symbol** department programs are very popular
-- **Transdisciplinary Design and Praxis** programs have very few students
+## 🔄 Git Workflow
 
-## ⚙️ Configuration System
+1. **Current State**: Individual-level modeling with engagement system
+2. **Next Branch**: Create feature branch for assessment system
+3. **Development**: Implement fixes and new features
+4. **Validation**: Test and validate before merging
 
-All distribution percentages are now stored in YAML files in the `config/` directory, making it easy to modify specific values:
+## 📚 Documentation
 
-### Configuration Files
+- **`PROJECT_SUMMARY.md`**: Comprehensive project documentation and save point
+- **`Instructions and guides/`**: Source materials and world-building documents
+- **`archive_population_model/`**: Archived population-level modeling files
 
-- **`config/race_distribution.yaml`** - Race distribution (Dwarf/Elf percentages)
-- **`config/gender_distribution.yaml`** - Gender distribution (Male/Female/Other)
-- **`config/ethnicity_distribution.yaml`** - Ethnicity distribution by race
-- **`config/disability_distribution.yaml`** - Disability rates by race
-- **`config/education_distribution.yaml`** - Educational background by race
-- **`config/socio_economic_distribution.yaml`** - Socio-economic class by race and ethnicity
+---
 
-### Quick Configuration Changes
-
-**Example: Reduce wheelchair user percentage**
-
-1. **Option 1: Use the config editor**
-   ```bash
-   python config_editor.py
-   # Select disability_distribution.yaml
-   # Modify wheelchair_user percentages
-   ```
-
-2. **Option 2: Edit YAML directly**
-   ```yaml
-   # In config/disability_distribution.yaml
-   Dwarf:
-     wheelchair_user: 0.01  # Change from 0.02 to 0.01 (1% instead of 2%)
-   Elf:
-     wheelchair_user: 0.01  # Change from 0.02 to 0.01 (1% instead of 2%)
-   ```
-
-3. **Regenerate population**
-   ```bash
-   python population_generator.py
-   ```
-
-## 📋 Data Specifications
-
-### Demographics
-- **Race**: Dwarf (55%), Elf (45%)
-- **Gender**: Male (45%), Female (50%), Other (5%)
-- **Ethnicity**: 12 different ethnicities distributed by race
-
-### Dwarf Ethnicities
-- Malachite (10%), Granite (15%), Gypsum (12.5%)
-- Flint (35%), Alabaster (12.5%), Sandstone (15%)
-
-### Elf Ethnicities
-- Holly (10%), Yew (15%), Rowan (12.5%)
-- Ash (12.5%), Baobab (35%), Palm (15%)
-
-### Disabilities (13 Boolean Columns)
-Different rates for Dwarves and Elves:
-- Physical disability, Mental health disability
-- Specific learning disability, Autistic spectrum
-- ADHD, Dyslexia, Other neurodivergence
-- Deaf/hearing impaired, Wheelchair user
-- Requires personal care, Blind/visually impaired
-- Communication difficulties, No known disabilities
-
-### Educational Experience
-- **Dwarves**: Academic (12%), Vocational (88%)
-- **Elves**: Academic (78%), Vocational (22%)
-
-### Socio-Economic Class Rank
-- Scale: 1 (low) to 5 (high)
-- Complex distributions by race and ethnicity
-
-### Academic Enrollment
-- **Academic Year**: All students start in Year 1
-- **Faculty Assignment**: Based on race and gender preferences
-- **Program Assignment**: Weighted by popularity and student characteristics
-- **Department Structure**: Hierarchical organization within faculties
-
-## 📁 Files
-
-- `population_generator.py` - Main population generation script
-- `enrollment_system.py` - Academic enrollment assignment script
-- `population_analysis.py` - Analysis and visualization script
-- `enrollment_visualization.py` - Enrollment pattern visualization
-- `config_editor.py` - Interactive configuration editor
-- `stonegrove_university_population.csv` - Generated population data
-- `stonegrove_enrolled_population.csv` - Population with academic enrollment
-- `stonegrove_population_analysis.png` - Population analysis charts
-- `stonegrove_enrollment_analysis.png` - Enrollment analysis charts
-- `stonegrove_program_analysis.png` - Program popularity analysis
-- `requirements.txt` - Python dependencies
-- `README.md` - This documentation
-- `config/` - YAML configuration files
-- `Stonegrove_University_Curriculum.xlsx` - Academic structure definition
-
-## 🔧 Technical Details
-
-### Dependencies
-- pandas >= 1.5.0
-- numpy >= 1.21.0
-- matplotlib >= 3.5.0
-- seaborn >= 0.11.0
-- scipy >= 1.7.0
-- openpyxl >= 3.0.0
-- xlrd >= 2.0.0
-- PyYAML >= 6.0
-
-### Features
-- ✅ Exact distribution matching (within 1% tolerance)
-- ✅ Comprehensive validation
-- ✅ Detailed analysis and visualization
-- ✅ Reproducible results (seeded random generation)
-- ✅ Clean CSV export
-- ✅ **NEW**: YAML-based configuration system
-- ✅ **NEW**: Interactive configuration editor
-- ✅ **NEW**: Automatic distribution validation
-- ✅ **NEW**: Academic enrollment system
-- ✅ **NEW**: Program preference modeling
-- ✅ **NEW**: Enrollment pattern analysis
-
-## 📈 Sample Statistics
-
-From the generated population:
-- **Most common ethnicity**: Flint (Dwarves)
-- **Average socio-economic class**: 3.38
-- **Students with disabilities**: 5,585 (46.5%)
-- **Students without disabilities**: 6,370 (53.1%)
-- **Most diverse ethnicity**: Malachite (socio-economically)
-
-From the enrollment data:
-- **Most popular program**: Brewcraft and Fermentation Systems (744 students)
-- **Least popular programs**: Transdisciplinary Design programs (105 total students)
-- **Most popular faculty**: Faculty of Living Lore (4,730 students)
-- **Critical Power female students**: 83.4%
-- **Elves in Applied Forging**: 16.3% (rare as specified)
-
-## 🎯 Use Cases
-
-This population generator is perfect for:
-- Educational data modeling
-- Fantasy world-building
-- Statistical analysis practice
-- Diversity and inclusion research
-- Academic simulation studies
-- University enrollment modeling
-- Program demand forecasting
-
-## 🔄 Workflow
-
-1. **Initial Setup**: Run `python population_generator.py` to create initial population
-2. **Enroll Students**: Run `python enrollment_system.py` to assign academic programs
-3. **Analyze**: Run `python population_analysis.py` to see demographic statistics
-4. **Visualize**: Run `python enrollment_visualization.py` to see enrollment patterns
-5. **Modify**: Use `python config_editor.py` to adjust percentages
-6. **Regenerate**: Run `python population_generator.py` again to create new population
-7. **Repeat**: Iterate until you're happy with the distributions
-
-## 📝 License
-
-This project is created for educational and research purposes. Feel free to modify and extend for your own needs. 
+**Current Version**: Individual-level student modeling with engagement system
+**Next Focus**: Data quality fixes and assessment system implementation
+**Key Priority**: Fix module parsing and clarify engagement metrics 
