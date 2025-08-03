@@ -1,0 +1,415 @@
+# Module Characteristics System for Stonegrove University
+# Defines difficulty, social requirements, creativity requirements, and other attributes
+# for each module to influence student behavior and performance
+
+modules:
+  # ===== YEAR 1 MODULES =====
+  
+  # Distributed Workshop Economies
+  "Introduction to Cooperative Crafting":
+    program: "Distributed Workshop Economies"
+    year: 1
+    difficulty_level: 0.4
+    social_requirements: 0.7
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.8
+    stress_level: 0.3
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.4
+    assessment_type: "mixed"
+    description: "Foundation course introducing cooperative crafting principles"
+    
+  "Material Cultures and Local Economies":
+    program: "Distributed Workshop Economies"
+    year: 1
+    difficulty_level: 0.5
+    social_requirements: 0.6
+    creativity_requirements: 0.5
+    practical_theoretical_balance: 0.6
+    stress_level: 0.4
+    group_work_intensity: 0.5
+    independent_study_requirement: 0.6
+    assessment_type: "essay"
+    description: "Theoretical exploration of material culture and economic systems"
+    
+  "Tools, Skills, and Guild Technologies":
+    program: "Distributed Workshop Economies"
+    year: 1
+    difficulty_level: 0.6
+    social_requirements: 0.8
+    creativity_requirements: 0.7
+    practical_theoretical_balance: 0.9
+    stress_level: 0.5
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.3
+    assessment_type: "practical"
+    description: "Hands-on workshop focusing on tools and collaborative skills"
+    
+  # Mutual Aid and Guild Governance
+  "History of Mutual Aid and Guild Traditions":
+    program: "Mutual Aid and Guild Governance"
+    year: 1
+    difficulty_level: 0.4
+    social_requirements: 0.5
+    creativity_requirements: 0.3
+    practical_theoretical_balance: 0.3
+    stress_level: 0.2
+    group_work_intensity: 0.4
+    independent_study_requirement: 0.7
+    assessment_type: "essay"
+    description: "Historical foundation course with emphasis on independent study"
+    
+  "Foundations of Self-Governance":
+    program: "Mutual Aid and Guild Governance"
+    year: 1
+    difficulty_level: 0.5
+    social_requirements: 0.8
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.7
+    stress_level: 0.4
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.4
+    assessment_type: "mixed"
+    description: "Interactive course on governance principles and group dynamics"
+    
+  # Brewcraft and Fermentation Systems (Most Popular)
+  "Introduction to Fermentation Science":
+    program: "Brewcraft and Fermentation Systems"
+    year: 1
+    difficulty_level: 0.5
+    social_requirements: 0.6
+    creativity_requirements: 0.7
+    practical_theoretical_balance: 0.8
+    stress_level: 0.3
+    group_work_intensity: 0.6
+    independent_study_requirement: 0.5
+    assessment_type: "practical"
+    description: "Popular introductory course with hands-on brewing activities"
+    
+  "Cultural Traditions in Brewing":
+    program: "Brewcraft and Fermentation Systems"
+    year: 1
+    difficulty_level: 0.4
+    social_requirements: 0.7
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.6
+    stress_level: 0.2
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.4
+    assessment_type: "mixed"
+    description: "Cultural exploration with social brewing traditions"
+    
+  # Critical Power (Female-dominated)
+  "Power Dynamics in Traditional Societies":
+    program: "Critical Power"
+    year: 1
+    difficulty_level: 0.6
+    social_requirements: 0.8
+    creativity_requirements: 0.5
+    practical_theoretical_balance: 0.4
+    stress_level: 0.6
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.6
+    assessment_type: "essay"
+    description: "Intensive discussion-based course on power structures"
+    
+  "Feminist Epistemologies":
+    program: "Critical Power"
+    year: 1
+    difficulty_level: 0.7
+    social_requirements: 0.7
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.3
+    stress_level: 0.5
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.7
+    assessment_type: "essay"
+    description: "Theoretical course with emphasis on critical thinking"
+    
+  # Transdisciplinary Design and Praxis (Least Popular)
+  "Introduction to Transdisciplinary Methods":
+    program: "Transdisciplinary Design and Praxis"
+    year: 1
+    difficulty_level: 0.7
+    social_requirements: 0.6
+    creativity_requirements: 0.8
+    practical_theoretical_balance: 0.7
+    stress_level: 0.6
+    group_work_intensity: 0.6
+    independent_study_requirement: 0.7
+    assessment_type: "project"
+    description: "Challenging course requiring high creativity and independent work"
+    
+  "Design Thinking Across Disciplines":
+    program: "Transdisciplinary Design and Praxis"
+    year: 1
+    difficulty_level: 0.8
+    social_requirements: 0.7
+    creativity_requirements: 0.9
+    practical_theoretical_balance: 0.8
+    stress_level: 0.7
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.6
+    assessment_type: "project"
+    description: "High-stress course requiring innovative thinking and collaboration"
+    
+  # Language and Symbol (Very Popular)
+  "Introduction to Ancient Scripts":
+    program: "Ancient Tongues and Translation"
+    year: 1
+    difficulty_level: 0.5
+    social_requirements: 0.4
+    creativity_requirements: 0.5
+    practical_theoretical_balance: 0.5
+    stress_level: 0.3
+    group_work_intensity: 0.4
+    independent_study_requirement: 0.8
+    assessment_type: "mixed"
+    description: "Popular course with emphasis on individual study"
+    
+  "Comparative Runes and Scripts":
+    program: "Comparative Runes and Scripts"
+    year: 1
+    difficulty_level: 0.6
+    social_requirements: 0.5
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.6
+    stress_level: 0.4
+    group_work_intensity: 0.5
+    independent_study_requirement: 0.7
+    assessment_type: "mixed"
+    description: "Popular course combining theory and practical script analysis"
+    
+  # Faculty of Applied Forging (Dwarf-preferred)
+  "Pedagogies of the Hand":
+    program: "Pedagogies of the Hand"
+    year: 1
+    difficulty_level: 0.5
+    social_requirements: 0.7
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.8
+    stress_level: 0.3
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.4
+    assessment_type: "practical"
+    description: "Hands-on teaching methods with strong social component"
+    
+  "Earth-Aligned Agriculture":
+    program: "Earth-Aligned Agriculture"
+    year: 1
+    difficulty_level: 0.4
+    social_requirements: 0.6
+    creativity_requirements: 0.5
+    practical_theoretical_balance: 0.8
+    stress_level: 0.2
+    group_work_intensity: 0.6
+    independent_study_requirement: 0.5
+    assessment_type: "practical"
+    description: "Practical agriculture course with outdoor work"
+    
+  # Faculty of Integrative Inquiry (Female Elf-preferred)
+  "Epistemological Justice":
+    program: "Epistemological Justice"
+    year: 1
+    difficulty_level: 0.7
+    social_requirements: 0.8
+    creativity_requirements: 0.6
+    practical_theoretical_balance: 0.3
+    stress_level: 0.6
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.6
+    assessment_type: "essay"
+    description: "Theoretical course with intensive discussion and debate"
+    
+  "Indigenous and Folk Knowledge Systems":
+    program: "Indigenous and Folk Knowledge Systems"
+    year: 1
+    difficulty_level: 0.6
+    social_requirements: 0.7
+    creativity_requirements: 0.5
+    practical_theoretical_balance: 0.5
+    stress_level: 0.4
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.6
+    assessment_type: "mixed"
+    description: "Cultural studies course with community engagement"
+    
+  # ===== YEAR 2 MODULES (Sample) =====
+  
+  "Distributed Production Models":
+    program: "Distributed Workshop Economies"
+    year: 2
+    difficulty_level: 0.7
+    social_requirements: 0.8
+    creativity_requirements: 0.7
+    practical_theoretical_balance: 0.7
+    stress_level: 0.6
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.5
+    assessment_type: "project"
+    description: "Advanced workshop course with complex group dynamics"
+    
+  "Platform Cooperativism and Digital Infrastructure":
+    program: "Distributed Workshop Economies"
+    year: 2
+    difficulty_level: 0.8
+    social_requirements: 0.7
+    creativity_requirements: 0.8
+    practical_theoretical_balance: 0.6
+    stress_level: 0.7
+    group_work_intensity: 0.7
+    independent_study_requirement: 0.6
+    assessment_type: "project"
+    description: "Technical course requiring innovation and collaboration"
+    
+  # ===== YEAR 3 MODULES (Sample) =====
+  
+  "Capstone Project: Building a Distributed Enterprise":
+    program: "Distributed Workshop Economies"
+    year: 3
+    difficulty_level: 0.9
+    social_requirements: 0.9
+    creativity_requirements: 0.8
+    practical_theoretical_balance: 0.8
+    stress_level: 0.8
+    group_work_intensity: 0.9
+    independent_study_requirement: 0.7
+    assessment_type: "project"
+    description: "Final year project requiring maximum collaboration and innovation"
+    
+  "Designing Resilient Workshop Networks":
+    program: "Distributed Workshop Economies"
+    year: 3
+    difficulty_level: 0.8
+    social_requirements: 0.8
+    creativity_requirements: 0.8
+    practical_theoretical_balance: 0.7
+    stress_level: 0.7
+    group_work_intensity: 0.8
+    independent_study_requirement: 0.6
+    assessment_type: "project"
+    description: "Advanced design course with complex problem-solving"
+
+# Module characteristic definitions and impact factors
+settings:
+  difficulty_levels:
+    very_easy: [0.0, 0.3]
+    easy: [0.3, 0.5]
+    moderate: [0.5, 0.7]
+    difficult: [0.7, 0.8]
+    very_difficult: [0.8, 1.0]
+  
+  social_requirement_levels:
+    minimal: [0.0, 0.3]
+    low: [0.3, 0.5]
+    moderate: [0.5, 0.7]
+    high: [0.7, 0.8]
+    very_high: [0.8, 1.0]
+  
+  creativity_requirement_levels:
+    minimal: [0.0, 0.3]
+    low: [0.3, 0.5]
+    moderate: [0.5, 0.7]
+    high: [0.7, 0.8]
+    very_high: [0.8, 1.0]
+  
+  # Impact of module characteristics on student behavior
+  behavior_impacts:
+    difficulty_level:
+      description: "How challenging the module content is"
+      impact_on_attendance: "negative"
+      impact_on_performance: "mixed"
+      impact_on_stress: "positive"
+      impact_on_dropout: "positive"
+    
+    social_requirements:
+      description: "How much social interaction and group work is required"
+      impact_on_attendance: "positive"
+      impact_on_performance: "mixed"
+      impact_on_stress: "mixed"
+      impact_on_engagement: "positive"
+    
+    creativity_requirements:
+      description: "How much creative thinking and innovation is required"
+      impact_on_attendance: "mixed"
+      impact_on_performance: "mixed"
+      impact_on_stress: "mixed"
+      impact_on_engagement: "positive"
+    
+    practical_theoretical_balance:
+      description: "Balance between hands-on practical work and theoretical study"
+      impact_on_attendance: "positive"
+      impact_on_performance: "mixed"
+      impact_on_stress: "negative"
+      impact_on_engagement: "positive"
+    
+    stress_level:
+      description: "Overall stress and pressure associated with the module"
+      impact_on_attendance: "negative"
+      impact_on_performance: "negative"
+      impact_on_stress: "positive"
+      impact_on_dropout: "positive"
+    
+    group_work_intensity:
+      description: "Amount of collaborative work required"
+      impact_on_attendance: "positive"
+      impact_on_performance: "mixed"
+      impact_on_stress: "mixed"
+      impact_on_engagement: "positive"
+    
+    independent_study_requirement:
+      description: "Amount of self-directed learning required"
+      impact_on_attendance: "negative"
+      impact_on_performance: "mixed"
+      impact_on_stress: "mixed"
+      impact_on_engagement: "mixed"
+  
+  # Assessment type characteristics
+  assessment_types:
+    essay:
+      description: "Written assignments and essays"
+      stress_factor: 0.6
+      creativity_requirement: 0.5
+      social_factor: 0.2
+      practical_factor: 0.1
+    
+    practical:
+      description: "Hands-on practical assessments"
+      stress_factor: 0.4
+      creativity_requirement: 0.6
+      social_factor: 0.6
+      practical_factor: 0.9
+    
+    project:
+      description: "Extended project work"
+      stress_factor: 0.7
+      creativity_requirement: 0.8
+      social_factor: 0.7
+      practical_factor: 0.6
+    
+    mixed:
+      description: "Combination of assessment types"
+      stress_factor: 0.5
+      creativity_requirement: 0.6
+      social_factor: 0.5
+      practical_factor: 0.5
+  
+  # Year progression factors
+  year_factors:
+    1:
+      difficulty_multiplier: 1.0
+      stress_multiplier: 1.0
+      social_support: 0.8
+      independent_expectation: 0.6
+    
+    2:
+      difficulty_multiplier: 1.2
+      stress_multiplier: 1.1
+      social_support: 0.7
+      independent_expectation: 0.7
+    
+    3:
+      difficulty_multiplier: 1.4
+      stress_multiplier: 1.3
+      social_support: 0.6
+      independent_expectation: 0.8 
