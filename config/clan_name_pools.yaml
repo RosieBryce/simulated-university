@@ -1,0 +1,1020 @@
+# Clan Name Pools for Stonegrove University
+# Based on name patterns Excel file
+# Frequency weights: Common (0.6), Uncommon (0.3), Rare (0.1)
+
+clans:
+  # ===== DWARF CLANS =====
+  
+  malachite:
+    name: "Malachite Dwarves"
+    forenames:
+      male:
+        - name: "Thorin"
+          frequency: 0.6
+        - name: "Balin"
+          frequency: 0.6
+        - name: "Dwalin"
+          frequency: 0.6
+        - name: "Gloin"
+          frequency: 0.6
+        - name: "Oin"
+          frequency: 0.6
+        - name: "Bifur"
+          frequency: 0.3
+        - name: "Bofur"
+          frequency: 0.3
+        - name: "Bombur"
+          frequency: 0.3
+        - name: "Dori"
+          frequency: 0.3
+        - name: "Nori"
+          frequency: 0.3
+        - name: "Ori"
+          frequency: 0.3
+        - name: "Fili"
+          frequency: 0.3
+        - name: "Kili"
+          frequency: 0.3
+        - name: "Gimli"
+          frequency: 0.1
+        - name: "Thrain"
+          frequency: 0.1
+        - name: "Thror"
+          frequency: 0.1
+      female:
+        - name: "Dís"
+          frequency: 0.6
+        - name: "Anra"
+          frequency: 0.6
+        - name: "Frida"
+          frequency: 0.6
+        - name: "Helga"
+          frequency: 0.6
+        - name: "Ingrid"
+          frequency: 0.6
+        - name: "Sigrid"
+          frequency: 0.3
+        - name: "Thora"
+          frequency: 0.3
+        - name: "Vera"
+          frequency: 0.3
+        - name: "Ylva"
+          frequency: 0.3
+        - name: "Astrid"
+          frequency: 0.1
+        - name: "Brunhild"
+          frequency: 0.1
+        - name: "Gudrun"
+          frequency: 0.1
+      neuter:
+        - name: "Alin"
+          frequency: 0.1
+        - name: "Elin"
+          frequency: 0.1
+        - name: "Rin"
+          frequency: 0.1
+    surnames:
+      - name: "Alloycloak"
+        frequency: 0.3
+      - name: "Copperforge"
+        frequency: 0.6
+      - name: "Emeraldheart"
+        frequency: 0.6
+      - name: "Greenstone"
+        frequency: 0.6
+      - name: "Malachite"
+        frequency: 0.6
+      - name: "Mossbeard"
+        frequency: 0.3
+      - name: "Stonewhisper"
+        frequency: 0.3
+      - name: "Verdant"
+        frequency: 0.3
+      - name: "Crystalweave"
+        frequency: 0.1
+      - name: "Luminescent"
+        frequency: 0.1
+
+  granite:
+    name: "Granite Dwarves"
+    forenames:
+      male:
+        - name: "Thrain"
+          frequency: 0.6
+        - name: "Thror"
+          frequency: 0.6
+        - name: "Dain"
+          frequency: 0.6
+        - name: "Nain"
+          frequency: 0.6
+        - name: "Gror"
+          frequency: 0.6
+        - name: "Fror"
+          frequency: 0.3
+        - name: "Gror"
+          frequency: 0.3
+        - name: "Nar"
+          frequency: 0.3
+        - name: "Anar"
+          frequency: 0.3
+        - name: "Durin"
+          frequency: 0.1
+        - name: "Azaghal"
+          frequency: 0.1
+        - name: "Telchar"
+          frequency: 0.1
+      female:
+        - name: "Agda"
+          frequency: 0.6
+        - name: "Aldra"
+          frequency: 0.6
+        - name: "Hilda"
+          frequency: 0.6
+        - name: "Runa"
+          frequency: 0.6
+        - name: "Saga"
+          frequency: 0.6
+        - name: "Thora"
+          frequency: 0.3
+        - name: "Valka"
+          frequency: 0.3
+        - name: "Yrsa"
+          frequency: 0.3
+        - name: "Brynhild"
+          frequency: 0.1
+        - name: "Gudrun"
+          frequency: 0.1
+        - name: "Sigrun"
+          frequency: 0.1
+      neuter:
+        - name: "Stein"
+          frequency: 0.1
+        - name: "Berg"
+          frequency: 0.1
+    surnames:
+      - name: "Ancestrail"
+        frequency: 0.1
+      - name: "Ironbeard"
+        frequency: 0.6
+      - name: "Stonefist"
+        frequency: 0.6
+      - name: "Granite"
+        frequency: 0.6
+      - name: "Ironfoot"
+        frequency: 0.6
+      - name: "Stonehelm"
+        frequency: 0.3
+      - name: "Ironhand"
+        frequency: 0.3
+      - name: "Stoneaxe"
+        frequency: 0.3
+      - name: "Durinson"
+        frequency: 0.1
+      - name: "Longbeard"
+        frequency: 0.1
+
+  flint:
+    name: "Flint Dwarves"
+    forenames:
+      male:
+        - name: "Grim"
+          frequency: 0.6
+        - name: "Harsh"
+          frequency: 0.6
+        - name: "Rough"
+          frequency: 0.6
+        - name: "Sharp"
+          frequency: 0.6
+        - name: "Stout"
+          frequency: 0.6
+        - name: "Bold"
+          frequency: 0.3
+        - name: "Hard"
+          frequency: 0.3
+        - name: "Sturdy"
+          frequency: 0.3
+        - name: "Thick"
+          frequency: 0.3
+        - name: "Flint"
+          frequency: 0.1
+        - name: "Spark"
+          frequency: 0.1
+        - name: "Ember"
+          frequency: 0.1
+      female:
+        - name: "Brittle"
+          frequency: 0.6
+        - name: "Hardy"
+          frequency: 0.6
+        - name: "Rough"
+          frequency: 0.6
+        - name: "Sharp"
+          frequency: 0.6
+        - name: "Stout"
+          frequency: 0.6
+        - name: "Bold"
+          frequency: 0.3
+        - name: "Firm"
+          frequency: 0.3
+        - name: "Solid"
+          frequency: 0.3
+        - name: "Spark"
+          frequency: 0.1
+        - name: "Flame"
+          frequency: 0.1
+        - name: "Ash"
+          frequency: 0.1
+      neuter:
+        - name: "Flint"
+          frequency: 0.1
+        - name: "Spark"
+          frequency: 0.1
+    surnames:
+      - name: "Flintspark"
+        frequency: 0.6
+      - name: "Ironforge"
+        frequency: 0.6
+      - name: "Steelhand"
+        frequency: 0.6
+      - name: "Firebeard"
+        frequency: 0.6
+      - name: "Ashbeard"
+        frequency: 0.3
+      - name: "Emberbeard"
+        frequency: 0.3
+      - name: "Flamebeard"
+        frequency: 0.3
+      - name: "Sparkbeard"
+        frequency: 0.3
+      - name: "Volcanobeard"
+        frequency: 0.1
+      - name: "Magmabeard"
+        frequency: 0.1
+
+  alabaster:
+    name: "Alabaster Dwarves"
+    forenames:
+      male:
+        - name: "Pale"
+          frequency: 0.6
+        - name: "White"
+          frequency: 0.6
+        - name: "Chalk"
+          frequency: 0.6
+        - name: "Dust"
+          frequency: 0.6
+        - name: "Powder"
+          frequency: 0.6
+        - name: "Ash"
+          frequency: 0.3
+        - name: "Frost"
+          frequency: 0.3
+        - name: "Ice"
+          frequency: 0.3
+        - name: "Snow"
+          frequency: 0.3
+        - name: "Alabaster"
+          frequency: 0.1
+        - name: "Marble"
+          frequency: 0.1
+        - name: "Pearl"
+          frequency: 0.1
+      female:
+        - name: "Pale"
+          frequency: 0.6
+        - name: "White"
+          frequency: 0.6
+        - name: "Chalk"
+          frequency: 0.6
+        - name: "Dust"
+          frequency: 0.6
+        - name: "Powder"
+          frequency: 0.6
+        - name: "Ash"
+          frequency: 0.3
+        - name: "Frost"
+          frequency: 0.3
+        - name: "Ice"
+          frequency: 0.3
+        - name: "Snow"
+          frequency: 0.3
+        - name: "Alabaster"
+          frequency: 0.1
+        - name: "Marble"
+          frequency: 0.1
+        - name: "Pearl"
+          frequency: 0.1
+      neuter:
+        - name: "Alin"
+          frequency: 0.1
+        - name: "Pale"
+          frequency: 0.1
+        - name: "White"
+          frequency: 0.1
+    surnames:
+      - name: "Alabaster"
+        frequency: 0.6
+      - name: "Palebeard"
+        frequency: 0.6
+      - name: "Whitebeard"
+        frequency: 0.6
+      - name: "Chalkbeard"
+        frequency: 0.6
+      - name: "Dustbeard"
+        frequency: 0.3
+      - name: "Powderbeard"
+        frequency: 0.3
+      - name: "Ashbeard"
+        frequency: 0.3
+      - name: "Frostbeard"
+        frequency: 0.3
+      - name: "Marblebeard"
+        frequency: 0.1
+      - name: "Pearlbeard"
+        frequency: 0.1
+
+  sandstone:
+    name: "Sandstone Dwarves"
+    forenames:
+      male:
+        - name: "Sand"
+          frequency: 0.6
+        - name: "Stone"
+          frequency: 0.6
+        - name: "Rock"
+          frequency: 0.6
+        - name: "Gravel"
+          frequency: 0.6
+        - name: "Pebble"
+          frequency: 0.6
+        - name: "Boulder"
+          frequency: 0.3
+        - name: "Crag"
+          frequency: 0.3
+        - name: "Ridge"
+          frequency: 0.3
+        - name: "Cliff"
+          frequency: 0.3
+        - name: "Sandstone"
+          frequency: 0.1
+        - name: "Quartz"
+          frequency: 0.1
+        - name: "Feldspar"
+          frequency: 0.1
+      female:
+        - name: "Sand"
+          frequency: 0.6
+        - name: "Stone"
+          frequency: 0.6
+        - name: "Rock"
+          frequency: 0.6
+        - name: "Gravel"
+          frequency: 0.6
+        - name: "Pebble"
+          frequency: 0.6
+        - name: "Boulder"
+          frequency: 0.3
+        - name: "Crag"
+          frequency: 0.3
+        - name: "Ridge"
+          frequency: 0.3
+        - name: "Cliff"
+          frequency: 0.3
+        - name: "Sandstone"
+          frequency: 0.1
+        - name: "Quartz"
+          frequency: 0.1
+        - name: "Feldspar"
+          frequency: 0.1
+      neuter:
+        - name: "Sand"
+          frequency: 0.1
+        - name: "Stone"
+          frequency: 0.1
+    surnames:
+      - name: "Sandstone"
+        frequency: 0.6
+      - name: "Sandbeard"
+        frequency: 0.6
+      - name: "Stonebeard"
+        frequency: 0.6
+      - name: "Rockbeard"
+        frequency: 0.6
+      - name: "Gravelbeard"
+        frequency: 0.3
+      - name: "Pebblebeard"
+        frequency: 0.3
+      - name: "Boulderbeard"
+        frequency: 0.3
+      - name: "Cragbeard"
+        frequency: 0.3
+      - name: "Quartzbeard"
+        frequency: 0.1
+      - name: "Feldsparbeard"
+        frequency: 0.1
+
+  obsidian:
+    name: "Obsidian Dwarves"
+    forenames:
+      male:
+        - name: "Aerik"
+          frequency: 0.6
+        - name: "Dark"
+          frequency: 0.6
+        - name: "Shadow"
+          frequency: 0.6
+        - name: "Night"
+          frequency: 0.6
+        - name: "Black"
+          frequency: 0.6
+        - name: "Obsidian"
+          frequency: 0.3
+        - name: "Onyx"
+          frequency: 0.3
+        - name: "Jet"
+          frequency: 0.3
+        - name: "Coal"
+          frequency: 0.3
+        - name: "Void"
+          frequency: 0.1
+        - name: "Abyss"
+          frequency: 0.1
+        - name: "Eclipse"
+          frequency: 0.1
+      female:
+        - name: "Dark"
+          frequency: 0.6
+        - name: "Shadow"
+          frequency: 0.6
+        - name: "Night"
+          frequency: 0.6
+        - name: "Black"
+          frequency: 0.6
+        - name: "Obsidian"
+          frequency: 0.6
+        - name: "Onyx"
+          frequency: 0.3
+        - name: "Jet"
+          frequency: 0.3
+        - name: "Coal"
+          frequency: 0.3
+        - name: "Void"
+          frequency: 0.1
+        - name: "Abyss"
+          frequency: 0.1
+        - name: "Eclipse"
+          frequency: 0.1
+      neuter:
+        - name: "Obsidian"
+          frequency: 0.1
+        - name: "Dark"
+          frequency: 0.1
+    surnames:
+      - name: "Obsidian"
+        frequency: 0.6
+      - name: "Darkbeard"
+        frequency: 0.6
+      - name: "Shadowbeard"
+        frequency: 0.6
+      - name: "Nightbeard"
+        frequency: 0.6
+      - name: "Blackbeard"
+        frequency: 0.3
+      - name: "Onyxbeard"
+        frequency: 0.3
+      - name: "Jetbeard"
+        frequency: 0.3
+      - name: "Coalbeard"
+        frequency: 0.3
+      - name: "Voidbeard"
+        frequency: 0.1
+      - name: "Abyssbeard"
+        frequency: 0.1
+
+  bismuth:
+    name: "Bismuth Dwarves"
+    forenames:
+      male:
+        - name: "Bismuth"
+          frequency: 0.6
+        - name: "Iridescent"
+          frequency: 0.6
+        - name: "Shimmer"
+          frequency: 0.6
+        - name: "Glow"
+          frequency: 0.6
+        - name: "Sparkle"
+          frequency: 0.6
+        - name: "Prism"
+          frequency: 0.3
+        - name: "Crystal"
+          frequency: 0.3
+        - name: "Gem"
+          frequency: 0.3
+        - name: "Jewel"
+          frequency: 0.3
+        - name: "Rainbow"
+          frequency: 0.1
+        - name: "Spectrum"
+          frequency: 0.1
+        - name: "Aurora"
+          frequency: 0.1
+      female:
+        - name: "Bismuth"
+          frequency: 0.6
+        - name: "Iridescent"
+          frequency: 0.6
+        - name: "Shimmer"
+          frequency: 0.6
+        - name: "Glow"
+          frequency: 0.6
+        - name: "Sparkle"
+          frequency: 0.6
+        - name: "Prism"
+          frequency: 0.3
+        - name: "Crystal"
+          frequency: 0.3
+        - name: "Gem"
+          frequency: 0.3
+        - name: "Jewel"
+          frequency: 0.3
+        - name: "Rainbow"
+          frequency: 0.1
+        - name: "Spectrum"
+          frequency: 0.1
+        - name: "Aurora"
+          frequency: 0.1
+      neuter:
+        - name: "Bismuth"
+          frequency: 0.1
+        - name: "Iridescent"
+          frequency: 0.1
+    surnames:
+      - name: "Bismuth"
+        frequency: 0.6
+      - name: "Alloyvane"
+        frequency: 0.1
+      - name: "Iridescentbeard"
+        frequency: 0.6
+      - name: "Shimmerbeard"
+        frequency: 0.6
+      - name: "Glowbeard"
+        frequency: 0.6
+      - name: "Sparklebeard"
+        frequency: 0.3
+      - name: "Prismbeard"
+        frequency: 0.3
+      - name: "Crystalbeard"
+        frequency: 0.3
+      - name: "Rainbowbeard"
+        frequency: 0.1
+      - name: "Spectrumbeard"
+        frequency: 0.1
+
+  slate:
+    name: "Slate Dwarves"
+    forenames:
+      male:
+        - name: "Slate"
+          frequency: 0.6
+        - name: "Grey"
+          frequency: 0.6
+        - name: "Stone"
+          frequency: 0.6
+        - name: "Rock"
+          frequency: 0.6
+        - name: "Brittle"
+          frequency: 0.6
+        - name: "Sharp"
+          frequency: 0.3
+        - name: "Hard"
+          frequency: 0.3
+        - name: "Firm"
+          frequency: 0.3
+        - name: "Solid"
+          frequency: 0.3
+        - name: "Precision"
+          frequency: 0.1
+        - name: "Exact"
+          frequency: 0.1
+        - name: "Accurate"
+          frequency: 0.1
+      female:
+        - name: "Slate"
+          frequency: 0.6
+        - name: "Grey"
+          frequency: 0.6
+        - name: "Stone"
+          frequency: 0.6
+        - name: "Rock"
+          frequency: 0.6
+        - name: "Brittle"
+          frequency: 0.6
+        - name: "Sharp"
+          frequency: 0.3
+        - name: "Hard"
+          frequency: 0.3
+        - name: "Firm"
+          frequency: 0.3
+        - name: "Solid"
+          frequency: 0.3
+        - name: "Precision"
+          frequency: 0.1
+        - name: "Exact"
+          frequency: 0.1
+        - name: "Accurate"
+          frequency: 0.1
+      neuter:
+        - name: "Slate"
+          frequency: 0.1
+        - name: "Grey"
+          frequency: 0.1
+    surnames:
+      - name: "Slate"
+        frequency: 0.6
+      - name: "Greybeard"
+        frequency: 0.6
+      - name: "Stonebeard"
+        frequency: 0.6
+      - name: "Rockbeard"
+        frequency: 0.6
+      - name: "Brittlebeard"
+        frequency: 0.3
+      - name: "Sharpbeard"
+        frequency: 0.3
+      - name: "Hardbeard"
+        frequency: 0.3
+      - name: "Firmbeard"
+        frequency: 0.3
+      - name: "Precisionbeard"
+        frequency: 0.1
+      - name: "Exactbeard"
+        frequency: 0.1
+
+  # ===== ELF CLANS =====
+  
+  holly:
+    name: "Holly Elves"
+    forenames:
+      male:
+        - name: "Aelrin"
+          frequency: 0.6
+        - name: "Aeren"
+          frequency: 0.3
+        - name: "Aeriel"
+          frequency: 0.6
+        - name: "Aerion"
+          frequency: 0.6
+        - name: "Aerthorn"
+          frequency: 0.3
+        - name: "Aluin"
+          frequency: 0.3
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Aelrin"
+          frequency: 0.6
+        - name: "Aeriel"
+          frequency: 0.6
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alenya"
+          frequency: 0.3
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Aeren"
+          frequency: 0.3
+        - name: "Aiven"
+          frequency: 0.6
+        - name: "Aluin"
+          frequency: 0.3
+    surnames:
+      - name: "Moonwhisper"
+        frequency: 0.1
+      - name: "Starlight"
+        frequency: 0.1
+      - name: "Dawnweaver"
+        frequency: 0.1
+      - name: "Holly"
+        frequency: 0.6
+      - name: "Winterwatch"
+        frequency: 0.6
+      - name: "Thornwarden"
+        frequency: 0.6
+      - name: "Crimson"
+        frequency: 0.3
+      - name: "Berry"
+        frequency: 0.3
+      - name: "Frost"
+        frequency: 0.3
+      - name: "Snow"
+        frequency: 0.3
+
+  yew:
+    name: "Yew Elves"
+    forenames:
+      male:
+        - name: "Aerthorn"
+          frequency: 0.3
+        - name: "Aluin"
+          frequency: 0.3
+        - name: "Aerion"
+          frequency: 0.6
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alenya"
+          frequency: 0.3
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Aiven"
+          frequency: 0.6
+        - name: "Aluin"
+          frequency: 0.3
+    surnames:
+      - name: "Yew"
+        frequency: 0.6
+      - name: "Ancient"
+        frequency: 0.6
+      - name: "Memory"
+        frequency: 0.6
+      - name: "Guardian"
+        frequency: 0.6
+      - name: "Stern"
+        frequency: 0.3
+      - name: "Political"
+        frequency: 0.3
+      - name: "Power"
+        frequency: 0.3
+      - name: "Legacy"
+        frequency: 0.1
+      - name: "Heritage"
+        frequency: 0.1
+
+  rowan:
+    name: "Rowan Elves"
+    forenames:
+      male:
+        - name: "Aiven"
+          frequency: 0.6
+        - name: "Alenya"
+          frequency: 0.3
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alenya"
+          frequency: 0.3
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Aiven"
+          frequency: 0.6
+    surnames:
+      - name: "Rowan"
+        frequency: 0.6
+      - name: "Hearthbinder"
+        frequency: 0.6
+      - name: "Emberkin"
+        frequency: 0.6
+      - name: "Firegrove"
+        frequency: 0.6
+      - name: "Warm"
+        frequency: 0.3
+      - name: "Hospitable"
+        frequency: 0.3
+      - name: "Welcoming"
+        frequency: 0.3
+      - name: "Storyteller"
+        frequency: 0.1
+      - name: "Poet"
+        frequency: 0.1
+
+  ash:
+    name: "Ash Elves"
+    forenames:
+      male:
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Ash"
+          frequency: 0.1
+    surnames:
+      - name: "Ash"
+        frequency: 0.6
+      - name: "Stormwalker"
+        frequency: 0.6
+      - name: "Fireborn"
+        frequency: 0.6
+      - name: "Resilient"
+        frequency: 0.6
+      - name: "Passionate"
+        frequency: 0.3
+      - name: "Rebirth"
+        frequency: 0.3
+      - name: "Adversity"
+        frequency: 0.3
+      - name: "Phoenix"
+        frequency: 0.1
+      - name: "Ember"
+        frequency: 0.1
+
+  baobab:
+    name: "Baobab Elves"
+    forenames:
+      male:
+        - name: "Aerion"
+          frequency: 0.6
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Baobab"
+          frequency: 0.1
+    surnames:
+      - name: "Baobab"
+        frequency: 0.6
+      - name: "Vaulted"
+        frequency: 0.6
+      - name: "Skyrooted"
+        frequency: 0.6
+      - name: "Eldest"
+        frequency: 0.6
+      - name: "Majestic"
+        frequency: 0.3
+      - name: "Powerful"
+        frequency: 0.3
+      - name: "Elite"
+        frequency: 0.3
+      - name: "Ceremonial"
+        frequency: 0.1
+      - name: "Grace"
+        frequency: 0.1
+
+  palm:
+    name: "Palm Elves"
+    forenames:
+      male:
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      female:
+        - name: "Aivena"
+          frequency: 0.6
+        - name: "Alionae"
+          frequency: 0.6
+        - name: "Alira"
+          frequency: 0.6
+        - name: "Aelar"
+          frequency: 0.1
+        - name: "Thalindra"
+          frequency: 0.1
+        - name: "Lysara"
+          frequency: 0.1
+      neuter:
+        - name: "Palm"
+          frequency: 0.1
+    surnames:
+      - name: "Palm"
+        frequency: 0.6
+      - name: "Seafaring"
+        frequency: 0.6
+      - name: "Survivor"
+        frequency: 0.6
+      - name: "Joyful"
+        frequency: 0.6
+      - name: "Tragic"
+        frequency: 0.3
+      - name: "Celebration"
+        frequency: 0.3
+      - name: "Beauty"
+        frequency: 0.3
+      - name: "Ocean"
+        frequency: 0.1
+      - name: "Wave"
+        frequency: 0.1
+
+# Name generation settings
+settings:
+  # Gender distribution (approximate)
+  gender_distribution:
+    male: 0.45
+    female: 0.45
+    neuter: 0.10
+  
+  # Frequency weights (from Excel data)
+  frequency_weights:
+    Common: 0.6
+    Uncommon: 0.3
+    Rare: 0.1
+  
+  # Name generation rules
+  rules:
+    # Some clans have specific naming conventions
+    clan_specific_rules:
+      alabaster:
+        # Alabaster dwarves often have more neutral/androgynous names
+        neuter_probability: 0.2
+      palm:
+        # Palm elves are more likely to have joyful/celebratory names
+        positive_name_bias: 0.7
+      baobab:
+        # Baobab elves have more formal/ceremonial names
+        formal_name_bias: 0.8 
