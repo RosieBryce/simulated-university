@@ -1,0 +1,624 @@
+# Program Characteristics for Stonegrove University
+# Defines key characteristics that influence student behavior and performance
+# All scores range from 0.0 to 1.0
+
+programs:
+  # ===== FACULTY OF APPLIED FORGING =====
+  
+  "Pedagogies of the Hand":
+    faculty: "Faculty of Applied Forging"
+    description: "Hands-on learning and craft-based education"
+    characteristics:
+      social_intensity: 0.7          # High - collaborative workshops
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.4              # Moderate - hands-on but structured
+      career_prospects: 0.7          # Good - practical skills in demand
+      academic_difficulty: 0.5       # Moderate - skill-based learning
+      creativity_requirement: 0.6    # Moderate - craft creativity
+      leadership_opportunities: 0.5  # Moderate - workshop leadership
+      research_intensity: 0.3        # Low - more applied than research
+      community_engagement: 0.7      # High - community workshops
+      innovation_focus: 0.6          # Moderate - craft innovation
+
+  "Earth-Aligned Agriculture":
+    faculty: "Faculty of Applied Forging"
+    description: "Sustainable agriculture and land stewardship"
+    characteristics:
+      social_intensity: 0.6          # Moderate - field work and community
+      practical_theoretical_balance: 0.9  # Very high practical focus
+      stress_level: 0.3              # Low - nature-based, seasonal
+      career_prospects: 0.8          # Very good - sustainable agriculture
+      academic_difficulty: 0.4       # Low-moderate - experiential learning
+      creativity_requirement: 0.5    # Moderate - agricultural innovation
+      leadership_opportunities: 0.6  # Moderate - farm management
+      research_intensity: 0.4        # Moderate - applied research
+      community_engagement: 0.8      # Very high - community farming
+      innovation_focus: 0.7          # High - sustainable innovation
+
+  "Mycelial Cultivation and Biotech":
+    faculty: "Faculty of Applied Forging"
+    description: "Fungal cultivation and biological technology"
+    characteristics:
+      social_intensity: 0.5          # Moderate - lab and field work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.5              # Moderate - technical precision
+      career_prospects: 0.8          # Very good - emerging field
+      academic_difficulty: 0.6       # Moderate - technical skills
+      creativity_requirement: 0.7    # High - biotech innovation
+      leadership_opportunities: 0.5  # Moderate - lab leadership
+      research_intensity: 0.6        # High - experimental work
+      community_engagement: 0.6      # Moderate - community applications
+      innovation_focus: 0.8          # Very high - cutting-edge field
+
+  "Food System Resilience":
+    faculty: "Faculty of Applied Forging"
+    description: "Building resilient food systems and networks"
+    characteristics:
+      social_intensity: 0.8          # Very high - network building
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.4              # Moderate - crisis management
+      career_prospects: 0.7          # Good - food security focus
+      academic_difficulty: 0.5       # Moderate - systems thinking
+      creativity_requirement: 0.6    # Moderate - system design
+      leadership_opportunities: 0.7  # High - network leadership
+      research_intensity: 0.5        # Moderate - applied research
+      community_engagement: 0.9      # Very high - community networks
+      innovation_focus: 0.6          # Moderate - system innovation
+
+  "Herbal Practice and Energy Work":
+    faculty: "Faculty of Applied Forging"
+    description: "Traditional herbal medicine and energy healing"
+    characteristics:
+      social_intensity: 0.6          # Moderate - client work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.3              # Low - healing focus
+      career_prospects: 0.6          # Moderate - alternative medicine
+      academic_difficulty: 0.4       # Low-moderate - experiential
+      creativity_requirement: 0.5    # Moderate - personalized care
+      leadership_opportunities: 0.4  # Low-moderate - practice leadership
+      research_intensity: 0.3        # Low - traditional knowledge
+      community_engagement: 0.7      # High - community healing
+      innovation_focus: 0.4          # Low-moderate - traditional focus
+
+  # ===== FACULTY OF HEARTH AND TRANSFORMATION =====
+  
+  "Care, Craft and Continuity":
+    faculty: "Faculty of Hearth and Transformation"
+    description: "Care work, craft traditions, and cultural continuity"
+    characteristics:
+      social_intensity: 0.8          # Very high - care work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.6              # High - emotional labor
+      career_prospects: 0.6          # Moderate - undervalued work
+      academic_difficulty: 0.4       # Low-moderate - skill-based
+      creativity_requirement: 0.5    # Moderate - craft creativity
+      leadership_opportunities: 0.5  # Moderate - care leadership
+      research_intensity: 0.3        # Low - applied focus
+      community_engagement: 0.9      # Very high - community care
+      innovation_focus: 0.4          # Low-moderate - tradition focus
+
+  "Hospitality as Praxis":
+    faculty: "Faculty of Hearth and Transformation"
+    description: "Hospitality as a form of social practice and care"
+    characteristics:
+      social_intensity: 0.9          # Very high - constant interaction
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.7              # High - service work
+      career_prospects: 0.5          # Moderate - service industry
+      academic_difficulty: 0.3       # Low - skill-based
+      creativity_requirement: 0.4    # Low-moderate - service creativity
+      leadership_opportunities: 0.6  # Moderate - hospitality management
+      research_intensity: 0.2        # Very low - applied focus
+      community_engagement: 0.8      # Very high - community service
+      innovation_focus: 0.3          # Low - tradition focus
+
+  "Intergenerational Learning":
+    faculty: "Faculty of Hearth and Transformation"
+    description: "Learning across generations and age groups"
+    characteristics:
+      social_intensity: 0.9          # Very high - cross-generational
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.5              # Moderate - communication challenges
+      career_prospects: 0.6          # Moderate - education focus
+      academic_difficulty: 0.5       # Moderate - communication skills
+      creativity_requirement: 0.6    # Moderate - teaching creativity
+      leadership_opportunities: 0.7  # High - educational leadership
+      research_intensity: 0.4        # Moderate - educational research
+      community_engagement: 0.9      # Very high - community learning
+      innovation_focus: 0.5          # Moderate - educational innovation
+
+  "Mutual Aid and Guild Governance":
+    faculty: "Faculty of Hearth and Transformation"
+    description: "Community mutual aid and guild-based governance"
+    characteristics:
+      social_intensity: 0.9          # Very high - community work
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.6              # High - community conflict
+      career_prospects: 0.5          # Moderate - community work
+      academic_difficulty: 0.4       # Low-moderate - organizational skills
+      creativity_requirement: 0.5    # Moderate - governance creativity
+      leadership_opportunities: 0.8  # Very high - community leadership
+      research_intensity: 0.3        # Low - applied focus
+      community_engagement: 0.9      # Very high - community governance
+      innovation_focus: 0.5          # Moderate - governance innovation
+
+  "Timekeeping in Plural Cultures":
+    faculty: "Faculty of Hearth and Transformation"
+    description: "Cultural timekeeping and temporal practices"
+    characteristics:
+      social_intensity: 0.6          # Moderate - cultural work
+      practical_theoretical_balance: 0.5  # Balanced - cultural theory
+      stress_level: 0.4              # Moderate - cultural sensitivity
+      career_prospects: 0.4          # Low - niche field
+      academic_difficulty: 0.6       # Moderate - cultural studies
+      creativity_requirement: 0.5    # Moderate - cultural creativity
+      leadership_opportunities: 0.4  # Low-moderate - cultural leadership
+      research_intensity: 0.6        # High - cultural research
+      community_engagement: 0.7      # High - cultural communities
+      innovation_focus: 0.4          # Low-moderate - tradition focus
+
+  # ===== FACULTY OF INTEGRATIVE INQUIRY =====
+  
+  "Strategic Rituals and Civic Memory":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Ritual design and civic memory preservation"
+    characteristics:
+      social_intensity: 0.7          # High - ritual participation
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.5              # Moderate - civic responsibility
+      career_prospects: 0.5          # Moderate - civic work
+      academic_difficulty: 0.6       # Moderate - ritual studies
+      creativity_requirement: 0.7    # High - ritual design
+      leadership_opportunities: 0.7  # High - civic leadership
+      research_intensity: 0.6        # High - ritual research
+      community_engagement: 0.8      # Very high - civic engagement
+      innovation_focus: 0.6          # Moderate - ritual innovation
+
+  "Narrative Governance and Institution Building":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Storytelling in governance and institution design"
+    characteristics:
+      social_intensity: 0.8          # Very high - narrative work
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.6              # High - institutional change
+      career_prospects: 0.7          # Good - governance work
+      academic_difficulty: 0.7       # High - narrative theory
+      creativity_requirement: 0.8    # Very high - narrative creativity
+      leadership_opportunities: 0.8  # Very high - institutional leadership
+      research_intensity: 0.7        # High - narrative research
+      community_engagement: 0.7      # High - community narratives
+      innovation_focus: 0.7          # High - governance innovation
+
+  "Conflict Transformation through Cultural Design":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Cultural design for conflict resolution"
+    characteristics:
+      social_intensity: 0.9          # Very high - conflict work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.8              # Very high - conflict stress
+      career_prospects: 0.6          # Moderate - conflict resolution
+      academic_difficulty: 0.7       # High - conflict theory
+      creativity_requirement: 0.8    # Very high - design creativity
+      leadership_opportunities: 0.8  # Very high - conflict leadership
+      research_intensity: 0.6        # High - conflict research
+      community_engagement: 0.8      # Very high - community conflict
+      innovation_focus: 0.7          # High - conflict innovation
+
+  "Ancient Tongues and Translation":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Ancient language study and translation work"
+    characteristics:
+      social_intensity: 0.4          # Low - solitary study
+      practical_theoretical_balance: 0.4  # Low - theoretical focus
+      stress_level: 0.5              # Moderate - linguistic precision
+      career_prospects: 0.5          # Moderate - academic/translation
+      academic_difficulty: 0.8       # Very high - language mastery
+      creativity_requirement: 0.4    # Low-moderate - translation creativity
+      leadership_opportunities: 0.4  # Low-moderate - academic leadership
+      research_intensity: 0.8        # Very high - linguistic research
+      community_engagement: 0.5      # Moderate - language communities
+      innovation_focus: 0.3          # Low - traditional focus
+
+  "Comparative Runes and Scripts":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Comparative study of runic systems and scripts"
+    characteristics:
+      social_intensity: 0.3          # Low - solitary research
+      practical_theoretical_balance: 0.3  # Low - theoretical focus
+      stress_level: 0.4              # Low-moderate - research stress
+      career_prospects: 0.4          # Low - academic niche
+      academic_difficulty: 0.8       # Very high - script mastery
+      creativity_requirement: 0.3    # Low - analytical focus
+      leadership_opportunities: 0.3  # Low - academic leadership
+      research_intensity: 0.9        # Very high - script research
+      community_engagement: 0.3      # Low - academic community
+      innovation_focus: 0.2          # Very low - traditional focus
+
+  "Multispecies Semantics":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Communication and meaning across species boundaries"
+    characteristics:
+      social_intensity: 0.6          # Moderate - cross-species work
+      practical_theoretical_balance: 0.5  # Balanced - both aspects
+      stress_level: 0.5              # Moderate - communication challenges
+      career_prospects: 0.6          # Moderate - emerging field
+      academic_difficulty: 0.7       # High - semantic theory
+      creativity_requirement: 0.8    # Very high - cross-species creativity
+      leadership_opportunities: 0.5  # Moderate - research leadership
+      research_intensity: 0.8        # Very high - semantic research
+      community_engagement: 0.6      # Moderate - multispecies community
+      innovation_focus: 0.8          # Very high - semantic innovation
+
+  "Epistemological Justice":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Justice in knowledge systems and ways of knowing"
+    characteristics:
+      social_intensity: 0.7          # High - justice work
+      practical_theoretical_balance: 0.4  # Low - theoretical focus
+      stress_level: 0.7              # High - justice work stress
+      career_prospects: 0.5          # Moderate - academic/activism
+      academic_difficulty: 0.8       # Very high - philosophical theory
+      creativity_requirement: 0.6    # Moderate - justice creativity
+      leadership_opportunities: 0.6  # Moderate - justice leadership
+      research_intensity: 0.8        # Very high - philosophical research
+      community_engagement: 0.7      # High - justice communities
+      innovation_focus: 0.6          # Moderate - justice innovation
+
+  "Lorekeeper Apprenticeship":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Apprenticeship in knowledge preservation and transmission"
+    characteristics:
+      social_intensity: 0.5          # Moderate - mentorship work
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.4              # Low-moderate - preservation work
+      career_prospects: 0.4          # Low - niche preservation
+      academic_difficulty: 0.6       # Moderate - knowledge mastery
+      creativity_requirement: 0.4    # Low-moderate - preservation creativity
+      leadership_opportunities: 0.5  # Moderate - knowledge leadership
+      research_intensity: 0.6        # High - knowledge research
+      community_engagement: 0.6      # Moderate - knowledge communities
+      innovation_focus: 0.3          # Low - preservation focus
+
+  "Wisdom Traditions and Moral Craft":
+    faculty: "Faculty of Integrative Inquiry"
+    description: "Study and practice of wisdom traditions"
+    characteristics:
+      social_intensity: 0.6          # Moderate - spiritual community
+      practical_theoretical_balance: 0.5  # Balanced - both aspects
+      stress_level: 0.3              # Low - spiritual practice
+      career_prospects: 0.4          # Low - spiritual work
+      academic_difficulty: 0.6       # Moderate - wisdom studies
+      creativity_requirement: 0.5    # Moderate - spiritual creativity
+      leadership_opportunities: 0.6  # Moderate - spiritual leadership
+      research_intensity: 0.5        # Moderate - wisdom research
+      community_engagement: 0.7      # High - spiritual community
+      innovation_focus: 0.4          # Low-moderate - tradition focus
+
+  # ===== FACULTY OF LIVING LORE =====
+  
+  "Knowledge System Prototyping":
+    faculty: "Faculty of Living Lore"
+    description: "Prototyping new knowledge systems and structures"
+    characteristics:
+      social_intensity: 0.6          # Moderate - collaborative prototyping
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.6              # High - innovation pressure
+      career_prospects: 0.8          # Very good - innovation field
+      academic_difficulty: 0.7       # High - system design
+      creativity_requirement: 0.9    # Very high - system creativity
+      leadership_opportunities: 0.7  # High - innovation leadership
+      research_intensity: 0.8        # Very high - system research
+      community_engagement: 0.6      # Moderate - innovation community
+      innovation_focus: 0.9          # Very high - system innovation
+
+  "Embodied Research Methods":
+    faculty: "Faculty of Living Lore"
+    description: "Research methods that engage the body and senses"
+    characteristics:
+      social_intensity: 0.5          # Moderate - embodied work
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.4              # Low-moderate - embodied practice
+      career_prospects: 0.6          # Moderate - research field
+      academic_difficulty: 0.6       # Moderate - embodied theory
+      creativity_requirement: 0.7    # High - embodied creativity
+      leadership_opportunities: 0.5  # Moderate - research leadership
+      research_intensity: 0.8        # Very high - embodied research
+      community_engagement: 0.5      # Moderate - research community
+      innovation_focus: 0.7          # High - method innovation
+
+  "Storyweaving & Community Histories":
+    faculty: "Faculty of Living Lore"
+    description: "Weaving stories and community historical narratives"
+    characteristics:
+      social_intensity: 0.8          # Very high - community storytelling
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.4              # Low-moderate - storytelling work
+      career_prospects: 0.5          # Moderate - storytelling work
+      academic_difficulty: 0.5       # Moderate - narrative theory
+      creativity_requirement: 0.8    # Very high - storytelling creativity
+      leadership_opportunities: 0.6  # Moderate - narrative leadership
+      research_intensity: 0.6        # High - narrative research
+      community_engagement: 0.9      # Very high - community stories
+      innovation_focus: 0.6          # Moderate - narrative innovation
+
+  "Integrated Mind-Body":
+    faculty: "Faculty of Living Lore"
+    description: "Integration of mental and physical practices"
+    characteristics:
+      social_intensity: 0.5          # Moderate - individual practice
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.3              # Low - wellness focus
+      career_prospects: 0.6          # Moderate - wellness field
+      academic_difficulty: 0.5       # Moderate - integration theory
+      creativity_requirement: 0.6    # Moderate - practice creativity
+      leadership_opportunities: 0.5  # Moderate - wellness leadership
+      research_intensity: 0.5        # Moderate - wellness research
+      community_engagement: 0.6      # Moderate - wellness community
+      innovation_focus: 0.5          # Moderate - wellness innovation
+
+  "Folkloric Transmission and Archiving":
+    faculty: "Faculty of Living Lore"
+    description: "Transmission and preservation of folkloric knowledge"
+    characteristics:
+      social_intensity: 0.6          # Moderate - community collection
+      practical_theoretical_balance: 0.5  # Balanced - both aspects
+      stress_level: 0.4              # Low-moderate - preservation work
+      career_prospects: 0.4          # Low - preservation field
+      academic_difficulty: 0.5       # Moderate - folklore studies
+      creativity_requirement: 0.4    # Low-moderate - preservation creativity
+      leadership_opportunities: 0.4  # Low-moderate - preservation leadership
+      research_intensity: 0.6        # High - folklore research
+      community_engagement: 0.7      # High - folklore communities
+      innovation_focus: 0.3          # Low - preservation focus
+
+  "Runic Infrastructure":
+    faculty: "Faculty of Living Lore"
+    description: "Design and implementation of runic infrastructure systems"
+    characteristics:
+      social_intensity: 0.4          # Low - technical work
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.6              # High - infrastructure pressure
+      career_prospects: 0.7          # Good - infrastructure work
+      academic_difficulty: 0.7       # High - technical mastery
+      creativity_requirement: 0.6    # Moderate - design creativity
+      leadership_opportunities: 0.6  # Moderate - technical leadership
+      research_intensity: 0.6        # High - technical research
+      community_engagement: 0.4      # Low-moderate - technical community
+      innovation_focus: 0.7          # High - infrastructure innovation
+
+  "Critical Power":
+    faculty: "Faculty of Living Lore"
+    description: "Critical analysis of power structures and systems"
+    characteristics:
+      social_intensity: 0.7          # High - power analysis
+      practical_theoretical_balance: 0.4  # Low - theoretical focus
+      stress_level: 0.8              # Very high - power critique stress
+      career_prospects: 0.5          # Moderate - academic/activism
+      academic_difficulty: 0.8       # Very high - critical theory
+      creativity_requirement: 0.6    # Moderate - critique creativity
+      leadership_opportunities: 0.7  # High - activist leadership
+      research_intensity: 0.8        # Very high - critical research
+      community_engagement: 0.7      # High - activist community
+      innovation_focus: 0.6          # Moderate - critique innovation
+
+  "Consensus Systems in Hybrid Societies":
+    faculty: "Faculty of Living Lore"
+    description: "Design of consensus systems for diverse societies"
+    characteristics:
+      social_intensity: 0.9          # Very high - consensus work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.7              # High - consensus pressure
+      career_prospects: 0.6          # Moderate - governance work
+      academic_difficulty: 0.6       # Moderate - systems theory
+      creativity_requirement: 0.7    # High - system creativity
+      leadership_opportunities: 0.8  # Very high - consensus leadership
+      research_intensity: 0.6        # High - systems research
+      community_engagement: 0.8      # Very high - community consensus
+      innovation_focus: 0.7          # High - consensus innovation
+
+  "Elven Ethics in Modern Governance":
+    faculty: "Faculty of Living Lore"
+    description: "Application of elven ethical principles to governance"
+    characteristics:
+      social_intensity: 0.7          # High - governance work
+      practical_theoretical_balance: 0.5  # Balanced - both aspects
+      stress_level: 0.6              # High - governance stress
+      career_prospects: 0.6          # Moderate - governance work
+      academic_difficulty: 0.7       # High - ethical theory
+      creativity_requirement: 0.6    # Moderate - governance creativity
+      leadership_opportunities: 0.7  # High - governance leadership
+      research_intensity: 0.7        # High - ethical research
+      community_engagement: 0.7      # High - governance community
+      innovation_focus: 0.5          # Moderate - ethical innovation
+
+  "Distributed Workshop Economies":
+    faculty: "Faculty of Living Lore"
+    description: "Design of distributed economic systems"
+    characteristics:
+      social_intensity: 0.7          # High - economic collaboration
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.5              # Moderate - economic pressure
+      career_prospects: 0.6          # Moderate - economic work
+      academic_difficulty: 0.6       # Moderate - economic theory
+      creativity_requirement: 0.7    # High - economic creativity
+      leadership_opportunities: 0.6  # Moderate - economic leadership
+      research_intensity: 0.6        # High - economic research
+      community_engagement: 0.7      # High - economic community
+      innovation_focus: 0.7          # High - economic innovation
+
+  "Listening Circles Facilitation":
+    faculty: "Faculty of Living Lore"
+    description: "Facilitation of listening circles and dialogue spaces"
+    characteristics:
+      social_intensity: 0.9          # Very high - facilitation work
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.6              # High - facilitation stress
+      career_prospects: 0.5          # Moderate - facilitation work
+      academic_difficulty: 0.4       # Low-moderate - facilitation skills
+      creativity_requirement: 0.6    # Moderate - facilitation creativity
+      leadership_opportunities: 0.7  # High - facilitation leadership
+      research_intensity: 0.3        # Low - applied focus
+      community_engagement: 0.9      # Very high - community dialogue
+      innovation_focus: 0.5          # Moderate - facilitation innovation
+
+  "Mediation":
+    faculty: "Faculty of Living Lore"
+    description: "Conflict mediation and resolution practices"
+    characteristics:
+      social_intensity: 0.9          # Very high - mediation work
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.8              # Very high - conflict stress
+      career_prospects: 0.6          # Moderate - mediation work
+      academic_difficulty: 0.5       # Moderate - mediation skills
+      creativity_requirement: 0.6    # Moderate - mediation creativity
+      leadership_opportunities: 0.7  # High - mediation leadership
+      research_intensity: 0.4        # Moderate - mediation research
+      community_engagement: 0.8      # Very high - community mediation
+      innovation_focus: 0.5          # Moderate - mediation innovation
+
+  "Pedagogies for Uncertain Times":
+    faculty: "Faculty of Living Lore"
+    description: "Educational approaches for uncertain and changing times"
+    characteristics:
+      social_intensity: 0.7          # High - educational work
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.6              # High - uncertainty stress
+      career_prospects: 0.6          # Moderate - education work
+      academic_difficulty: 0.6       # Moderate - pedagogical theory
+      creativity_requirement: 0.7    # High - pedagogical creativity
+      leadership_opportunities: 0.7  # High - educational leadership
+      research_intensity: 0.6        # High - pedagogical research
+      community_engagement: 0.7      # High - educational community
+      innovation_focus: 0.7          # High - pedagogical innovation
+
+  "Ritual and Recollection":
+    faculty: "Faculty of Living Lore"
+    description: "Ritual practice and memory work"
+    characteristics:
+      social_intensity: 0.6          # Moderate - ritual community
+      practical_theoretical_balance: 0.6  # Moderate - both aspects
+      stress_level: 0.3              # Low - ritual practice
+      career_prospects: 0.4          # Low - ritual work
+      academic_difficulty: 0.5       # Moderate - ritual theory
+      creativity_requirement: 0.6    # Moderate - ritual creativity
+      leadership_opportunities: 0.5  # Moderate - ritual leadership
+      research_intensity: 0.5        # Moderate - ritual research
+      community_engagement: 0.7      # High - ritual community
+      innovation_focus: 0.4          # Low-moderate - ritual innovation
+
+  "Brewcraft and Fermentation Systems":
+    faculty: "Faculty of Living Lore"
+    description: "Brewing and fermentation as cultural practice"
+    characteristics:
+      social_intensity: 0.6          # Moderate - brewing community
+      practical_theoretical_balance: 0.8  # High practical focus
+      stress_level: 0.3              # Low - craft practice
+      career_prospects: 0.5          # Moderate - craft industry
+      academic_difficulty: 0.4       # Low-moderate - craft skills
+      creativity_requirement: 0.6    # Moderate - brewing creativity
+      leadership_opportunities: 0.4  # Low-moderate - craft leadership
+      research_intensity: 0.4        # Moderate - craft research
+      community_engagement: 0.6      # Moderate - brewing community
+      innovation_focus: 0.5          # Moderate - brewing innovation
+
+  "Transdisciplinary Design and Praxis":
+    faculty: "Faculty of Living Lore"
+    description: "Design and practice across disciplinary boundaries"
+    characteristics:
+      social_intensity: 0.6          # Moderate - interdisciplinary work
+      practical_theoretical_balance: 0.7  # High practical focus
+      stress_level: 0.6              # High - interdisciplinary pressure
+      career_prospects: 0.7          # Good - interdisciplinary work
+      academic_difficulty: 0.7       # High - multiple disciplines
+      creativity_requirement: 0.8    # Very high - design creativity
+      leadership_opportunities: 0.6  # Moderate - design leadership
+      research_intensity: 0.7        # High - interdisciplinary research
+      community_engagement: 0.5      # Moderate - design community
+      innovation_focus: 0.8          # Very high - design innovation
+
+  "Language and Symbol":
+    faculty: "Faculty of Living Lore"
+    description: "Study and creation of language and symbolic systems"
+    characteristics:
+      social_intensity: 0.5          # Moderate - linguistic community
+      practical_theoretical_balance: 0.5  # Balanced - both aspects
+      stress_level: 0.4              # Low-moderate - linguistic work
+      career_prospects: 0.5          # Moderate - linguistic work
+      academic_difficulty: 0.7       # High - linguistic theory
+      creativity_requirement: 0.7    # High - linguistic creativity
+      leadership_opportunities: 0.4  # Low-moderate - linguistic leadership
+      research_intensity: 0.7        # High - linguistic research
+      community_engagement: 0.5      # Moderate - linguistic community
+      innovation_focus: 0.6          # Moderate - linguistic innovation
+
+# Program characteristics settings
+settings:
+  # Characteristic interpretation
+  characteristic_levels:
+    very_low: [0.0, 0.2]
+    low: [0.2, 0.4]
+    moderate: [0.4, 0.6]
+    high: [0.6, 0.8]
+    very_high: [0.8, 1.0]
+  
+  # Impact on student behavior
+  behavior_impacts:
+    social_intensity:
+      description: "How much social interaction the program requires"
+      impact_on_attendance: "high"      # High social intensity = higher attendance
+      impact_on_performance: "moderate" # Social support can help performance
+      impact_on_stress: "moderate"      # Social pressure can increase stress
+    
+    practical_theoretical_balance:
+      description: "Balance between practical skills and theoretical knowledge"
+      impact_on_attendance: "moderate"  # Practical work often requires attendance
+      impact_on_performance: "high"     # Practical skills are more measurable
+      impact_on_stress: "low"           # Practical work can be less stressful
+    
+    stress_level:
+      description: "Inherent stress level of the program"
+      impact_on_attendance: "high"      # High stress can affect attendance
+      impact_on_performance: "high"     # Stress significantly affects performance
+      impact_on_stress: "very_high"     # Direct impact on student stress
+    
+    career_prospects:
+      description: "Perceived career opportunities after graduation"
+      impact_on_attendance: "moderate"  # Better prospects can motivate attendance
+      impact_on_performance: "high"     # Career motivation affects performance
+      impact_on_stress: "moderate"      # Career pressure can increase stress
+    
+    academic_difficulty:
+      description: "Perceived academic difficulty of the program"
+      impact_on_attendance: "moderate"  # Difficulty can affect attendance
+      impact_on_performance: "very_high" # Direct impact on performance
+      impact_on_stress: "high"          # Difficulty increases stress
+    
+    creativity_requirement:
+      description: "How much creativity the program requires"
+      impact_on_attendance: "low"       # Creativity can be done independently
+      impact_on_performance: "moderate" # Creativity is harder to measure
+      impact_on_stress: "moderate"      # Creative pressure can be stressful
+    
+    leadership_opportunities:
+      description: "Opportunities for leadership within the program"
+      impact_on_attendance: "high"      # Leadership requires attendance
+      impact_on_performance: "high"     # Leadership can motivate performance
+      impact_on_stress: "moderate"      # Leadership can be stressful
+    
+    research_intensity:
+      description: "How research-focused the program is"
+      impact_on_attendance: "low"       # Research can be done independently
+      impact_on_performance: "moderate" # Research skills are important
+      impact_on_stress: "moderate"      # Research pressure can be stressful
+    
+    community_engagement:
+      description: "How much community engagement the program requires"
+      impact_on_attendance: "high"      # Community work requires attendance
+      impact_on_performance: "moderate" # Community skills are valuable
+      impact_on_stress: "low"           # Community work can be rewarding
+    
+    innovation_focus:
+      description: "How much the program focuses on innovation"
+      impact_on_attendance: "moderate"  # Innovation can be done independently
+      impact_on_performance: "moderate" # Innovation is hard to measure
+      impact_on_stress: "moderate"      # Innovation pressure can be stressful 
