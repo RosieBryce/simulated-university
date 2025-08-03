@@ -142,6 +142,8 @@ We have successfully built a sophisticated individual-level student modeling sys
 4. **Define motivation dimensions** - Clear intellectual vs academic distinction
 5. **Implement program characteristics** - Add program-specific modifiers
 
+- [ ] IMPORT ALL XLSX FILES INTO A SOLID DATA STRUCTURE! (like curriculum)
+
 #### **Phase 2: Assessment System**
 1. **Create assessment modeling system** - Grades based on engagement + personality
 2. **Implement mark generation** - Realistic grade distributions

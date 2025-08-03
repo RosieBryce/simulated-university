@@ -121,6 +121,7 @@ python engagement_visualization.py
 ## 🎯 Next Development Phase
 
 ### Phase 1: Data Quality & Validation
+- [ ] IMPORT ALL XLSX FILES INTO A SOLID DATA STRUCTURE! (like curriculum)
 - [ ] Fix module name parsing issues
 - [ ] Review module difficulty estimation
 - [ ] Clarify engagement metrics (social vs participation)
