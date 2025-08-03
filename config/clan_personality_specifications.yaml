@@ -1,0 +1,374 @@
+# Clan Personality Specifications for Stonegrove University
+# Based on detailed clan summaries and cultural characteristics
+# Personality ranges are defined as [min, max] for each trait (0-1 scale)
+
+clans:
+  # ===== DWARF CLANS =====
+  
+  malachite:
+    name: "Malachite Dwarves"
+    description: "The Verdant Forgefolk - Balanced, cooperative, spiritually attuned craftspeople"
+    
+    # Big Five Personality Ranges
+    personality_ranges:
+      openness: [0.6, 0.9]        # High - poetic, mystical, open to new ideas
+      conscientiousness: [0.7, 0.95]  # Very High - craftsmanship, balance, responsibility
+      extraversion: [0.4, 0.7]     # Moderate - community-oriented but not overly social
+      agreeableness: [0.6, 0.9]    # High - cooperative, trusting, harmonious
+      neuroticism: [0.2, 0.5]      # Low - balanced, stable, resilient
+    
+    # Academic-Specific Dimensions
+    academic_dimensions:
+      academic_curiosity: [0.7, 0.9]      # High - interested in learning and discovery
+      perfectionism: [0.6, 0.8]           # Moderate-High - craftsmanship standards
+      resilience: [0.7, 0.9]              # High - endurance and balance
+      leadership_tendency: [0.4, 0.7]     # Moderate - community leadership
+      social_anxiety: [0.2, 0.5]          # Low-Moderate - comfortable in groups
+    
+    # Intervention-Ready Dimensions
+    intervention_dimensions:
+      extra_curricular_propensity: [0.6, 0.8]  # High - community activities
+      career_ambition: [0.5, 0.7]              # Moderate - balanced approach
+      community_engagement: [0.7, 0.9]         # Very High - cooperative values
+
+  granite:
+    name: "Granite Dwarves"
+    description: "Stoic, hierarchical, tradition-bound warriors and civic leaders"
+    
+    personality_ranges:
+      openness: [0.3, 0.6]        # Low-Moderate - tradition-bound, conservative
+      conscientiousness: [0.8, 0.95]  # Very High - hierarchical, disciplined
+      extraversion: [0.4, 0.7]     # Moderate - leadership but formal
+      agreeableness: [0.4, 0.7]    # Moderate - hierarchical but not unkind
+      neuroticism: [0.2, 0.5]      # Low - stoic, stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.4, 0.7]      # Moderate - traditional learning
+      perfectionism: [0.7, 0.9]           # High - high standards
+      resilience: [0.8, 0.95]             # Very High - stoic endurance
+      leadership_tendency: [0.7, 0.9]     # High - natural leaders
+      social_anxiety: [0.3, 0.6]          # Moderate - formal but confident
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.5, 0.7]  # Moderate - structured activities
+      career_ambition: [0.6, 0.8]              # High - leadership roles
+      community_engagement: [0.5, 0.7]         # Moderate - hierarchical engagement
+
+
+
+  flint:
+    name: "Flint Dwarves"
+    description: "Gritty, tough, blunt miners, frontline workers, and pragmatists"
+    
+    personality_ranges:
+      openness: [0.4, 0.7]        # Moderate - practical but innovative
+      conscientiousness: [0.6, 0.9]   # High - reliable, hardworking
+      extraversion: [0.5, 0.8]     # Moderate-High - direct, confrontational
+      agreeableness: [0.3, 0.6]    # Low-Moderate - blunt, honest
+      neuroticism: [0.3, 0.6]      # Moderate - resilient but stressed
+    
+    academic_dimensions:
+      academic_curiosity: [0.4, 0.7]      # Moderate - practical learning
+      perfectionism: [0.5, 0.8]           # Moderate-High - quality work
+      resilience: [0.8, 0.95]             # Very High - tough, enduring
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - practical leaders
+      social_anxiety: [0.2, 0.5]          # Low-Moderate - direct communication
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.4, 0.7]  # Moderate - practical activities
+      career_ambition: [0.5, 0.8]              # Moderate-High - career focused
+      community_engagement: [0.4, 0.7]         # Moderate - practical engagement
+
+  alabaster:
+    name: "Alabaster Dwarves"
+    description: "Marginalized, dignified, enduring - often in lower-status roles, value community. Includes former Gypsum clan characteristics: scholarly, gentle, introspective healers, alchemists, and archivists"
+    
+    personality_ranges:
+      openness: [0.5, 0.8]        # Moderate-High - scholarly, curious, adaptable
+      conscientiousness: [0.5, 0.8]   # Moderate-High - responsible, enduring, careful
+      extraversion: [0.2, 0.5]     # Low - introspective, gentle, dignified but reserved
+      agreeableness: [0.6, 0.9]    # High - community-oriented, caring, gentle
+      neuroticism: [0.4, 0.7]      # Moderate - stress from marginalization, sensitive but stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.6, 0.8]      # High - scholarly nature, interested in learning
+      perfectionism: [0.5, 0.7]           # Moderate - careful work, realistic standards
+      resilience: [0.6, 0.9]              # High - enduring hardship, gentle strength
+      leadership_tendency: [0.3, 0.6]     # Low-Moderate - quiet leadership, dignified
+      social_anxiety: [0.4, 0.7]          # Moderate - introverted, cautious in social settings
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.3, 0.6]  # Low-Moderate - cautious participation, quiet activities
+      career_ambition: [0.3, 0.6]              # Low-Moderate - realistic goals, scholarly careers
+      community_engagement: [0.6, 0.8]         # High - community values, caring professions
+
+  sandstone:
+    name: "Sandstone Dwarves"
+    description: "Adaptable and upbeat traders, messengers, and builders of bridges"
+    
+    personality_ranges:
+      openness: [0.6, 0.9]        # High - adaptable, open to new ideas
+      conscientiousness: [0.5, 0.8]   # Moderate-High - reliable but flexible
+      extraversion: [0.6, 0.9]     # High - social, communicative
+      agreeableness: [0.6, 0.9]    # High - bridge-builders, diplomatic
+      neuroticism: [0.2, 0.5]      # Low - upbeat, optimistic
+    
+    academic_dimensions:
+      academic_curiosity: [0.5, 0.8]      # Moderate-High - interested in learning
+      perfectionism: [0.4, 0.7]           # Moderate - flexible standards
+      resilience: [0.6, 0.9]              # High - adaptable
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - natural mediators
+      social_anxiety: [0.2, 0.5]          # Low - comfortable socially
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.6, 0.8]  # High - social activities
+      career_ambition: [0.5, 0.7]              # Moderate - balanced approach
+      community_engagement: [0.7, 0.9]         # High - bridge-building
+
+  obsidian:
+    name: "Obsidian Dwarves"
+    description: "Mysterious, elegant, philosophical spiritual leaders and lorekeepers"
+    
+    personality_ranges:
+      openness: [0.7, 0.95]       # Very High - philosophical, mystical
+      conscientiousness: [0.6, 0.9]   # High - disciplined, elegant
+      extraversion: [0.3, 0.6]     # Low-Moderate - mysterious, reserved
+      agreeableness: [0.4, 0.7]    # Moderate - elegant but not overly warm
+      neuroticism: [0.3, 0.6]      # Moderate - philosophical but stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.8, 0.95]     # Very High - philosophical inquiry
+      perfectionism: [0.6, 0.8]           # Moderate-High - elegant standards
+      resilience: [0.6, 0.9]              # High - philosophical strength
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - spiritual leadership
+      social_anxiety: [0.3, 0.6]          # Moderate - reserved but confident
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.4, 0.6]  # Moderate - selective activities
+      career_ambition: [0.5, 0.7]              # Moderate - philosophical careers
+      community_engagement: [0.4, 0.7]         # Moderate - spiritual engagement
+
+  bismuth:
+    name: "Bismuth Dwarves"
+    description: "Iridescent and enigmatic creatives, polymaths, and eccentric thinkers"
+    
+    personality_ranges:
+      openness: [0.8, 0.95]       # Very High - creative, eccentric
+      conscientiousness: [0.4, 0.7]   # Low-Moderate - creative but disorganized
+      extraversion: [0.5, 0.8]     # Moderate-High - expressive, creative
+      agreeableness: [0.5, 0.8]    # Moderate - eccentric but not unkind
+      neuroticism: [0.4, 0.7]      # Moderate - creative temperament
+    
+    academic_dimensions:
+      academic_curiosity: [0.8, 0.95]     # Very High - polymath interests
+      perfectionism: [0.3, 0.6]           # Low-Moderate - creative standards
+      resilience: [0.5, 0.8]              # Moderate-High - creative strength
+      leadership_tendency: [0.4, 0.7]     # Moderate - creative leadership
+      social_anxiety: [0.3, 0.6]          # Moderate - expressive but sometimes anxious
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.6, 0.8]  # High - creative activities
+      career_ambition: [0.4, 0.7]              # Moderate - creative careers
+      community_engagement: [0.5, 0.7]         # Moderate - creative engagement
+
+  slate:
+    name: "Slate Dwarves"
+    description: "Quiet, brittle, and focused planners, engineers, and precision workers"
+    
+    personality_ranges:
+      openness: [0.4, 0.7]        # Moderate - focused but not closed
+      conscientiousness: [0.7, 0.95]  # Very High - precise, organized
+      extraversion: [0.2, 0.5]     # Low - quiet, focused
+      agreeableness: [0.4, 0.7]    # Moderate - focused but not unkind
+      neuroticism: [0.4, 0.7]      # Moderate - brittle under stress
+    
+    academic_dimensions:
+      academic_curiosity: [0.5, 0.8]      # Moderate-High - focused learning
+      perfectionism: [0.8, 0.95]          # Very High - precision work
+      resilience: [0.5, 0.8]              # Moderate-High - focused strength
+      leadership_tendency: [0.3, 0.6]     # Low-Moderate - quiet leadership
+      social_anxiety: [0.4, 0.7]          # Moderate - quiet but sometimes anxious
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.3, 0.6]  # Low-Moderate - focused activities
+      career_ambition: [0.5, 0.8]              # Moderate-High - technical careers
+      community_engagement: [0.3, 0.6]         # Low-Moderate - focused engagement
+
+  # ===== ELF CLANS =====
+  
+  holly:
+    name: "Holly Elves"
+    description: "Scholarly and devout caretakers of knowledge and ritual, balanced by warmth"
+    
+    personality_ranges:
+      openness: [0.6, 0.9]        # High - scholarly, curious
+      conscientiousness: [0.7, 0.95]  # Very High - ritual, discipline
+      extraversion: [0.3, 0.6]     # Low-Moderate - reserved but warm
+      agreeableness: [0.6, 0.9]    # High - protective, caring
+      neuroticism: [0.3, 0.6]      # Moderate - serious but stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.7, 0.9]      # High - scholarly nature
+      perfectionism: [0.7, 0.9]           # High - ritual precision
+      resilience: [0.7, 0.9]              # High - endurance
+      leadership_tendency: [0.4, 0.7]     # Moderate - protective leadership
+      social_anxiety: [0.3, 0.6]          # Moderate - reserved but confident
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.5, 0.7]  # Moderate - structured activities
+      career_ambition: [0.5, 0.7]              # Moderate - scholarly careers
+      community_engagement: [0.6, 0.8]         # High - protective engagement
+
+  yew:
+    name: "Yew Elves"
+    description: "Stern, ancient, and politically savvy guardians of long memory and cultural power"
+    
+    personality_ranges:
+      openness: [0.5, 0.8]        # Moderate-High - politically savvy
+      conscientiousness: [0.7, 0.95]  # Very High - stern, disciplined
+      extraversion: [0.4, 0.7]     # Moderate - political but not overly social
+      agreeableness: [0.3, 0.6]    # Low-Moderate - stern, not overly warm
+      neuroticism: [0.3, 0.6]      # Moderate - stern but stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.6, 0.8]      # Moderate-High - political knowledge
+      perfectionism: [0.7, 0.9]           # High - stern standards
+      resilience: [0.7, 0.9]              # High - ancient strength
+      leadership_tendency: [0.7, 0.9]     # High - political leadership
+      social_anxiety: [0.3, 0.6]          # Moderate - confident in politics
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.4, 0.6]  # Moderate - political activities
+      career_ambition: [0.6, 0.8]              # High - political careers
+      community_engagement: [0.5, 0.7]         # Moderate - political engagement
+
+  rowan:
+    name: "Rowan Elves"
+    description: "Expressive, curious, and poetic nature-linked seers and storytellers"
+    
+    personality_ranges:
+      openness: [0.7, 0.95]       # Very High - expressive, curious
+      conscientiousness: [0.5, 0.8]   # Moderate-High - responsible but creative
+      extraversion: [0.6, 0.9]     # High - expressive, hospitable
+      agreeableness: [0.7, 0.95]   # Very High - hospitable, warm
+      neuroticism: [0.2, 0.5]      # Low - warm, stable
+    
+    academic_dimensions:
+      academic_curiosity: [0.7, 0.9]      # High - curious nature
+      perfectionism: [0.4, 0.7]           # Moderate - creative standards
+      resilience: [0.6, 0.9]              # High - warm strength
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - hospitable leadership
+      social_anxiety: [0.2, 0.5]          # Low - comfortable socially
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.7, 0.9]  # High - expressive activities
+      career_ambition: [0.5, 0.7]              # Moderate - creative careers
+      community_engagement: [0.7, 0.9]         # High - hospitable engagement
+
+  ash:
+    name: "Ash Elves"
+    description: "Resilient and passionate storm-walkers who see rebirth through fire and adversity"
+    
+    personality_ranges:
+      openness: [0.6, 0.9]        # High - passionate, transformative
+      conscientiousness: [0.5, 0.8]   # Moderate-High - resilient but passionate
+      extraversion: [0.5, 0.8]     # Moderate-High - passionate, expressive
+      agreeableness: [0.4, 0.7]    # Moderate - passionate but not always agreeable
+      neuroticism: [0.4, 0.7]      # Moderate - passionate temperament
+    
+    academic_dimensions:
+      academic_curiosity: [0.6, 0.9]      # High - passionate learning
+      perfectionism: [0.5, 0.8]           # Moderate-High - passionate standards
+      resilience: [0.8, 0.95]             # Very High - storm-walker strength
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - passionate leadership
+      social_anxiety: [0.3, 0.6]          # Moderate - passionate but sometimes anxious
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.6, 0.8]  # High - passionate activities
+      career_ambition: [0.6, 0.8]              # High - passionate careers
+      community_engagement: [0.5, 0.7]         # Moderate - passionate engagement
+
+  baobab:
+    name: "Baobab Elves"
+    description: "Majestic and powerful deeply rooted elites with ceremonial grace and social control"
+    
+    personality_ranges:
+      openness: [0.5, 0.8]        # Moderate-High - sophisticated but controlled
+      conscientiousness: [0.8, 0.95]  # Very High - ceremonial, disciplined
+      extraversion: [0.4, 0.7]     # Moderate - controlled social presence
+      agreeableness: [0.3, 0.6]    # Low-Moderate - powerful, not overly warm
+      neuroticism: [0.2, 0.5]      # Low - majestic, controlled
+    
+    academic_dimensions:
+      academic_curiosity: [0.6, 0.8]      # Moderate-High - sophisticated learning
+      perfectionism: [0.8, 0.95]          # Very High - ceremonial standards
+      resilience: [0.7, 0.9]              # High - majestic strength
+      leadership_tendency: [0.8, 0.95]    # Very High - natural leaders
+      social_anxiety: [0.2, 0.5]          # Low - confident, controlled
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.5, 0.7]  # Moderate - selective activities
+      career_ambition: [0.7, 0.9]              # High - elite careers
+      community_engagement: [0.4, 0.6]         # Moderate - controlled engagement
+
+  palm:
+    name: "Palm Elves"
+    description: "Joyful yet tragic seafaring survivors who turn hardship into celebration and beauty"
+    
+    personality_ranges:
+      openness: [0.6, 0.9]        # High - adaptable, celebratory
+      conscientiousness: [0.4, 0.7]   # Low-Moderate - joyful but less organized
+      extraversion: [0.7, 0.95]    # Very High - joyful, celebratory
+      agreeableness: [0.6, 0.9]    # High - joyful, community-oriented
+      neuroticism: [0.3, 0.6]      # Moderate - joyful but with underlying tragedy
+    
+    academic_dimensions:
+      academic_curiosity: [0.5, 0.8]      # Moderate-High - adaptable learning
+      perfectionism: [0.3, 0.6]           # Low-Moderate - joyful standards
+      resilience: [0.7, 0.9]              # High - survivor strength
+      leadership_tendency: [0.5, 0.8]     # Moderate-High - joyful leadership
+      social_anxiety: [0.2, 0.5]          # Low - comfortable socially
+    
+    intervention_dimensions:
+      extra_curricular_propensity: [0.7, 0.9]  # High - celebratory activities
+      career_ambition: [0.4, 0.7]              # Moderate - joyful careers
+      community_engagement: [0.7, 0.9]         # High - community celebration
+
+# Health and Disability Tendencies by Clan
+health_tendencies:
+  # Cave-dwelling dwarves (higher risk of acquired disabilities)
+  flint:
+    physical_disability_acquired: 0.08    # Mining, forging injuries
+    respiratory_issues: 0.12              # Cave dust exposure
+    hearing_impairment: 0.06              # Loud forging environments
+    stress_related_mental_health: 0.05    # High-pressure work
+  
+  malachite:
+    physical_disability_acquired: 0.05    # Stonecrafting injuries
+    respiratory_issues: 0.08              # Mineral dust
+    stress_related_mental_health: 0.03    # Balanced lifestyle
+  
+  granite:
+    physical_disability_acquired: 0.04    # Traditional work
+    stress_related_mental_health: 0.04    # Hierarchical pressure
+  
+  # Surface-dwelling elves (different health patterns)
+  baobab:
+    skin_conditions: 0.04                 # Sun exposure
+    stress_related_mental_health: 0.03    # Elite pressure
+  
+  palm:
+    stress_related_mental_health: 0.05    # Survivor trauma
+    seasonal_affective_disorder: 0.03     # Weather sensitivity
+  
+  # Marginalized groups (higher stress-related issues)
+  alabaster:
+    stress_related_mental_health: 0.08    # Marginalization stress
+    physical_disability_acquired: 0.06    # Poor working conditions
+    respiratory_issues: 0.05              # Dust exposure
+  
+  # All populations
+  all:
+    stress_related_mental_health: 0.05    # Academic pressure baseline
+    repetitive_strain_injury: 0.03        # Study-related
+    seasonal_affective_disorder: 0.02     # Weather changes 
