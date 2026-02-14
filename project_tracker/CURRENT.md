@@ -4,11 +4,11 @@
 
 ## In progress
 
-- Folder tidy: engagement_visualization → metaanalysis/, PROJECT_SUMMARY → docs/, references updated, git commit.
+- Assessment system
 
 ## Next (move from BACKLOG when starting)
 
-- See BACKLOG.md
+- Progression system, academic_year calendar, etc.
 
 ## Blocked
 

@@ -427,7 +427,7 @@ class EngagementSystem:
 
 def main():
     """Test the engagement system"""
-    print("📚 Stonegrove University Engagement System")
+    print("Stonegrove University Engagement System")
     print("=" * 60)
     
     # Initialize system
@@ -467,7 +467,7 @@ def main():
     # Save data
     weekly_df.to_csv('data/stonegrove_weekly_engagement.csv', index=False)
     semester_df.to_csv('data/stonegrove_semester_engagement.csv', index=False)
-    print(f"\n✅ Saved engagement data:")
+    print(f"\nSaved engagement data:")
     print(f"   - Weekly: data/stonegrove_weekly_engagement.csv")
     print(f"   - Semester: data/stonegrove_semester_engagement.csv")
     

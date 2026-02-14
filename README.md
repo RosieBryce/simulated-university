@@ -58,18 +58,16 @@ simulated-university/
 pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
 ```
 
-### Generate Student Population
+### Run full pipeline (recommended)
+```bash
+python run_pipeline.py
+```
+Runs: student generation → enrollment → engagement.
+
+### Or run steps individually
 ```bash
 python core_systems/student_generation_pipeline.py
-```
-
-### Enroll Students in Programs
-```bash
 python core_systems/program_enrollment_system.py
-```
-
-### Generate Engagement Data
-```bash
 python core_systems/engagement_system.py
 ```
 

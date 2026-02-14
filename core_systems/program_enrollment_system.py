@@ -237,7 +237,7 @@ class ProgramEnrollmentSystem:
 
 def main():
     """Test the program enrollment system"""
-    print("🎓 Stonegrove University Program Enrollment System")
+    print("Stonegrove University Program Enrollment System")
     print("=" * 60)
     
     # Initialize system
@@ -272,7 +272,7 @@ def main():
     
     # Save enrolled students
     enrolled_df.to_csv('data/stonegrove_enrolled_students.csv', index=False)
-    print(f"\n✅ Saved enrolled students to data/stonegrove_enrolled_students.csv")
+    print(f"\nSaved enrolled students to data/stonegrove_enrolled_students.csv")
     
     # Show sample enrollment
     print(f"\n=== Sample Enrollment ===")
