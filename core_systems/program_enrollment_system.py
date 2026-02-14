@@ -1,8 +1,18 @@
+import csv
+import io
 import pandas as pd
 import numpy as np
 import yaml
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
+
+
+def _format_module_list_csv(modules: List[str]) -> str:
+    """Format module list for CSV storage using proper quoting (handles commas in names)."""
+    buffer = io.StringIO()
+    writer = csv.writer(buffer)
+    writer.writerow(modules)
+    return buffer.getvalue().strip()
 
 @dataclass
 class ProgramEnrollment:
@@ -210,7 +220,7 @@ class ProgramEnrollmentSystem:
                 'program_name': enrollment.program_name,
                 'faculty': enrollment.faculty,
                 'department': enrollment.department,
-                'year1_modules': ','.join(enrollment.year_modules),
+                'year1_modules': _format_module_list_csv(enrollment.year_modules),
                 'num_year1_modules': len(enrollment.year_modules),
                 'clan_affinity': enrollment.enrollment_factors['clan_affinity'],
                 'selection_probability': enrollment.enrollment_factors['selection_probability']
@@ -234,7 +244,7 @@ def main():
     enrollment_system = ProgramEnrollmentSystem()
     
     # Load sample students
-    students_df = pd.read_csv('stonegrove_individual_students.csv')
+    students_df = pd.read_csv('data/stonegrove_individual_students.csv')
     print(f"\nLoaded {len(students_df)} students for enrollment")
     
     # Enroll students
@@ -261,8 +271,8 @@ def main():
     print(prob_stats)
     
     # Save enrolled students
-    enrolled_df.to_csv('stonegrove_enrolled_students.csv', index=False)
-    print(f"\n✅ Saved enrolled students to stonegrove_enrolled_students.csv")
+    enrolled_df.to_csv('data/stonegrove_enrolled_students.csv', index=False)
+    print(f"\n✅ Saved enrolled students to data/stonegrove_enrolled_students.csv")
     
     # Show sample enrollment
     print(f"\n=== Sample Enrollment ===")

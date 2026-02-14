@@ -45,7 +45,8 @@ simulated-university/
 │   ├── Stonegrove_University_Curriculum.xlsx
 │   └── World-building/
 ├── archive_population_model/         # Archived population-level files
-└── PROJECT_SUMMARY.md               # Detailed project documentation
+├── docs/                            # Documentation (DESIGN, SCHEMA, PROJECT_SUMMARY, etc.)
+└── project_tracker/                 # Tickets and progress
 ```
 
 ## 🚀 Quick Start
@@ -74,8 +75,8 @@ python engagement_system.py
 ### Create Visualizations
 ```bash
 cd ..
-python enrollment_visualization.py
-python engagement_visualization.py
+python archive_population_model/enrollment_visualization.py
+python metaanalysis/engagement_visualization.py
 ```
 
 ## 📊 Current System Capabilities
@@ -210,7 +211,7 @@ Edit `config/disability_distribution.yaml` to change:
 
 ## 📚 Documentation
 
-- **`PROJECT_SUMMARY.md`**: Comprehensive project documentation and save point
+- **`docs/PROJECT_SUMMARY.md`**: Pick-up guide and project status
 - **`Instructions and guides/`**: Source materials and world-building documents
 - **`archive_population_model/`**: Archived population-level modeling files
 

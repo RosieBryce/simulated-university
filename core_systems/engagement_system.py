@@ -1,8 +1,18 @@
+import csv
+import io
 import pandas as pd
 import numpy as np
 import yaml
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
+
+
+def _parse_module_list_csv(value: str) -> List[str]:
+    """Parse module list from CSV-formatted string (handles commas in module names)."""
+    if pd.isna(value) or not str(value).strip():
+        return []
+    reader = csv.reader(io.StringIO(str(value)))
+    return [m.strip() for m in next(reader) if m.strip()]
 from datetime import datetime, timedelta
 
 @dataclass
@@ -63,43 +73,58 @@ class EngagementSystem:
     
     def get_module_characteristics(self, module_title: str) -> Dict[str, float]:
         """Get characteristics for a specific module"""
-        if module_title in self.module_characteristics:
-            return self.module_characteristics[module_title]
-        else:
-            # Default characteristics based on module title keywords
-            return self._estimate_module_characteristics(module_title)
+        modules = self.module_characteristics.get('modules', {}) if self.module_characteristics else {}
+        if module_title in modules:
+            info = modules[module_title]
+            return {
+                'difficulty': info.get('difficulty_level', 0.5),
+                'social_requirements': info.get('social_requirements', 0.5),
+                'creativity_requirements': info.get('creativity_requirements', 0.5)
+            }
+        return self._estimate_module_characteristics(module_title)
     
     def _estimate_module_characteristics(self, module_title: str) -> Dict[str, float]:
-        """Estimate module characteristics based on title keywords"""
+        """
+        Estimate module characteristics based on title keywords.
+        Feminist-aware: domestic, applied, craft, and care work are NOT treated as easy.
+        """
         title_lower = module_title.lower()
         
-        # Default values
+        # Default: moderate difficulty (no automatic penalty for intro/foundation)
         difficulty = 0.5
         social_requirements = 0.5
         creativity_requirements = 0.5
         
-        # Difficulty modifiers
-        if any(word in title_lower for word in ['introduction', 'basic', 'foundation']):
-            difficulty -= 0.2
-        elif any(word in title_lower for word in ['advanced', 'complex', 'theoretical']):
+        # Difficulty: only elevate for genuinely demanding markers; no penalty for intro/foundation
+        if any(word in title_lower for word in ['advanced', 'capstone', 'research']):
             difficulty += 0.2
+        elif any(word in title_lower for word in ['epistemolog', 'theoretical', 'complex']):
+            difficulty += 0.15
+        # Domestic/applied/craft/care: do NOT reduce - these require technical and embodied skill
+        elif any(word in title_lower for word in [
+            'embodied', 'somatic', 'fermentation', 'cultivation', 'harvest',
+            'care', 'healing', 'hospitality', 'ritual', 'ethics', 'indigenous'
+        ]):
+            difficulty += 0.05  # Slight elevation: often demanding
+        # Simple "introduction" without substantive content marker: neutral (stay 0.5)
+        # No: difficulty -= 0.2 for introduction/basic/foundation
             
-        # Social requirements modifiers
-        if any(word in title_lower for word in ['group', 'team', 'collaboration', 'discussion']):
-            social_requirements += 0.3
+        # Social requirements
+        if any(word in title_lower for word in ['group', 'team', 'collaboration', 'discussion', 'circle', 'listening']):
+            social_requirements += 0.25
         elif any(word in title_lower for word in ['individual', 'independent', 'research']):
-            social_requirements -= 0.2
+            social_requirements -= 0.15
             
-        # Creativity requirements modifiers
-        if any(word in title_lower for word in ['design', 'creative', 'innovation', 'art']):
-            creativity_requirements += 0.3
-        elif any(word in title_lower for word in ['analysis', 'method', 'systematic']):
-            creativity_requirements -= 0.2
+        # Creativity requirements
+        if any(word in title_lower for word in ['design', 'creative', 'innovation', 'art', 'craft', 'weaving']):
+            creativity_requirements += 0.25
+        elif any(word in title_lower for word in ['analysis', 'method', 'systematic', 'logic']):
+            creativity_requirements -= 0.1
             
         return {
-            'difficulty': np.clip(difficulty, 0.1, 0.9),
-            'social_requirements': np.clip(social_requirements, 0.1, 0.9),
-            'creativity_requirements': np.clip(creativity_requirements, 0.1, 0.9)
+            'difficulty': np.clip(difficulty, 0.25, 0.9),
+            'social_requirements': np.clip(social_requirements, 0.2, 0.9),
+            'creativity_requirements': np.clip(creativity_requirements, 0.2, 0.9)
         }
     
     def get_program_characteristics(self, program_name: str) -> Dict[str, float]:
@@ -351,7 +376,7 @@ class EngagementSystem:
             motivation = {col: student[col] for col in motivation_cols}
             
             # Get student's modules
-            modules = student['year1_modules'].split(',')
+            modules = _parse_module_list_csv(student['year1_modules'])
             program_code = student['program_code']
             
             # Generate weekly engagement for each module
@@ -409,7 +434,7 @@ def main():
     engagement_system = EngagementSystem()
     
     # Load enrolled students
-    enrolled_df = pd.read_csv('stonegrove_enrolled_students.csv')
+    enrolled_df = pd.read_csv('data/stonegrove_enrolled_students.csv')
     print(f"Loaded {len(enrolled_df)} enrolled students")
     
     # Generate engagement data
@@ -440,11 +465,11 @@ def main():
     print(risk_counts.head(10))
     
     # Save data
-    weekly_df.to_csv('stonegrove_weekly_engagement.csv', index=False)
-    semester_df.to_csv('stonegrove_semester_engagement.csv', index=False)
+    weekly_df.to_csv('data/stonegrove_weekly_engagement.csv', index=False)
+    semester_df.to_csv('data/stonegrove_semester_engagement.csv', index=False)
     print(f"\n✅ Saved engagement data:")
-    print(f"   - Weekly: stonegrove_weekly_engagement.csv")
-    print(f"   - Semester: stonegrove_semester_engagement.csv")
+    print(f"   - Weekly: data/stonegrove_weekly_engagement.csv")
+    print(f"   - Semester: data/stonegrove_semester_engagement.csv")
     
     # Show sample data
     print(f"\n=== Sample Weekly Engagement ===")
