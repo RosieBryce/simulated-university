@@ -189,7 +189,7 @@ class AssessmentSystem:
         """
         Generate a single module mark for a student.
         Base distribution 70% (60,8), 15% (75,6), 15% (45,10).
-        Modifiers: race, clan, disability, education, socio-economic, module difficulty, engagement.
+        Modifiers: species, clan, disability, education, socio-economic, module difficulty, engagement.
         """
         # Base distribution
         r = np.random.random()
@@ -202,7 +202,7 @@ class AssessmentSystem:
 
         # Modifiers
         mod = 1.0
-        mod *= 1.1 if str(student.get('race', '')).lower() == 'elf' else 0.95
+        mod *= 1.1 if str(student.get('species', '')).lower() == 'elf' else 0.95
         mod *= self._get_clan_modifier(str(student.get('clan', '')).lower())
         mod *= self._get_disability_modifier(student.get('disabilities', ''))
         mod *= self._get_education_modifier(student.get('education', ''))

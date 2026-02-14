@@ -92,14 +92,14 @@ def edit_simple_distribution(data, title):
     return new_data
 
 def edit_disability_distribution(data, title):
-    """Edit disability distribution by race."""
+    """Edit disability distribution by species."""
     print(f"\n✏️  Editing {title}")
     print("-" * 50)
     
     new_data = {}
     
-    for race, disabilities in data.items():
-        print(f"\n🏛️  {race} Disabilities:")
+    for species, disabilities in data.items():
+        print(f"\n🏛️  {species} Disabilities:")
         new_disabilities = {}
         total = 0.0
         
@@ -124,7 +124,7 @@ def edit_disability_distribution(data, title):
                 except ValueError:
                     print("  ❌ Please enter a valid number")
         
-        print(f"\n  📊 {race} Total: {total:.3f} ({total*100:.1f}%)")
+        print(f"\n  📊 {species} Total: {total:.3f} ({total*100:.1f}%)")
         if abs(total - 1.0) > 0.001:
             print("  ⚠️  Warning: Total does not equal 100%")
             adjust = input("  Would you like to normalize to 100%? (y/n): ").lower()
@@ -133,7 +133,7 @@ def edit_disability_distribution(data, title):
                     new_disabilities[disability] = new_disabilities[disability] / total
                 print("  ✅ Normalized to 100%")
         
-        new_data[race] = new_disabilities
+        new_data[species] = new_disabilities
     
     return new_data
 

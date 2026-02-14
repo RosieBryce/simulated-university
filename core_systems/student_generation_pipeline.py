@@ -42,9 +42,9 @@ def sample_socio_economic_rank():
     # Example: 8 ranks, uniform
     return np.random.choice(list(range(1,9)), p=[1/8]*8)
 
-def sample_disabilities(race):
-    # Use DISABILITY_DIST for race
-    dist = DISABILITY_DIST[race]
+def sample_disabilities(species):
+    # Use DISABILITY_DIST for species
+    dist = DISABILITY_DIST[species]
     # Remove 'no_known_disabilities' for sampling
     probs = {k: v for k, v in dist.items() if k != 'no_known_disabilities'}
     # Each disability is independent Bernoulli with its probability
@@ -54,18 +54,18 @@ def sample_disabilities(race):
         disabilities = ['no_known_disabilities']
     return disabilities
 
-def sample_race_and_clan():
+def sample_species_and_clan():
     # Example: 60% dwarf, 40% elf; then uniform among clans
-    race = np.random.choice(['Dwarf', 'Elf'], p=[0.6, 0.4])
-    if race == 'Dwarf':
+    species = np.random.choice(['Dwarf', 'Elf'], p=[0.6, 0.4])
+    if species == 'Dwarf':
         clans = [k for k, v in CLAN_SPEC.items() if 'dwarves' in v['name'].lower()]
     else:
         clans = [k for k, v in CLAN_SPEC.items() if 'elves' in v['name'].lower()]
     if not clans:
-        print(f"DEBUG: No clans found for race {race}. Clan names: {[v['name'] for v in CLAN_SPEC.values()]}")
-        raise ValueError(f"No clans found for race {race}")
+        print(f"DEBUG: No clans found for species {species}. Clan names: {[v['name'] for v in CLAN_SPEC.values()]}")
+        raise ValueError(f"No clans found for species {species}")
     clan = np.random.choice(clans)
-    return race, clan
+    return species, clan
 
 def sample_gender():
     # 45% male, 45% female, 10% neuter
@@ -83,11 +83,11 @@ def generate_students(n=500, seed=42):
     motivation_system = MotivationProfileSystem()
     students = []
     for i in range(n):
-        race, clan = sample_race_and_clan()
+        species, clan = sample_species_and_clan()
         gender = sample_gender()
         name = name_gen.generate_name(clan, gender)
         base_personality = sample_base_personality(clan)
-        disabilities = sample_disabilities(race)
+        disabilities = sample_disabilities(species)
         socio_economic_rank = sample_socio_economic_rank()
         education = sample_education()
         age = sample_age()
@@ -103,7 +103,7 @@ def generate_students(n=500, seed=42):
         # Motivation profile
         motivation = motivation_system.generate_student_motivation(clan, refined_personality)
         students.append({
-            'race': race,
+            'species': species,
             'clan': clan,
             'gender': gender,
             'forename': name.forename,
@@ -140,9 +140,9 @@ def main():
     disability_counts = df['disabilities'].value_counts()
     print(disability_counts)
     
-    print("\n=== Race and Clan Distribution ===")
-    race_clan_counts = df.groupby(['race', 'clan']).size()
-    print(race_clan_counts)
+    print("\n=== Species and Clan Distribution ===")
+    species_clan_counts = df.groupby(['species', 'clan']).size()
+    print(species_clan_counts)
     
     # Check for critically low values
     print("\n=== Critically Low Values Analysis ===")

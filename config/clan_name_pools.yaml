@@ -99,7 +99,7 @@ clans:
       - frequency: 0.1
         name: Vennel
     name: Alabaster Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Ashbarrow
@@ -247,7 +247,7 @@ clans:
       - frequency: 0.6
         name: Thorne
     name: Ash Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.3
       name: Ashenline
@@ -355,7 +355,7 @@ clans:
       - frequency: 0.6
         name: Vaedriel
     name: Baobab Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.3
       name: Bloomthrone
@@ -497,7 +497,7 @@ clans:
       - frequency: 0.6
         name: Zeffel
     name: Bismuth Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Alloyvane
@@ -679,7 +679,7 @@ clans:
       - frequency: 0.3
         name: Doni
     name: Flint Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Blisterknock
@@ -863,7 +863,7 @@ clans:
       - frequency: 0.3
         name: Varnim
     name: Granite Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Ancestrail
@@ -1031,7 +1031,7 @@ clans:
       - frequency: 0.6
         name: Ysil
     name: Holly Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.1
       name: Archivevine
@@ -1193,7 +1193,7 @@ clans:
       - frequency: 0.1
         name: Zellin
     name: Malachite Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.3
       name: Alloycloak
@@ -1389,7 +1389,7 @@ clans:
       - frequency: 0.1
         name: Vion
     name: Obsidian Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.3
       name: Blackbloom
@@ -1531,7 +1531,7 @@ clans:
       - frequency: 0.6
         name: Solen
     name: Palm Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.6
       name: Breakwave
@@ -1645,7 +1645,7 @@ clans:
       - frequency: 0.3
         name: Teylin
     name: Rowan Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.1
       name: Ashbud
@@ -1785,7 +1785,7 @@ clans:
       - frequency: 0.1
         name: Sylen
     name: Sandstone Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Bargestone
@@ -1985,7 +1985,7 @@ clans:
       - frequency: 0.1
         name: Veln
     name: Slate Dwarfs
-    race: Dwarf
+    species: Dwarf
     surnames:
     - frequency: 0.1
       name: Bluechalk
@@ -2119,7 +2119,7 @@ clans:
       - frequency: 0.1
         name: Vayen
     name: Yew Elfs
-    race: Elf
+    species: Elf
     surnames:
     - frequency: 0.1
       name: Barkscroll

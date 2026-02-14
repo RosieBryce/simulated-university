@@ -17,7 +17,7 @@ This document describes all CSV output files and their column definitions.
 |--------|------|-------------|
 | `student_id` | string | Persistent unique identifier (e.g., "0101") |
 | `academic_year` | string | Calendar academic year (e.g. "1046-47", "1047-48") |
-| `race` | string | Race category (e.g., "Dwarf", "Elf") |
+| `species` | string | Species category (e.g., "Dwarf", "Elf") |
 | `clan` | string | Clan name (e.g., "malachite", "baobab") |
 | `gender` | string | Gender (e.g., "male", "female", "neuter") |
 | `forename` | string | First name |
@@ -214,7 +214,7 @@ Module lists use CSV formatting (comma-separated, quoted where needed) to handle
 
 The following columns are included for awarding gap analysis (users compute gaps themselves):
 
-- `race`
+- `species`
 - `clan` (ethnicity)
 - `gender`
 - `disabilities`

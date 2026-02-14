@@ -26,7 +26,7 @@ class StonegrovePopulationGenerator:
         random.seed(seed)
         np.random.seed(seed)
         
-        # Calculate student counts by race
+        # Calculate student counts by species
         self.dwarf_count = int(total_students * 0.55)  # 55% Dwarves
         self.elf_count = total_students - self.dwarf_count  # 45% Elves
         
@@ -36,9 +36,9 @@ class StonegrovePopulationGenerator:
     def _load_distributions(self):
         """Load all distribution specifications from YAML files."""
         
-        # Load race distribution
-        with open(os.path.join(self.config_dir, 'race_distribution.yaml'), 'r') as f:
-            self.race_distribution = yaml.safe_load(f)
+        # Load species distribution
+        with open(os.path.join(self.config_dir, 'species_distribution.yaml'), 'r') as f:
+            self.species_distribution = yaml.safe_load(f)
         
         # Load gender distribution
         with open(os.path.join(self.config_dir, 'gender_distribution.yaml'), 'r') as f:
@@ -67,10 +67,10 @@ class StonegrovePopulationGenerator:
         """Validate that all distributions sum to 1.0 (100%)."""
         print("Validating distribution configurations...")
         
-        # Validate race distribution
-        race_sum = sum(self.race_distribution.values())
-        if abs(race_sum - 1.0) > 0.001:
-            raise ValueError(f"Race distribution must sum to 1.0, got {race_sum}")
+        # Validate species distribution
+        species_sum = sum(self.species_distribution.values())
+        if abs(species_sum - 1.0) > 0.001:
+            raise ValueError(f"Species distribution must sum to 1.0, got {species_sum}")
         
         # Validate gender distribution
         gender_sum = sum(self.gender_distribution.values())
@@ -78,37 +78,37 @@ class StonegrovePopulationGenerator:
             raise ValueError(f"Gender distribution must sum to 1.0, got {gender_sum}")
         
         # Validate ethnicity distributions
-        for race, ethnicities in self.ethnicity_distribution.items():
+        for species, ethnicities in self.ethnicity_distribution.items():
             ethnicity_sum = sum(ethnicities.values())
             if abs(ethnicity_sum - 1.0) > 0.001:
-                raise ValueError(f"Ethnicity distribution for {race} must sum to 1.0, got {ethnicity_sum}")
+                raise ValueError(f"Ethnicity distribution for {species} must sum to 1.0, got {ethnicity_sum}")
         
         # Validate disability distributions
-        for race, disabilities in self.disability_distribution.items():
+        for species, disabilities in self.disability_distribution.items():
             disability_sum = sum(disabilities.values())
             if abs(disability_sum - 1.0) > 0.001:
-                raise ValueError(f"Disability distribution for {race} must sum to 1.0, got {disability_sum}")
+                raise ValueError(f"Disability distribution for {species} must sum to 1.0, got {disability_sum}")
         
         # Validate education distributions
-        for race, education in self.education_distribution.items():
+        for species, education in self.education_distribution.items():
             education_sum = sum(education.values())
             if abs(education_sum - 1.0) > 0.001:
-                raise ValueError(f"Education distribution for {race} must sum to 1.0, got {education_sum}")
+                raise ValueError(f"Education distribution for {species} must sum to 1.0, got {education_sum}")
         
         # Validate socio-economic distributions
-        for race, ethnicities in self.socio_economic_distribution.items():
+        for species, ethnicities in self.socio_economic_distribution.items():
             for ethnicity, classes in ethnicities.items():
                 class_sum = sum(classes.values())
                 if abs(class_sum - 1.0) > 0.001:
-                    raise ValueError(f"Socio-economic distribution for {race} {ethnicity} must sum to 1.0, got {class_sum}")
+                    raise ValueError(f"Socio-economic distribution for {species} {ethnicity} must sum to 1.0, got {class_sum}")
         
         print("✅ All distributions validated successfully!")
     
-    def _generate_race_data(self) -> pd.Series:
-        """Generate race data according to distribution."""
-        races = ['Dwarf'] * self.dwarf_count + ['Elf'] * self.elf_count
-        random.shuffle(races)
-        return pd.Series(races)
+    def _generate_species_data(self) -> pd.Series:
+        """Generate species data according to distribution."""
+        species_list = ['Dwarf'] * self.dwarf_count + ['Elf'] * self.elf_count
+        random.shuffle(species_list)
+        return pd.Series(species_list)
     
     def _generate_gender_data(self) -> pd.Series:
         """Generate gender data according to distribution."""
@@ -121,11 +121,11 @@ class StonegrovePopulationGenerator:
             genders.append(gender)
         return pd.Series(genders)
     
-    def _generate_ethnicity_data(self, race_data: pd.Series) -> pd.Series:
-        """Generate ethnicity data based on race."""
+    def _generate_ethnicity_data(self, species_data: pd.Series) -> pd.Series:
+        """Generate ethnicity data based on species."""
         ethnicities = []
-        for race in race_data:
-            ethnicity_dist = self.ethnicity_distribution[race]
+        for species in species_data:
+            ethnicity_dist = self.ethnicity_distribution[species]
             ethnicity = np.random.choice(
                 list(ethnicity_dist.keys()),
                 p=list(ethnicity_dist.values())
@@ -133,7 +133,7 @@ class StonegrovePopulationGenerator:
             ethnicities.append(ethnicity)
         return pd.Series(ethnicities)
     
-    def _generate_disability_data(self, race_data: pd.Series) -> pd.DataFrame:
+    def _generate_disability_data(self, species_data: pd.Series) -> pd.DataFrame:
         """Generate disability data as boolean columns."""
         disability_columns = [
             'physical_disability', 'mental_health_disability', 'specific_learning_disability',
@@ -146,19 +146,19 @@ class StonegrovePopulationGenerator:
         
         for disability in disability_columns:
             values = []
-            for race in race_data:
-                prob = self.disability_distribution[race][disability]
+            for species in species_data:
+                prob = self.disability_distribution[species][disability]
                 has_disability = np.random.random() < prob
                 values.append(has_disability)
             disability_data[disability] = values
         
         return pd.DataFrame(disability_data)
     
-    def _generate_education_data(self, race_data: pd.Series) -> pd.Series:
+    def _generate_education_data(self, species_data: pd.Series) -> pd.Series:
         """Generate prior educational experience data."""
         education_types = []
-        for race in race_data:
-            education_dist = self.education_distribution[race]
+        for species in species_data:
+            education_dist = self.education_distribution[species]
             education_type = np.random.choice(
                 list(education_dist.keys()),
                 p=list(education_dist.values())
@@ -166,11 +166,11 @@ class StonegrovePopulationGenerator:
             education_types.append(education_type)
         return pd.Series(education_types)
     
-    def _generate_socio_economic_data(self, race_data: pd.Series, ethnicity_data: pd.Series) -> pd.Series:
+    def _generate_socio_economic_data(self, species_data: pd.Series, ethnicity_data: pd.Series) -> pd.Series:
         """Generate socio-economic class rank data."""
         class_ranks = []
-        for race, ethnicity in zip(race_data, ethnicity_data):
-            rank_dist = self.socio_economic_distribution[race][ethnicity]
+        for species, ethnicity in zip(species_data, ethnicity_data):
+            rank_dist = self.socio_economic_distribution[species][ethnicity]
             class_rank = np.random.choice(
                 list(rank_dist.keys()),
                 p=list(rank_dist.values())
@@ -184,17 +184,17 @@ class StonegrovePopulationGenerator:
         
         # Generate base data
         student_ids = range(1, self.total_students + 1)
-        race_data = self._generate_race_data()
+        species_data = self._generate_species_data()
         gender_data = self._generate_gender_data()
-        ethnicity_data = self._generate_ethnicity_data(race_data)
-        disability_data = self._generate_disability_data(race_data)
-        education_data = self._generate_education_data(race_data)
-        socio_economic_data = self._generate_socio_economic_data(race_data, ethnicity_data)
+        ethnicity_data = self._generate_ethnicity_data(species_data)
+        disability_data = self._generate_disability_data(species_data)
+        education_data = self._generate_education_data(species_data)
+        socio_economic_data = self._generate_socio_economic_data(species_data, ethnicity_data)
         
         # Combine all data
         population_data = {
             'student_id': student_ids,
-            'race': race_data,
+            'species': species_data,
             'gender': gender_data,
             'ethnicity': ethnicity_data,
             'prior_educational_experience': education_data,
@@ -217,12 +217,12 @@ class StonegrovePopulationGenerator:
         
         validation_results = {}
         
-        # Validate race distribution
-        race_counts = df['race'].value_counts(normalize=True)
-        validation_results['race'] = {
-            'expected': self.race_distribution,
-            'actual': race_counts.to_dict(),
-            'difference': {k: abs(race_counts.get(k, 0) - v) for k, v in self.race_distribution.items()}
+        # Validate species distribution
+        species_counts = df['species'].value_counts(normalize=True)
+        validation_results['species'] = {
+            'expected': self.species_distribution,
+            'actual': species_counts.to_dict(),
+            'difference': {k: abs(species_counts.get(k, 0) - v) for k, v in self.species_distribution.items()}
         }
         
         # Validate gender distribution
@@ -233,27 +233,27 @@ class StonegrovePopulationGenerator:
             'difference': {k: abs(gender_counts.get(k, 0) - v) for k, v in self.gender_distribution.items()}
         }
         
-        # Validate ethnicity distribution by race
-        for race in ['Dwarf', 'Elf']:
-            race_subset = df[df['race'] == race]
-            if len(race_subset) > 0:
-                ethnicity_counts = race_subset['ethnicity'].value_counts(normalize=True)
-                validation_results[f'ethnicity_{race}'] = {
-                    'expected': self.ethnicity_distribution[race],
+        # Validate ethnicity distribution by species
+        for species in ['Dwarf', 'Elf']:
+            species_subset = df[df['species'] == species]
+            if len(species_subset) > 0:
+                ethnicity_counts = species_subset['ethnicity'].value_counts(normalize=True)
+                validation_results[f'ethnicity_{species}'] = {
+                    'expected': self.ethnicity_distribution[species],
                     'actual': ethnicity_counts.to_dict(),
-                    'difference': {k: abs(ethnicity_counts.get(k, 0) - v) for k, v in self.ethnicity_distribution[race].items()}
+                    'difference': {k: abs(ethnicity_counts.get(k, 0) - v) for k, v in self.ethnicity_distribution[species].items()}
                 }
         
         # Validate disability distributions
-        disability_columns = [col for col in df.columns if col not in ['student_id', 'race', 'gender', 'ethnicity', 'prior_educational_experience', 'socio_economic_class_rank']]
+        disability_columns = [col for col in df.columns if col not in ['student_id', 'species', 'gender', 'ethnicity', 'prior_educational_experience', 'socio_economic_class_rank']]
         
-        for race in ['Dwarf', 'Elf']:
-            race_subset = df[df['race'] == race]
-            if len(race_subset) > 0:
+        for species in ['Dwarf', 'Elf']:
+            species_subset = df[df['species'] == species]
+            if len(species_subset) > 0:
                 for disability in disability_columns:
-                    actual_rate = race_subset[disability].mean()
-                    expected_rate = self.disability_distribution[race][disability]
-                    validation_results[f'disability_{race}_{disability}'] = {
+                    actual_rate = species_subset[disability].mean()
+                    expected_rate = self.disability_distribution[species][disability]
+                    validation_results[f'disability_{species}_{disability}'] = {
                         'expected': expected_rate,
                         'actual': actual_rate,
                         'difference': abs(actual_rate - expected_rate)

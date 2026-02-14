@@ -66,7 +66,7 @@ Everything traces back to individual students. Aggregated stats are for validati
 
 #### **Students** (`stonegrove_individual_students.csv`)
 - Persistent identity: `student_id`
-- Demographics: race, clan, gender, age
+- Demographics: species, clan, gender, age
 - Characteristics: personality traits, motivation dimensions, disabilities, socio-economic rank
 - **Longitudinal**: Same student appears once per academic year (if enrolled)
 
@@ -250,7 +250,7 @@ For each academic_year from "1046-47" to "1052-53":
 
 - **Purely assessment-based**: Marks → grades
 - **Engagement affects marks**: Modifier from weekly engagement (attendance, participation, academic engagement)
-- **Modifiers**: Race, disability, clan, socio-economic status (documented in CALCULATIONS.md)
+- **Modifiers**: Species, disability, clan, socio-economic status (documented in CALCULATIONS.md)
 
 ### Output
 

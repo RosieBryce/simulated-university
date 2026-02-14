@@ -83,7 +83,7 @@ python metaanalysis/engagement_visualization.py
 
 ### Student Generation
 - **500 individual students** with complete characteristics
-- **Race distribution**: 60% Dwarf, 40% Elf
+- **Species distribution**: 60% Dwarf, 40% Elf
 - **14 clans** with unique personality ranges and motivations
 - **Realistic name generation** from clan-specific pools
 - **Personality refinement** based on disabilities, socio-economic rank, education, age
@@ -159,7 +159,7 @@ Edit `config/clan_program_affinities.yaml` to adjust:
 
 ### Disability Distributions
 Edit `config/disability_distribution.yaml` to change:
-- Disability prevalence by race
+- Disability prevalence by species
 - Overall proportions
 
 ## 📋 Files Overview

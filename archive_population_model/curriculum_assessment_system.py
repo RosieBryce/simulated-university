@@ -59,8 +59,8 @@ class CurriculumAssessmentSystem:
         
         # Performance modifiers based on characteristics
         self.performance_modifiers = {
-            # Race modifiers
-            'race': {
+            # Species modifiers
+            'species': {
                 'Elf': 1.1,      # Elves tend to outperform dwarves
                 'Dwarf': 0.95    # Dwarves slightly underperform
             },
@@ -159,8 +159,8 @@ class CurriculumAssessmentSystem:
         modifier = 1.0
         
         # Race modifier
-        race_modifier = self.performance_modifiers['race'].get(student_data['race'], 1.0)
-        modifier *= race_modifier
+        species_modifier = self.performance_modifiers['species'].get(student_data['species'], 1.0)
+        modifier *= species_modifier
         
         # Ethnicity modifier
         ethnicity_modifier = self.performance_modifiers['ethnicity'].get(
@@ -256,7 +256,7 @@ class CurriculumAssessmentSystem:
                     'module_year': module['Year'],
                     'assessment_mark': mark,
                     'grade': self._calculate_grade(mark),
-                    'race': student['race'],
+                    'species': student['species'],
                     'ethnicity': student['ethnicity'],
                     'gender': student['gender'],
                     'prior_educational_experience': student['prior_educational_experience'],
@@ -321,12 +321,12 @@ class CurriculumAssessmentSystem:
         range_percentage = (range_56_64 / len(assessment_df)) * 100
         print(f"\n  📊 Marks 56-64: {range_56_64:,} marks ({range_percentage:.1f}%)")
         
-        # Performance by race
-        print(f"\n👥 PERFORMANCE BY RACE:")
-        for race in assessment_df['race'].unique():
-            race_marks = assessment_df[assessment_df['race'] == race]['assessment_mark']
-            avg_mark = race_marks.mean()
-            print(f"  {race}: {avg_mark:.1f} average mark")
+        # Performance by species
+        print(f"\n👥 PERFORMANCE BY SPECIES:")
+        for species in assessment_df['species'].unique():
+            species_marks = assessment_df[assessment_df['species'] == species]['assessment_mark']
+            avg_mark = species_marks.mean()
+            print(f"  {species}: {avg_mark:.1f} average mark")
         
         # Performance by ethnicity
         print(f"\n🏛️  PERFORMANCE BY ETHNICITY:")

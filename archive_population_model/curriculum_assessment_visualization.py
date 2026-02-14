@@ -37,11 +37,11 @@ def visualize_curriculum_assessment_data(csv_file="stonegrove_curriculum_assessm
     plt.pie(grade_counts.values, labels=grade_counts.index, autopct='%1.1f%%', colors=colors, startangle=90)
     plt.title('Grade Distribution', fontsize=12, fontweight='bold')
     
-    # 3. Performance by race
+    # 3. Performance by species
     ax3 = plt.subplot(3, 3, 3)
-    race_performance = df.groupby('race')['assessment_mark'].mean()
-    race_performance.plot(kind='bar', ax=ax3, color=['goldenrod', 'forestgreen'])
-    plt.title('Average Performance by Race', fontsize=12, fontweight='bold')
+    species_performance = df.groupby('species')['assessment_mark'].mean()
+    species_performance.plot(kind='bar', ax=ax3, color=['goldenrod', 'forestgreen'])
+    plt.title('Average Performance by Species', fontsize=12, fontweight='bold')
     plt.ylabel('Average Mark')
     plt.xticks(rotation=0)
     
@@ -67,14 +67,14 @@ def visualize_curriculum_assessment_data(csv_file="stonegrove_curriculum_assessm
     plt.title('Top 10 Programs by Performance', fontsize=12, fontweight='bold')
     plt.xlabel('Average Mark')
     
-    # 7. Mark distribution by race
+    # 7. Mark distribution by species
     ax7 = plt.subplot(3, 3, 7)
-    for race in df['race'].unique():
-        race_data = df[df['race'] == race]['assessment_mark']
-        plt.hist(race_data, bins=20, alpha=0.6, label=race, density=True)
+    for species in df['species'].unique():
+        species_data = df[df['species'] == species]['assessment_mark']
+        plt.hist(species_data, bins=20, alpha=0.6, label=species, density=True)
     plt.xlabel('Assessment Mark')
     plt.ylabel('Density')
-    plt.title('Mark Distribution by Race', fontsize=12, fontweight='bold')
+    plt.title('Mark Distribution by Species', fontsize=12, fontweight='bold')
     plt.legend()
     
     # 8. Performance by gender
@@ -216,9 +216,9 @@ def visualize_curriculum_assessment_data(csv_file="stonegrove_curriculum_assessm
     range_percentage = (range_56_64 / len(df)) * 100
     print(f"  • Marks 56-64: {range_percentage:.1f}% (should be large proportion)")
     
-    # Check race performance
-    elf_avg = df[df['race'] == 'Elf']['assessment_mark'].mean()
-    dwarf_avg = df[df['race'] == 'Dwarf']['assessment_mark'].mean()
+    # Check species performance
+    elf_avg = df[df['species'] == 'Elf']['assessment_mark'].mean()
+    dwarf_avg = df[df['species'] == 'Dwarf']['assessment_mark'].mean()
     print(f"  • Elves vs Dwarves: {elf_avg:.1f} vs {dwarf_avg:.1f} (Elves should outperform)")
     
     # Check ethnicity performance

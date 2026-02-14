@@ -1,5 +1,5 @@
-# Prior educational experience distribution by race for Stonegrove University
-# Each race's percentages must sum to 1.0 (100%)
+# Prior educational experience distribution by species for Stonegrove University
+# Each species's percentages must sum to 1.0 (100%)
 
 Dwarf:
   Academic: 0.12     # 12% of Dwarves have academic background

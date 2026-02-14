@@ -65,16 +65,16 @@ def create_enrollment_visualizations():
                 label=f'Mean: {df["selection_probability"].mean():.3f}')
     plt.legend()
     
-    # 5. Clan Affinity by Race
+    # 5. Clan Affinity by Species
     plt.subplot(4, 2, 5)
-    race_affinity = df.groupby('race')['clan_affinity'].agg(['mean', 'std']).reset_index()
-    x_pos = np.arange(len(race_affinity))
-    plt.bar(x_pos, race_affinity['mean'], yerr=race_affinity['std'], 
+    species_affinity = df.groupby('species')['clan_affinity'].agg(['mean', 'std']).reset_index()
+    x_pos = np.arange(len(species_affinity))
+    plt.bar(x_pos, species_affinity['mean'], yerr=species_affinity['std'],
             capsize=5, color=['orange', 'green'], alpha=0.7)
-    plt.xlabel('Race')
+    plt.xlabel('Species')
     plt.ylabel('Average Clan Affinity')
-    plt.title('Average Clan-Program Affinity by Race', fontsize=12, fontweight='bold')
-    plt.xticks(x_pos, race_affinity['race'])
+    plt.title('Average Clan-Program Affinity by Species', fontsize=12, fontweight='bold')
+    plt.xticks(x_pos, species_affinity['species'])
     
     # 6. Number of Year 1 Modules Distribution
     plt.subplot(4, 2, 6)

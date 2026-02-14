@@ -207,7 +207,7 @@ base_mark = random_normal(mean, std)
 
 ### Performance Modifiers
 
-**Race Modifier**:
+**Species Modifier**:
 - Elf: ×1.1
 - Dwarf: ×0.95
 
@@ -260,7 +260,7 @@ engagement_modifier = clamp(0.88 + 0.24 * avg_engagement, 0.88, 1.12)
 ### Final Mark Calculation
 
 ```
-final_mark = base_mark * race_modifier * clan_modifier * 
+final_mark = base_mark * species_modifier * clan_modifier * 
               disability_modifier * education_modifier * 
               socio_economic_modifier * module_modifier * engagement_modifier
 
@@ -371,7 +371,7 @@ else:
 ### Protected Characteristics: Included, Not Analyzed
 
 - **Rationale**: Users should compute awarding gaps themselves
-- **Impact**: Race, disability, etc. columns present; no "gap" columns provided
+- **Impact**: Species, disability, etc. columns present; no "gap" columns provided
 
 ---
 

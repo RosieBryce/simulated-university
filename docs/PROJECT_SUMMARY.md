@@ -56,7 +56,7 @@ We have successfully built a sophisticated individual-level student modeling sys
 
 #### **1. Individual Student Generation Pipeline**
 - **500 individual students** with complete characteristics
-- **Race, Gender, Clan** assignment with realistic distributions (60% Dwarf, 40% Elf)
+- **Species, Gender, Clan** assignment with realistic distributions (60% Dwarf, 40% Elf)
 - **Personality profiles** using Big Five + academic dimensions
 - **Motivation dimensions** (8 types) with personality nudging
 - **Health/disability status** with increased proportion of no disabilities (40.6%)

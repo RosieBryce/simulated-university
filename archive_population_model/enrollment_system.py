@@ -7,7 +7,7 @@ from typing import Dict, List, Tuple
 class StonegroveEnrollmentSystem:
     """
     Enrollment system for Stonegrove University that assigns students to programs
-    based on race, gender, and educational background preferences.
+    based on species, gender, and educational background preferences.
     """
     
     def __init__(self, config_dir: str = "config"):
@@ -63,7 +63,7 @@ class StonegroveEnrollmentSystem:
             if program not in base_popularity:
                 base_popularity[program] = 30  # Default moderate popularity
         
-        # Faculty preferences by race
+        # Faculty preferences by species
         faculty_preferences = {
             'Dwarf': {
                 'Faculty of Applied Forging': 1.8,      # Dwarves prefer Applied Forging
@@ -120,7 +120,7 @@ class StonegroveEnrollmentSystem:
         """Calculate enrollment weights for each program for a given student."""
         weights = {}
         
-        race = student_data['race']
+        species = student_data['species']
         gender = student_data['gender']
         education = student_data['prior_educational_experience']
         
@@ -131,8 +131,8 @@ class StonegroveEnrollmentSystem:
             # Start with base popularity
             weight = self.program_preferences['base_popularity'].get(program, 30)
             
-            # Apply faculty preference by race
-            faculty_multiplier = self.program_preferences['faculty_preferences'][race].get(faculty, 1.0)
+            # Apply faculty preference by species
+            faculty_multiplier = self.program_preferences['faculty_preferences'][species].get(faculty, 1.0)
             weight *= faculty_multiplier
             
             # Apply gender preferences
@@ -156,7 +156,7 @@ class StonegroveEnrollmentSystem:
             weight *= education_multiplier
             
             # Special case: Female Elves with academic background prefer Integrative Inquiry
-            if (race == 'Elf' and gender == 'Female' and education == 'Academic' and 
+            if (species == 'Elf' and gender == 'Female' and education == 'Academic' and 
                 faculty == 'Faculty of Integrative Inquiry'):
                 weight *= 1.5
             
@@ -229,15 +229,15 @@ class StonegroveEnrollmentSystem:
             percentage = (count / len(enrolled_df)) * 100
             print(f"  {program}: {count:,} students ({percentage:.1f}%)")
         
-        # Race distribution by faculty
-        print(f"\n👥 RACE DISTRIBUTION BY FACULTY:")
+        # Species distribution by faculty
+        print(f"\n👥 SPECIES DISTRIBUTION BY FACULTY:")
         for faculty in enrolled_df['faculty'].unique():
             faculty_subset = enrolled_df[enrolled_df['faculty'] == faculty]
             print(f"\n  {faculty}:")
-            race_counts = faculty_subset['race'].value_counts()
-            for race, count in race_counts.items():
+            species_counts = faculty_subset['species'].value_counts()
+            for species, count in species_counts.items():
                 percentage = (count / len(faculty_subset)) * 100
-                print(f"    {race}: {count:,} students ({percentage:.1f}%)")
+                print(f"    {species}: {count:,} students ({percentage:.1f}%)")
         
         # Gender distribution by faculty
         print(f"\n⚧ GENDER DISTRIBUTION BY FACULTY:")
@@ -288,10 +288,10 @@ class StonegroveEnrollmentSystem:
         if len(brewcraft_students) > 0:
             print(f"\n🍺 BREWCRAFT AND FERMENTATION SYSTEMS:")
             print(f"  Total students: {len(brewcraft_students)}")
-            race_dist = brewcraft_students['race'].value_counts()
-            for race, count in race_dist.items():
+            species_dist = brewcraft_students['species'].value_counts()
+            for species, count in species_dist.items():
                 percentage = (count / len(brewcraft_students)) * 100
-                print(f"    {race}: {count:,} students ({percentage:.1f}%)")
+                print(f"    {species}: {count:,} students ({percentage:.1f}%)")
 
 def main():
     """Main function to enroll students."""

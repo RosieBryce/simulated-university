@@ -1,0 +1,5 @@
+# Species distribution for Stonegrove University
+# Total must equal 1.0 (100%)
+
+Dwarf: 0.55  # 55% of students are Dwarves
+Elf: 0.45    # 45% of students are Elves

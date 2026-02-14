@@ -17,11 +17,11 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
     print(f"Total columns: {len(df.columns)}")
     
     # Race distribution
-    print(f"\n👥 RACE DISTRIBUTION:")
-    race_counts = df['race'].value_counts()
-    for race, count in race_counts.items():
+    print(f"\n👥 SPECIES DISTRIBUTION:")
+    species_counts = df['species'].value_counts()
+    for species, count in species_counts.items():
         percentage = (count / len(df)) * 100
-        print(f"  {race}: {count:,} students ({percentage:.1f}%)")
+        print(f"  {species}: {count:,} students ({percentage:.1f}%)")
     
     # Gender distribution
     print(f"\n⚧ GENDER DISTRIBUTION:")
@@ -30,24 +30,24 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
         percentage = (count / len(df)) * 100
         print(f"  {gender}: {count:,} students ({percentage:.1f}%)")
     
-    # Ethnicity distribution by race
-    print(f"\n🌍 ETHNICITY DISTRIBUTION BY RACE:")
-    for race in ['Dwarf', 'Elf']:
-        race_subset = df[df['race'] == race]
-        print(f"\n  {race} Ethnicities:")
-        ethnicity_counts = race_subset['ethnicity'].value_counts()
+    # Ethnicity distribution by species
+    print(f"\n🌍 ETHNICITY DISTRIBUTION BY SPECIES:")
+    for species in ['Dwarf', 'Elf']:
+        species_subset = df[df['species'] == species]
+        print(f"\n  {species} Ethnicities:")
+        ethnicity_counts = species_subset['ethnicity'].value_counts()
         for ethnicity, count in ethnicity_counts.items():
-            percentage = (count / len(race_subset)) * 100
+            percentage = (count / len(species_subset)) * 100
             print(f"    {ethnicity}: {count:,} students ({percentage:.1f}%)")
     
-    # Educational experience by race
-    print(f"\n🎓 PRIOR EDUCATIONAL EXPERIENCE BY RACE:")
-    for race in ['Dwarf', 'Elf']:
-        race_subset = df[df['race'] == race]
-        print(f"\n  {race}:")
-        education_counts = race_subset['prior_educational_experience'].value_counts()
+    # Educational experience by species
+    print(f"\n🎓 PRIOR EDUCATIONAL EXPERIENCE BY SPECIES:")
+    for species in ['Dwarf', 'Elf']:
+        species_subset = df[df['species'] == species]
+        print(f"\n  {species}:")
+        education_counts = species_subset['prior_educational_experience'].value_counts()
         for education, count in education_counts.items():
-            percentage = (count / len(race_subset)) * 100
+            percentage = (count / len(species_subset)) * 100
             print(f"    {education}: {count:,} students ({percentage:.1f}%)")
     
     # Socio-economic class distribution
@@ -59,7 +59,7 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
     
     # Disability statistics
     print(f"\n♿ DISABILITY STATISTICS:")
-    disability_columns = [col for col in df.columns if col not in ['student_id', 'race', 'gender', 'ethnicity', 'prior_educational_experience', 'socio_economic_class_rank']]
+    disability_columns = [col for col in df.columns if col not in ['student_id', 'species', 'gender', 'ethnicity', 'prior_educational_experience', 'socio_economic_class_rank']]
     
     total_with_disabilities = 0
     for disability in disability_columns:
@@ -72,23 +72,23 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
     no_disabilities = df['no_known_disabilities'].sum()
     print(f"  No Known Disabilities: {no_disabilities:,} students ({(no_disabilities/len(df))*100:.1f}%)")
     
-    # Cross-analysis: Disability rates by race
-    print(f"\n♿ DISABILITY RATES BY RACE:")
-    for race in ['Dwarf', 'Elf']:
-        race_subset = df[df['race'] == race]
-        print(f"\n  {race} Disability Rates:")
+    # Cross-analysis: Disability rates by species
+    print(f"\n♿ DISABILITY RATES BY SPECIES:")
+    for species in ['Dwarf', 'Elf']:
+        species_subset = df[df['species'] == species]
+        print(f"\n  {species} Disability Rates:")
         for disability in disability_columns:
             if disability != 'no_known_disabilities':
-                rate = race_subset[disability].mean() * 100
+                rate = species_subset[disability].mean() * 100
                 print(f"    {disability.replace('_', ' ').title()}: {rate:.1f}%")
     
-    # Socio-economic class by race and ethnicity
-    print(f"\n💰 SOCIO-ECONOMIC CLASS BY RACE AND ETHNICITY:")
-    for race in ['Dwarf', 'Elf']:
-        race_subset = df[df['race'] == race]
-        print(f"\n  {race} Average Socio-Economic Class by Ethnicity:")
-        for ethnicity in race_subset['ethnicity'].unique():
-            ethnicity_subset = race_subset[race_subset['ethnicity'] == ethnicity]
+    # Socio-economic class by species and ethnicity
+    print(f"\n💰 SOCIO-ECONOMIC CLASS BY SPECIES AND ETHNICITY:")
+    for species in ['Dwarf', 'Elf']:
+        species_subset = df[df['species'] == species]
+        print(f"\n  {species} Average Socio-Economic Class by Ethnicity:")
+        for ethnicity in species_subset['ethnicity'].unique():
+            ethnicity_subset = species_subset[species_subset['ethnicity'] == ethnicity]
             avg_class = ethnicity_subset['socio_economic_class_rank'].mean()
             print(f"    {ethnicity}: {avg_class:.2f}")
     
@@ -103,22 +103,22 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
     fig, axes = plt.subplots(2, 2, figsize=(15, 12))
     fig.suptitle('Stonegrove University Population Analysis', fontsize=16, fontweight='bold')
     
-    # 1. Race and Gender distribution
+    # 1. Species and Gender distribution
     ax1 = axes[0, 0]
-    race_gender = pd.crosstab(df['race'], df['gender'])
-    race_gender.plot(kind='bar', ax=ax1, stacked=True)
-    ax1.set_title('Race and Gender Distribution')
+    species_gender = pd.crosstab(df['species'], df['gender'])
+    species_gender.plot(kind='bar', ax=ax1, stacked=True)
+    ax1.set_title('Species and Gender Distribution')
     ax1.set_ylabel('Number of Students')
     ax1.legend(title='Gender')
     ax1.tick_params(axis='x', rotation=0)
     
-    # 2. Ethnicity distribution by race
+    # 2. Ethnicity distribution by species
     ax2 = axes[0, 1]
-    ethnicity_race = pd.crosstab(df['ethnicity'], df['race'])
-    ethnicity_race.plot(kind='bar', ax=ax2)
-    ax2.set_title('Ethnicity Distribution by Race')
+    ethnicity_species = pd.crosstab(df['ethnicity'], df['species'])
+    ethnicity_species.plot(kind='bar', ax=ax2)
+    ax2.set_title('Ethnicity Distribution by Species')
     ax2.set_ylabel('Number of Students')
-    ax2.legend(title='Race')
+    ax2.legend(title='Species')
     ax2.tick_params(axis='x', rotation=45)
     
     # 3. Socio-economic class distribution
@@ -129,21 +129,21 @@ def analyze_population(csv_file="stonegrove_university_population.csv"):
     ax3.set_ylabel('Number of Students')
     ax3.tick_params(axis='x', rotation=0)
     
-    # 4. Disability rates by race
+    # 4. Disability rates by species
     ax4 = axes[1, 1]
     disability_rates = []
     disability_names = []
     for disability in disability_columns:
         if disability != 'no_known_disabilities':
-            dwarf_rate = df[df['race'] == 'Dwarf'][disability].mean() * 100
-            elf_rate = df[df['race'] == 'Elf'][disability].mean() * 100
+            dwarf_rate = df[df['species'] == 'Dwarf'][disability].mean() * 100
+            elf_rate = df[df['species'] == 'Elf'][disability].mean() * 100
             disability_rates.extend([dwarf_rate, elf_rate])
             disability_names.extend([f'{disability.replace("_", " ").title()}\n(Dwarf)', 
                                    f'{disability.replace("_", " ").title()}\n(Elf)'])
     
     bars = ax4.bar(range(len(disability_rates)), disability_rates, 
                    color=['lightcoral' if i % 2 == 0 else 'lightblue' for i in range(len(disability_rates))])
-    ax4.set_title('Disability Rates by Race')
+    ax4.set_title('Disability Rates by Species')
     ax4.set_ylabel('Percentage (%)')
     ax4.set_xticks(range(len(disability_names)))
     ax4.set_xticklabels(disability_names, rotation=45, ha='right')

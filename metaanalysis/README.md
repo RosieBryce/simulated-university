@@ -16,7 +16,7 @@ Cross-cutting analysis scripts and outputs that synthesise results across the St
 | `validate_model_outputs.py` | Sanity checks on generated data (distributions, correlations, missing values) |
 | `cross_system_summary.py` | Combine insights across pipeline stages |
 | `difficulty_analysis.py` | Module difficulty distribution using current (feminist-aware) algorithm |
-| `engagement_visualization.py` | Engagement visualizations (trends, clan/race analysis, personality correlations) |
+| `engagement_visualization.py` | Engagement visualizations (trends, clan/species analysis, personality correlations) |
 | `outputs/` | Generated reports, summary tables, validation logs |
 
 ## Usage

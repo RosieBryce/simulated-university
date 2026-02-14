@@ -1,5 +1,5 @@
-# Ethnicity distribution by race for Stonegrove University
-# Each race's percentages must sum to 1.0 (100%)
+# Ethnicity distribution by species for Stonegrove University
+# Each species's percentages must sum to 1.0 (100%)
 
 Dwarf:
   Malachite: 0.10    # 10% of Dwarves are Malachite

@@ -16,7 +16,7 @@ def create_engagement_visualizations():
     enrolled_df = pd.read_csv('data/stonegrove_enrolled_students.csv')
     
     # Merge with student data for analysis
-    semester_analysis = semester_df.merge(enrolled_df[['student_id', 'clan', 'race', 'gender', 'disabilities']], 
+    semester_analysis = semester_df.merge(enrolled_df[['student_id', 'clan', 'species', 'gender', 'disabilities']], 
                                         left_on='student_id', right_on='student_id', how='left')
     
     # Set up the plotting style
@@ -86,13 +86,13 @@ def create_engagement_visualizations():
     plt.title('Openness vs Academic Engagement', fontsize=12, fontweight='bold')
     plt.grid(True, alpha=0.3)
     
-    # 7. Engagement Distribution by Race
+    # 7. Engagement Distribution by Species
     plt.subplot(4, 3, 7)
-    race_engagement = semester_analysis.groupby('race')[['average_attendance', 'average_participation', 
+    species_engagement = semester_analysis.groupby('species')[['average_attendance', 'average_participation', 
                                                         'average_academic_engagement', 'average_social_engagement']].mean()
-    race_engagement.plot(kind='bar', ax=plt.gca(), alpha=0.7)
-    plt.title('Engagement by Race', fontsize=12, fontweight='bold')
-    plt.xlabel('Race')
+    species_engagement.plot(kind='bar', ax=plt.gca(), alpha=0.7)
+    plt.title('Engagement by Species', fontsize=12, fontweight='bold')
+    plt.xlabel('Species')
     plt.ylabel('Engagement Score')
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.xticks(rotation=0)
