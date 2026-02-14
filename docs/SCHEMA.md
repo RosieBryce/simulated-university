@@ -135,7 +135,7 @@ This document describes all CSV output files and their column definitions.
 **Notes**:
 - One assessment per module per year for now (end of module); `module_code` and `component_code` allow more later
 - `grade` thresholds: First (≥70), 2:1 (≥60), 2:2 (≥50), Third (≥40), Fail (<40)
-- Marks are purely assessment-based (engagement does not affect marks)
+- Marks are modified by engagement (attendance, participation, academic_engagement from weekly data)
 
 ---
 

@@ -1,0 +1,37 @@
+programme_name,faculty,description,social_intensity,practical_theoretical_balance,stress_level,career_prospects,academic_difficulty,creativity_requirement,leadership_opportunities,research_intensity,community_engagement,innovation_focus
+Pedagogies of the Hand,Faculty of Applied Forging,Hands-on learning and craft-based education,0.7,0.8,0.4,0.7,0.5,0.6,0.5,0.3,0.7,0.6
+Earth-Aligned Agriculture,Faculty of Applied Forging,Sustainable agriculture and land stewardship,0.6,0.9,0.3,0.8,0.4,0.5,0.6,0.4,0.8,0.7
+Mycelial Cultivation and Biotech,Faculty of Applied Forging,Fungal cultivation and biological technology,0.5,0.7,0.5,0.8,0.6,0.7,0.5,0.6,0.6,0.8
+Food System Resilience,Faculty of Applied Forging,Building resilient food systems and networks,0.8,0.8,0.4,0.7,0.5,0.6,0.7,0.5,0.9,0.6
+Herbal Practice and Energy Work,Faculty of Applied Forging,Traditional herbal medicine and energy healing,0.6,0.7,0.3,0.6,0.4,0.5,0.4,0.3,0.7,0.4
+"Care, Craft and Continuity",Faculty of Hearth and Transformation,"Care work, craft traditions, and cultural continuity",0.8,0.7,0.6,0.6,0.4,0.5,0.5,0.3,0.9,0.4
+Hospitality as Praxis,Faculty of Hearth and Transformation,Hospitality as a form of social practice and care,0.9,0.8,0.7,0.5,0.3,0.4,0.6,0.2,0.8,0.3
+Intergenerational Learning,Faculty of Hearth and Transformation,Learning across generations and age groups,0.9,0.6,0.5,0.6,0.5,0.6,0.7,0.4,0.9,0.5
+Mutual Aid and Guild Governance,Faculty of Hearth and Transformation,Community mutual aid and guild-based governance,0.9,0.8,0.6,0.5,0.4,0.5,0.8,0.3,0.9,0.5
+Timekeeping in Plural Cultures,Faculty of Hearth and Transformation,Cultural timekeeping and temporal practices,0.6,0.5,0.4,0.4,0.6,0.5,0.4,0.6,0.7,0.4
+Strategic Rituals and Civic Memory,Faculty of Integrative Inquiry,Ritual design and civic memory preservation,0.7,0.6,0.5,0.5,0.6,0.7,0.7,0.6,0.8,0.6
+Narrative Governance and Institution Building,Faculty of Integrative Inquiry,Storytelling in governance and institution design,0.8,0.6,0.6,0.7,0.7,0.8,0.8,0.7,0.7,0.7
+Conflict Transformation through Cultural Design,Faculty of Integrative Inquiry,Cultural design for conflict resolution,0.9,0.7,0.8,0.6,0.7,0.8,0.8,0.6,0.8,0.7
+Ancient Tongues and Translation,Faculty of Integrative Inquiry,Ancient language study and translation work,0.4,0.4,0.5,0.5,0.8,0.4,0.4,0.8,0.5,0.3
+Comparative Runes and Scripts,Faculty of Integrative Inquiry,Comparative study of runic systems and scripts,0.3,0.3,0.4,0.4,0.8,0.3,0.3,0.9,0.3,0.2
+Multispecies Semantics,Faculty of Integrative Inquiry,Communication and meaning across species boundaries,0.6,0.5,0.5,0.6,0.7,0.8,0.5,0.8,0.6,0.8
+Epistemological Justice,Faculty of Integrative Inquiry,Justice in knowledge systems and ways of knowing,0.7,0.4,0.7,0.5,0.8,0.6,0.6,0.8,0.7,0.6
+Lorekeeper Apprenticeship,Faculty of Integrative Inquiry,Apprenticeship in knowledge preservation and transmission,0.5,0.6,0.4,0.4,0.6,0.4,0.5,0.6,0.6,0.3
+Wisdom Traditions and Moral Craft,Faculty of Integrative Inquiry,Study and practice of wisdom traditions,0.6,0.5,0.3,0.4,0.6,0.5,0.6,0.5,0.7,0.4
+Knowledge System Prototyping,Faculty of Living Lore,Prototyping new knowledge systems and structures,0.6,0.7,0.6,0.8,0.7,0.9,0.7,0.8,0.6,0.9
+Embodied Research Methods,Faculty of Living Lore,Research methods that engage the body and senses,0.5,0.6,0.4,0.6,0.6,0.7,0.5,0.8,0.5,0.7
+Storyweaving & Community Histories,Faculty of Living Lore,Weaving stories and community historical narratives,0.8,0.6,0.4,0.5,0.5,0.8,0.6,0.6,0.9,0.6
+Integrated Mind-Body,Faculty of Living Lore,Integration of mental and physical practices,0.5,0.7,0.3,0.6,0.5,0.6,0.5,0.5,0.6,0.5
+Folkloric Transmission and Archiving,Faculty of Living Lore,Transmission and preservation of folkloric knowledge,0.6,0.5,0.4,0.4,0.5,0.4,0.4,0.6,0.7,0.3
+Runic Infrastructure,Faculty of Living Lore,Design and implementation of runic infrastructure systems,0.4,0.8,0.6,0.7,0.7,0.6,0.6,0.6,0.4,0.7
+Critical Power,Faculty of Living Lore,Critical analysis of power structures and systems,0.7,0.4,0.8,0.5,0.8,0.6,0.7,0.8,0.7,0.6
+Consensus Systems in Hybrid Societies,Faculty of Living Lore,Design of consensus systems for diverse societies,0.9,0.7,0.7,0.6,0.6,0.7,0.8,0.6,0.8,0.7
+Elven Ethics in Modern Governance,Faculty of Living Lore,Application of elven ethical principles to governance,0.7,0.5,0.6,0.6,0.7,0.6,0.7,0.7,0.7,0.5
+Distributed Workshop Economies,Faculty of Living Lore,Design of distributed economic systems,0.7,0.7,0.5,0.6,0.6,0.7,0.6,0.6,0.7,0.7
+Listening Circles Facilitation,Faculty of Living Lore,Facilitation of listening circles and dialogue spaces,0.9,0.8,0.6,0.5,0.4,0.6,0.7,0.3,0.9,0.5
+Mediation,Faculty of Living Lore,Conflict mediation and resolution practices,0.9,0.8,0.8,0.6,0.5,0.6,0.7,0.4,0.8,0.5
+Pedagogies for Uncertain Times,Faculty of Living Lore,Educational approaches for uncertain and changing times,0.7,0.6,0.6,0.6,0.6,0.7,0.7,0.6,0.7,0.7
+Ritual and Recollection,Faculty of Living Lore,Ritual practice and memory work,0.6,0.6,0.3,0.4,0.5,0.6,0.5,0.5,0.7,0.4
+Brewcraft and Fermentation Systems,Faculty of Living Lore,Brewing and fermentation as cultural practice,0.6,0.8,0.3,0.5,0.4,0.6,0.4,0.4,0.6,0.5
+Transdisciplinary Design and Praxis,Faculty of Living Lore,Design and practice across disciplinary boundaries,0.6,0.7,0.6,0.7,0.7,0.8,0.6,0.7,0.5,0.8
+Language and Symbol,Faculty of Living Lore,Study and creation of language and symbolic systems,0.5,0.5,0.4,0.5,0.7,0.7,0.4,0.7,0.5,0.6

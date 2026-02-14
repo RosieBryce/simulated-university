@@ -22,13 +22,13 @@ simulated-university/
 │   ├── clan_name_pools.yaml
 │   ├── clan_program_affinities.yaml
 │   ├── disability_distribution.yaml
-│   ├── module_characteristics.yaml   # Needs implementation
-│   └── program_characteristics.yaml  # Needs implementation
+│   ├── module_characteristics.csv    # (or .yaml) module difficulty, assessment_type, etc.
+│   ├── programme_characteristics.csv # (or program_characteristics.yaml) programme attributes
 ├── core_systems/                     # Main modeling systems
 │   ├── student_generation_pipeline.py
 │   ├── program_enrollment_system.py
 │   ├── engagement_system.py
-│   └── assessment_system.py         # Next to implement
+│   └── assessment_system.py
 ├── supporting_systems/               # Utility systems
 │   ├── name_generator.py
 │   ├── personality_refinement_system.py
@@ -37,7 +37,8 @@ simulated-university/
 │   ├── stonegrove_individual_students.csv
 │   ├── stonegrove_enrolled_students.csv
 │   ├── stonegrove_weekly_engagement.csv
-│   └── stonegrove_semester_engagement.csv
+│   ├── stonegrove_semester_engagement.csv
+│   └── stonegrove_assessment_events.csv
 ├── visualizations/                   # Analysis outputs
 │   ├── stonegrove_enrollment_analysis.png
 │   └── stonegrove_engagement_analysis.png
@@ -62,13 +63,14 @@ pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
 ```bash
 python run_pipeline.py
 ```
-Runs: student generation → enrollment → engagement.
+Runs: student generation → enrollment → engagement → assessment.
 
 ### Or run steps individually
 ```bash
 python core_systems/student_generation_pipeline.py
 python core_systems/program_enrollment_system.py
 python core_systems/engagement_system.py
+python core_systems/assessment_system.py
 ```
 
 ### Create Visualizations
@@ -166,6 +168,7 @@ Edit `config/disability_distribution.yaml` to change:
 - **`student_generation_pipeline.py`**: Main student generation system
 - **`program_enrollment_system.py`**: Program selection and enrollment
 - **`engagement_system.py`**: Weekly and semester engagement modeling
+- **`assessment_system.py`**: End-of-module marks (stonegrove_assessment_events.csv)
 
 ### Supporting Systems
 - **`name_generator.py`**: Clan-specific name generation
@@ -177,6 +180,7 @@ Edit `config/disability_distribution.yaml` to change:
 - **`stonegrove_enrolled_students.csv`**: Students with program enrollment
 - **`stonegrove_weekly_engagement.csv`**: Weekly engagement data
 - **`stonegrove_semester_engagement.csv`**: Semester summaries
+- **`stonegrove_assessment_events.csv`**: Assessment marks (module_code, component_code)
 
 ### Visualizations
 - **`stonegrove_enrollment_analysis.png`**: Program enrollment patterns

@@ -4,11 +4,11 @@
 
 ## In progress
 
-- Assessment system
+- (none)
 
 ## Next (move from BACKLOG when starting)
 
-- Progression system, academic_year calendar, etc.
+- Progression system, academic_year calendar, status_change_at, etc.
 
 ## Blocked
 

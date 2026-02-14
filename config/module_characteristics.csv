@@ -1,0 +1,22 @@
+module_title,program,year,difficulty_level,social_requirements,creativity_requirements,practical_theoretical_balance,stress_level,group_work_intensity,independent_study_requirement,assessment_type,description
+Introduction to Cooperative Crafting,Distributed Workshop Economies,1,0.4,0.7,0.6,0.8,0.3,0.7,0.4,mixed,Foundation course introducing cooperative crafting principles
+Material Cultures and Local Economies,Distributed Workshop Economies,1,0.5,0.6,0.5,0.6,0.4,0.5,0.6,essay,Theoretical exploration of material culture and economic systems
+"Tools, Skills, and Guild Technologies",Distributed Workshop Economies,1,0.6,0.8,0.7,0.9,0.5,0.8,0.3,practical,Hands-on workshop focusing on tools and collaborative skills
+History of Mutual Aid and Guild Traditions,Mutual Aid and Guild Governance,1,0.4,0.5,0.3,0.3,0.2,0.4,0.7,essay,Historical foundation course with emphasis on independent study
+Foundations of Self-Governance,Mutual Aid and Guild Governance,1,0.5,0.8,0.6,0.7,0.4,0.8,0.4,mixed,Interactive course on governance principles and group dynamics
+Introduction to Fermentation Science,Brewcraft and Fermentation Systems,1,0.5,0.6,0.7,0.8,0.3,0.6,0.5,practical,Popular introductory course with hands-on brewing activities
+Cultural Traditions in Brewing,Brewcraft and Fermentation Systems,1,0.4,0.7,0.6,0.6,0.2,0.7,0.4,mixed,Cultural exploration with social brewing traditions
+Power Dynamics in Traditional Societies,Critical Power,1,0.6,0.8,0.5,0.4,0.6,0.8,0.6,essay,Intensive discussion-based course on power structures
+Feminist Epistemologies,Critical Power,1,0.7,0.7,0.6,0.3,0.5,0.7,0.7,essay,Theoretical course with emphasis on critical thinking
+Introduction to Transdisciplinary Methods,Transdisciplinary Design and Praxis,1,0.7,0.6,0.8,0.7,0.6,0.6,0.7,project,Challenging course requiring high creativity and independent work
+Design Thinking Across Disciplines,Transdisciplinary Design and Praxis,1,0.8,0.7,0.9,0.8,0.7,0.7,0.6,project,High-stress course requiring innovative thinking and collaboration
+Introduction to Ancient Scripts,Ancient Tongues and Translation,1,0.5,0.4,0.5,0.5,0.3,0.4,0.8,mixed,Popular course with emphasis on individual study
+Comparative Runes and Scripts,Comparative Runes and Scripts,1,0.6,0.5,0.6,0.6,0.4,0.5,0.7,mixed,Popular course combining theory and practical script analysis
+Pedagogies of the Hand,Pedagogies of the Hand,1,0.5,0.7,0.6,0.8,0.3,0.7,0.4,practical,Hands-on teaching methods with strong social component
+Earth-Aligned Agriculture,Earth-Aligned Agriculture,1,0.4,0.6,0.5,0.8,0.2,0.6,0.5,practical,Practical agriculture course with outdoor work
+Epistemological Justice,Epistemological Justice,1,0.7,0.8,0.6,0.3,0.6,0.8,0.6,essay,Theoretical course with intensive discussion and debate
+Indigenous and Folk Knowledge Systems,Indigenous and Folk Knowledge Systems,1,0.6,0.7,0.5,0.5,0.4,0.7,0.6,mixed,Cultural studies course with community engagement
+Distributed Production Models,Distributed Workshop Economies,2,0.7,0.8,0.7,0.7,0.6,0.8,0.5,project,Advanced workshop course with complex group dynamics
+Platform Cooperativism and Digital Infrastructure,Distributed Workshop Economies,2,0.8,0.7,0.8,0.6,0.7,0.7,0.6,project,Technical course requiring innovation and collaboration
+Capstone Project: Building a Distributed Enterprise,Distributed Workshop Economies,3,0.9,0.9,0.8,0.8,0.8,0.9,0.7,project,Final year project requiring maximum collaboration and innovation
+Designing Resilient Workshop Networks,Distributed Workshop Economies,3,0.8,0.8,0.8,0.7,0.7,0.8,0.6,project,Advanced design course with complex problem-solving

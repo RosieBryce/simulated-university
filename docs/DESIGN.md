@@ -249,7 +249,7 @@ For each academic_year from "1046-47" to "1052-53":
 ### Calculation
 
 - **Purely assessment-based**: Marks → grades
-- **Engagement does NOT affect marks**: Realistic separation
+- **Engagement affects marks**: Modifier from weekly engagement (attendance, participation, academic engagement)
 - **Modifiers**: Race, disability, clan, socio-economic status (documented in CALCULATIONS.md)
 
 ### Output

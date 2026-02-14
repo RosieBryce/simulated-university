@@ -23,11 +23,11 @@ Items to do next. Move to CURRENT when starting.
 
 ## Pipeline & data model (after refactoring)
 
-- [ ] Implement assessment system (end-of-module marks; output `stonegrove_assessment_events.csv` with `module_code`, `component_code`).
+- [x] Implement assessment system (end-of-module marks; output `stonegrove_assessment_events.csv` with `module_code`, `component_code`).
 - [ ] Implement progression system (pass/fail, progression/repeat/withdrawal; status at start of year; `status_change_at`).
 - [ ] Switch to calendar `academic_year` ("1046-47", …) everywhere; 7 years, 5 cohorts.
 - [ ] Add `status_change_at` to enrollment output.
-- [ ] Migrate `module_characteristics` and `programme_characteristics` to CSV; add `year_progression_rules.yaml`.
+- [x] Migrate `module_characteristics` and `programme_characteristics` to CSV (done; scripts/migrate_config_to_csv.py).
 
 ## Documentation & meta
 

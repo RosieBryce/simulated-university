@@ -246,12 +246,23 @@ base_mark = random_normal(mean, std)
 - Based on module title keywords (see Module Difficulty Estimation above)
 - Applied as multiplier: `module_modifier` (typically 0.85-1.05)
 
+### Engagement Modifier
+
+Per student per module, from weekly engagement data:
+```
+avg_engagement = mean(attendance_rate, participation_score, academic_engagement)
+engagement_modifier = clamp(0.88 + 0.24 * avg_engagement, 0.88, 1.12)
+```
+- Low engagement (0.3) → modifier 0.95
+- Neutral (0.5) → modifier 1.0
+- High engagement (0.8) → modifier 1.07
+
 ### Final Mark Calculation
 
 ```
 final_mark = base_mark * race_modifier * clan_modifier * 
               disability_modifier * education_modifier * 
-              socio_economic_modifier * module_modifier
+              socio_economic_modifier * module_modifier * engagement_modifier
 
 # Add individual module performance variation
 final_mark += random_normal(0, 5)  # ±5 points
@@ -342,10 +353,10 @@ else:
 
 ## Assumptions & Design Choices
 
-### Engagement Does NOT Affect Marks
+### Engagement Affects Marks
 
-- **Rationale**: Realistic separation between engagement and assessment
-- **Impact**: High engagement ≠ high marks (though both correlate with conscientiousness)
+- **Rationale**: Students who attend, participate, and engage academically tend to perform better
+- **Modifier**: Per-student-per-module average of (attendance_rate, participation_score, academic_engagement) from weekly engagement. Modifier range 0.88–1.12 (low engagement slightly reduces marks, high engagement slightly boosts)
 
 ### Module Difficulty: Feminist-Aware
 

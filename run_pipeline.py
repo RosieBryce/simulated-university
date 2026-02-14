@@ -6,6 +6,7 @@ Execute from project root. Runs in order:
   1. Student generation (individual_students)
   2. Program enrollment (enrolled_students)
   3. Engagement (weekly + semester engagement)
+  4. Assessment (assessment_events)
 """
 
 import subprocess
@@ -19,6 +20,7 @@ STEPS = [
     ("Student generation", ["core_systems/student_generation_pipeline.py"]),
     ("Program enrollment", ["core_systems/program_enrollment_system.py"]),
     ("Engagement", ["core_systems/engagement_system.py"]),
+    ("Assessment", ["core_systems/assessment_system.py"]),
 ]
 
 

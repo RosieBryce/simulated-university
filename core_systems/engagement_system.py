@@ -51,36 +51,74 @@ class EngagementSystem:
     
     def __init__(self):
         """Initialize the engagement system"""
-        self.module_characteristics = None
-        self.program_characteristics = None
         self._load_characteristics()
         
     def _load_characteristics(self):
-        """Load module and program characteristics"""
-        try:
-            with open('config/module_characteristics.yaml', 'r', encoding='utf-8') as f:
-                self.module_characteristics = yaml.safe_load(f)
-        except FileNotFoundError:
-            print("Warning: module_characteristics.yaml not found. Using defaults.")
-            self.module_characteristics = {}
-            
-        try:
-            with open('config/program_characteristics.yaml', 'r', encoding='utf-8') as f:
-                self.program_characteristics = yaml.safe_load(f)
-        except FileNotFoundError:
-            print("Warning: program_characteristics.yaml not found. Using defaults.")
-            self.program_characteristics = {}
-    
+        """Load module and program characteristics from CSV (preferred) or YAML."""
+        from pathlib import Path
+        mc_csv = Path('config/module_characteristics.csv')
+        pc_csv = Path('config/programme_characteristics.csv')
+        mc_yaml = Path('config/module_characteristics.yaml')
+        pc_yaml = Path('config/program_characteristics.yaml')
+
+        # Module characteristics
+        self._module_chars = {}  # module_title -> {difficulty, social_requirements, creativity_requirements}
+        if mc_csv.exists():
+            df = pd.read_csv(mc_csv)
+            for _, row in df.iterrows():
+                title = str(row.get('module_title', '')).strip()
+                if title:
+                    self._module_chars[title] = {
+                        'difficulty': float(row.get('difficulty_level', 0.5)),
+                        'social_requirements': float(row.get('social_requirements', 0.5)),
+                        'creativity_requirements': float(row.get('creativity_requirements', 0.5)),
+                    }
+        elif mc_yaml.exists():
+            with open(mc_yaml, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f) or {}
+            for title, info in (data.get('modules') or {}).items():
+                if isinstance(info, dict):
+                    self._module_chars[str(title).strip()] = {
+                        'difficulty': float(info.get('difficulty_level', 0.5)),
+                        'social_requirements': float(info.get('social_requirements', 0.5)),
+                        'creativity_requirements': float(info.get('creativity_requirements', 0.5)),
+                    }
+        else:
+            print("Warning: module_characteristics not found. Using estimation.")
+
+        # Programme characteristics (keyed by programme_name)
+        self._programme_chars = {}
+        if pc_csv.exists():
+            df = pd.read_csv(pc_csv)
+            for _, row in df.iterrows():
+                name = str(row.get('programme_name', '')).strip()
+                if name:
+                    self._programme_chars[name] = {
+                        'social_intensity': float(row.get('social_intensity', 0.5)),
+                        'practical_theoretical_balance': float(row.get('practical_theoretical_balance', 0.5)),
+                        'stress_level': float(row.get('stress_level', 0.5)),
+                        'career_prospects': float(row.get('career_prospects', 0.5)),
+                    }
+        elif pc_yaml.exists():
+            with open(pc_yaml, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f) or {}
+            for name, info in (data.get('programs') or {}).items():
+                if isinstance(info, dict):
+                    chars = info.get('characteristics', {})
+                    self._programme_chars[str(name).strip()] = {
+                        'social_intensity': float(chars.get('social_intensity', 0.5)),
+                        'practical_theoretical_balance': float(chars.get('practical_theoretical_balance', 0.5)),
+                        'stress_level': float(chars.get('stress_level', 0.5)),
+                        'career_prospects': float(chars.get('career_prospects', 0.5)),
+                    }
+        else:
+            print("Warning: programme_characteristics not found. Using defaults.")
+
     def get_module_characteristics(self, module_title: str) -> Dict[str, float]:
-        """Get characteristics for a specific module"""
-        modules = self.module_characteristics.get('modules', {}) if self.module_characteristics else {}
-        if module_title in modules:
-            info = modules[module_title]
-            return {
-                'difficulty': info.get('difficulty_level', 0.5),
-                'social_requirements': info.get('social_requirements', 0.5),
-                'creativity_requirements': info.get('creativity_requirements', 0.5)
-            }
+        """Get characteristics for a specific module (from config or estimated)."""
+        title = str(module_title).strip()
+        if title in self._module_chars:
+            return self._module_chars[title].copy()
         return self._estimate_module_characteristics(module_title)
     
     def _estimate_module_characteristics(self, module_title: str) -> Dict[str, float]:
@@ -127,18 +165,17 @@ class EngagementSystem:
             'creativity_requirements': np.clip(creativity_requirements, 0.2, 0.9)
         }
     
-    def get_program_characteristics(self, program_name: str) -> Dict[str, float]:
-        """Get characteristics for a specific program"""
-        if program_name in self.program_characteristics:
-            return self.program_characteristics[program_name]
-        else:
-            # Default characteristics
-            return {
-                'social_intensity': 0.5,
-                'practical_theoretical_balance': 0.5,
-                'stress_level': 0.5,
-                'career_prospects': 0.5
-            }
+    def get_programme_characteristics(self, programme_name: str) -> Dict[str, float]:
+        """Get characteristics for a specific programme (by programme name)."""
+        name = str(programme_name).strip()
+        if name in self._programme_chars:
+            return self._programme_chars[name].copy()
+        return {
+            'social_intensity': 0.5,
+            'practical_theoretical_balance': 0.5,
+            'stress_level': 0.5,
+            'career_prospects': 0.5
+        }
     
     def calculate_base_engagement(self, personality: Dict[str, float], 
                                 motivation: Dict[str, float]) -> Dict[str, float]:
@@ -262,15 +299,15 @@ class EngagementSystem:
         return weekly_engagement
     
     def generate_weekly_engagement(self, student_id: str, week_number: int,
-                                 program_code: str, module_title: str,
+                                 program_code: str, programme_name: str, module_title: str,
                                  personality: Dict[str, float], 
                                  motivation: Dict[str, float]) -> WeeklyEngagement:
         """
         Generate weekly engagement data for a student.
         """
-        # Get module and program characteristics
+        # Get module and programme characteristics
         module_chars = self.get_module_characteristics(module_title)
-        program_chars = self.get_program_characteristics(program_code)
+        program_chars = self.get_programme_characteristics(programme_name)
         
         # Calculate base engagement
         base_engagement = self.calculate_base_engagement(personality, motivation)
@@ -378,6 +415,7 @@ class EngagementSystem:
             # Get student's modules
             modules = _parse_module_list_csv(student['year1_modules'])
             program_code = student['program_code']
+            programme_name = student.get('program_name', '')
             
             # Generate weekly engagement for each module
             weekly_engagements = []
@@ -386,7 +424,7 @@ class EngagementSystem:
                     module = module.strip()
                     if module:  # Skip empty modules
                         weekly_engagement = self.generate_weekly_engagement(
-                            student_id, week, program_code, module, personality, motivation
+                            student_id, week, program_code, programme_name, module, personality, motivation
                         )
                         weekly_engagements.append(weekly_engagement)
                         
