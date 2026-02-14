@@ -6,8 +6,8 @@ import numpy as np
 def create_enrollment_visualizations():
     """Create comprehensive visualizations of enrollment patterns"""
     
-    # Load enrolled students data
-    df = pd.read_csv('stonegrove_enrolled_students.csv')
+    # Load enrolled students data (paths relative to project root)
+    df = pd.read_csv('data/stonegrove_enrolled_students.csv')
     
     # Set up the plotting style
     plt.style.use('default')
@@ -117,7 +117,7 @@ def create_enrollment_visualizations():
     plt.legend()
     
     plt.tight_layout()
-    plt.savefig('stonegrove_enrollment_analysis.png', dpi=300, bbox_inches='tight')
+    plt.savefig('visualizations/stonegrove_enrollment_analysis.png', dpi=300, bbox_inches='tight')
     plt.show()
     
     # Print summary statistics

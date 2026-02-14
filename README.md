@@ -51,6 +51,8 @@ simulated-university/
 
 ## 🚀 Quick Start
 
+**Run all commands from the project root.**
+
 ### Prerequisites
 ```bash
 pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
@@ -58,23 +60,21 @@ pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
 
 ### Generate Student Population
 ```bash
-cd core_systems
-python student_generation_pipeline.py
+python core_systems/student_generation_pipeline.py
 ```
 
 ### Enroll Students in Programs
 ```bash
-python program_enrollment_system.py
+python core_systems/program_enrollment_system.py
 ```
 
 ### Generate Engagement Data
 ```bash
-python engagement_system.py
+python core_systems/engagement_system.py
 ```
 
 ### Create Visualizations
 ```bash
-cd ..
 python archive_population_model/enrollment_visualization.py
 python metaanalysis/engagement_visualization.py
 ```

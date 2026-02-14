@@ -1,3 +1,11 @@
+import sys
+from pathlib import Path
+
+# Ensure supporting_systems is on path when run from project root
+_project_root = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_project_root))
+sys.path.insert(0, str(_project_root / 'supporting_systems'))
+
 import numpy as np
 import pandas as pd
 import random
@@ -152,9 +160,10 @@ def main():
     else:
         print("None found")
     
-    # Save to CSV
-    df.to_csv('stonegrove_individual_students.csv', index=False)
-    print("\nSaved to stonegrove_individual_students.csv")
+    # Save to CSV (data/ for consistency with rest of pipeline)
+    output_path = _project_root / 'data' / 'stonegrove_individual_students.csv'
+    df.to_csv(output_path, index=False)
+    print(f"\nSaved to {output_path}")
 
 if __name__ == "__main__":
     main()

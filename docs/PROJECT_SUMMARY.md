@@ -5,7 +5,7 @@
 
 ## 🧭 PICK-UP GUIDE (Start Here After Time Away)
 
-**Last updated**: Feb 2025
+**Last updated**: Feb 2026
 
 ### Where Are We?
 

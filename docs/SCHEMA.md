@@ -1,6 +1,6 @@
 # Stonegrove University Data Schema
 
-**Last Updated**: February 2025  
+**Last Updated**: February 2026  
 **Version**: 2.0 (Longitudinal Individual-Level)
 
 This document describes all CSV output files and their column definitions.
@@ -68,9 +68,9 @@ This document describes all CSV output files and their column definitions.
 | `programme_year` | integer | Year in programme (1, 2, 3) |
 | `status` | string | Status: "enrolled", "repeating", "withdrawn", "graduated" |
 | **`status_change_at`** | string | **Start of year** when this status took effect (ISO date, e.g. "1046-09-01"). No in-year withdrawals; timestamp for analysts. |
-| `year1_modules` | string | Year 1 modules (pipe-delimited: "Module A\|Module B") |
-| `year2_modules` | string | Year 2 modules (pipe-delimited) |
-| `year3_modules` | string | Year 3 modules (pipe-delimited) |
+| `year1_modules` | string | Year 1 modules (CSV-formatted: comma-separated, quoted where needed) |
+| `year2_modules` | string | Year 2 modules (CSV-formatted) |
+| `year3_modules` | string | Year 3 modules (CSV-formatted) |
 | `num_year1_modules` | integer | Count of Year 1 modules |
 | `num_year2_modules` | integer | Count of Year 2 modules |
 | `num_year3_modules` | integer | Count of Year 3 modules |
@@ -156,7 +156,7 @@ We do **not** produce `stonegrove_semester_engagement.csv` as part of the longit
   "model_version": "v2.0-longitudinal",
   "git_commit": "abc123...",
   "random_seed": 42,
-  "generation_timestamp": "2025-02-13T10:30:00Z",
+  "generation_timestamp": "2026-02-13T10:30:00Z",
   "config_versions": {
     "clan_traits": "v1.0",
     "progression_rules": "v1.0"
@@ -196,13 +196,13 @@ We do **not** produce `stonegrove_semester_engagement.csv` as part of the longit
 
 ### Module Lists
 
-Module lists use pipe (`|`) delimiter to handle commas in module names:
-- Example: `"Module A|Module B, Part 2|Module C"`
-- Parse with Python `csv.reader` for robustness
+Module lists use CSV formatting (comma-separated, quoted where needed) to handle commas in module names:
+- Example: `"Module A,\"Module B, Part 2\",Module C"`
+- Parse with Python `csv` module for robustness
 
 ### Dates
 
-- ISO format: `YYYY-MM-DD` (e.g., "2025-09-15")
+- ISO format: `YYYY-MM-DD` (e.g., "1046-09-15")
 
 ### Floats
 

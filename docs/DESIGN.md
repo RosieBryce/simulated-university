@@ -315,7 +315,7 @@ For each academic_year from "1046-47" to "1052-53":
   "model_version": "v2.0-longitudinal",
   "git_commit": "abc123...",
   "random_seed": 42,
-  "generation_timestamp": "2025-02-13T10:30:00Z",
+  "generation_timestamp": "2026-02-13T10:30:00Z",
   "config_versions": {
     "clan_traits": "v1.0",
     "progression_rules": "v1.0"

@@ -1,6 +1,6 @@
 # Current focus
 
-**Last updated**: Feb 2025
+**Last updated**: Feb 2026
 
 ## In progress
 

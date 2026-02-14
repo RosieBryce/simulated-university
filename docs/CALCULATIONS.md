@@ -1,6 +1,6 @@
 # Stonegrove University - Calculation Reference
 
-**Last Updated**: February 2025  
+**Last Updated**: February 2026  
 **Version**: 2.0 (Longitudinal Individual-Level)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
