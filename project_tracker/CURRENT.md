@@ -4,11 +4,11 @@
 
 ## In progress
 
-- (none)
+- Validation scripts (metaanalysis)
 
 ## Next (move from BACKLOG when starting)
 
-- Progression system, academic_year calendar, status_change_at, etc.
+- Progression: withdrawal-after-fail logic refinement
 
 ## Blocked
 

@@ -48,11 +48,12 @@ class ProgramEnrollmentSystem:
         # Load modules
         self.modules_df = pd.read_excel(self.curriculum_file, sheet_name='Modules')
         
-        # Filter for Year 1 modules only
         self.year1_modules_df = self.modules_df[self.modules_df['Year'] == 1].copy()
-        
+        self.year2_modules_df = self.modules_df[self.modules_df['Year'] == 2].copy()
+        self.year3_modules_df = self.modules_df[self.modules_df['Year'] == 3].copy()
+
         print(f"Loaded {len(self.programs_df)} programs across {self.programs_df['Faculty'].nunique()} faculties")
-        print(f"Loaded {len(self.year1_modules_df)} Year 1 modules")
+        print(f"Loaded {len(self.year1_modules_df)} Year 1, {len(self.year2_modules_df)} Year 2, {len(self.year3_modules_df)} Year 3 modules")
         
     def _load_clan_affinities(self):
         """Load clan program affinities from YAML"""
@@ -150,10 +151,19 @@ class ProgramEnrollmentSystem:
         
         return selected_code, selected_name, selected_prob
         
+    def get_modules_for_programme_year(self, program_code: str, programme_year: int) -> List[str]:
+        """Get modules for a given program and programme year (1, 2, or 3)."""
+        year_df = {
+            1: self.year1_modules_df,
+            2: self.year2_modules_df,
+            3: self.year3_modules_df,
+        }.get(programme_year, self.year1_modules_df)
+        modules = year_df[year_df['Programme code'] == program_code]
+        return modules['Module Title'].tolist()
+
     def get_year1_modules_for_program(self, program_code: str) -> List[str]:
         """Get list of Year 1 modules for a given program"""
-        modules = self.year1_modules_df[self.year1_modules_df['Programme code'] == program_code]
-        return modules['Module Title'].tolist()
+        return self.get_modules_for_programme_year(program_code, 1)
         
     def enroll_student(self, student_id: str, clan: str, personality: Dict[str, float], 
                       motivation: Dict[str, float]) -> ProgramEnrollment:
@@ -191,7 +201,12 @@ class ProgramEnrollmentSystem:
             enrollment_factors=enrollment_factors
         )
         
-    def enroll_students_batch(self, students_df: pd.DataFrame) -> pd.DataFrame:
+    def enroll_students_batch(
+        self,
+        students_df: pd.DataFrame,
+        academic_year: str = "",
+        status_change_at: str = "",
+    ) -> pd.DataFrame:
         """
         Enroll a batch of students in programs.
         Returns DataFrame with enrollment information added.
@@ -199,6 +214,9 @@ class ProgramEnrollmentSystem:
         enrollments = []
         
         for idx, student in students_df.iterrows():
+            # Use student_id from input (pipeline assigns before calling)
+            sid_raw = student.get("student_id", idx)
+            sid = str(sid_raw.iloc[0]) if isinstance(sid_raw, pd.Series) else str(sid_raw)
             # Extract personality and motivation data
             personality_cols = [col for col in students_df.columns if col.startswith('refined_')]
             motivation_cols = [col for col in students_df.columns if col.startswith('motivation_')]
@@ -208,32 +226,101 @@ class ProgramEnrollmentSystem:
             
             # Enroll student
             enrollment = self.enroll_student(
-                student_id=str(idx),
+                student_id=sid,
                 clan=student['clan'],
                 personality=personality,
                 motivation=motivation
             )
             
+            y1 = enrollment.year_modules
+            y2 = self.get_modules_for_programme_year(enrollment.program_code, 2)
+            y3 = self.get_modules_for_programme_year(enrollment.program_code, 3)
             enrollments.append({
                 'student_id': enrollment.student_id,
                 'program_code': enrollment.program_code,
                 'program_name': enrollment.program_name,
                 'faculty': enrollment.faculty,
                 'department': enrollment.department,
-                'year1_modules': _format_module_list_csv(enrollment.year_modules),
-                'num_year1_modules': len(enrollment.year_modules),
+                'programme_year': 1,
+                'status': 'enrolled',
+                'year1_modules': _format_module_list_csv(y1),
+                'year2_modules': _format_module_list_csv(y2),
+                'year3_modules': _format_module_list_csv(y3),
+                'num_year1_modules': len(y1),
+                'num_year2_modules': len(y2),
+                'num_year3_modules': len(y3),
                 'clan_affinity': enrollment.enrollment_factors['clan_affinity'],
                 'selection_probability': enrollment.enrollment_factors['selection_probability']
             })
             
         # Create enrollment DataFrame
         enrollment_df = pd.DataFrame(enrollments)
-        
-        # Merge with original student data
-        result_df = students_df.reset_index(drop=True).copy()
-        result_df = pd.concat([result_df, enrollment_df], axis=1)
-        
+        # Align dtypes for merge (students_df may have int, enrollment_df has str)
+        students_df = students_df.copy()
+        students_df["student_id"] = students_df["student_id"].astype(str)
+        enrollment_df["student_id"] = enrollment_df["student_id"].astype(str)
+        result_df = students_df.merge(enrollment_df, on="student_id", how="left")
+        if academic_year:
+            result_df["academic_year"] = academic_year
+        if status_change_at:
+            result_df["status_change_at"] = status_change_at
+
         return result_df
+
+    def enroll_continuing_students(
+        self,
+        students_df: pd.DataFrame,
+        programme_year: Optional[int] = None,
+        status: Optional[str] = None,
+        academic_year: str = "",
+        status_change_at: str = "",
+    ) -> pd.DataFrame:
+        """
+        Add enrollment records for continuing students (progressing/repeating).
+        Students must already have program_code, program_name, faculty, department.
+        If programme_year/status columns exist, use per-row; else use scalar args.
+        """
+        records = []
+        for idx, row in students_df.iterrows():
+            sid_raw = row.get("student_id", idx)
+            sid = str(sid_raw.iloc[0]) if isinstance(sid_raw, pd.Series) else str(sid_raw)
+            pc = row["program_code"]
+            pn = row["program_name"]
+            faculty = row["faculty"]
+            dept = row["department"]
+            py = int(row.get("programme_year", programme_year or 1))
+            st = str(row.get("status", status or "enrolled"))
+            y1 = self.get_modules_for_programme_year(pc, 1)
+            y2 = self.get_modules_for_programme_year(pc, 2)
+            y3 = self.get_modules_for_programme_year(pc, 3)
+            records.append({
+                "student_id": sid,
+                "program_code": pc,
+                "program_name": pn,
+                "faculty": faculty,
+                "department": dept,
+                "programme_year": py,
+                "status": st,
+                "year1_modules": _format_module_list_csv(y1),
+                "year2_modules": _format_module_list_csv(y2),
+                "year3_modules": _format_module_list_csv(y3),
+                "num_year1_modules": len(y1),
+                "num_year2_modules": len(y2),
+                "num_year3_modules": len(y3),
+                "clan_affinity": row.get("clan_affinity", 0.5),
+                "selection_probability": row.get("selection_probability", 0.5),
+            })
+        enroll_df = pd.DataFrame(records)
+        result = students_df.copy()
+        # Drop enrollment cols if present, then merge
+        drop_cols = [c for c in result.columns if c in enroll_df.columns and c != "student_id"]
+        result = result.drop(columns=drop_cols, errors="ignore")
+        result = result.merge(enroll_df, on="student_id", how="left")
+        if academic_year:
+            result["academic_year"] = academic_year
+        if status_change_at:
+            result["status_change_at"] = status_change_at
+        return result
 
 def main():
     """Test the program enrollment system"""

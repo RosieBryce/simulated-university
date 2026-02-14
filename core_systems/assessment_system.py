@@ -214,10 +214,14 @@ class AssessmentSystem:
         mark = base * mod + np.random.normal(0, 5)
         return float(np.clip(round(mark, 1), 0.0, 100.0))
 
-    def _load_engagement_by_student_module(self, engagement_path: str = "data/stonegrove_weekly_engagement.csv") -> Dict[tuple, float]:
+    def _load_engagement_by_student_module(
+        self,
+        engagement_path: str = "data/stonegrove_weekly_engagement.csv",
+        academic_year: Optional[str] = None,
+    ) -> Dict[tuple, float]:
         """
         Load weekly engagement and return (student_id, module_title) -> avg_engagement.
-        Avg engagement = mean of (attendance_rate, participation_score, academic_engagement).
+        If academic_year given and column exists, filter to that year.
         """
         path = Path(engagement_path)
         if not path.exists():
@@ -225,7 +229,8 @@ class AssessmentSystem:
         df = pd.read_csv(path)
         if df.empty or 'student_id' not in df.columns or 'module_title' not in df.columns:
             return {}
-        # Composite: equal weight to attendance, participation, academic_engagement
+        if academic_year and 'academic_year' in df.columns:
+            df = df[df['academic_year'] == academic_year]
         cols = [c for c in ['attendance_rate', 'participation_score', 'academic_engagement'] if c in df.columns]
         if not cols:
             return {}
@@ -247,12 +252,17 @@ class AssessmentSystem:
         Reads year1_modules from each student, one assessment per module.
         Uses weekly engagement (if available) as a modifier to marks.
         """
-        engagement_lookup = self._load_engagement_by_student_module(weekly_engagement_path)
+        engagement_lookup = self._load_engagement_by_student_module(
+            weekly_engagement_path, academic_year=academic_year
+        )
         records = []
         for idx, student in enrolled_df.iterrows():
-            student_id = str(student.get('student_id', idx))
+            sid_raw = student.get('student_id', idx)
+            student_id = str(sid_raw.iloc[0]) if isinstance(sid_raw, pd.Series) else str(sid_raw)
             program_code = student['program_code']
-            modules = _parse_module_list_csv(student.get('year1_modules', ''))
+            prog_year = int(student.get('programme_year', 1))
+            mod_col = f'year{prog_year}_modules'
+            modules = _parse_module_list_csv(student.get(mod_col, student.get('year1_modules', '')))
 
             for i, module_title in enumerate(modules):
                 if not module_title.strip():
@@ -278,7 +288,7 @@ class AssessmentSystem:
                     'assessment_mark': mark,
                     'grade': grade,
                     'assessment_date': assessment_date,
-                    'module_year': 1,
+                    'module_year': prog_year,
                 })
 
         return pd.DataFrame(records)

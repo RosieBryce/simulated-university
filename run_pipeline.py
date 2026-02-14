@@ -7,6 +7,7 @@ Execute from project root. Runs in order:
   2. Program enrollment (enrolled_students)
   3. Engagement (weekly + semester engagement)
   4. Assessment (assessment_events)
+  5. Progression (progression_outcomes)
 """
 
 import subprocess
@@ -21,6 +22,7 @@ STEPS = [
     ("Program enrollment", ["core_systems/program_enrollment_system.py"]),
     ("Engagement", ["core_systems/engagement_system.py"]),
     ("Assessment", ["core_systems/assessment_system.py"]),
+    ("Progression", ["core_systems/progression_system.py"]),
 ]
 
 

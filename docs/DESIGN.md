@@ -375,30 +375,26 @@ For each academic_year from "1046-47" to "1052-53":
 
 ### Phase 2 (Assessment + Progression)
 
-- [ ] Generate assessment marks for Year 1
-- [ ] Calculate pass/fail per module
-- [ ] Determine year outcomes (pass/fail)
-- [ ] Model progression (progress/repeat/withdraw)
-- [ ] Generate Year 2 enrollment records
-- [ ] Repeat for Years 2 → 3, 3 → graduation
-- [ ] Generate 7 years of data (5 cohorts; first cohort graduates in year 3, then 4 more cohorts)
-- [ ] All CSVs use calendar `academic_year` ("1046-47", …), include `programme_year`, `status`, and enrollment includes `status_change_at`
-- [ ] Assessment events include `module_code`, `component_code`
+- Generate assessment marks for Year 1
+- Calculate pass/fail per module
+- Determine year outcomes (pass/fail)
+- Model progression (progress/repeat/withdraw)
+- Generate Year 2 enrollment records
+- Repeat for Years 2 → 3, 3 → graduation
+- Generate 7 years of data (5 cohorts; first cohort graduates in year 3, then 4 more cohorts)
+- All CSVs use calendar `academic_year` ("1046-47", …), include `programme_year`, `status`, and enrollment includes `status_change_at`
+- Assessment events include `module_code`, `component_code`
 
 ### Documentation
 
-- [ ] SCHEMA.md complete
-- [ ] CALCULATIONS.md complete
-- [ ] USER_GUIDE.md complete
-- [ ] All assumptions documented
+- SCHEMA.md complete
+- CALCULATIONS.md complete
+- USER_GUIDE.md complete
+- All assumptions documented
 
 ### Validation
 
-- [ ] Progression rates realistic (e.g., 80-90% Year 1 → Year 2)
-- [ ] Withdrawal rates realistic (e.g., 5-15% per year)
-- [ ] Grade distributions realistic (skewed toward 56-64)
-- [ ] Awarding gaps visible in data (users can compute)
-
----
-
-**Next Steps**: Implement assessment system, then progression system, then migrate to longitudinal structure.
+- Progression rates realistic (e.g., 80-90% Year 1 → Year 2)
+- Withdrawal rates realistic (e.g., 5-15% per year)
+- Grade distributions realistic (skewed toward 56-64)
+- Awarding gaps visible in data (users can compute)

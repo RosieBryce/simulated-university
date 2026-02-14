@@ -9,3 +9,6 @@ Short log of completed work. Add a line when something is finished.
 - 2026-02: run_pipeline.py (single script for full pipeline); removed emoji from program_enrollment/engagement (Windows cp1252).
 - 2026-02: Assessment system (core_systems/assessment_system.py); output stonegrove_assessment_events.csv with module_code, component_code.
 - 2026-02: Assessment uses module_characteristics for assessment_type and difficulty; migration to CSV (module_characteristics.csv, programme_characteristics.csv); engagement_system reads CSV.
+- 2026-02: Longitudinal pipeline (5 cohorts × 7 years; run_longitudinal_pipeline.py; enrollment, engagement, assessment, progression with academic_year; stonegrove_enrollment.csv, stonegrove_progression_outcomes.csv, metadata.json).
+- 2026-02: Year 3 graduation logic – pass in programme_year 3 → status "graduated"; verified cohort graduation (~68%).
+- 2026-02: Pipeline robustness: student_id fix (merge not concat in enroll_students_batch); engagement uses actual student_id not index; Series handling for duplicate columns; PIPELINE_FLOW.md.

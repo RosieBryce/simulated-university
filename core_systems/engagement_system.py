@@ -393,8 +393,12 @@ class EngagementSystem:
             risk_factors=risk_factors
         )
     
-    def generate_engagement_data(self, enrolled_students_df: pd.DataFrame, 
-                               weeks_per_semester: int = 12) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    def generate_engagement_data(
+        self,
+        enrolled_students_df: pd.DataFrame,
+        weeks_per_semester: int = 12,
+        academic_year: str = "",
+    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
         Generate engagement data for all enrolled students.
         Returns: (weekly_engagement_df, semester_engagement_df)
@@ -403,7 +407,8 @@ class EngagementSystem:
         semester_data = []
         
         for idx, student in enrolled_students_df.iterrows():
-            student_id = str(idx)
+            sid_raw = student.get("student_id", idx)
+            student_id = str(sid_raw.iloc[0]) if isinstance(sid_raw, pd.Series) else str(sid_raw)
             
             # Extract personality and motivation data
             personality_cols = [col for col in enrolled_students_df.columns if col.startswith('refined_')]
@@ -412,8 +417,10 @@ class EngagementSystem:
             personality = {col: student[col] for col in personality_cols}
             motivation = {col: student[col] for col in motivation_cols}
             
-            # Get student's modules
-            modules = _parse_module_list_csv(student['year1_modules'])
+            # Get student's modules for their programme_year (1, 2, or 3)
+            prog_year = int(student.get('programme_year', 1))
+            mod_col = f'year{prog_year}_modules'
+            modules = _parse_module_list_csv(student.get(mod_col, student.get('year1_modules', '')))
             program_code = student['program_code']
             programme_name = student.get('program_name', '')
             
@@ -429,7 +436,7 @@ class EngagementSystem:
                         weekly_engagements.append(weekly_engagement)
                         
                         # Add to weekly data
-                        weekly_data.append({
+                        rec = {
                             'student_id': weekly_engagement.student_id,
                             'week_number': weekly_engagement.week_number,
                             'program_code': weekly_engagement.program_code,
@@ -440,7 +447,11 @@ class EngagementSystem:
                             'social_engagement': weekly_engagement.social_engagement,
                             'stress_level': weekly_engagement.stress_level,
                             **weekly_engagement.engagement_factors
-                        })
+                        }
+                        ay = academic_year or student.get('academic_year', '')
+                        if ay:
+                            rec['academic_year'] = ay
+                        weekly_data.append(rec)
             
             # Generate semester summary
             if weekly_engagements:
