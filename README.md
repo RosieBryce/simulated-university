@@ -213,7 +213,10 @@ Edit `config/disability_distribution.yaml` to change:
 
 ## 📚 Documentation
 
+- **`docs/USER_GUIDE.md`**: How to run the pipeline and read the data
 - **`docs/PROJECT_SUMMARY.md`**: Pick-up guide and project status
+- **`docs/DESIGN.md`**: Architecture and longitudinal flow
+- **`docs/SCHEMA.md`**: Column definitions for all outputs
 - **`Instructions and guides/`**: Source materials and world-building documents
 - **`archive_population_model/`**: Archived population-level modeling files
 
