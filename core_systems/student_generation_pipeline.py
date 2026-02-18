@@ -43,14 +43,12 @@ def sample_socio_economic_rank():
     return np.random.choice(list(range(1,9)), p=[1/8]*8)
 
 def sample_disabilities(species):
-    # Use DISABILITY_DIST for species
+    """Sample disabilities using independent Bernoulli draws per disability.
+    Students can have multiple disabilities (comorbidities).
+    If none are drawn, returns ['no_known_disabilities']."""
     dist = DISABILITY_DIST[species]
-    # Remove 'no_known_disabilities' for sampling
-    probs = {k: v for k, v in dist.items() if k != 'no_known_disabilities'}
-    # Each disability is independent Bernoulli with its probability
-    disabilities = [k for k, p in probs.items() if np.random.rand() < p]
-    # If none, check if 'no_known_disabilities' applies
-    if not disabilities and np.random.rand() < dist['no_known_disabilities']:
+    disabilities = [k for k, p in dist.items() if np.random.rand() < p]
+    if not disabilities:
         disabilities = ['no_known_disabilities']
     return disabilities
 

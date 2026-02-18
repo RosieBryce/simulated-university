@@ -1,33 +1,32 @@
 # Disability distribution by species for Stonegrove University
-# Each species's percentages must sum to 1.0 (100%)
-# Note: "no_known_disabilities" represents students with no recorded disabilities
+# Each disability has an independent prevalence rate (probability of a student having it).
+# Students can have multiple disabilities (comorbidities).
+# If no disabilities are drawn, the student is recorded as "no_known_disabilities".
 
 Dwarf:
-  physical_disability: 0.08              # 8% of Dwarves have physical disabilities
-  mental_health_disability: 0.10         # 10% of Dwarves have mental health disabilities
-  specific_learning_disability: 0.02     # 2% of Dwarves have specific learning disabilities
-  autistic_spectrum: 0.03                # 3% of Dwarves are on the autistic spectrum
-  adhd: 0.12                             # 12% of Dwarves have ADHD
-  dyslexia: 0.04                         # 4% of Dwarves have dyslexia
-  other_neurodivergence: 0.02            # 2% of Dwarves have other neurodivergence
-  deaf_or_hearing_impaired: 0.04         # 4% of Dwarves are deaf or hearing impaired
-  wheelchair_user: 0.01                  # 1% of Dwarves are wheelchair users
-  requires_personal_care: 0.02           # 2% of Dwarves require personal care
-  blind_or_visually_impaired: 0.04       # 4% of Dwarves are blind or visually impaired
-  communication_difficulties: 0.03       # 3% of Dwarves have communication difficulties
-  no_known_disabilities: 0.55            # 55% of Dwarves have no known disabilities
+  physical_disability: 0.08
+  mental_health_disability: 0.10
+  specific_learning_disability: 0.02
+  autistic_spectrum: 0.03
+  adhd: 0.12
+  dyslexia: 0.04
+  other_neurodivergence: 0.02
+  deaf_or_hearing_impaired: 0.04
+  wheelchair_user: 0.01
+  requires_personal_care: 0.02
+  blind_or_visually_impaired: 0.04
+  communication_difficulties: 0.03
 
 Elf:
-  physical_disability: 0.03              # 3% of Elves have physical disabilities
-  mental_health_disability: 0.08         # 8% of Elves have mental health disabilities
-  specific_learning_disability: 0.03     # 3% of Elves have specific learning disabilities
-  autistic_spectrum: 0.06                # 6% of Elves are on the autistic spectrum
-  adhd: 0.03                             # 3% of Elves have ADHD
-  dyslexia: 0.02                         # 2% of Elves have dyslexia
-  other_neurodivergence: 0.03            # 3% of Elves have other neurodivergence
-  deaf_or_hearing_impaired: 0.02         # 2% of Elves are deaf or hearing impaired
-  wheelchair_user: 0.01                  # 1% of Elves are wheelchair users
-  requires_personal_care: 0.01           # 1% of Elves require personal care
-  blind_or_visually_impaired: 0.03       # 3% of Elves are blind or visually impaired
-  communication_difficulties: 0.03       # 3% of Elves have communication difficulties
-  no_known_disabilities: 0.72            # 72% of Elves have no known disabilities 
+  physical_disability: 0.03
+  mental_health_disability: 0.08
+  specific_learning_disability: 0.03
+  autistic_spectrum: 0.06
+  adhd: 0.03
+  dyslexia: 0.02
+  other_neurodivergence: 0.03
+  deaf_or_hearing_impaired: 0.02
+  wheelchair_user: 0.01
+  requires_personal_care: 0.01
+  blind_or_visually_impaired: 0.03
+  communication_difficulties: 0.03

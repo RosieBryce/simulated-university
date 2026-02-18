@@ -8,7 +8,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ### High severity
 
-- [ ] **BUG: Disability sampling treats categorical distribution as independent Bernoullis** (`student_generation_pipeline.py:48-54`) – `disability_distribution.yaml` sums to 1.0 (categorical), but code runs independent Bernoulli draws per disability. ~26% of students end up with an empty disabilities field (neither a disability nor `no_known_disabilities`). Should be a single weighted `np.random.choice`. Downstream disability modifiers are inconsistently applied.
+- [x] **BUG: Disability sampling treats categorical distribution as independent Bernoullis** (`student_generation_pipeline.py:48-54`) – Fixed: config restructured as independent prevalence rates (comorbidities allowed). `no_known_disabilities` removed from config; assigned automatically when no disabilities drawn. Zero empty strings now.
 - [ ] **BUG: Dates off by one year** (`run_longitudinal_pipeline.py:27,32`) – `_status_change_at()` and `_assessment_date()` extract the first year from `"1046-47"`, producing dates in 1046 instead of 1047. All `status_change_at` and assessment dates are one calendar year too early.
 - [ ] **BUG: Clan mark modifiers are dead code** (`assessment_system.py:155-161`) – Checks for clans `baobab`/`alabaster` which don't exist in config (actual clans are `malachite`, `granite`, etc.). Every student gets modifier 1.0. Need to implement real clan-based assessment differentiation using clans from `clan_personality_specifications.yaml`.
 - [ ] **BUG: SES modifier missing ranks 6-8** (`assessment_system.py:174-178`) – Mapping only covers ranks 1-5. Ranks 6-8 (~38% of students) silently default to 1.0 (same as rank 3). Extend mapping to cover full 1-8 range.
@@ -34,6 +34,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **Remove or integrate `supporting_systems/module_characteristics_system.py`** – ~320 lines, completely unused. Assessment and engagement systems load module characteristics directly from CSV. Decide: delete, or refactor to use it.
 - [ ] **Remove unused imports** – `datetime`/`timedelta` in `engagement_system.py:16`.
 - [ ] **Drop semester summaries as core output** (carried over from existing backlog).
+- [ ] **Add sample data to git** – split weekly engagement by academic year (one CSV per year, ~28 MB each) so users can download sample data without running the pipeline. Other data files are small enough to commit directly.
 
 ---
 
