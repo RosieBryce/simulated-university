@@ -39,6 +39,8 @@ class ProgramEnrollmentSystem:
         self.clan_affinities = None
         self._load_curriculum_data()
         self._load_clan_affinities()
+        self._load_programme_characteristics()
+        self._load_trait_mapping()
         
     def _load_curriculum_data(self):
         """Load program and module data from curriculum Excel file"""
@@ -56,12 +58,39 @@ class ProgramEnrollmentSystem:
         print(f"Loaded {len(self.year1_modules_df)} Year 1, {len(self.year2_modules_df)} Year 2, {len(self.year3_modules_df)} Year 3 modules")
         
     def _load_clan_affinities(self):
-        """Load clan program affinities from YAML"""
+        """Load clan program affinities and selection settings from YAML"""
         with open('config/clan_program_affinities.yaml', 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
             self.clan_affinities = data['clans']
             self.affinity_settings = data['settings']
-            
+        selection_rules = self.affinity_settings.get('selection_rules', {})
+        self.base_selection_probability = selection_rules.get('base_selection_probability', 0.3)
+        self.affinity_multipliers = selection_rules.get('affinity_multipliers', {})
+        self.min_affinity_threshold = selection_rules.get('minimum_affinity_threshold', 0.05)
+        self.affinity_levels = self.affinity_settings.get('affinity_levels', {})
+
+    def _load_programme_characteristics(self):
+        """Load programme characteristics from CSV"""
+        self.programme_chars_df = pd.read_csv('config/programme_characteristics.csv')
+        self._programme_chars_lookup = {}
+        for _, row in self.programme_chars_df.iterrows():
+            self._programme_chars_lookup[row['programme_name']] = row.to_dict()
+
+    def _load_trait_mapping(self):
+        """Load trait-to-programme-characteristic mapping from CSV"""
+        self.trait_mapping_df = pd.read_csv('config/trait_programme_mapping.csv')
+
+    def _classify_affinity(self, score: float) -> str:
+        """Classify an affinity score into a level using config ranges."""
+        for level, (min_score, max_score) in self.affinity_levels.items():
+            if min_score <= score <= max_score:
+                return level
+        return "minimal"
+
+    def _get_programme_characteristics(self, program_name: str) -> Optional[Dict]:
+        """Look up programme characteristics by name."""
+        return self._programme_chars_lookup.get(program_name)
+
     def get_program_affinity(self, clan: str, program_name: str) -> float:
         """Get affinity score for a clan-program combination"""
         if clan not in self.clan_affinities:
@@ -70,53 +99,41 @@ class ProgramEnrollmentSystem:
         affinities = self.clan_affinities[clan]['program_affinities']
         return affinities.get(program_name, 0.05)  # Default minimal affinity
         
-    def calculate_enrollment_probability(self, clan: str, program_name: str, 
-                                       personality: Dict[str, float], 
+    def calculate_enrollment_probability(self, clan: str, program_name: str,
+                                       personality: Dict[str, float],
                                        motivation: Dict[str, float]) -> float:
         """
-        Calculate enrollment probability based on multiple factors:
-        - Clan affinity (primary factor)
-        - Personality traits (secondary modifiers)
-        - Motivation dimensions (secondary modifiers)
-        - Program characteristics (if available)
+        Calculate enrollment probability based on:
+        - Clan affinity (primary) — scored using affinity_levels and multipliers from config
+        - Trait-programme fit (secondary) — driven by trait_programme_mapping.csv and
+          programme_characteristics.csv, no hardcoded programme names or keywords
         """
-        # Base affinity from clan
-        base_affinity = self.get_program_affinity(clan, program_name)
-        
-        # Personality modifiers (small adjustments)
-        personality_modifier = 0.0
-        
-        # Extraversion might influence social programs
-        if 'social' in program_name.lower() or 'community' in program_name.lower():
-            personality_modifier += (personality.get('refined_extraversion', 0.5) - 0.5) * 0.1
-            
-        # Conscientiousness might influence structured programs
-        if 'governance' in program_name.lower() or 'strategic' in program_name.lower():
-            personality_modifier += (personality.get('refined_conscientiousness', 0.5) - 0.5) * 0.1
-            
-        # Openness might influence creative/innovative programs
-        if 'design' in program_name.lower() or 'innovation' in program_name.lower():
-            personality_modifier += (personality.get('refined_openness', 0.5) - 0.5) * 0.1
-            
-        # Motivation modifiers (small adjustments)
-        motivation_modifier = 0.0
-        
-        # Academic drive influences all programs slightly
-        motivation_modifier += (motivation.get('motivation_academic_drive', 0.5) - 0.5) * 0.05
-        
-        # Career focus might influence practical programs
-        if 'craft' in program_name.lower() or 'practice' in program_name.lower():
-            motivation_modifier += (motivation.get('motivation_career_focus', 0.5) - 0.5) * 0.1
-            
-        # Values-based motivation might influence community programs
-        if 'community' in program_name.lower() or 'mutual' in program_name.lower():
-            motivation_modifier += (motivation.get('motivation_values_based_motivation', 0.5) - 0.5) * 0.1
-            
-        # Combine all factors
-        final_probability = base_affinity + personality_modifier + motivation_modifier
-        
-        # Clamp to reasonable range
-        return np.clip(final_probability, 0.01, 0.99)
+        # --- Clan component (config-driven) ---
+        raw_affinity = self.get_program_affinity(clan, program_name)
+        if raw_affinity < self.min_affinity_threshold:
+            return 0.0
+        affinity_level = self._classify_affinity(raw_affinity)
+        multiplier = self.affinity_multipliers.get(affinity_level, 1.0)
+        clan_score = self.base_selection_probability * multiplier * raw_affinity
+
+        # --- Trait fit component (data-driven) ---
+        programme_chars = self._get_programme_characteristics(program_name)
+        if programme_chars is None:
+            return clan_score
+
+        student_traits = {**personality, **motivation}
+        fit_score = 0.0
+        for _, mapping_row in self.trait_mapping_df.iterrows():
+            char_name = mapping_row['programme_characteristic']
+            trait_name = mapping_row['student_trait']
+            weight = mapping_row['weight']
+            char_value = programme_chars.get(char_name, 0.5)
+            trait_value = student_traits.get(trait_name, 0.5)
+            fit_score += weight * char_value * (trait_value - 0.5)
+
+        # Combine: clan affinity is primary, trait fit is meaningful secondary
+        combined = clan_score * (1.0 + fit_score)
+        return max(combined, 0.001)
         
     def select_program_for_student(self, clan: str, personality: Dict[str, float], 
                                  motivation: Dict[str, float]) -> Tuple[str, str, float]:

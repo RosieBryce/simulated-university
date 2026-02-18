@@ -5,6 +5,7 @@
 ## In progress
 
 - Validation scripts (metaanalysis)
+- Bug fixes from code review (see BACKLOG.md "Bug fixes" section) — high severity first
 
 ## Next (move from BACKLOG when starting)
 

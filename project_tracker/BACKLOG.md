@@ -4,6 +4,39 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ---
 
+## Bug fixes (code review, Feb 2026)
+
+### High severity
+
+- [ ] **BUG: Disability sampling treats categorical distribution as independent Bernoullis** (`student_generation_pipeline.py:48-54`) – `disability_distribution.yaml` sums to 1.0 (categorical), but code runs independent Bernoulli draws per disability. ~26% of students end up with an empty disabilities field (neither a disability nor `no_known_disabilities`). Should be a single weighted `np.random.choice`. Downstream disability modifiers are inconsistently applied.
+- [ ] **BUG: Dates off by one year** (`run_longitudinal_pipeline.py:27,32`) – `_status_change_at()` and `_assessment_date()` extract the first year from `"1046-47"`, producing dates in 1046 instead of 1047. All `status_change_at` and assessment dates are one calendar year too early.
+- [ ] **BUG: Clan mark modifiers are dead code** (`assessment_system.py:155-161`) – Checks for clans `baobab`/`alabaster` which don't exist in config (actual clans are `malachite`, `granite`, etc.). Every student gets modifier 1.0. Need to implement real clan-based assessment differentiation using clans from `clan_personality_specifications.yaml`.
+- [ ] **BUG: SES modifier missing ranks 6-8** (`assessment_system.py:174-178`) – Mapping only covers ranks 1-5. Ranks 6-8 (~38% of students) silently default to 1.0 (same as rank 3). Extend mapping to cover full 1-8 range.
+- [ ] **BUG: Species modifier hardcoded, not config-driven** (`assessment_system.py:205`) – Elves get +10%, Dwarves get -5%, hardcoded with no config. Combined with broken clan/SES modifiers, mark distribution is nearly uniform across all students. Move to config or remove.
+- [ ] **BUG: Global `np.random.seed()` reset mid-pipeline** (`assessment_system.py:78`, `progression_system.py:37`) – Each system's `__init__` calls `np.random.seed(seed)`, resetting global state mid-pipeline. Should use `np.random.default_rng(seed)` passed through, or set seed once at pipeline level only.
+- [ ] **BUG: Mark distribution lacks discriminative power** (`assessment_system.py:195-201`) – With broken clan/SES/personality modifiers, the base 70%/15%/15% mixture applies nearly uniformly to all students. Fix depends on resolving the modifier bugs above.
+
+### Medium severity
+
+- [ ] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Looks for `conscientiousness` but pipeline produces `refined_conscientiousness`. All personality-dependent module modifiers silently fall back to 0.5. Note: this file is currently unused by the pipeline (see cleanup section), but should be fixed if it gets integrated.
+- [ ] **BUG: Semester hardcoded to 1** (`engagement_system.py:459`) – `generate_engagement_data` always passes `semester=1`. Semesters are 1 and 2 within each academic year, so this means semester 2 is never generated. Either generate both semesters or clarify that the pipeline only models one semester per year.
+- [ ] **BUG: Semester engagement records missing `academic_year`** (`engagement_system.py:462-473`) – The semester engagement dict never includes `academic_year`, making multi-year semester data impossible to filter by year.
+- [ ] **BUG: Weekly engagement clusters in narrow band** (`engagement_system.py:186-230,288-298`) – Base engagement range is ~[0.30, 0.85]; weekly variation std dev is only ~0.12. No shared within-week shocks across modules, no "bad weeks", seasonal patterns, or exam stress. Data is unrealistically smooth.
+- [ ] **BUG: `modules_passed` counts rows not distinct modules** (`progression_system.py:208-210`) – `.sum()` on boolean mask counts assessment rows, not distinct modules. Would inflate counts if resits or duplicate rows exist. Should use `.nunique()` like `modules_total` does.
+- [ ] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – `agg["modules_passed"] = ...map(...).values` relies on row order matching. Safer to omit `.values` and let pandas align by index.
+- [ ] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – `min(len(ACADEMIC_YEARS), 5)` is always 5 for a 7-year run. Either the cap or the docstring is wrong.
+- [ ] **BUG: `_determine_gender` clan overrides bypassed** (`student_generation_pipeline.py:87`) – `sample_gender()` is hardcoded 45/45/10 and the result is passed to `name_gen.generate_name()`. Clan-specific gender overrides defined in `clan_name_pools.yaml` are never applied.
+- [ ] **BUG: Engagement modifier docstring examples are wrong** (`assessment_system.py:183-185`) – Comment says `0.2 -> 0.94` but formula gives `0.928`; says `0.8 -> 1.06` but gives `1.072`.
+
+### Cleanup
+
+- [ ] **Remove `supporting_systems/program_affinity_system.py`** – ~270 lines, completely unused. Enrollment system now uses config-driven scoring with `trait_programme_mapping.csv`, `programme_characteristics.csv`, and `affinity_levels`/`affinity_multipliers` from `clan_program_affinities.yaml`. Safe to delete.
+- [ ] **Remove or integrate `supporting_systems/module_characteristics_system.py`** – ~320 lines, completely unused. Assessment and engagement systems load module characteristics directly from CSV. Decide: delete, or refactor to use it.
+- [ ] **Remove unused imports** – `datetime`/`timedelta` in `engagement_system.py:16`.
+- [ ] **Drop semester summaries as core output** (carried over from existing backlog).
+
+---
+
 ## Phase 1: Longitudinal foundation (DESIGN Migration Path)
 
 ### Progression & multi-year flow
