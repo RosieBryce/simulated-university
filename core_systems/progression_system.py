@@ -34,7 +34,7 @@ class ProgressionSystem:
 
     def __init__(self, seed: int = 42, config_path: str = "config/year_progression_rules.yaml"):
         self.seed = seed
-        np.random.seed(seed)
+        self.rng = np.random.default_rng(seed)
         self.config = self._load_config(config_path)
         self.pass_threshold = self.config.get("pass_threshold", 40)
 
@@ -167,7 +167,7 @@ class ProgressionSystem:
             choices = ["repeating", "withdrawn"]
             probs = [p_repeat, p_withdraw]
 
-        return str(np.random.choice(choices, p=probs))
+        return str(self.rng.choice(choices, p=probs))
 
     def compute_progression(
         self,
@@ -205,9 +205,9 @@ class ProgressionSystem:
         agg["year_outcome"] = agg["min_mark"].apply(
             lambda m: "pass" if m >= self.pass_threshold else "fail"
         )
-        passed_mask = assessment_df["assessment_mark"] >= self.pass_threshold
-        modules_passed = assessment_df.assign(_passed=passed_mask).groupby("student_id")["_passed"].sum()
-        agg["modules_passed"] = agg["student_id"].map(modules_passed).fillna(0).astype(int).values
+        passed_modules = assessment_df[assessment_df["assessment_mark"] >= self.pass_threshold]
+        modules_passed = passed_modules.groupby("student_id")["module_code"].nunique()
+        agg["modules_passed"] = agg["student_id"].map(modules_passed).fillna(0).astype(int)
 
         # Build student lookup for traits (enrolled has student_id as index or column)
         enrolled_df = enrolled_df.copy()

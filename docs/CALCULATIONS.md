@@ -1,7 +1,7 @@
 # Stonegrove University - Calculation Reference
 
-**Last Updated**: February 2026  
-**Version**: 2.0 (Longitudinal Individual-Level)
+**Last Updated**: February 2026
+**Version**: 2.1 (Agent-Level Awarding Gap)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
 
@@ -9,42 +9,55 @@ This document describes all formulas, modifiers, and assumptions used in the sim
 
 ## Student Generation
 
+### Species and Clan Sampling
+
+- 60% Dwarf, 40% Elf
+- Clan selection within species uses weighted recruitment (`_CLAN_RECRUITMENT_WEIGHTS` in `student_generation_pipeline.py`)
+  - Dwarf weights skew toward lower-SES clans (Flint 0.20, Alabaster 0.18, ... Obsidian 0.05)
+  - Elf weights skew toward higher-SES clans (Holly 0.25, Yew 0.22, ... Palm 0.08)
+- This creates structural inequality in the intake population
+
+### Socio-Economic Rank and Education
+
+Sampled per-clan from `config/clan_socioeconomic_distributions.csv`:
+- **SES rank** (1-8): clan-specific probability distribution
+- **Education** (academic/vocational/no_qualifications): clan-specific probabilities
+- Disadvantaged clans (Flint, Alabaster, Palm) are concentrated at SES ranks 1-3
+- Elite clans (Baobab, Yew, Holly) are concentrated at SES ranks 6-8
+
+### Disability Sampling
+
+From `config/disability_distribution.yaml` — independent Bernoulli draws per disability:
+- Each disability has a species-specific prevalence rate
+- Students can have multiple disabilities (comorbidities)
+- If no disabilities drawn, assigned `no_known_disabilities`
+
 ### Personality Traits
 
 **Base Personality** (from clan specifications):
 - Each clan has ranges for Big Five traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism)
-- Base value = random within clan range
+- Base value = uniform random within clan range
 
 **Refined Personality** (adjusted by characteristics):
 ```
 refined_trait = base_trait + modifiers
 ```
 
-**Modifiers**:
-- **Disabilities**: 
-  - `autistic_spectrum`: +0.1 to conscientiousness, -0.1 to extraversion
-  - `adhd`: -0.1 to conscientiousness, +0.1 to extraversion
-  - `specific_learning_disability`: -0.1 to conscientiousness
-  - (See `config/clan_personality_specifications.yaml` for full list)
-- **Socio-economic rank**: Lower rank → slight decrease in conscientiousness
-- **Education**: Academic background → slight increase in conscientiousness
-- **Age**: Older students → slight increase in conscientiousness
+**Modifiers** (see `supporting_systems/personality_refinement_system.py`):
+- **Disabilities**: e.g., autistic_spectrum: +0.1 conscientiousness, -0.1 extraversion
+- **Socio-economic rank**: Lower rank -> slight decrease in conscientiousness
+- **Education**: Academic background -> slight increase in conscientiousness
+- **Age**: Older students -> slight increase in conscientiousness
 
-**Clamp**: All refined traits clamped to [0.0, 1.0]
+All refined traits clamped to [0.0, 1.0].
 
 ### Motivation Dimensions
 
 8 dimensions, each 0.0-1.0:
-- Academic drive
-- Values-based motivation
-- Career focus
-- Cultural experience
-- Personal growth
-- Social connection
-- Intellectual curiosity
-- Practical skills
+- Academic drive, values-based motivation, career focus, cultural experience
+- Personal growth, social connection, intellectual curiosity, practical skills
 
-**Nudging**: Personality traits influence motivation (e.g., high conscientiousness → higher academic drive)
+**Nudging**: Personality traits influence motivation (e.g., high conscientiousness -> higher academic drive).
 
 ---
 
@@ -52,37 +65,27 @@ refined_trait = base_trait + modifiers
 
 ### Programme Selection
 
-**Base Affinity** (from `config/clan_programme_affinities.yaml`):
+**Clan Affinity** (from `config/clan_program_affinities.yaml`):
 - Each clan has affinity scores (0.0-1.0) for each programme
-- Default: 0.05 if not specified
+- Affinity classified into levels using `affinity_levels` config
+- Score = `base_selection_probability * affinity_multiplier * raw_affinity`
+- Programmes below `minimum_affinity_threshold` get probability 0
 
-**Personality Modifiers**:
+**Trait-Programme Fit** (from `config/trait_programme_mapping.csv`):
 ```
-personality_modifier = 0.0
-if programme has "social" or "community":
-    personality_modifier += (extraversion - 0.5) * 0.1
-if programme has "governance" or "strategic":
-    personality_modifier += (conscientiousness - 0.5) * 0.1
-if programme has "design" or "innovation":
-    personality_modifier += (openness - 0.5) * 0.1
+fit_score = sum(weight * programme_char_value * (student_trait - 0.5))
 ```
+- Each row maps a programme characteristic to a student trait with a signed weight
+- Positive weight = high trait attracts to high characteristic
+- Negative weight = high trait repels (e.g., neuroticism vs stress_level)
 
-**Motivation Modifiers**:
+**Combined Probability**:
 ```
-motivation_modifier = (academic_drive - 0.5) * 0.05
-if programme has "craft" or "practice":
-    motivation_modifier += (career_focus - 0.5) * 0.1
-if programme has "community" or "mutual":
-    motivation_modifier += (values_based - 0.5) * 0.1
+probability = clan_score * (1.0 + fit_score)
+probability = max(probability, 0.001)
 ```
 
-**Final Probability**:
-```
-probability = base_affinity + personality_modifier + motivation_modifier
-probability = clamp(probability, 0.01, 0.99)
-```
-
-**Selection**: Weighted random choice based on probabilities
+**Selection**: Weighted random choice, normalised across all programmes.
 
 ---
 
@@ -92,7 +95,7 @@ probability = clamp(probability, 0.01, 0.99)
 
 **Attendance**:
 ```
-base_attendance = 
+base_attendance =
     conscientiousness * 0.4 +
     academic_drive * 0.3 +
     resilience * 0.2 +
@@ -101,7 +104,7 @@ base_attendance =
 
 **Participation**:
 ```
-base_participation = 
+base_participation =
     extraversion * 0.4 +
     social_connection_motivation * 0.3 +
     leadership_tendency * 0.2 -
@@ -110,7 +113,7 @@ base_participation =
 
 **Academic Engagement**:
 ```
-base_academic_engagement = 
+base_academic_engagement =
     academic_curiosity * 0.4 +
     intellectual_curiosity_motivation * 0.3 +
     openness * 0.2 +
@@ -119,7 +122,7 @@ base_academic_engagement =
 
 **Social Engagement**:
 ```
-base_social_engagement = 
+base_social_engagement =
     extraversion * 0.5 +
     social_connection_motivation * 0.3 +
     leadership_tendency * 0.2
@@ -127,21 +130,20 @@ base_social_engagement =
 
 **Stress**:
 ```
-base_stress = 
+base_stress =
     neuroticism * 0.4 +
     social_anxiety * 0.3 +
     (1 - resilience) * 0.2 +
     (1 - personal_growth_motivation) * 0.1
 ```
 
-All values clamped to [0.1, 0.95]
+All values clamped to [0.1, 0.95].
 
 ### Module Modifiers
 
 **Difficulty Impact**:
 ```
-difficulty_modifier = (difficulty - 0.5) * 0.2  # ±10% effect
-
+difficulty_modifier = (difficulty - 0.5) * 0.2  # +/-10% effect
 if conscientiousness > 0.6:
     attendance += difficulty_modifier * 0.5
     academic_engagement += difficulty_modifier
@@ -169,26 +171,6 @@ weekly_value = base_value + random_normal(0, 0.05)
 weekly_value = clamp(weekly_value, 0.1, 0.95)
 ```
 
-### Module Difficulty Estimation
-
-**Feminist-Aware Algorithm** (no penalty for intro/foundation):
-
-```
-difficulty = 0.5  # Default: moderate
-
-if "advanced" or "capstone" or "research" in title:
-    difficulty += 0.2
-elif "epistemolog" or "theoretical" or "complex" in title:
-    difficulty += 0.15
-elif "embodied" or "somatic" or "fermentation" or "cultivation" or 
-     "care" or "healing" or "hospitality" or "ritual" or "ethics" or "indigenous" in title:
-    difficulty += 0.05  # Slight elevation: often demanding
-
-difficulty = clamp(difficulty, 0.25, 0.9)
-```
-
-**Note**: "introduction" and "foundation" do NOT reduce difficulty.
-
 ---
 
 ## Assessment
@@ -196,55 +178,44 @@ difficulty = clamp(difficulty, 0.25, 0.9)
 ### Base Mark Generation
 
 **Distribution Selection** (weighted):
-- 70% → base distribution (mean=60, std=8)
-- 15% → high performers (mean=75, std=6)
-- 15% → struggling (mean=45, std=10)
-
-**Base Mark**:
-```
-base_mark = random_normal(mean, std)
-```
+- 70% -> normal(mean=60, std=8)
+- 15% -> normal(mean=75, std=6)  (high performers)
+- 15% -> normal(mean=45, std=10) (struggling)
 
 ### Performance Modifiers
 
-**Species Modifier**:
-- Elf: ×1.1
-- Dwarf: ×0.95
+All modifiers are multiplicative and applied at the individual student level.
 
-**Clan Modifier** (from `config/clan_programme_affinities.yaml`):
-- Baobab: ×1.15
-- Alabaster: ×0.85
-- Default: ×1.0
+**Clan Modifier**: Always 1.0 (no direct clan effect — gaps emerge from underlying factors).
 
-**Disability Modifiers**:
-- `specific_learning_disability`: ×0.8
-- `requires_personal_care`: ×0.75
-- `blind_or_visually_impaired`: ×0.8
-- `communication_difficulties`: ×0.8
-- `physical_disability`: ×1.05
-- `mental_health_disability`: ×1.05
-- `autistic_spectrum`: ×1.1
-- `adhd`: ×1.05
-- `dyslexia`: ×1.05
-- `other_neurodivergence`: ×1.1
-- `deaf_or_hearing_impaired`: ×1.05
-- `wheelchair_user`: ×1.05
-- `no_known_disabilities`: ×1.0
+**Disability Modifiers** (from `config/disability_assessment_modifiers.csv`):
+- `requires_personal_care`: x0.88
+- `blind_or_visually_impaired`: x0.90
+- `communication_difficulties`: x0.90
+- `specific_learning_disability`: x0.92
+- `mental_health_disability`: x0.93
+- `dyslexia`: x0.93
+- `adhd`: x0.94
+- `deaf_or_hearing_impaired`: x0.94
+- `physical_disability`: x0.96
+- `other_neurodivergence`: x0.96
+- `autistic_spectrum`: x0.97
+- `wheelchair_user`: x0.98
+- Multiple disabilities compound multiplicatively.
 
 **Education Modifier**:
-- Academic: ×1.05
-- Vocational: ×0.98
+- Academic: x1.10
+- Vocational: x0.92
+- No qualifications: x0.85
 
-**Socio-Economic Modifier**:
-- Rank 1: ×0.9
-- Rank 2: ×0.95
-- Rank 3: ×1.0 (baseline)
-- Rank 4: ×1.05
-- Rank 5: ×1.1
+**Socio-Economic Modifier** (ranks 1-8):
+```
+{1: 0.80, 2: 0.85, 3: 0.90, 4: 0.96, 5: 1.02, 6: 1.08, 7: 1.14, 8: 1.20}
+```
 
 **Module Difficulty Modifier**:
-- Based on module title keywords (see Module Difficulty Estimation above)
-- Applied as multiplier: `module_modifier` (typically 0.85-1.05)
+- From `config/module_characteristics.csv` difficulty_level, or inferred from title
+- Converted via `_difficulty_to_mark_modifier()`: difficulty 0.5 -> 1.0, 0.9 -> 0.9
 
 ### Engagement Modifier
 
@@ -253,21 +224,18 @@ Per student per module, from weekly engagement data:
 avg_engagement = mean(attendance_rate, participation_score, academic_engagement)
 engagement_modifier = clamp(0.88 + 0.24 * avg_engagement, 0.88, 1.12)
 ```
-- Low engagement (0.3) → modifier 0.95
-- Neutral (0.5) → modifier 1.0
-- High engagement (0.8) → modifier 1.07
+- Low engagement (0.0) -> 0.88
+- Neutral (0.5) -> 1.0
+- High engagement (1.0) -> 1.12
 
 ### Final Mark Calculation
 
 ```
-final_mark = base_mark * species_modifier * clan_modifier * 
-              disability_modifier * education_modifier * 
+final_mark = base_mark * disability_modifier * education_modifier *
               socio_economic_modifier * module_modifier * engagement_modifier
 
-# Add individual module performance variation
-final_mark += random_normal(0, 5)  # ±5 points
-
-final_mark = clamp(final_mark, 0, 100)
+final_mark += random_normal(0, 5)  # individual variation
+final_mark = clamp(round(final_mark, 1), 0, 100)
 ```
 
 ### Grade Assignment
@@ -282,128 +250,71 @@ else: grade = "Fail"
 
 ---
 
-## Progression (Planned)
+## Progression
 
 ### Pass/Fail Determination
 
-**Per Module**:
+**Per Module**: `assessment_mark >= 40` (configurable via `pass_threshold` in YAML).
+
+**Year Outcome**: Pass if all modules pass; fail otherwise.
+
+### Progression Decision
+
+Uses log-odds model with trait-based modifiers (from `config/year_progression_rules.yaml`).
+
+**If Year Passed**: Roll between `enrolled` (progressed) and `withdrawn`.
+- Base progression probability ~0.90
+- Modified by conscientiousness, academic_drive, average mark, significant disability, caring responsibilities
+
+**If Year Failed**: Roll between `repeating` and `withdrawn`.
+- Base repeat probability ~0.60
+- Modified by conscientiousness, academic_drive
+
+**Year 3 Pass**: Automatically `graduated` (no roll).
+
+**Modifiers** applied via log-odds transformation:
 ```
-if assessment_mark >= 40:
-    module_passed = True
-else:
-    module_passed = False
-```
-
-**Year Outcome**:
-```
-if all modules passed:
-    year_passed = True
-else:
-    year_passed = False
-```
-
-### Progression Probability
-
-**If Year Passed**:
-```
-base_progression_probability = 0.85  # 85% progress by default
-
-# Modifiers
-if conscientiousness > 0.7:
-    progression_probability += 0.1
-if academic_drive > 0.7:
-    progression_probability += 0.05
-if average_mark > 65:
-    progression_probability += 0.05
-
-progression_probability = clamp(progression_probability, 0.5, 0.98)
-
-# Withdrawal probability (inverse)
-withdrawal_probability = 1 - progression_probability
-withdrawal_probability += random_factor  # ±5%
-```
-
-**If Year Failed**:
-```
-base_repeat_probability = 0.6  # 60% repeat by default
-
-# Modifiers
-if conscientiousness > 0.6:
-    repeat_probability += 0.15
-if average_mark > 35:  # Close to passing
-    repeat_probability += 0.1
-
-repeat_probability = clamp(repeat_probability, 0.3, 0.9)
-
-# Withdrawal probability (inverse)
-withdrawal_probability = 1 - repeat_probability
-```
-
-**Decision**:
-```
-if random() < progression_probability:
-    status = "enrolled"  # Progress to next year
-elif random() < withdrawal_probability:
-    status = "withdrawn"
-else:
-    status = "repeating"  # Repeat current year
+log_odds = log(p / (1-p))
+log_odds += modifier_weight * (trait_value - 0.5) * 10
+adjusted_p = 1 / (1 + exp(-log_odds))
 ```
 
 ---
 
-## Assumptions & Design Choices
+## Awarding Gap Design
 
-### Engagement Affects Marks
+The species awarding gap (~8-12pp, Elf > Dwarf) emerges from **individual-level factors only**:
 
-- **Rationale**: Students who attend, participate, and engage academically tend to perform better
-- **Modifier**: Per-student-per-module average of (attendance_rate, participation_score, academic_engagement) from weekly engagement. Modifier range 0.88–1.12 (low engagement slightly reduces marks, high engagement slightly boosts)
+1. **Clan-specific SES distributions** — disadvantaged clans concentrated at low SES ranks
+2. **Clan-specific education distributions** — disadvantaged clans have fewer academic backgrounds
+3. **Weighted clan recruitment** — more students from lower-SES Dwarf clans, higher-SES Elf clans
+4. **Disability prevalence differences** — species-specific rates in config
+5. **Steeper individual modifiers** — SES (0.80-1.20), education (0.85-1.10) create meaningful spread
 
-### Module Difficulty: Feminist-Aware
-
-- **Rationale**: Domestic/applied/craft/care work should not be treated as "easy"
-- **Impact**: Introduction modules not automatically easy; embodied/domestic modules slightly elevated
-
-### Progression: Student-Level, Not Top-Down
-
-- **Rationale**: Emergent behavior more realistic than fixed percentages
-- **Impact**: Overall progression rates emerge from individual decisions
-
-### Protected Characteristics: Included, Not Analyzed
-
-- **Rationale**: Users should compute awarding gaps themselves
-- **Impact**: Species, disability, etc. columns present; no "gap" columns provided
+No top-down species or clan mark modifiers. All group-level patterns are traceable to individual characteristics. See `project_tracker/DESIGN_DECISIONS.md`.
 
 ---
 
 ## Random Seeds
 
-- **Student Generation**: Seed = 42 (or configurable)
-- **Enrollment**: Same seed (for reproducibility)
-- **Engagement**: Same seed
-- **Assessment**: Same seed
-- **Progression**: Same seed
-
-**Note**: All systems use same seed for full reproducibility.
+- Pipeline uses `np.random.default_rng(seed)` in assessment and progression systems
+- Each academic year gets seed = `BASE_SEED + year_index * 1000`
+- Student generation uses global seed per cohort
 
 ---
 
 ## Validation Targets
 
-### Engagement
-- Average attendance: ~65-75%
-- Average participation: ~50-60%
-- Strong correlation: Conscientiousness ↔ Attendance (r > 0.8)
-
 ### Assessment
-- Mark distribution: Skewed toward 56-64 range
+- Mark distribution: centred around 55-65
 - Pass rate: ~80-90% per module
-- Grade distribution: Few Firsts, many 2:1s and 2:2s
+- Species gap: ~8-12pp (Elf > Dwarf)
 
 ### Progression
-- Year 1 → Year 2: ~80-90%
+- Year 1 -> Year 2: ~80-90%
 - Withdrawal rate: ~5-15% per year
 - Repeat rate: ~5-10% per year
 
 ---
 
-**See Also**: `docs/SCHEMA.md` for column definitions, `docs/DESIGN.md` for overall architecture.
+**See Also**: `docs/SCHEMA.md` for column definitions, `project_tracker/DESIGN_DECISIONS.md` for design rationale.

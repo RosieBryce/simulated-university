@@ -13,7 +13,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **BUG: Clan mark modifiers are dead code** (`assessment_system.py:155-161`) – Fixed: new `config/clan_assessment_modifiers.csv` with modifiers for all 14 clans based on clan personality profiles. Loaded at init, no hardcoded clan names.
 - [x] **BUG: SES modifier missing ranks 6-8** (`assessment_system.py:174-178`) – Fixed: mapping now covers all 8 ranks (0.88 to 1.12), monotonic gradient.
 - [x] **BUG: Species modifier hardcoded, not config-driven** (`assessment_system.py:205`) – Fixed: removed. Species-level variation now emerges naturally from clan modifiers.
-- [ ] **BUG: Global `np.random.seed()` reset mid-pipeline** (`assessment_system.py:78`, `progression_system.py:37`) – Each system's `__init__` calls `np.random.seed(seed)`, resetting global state mid-pipeline. Should use `np.random.default_rng(seed)` passed through, or set seed once at pipeline level only.
+- [x] **BUG: Global `np.random.seed()` reset mid-pipeline** (`assessment_system.py:78`, `progression_system.py:37`) – Fixed: both systems now use `np.random.default_rng(seed)` as instance-level RNG instead of resetting global state.
 - [x] **BUG: Mark distribution lacks discriminative power** (`assessment_system.py:195-201`) – Fixed: with working clan/SES modifiers, marks now differentiate meaningfully (~12pt spread by clan, ~18pt spread by SES).
 
 ### Medium severity
@@ -22,18 +22,18 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **BUG: Semester hardcoded to 1** (`engagement_system.py:459`) – `generate_engagement_data` always passes `semester=1`. Semesters are 1 and 2 within each academic year, so this means semester 2 is never generated. Either generate both semesters or clarify that the pipeline only models one semester per year.
 - [ ] **BUG: Semester engagement records missing `academic_year`** (`engagement_system.py:462-473`) – The semester engagement dict never includes `academic_year`, making multi-year semester data impossible to filter by year.
 - [ ] **BUG: Weekly engagement clusters in narrow band** (`engagement_system.py:186-230,288-298`) – Base engagement range is ~[0.30, 0.85]; weekly variation std dev is only ~0.12. No shared within-week shocks across modules, no "bad weeks", seasonal patterns, or exam stress. Data is unrealistically smooth.
-- [ ] **BUG: `modules_passed` counts rows not distinct modules** (`progression_system.py:208-210`) – `.sum()` on boolean mask counts assessment rows, not distinct modules. Would inflate counts if resits or duplicate rows exist. Should use `.nunique()` like `modules_total` does.
-- [ ] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – `agg["modules_passed"] = ...map(...).values` relies on row order matching. Safer to omit `.values` and let pandas align by index.
-- [ ] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – `min(len(ACADEMIC_YEARS), 5)` is always 5 for a 7-year run. Either the cap or the docstring is wrong.
+- [x] **BUG: `modules_passed` counts rows not distinct modules** (`progression_system.py:208-210`) – Fixed: now uses `nunique()` on `module_code` for passed assessments.
+- [x] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – Fixed: removed `.values`, letting pandas align by index.
+- [x] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – Fixed: metadata now has `cohorts_total` (7 enrolled) and `cohorts_graduating` (5 complete a 3-year programme). Docstring clarified.
 - [ ] **BUG: `_determine_gender` clan overrides bypassed** (`student_generation_pipeline.py:87`) – `sample_gender()` is hardcoded 45/45/10 and the result is passed to `name_gen.generate_name()`. Clan-specific gender overrides defined in `clan_name_pools.yaml` are never applied.
 - [x] **BUG: Engagement modifier docstring examples are wrong** (`assessment_system.py:183-185`) – Fixed: docstring now shows correct formula and values.
 
 ### Cleanup
 
-- [ ] **Remove `supporting_systems/program_affinity_system.py`** – ~270 lines, completely unused. Enrollment system now uses config-driven scoring with `trait_programme_mapping.csv`, `programme_characteristics.csv`, and `affinity_levels`/`affinity_multipliers` from `clan_program_affinities.yaml`. Safe to delete.
-- [ ] **Remove or integrate `supporting_systems/module_characteristics_system.py`** – ~320 lines, completely unused. Assessment and engagement systems load module characteristics directly from CSV. Decide: delete, or refactor to use it.
-- [ ] **Remove unused imports** – `datetime`/`timedelta` in `engagement_system.py:16`.
-- [ ] **Drop semester summaries as core output** (carried over from existing backlog).
+- [x] **Remove `supporting_systems/program_affinity_system.py`** – Deleted. Enrollment system uses config-driven scoring.
+- [x] **Remove `supporting_systems/module_characteristics_system.py`** – Deleted. Assessment and engagement systems load module characteristics directly from CSV.
+- [x] **Remove unused imports** – Removed `datetime`/`timedelta` from `engagement_system.py`.
+- [x] **Drop semester summaries as core output** – Longitudinal pipeline does not save semester summaries. Already done.
 - [ ] **Add sample data to git** – split weekly engagement by academic year (one CSV per year, ~28 MB each) so users can download sample data without running the pipeline. Other data files are small enough to commit directly.
 
 ---
@@ -65,9 +65,9 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ## Phase 3: Documentation
 - [x] **USER_GUIDE.md** – how to run pipeline, read data (started).
-- [ ] **Update DATA_IO_PLAN.md** – 7-year, 5-cohort flow and new file list.
-- [ ] SCHEMA.md, CALCULATIONS.md – update for longitudinal schema (status, status_change_at, programme_year, academic_year everywhere).
-- [ ] Update README.md with links to docs.
+- [x] **Update DATA_IO_PLAN.md** – Updated for 7-year flow, all config/output files, data flow diagram.
+- [x] SCHEMA.md, CALCULATIONS.md – Updated: progression_outcomes table added, all assessment modifiers current, awarding gap section, enrollment formula updated.
+- [x] Update README.md – Rewritten: current project structure, config files, output files, documentation links.
 
 ## Validation (DESIGN Success Criteria)
 - [ ] **Metaanalysis / validate_model_outputs.py** – internal checks: progression rates (e.g. 80–90% Y1→Y2), withdrawal (5–15%), grade distributions, awarding gaps visible.

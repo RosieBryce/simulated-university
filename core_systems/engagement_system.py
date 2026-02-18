@@ -13,7 +13,6 @@ def _parse_module_list_csv(value: str) -> List[str]:
         return []
     reader = csv.reader(io.StringIO(str(value)))
     return [m.strip() for m in next(reader) if m.strip()]
-from datetime import datetime, timedelta
 
 @dataclass
 class WeeklyEngagement:

@@ -11,7 +11,7 @@ This document describes all CSV output files and their column definitions.
 
 ### `stonegrove_individual_students.csv`
 
-**Purpose**: Student characteristics and demographics. One row per student per academic year (if enrolled).
+**Purpose**: Student characteristics and demographics. One row per student per cohort (generated at intake).
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -139,9 +139,32 @@ This document describes all CSV output files and their column definitions.
 
 ---
 
+### `stonegrove_progression_outcomes.csv`
+
+**Purpose**: Year-end progression decisions. One row per student per academic year.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `student_id` | string | Persistent unique identifier |
+| `academic_year` | string | Calendar academic year |
+| `year_outcome` | string | "pass" or "fail" (all modules >= 40 to pass) |
+| `status` | string | Next-year status: "enrolled", "repeating", "withdrawn", "graduated" |
+| `status_change_at` | string | Date when new status takes effect (ISO date) |
+| `programme_year_next` | integer/null | Programme year for next academic year (null if withdrawn/graduated) |
+| `avg_mark` | float | Average assessment mark across all modules |
+| `modules_passed` | integer | Count of distinct modules passed (mark >= 40) |
+| `modules_total` | integer | Count of distinct modules taken |
+
+**Notes**:
+- `status = "graduated"` when Year 3 student passes all modules
+- `modules_passed` counts distinct modules (by module_code), not assessment rows
+- Progression decision uses trait-based log-odds model (see CALCULATIONS.md)
+
+---
+
 ### Semester summaries (not a core output)
 
-We do **not** produce `stonegrove_semester_engagement.csv` as part of the longitudinal design. Analysts can aggregate from `stonegrove_weekly_engagement.csv` (e.g. by student, academic_year, semester) if needed.
+Semester summaries are not produced by the longitudinal pipeline. Analysts can aggregate from `stonegrove_weekly_engagement.csv` (e.g. by student, academic_year, semester) if needed.
 
 ---
 

@@ -75,7 +75,7 @@ class AssessmentSystem:
 
     def __init__(self, seed: int = 42, curriculum_file: str = "Instructions and guides/Stonegrove_University_Curriculum.xlsx"):
         self.seed = seed
-        np.random.seed(seed)
+        self.rng = np.random.default_rng(seed)
         self.curriculum_file = curriculum_file
         self.modules_df = None
         self.module_chars = {}  # module_title -> {assessment_type, difficulty_level}
@@ -190,13 +190,13 @@ class AssessmentSystem:
         Modifiers: species, clan, disability, education, socio-economic, module difficulty, engagement.
         """
         # Base distribution
-        r = np.random.random()
+        r = self.rng.random()
         if r < 0.7:
-            base = np.random.normal(60, 8)
+            base = self.rng.normal(60, 8)
         elif r < 0.85:
-            base = np.random.normal(75, 6)
+            base = self.rng.normal(75, 6)
         else:
-            base = np.random.normal(45, 10)
+            base = self.rng.normal(45, 10)
 
         # Modifiers (species-level variation is captured by clan modifiers)
         mod = 1.0
@@ -208,7 +208,7 @@ class AssessmentSystem:
         if engagement_modifier is not None:
             mod *= engagement_modifier
 
-        mark = base * mod + np.random.normal(0, 5)
+        mark = base * mod + self.rng.normal(0, 5)
         return float(np.clip(round(mark, 1), 0.0, 100.0))
 
     def _load_engagement_by_student_module(

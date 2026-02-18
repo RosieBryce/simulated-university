@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run the Stonegrove University longitudinal simulation (5 cohorts × 7 years).
+Run the Stonegrove University longitudinal simulation (7 years, 5 graduating cohorts).
 
 Loops over academic years 1046-47 to 1052-53:
 - Year 1: New cohort (500) + progressing/repeating from previous year
@@ -253,7 +253,8 @@ def main():
         "cohort_size": COHORT_SIZE,
         "years_generated": len(ACADEMIC_YEARS),
         "academic_years": ACADEMIC_YEARS,
-        "cohorts": min(len(ACADEMIC_YEARS), 5),
+        "cohorts_total": len(ACADEMIC_YEARS),
+        "cohorts_graduating": max(0, len(ACADEMIC_YEARS) - 2),
     }
     with open(data_dir / "metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
