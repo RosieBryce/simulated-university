@@ -77,6 +77,21 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **Config path constant** – shared `paths.py` or env for `data/`, `config/`, `visualizations/`.
 - [x] Single run script `run_pipeline.py` at root.
 
+## Semester structure and assessment timing
+- [ ] **Add semester to modules** – assign each module to semester 1 or 2 (in curriculum Excel or module_characteristics.csv). ~Half of each year's modules per semester.
+- [ ] **Two assessment dates per academic year** – semester 1 assessments in January (e.g. 1047-01-15), semester 2 in May (e.g. 1047-05-15). Update `generate_assessment_data` to use per-module semester dates.
+- [ ] **Engagement by semester** – engagement system currently generates 12 weeks all as semester 1. Split into two runs of 12 weeks each (or whatever the semester length should be). Engagement data should be filterable by semester.
+
+## Awarding gap (agent-level emergence)
+- [ ] **Design awarding gap to emerge from individual-level factors** – the gap between demographic groups (species, clan, SES) should be visible in aggregate analysis but should NOT come from top-down group modifiers. All mark variation should be traceable to individual student characteristics:
+  - SES distribution differences between species/clans
+  - Disability prevalence differences (already species-specific in config)
+  - Clan personality ranges → engagement patterns → marks
+  - Education background distribution differences
+  - Compounding effects over years (Year 1 engagement → Year 1 marks → progression → Year 2 engagement...)
+- [ ] **Tune SES/education distributions by species or clan** – currently uniform. Real awarding gaps arise from unequal socio-economic starting positions. Add species/clan-specific SES distributions to config.
+- [ ] **Validate emergent gap** – metaanalysis script to check: are there visible awarding gaps by species? By clan? By SES? Are they realistic in magnitude? Can an analyst trace them to underlying factors?
+
 ## Later
 - [ ] **Status rolls at start of each academic year** – optional later phase: roll for statuses like 'family thing happening',or 'suddenly more time' -- randome chance events roll?
 - [ ] Support services, interventions, extra-curriculars.
