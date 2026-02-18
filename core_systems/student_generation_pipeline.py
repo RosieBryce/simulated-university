@@ -20,6 +20,16 @@ with open('config/clan_personality_specifications.yaml', 'r', encoding='utf-8') 
 with open('config/disability_distribution.yaml', 'r', encoding='utf-8') as f:
     DISABILITY_DIST = yaml.safe_load(f)
 
+# Load clan socioeconomic distributions
+_ses_df = pd.read_csv('config/clan_socioeconomic_distributions.csv')
+CLAN_SES_DIST = {}
+for _, row in _ses_df.iterrows():
+    clan = row['clan']
+    CLAN_SES_DIST[clan] = {
+        'ses_probs': [row[f'ses_{i}'] for i in range(1, 9)],
+        'edu_probs': [row['education_academic'], row['education_vocational'], row['education_no_qualifications']],
+    }
+
 # Helper: weighted random choice from dict
 def weighted_choice(d):
     keys = list(d.keys())
@@ -34,13 +44,21 @@ def sample_age():
     else:
         return np.random.randint(19, 26)
 
-def sample_education():
-    # Example: 60% academic, 30% vocational, 10% no qualifications
-    return np.random.choice(['academic', 'vocational', 'no_qualifications'], p=[0.6, 0.3, 0.1])
+def sample_education(clan):
+    """Sample education background using clan-specific distribution."""
+    if clan in CLAN_SES_DIST:
+        probs = CLAN_SES_DIST[clan]['edu_probs']
+    else:
+        probs = [0.6, 0.3, 0.1]
+    return np.random.choice(['academic', 'vocational', 'no_qualifications'], p=probs)
 
-def sample_socio_economic_rank():
-    # Example: 8 ranks, uniform
-    return np.random.choice(list(range(1,9)), p=[1/8]*8)
+def sample_socio_economic_rank(clan):
+    """Sample SES rank (1-8) using clan-specific distribution."""
+    if clan in CLAN_SES_DIST:
+        probs = CLAN_SES_DIST[clan]['ses_probs']
+    else:
+        probs = [1/8] * 8
+    return np.random.choice(list(range(1, 9)), p=probs)
 
 def sample_disabilities(species):
     """Sample disabilities using independent Bernoulli draws per disability.
@@ -52,8 +70,16 @@ def sample_disabilities(species):
         disabilities = ['no_known_disabilities']
     return disabilities
 
+_CLAN_RECRUITMENT_WEIGHTS = {
+    # Dwarf clans: more weight on lower-SES clans (Flint, Alabaster)
+    'flint': 0.20, 'alabaster': 0.18, 'sandstone': 0.16, 'slate': 0.14,
+    'malachite': 0.12, 'bismuth': 0.08, 'granite': 0.07, 'obsidian': 0.05,
+    # Elf clans: more weight on higher-SES clans (Holly, Yew, Baobab)
+    'holly': 0.25, 'yew': 0.22, 'baobab': 0.18, 'rowan': 0.15, 'ash': 0.12, 'palm': 0.08,
+}
+
 def sample_species_and_clan():
-    # Example: 60% dwarf, 40% elf; then uniform among clans
+    # 60% dwarf, 40% elf; weighted clan recruitment within each species
     species = np.random.choice(['Dwarf', 'Elf'], p=[0.6, 0.4])
     if species == 'Dwarf':
         clans = [k for k, v in CLAN_SPEC.items() if 'dwarves' in v['name'].lower()]
@@ -62,7 +88,9 @@ def sample_species_and_clan():
     if not clans:
         print(f"DEBUG: No clans found for species {species}. Clan names: {[v['name'] for v in CLAN_SPEC.values()]}")
         raise ValueError(f"No clans found for species {species}")
-    clan = np.random.choice(clans)
+    weights = np.array([_CLAN_RECRUITMENT_WEIGHTS.get(c, 1.0) for c in clans])
+    weights = weights / weights.sum()
+    clan = np.random.choice(clans, p=weights)
     return species, clan
 
 def sample_gender():
@@ -86,8 +114,8 @@ def generate_students(n=500, seed=42):
         name = name_gen.generate_name(clan, gender)
         base_personality = sample_base_personality(clan)
         disabilities = sample_disabilities(species)
-        socio_economic_rank = sample_socio_economic_rank()
-        education = sample_education()
+        socio_economic_rank = sample_socio_economic_rank(clan)
+        education = sample_education(clan)
         age = sample_age()
         # Refine personality
         characteristics = {

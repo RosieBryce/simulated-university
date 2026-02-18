@@ -1,0 +1,13 @@
+disability,mark_modifier,notes
+specific_learning_disability,0.92,Affects reading/writing speed and accuracy in timed assessments
+requires_personal_care,0.88,Significant practical barriers to study and assessment
+blind_or_visually_impaired,0.90,Access barriers to written materials and visual assessment components
+communication_difficulties,0.90,Affects participation in oral assessments and group work components
+physical_disability,0.96,Minor impact on most academic assessments; mainly practical modules
+mental_health_disability,0.93,Affects concentration and consistency; variable impact across semester
+autistic_spectrum,0.97,Some barriers to group/social assessments; strengths in focused analytical work
+adhd,0.94,Affects sustained attention and assignment completion; impacts timed exams
+dyslexia,0.93,Affects reading speed and written expression in formal assessments
+other_neurodivergence,0.96,Variable impact depending on specific condition
+deaf_or_hearing_impaired,0.94,Barriers in lecture-based learning and oral assessment components
+wheelchair_user,0.98,Minimal direct academic impact; some practical module barriers

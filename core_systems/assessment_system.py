@@ -79,10 +79,9 @@ class AssessmentSystem:
         self.curriculum_file = curriculum_file
         self.modules_df = None
         self.module_chars = {}  # module_title -> {assessment_type, difficulty_level}
-        self.clan_modifiers = {}  # clan -> mark_modifier
         self._load_curriculum()
         self._load_module_characteristics()
-        self._load_clan_modifiers()
+        self._load_disability_modifiers()
 
     def _load_curriculum(self):
         """Load Modules sheet for programme-module mapping."""
@@ -113,13 +112,14 @@ class AssessmentSystem:
                     }
         # else: module_chars stays empty, fallbacks used
 
-    def _load_clan_modifiers(self):
-        """Load clan assessment modifiers from CSV."""
-        csv_path = Path('config/clan_assessment_modifiers.csv')
+    def _load_disability_modifiers(self):
+        """Load disability assessment modifiers from CSV."""
+        self.disability_modifiers = {}
+        csv_path = Path('config/disability_assessment_modifiers.csv')
         if csv_path.exists():
             df = pd.read_csv(csv_path)
             for _, row in df.iterrows():
-                self.clan_modifiers[str(row['clan']).strip().lower()] = float(row['mark_modifier'])
+                self.disability_modifiers[str(row['disability']).strip().lower()] = float(row['mark_modifier'])
 
     def _get_assessment_type(self, module_title: str) -> str:
         """Get assessment_type from module_characteristics, else infer from title."""
@@ -136,50 +136,41 @@ class AssessmentSystem:
         return _get_module_difficulty_modifier_fallback(module_title)
 
     def _get_disability_modifier(self, disabilities: str) -> float:
-        """Product of modifiers for each disability (CALCULATIONS.md)."""
+        """Product of modifiers for each disability from config/disability_assessment_modifiers.csv.
+        Multiple disabilities compound multiplicatively."""
         if pd.isna(disabilities) or not str(disabilities).strip():
             return 1.0
         raw = str(disabilities).lower()
         if 'no_known_disabilities' in raw:
             return 1.0
-        modifiers = {
-            'specific_learning_disability': 0.8,
-            'requires_personal_care': 0.75,
-            'blind_or_visually_impaired': 0.8,
-            'communication_difficulties': 0.8,
-            'physical_disability': 1.05,
-            'mental_health_disability': 1.05,
-            'autistic_spectrum': 1.1,
-            'adhd': 1.05,
-            'dyslexia': 1.05,
-            'other_neurodivergence': 1.1,
-            'deaf_or_hearing_impaired': 1.05,
-            'wheelchair_user': 1.05,
-        }
         prod = 1.0
-        for k, v in modifiers.items():
+        for k, v in self.disability_modifiers.items():
             if k in raw:
                 prod *= v
         return prod
 
     def _get_clan_modifier(self, clan: str) -> float:
-        """Clan assessment modifier from config/clan_assessment_modifiers.csv."""
-        return self.clan_modifiers.get(clan, 1.0)
+        """No direct clan modifier — clan differences emerge from SES, education, and engagement."""
+        return 1.0
 
     def _get_education_modifier(self, education: str) -> float:
-        """Education modifier: academic 1.05, vocational 0.98, else 1.0."""
+        """Education modifier: academic backgrounds boost, vocational and no qualifications reduce.
+        Reflects prior academic preparation advantage in formal assessments."""
         if pd.isna(education):
             return 1.0
         e = str(education).lower()
         if 'academic' in e:
-            return 1.05
+            return 1.10
         if 'vocational' in e:
-            return 0.98
+            return 0.92
+        if 'no_qualifications' in e:
+            return 0.85
         return 1.0
 
     def _get_socio_economic_modifier(self, rank: int) -> float:
-        """Socio-economic rank modifier. Ranks 1 (lowest) to 8 (highest)."""
-        mapping = {1: 0.88, 2: 0.92, 3: 0.96, 4: 1.0, 5: 1.04, 6: 1.08, 7: 1.10, 8: 1.12}
+        """Socio-economic rank modifier. Ranks 1 (lowest) to 8 (highest).
+        Steeper gradient to create meaningful SES-driven mark differences."""
+        mapping = {1: 0.80, 2: 0.85, 3: 0.90, 4: 0.96, 5: 1.02, 6: 1.08, 7: 1.14, 8: 1.20}
         r = int(rank) if not pd.isna(rank) else 4
         return mapping.get(r, 1.0)
 
