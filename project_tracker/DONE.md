@@ -12,3 +12,9 @@ Short log of completed work. Add a line when something is finished.
 - 2026-02: Longitudinal pipeline (5 cohorts × 7 years; run_longitudinal_pipeline.py; enrollment, engagement, assessment, progression with academic_year; stonegrove_enrollment.csv, stonegrove_progression_outcomes.csv, metadata.json).
 - 2026-02: Year 3 graduation logic – pass in programme_year 3 → status "graduated"; verified cohort graduation (~68%).
 - 2026-02: Pipeline robustness: student_id fix (merge not concat in enroll_students_batch); engagement uses actual student_id not index; Series handling for duplicate columns; PIPELINE_FLOW.md.
+- 2026-02: CLAUDE.md created for Claude Code onboarding.
+- 2026-02: Code review — identified 20+ bugs, written up in BACKLOG.md.
+- 2026-02: Config-driven programme selection — `trait_programme_mapping.csv`, affinity multipliers from YAML, removed keyword matching.
+- 2026-02: Bug fixes — disability sampling (independent Bernoulli + comorbidities), assessment dates (May of second year), SES modifier (ranks 1–8), removed hardcoded species modifier.
+- 2026-02: Emergent awarding gap (~8.8pp Elf > Dwarf) — clan-specific SES/education distributions, weighted clan recruitment, steeper SES/education/disability modifiers. All agent-level, no top-down group modifiers. See DESIGN_DECISIONS.md.
+- 2026-02: `data/` added to .gitignore; removed from git history with filter-branch.

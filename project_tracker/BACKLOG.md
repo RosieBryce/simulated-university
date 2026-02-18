@@ -83,14 +83,12 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **Engagement by semester** – engagement system currently generates 12 weeks all as semester 1. Split into two runs of 12 weeks each (or whatever the semester length should be). Engagement data should be filterable by semester.
 
 ## Awarding gap (agent-level emergence)
-- [ ] **Design awarding gap to emerge from individual-level factors** – the gap between demographic groups (species, clan, SES) should be visible in aggregate analysis but should NOT come from top-down group modifiers. All mark variation should be traceable to individual student characteristics:
-  - SES distribution differences between species/clans
-  - Disability prevalence differences (already species-specific in config)
-  - Clan personality ranges → engagement patterns → marks
-  - Education background distribution differences
-  - Compounding effects over years (Year 1 engagement → Year 1 marks → progression → Year 2 engagement...)
-- [ ] **Tune SES/education distributions by species or clan** – currently uniform. Real awarding gaps arise from unequal socio-economic starting positions. Add species/clan-specific SES distributions to config.
+- [x] **Design awarding gap to emerge from individual-level factors** – Done: ~8.8pp Elf > Dwarf gap from clan-specific SES/education distributions, weighted clan recruitment, steeper modifiers. See DESIGN_DECISIONS.md.
+- [x] **Tune SES/education distributions by species or clan** – Done: `config/clan_socioeconomic_distributions.csv` with per-clan SES rank probabilities and education background distributions.
 - [ ] **Validate emergent gap** – metaanalysis script to check: are there visible awarding gaps by species? By clan? By SES? Are they realistic in magnitude? Can an analyst trace them to underlying factors?
+- [ ] **Gender awarding gap** – male students often underperform females in real data. Currently gender has no effect on marks. Could add gender-differentiated engagement patterns or a small modifier. Should emerge from behaviour (e.g., engagement patterns) not a direct mark modifier.
+- [ ] **Tune disability modifiers** – current values (all ≤1.0) represent a university without fully embedded reasonable adjustments. Real-world disability gap has largely closed through curriculum-embedded adjustments. Decide what story Stonegrove tells: good support (modifiers ~1.0) or barriers still present (current values). Some neurodivergent conditions may confer strengths in specific assessment types.
+- [ ] **Engagement system as gap amplifier** – engagement already modifies marks (0.88–1.12). Widening the band, adding realistic weekly variation (bad weeks, exam stress), or making engagement more sensitive to SES/personality would amplify compounding effects over years.
 
 ## Later
 - [ ] **Status rolls at start of each academic year** – optional later phase: roll for statuses like 'family thing happening',or 'suddenly more time' -- randome chance events roll?
