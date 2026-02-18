@@ -124,9 +124,8 @@ Thumbs.db
 ~$*.xlsx
 ~$*.xls
 
-# Large data files (optional - uncomment if you don't want to track large CSV files)
-# *.csv
-# *.xlsx
+# Generated data (regenerate with run_longitudinal_pipeline.py)
+data/
 
 # Backup files
 *.bak
