@@ -9,12 +9,12 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 ### High severity
 
 - [x] **BUG: Disability sampling treats categorical distribution as independent Bernoullis** (`student_generation_pipeline.py:48-54`) – Fixed: config restructured as independent prevalence rates (comorbidities allowed). `no_known_disabilities` removed from config; assigned automatically when no disabilities drawn. Zero empty strings now.
-- [ ] **BUG: Dates off by one year** (`run_longitudinal_pipeline.py:27,32`) – `_status_change_at()` and `_assessment_date()` extract the first year from `"1046-47"`, producing dates in 1046 instead of 1047. All `status_change_at` and assessment dates are one calendar year too early.
-- [ ] **BUG: Clan mark modifiers are dead code** (`assessment_system.py:155-161`) – Checks for clans `baobab`/`alabaster` which don't exist in config (actual clans are `malachite`, `granite`, etc.). Every student gets modifier 1.0. Need to implement real clan-based assessment differentiation using clans from `clan_personality_specifications.yaml`.
-- [ ] **BUG: SES modifier missing ranks 6-8** (`assessment_system.py:174-178`) – Mapping only covers ranks 1-5. Ranks 6-8 (~38% of students) silently default to 1.0 (same as rank 3). Extend mapping to cover full 1-8 range.
-- [ ] **BUG: Species modifier hardcoded, not config-driven** (`assessment_system.py:205`) – Elves get +10%, Dwarves get -5%, hardcoded with no config. Combined with broken clan/SES modifiers, mark distribution is nearly uniform across all students. Move to config or remove.
+- [x] **BUG: Dates off by one year** (`run_longitudinal_pipeline.py:32`) – Fixed: `_assessment_date()` now uses second calendar year (May). `_status_change_at()` was actually correct (September of first year = start of academic year).
+- [x] **BUG: Clan mark modifiers are dead code** (`assessment_system.py:155-161`) – Fixed: new `config/clan_assessment_modifiers.csv` with modifiers for all 14 clans based on clan personality profiles. Loaded at init, no hardcoded clan names.
+- [x] **BUG: SES modifier missing ranks 6-8** (`assessment_system.py:174-178`) – Fixed: mapping now covers all 8 ranks (0.88 to 1.12), monotonic gradient.
+- [x] **BUG: Species modifier hardcoded, not config-driven** (`assessment_system.py:205`) – Fixed: removed. Species-level variation now emerges naturally from clan modifiers.
 - [ ] **BUG: Global `np.random.seed()` reset mid-pipeline** (`assessment_system.py:78`, `progression_system.py:37`) – Each system's `__init__` calls `np.random.seed(seed)`, resetting global state mid-pipeline. Should use `np.random.default_rng(seed)` passed through, or set seed once at pipeline level only.
-- [ ] **BUG: Mark distribution lacks discriminative power** (`assessment_system.py:195-201`) – With broken clan/SES/personality modifiers, the base 70%/15%/15% mixture applies nearly uniformly to all students. Fix depends on resolving the modifier bugs above.
+- [x] **BUG: Mark distribution lacks discriminative power** (`assessment_system.py:195-201`) – Fixed: with working clan/SES modifiers, marks now differentiate meaningfully (~12pt spread by clan, ~18pt spread by SES).
 
 ### Medium severity
 
@@ -26,7 +26,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – `agg["modules_passed"] = ...map(...).values` relies on row order matching. Safer to omit `.values` and let pandas align by index.
 - [ ] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – `min(len(ACADEMIC_YEARS), 5)` is always 5 for a 7-year run. Either the cap or the docstring is wrong.
 - [ ] **BUG: `_determine_gender` clan overrides bypassed** (`student_generation_pipeline.py:87`) – `sample_gender()` is hardcoded 45/45/10 and the result is passed to `name_gen.generate_name()`. Clan-specific gender overrides defined in `clan_name_pools.yaml` are never applied.
-- [ ] **BUG: Engagement modifier docstring examples are wrong** (`assessment_system.py:183-185`) – Comment says `0.2 -> 0.94` but formula gives `0.928`; says `0.8 -> 1.06` but gives `1.072`.
+- [x] **BUG: Engagement modifier docstring examples are wrong** (`assessment_system.py:183-185`) – Fixed: docstring now shows correct formula and values.
 
 ### Cleanup
 

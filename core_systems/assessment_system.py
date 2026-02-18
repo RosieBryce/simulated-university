@@ -79,8 +79,10 @@ class AssessmentSystem:
         self.curriculum_file = curriculum_file
         self.modules_df = None
         self.module_chars = {}  # module_title -> {assessment_type, difficulty_level}
+        self.clan_modifiers = {}  # clan -> mark_modifier
         self._load_curriculum()
         self._load_module_characteristics()
+        self._load_clan_modifiers()
 
     def _load_curriculum(self):
         """Load Modules sheet for programme-module mapping."""
@@ -110,6 +112,14 @@ class AssessmentSystem:
                         'difficulty_level': float(info.get('difficulty_level', 0.5)),
                     }
         # else: module_chars stays empty, fallbacks used
+
+    def _load_clan_modifiers(self):
+        """Load clan assessment modifiers from CSV."""
+        csv_path = Path('config/clan_assessment_modifiers.csv')
+        if csv_path.exists():
+            df = pd.read_csv(csv_path)
+            for _, row in df.iterrows():
+                self.clan_modifiers[str(row['clan']).strip().lower()] = float(row['mark_modifier'])
 
     def _get_assessment_type(self, module_title: str) -> str:
         """Get assessment_type from module_characteristics, else infer from title."""
@@ -153,12 +163,8 @@ class AssessmentSystem:
         return prod
 
     def _get_clan_modifier(self, clan: str) -> float:
-        """Clan modifier (Baobab 1.15, Alabaster 0.85, else 1.0)."""
-        if clan == 'baobab':
-            return 1.15
-        if clan == 'alabaster':
-            return 0.85
-        return 1.0
+        """Clan assessment modifier from config/clan_assessment_modifiers.csv."""
+        return self.clan_modifiers.get(clan, 1.0)
 
     def _get_education_modifier(self, education: str) -> float:
         """Education modifier: academic 1.05, vocational 0.98, else 1.0."""
@@ -172,16 +178,17 @@ class AssessmentSystem:
         return 1.0
 
     def _get_socio_economic_modifier(self, rank: int) -> float:
-        """Socio-economic rank modifier (CALCULATIONS.md)."""
-        mapping = {1: 0.9, 2: 0.95, 3: 1.0, 4: 1.05, 5: 1.1}
-        r = int(rank) if not pd.isna(rank) else 3
+        """Socio-economic rank modifier. Ranks 1 (lowest) to 8 (highest)."""
+        mapping = {1: 0.88, 2: 0.92, 3: 0.96, 4: 1.0, 5: 1.04, 6: 1.08, 7: 1.10, 8: 1.12}
+        r = int(rank) if not pd.isna(rank) else 4
         return mapping.get(r, 1.0)
 
     def _engagement_to_modifier(self, avg_engagement: float) -> float:
-        """Convert engagement score (0-1) to mark modifier. High engagement slightly boosts marks."""
+        """Convert engagement score (0-1) to mark modifier. High engagement slightly boosts marks.
+        Formula: 0.88 + 0.24 * engagement, clipped to [0.88, 1.12].
+        0.0 -> 0.88, 0.5 -> 1.0, 1.0 -> 1.12."""
         if avg_engagement is None or np.isnan(avg_engagement):
             return 1.0
-        # 0.5 engagement -> 1.0 modifier; 0.2 -> 0.94; 0.8 -> 1.06
         return float(np.clip(0.88 + 0.24 * avg_engagement, 0.88, 1.12))
 
     def generate_mark(self, student: pd.Series, module_title: str,
@@ -200,9 +207,8 @@ class AssessmentSystem:
         else:
             base = np.random.normal(45, 10)
 
-        # Modifiers
+        # Modifiers (species-level variation is captured by clan modifiers)
         mod = 1.0
-        mod *= 1.1 if str(student.get('species', '')).lower() == 'elf' else 0.95
         mod *= self._get_clan_modifier(str(student.get('clan', '')).lower())
         mod *= self._get_disability_modifier(student.get('disabilities', ''))
         mod *= self._get_education_modifier(student.get('education', ''))

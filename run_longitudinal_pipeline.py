@@ -29,9 +29,9 @@ def _status_change_at(academic_year: str) -> str:
 
 
 def _assessment_date(academic_year: str) -> str:
-    """End of year assessment date."""
-    y = academic_year.split("-")[0]
-    return f"{y}-12-15"
+    """End of year assessment date (May of second calendar year)."""
+    first_year = int(academic_year.split("-")[0])
+    return f"{first_year + 1}-05-15"
 
 
 def run_year(
