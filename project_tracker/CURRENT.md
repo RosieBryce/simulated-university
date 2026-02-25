@@ -2,56 +2,41 @@
 
 **Last updated**: 25 Feb 2026
 
-## Recently completed (this session)
+## Completed this session (25 Feb 2026)
 
-- **Semester structure wired** — `config/module_characteristics.csv` now has `semester` column (1=Autumn, 2=Spring). First ceil(n/2) modules per (programme_code, year) group go to S1. 221 S1, 132 S2 modules.
-- **Two assessment components per module** — `assessment_system.py` now generates MIDTERM + FINAL rows per student per module. MIDTERM uses weeks 1–8 engagement; FINAL uses all 12 weeks. `combined_mark = 0.4 × MIDTERM + 0.6 × FINAL` stored on FINAL rows.
-- **Assessment dates per semester** — `_assessment_dates()` helper: S1 → Nov 1 (midterm), Dec 15 (final); S2 → Mar 15 (midterm), May 15 (final). 4 distinct dates per academic year.
-- **Progression updated** — filters to FINAL rows, uses `combined_mark` (fallback to `assessment_mark` for legacy data). Withdrawal rate 5.9% (within 5–8% target).
-- **Weekly engagement has `semester` column** — sourced from `_module_chars[m]['semester']` per weekly record.
-- **`SemesterEngagement` dataclass renamed** — `semester` field → `programme_year`; new `semester: int` field added; arc alignment comment added.
-- **`metaanalysis/student_paths.py` created** — per-student trajectories, path archetype distributions, species/SES breakdowns, case studies, coherence checks. All coherence checks pass.
-- **SCHEMA.md updated** — v2.1: semester column, component_code MIDTERM/FINAL, combined_mark, progression note.
+- **NSS system built and wired** — `core_systems/nss_system.py` + `config/nss_modifiers.yaml`. 7 themes + overall_satisfaction (1–5). Generates one response per Yr3 student (including repeating Yr3) per academic year. 2,325 responses across 5 cohorts.
+- **NSS calibrated to real UK NSS benchmarks** — org & management lowest (~60% positive); A&F most variable (mark-sensitive, SD=0.68); student_voice ~67%; overall_satisfaction ~69%.
+- **Gender clan overrides wired** — `_determine_gender` now supports full `gender_distribution` dict per clan (as well as `neuter_probability` shorthand). Neuter probabilities: obsidian 12%, slate 12% (genderless deity Durren), yew 11% (androgynous aesthetic), alabaster 12%, all others 10%.
+- **Sample data on git** — all pipeline outputs committed. Weekly engagement (~68 MB) split into per-year files in `data/weekly_engagement/` (3–12 MB each). Legacy/relational/archive dirs gitignored.
+- **Relational schema updated** — `build_relational_outputs.py` now produces 10 tables (was 8). Added `fact_graduate_outcomes` and `fact_nss_responses`. Fixed: `combined_mark` in `fact_assessment`; `semester` in `fact_weekly_engagement` and `dim_modules`; correct four assessment dates in `dim_academic_years`. Loader handles both combined weekly file and per-year splits.
 
-## Previously completed
-- Disability sampling wired per-clan
-- Enrollment concentration fixed
-- Engagement system overhauled (AR(1), temporal arc, disability/SES modifiers)
-- Engagement system bug fixes
-- Assessment modifiers extracted to config; education gap softened
-- Progression scale fixed (withdrawal rate: 2.6% → 7.4%)
+## Previously completed (earlier in Feb 2026)
 
-## Previously completed
-
-- Validation script built and all 4 WARNs resolved
-- Emergent awarding gap (~6–9pp Elf > Dwarf) from agent-level factors
-- All high-severity bugs fixed (disability sampling, dates, SES, species modifier, seed reset, modules_passed)
-- Pipeline crash fixes; engagement append bug fixed
-- Relational schema: 4 dims + 4 facts in data/relational/
-- Module codes from curriculum Excel; assessment year-level bug fixed
-- Config fully populated (353 modules, 44 programmes); config folder cleaned
+- **Semester structure wired** — `config/module_characteristics.csv` has `semester` column. Weekly engagement has `semester` column.
+- **Two assessment components per module** — MIDTERM + FINAL rows, `combined_mark = 0.4 × MIDTERM + 0.6 × FINAL`.
+- **Assessment dates per semester** — S1: Nov 1 / Dec 15; S2: Mar 15 / May 15.
+- **Progression updated** — FINAL rows + `combined_mark`. Withdrawal: 5–6%.
+- **Withdrawal-after-fail refinement** — year investment effect (Y1 more likely to withdraw after fail than Y3) + prior repeat discouragement wired in `year_progression_rules.yaml`.
+- **Graduate outcomes system** — `core_systems/graduate_outcomes_system.py` + `config/graduate_outcomes.yaml`. Degree classification (Y2 1/3, Y3 2/3), employment/sector/salary/professional level. SES gradient on salary and professional employment.
+- **Gender awarding gap** — design decision: flat by design, no modifier.
+- **Disability modifier tuning** — decision: leave gap (6.3pp overall, ~5pp across all SES bands) for analysts/users.
+- **`metaanalysis/student_paths.py`** — per-student trajectories, archetype distributions, species/SES breakdowns, case studies, coherence checks.
+- **SCHEMA.md v2.2** — all tables documented including `stonegrove_graduate_outcomes.csv` and `stonegrove_nss_responses.csv`.
 
 ---
 
-## Priority queue
+## Priority queue (next up)
 
-### ~~1. Validate emergent gaps~~ — done
-### ~~2. Semester structure~~ — done
-### ~~3. Gender awarding gap~~ — design decision: flat by design, no modifier, not implementing
-### ~~4. Disability modifier tuning~~ — decision: leave for analysts/users to explore
-- Gap as-is: 6.3pp overall (no disability 61.7 vs has disability 55.4)
-- Consistent ~5pp across all SES bands (not a SES confound)
-- Comorbidities compound: 1 disability → 5pp, 2 → 10pp, 3 → 15pp
-- Modifiers range 0.88 (requires_personal_care) to 0.98 (wheelchair_user)
-- Users can test "embedded reasonable adjustments" by nudging modifiers toward 1.0
+### 1. Module trailing
+Students who pass the year overall but have one module < 40 trail it as a RESIT in the following year. Complex: touches `progression_system.py` (detect trailing modules), `assessment_system.py` (generate RESIT rows), `docs/SCHEMA.md`. See backlog for full spec.
 
-### 5. Next up
-- **Module trailing** — single failing module trails into next year as RESIT (see backlog)
-- **Withdrawal-after-fail refinement** — Y1 vs Y2/Y3 investment effect; prior repeat history
-- **Gender clan overrides** — `_determine_gender` ignores clan-specific gender distributions; hardcoded 45/45/10
-- **Add caring_responsibilities to student model** — needs student generation first
-- Sample data on git
-- Status rolls, interventions, case study extraction
+### 2. `caring_responsibilities` in student model
+Add field to `student_generation_pipeline.py` first, then re-introduce the progression modifier in `_apply_modifiers`. Currently dead code (removed from progression; field never generated).
+
+### 3. Status rolls / life events
+Optional random events at year start (e.g. family crisis, sudden free time). See backlog.
+
+---
 
 ## Blocked
 
@@ -60,5 +45,6 @@
 ## Design decisions (standing)
 
 - **No direct clan mark modifier** — `config/archive/clan_assessment_modifiers.csv` archived; gaps must emerge from SES/education/disability. Do not re-wire.
-- **No caring_responsibilities in progression** — field not generated; removed from modifier code. Add to student generation first if this becomes a priority.
+- **No caring_responsibilities in progression** — field not generated; removed from modifier code. Add to student generation *first* before re-introducing the progression modifier.
 - **Gender gap flat** — intentional; do not add direct gender modifier.
+- **12-week engagement arc per module** — not split by semester; `semester` column = module assignment only.

@@ -31,7 +31,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **BUG: `modules_passed` counts rows not distinct modules** (`progression_system.py:208-210`) – Fixed: now uses `nunique()` on `module_code` for passed assessments.
 - [x] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – Fixed: removed `.values`, letting pandas align by index.
 - [x] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – Fixed: metadata now has `cohorts_total` (7 enrolled) and `cohorts_graduating` (5 complete a 3-year programme). Docstring clarified.
-- [ ] **BUG: `_determine_gender` clan overrides bypassed** (`student_generation_pipeline.py:87`) – `sample_gender()` is hardcoded 45/45/10 and the result is passed to `name_gen.generate_name()`. Clan-specific gender overrides defined in `clan_name_pools.yaml` are never applied.
+- [x] **BUG: `_determine_gender` clan overrides bypassed** – Fixed: `_determine_gender` now reads `neuter_probability` (and full `gender_distribution` dict) per clan from `clan_name_pools.yaml`. Neuter probabilities set: obsidian/slate 12% (deity Durren), yew 11%, alabaster 12%, all others 10%.
 - [x] **BUG: Engagement modifier docstring examples are wrong** (`assessment_system.py:183-185`) – Fixed: docstring now shows correct formula and values.
 
 ### Cleanup
@@ -40,7 +40,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **Remove `supporting_systems/module_characteristics_system.py`** – Deleted. Assessment and engagement systems load module characteristics directly from CSV.
 - [x] **Remove unused imports** – Removed `datetime`/`timedelta` from `engagement_system.py`.
 - [x] **Drop semester summaries as core output** – Longitudinal pipeline does not save semester summaries. Already done.
-- [ ] **Add sample data to git** – split weekly engagement by academic year (one CSV per year, ~28 MB each) so users can download sample data without running the pipeline. Other data files are small enough to commit directly.
+- [x] **Add sample data to git** – All pipeline outputs committed. Weekly engagement split into `data/weekly_engagement/` per-year files (3–12 MB each). Blanket `data/` gitignore replaced with targeted ignores for combined weekly file, legacy, relational, archive dirs.
 
 ---
 
@@ -49,7 +49,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 ### Progression & multi-year flow
 - [x] **Create progression_system.py** – pass/fail per module; year outcome (all modules ≥ 40); progression/repeat/withdrawal (student-level, emergent from marks + traits + motivation). Includes modifiers for significant disability, caring responsibilities (when field exists).
 - [x] **Add config/year_progression_rules.yaml** – base probabilities + individual modifiers.
-- [ ] **Progression: withdrawal-after-fail logic** – refine after more pipeline runs: (a) year-in-programme – Y1 repeat has lower withdrawal likelihood than Y2/Y3 (investment effect); (b) previous repeat at any level increases withdrawal likelihood.
+- [x] **Progression: withdrawal-after-fail logic** – Done: year investment effect (`year_withdrawal_after_fail`: Y1 +0.35, Y2 -0.25, Y3 -0.55) and prior repeat discouragement (`prior_repeat_withdrawal`: +0.45) wired in `config/year_progression_rules.yaml`.
 - [ ] **Add caring_responsibilities to student model** – for progression modifier (other stuff going on). Note: dead code removed from `_apply_modifiers` in progression_system.py; must be added to student generation *first* before re-introducing the progression modifier.
 - [x] **Update enrollment system** – handle multiple years; one row per student per academic_year; add `status` (enrolled/repeating/withdrawn/graduated), `status_change_at`, `programme_year`.
 - [x] **Rename output** – `stonegrove_enrolled_students.csv` → `stonegrove_enrollment.csv` (per DESIGN: one row per student per academic year).
@@ -85,7 +85,13 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ## Graduate outcomes
 
-- [ ] **Model graduate outcomes** — add a post-graduation outcome stage for students who receive `status = 'graduated'`. Generate a `stonegrove_graduate_outcomes.csv` with one row per graduate. Outcomes to model: employment status (employed/further_study/unemployed), employment sector (mapped from faculty/programme), salary proxy band (1–5), time-to-employment (months). Outcomes should emerge from: final classification (First/2:1/2:2/Third), programme (faculty/department), species/clan/SES (gap analysis surface), personality traits (extraversion, conscientiousness → job search efficacy). Add a `GraduateOutcomesSystem` in `core_systems/` and wire it into the longitudinal pipeline after the progression stage (graduates only). Add to SCHEMA.md.
+- [x] **Model graduate outcomes** — Done: `core_systems/graduate_outcomes_system.py` + `config/graduate_outcomes.yaml`. 1,966 graduates across 5 cohorts. Degree classification (Y2 1/3, Y3 2/3), employment/sector/salary/professional level. SES gradient on salary and professional employment. No direct species/clan modifier. Wired into longitudinal pipeline; outputs to `stonegrove_graduate_outcomes.csv`.
+
+## NSS (National Student Survey)
+
+- [x] **Model NSS responses** — Done: `core_systems/nss_system.py` + `config/nss_modifiers.yaml`. 7 themes + overall_satisfaction (1–5 integer). One response per Yr3 student per year, including repeating Yr3 students (`is_repeat_year` flag). Score model: base + engagement + mark signal (A&F) + SES + disability + personality + correlated student bias + independent per-theme noise. Calibrated to real UK NSS benchmarks: org & management lowest (~60%); A&F most variable (mark-sensitive); overall_satisfaction ~69%. Outputs to `stonegrove_nss_responses.csv`.
+
+---
 
 ## Module trailing (resit/carry-forward)
 
