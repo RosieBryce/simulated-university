@@ -41,6 +41,7 @@ def run_year(
     continuing_students_df,
     progression_outcomes_prev,
     seed: int,
+    prior_progression_df=None,
 ):
     """Run pipeline for one academic year. Returns (enrolled_df, progression_df)."""
     import pandas as pd
@@ -126,6 +127,7 @@ def run_year(
         enrolled_clean,
         academic_year=academic_year,
         status_change_at=_status_change_at(ACADEMIC_YEARS[year_index + 1]) if year_index + 1 < len(ACADEMIC_YEARS) else "",
+        prior_progression_df=prior_progression_df,
     )
 
     return enrolled_df, progression_df, assessment_df, weekly_df, semester_df
@@ -161,6 +163,7 @@ def main():
 
     progression_prev = None
     prev_enrolled_df = None
+    accumulated_progression = None  # all prior years' progression (for repeat history)
 
     for i, acad_year in enumerate(ACADEMIC_YEARS):
         print(f"\n--- {acad_year} ---")
@@ -197,7 +200,8 @@ def main():
 
         # Run pipeline for this year
         enrolled_df, progression_df, assessment_df, weekly_df, semester_df = run_year(
-            acad_year, i, new_students, continuing_students, progression_prev, seed
+            acad_year, i, new_students, continuing_students, progression_prev, seed,
+            prior_progression_df=accumulated_progression,
         )
 
         if enrolled_df is None:
@@ -210,6 +214,8 @@ def main():
         all_weekly.append(weekly_df)
         progression_prev = progression_df
         prev_enrolled_df = enrolled_df
+        # Accumulate all progression outcomes for repeat-history lookup in subsequent years
+        accumulated_progression = pd.concat(all_progression, ignore_index=True)
 
         print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}")
 

@@ -83,6 +83,10 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **Config path constant** – shared `paths.py` or env for `data/`, `config/`, `visualizations/`.
 - [x] Single run script `run_pipeline.py` at root.
 
+## Graduate outcomes
+
+- [ ] **Model graduate outcomes** — add a post-graduation outcome stage for students who receive `status = 'graduated'`. Generate a `stonegrove_graduate_outcomes.csv` with one row per graduate. Outcomes to model: employment status (employed/further_study/unemployed), employment sector (mapped from faculty/programme), salary proxy band (1–5), time-to-employment (months). Outcomes should emerge from: final classification (First/2:1/2:2/Third), programme (faculty/department), species/clan/SES (gap analysis surface), personality traits (extraversion, conscientiousness → job search efficacy). Add a `GraduateOutcomesSystem` in `core_systems/` and wire it into the longitudinal pipeline after the progression stage (graduates only). Add to SCHEMA.md.
+
 ## Module trailing (resit/carry-forward)
 
 - [ ] **Implement single-module trailing in subsequent academic years** — currently a student either passes the whole year or repeats the whole year. In reality, students who pass the year overall but have one module below 40 can "trail" that module into the next year and resit it alongside their new year's work. Logic: after progression, identify students with `year_outcome = pass` but one or more FINAL `combined_mark < 40`; flag those modules as trailed; generate a resit assessment row in the following academic year's data (new `component_code = "RESIT"`), engagement-weighted as appropriate. The student progresses to the next year regardless; a failed resit typically triggers a year repeat or cap on final classification. Requires changes to: `progression_system.py` (detect trailing modules), `assessment_system.py` (generate resit rows), and `docs/SCHEMA.md`.

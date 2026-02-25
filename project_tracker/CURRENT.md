@@ -35,26 +35,21 @@
 
 ## Priority queue
 
-### 1. Validate emergent gaps
-- Run metaanalysis scripts to confirm: species gap visible? By clan? By SES? Can analyst trace to structural factors?
-- `metaanalysis/validate_outputs.py` exists — check it covers awarding gap checks
+### ~~1. Validate emergent gaps~~ — done
+### ~~2. Semester structure~~ — done
+### ~~3. Gender awarding gap~~ — design decision: flat by design, no modifier, not implementing
+### ~~4. Disability modifier tuning~~ — decision: leave for analysts/users to explore
+- Gap as-is: 6.3pp overall (no disability 61.7 vs has disability 55.4)
+- Consistent ~5pp across all SES bands (not a SES confound)
+- Comorbidities compound: 1 disability → 5pp, 2 → 10pp, 3 → 15pp
+- Modifiers range 0.88 (requires_personal_care) to 0.98 (wheelchair_user)
+- Users can test "embedded reasonable adjustments" by nudging modifiers toward 1.0
 
-### 2. Semester structure (medium effort)
-- Assign each module to semester 1 or 2 (in curriculum Excel or module_characteristics.csv)
-- Two assessment dates per year (Jan + May)
-- Engagement system generates both semesters
-
-### 3. Gender awarding gap
-- Currently flat by design; could emerge from engagement patterns rather than a direct modifier
-- Decide approach before implementing
-
-### 4. Disability modifier tuning
-- Decide Stonegrove's support story: embedded reasonable adjustments (modifiers → ~1.0) or barriers still present (current values)
-
-### 5. Later
-- **Gender clan overrides** — `_determine_gender` ignores clan-specific gender distributions in `clan_name_pools.yaml`; hardcoded 45/45/10
+### 5. Next up
+- **Module trailing** — single failing module trails into next year as RESIT (see backlog)
 - **Withdrawal-after-fail refinement** — Y1 vs Y2/Y3 investment effect; prior repeat history
-- **Add caring_responsibilities to student model** — field was removed as dead code; needs to be generated before it can be used in progression
+- **Gender clan overrides** — `_determine_gender` ignores clan-specific gender distributions; hardcoded 45/45/10
+- **Add caring_responsibilities to student model** — needs student generation first
 - Sample data on git
 - Status rolls, interventions, case study extraction
 

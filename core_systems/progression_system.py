@@ -94,10 +94,16 @@ class ProgressionSystem:
         passed: bool,
         avg_mark: float,
         outcome_type: str,
+        programme_year: int = 1,
+        has_prior_repeat: bool = False,
     ) -> float:
         """
         Apply trait modifiers to base probability.
         outcome_type: 'progression', 'repeat', or 'withdrawal'
+
+        For withdrawal after fail:
+        - year_withdrawal_after_fail[programme_year]: investment effect (Y1 higher, Y3 lower)
+        - prior_repeat_withdrawal: discouragement if student has already repeated and failed again
         """
         mods = self.config.get("modifiers", {})
         scale = float(self.config.get("trait_modifier_scale", 10))
@@ -124,6 +130,13 @@ class ProgressionSystem:
             log_odds += mods.get("performance_withdrawal", 0) * max(0, avg_mark - 50)
             if significant_disability:
                 log_odds += mods.get("significant_disability_withdrawal", 0)
+            # Investment effect: year-in-programme shifts withdrawal likelihood after fail
+            if not passed:
+                yr_mods = self.config.get("year_withdrawal_after_fail", {})
+                log_odds += float(yr_mods.get(programme_year, yr_mods.get(str(programme_year), 0.0)))
+            # Discouragement: having already repeated and failed again
+            if has_prior_repeat and not passed:
+                log_odds += float(self.config.get("prior_repeat_withdrawal", 0.0))
 
         return float(np.clip(_inv_log_odds(log_odds), 0.01, 0.99))
 
@@ -132,6 +145,8 @@ class ProgressionSystem:
         passed: bool,
         student: pd.Series,
         avg_mark: float,
+        programme_year: int = 1,
+        has_prior_repeat: bool = False,
     ) -> str:
         """
         Decide status for next year: 'enrolled' (progressed), 'repeating', or 'withdrawn'.
@@ -142,19 +157,20 @@ class ProgressionSystem:
         base_with_fail = self.config.get("base_withdrawal_after_fail", 0.40)
 
         if passed:
-            p_progress = self._apply_modifiers(base_prog, student, True, avg_mark, "progression")
-            p_withdraw = self._apply_modifiers(base_with_pass, student, True, avg_mark, "withdrawal")
-            p_progress = p_progress * (1.0 - p_withdraw)  # normalize
-            p_withdraw = p_withdraw
-            p_repeat = 0.0
+            p_progress = self._apply_modifiers(base_prog, student, True, avg_mark, "progression",
+                                               programme_year=programme_year)
+            p_withdraw = self._apply_modifiers(base_with_pass, student, True, avg_mark, "withdrawal",
+                                               programme_year=programme_year)
             total = p_progress + p_withdraw
             p_progress /= total
             p_withdraw /= total
             choices = ["enrolled", "withdrawn"]
             probs = [p_progress, p_withdraw]
         else:
-            p_repeat = self._apply_modifiers(base_rep, student, False, avg_mark, "repeat")
-            p_withdraw = self._apply_modifiers(base_with_fail, student, False, avg_mark, "withdrawal")
+            p_repeat = self._apply_modifiers(base_rep, student, False, avg_mark, "repeat",
+                                             programme_year=programme_year)
+            p_withdraw = self._apply_modifiers(base_with_fail, student, False, avg_mark, "withdrawal",
+                                               programme_year=programme_year, has_prior_repeat=has_prior_repeat)
             total = p_repeat + p_withdraw
             p_repeat /= total
             p_withdraw /= total
@@ -169,6 +185,7 @@ class ProgressionSystem:
         enrolled_df: pd.DataFrame,
         academic_year: str = "1046-47",
         status_change_at: str = "1047-09-01",
+        prior_progression_df: Optional[pd.DataFrame] = None,
     ) -> pd.DataFrame:
         """
         Compute progression outcomes for all students.
@@ -178,11 +195,21 @@ class ProgressionSystem:
             enrolled_df: stonegrove_enrolled_students.csv (for traits)
             academic_year: current academic year
             status_change_at: date when new status takes effect (start of next year)
+            prior_progression_df: all progression outcomes from prior years (for repeat history).
+                If provided, students who have ever had status='repeating' get a higher
+                withdrawal probability on subsequent fails (discouragement effect).
 
         Returns:
             DataFrame with: student_id, academic_year, year_outcome, status, status_change_at,
             programme_year (for next year), avg_mark, modules_passed, modules_total
         """
+        # Build prior repeat lookup: student_id -> has ever had status='repeating' before this year
+        prior_repeat_sids: set = set()
+        if prior_progression_df is not None and not prior_progression_df.empty:
+            repeaters = prior_progression_df[
+                prior_progression_df['status'] == 'repeating'
+            ]['student_id'].astype(str).unique()
+            prior_repeat_sids = set(repeaters)
         if assessment_df.empty:
             return pd.DataFrame()
 
@@ -239,6 +266,7 @@ class ProgressionSystem:
             passed = row.year_outcome == "pass"
             avg_mark = row.avg_mark
             programme_year = int(getattr(row, "programme_year", 1))
+            has_prior_repeat = sid in prior_repeat_sids
 
             student = student_lookup.loc[sid] if sid in student_lookup.index else pd.Series()
 
@@ -246,7 +274,9 @@ class ProgressionSystem:
             if programme_year == 3 and passed:
                 status = "graduated"
             else:
-                status = self._decide_outcome(passed, student, avg_mark)
+                status = self._decide_outcome(passed, student, avg_mark,
+                                              programme_year=programme_year,
+                                              has_prior_repeat=has_prior_repeat)
 
             # programme_year for next year: 2 if progressed, 1 if repeating, None if withdrawn/graduated
             if status == "graduated":
