@@ -18,6 +18,8 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ### High severity
 
+- [ ] **BUG: Clan assessment modifier not wired in** (`assessment_system.py:_get_clan_modifier`) — method returns 1.0 always. Config values exist in `config/archive/clan_assessment_modifiers.csv` and should be loaded at init and applied in `generate_mark()`. Restoring this will make clan a live factor in mark generation (awarding gap work depends on it).
+
 - [ ] **BUG: Continuing students assessed on year-1 modules regardless of programme_year** (`assessment_system.py`) — dim_modules year distribution shows {1: 96, 2: 34, 3: 1} when it should be ~96/131/126. Year 2/3 students are getting year-1 module assessments. Affects all downstream analysis of progression and awarding gaps across years.
 
 ### Medium severity
