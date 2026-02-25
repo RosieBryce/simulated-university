@@ -16,9 +16,9 @@ import yaml
 
 # Load config files
 with open('config/clan_personality_specifications.yaml', 'r', encoding='utf-8') as f:
-    CLAN_SPEC = yaml.safe_load(f)["clans"]
-with open('config/disability_distribution.yaml', 'r', encoding='utf-8') as f:
-    DISABILITY_DIST = yaml.safe_load(f)
+    _clan_spec_full = yaml.safe_load(f)
+CLAN_SPEC = _clan_spec_full["clans"]
+CLAN_HEALTH = _clan_spec_full.get("health_tendencies", {})
 
 # Load clan socioeconomic distributions
 _ses_df = pd.read_csv('config/clan_socioeconomic_distributions.csv')
@@ -60,11 +60,12 @@ def sample_socio_economic_rank(clan):
         probs = [1/8] * 8
     return np.random.choice(list(range(1, 9)), p=probs)
 
-def sample_disabilities(species):
+def sample_disabilities(clan):
     """Sample disabilities using independent Bernoulli draws per disability.
+    Uses clan-specific prevalence rates from health_tendencies in clan_personality_specifications.yaml.
     Students can have multiple disabilities (comorbidities).
     If none are drawn, returns ['no_known_disabilities']."""
-    dist = DISABILITY_DIST[species]
+    dist = CLAN_HEALTH.get(clan, {})
     disabilities = [k for k, p in dist.items() if np.random.rand() < p]
     if not disabilities:
         disabilities = ['no_known_disabilities']
@@ -109,7 +110,7 @@ def generate_students(n=500, seed=42):
         gender = name_gen._determine_gender(clan)  # uses clan-specific rules from clan_name_pools.yaml
         name = name_gen.generate_name(clan, gender)
         base_personality = sample_base_personality(clan)
-        disabilities = sample_disabilities(species)
+        disabilities = sample_disabilities(clan)
         socio_economic_rank = sample_socio_economic_rank(clan)
         education = sample_education(clan)
         age = sample_age()
