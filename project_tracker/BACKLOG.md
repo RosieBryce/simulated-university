@@ -50,7 +50,6 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **Create progression_system.py** – pass/fail per module; year outcome (all modules ≥ 40); progression/repeat/withdrawal (student-level, emergent from marks + traits + motivation). Includes modifiers for significant disability, caring responsibilities (when field exists).
 - [x] **Add config/year_progression_rules.yaml** – base probabilities + individual modifiers.
 - [x] **Progression: withdrawal-after-fail logic** – Done: year investment effect (`year_withdrawal_after_fail`: Y1 +0.35, Y2 -0.25, Y3 -0.55) and prior repeat discouragement (`prior_repeat_withdrawal`: +0.45) wired in `config/year_progression_rules.yaml`.
-- [ ] **Add caring_responsibilities to student model** – for progression modifier (other stuff going on). Note: dead code removed from `_apply_modifiers` in progression_system.py; must be added to student generation *first* before re-introducing the progression modifier.
 - [x] **Update enrollment system** – handle multiple years; one row per student per academic_year; add `status` (enrolled/repeating/withdrawn/graduated), `status_change_at`, `programme_year`.
 - [x] **Rename output** – `stonegrove_enrolled_students.csv` → `stonegrove_enrollment.csv` (per DESIGN: one row per student per academic year).
 - [x] **Add `academic_year`** – calendar format ("1046-47", …) to all domain tables (enrollment, weekly engagement, assessment events).
@@ -74,10 +73,6 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **Update DATA_IO_PLAN.md** – Updated for 7-year flow, all config/output files, data flow diagram.
 - [x] SCHEMA.md, CALCULATIONS.md – Updated: progression_outcomes table added, all assessment modifiers current, awarding gap section, enrollment formula updated.
 - [x] Update README.md – Rewritten: current project structure, config files, output files, documentation links.
-
-## Validation (DESIGN Success Criteria)
-- [ ] **Metaanalysis / validate_model_outputs.py** – internal checks: progression rates (e.g. 80–90% Y1→Y2), withdrawal (5–15%), grade distributions, awarding gaps visible.
-- [ ] No analyst-facing assessment config (internal only).
 
 ## Optional / nice-to-have
 - [ ] **Config path constant** – shared `paths.py` or env for `data/`, `config/`, `visualizations/`.
@@ -106,22 +101,12 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 ## Awarding gap (agent-level emergence)
 - [x] **Design awarding gap to emerge from individual-level factors** – Done: ~8.8pp Elf > Dwarf gap from clan-specific SES/education distributions, weighted clan recruitment, steeper modifiers. See DESIGN_DECISIONS.md.
 - [x] **Tune SES/education distributions by species or clan** – Done: `config/clan_socioeconomic_distributions.csv` with per-clan SES rank probabilities and education background distributions.
-- [ ] **Validate emergent gap** – metaanalysis script to check: are there visible awarding gaps by species? By clan? By SES? Are they realistic in magnitude? Can an analyst trace them to underlying factors?
-- [ ] **Gender awarding gap** – male students often underperform females in real data. Currently gender has no effect on marks. Could add gender-differentiated engagement patterns or a small modifier. Should emerge from behaviour (e.g., engagement patterns) not a direct mark modifier.
-- [ ] **Tune disability modifiers** – current values (all ≤1.0) represent a university without fully embedded reasonable adjustments. Real-world disability gap has largely closed through curriculum-embedded adjustments. Decide what story Stonegrove tells: good support (modifiers ~1.0) or barriers still present (current values). Some neurodivergent conditions may confer strengths in specific assessment types.
-- [ ] **Engagement system as gap amplifier** – engagement already modifies marks (0.88–1.12). Widening the band, adding realistic weekly variation (bad weeks, exam stress), or making engagement more sensitive to SES/personality would amplify compounding effects over years.
+- [x] **Engagement system as gap amplifier** – engagement already modifies marks (0.88–1.12). Widening the band, adding realistic weekly variation (bad weeks, exam stress), or making engagement more sensitive to SES/personality would amplify compounding effects over years.
 
-## Later
-- [ ] **Status rolls at start of each academic year** – optional later phase: roll for statuses like 'family thing happening',or 'suddenly more time' -- randome chance events roll?
-- [ ] Support services, interventions, extra-curriculars.
-- [ ] Case study extraction tools (phase N).
 
 ---
 
 ## What's next (after progression + longitudinal)
 
 1. **5 cohorts × 7 years loop** – full longitudinal simulation.
-2. **Enrollment/output restructure** – `stonegrove_enrollment.csv`, `academic_year` everywhere, `status_change_at`.
-3. **Validation scripts** – metaanalysis to check progression/withdrawal rates, grade distributions.
-4. **USER_GUIDE.md** – run pipeline, read data.
-5. **Interventions phase** – support services, extra-curriculars (later).
+2. **USER_GUIDE.md** – run pipeline, read data.

@@ -30,21 +30,11 @@
 ### 1. Module trailing
 Students who pass the year overall but have one module < 40 trail it as a RESIT in the following year. Complex: touches `progression_system.py` (detect trailing modules), `assessment_system.py` (generate RESIT rows), `docs/SCHEMA.md`. See backlog for full spec.
 
-### 2. `caring_responsibilities` in student model
-Add field to `student_generation_pipeline.py` first, then re-introduce the progression modifier in `_apply_modifiers`. Currently dead code (removed from progression; field never generated).
-
 ### 3. Status rolls / life events
-Optional random events at year start (e.g. family crisis, sudden free time). See backlog.
+Optional random events at year start (e.g. family crisis, sudden free time). 
 
 ---
 
 ## Blocked
 
 (none)
-
-## Design decisions (standing)
-
-- **No direct clan mark modifier** — `config/archive/clan_assessment_modifiers.csv` archived; gaps must emerge from SES/education/disability. Do not re-wire.
-- **No caring_responsibilities in progression** — field not generated; removed from modifier code. Add to student generation *first* before re-introducing the progression modifier.
-- **Gender gap flat** — intentional; do not add direct gender modifier.
-- **12-week engagement arc per module** — not split by semester; `semester` column = module assignment only.
