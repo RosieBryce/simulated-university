@@ -62,29 +62,26 @@ class ClanNameGenerator:
         return np.random.choice(names, p=normalized_weights)
     
     def _determine_gender(self, clan_key: str) -> str:
-        """Determine gender for a student based on clan and settings"""
-        # Get base gender distribution
-        gender_dist = self.settings.get('gender_distribution', {
+        """Determine gender for a student based on clan and settings.
+        Uses clan-specific overrides from clan_name_pools.yaml if defined."""
+        # Copy so clan-specific modifications don't mutate the shared settings dict
+        gender_dist = dict(self.settings.get('gender_distribution', {
             'male': 0.45,
             'female': 0.45,
-            'neuter': 0.10
-        })
-        
+            'neuter': 0.10,
+        }))
+
         # Apply clan-specific rules
         clan_rules = self.settings.get('rules', {}).get('clan_specific_rules', {})
         if clan_key in clan_rules:
             clan_rule = clan_rules[clan_key]
-            
-            # Adjust neuter probability for specific clans
             if 'neuter_probability' in clan_rule:
                 neuter_prob = clan_rule['neuter_probability']
-                # Redistribute probabilities
-                remaining_prob = 1.0 - neuter_prob
+                remaining = 1.0 - neuter_prob
                 gender_dist['neuter'] = neuter_prob
-                gender_dist['male'] = remaining_prob * 0.5
-                gender_dist['female'] = remaining_prob * 0.5
-        
-        # Make weighted choice
+                gender_dist['male']   = remaining * 0.5
+                gender_dist['female'] = remaining * 0.5
+
         genders = list(gender_dist.keys())
         weights = list(gender_dist.values())
         return np.random.choice(genders, p=weights)

@@ -1,0 +1,446 @@
+# ============================================================
+# Personality Refinement Modifiers — Stonegrove University
+#
+# Additive adjustments applied to base personality traits (0–1 scale).
+# Traits: openness, conscientiousness, extraversion, agreeableness,
+#   neuroticism, academic_curiosity, perfectionism, resilience,
+#   leadership_tendency, social_anxiety, extra_curricular_propensity,
+#   career_ambition, community_engagement
+# ============================================================
+
+
+# ------------------------------------------------------------
+# DISABILITY MODIFIERS
+#
+# Structure:
+#   defaults — applied to all clans unless overridden
+#   clan_overrides — per-clan overrides; only listed traits replace
+#                    the default; all others remain as default
+#
+# Rationale for clan_overrides:
+#   Better-resourced clans (higher SES base, strong institutional culture)
+#   have more embedded support — reasonable adjustments, peer networks,
+#   specialist staff — so the same disability carries lower academic burden.
+#   Lower-resource clans face compounding barriers.
+#
+#   High-support clans: granite, bismuth, obsidian (Dwarves)
+#                       baobab, yew, holly (Elves)
+#   Low-support clans:  flint, alabaster, sandstone, palm
+# ------------------------------------------------------------
+
+disability_modifiers:
+
+  defaults:
+    autistic_spectrum:
+      openness: 0.0
+      conscientiousness: 0.1      # attention to detail
+      extraversion: -0.2          # more introverted
+      agreeableness: 0.0
+      neuroticism: 0.0
+      academic_curiosity: 0.15    # deep interests
+      perfectionism: 0.2          # attention to detail
+      resilience: 0.0
+      leadership_tendency: -0.1
+      social_anxiety: 0.2         # social challenges
+      extra_curricular_propensity: -0.1
+      career_ambition: 0.0
+      community_engagement: -0.1
+
+    adhd:
+      openness: 0.1               # creative thinking
+      conscientiousness: -0.15    # organisation challenges
+      extraversion: 0.1
+      agreeableness: 0.0
+      neuroticism: 0.1
+      academic_curiosity: 0.1
+      perfectionism: -0.15
+      resilience: 0.0
+      leadership_tendency: 0.0
+      social_anxiety: -0.1
+      extra_curricular_propensity: 0.1
+      career_ambition: 0.0
+      community_engagement: 0.0
+
+    mental_health_disability:
+      openness: -0.1
+      conscientiousness: -0.1
+      extraversion: -0.2
+      agreeableness: 0.0
+      neuroticism: 0.3            # higher anxiety/depression
+      academic_curiosity: -0.1
+      perfectionism: 0.1          # perfectionism as coping
+      resilience: -0.2
+      leadership_tendency: -0.2
+      social_anxiety: 0.3
+      extra_curricular_propensity: -0.2
+      career_ambition: -0.1
+      community_engagement: -0.2
+
+    physical_disability:
+      openness: 0.0
+      conscientiousness: 0.0
+      extraversion: 0.0
+      agreeableness: 0.0
+      neuroticism: 0.1
+      academic_curiosity: 0.0
+      perfectionism: 0.0
+      resilience: 0.2             # adaptation builds resilience
+      leadership_tendency: 0.0
+      social_anxiety: -0.1        # adaptation reduces anxiety
+      extra_curricular_propensity: -0.1
+      career_ambition: 0.0
+      community_engagement: 0.0
+
+    specific_learning_disability:
+      openness: 0.0
+      conscientiousness: -0.1
+      extraversion: 0.0
+      agreeableness: 0.0
+      neuroticism: 0.1
+      academic_curiosity: -0.1    # reduced confidence
+      perfectionism: 0.1          # overcompensation
+      resilience: 0.1
+      leadership_tendency: -0.1
+      social_anxiety: 0.1
+      extra_curricular_propensity: 0.0
+      career_ambition: -0.1
+      community_engagement: 0.0
+
+    dyslexia:
+      openness: 0.0
+      conscientiousness: -0.05
+      extraversion: 0.0
+      agreeableness: 0.0
+      neuroticism: 0.05
+      academic_curiosity: -0.05
+      perfectionism: 0.1          # overcompensation
+      resilience: 0.1
+      leadership_tendency: 0.0
+      social_anxiety: 0.05
+      extra_curricular_propensity: 0.0
+      career_ambition: 0.0
+      community_engagement: 0.0
+
+    communication_difficulties:
+      openness: 0.0
+      conscientiousness: 0.0
+      extraversion: -0.15
+      agreeableness: 0.0
+      neuroticism: 0.1
+      academic_curiosity: 0.0
+      perfectionism: 0.0
+      resilience: 0.1
+      leadership_tendency: -0.15
+      social_anxiety: 0.2
+      extra_curricular_propensity: -0.1
+      career_ambition: -0.1
+      community_engagement: -0.1
+
+  clan_overrides:
+    # Overrides merge with defaults: only listed traits replace the default value.
+    # Rationale is lore-driven (clan environment, culture, support structures)
+    # not purely SES — see World-building/Clan summaries/ for source material.
+
+    # ---- DWARF CLANS ----
+
+    # Flint — volcanic forge work, molten pockets, explosion risk, heavy scarring
+    # Physical injury is common and survivable; culture valorises resilience through
+    # extreme adversity. Mental health expressed through confrontational defiance,
+    # not suppressed — some outlet exists even without formal support.
+    flint:
+      physical_disability:
+        resilience: 0.25            # forge injury survival builds extreme resilience (default 0.20)
+        extra_curricular_propensity: -0.15  # physical limits more severe in forge contexts (default -0.10)
+      mental_health_disability:
+        neuroticism: 0.28           # heat-culture allows some expression; not fully suppressed (default 0.30)
+
+    # Alabaster — chalk dust, unstable quarries, subsidence, crumbling infrastructure
+    # "Care as defiance" is a core value — community solidarity despite scarcity.
+    # Physical conditions create respiratory and skeletal risk; but community holds people.
+    alabaster:
+      physical_disability:
+        neuroticism: 0.15           # chronic unstable environment raises background anxiety (default 0.10)
+      mental_health_disability:
+        community_engagement: -0.10 # solidarity maintained — care as defiance (default -0.20)
+
+    # Granite — high cold peaks, stoic endurance culture, suffering in silence
+    # Stone Ledger records failures alongside deeds; psychological struggle is shame.
+    # Disability help-seeking culturally suppressed — conditions worsen silently.
+    granite:
+      mental_health_disability:
+        neuroticism: 0.35           # stoicism suppresses help-seeking; conditions silently worsen (default 0.30)
+        resilience: -0.25           # no framework for acknowledged recovery (default -0.20)
+        social_anxiety: 0.35        # shame around psychological struggle (default 0.30)
+
+    # Malachite — thermal vents, cooperative craftsmanship, collective resonance
+    # Community balance is a spiritual and social value. Mental health held collectively.
+    malachite:
+      mental_health_disability:
+        neuroticism: 0.22           # strong community care softens anxiety (default 0.30)
+        resilience: -0.12           # recovery supported through collective resonance (default -0.20)
+        community_engagement: -0.10 # community actively holds struggling members (default -0.20)
+
+    # Bismuth — scholarly, meticulous, structured academic tradition
+    # Organised and methodical culture provides scaffolding; study support embedded.
+    bismuth:
+      mental_health_disability:
+        neuroticism: 0.24
+        resilience: -0.14
+      adhd:
+        conscientiousness: -0.10    # structured academic scaffolding helps (default -0.15)
+
+    # Slate — wind-scoured plateaus, minimalism, "every scar is testimony"
+    # Similar endurance culture to Granite; slightly more mutual recognition between
+    # shardbound kin. Still valorises silence and stoic endurance.
+    slate:
+      mental_health_disability:
+        neuroticism: 0.32           # endurance narratives suppress help-seeking (default 0.30)
+        resilience: -0.22           # limited recovery frameworks (default -0.20)
+
+    # Sandstone — open terrain, communal wisdom, conflict resolved through storytelling
+    # One of the more communally supportive dwarf clans; parable and voice hold people.
+    sandstone:
+      mental_health_disability:
+        neuroticism: 0.24           # communal storytelling reduces isolation (default 0.30)
+        resilience: -0.14           # recovery supported through parable and community (default -0.20)
+        community_engagement: -0.12 # storytelling community holds people in (default -0.20)
+
+    # Obsidian — deep volcanic tunnels, silence as etiquette, Mirrorwake self-reflection
+    # Autistic traits (preference for quiet, ritual structure, introspection) align
+    # strongly with clan culture. Stillcasting and echo-chamber rituals suit structured
+    # internal processing.
+    obsidian:
+      autistic_spectrum:
+        social_anxiety: 0.10        # silence valued; autistic traits fit cultural norms (default 0.20)
+        extra_curricular_propensity: 0.0   # ritual participation suits deep focus (default -0.10)
+        community_engagement: 0.0   # ritual community structure is accessible (default -0.10)
+      mental_health_disability:
+        neuroticism: 0.25           # Mirrorwake provides structured emotional processing (default 0.30)
+
+    # ---- ELF CLANS ----
+
+    # Ash — windswept steppe, nomadic, lightning fires, Trial of Smoke
+    # Action-verb language, restlessness, reinvention as identity. ADHD traits align
+    # with clan culture — high energy is valued and channelled, not pathologised.
+    # Fire and smoke exposure create physical risk; survival builds resilience.
+    ash:
+      adhd:
+        conscientiousness: -0.10    # restless culture accommodates ADHD energy (default -0.15)
+        extra_curricular_propensity: 0.15  # high energy channelled and valued (default 0.10)
+        social_anxiety: -0.15       # warrior-poet confidence reduces social anxiety (default -0.10)
+      physical_disability:
+        resilience: 0.25            # smoke/fire survival builds extreme resilience (default 0.20)
+
+    # Baobab — elevated canopy, rhetorical competition, perfectionism, gatekeeping
+    # High cognitive demands reward autistic deep focus and layered thinking.
+    # But competitive gatekeeping makes SpLD and ADHD more burdensome — less tolerance
+    # for non-linear or slow processing.
+    baobab:
+      autistic_spectrum:
+        academic_curiosity: 0.20    # deep focus rewarded in rhetorical culture (default 0.15)
+        perfectionism: 0.25         # clan perfectionism aligns with autistic trait (default 0.20)
+      specific_learning_disability:
+        academic_curiosity: -0.15   # competitive gatekeeping is harder for SpLD students (default -0.10)
+      adhd:
+        conscientiousness: -0.20    # high rhetorical demands worsen ADHD disorganisation (default -0.15)
+
+    # Holly — frost woodland, healers and wardens, Berry Vigil remembrance
+    # Some intentional care structures; protection of the weak is a value.
+    # But trauma and grief are valorised and held long — mental health support is
+    # present but not transformative.
+    holly:
+      autistic_spectrum:
+        social_anxiety: 0.15        # intentionality and precision valued; some fit (default 0.20)
+      mental_health_disability:
+        neuroticism: 0.25           # healer tradition provides some support (default 0.30)
+        resilience: -0.15           # moderate recovery structures in place (default -0.20)
+
+    # Palm — coastal displacement, monsoons, masking as cultural survival strategy
+    # Learn early to perform joy while not feeling it. Disability burden compounded
+    # by expectation of emotional performance; autistic students face particular burden
+    # in a culture where masking is expected and admired.
+    palm:
+      mental_health_disability:
+        neuroticism: 0.35           # masking compounds mental health burden (default 0.30)
+        social_anxiety: 0.35        # performance expectation compounds anxiety (default 0.30)
+        extra_curricular_propensity: -0.25  # exhaustion from sustained masking (default -0.20)
+      autistic_spectrum:
+        social_anxiety: 0.30        # masking culture especially hard for autistic students (default 0.20)
+
+    # Rowan — warm hearth culture, apothecaries and hearth-priests at community centre
+    # Strongest mental health support of any clan. Caretaking is not peripheral but
+    # structurally central. Emotional expression required and honoured.
+    rowan:
+      mental_health_disability:
+        neuroticism: 0.18           # caretakers embedded in community reduce burden (default 0.30)
+        resilience: -0.08           # strong recovery support structures (default -0.20)
+        community_engagement: -0.05 # community actively maintains inclusion (default -0.20)
+      autistic_spectrum:
+        community_engagement: -0.05 # warm structured community accessible (default -0.10)
+
+    # Yew — mist-forest, ritual ceremony, ancestral memory, soul-scribes
+    # Structured ritual communication suits neurodivergent processing. Death-keeper
+    # role involves precision, repetition, and ceremony — autistic deep engagement fits.
+    # Ancestral care traditions provide a framework for mental health recovery.
+    yew:
+      autistic_spectrum:
+        social_anxiety: 0.12        # ritual structure reduces social unpredictability (default 0.20)
+        extra_curricular_propensity: 0.0   # ceremonial participation suits deep engagement (default -0.10)
+      mental_health_disability:
+        neuroticism: 0.23           # ancestral care traditions provide recovery framework (default 0.30)
+        resilience: -0.14           # ritual structures support recovery (default -0.20)
+
+
+# ------------------------------------------------------------
+# SOCIO-ECONOMIC MODIFIERS
+# Ranks 1–2: high class  |  3–6: middle class  |  7–8: low class
+# ------------------------------------------------------------
+
+socio_economic_modifiers:
+  high_class:
+    openness: 0.1
+    conscientiousness: 0.0
+    extraversion: 0.1
+    agreeableness: 0.0
+    neuroticism: -0.1
+    academic_curiosity: 0.15
+    perfectionism: 0.1
+    resilience: -0.1
+    leadership_tendency: 0.1
+    social_anxiety: -0.1
+    extra_curricular_propensity: 0.1
+    career_ambition: 0.15
+    community_engagement: 0.0
+
+  middle_class:
+    openness: 0.0
+    conscientiousness: 0.0
+    extraversion: 0.0
+    agreeableness: 0.0
+    neuroticism: 0.0
+    academic_curiosity: 0.0
+    perfectionism: 0.0
+    resilience: 0.0
+    leadership_tendency: 0.0
+    social_anxiety: 0.0
+    extra_curricular_propensity: 0.0
+    career_ambition: 0.0
+    community_engagement: 0.0
+
+  low_class:
+    openness: -0.05
+    conscientiousness: 0.0
+    extraversion: -0.05
+    agreeableness: 0.0
+    neuroticism: 0.1
+    academic_curiosity: -0.1
+    perfectionism: -0.05
+    resilience: 0.15
+    leadership_tendency: -0.05
+    social_anxiety: 0.1
+    extra_curricular_propensity: -0.1
+    career_ambition: -0.1
+    community_engagement: 0.1
+
+
+# ------------------------------------------------------------
+# EDUCATION MODIFIERS
+# ------------------------------------------------------------
+
+education_modifiers:
+  academic:
+    openness: 0.1
+    conscientiousness: 0.1
+    extraversion: 0.0
+    agreeableness: 0.0
+    neuroticism: 0.0
+    academic_curiosity: 0.2
+    perfectionism: 0.1
+    resilience: 0.0
+    leadership_tendency: 0.1
+    social_anxiety: -0.05
+    extra_curricular_propensity: 0.1
+    career_ambition: 0.1
+    community_engagement: 0.0
+
+  vocational:
+    openness: 0.0
+    conscientiousness: 0.1
+    extraversion: 0.0
+    agreeableness: 0.0
+    neuroticism: 0.0
+    academic_curiosity: 0.05
+    perfectionism: 0.05
+    resilience: 0.1
+    leadership_tendency: 0.05
+    social_anxiety: 0.0
+    extra_curricular_propensity: 0.0
+    career_ambition: 0.05
+    community_engagement: 0.05
+
+  no_qualifications:
+    openness: -0.05
+    conscientiousness: 0.0
+    extraversion: 0.0
+    agreeableness: 0.0
+    neuroticism: 0.05
+    academic_curiosity: -0.1
+    perfectionism: -0.05
+    resilience: 0.1
+    leadership_tendency: -0.05
+    social_anxiety: 0.1
+    extra_curricular_propensity: -0.05
+    career_ambition: -0.05
+    community_engagement: 0.05
+
+
+# ------------------------------------------------------------
+# AGE MODIFIERS
+# young: 18–19  |  mature: 20–22  |  older: 23–25
+# ------------------------------------------------------------
+
+age_modifiers:
+  young:
+    openness: 0.1
+    conscientiousness: -0.05
+    extraversion: 0.1
+    agreeableness: 0.0
+    neuroticism: 0.05
+    academic_curiosity: 0.05
+    perfectionism: -0.05
+    resilience: -0.05
+    leadership_tendency: -0.05
+    social_anxiety: 0.1
+    extra_curricular_propensity: 0.1
+    career_ambition: 0.05
+    community_engagement: 0.05
+
+  mature:
+    openness: 0.0
+    conscientiousness: 0.05
+    extraversion: 0.0
+    agreeableness: 0.0
+    neuroticism: 0.0
+    academic_curiosity: 0.0
+    perfectionism: 0.05
+    resilience: 0.05
+    leadership_tendency: 0.05
+    social_anxiety: 0.0
+    extra_curricular_propensity: 0.0
+    career_ambition: 0.0
+    community_engagement: 0.0
+
+  older:
+    openness: -0.05
+    conscientiousness: 0.1
+    extraversion: -0.05
+    agreeableness: 0.0
+    neuroticism: -0.05
+    academic_curiosity: 0.05
+    perfectionism: 0.1
+    resilience: 0.1
+    leadership_tendency: 0.1
+    social_anxiety: -0.05
+    extra_curricular_propensity: -0.05
+    career_ambition: 0.1
+    community_engagement: 0.05

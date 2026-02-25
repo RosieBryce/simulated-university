@@ -93,10 +93,6 @@ def sample_species_and_clan():
     clan = np.random.choice(clans, p=weights)
     return species, clan
 
-def sample_gender():
-    # 45% male, 45% female, 10% neuter
-    return np.random.choice(['male', 'female', 'neuter'], p=[0.45, 0.45, 0.1])
-
 def sample_base_personality(clan):
     spec = CLAN_SPEC[clan]['personality_ranges']
     return {k: float(np.random.uniform(v[0], v[1])) for k, v in spec.items()}
@@ -110,15 +106,16 @@ def generate_students(n=500, seed=42):
     students = []
     for i in range(n):
         species, clan = sample_species_and_clan()
-        gender = sample_gender()
+        gender = name_gen._determine_gender(clan)  # uses clan-specific rules from clan_name_pools.yaml
         name = name_gen.generate_name(clan, gender)
         base_personality = sample_base_personality(clan)
         disabilities = sample_disabilities(species)
         socio_economic_rank = sample_socio_economic_rank(clan)
         education = sample_education(clan)
         age = sample_age()
-        # Refine personality
+        # Refine personality — clan passed so disability modifiers use clan-specific values
         characteristics = {
+            'clan': clan,
             'disabilities': disabilities,
             'socio_economic_rank': socio_economic_rank,
             'education': education,
