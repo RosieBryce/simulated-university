@@ -2181,7 +2181,13 @@ settings:
   rules:
     clan_specific_rules:
       alabaster:
-        neuter_probability: 0.2
+        neuter_probability: 0.12   # slightly elevated neuter
+      obsidian:
+        neuter_probability: 0.12   # worship Durren, a genderless deity -> slightly higher neuter
+      slate:
+        neuter_probability: 0.12   # same deity as obsidian (Durren, silent genderless guardian)
+      yew:
+        neuter_probability: 0.11   # androgynous aesthetic tradition among Yew elves
       baobab:
         formal_name_bias: 0.8
       palm:

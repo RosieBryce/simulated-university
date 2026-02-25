@@ -75,7 +75,13 @@ class ClanNameGenerator:
         clan_rules = self.settings.get('rules', {}).get('clan_specific_rules', {})
         if clan_key in clan_rules:
             clan_rule = clan_rules[clan_key]
-            if 'neuter_probability' in clan_rule:
+            if 'gender_distribution' in clan_rule:
+                # Full override: any male/female/neuter split can be specified
+                raw = clan_rule['gender_distribution']
+                total = sum(float(v) for v in raw.values())
+                gender_dist = {k: float(v) / total for k, v in raw.items()}
+            elif 'neuter_probability' in clan_rule:
+                # Shorthand: set neuter, split remainder evenly male/female
                 neuter_prob = clan_rule['neuter_probability']
                 remaining = 1.0 - neuter_prob
                 gender_dist['neuter'] = neuter_prob
