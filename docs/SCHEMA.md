@@ -1,7 +1,7 @@
 # Stonegrove University Data Schema
 
 **Last Updated**: 25 February 2026
-**Version**: 2.1 (Semester Structure + Two Assessment Components)
+**Version**: 2.2 (Semester Structure + Two Assessment Components + Graduate Outcomes + NSS)
 
 This document describes all CSV output files and their column definitions.
 
@@ -197,6 +197,36 @@ This document describes all CSV output files and their column definitions.
 - `degree_classification` uses UK standard weighting: Year 1 excluded, Year 2 = 1/3, Year 3 = 2/3
 - SES gradient on `professional_level` and `salary_band` is intentional (social capital effect)
 - `employment_sector` values are mapped from faculty: see `config/graduate_outcomes.yaml`
+
+---
+
+### `stonegrove_nss_responses.csv`
+
+**Purpose**: NSS-style satisfaction survey responses. One row per final-year (programme_year == 3) student per academic year, including students repeating their final year.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `student_id` | string | Persistent unique identifier |
+| `academic_year` | string | Academic year the survey was taken |
+| `programme_code` | string | Programme code |
+| `programme_year` | integer | Always 3 (final year only) |
+| `is_repeat_year` | boolean | True if student is repeating Year 3 |
+| `teaching_quality` | integer | Score 1–5 |
+| `learning_opportunities` | integer | Score 1–5 |
+| `assessment_feedback` | integer | Score 1–5 (historically lowest theme) |
+| `academic_support` | integer | Score 1–5 |
+| `organisation_management` | integer | Score 1–5 |
+| `learning_resources` | integer | Score 1–5 |
+| `student_voice` | integer | Score 1–5 (typically low; students feel less heard) |
+| `overall_satisfaction` | integer | Score 1–5 (weighted blend, not simple average) |
+
+**Notes**:
+- `% positive` = proportion scoring 4 or 5 (standard NSS reporting convention)
+- Scores modelled from: base score + engagement signal + mark signal (A&F) + SES + disability + personality + correlated student bias + independent per-theme noise
+- `overall_satisfaction` is a weighted blend of theme raw scores, not their mean (mirrors real NSS Q27 behaviour)
+- Repeating Yr3 students included; `repeat_year_modifier` lowers overall_satisfaction and organisation_management slightly
+- No direct species/clan modifier — gaps emerge from SES, disability, and personality
+- Config: `config/nss_modifiers.yaml`
 
 ---
 

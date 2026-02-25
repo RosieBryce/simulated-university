@@ -1,0 +1,111 @@
+# NSS (National Student Survey) Response Configuration — Stonegrove University
+# Generates one response per final-year student (programme_year == 3), including repeats.
+# Scores on a 1-5 scale; % positive = proportion scoring >= 4.
+# Real NSS benchmark: most themes sit around 3.5-4.2; assessment & student voice typically lower.
+
+# Base scores (1-5) before individual modifiers
+base_scores:
+  teaching_quality:         3.70
+  learning_opportunities:   3.60
+  assessment_feedback:      3.30   # historically the lowest-scoring NSS theme
+  academic_support:         3.50
+  organisation_management:  3.40
+  learning_resources:       3.65
+  student_voice:            3.20   # typically lowest; students feel less heard
+  overall_satisfaction:     3.60
+
+# Per-theme engagement drivers
+# Applied as: weight * (engagement_value - 0.5)  [engagement is 0-1 scale, centre at 0.5]
+# Positive weight = higher engagement -> higher score
+engagement_drivers:
+  teaching_quality:
+    academic_engagement:  1.20
+    attendance_rate:      0.60
+  learning_opportunities:
+    academic_engagement:  1.00
+    participation_score:  0.60
+  assessment_feedback:
+    academic_engagement:  0.40
+  academic_support:
+    stress_level:        -1.20   # high stress -> lower satisfaction with support
+    attendance_rate:      0.30
+  organisation_management:
+    stress_level:        -1.00
+    attendance_rate:      0.40
+  learning_resources:
+    social_engagement:    0.40
+    academic_engagement:  0.30
+  student_voice:
+    social_engagement:    0.80
+    participation_score:  0.60
+
+# Mark effect on satisfaction themes (additive per 10pp above/below 60)
+# e.g. avg_mark=70 -> +mark_modifier_per_10pp on that theme
+mark_modifier_per_10pp:
+  assessment_feedback:   0.18   # students who do well rate A&F much higher
+  overall_satisfaction:  0.08
+
+# SES modifiers (additive to all theme scores unless overridden)
+# Lower SES students report lower satisfaction — well-documented in real NSS data
+ses_modifiers:
+  all_themes:
+    1: -0.30
+    2: -0.20
+    3: -0.10
+    4:  0.00
+    5:  0.05
+    6:  0.10
+    7:  0.15
+    8:  0.20
+
+# Disability modifiers (applied if student has any disability)
+disability_modifiers:
+  academic_support:         -0.40
+  organisation_management:  -0.25
+  assessment_feedback:      -0.20
+  overall_satisfaction:     -0.20
+  teaching_quality:         -0.10
+  learning_resources:       -0.10
+
+# Significant disability (2+ disabilities or severe): additional modifier on top of above
+significant_disability_extra:
+  academic_support:        -0.25
+  overall_satisfaction:    -0.15
+  organisation_management: -0.10
+
+# Personality modifiers
+# Applied as: weight * (trait - 0.5)
+agreeableness_all_themes:  0.30   # agreeable students rate everything slightly higher
+neuroticism_all_themes:   -0.35   # neurotic students rate everything slightly lower
+# Theme-specific personality drivers
+personality_theme_drivers:
+  student_voice:
+    refined_extraversion:              0.40
+    motivation_values_based_motivation: 0.30
+  learning_opportunities:
+    motivation_intellectual_curiosity:  0.35
+  academic_support:
+    refined_neuroticism:               -0.20   # more anxious students rate support lower
+
+# Repeat-year modifier: students resitting Yr3 tend to rate slightly lower overall
+# (frustration, disruption to expected timeline)
+repeat_year_modifier:
+  overall_satisfaction:     -0.20
+  organisation_management:  -0.15
+  academic_support:         -0.10
+
+# Noise parameters
+student_bias_std:  0.28   # correlated noise: one value per student, applied to all themes
+                           # models individual response style (systematic over/under-rater)
+theme_noise_std:   0.38   # independent noise per theme per student
+
+# Overall satisfaction is modelled as a weighted blend of theme scores plus own noise,
+# not a simple average (mirrors real NSS where Q27 != mean of theme scores)
+overall_weights:
+  teaching_quality:         0.30
+  learning_opportunities:   0.15
+  assessment_feedback:      0.20
+  academic_support:         0.15
+  organisation_management:  0.10
+  learning_resources:       0.05
+  student_voice:            0.05

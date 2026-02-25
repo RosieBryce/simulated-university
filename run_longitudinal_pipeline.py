@@ -56,12 +56,14 @@ def run_year(
     from core_systems.assessment_system import AssessmentSystem
     from core_systems.progression_system import ProgressionSystem
     from core_systems.graduate_outcomes_system import GraduateOutcomesSystem
+    from core_systems.nss_system import NSSSystem
 
     enrollment_sys = ProgramEnrollmentSystem()
     engagement_sys = EngagementSystem()
     assessment_sys = AssessmentSystem(seed=seed)
     progression_sys = ProgressionSystem(seed=seed)
     outcomes_sys = GraduateOutcomesSystem(seed=seed)
+    nss_sys = NSSSystem(seed=seed)
 
     status_change = _status_change_at(academic_year)
     assessment_date = _assessment_date(academic_year)
@@ -106,7 +108,7 @@ def run_year(
     elif len(new_enrolled) > 0:
         enrolled_df = new_enrolled
     else:
-        return None, None
+        return None, None, None, None, None, None, None
 
     # 2. Engagement (deduplicate columns before passing downstream)
     enrolled_clean = enrolled_df.loc[:, ~enrolled_df.columns.duplicated()] if len(enrolled_df) > 0 else enrolled_df
@@ -144,7 +146,15 @@ def run_year(
         graduates, academic_year=academic_year, all_assessment_df=assessment_df
     )
 
-    return enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df
+    # 6. NSS responses — all programme_year == 3 students (including repeating Yr3)
+    nss_df = nss_sys.generate_responses(
+        enrolled_clean,
+        academic_year=academic_year,
+        weekly_engagement_df=weekly_df,
+        assessment_df=assessment_df,
+    )
+
+    return enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df, nss_df
 
 
 def main():
@@ -160,6 +170,7 @@ def main():
     from core_systems.assessment_system import AssessmentSystem
     from core_systems.progression_system import ProgressionSystem
     from core_systems.graduate_outcomes_system import GraduateOutcomesSystem
+    from core_systems.nss_system import NSSSystem
 
     print("Stonegrove University Longitudinal Pipeline")
     print("=" * 50)
@@ -176,6 +187,7 @@ def main():
     all_individual = []
     all_weekly = []
     all_graduate_outcomes = []
+    all_nss = []
 
     progression_prev = None
     prev_enrolled_df = None
@@ -215,7 +227,7 @@ def main():
             continuing_students = None
 
         # Run pipeline for this year
-        enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df = run_year(
+        enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df, nss_df = run_year(
             acad_year, i, new_students, continuing_students, progression_prev, seed,
             prior_progression_df=accumulated_progression,
         )
@@ -230,13 +242,16 @@ def main():
         all_weekly.append(weekly_df)
         if graduate_outcomes_df is not None and len(graduate_outcomes_df) > 0:
             all_graduate_outcomes.append(graduate_outcomes_df)
+        if nss_df is not None and len(nss_df) > 0:
+            all_nss.append(nss_df)
         progression_prev = progression_df
         prev_enrolled_df = enrolled_df
         # Accumulate all progression outcomes for repeat-history lookup in subsequent years
         accumulated_progression = pd.concat(all_progression, ignore_index=True)
 
         n_grads = len(graduate_outcomes_df) if graduate_outcomes_df is not None else 0
-        print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}, Graduates: {n_grads}")
+        n_nss = len(nss_df) if nss_df is not None else 0
+        print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}, Graduates: {n_grads}, NSS: {n_nss}")
 
     # Concatenate and save — all files overwritten fresh each run
     if all_enrollment:
@@ -266,6 +281,11 @@ def main():
             data_dir / "stonegrove_graduate_outcomes.csv", index=False
         )
         print(f"Saved stonegrove_graduate_outcomes.csv")
+    if all_nss:
+        pd.concat(all_nss, ignore_index=True).to_csv(
+            data_dir / "stonegrove_nss_responses.csv", index=False
+        )
+        print(f"Saved stonegrove_nss_responses.csv")
 
     # Write metadata
     import subprocess
