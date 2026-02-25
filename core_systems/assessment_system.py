@@ -269,10 +269,20 @@ class AssessmentSystem:
             mod_col = f'year{prog_year}_modules'
             modules = _parse_module_list_csv(student.get(mod_col, student.get('year1_modules', '')))
 
+            # Offset code numbering so year-2/3 modules don't collide with year-1 codes
+            y1 = _parse_module_list_csv(student.get('year1_modules', ''))
+            y2 = _parse_module_list_csv(student.get('year2_modules', ''))
+            if prog_year == 2:
+                code_offset = len(y1)
+            elif prog_year == 3:
+                code_offset = len(y1) + len(y2)
+            else:
+                code_offset = 0
+
             for i, module_title in enumerate(modules):
                 if not module_title.strip():
                     continue
-                module_code = f"{program_code}.{i+1:02d}"
+                module_code = f"{program_code}.{code_offset + i + 1:02d}"
                 component_code = "MAIN"
 
                 key = (student_id, module_title.strip())
