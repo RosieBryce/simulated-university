@@ -274,7 +274,10 @@ class ProgramEnrollmentSystem:
         enrollment_df = pd.DataFrame(enrollments)
         # Align dtypes for merge (students_df may have int, enrollment_df has str)
         students_df = students_df.copy()
-        students_df["student_id"] = students_df["student_id"].astype(str)
+        if "student_id" not in students_df.columns:
+            students_df["student_id"] = students_df.index.astype(str)
+        else:
+            students_df["student_id"] = students_df["student_id"].astype(str)
         enrollment_df["student_id"] = enrollment_df["student_id"].astype(str)
         result_df = students_df.merge(enrollment_df, on="student_id", how="left")
         if academic_year:

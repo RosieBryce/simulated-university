@@ -1,0 +1,90 @@
+# Engagement modifiers for Stonegrove University
+# All values are additive adjustments to base engagement metrics (0-1 scale)
+
+# --- Per-disability engagement modifiers ---
+# base: mean shift applied to the engagement baseline
+# std_extra: additional weekly variability added to base noise std (0.12)
+#
+# Keys match disability values in stonegrove_individual_students.csv
+disability_modifiers:
+  mental_health_disability:
+    base: {attendance: -0.08, academic_engagement: -0.06, stress: 0.12}
+    std_extra: 0.06
+
+  adhd:
+    base: {participation: -0.04, academic_engagement: -0.05, stress: 0.08}
+    std_extra: 0.08
+
+  autistic_spectrum:
+    base: {participation: -0.06, social_engagement: -0.08, academic_engagement: 0.04}
+    std_extra: 0.04
+
+  specific_learning_disability:
+    base: {academic_engagement: -0.05, stress: 0.08}
+    std_extra: 0.03
+
+  dyslexia:
+    base: {academic_engagement: -0.04, stress: 0.06}
+    std_extra: 0.02
+
+  physical_disability:
+    base: {attendance: -0.07, stress: 0.05}
+    std_extra: 0.03
+
+  deaf_or_hearing_impaired:
+    base: {participation: -0.05, stress: 0.04}
+    std_extra: 0.02
+
+  blind_or_visually_impaired:
+    base: {academic_engagement: -0.05, stress: 0.05}
+    std_extra: 0.03
+
+  communication_difficulties:
+    base: {participation: -0.07, social_engagement: -0.05}
+    std_extra: 0.03
+
+  other_neurodivergence:
+    base: {stress: 0.05}
+    std_extra: 0.04
+
+  wheelchair_user:
+    base: {attendance: -0.04, stress: 0.04}
+    std_extra: 0.02
+
+  requires_personal_care:
+    base: {attendance: -0.08, stress: 0.07}
+    std_extra: 0.04
+
+  no_known_disabilities:
+    base: {}
+    std_extra: 0.0
+
+# --- Socio-economic rank modifiers (rank 1=lowest, 8=highest) ---
+# Lower SES: work commitments, financial stress, transport barriers
+ses_modifiers:
+  1: {attendance: -0.10, stress: 0.12}
+  2: {attendance: -0.08, stress: 0.09}
+  3: {attendance: -0.05, stress: 0.06}
+  4: {attendance: -0.02, stress: 0.02}
+  5: {attendance:  0.00, stress: 0.00}
+  6: {attendance:  0.01, stress: -0.02}
+  7: {attendance:  0.02, stress: -0.04}
+  8: {attendance:  0.03, stress: -0.06}
+
+# --- Temporal arc across a 12-week semester ---
+# Positive stress values = more stress; positive others = more engagement
+temporal_arc:
+  early:                          # Weeks 1-2: fresh start enthusiasm
+    attendance: 0.04
+    academic_engagement: 0.03
+    stress: -0.04
+  midterm:                        # Weeks 6-8: assessment crunch
+    attendance: -0.03
+    stress: 0.12
+  exam_base:                      # Weeks 10-12: exam period baseline
+    stress: 0.18
+  exam_high_conscientiousness:    # Added for conscientiousness > 0.6
+    attendance: 0.03
+    academic_engagement: 0.05
+  exam_low_conscientiousness:     # Applied for conscientiousness <= 0.6
+    attendance: -0.06
