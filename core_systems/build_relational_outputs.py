@@ -2,9 +2,10 @@
 """
 Build relational output tables from raw pipeline CSVs.
 
-Reads from data/ and config/, writes 8 clean tables to data/relational/:
+Reads from data/ and config/, writes 10 clean tables to data/relational/:
   Dimensions: dim_students, dim_programmes, dim_modules, dim_academic_years
-  Facts:       fact_enrollment, fact_weekly_engagement, fact_assessment, fact_progression
+  Facts:       fact_enrollment, fact_weekly_engagement, fact_assessment,
+               fact_progression, fact_graduate_outcomes, fact_nss_responses
 
 Run from project root after run_longitudinal_pipeline.py.
 """
@@ -21,6 +22,24 @@ ACADEMIC_YEARS = ["1046-47", "1047-48", "1048-49", "1049-50", "1050-51", "1051-5
 
 
 # ---------------------------------------------------------------------------
+# Loaders
+# ---------------------------------------------------------------------------
+
+def load_weekly_engagement() -> pd.DataFrame:
+    """Load weekly engagement — combined file if present, else concat per-year splits."""
+    combined = DATA_DIR / "stonegrove_weekly_engagement.csv"
+    if combined.exists():
+        return pd.read_csv(combined)
+    splits = sorted((DATA_DIR / "weekly_engagement").glob("stonegrove_weekly_engagement_*.csv"))
+    if not splits:
+        raise FileNotFoundError(
+            "No weekly engagement data found. Run run_longitudinal_pipeline.py or ensure "
+            "data/weekly_engagement/ contains per-year CSVs."
+        )
+    return pd.concat([pd.read_csv(p) for p in splits], ignore_index=True)
+
+
+# ---------------------------------------------------------------------------
 # Dimensions
 # ---------------------------------------------------------------------------
 
@@ -33,8 +52,10 @@ def build_dim_academic_years() -> pd.DataFrame:
             "academic_year":        y,
             "start_date":           f"{y1}-09-01",
             "end_date":             f"{y2}-07-31",
-            "sem1_assessment_date": f"{y2}-01-15",
-            "sem2_assessment_date": f"{y2}-05-15",
+            "s1_midterm_date":      f"{y1}-11-01",
+            "s1_final_date":        f"{y1}-12-15",
+            "s2_midterm_date":      f"{y2}-03-15",
+            "s2_final_date":        f"{y2}-05-15",
         })
     return pd.DataFrame(rows)
 
@@ -46,25 +67,17 @@ def build_dim_students(students_df: pd.DataFrame) -> pd.DataFrame:
     ]
     df = students_df.drop(columns=[c for c in base_cols if c in students_df.columns])
     df = df.rename(columns={"academic_year": "cohort_year"})
-    # student_id first, then cohort_year, then everything else
     other = [c for c in df.columns if c not in ("student_id", "cohort_year")]
     return df[["student_id", "cohort_year"] + other].reset_index(drop=True)
 
 
 def build_dim_programmes(prog_chars_df: pd.DataFrame, enrollment_df: pd.DataFrame) -> pd.DataFrame:
-    # Get programme_code, department from enrollment (one row per programme)
     prog_lookup = (
         enrollment_df[["program_code", "program_name", "department"]]
         .drop_duplicates("program_code")
         .rename(columns={"program_code": "programme_code", "program_name": "programme_name"})
     )
-    # Merge characteristics (joined on programme_name)
-    merged = prog_lookup.merge(
-        prog_chars_df,
-        on="programme_name",
-        how="left",
-    )
-    # faculty comes from both sides — drop the duplicate
+    merged = prog_lookup.merge(prog_chars_df, on="programme_name", how="left")
     if "faculty_x" in merged.columns:
         merged = merged.rename(columns={"faculty_x": "faculty"}).drop(columns=["faculty_y"])
     col_order = [
@@ -78,17 +91,15 @@ def build_dim_programmes(prog_chars_df: pd.DataFrame, enrollment_df: pd.DataFram
 
 
 def build_dim_modules(assessment_df: pd.DataFrame, module_chars_df: pd.DataFrame) -> pd.DataFrame:
-    # One row per module_code, sourced from assessment events
     core = (
         assessment_df[["module_code", "module_title", "programme_code", "module_year", "assessment_type"]]
         .drop_duplicates("module_code")
         .copy()
     )
-    # Supplement with characteristics config (keyed on module_title)
     char_cols = [
-        "module_title", "difficulty_level", "social_requirements", "creativity_requirements",
-        "practical_theoretical_balance", "stress_level", "group_work_intensity",
-        "independent_study_requirement", "description",
+        "module_title", "semester", "difficulty_level", "social_requirements",
+        "creativity_requirements", "practical_theoretical_balance", "stress_level",
+        "group_work_intensity", "independent_study_requirement", "description",
     ]
     chars = (
         module_chars_df[[c for c in char_cols if c in module_chars_df.columns]]
@@ -96,8 +107,8 @@ def build_dim_modules(assessment_df: pd.DataFrame, module_chars_df: pd.DataFrame
     )
     merged = core.merge(chars, on="module_title", how="left")
     col_order = [
-        "module_code", "module_title", "programme_code", "module_year", "assessment_type",
-        "difficulty_level", "social_requirements", "creativity_requirements",
+        "module_code", "module_title", "programme_code", "module_year", "semester",
+        "assessment_type", "difficulty_level", "social_requirements", "creativity_requirements",
         "practical_theoretical_balance", "stress_level", "group_work_intensity",
         "independent_study_requirement", "description",
     ]
@@ -121,7 +132,6 @@ def build_fact_weekly_engagement(
     engagement_df: pd.DataFrame,
     assessment_df: pd.DataFrame,
 ) -> pd.DataFrame:
-    # Build (programme_code, module_title) → module_code lookup from assessment events
     lookup = (
         assessment_df[["programme_code", "module_title", "module_code"]]
         .drop_duplicates(["programme_code", "module_title"])
@@ -134,7 +144,7 @@ def build_fact_weekly_engagement(
         print(f"  WARNING: {unmatched:,} engagement rows could not be matched to a module_code")
 
     keep = [
-        "student_id", "academic_year", "week_number", "module_code",
+        "student_id", "academic_year", "week_number", "module_code", "semester",
         "attendance_rate", "participation_score", "academic_engagement",
         "social_engagement", "stress_level",
     ]
@@ -144,13 +154,21 @@ def build_fact_weekly_engagement(
 def build_fact_assessment(assessment_df: pd.DataFrame) -> pd.DataFrame:
     keep = [
         "student_id", "academic_year", "module_code", "component_code",
-        "assessment_mark", "grade", "assessment_date",
+        "assessment_mark", "combined_mark", "grade", "assessment_date",
     ]
     return assessment_df[[c for c in keep if c in assessment_df.columns]].copy()
 
 
 def build_fact_progression(progression_df: pd.DataFrame) -> pd.DataFrame:
     return progression_df.copy()
+
+
+def build_fact_graduate_outcomes(graduate_outcomes_df: pd.DataFrame) -> pd.DataFrame:
+    return graduate_outcomes_df.copy()
+
+
+def build_fact_nss_responses(nss_df: pd.DataFrame) -> pd.DataFrame:
+    return nss_df.copy()
 
 
 # ---------------------------------------------------------------------------
@@ -161,11 +179,13 @@ def main():
     OUT_DIR.mkdir(exist_ok=True)
 
     print("Loading raw pipeline outputs...")
-    students_df   = pd.read_csv(DATA_DIR / "stonegrove_individual_students.csv")
-    enrollment_df = pd.read_csv(DATA_DIR / "stonegrove_enrollment.csv")
-    engagement_df = pd.read_csv(DATA_DIR / "stonegrove_weekly_engagement.csv")
-    assessment_df = pd.read_csv(DATA_DIR / "stonegrove_assessment_events.csv")
-    progression_df = pd.read_csv(DATA_DIR / "stonegrove_progression_outcomes.csv")
+    students_df      = pd.read_csv(DATA_DIR / "stonegrove_individual_students.csv")
+    enrollment_df    = pd.read_csv(DATA_DIR / "stonegrove_enrollment.csv")
+    engagement_df    = load_weekly_engagement()
+    assessment_df    = pd.read_csv(DATA_DIR / "stonegrove_assessment_events.csv")
+    progression_df   = pd.read_csv(DATA_DIR / "stonegrove_progression_outcomes.csv")
+    grad_outcomes_df = pd.read_csv(DATA_DIR / "stonegrove_graduate_outcomes.csv")
+    nss_df           = pd.read_csv(DATA_DIR / "stonegrove_nss_responses.csv")
 
     print("Loading config files...")
     prog_chars_df   = pd.read_csv(CONFIG_DIR / "programme_characteristics.csv")
@@ -180,6 +200,8 @@ def main():
         "fact_weekly_engagement": build_fact_weekly_engagement(engagement_df, assessment_df),
         "fact_assessment":        build_fact_assessment(assessment_df),
         "fact_progression":       build_fact_progression(progression_df),
+        "fact_graduate_outcomes": build_fact_graduate_outcomes(grad_outcomes_df),
+        "fact_nss_responses":     build_fact_nss_responses(nss_df),
     }
 
     print(f"\nWriting to {OUT_DIR}/:")
