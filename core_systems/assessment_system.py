@@ -25,10 +25,12 @@ def _parse_module_list_csv(value: str) -> List[str]:
 
 
 def _difficulty_to_mark_modifier(difficulty: float) -> float:
-    """Convert difficulty (0.25-0.9) to mark modifier (0.85-1.05). Higher difficulty = slightly lower marks."""
+    """Convert difficulty (0.25-0.9) to mark modifier. Higher difficulty = lower marks.
+    Slope tuned to create a clear negative difficulty–mark correlation (~-0.10 to -0.20).
+    Range: ~1.03 (diff=0.29) down to ~0.86 (diff=0.88)."""
     if difficulty <= 0.5:
-        return 1.0 + (0.5 - difficulty) * 0.1  # 0.5->1.0, 0.3->1.02
-    return 1.0 - (difficulty - 0.5) * 0.25  # 0.7->0.95, 0.9->0.9
+        return 1.0 + (0.5 - difficulty) * 0.15  # 0.5->1.0, 0.3->1.03
+    return 1.0 - (difficulty - 0.5) * 0.37       # 0.7->0.926, 0.9->0.852
 
 
 def _get_module_difficulty_modifier_fallback(module_title: str) -> float:
@@ -100,9 +102,11 @@ class AssessmentSystem:
             for _, row in df.iterrows():
                 title = str(row.get('module_title', '')).strip()
                 if title:
+                    raw_mod = row.get('mark_modifier')
                     self.module_chars[title] = {
                         'assessment_type': str(row.get('assessment_type', 'mixed')).strip() or 'mixed',
                         'difficulty_level': float(row.get('difficulty_level', 0.5)),
+                        'mark_modifier':    float(raw_mod) if pd.notna(raw_mod) else None,
                     }
         elif yaml_path.exists():
             with open(yaml_path, 'r', encoding='utf-8') as f:
@@ -132,9 +136,12 @@ class AssessmentSystem:
         return _get_assessment_type_fallback(module_title)
 
     def _get_difficulty_modifier(self, module_title: str) -> float:
-        """Get mark modifier from module_characteristics difficulty, else infer from title."""
+        """Get mark modifier from module_characteristics CSV (preferred), else compute from difficulty."""
         title = str(module_title).strip()
         if title in self.module_chars:
+            mod = self.module_chars[title].get('mark_modifier')
+            if mod is not None:
+                return mod
             return _difficulty_to_mark_modifier(self.module_chars[title]['difficulty_level'])
         return _get_module_difficulty_modifier_fallback(module_title)
 
@@ -172,8 +179,8 @@ class AssessmentSystem:
 
     def _get_socio_economic_modifier(self, rank: int) -> float:
         """Socio-economic rank modifier. Ranks 1 (lowest) to 8 (highest).
-        Steeper gradient to create meaningful SES-driven mark differences."""
-        mapping = {1: 0.80, 2: 0.85, 3: 0.90, 4: 0.96, 5: 1.02, 6: 1.08, 7: 1.14, 8: 1.20}
+        Narrower gradient (~18pp gap) after accounting for compounding education modifier."""
+        mapping = {1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
         r = int(rank) if not pd.isna(rank) else 4
         return mapping.get(r, 1.0)
 

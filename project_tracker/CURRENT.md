@@ -1,55 +1,40 @@
 # Current focus
 
-**Last updated**: Feb 2026
+**Last updated**: 25 Feb 2026
 
 ## Recently completed
 
-- Emergent awarding gap (8.8pp Elf > Dwarf) from agent-level factors
-- Config-driven programme selection (trait mapping CSV, affinity multipliers)
-- All high-severity bugs fixed (disability sampling, dates, SES, species, seed reset)
-- Medium-severity bugs fixed (modules_passed counting, .values alignment, metadata cohorts)
-- Cleanup: deleted unused program_affinity_system.py and module_characteristics_system.py, removed unused imports
-- Documentation: CALCULATIONS.md, SCHEMA.md, DATA_IO_PLAN.md, README.md all updated
-- Pipeline crash fix: removed mid-loop engagement disk write; engagement now accumulates in memory and writes once at end
-- Engagement append bug fixed: re-running the pipeline no longer doubles rows (clean overwrite every run)
-- Deprecated/orphaned CSVs archived: university_population, enrolled_population, assessment_marks, curriculum_assessment_marks, enrolled_students, semester_engagement
+- Validation script built and all 4 WARNs resolved:
+  - Graduate/withdrawal rate (was 0%): fixed validate_outputs.py to read `status` not `year_outcome`
+  - SES gap (was 27.6pp): SES modifier narrowed from 0.80–1.20 to 0.91–1.09 → now 14.7pp
+  - Difficulty→mark correlation (was +0.022): strengthened modifier slope + added deterministic within-year difficulty jitter to migration → now -0.121
+  - Mark progression now realistic: Year 1: 61.2, Year 2: 59.3, Year 3: 56.8
+- Emergent awarding gap (6.0pp Elf > Dwarf) from agent-level factors
+- All high-severity bugs fixed (disability sampling, dates, SES, species, seed reset, modules_passed)
+- Pipeline crash fix + engagement append bug fixed
+- Relational schema: 4 dims + 4 facts in data/relational/ (build_relational_outputs.py)
+- Module codes sourced from curriculum Excel (one-time migration, no more runtime computation)
+- Assessment year-level bug fixed: year 2/3 students now assessed on correct modules
+- Config fully populated: all 353 modules, all 44 programmes, no nulls
+- Config folder cleaned: 8 unused files archived, 10 active files remain
 
 ## Priority queue
 
-### 1. Relational database outputs
-- Normalise CSV outputs into a clean star schema: dim_students, dim_modules, dim_programmes, dim_academic_years, fact_enrollment, fact_weekly_engagement, fact_assessment, fact_progression
-- Remove denormalised columns (demographics repeated per row, module characteristics repeated per engagement row)
-- Add student_id to individual_students output
-- See schema agreed in session: 4 dims, 4 facts
-
-### 2. Assessment year-level bug (HIGH — affects all progression analysis)
-- Continuing students (year 2/3) assessed on year-1 modules instead of their actual year-level modules
-- Fix in assessment_system.py — must use programme_year to select correct module set
-- dim_modules will fill out to ~96/131/126 per year once fixed
-
-### 3. Config fine-tuning
-- Tune after database outputs are sorted
-- Includes: clan/SES modifiers, disability modifiers, engagement band width, gender gap, awarding gap validation
-
-### 3. Semester structure (medium effort)
-- Add semester 1/2 to modules in curriculum config
-- Two assessment dates per academic year (Jan + May)
-- Engagement system generates both semesters
-- Fixes the "semester hardcoded to 1" and "semester missing academic_year" bugs
-
-### 2. Validation script
-- Metaanalysis script checking progression rates, withdrawal rates, grade distributions, awarding gaps
-- Needed before further tuning
-
-### 3. Awarding gap refinement
+### 1. Awarding gap and modifier tuning
+- Wire in clan assessment modifier (config/archive/clan_assessment_modifiers.csv ready)
 - Gender gap (via engagement patterns, not direct modifiers)
 - Disability modifier tuning (decide Stonegrove's support story)
-- Engagement system as gap amplifier (wider band, realistic variation)
+- Engagement band too narrow — widen for more realistic variation
 
-### 4. Remaining medium bugs
-- Personality column prefix mismatch in ModuleCharacteristicsSystem (now deleted — N/A)
+### 3. Remaining medium bugs
 - Gender clan overrides bypassed (sample_gender hardcoded 45/45/10)
-- Weekly engagement clusters in narrow band
+- Semester hardcoded to 1 (engagement_system.py:459)
+- Semester engagement records missing academic_year
+
+### 4. Semester structure (medium effort)
+- Assign each module to semester 1 or 2 in curriculum Excel
+- Two assessment dates per year (Jan + May)
+- Engagement system generates both semesters
 
 ### 5. Later
 - Progression: withdrawal-after-fail refinement

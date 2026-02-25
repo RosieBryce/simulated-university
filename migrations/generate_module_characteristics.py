@@ -3,9 +3,12 @@
 Migration: generate complete module_characteristics.csv for all 353 modules.
 
 Values are derived from faculty profile, department, year level, and title keywords.
+A small deterministic jitter (based on title hash) adds within-year difficulty variation
+so that easier and harder modules exist within the same year level.
 Run once from project root. Output overwrites config/module_characteristics.csv.
 """
 
+import hashlib
 from pathlib import Path
 import pandas as pd
 
@@ -16,6 +19,22 @@ OUT_PATH = PROJECT_ROOT / "config" / "module_characteristics.csv"
 
 def clip(v, lo, hi):
     return max(lo, min(hi, v))
+
+
+def _jitter(module_title: str, col: str, half_range: int) -> float:
+    """Deterministic jitter per (module, column) pair. half_range=10 → ±0.10, half_range=4 → ±0.04."""
+    n = half_range * 2 + 1
+    h = int(hashlib.md5(f"{module_title}:{col}".encode()).hexdigest()[:8], 16)
+    return (h % n - half_range) / 100.0
+
+
+def _difficulty_to_mark_modifier(difficulty: float) -> float:
+    """Convert difficulty (0.20–0.92) to assessment mark modifier.
+    Hard modules → lower marks. Range: ~1.03 (easy) to ~0.86 (hard).
+    Stored in module_characteristics.csv so assessment system reads it directly."""
+    if difficulty <= 0.5:
+        return round(1.0 + (0.5 - difficulty) * 0.15, 4)  # max ~1.03 at diff=0.29
+    return round(1.0 - (difficulty - 0.5) * 0.37, 4)       # min ~0.85 at diff=0.88
 
 
 # ---------------------------------------------------------------------------
@@ -136,17 +155,36 @@ def derive_characteristics(module_title: str, year: int, faculty: str, departmen
                               "craft", "imagine", "invent", "speculative", "reimagin"]):
         creativity = min(creativity + 0.06, 0.92)
 
+    # --- Deterministic jitter ---
+    # Difficulty: ±0.10 — keeps same hash seed (module_title only) so existing values
+    # are preserved; wider spread breaks within-year clustering.
+    _h_diff = int(hashlib.md5(module_title.encode()).hexdigest()[:8], 16)
+    difficulty        = clip(difficulty        + (_h_diff % 21 - 10) / 100.0, 0.20, 0.92)
+
+    # All other numeric characteristics: small independent jitter ±0.04 per column.
+    social            = clip(social            + _jitter(module_title, 'social',            4), 0.15, 0.92)
+    creativity        = clip(creativity        + _jitter(module_title, 'creativity',        4), 0.20, 0.92)
+    practical         = clip(practical         + _jitter(module_title, 'practical',         4), 0.12, 0.92)
+    stress            = clip(stress            + _jitter(module_title, 'stress',            4), 0.20, 0.88)
+    group             = clip(group             + _jitter(module_title, 'group',             4), 0.12, 0.90)
+    independent_study = clip(independent_study + _jitter(module_title, 'independent_study', 4), 0.25, 0.92)
+
+    # Mark modifier computed from final (jittered) difficulty and stored in CSV.
+    # Assessment system reads this directly — no formula lives in the pipeline code.
+    mark_modifier = _difficulty_to_mark_modifier(difficulty)
+
     # --- Description ---
     description = _make_description(module_title, department, year, atype)
 
     return {
-        "difficulty_level":             round(clip(difficulty,        0.20, 0.92), 2),
-        "social_requirements":          round(clip(social,            0.15, 0.92), 2),
-        "creativity_requirements":      round(clip(creativity,        0.20, 0.92), 2),
-        "practical_theoretical_balance":round(clip(practical,         0.12, 0.92), 2),
-        "stress_level":                 round(clip(stress,            0.20, 0.88), 2),
-        "group_work_intensity":         round(clip(group,             0.12, 0.90), 2),
-        "independent_study_requirement":round(clip(independent_study, 0.25, 0.92), 2),
+        "difficulty_level":             round(difficulty,        2),
+        "mark_modifier":                mark_modifier,
+        "social_requirements":          round(social,            2),
+        "creativity_requirements":      round(creativity,        2),
+        "practical_theoretical_balance":round(practical,         2),
+        "stress_level":                 round(stress,            2),
+        "group_work_intensity":         round(group,             2),
+        "independent_study_requirement":round(independent_study, 2),
         "assessment_type":              atype,
         "description":                  description,
     }
@@ -192,7 +230,7 @@ def main():
     df = pd.DataFrame(rows)
     col_order = [
         "module_code", "module_title", "programme_code", "year",
-        "difficulty_level", "social_requirements", "creativity_requirements",
+        "difficulty_level", "mark_modifier", "social_requirements", "creativity_requirements",
         "practical_theoretical_balance", "stress_level", "group_work_intensity",
         "independent_study_requirement", "assessment_type", "description",
     ]
