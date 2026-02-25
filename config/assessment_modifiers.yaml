@@ -1,0 +1,22 @@
+# Assessment modifiers for Stonegrove University
+
+# Prior education background modifier
+# Reflects academic preparation advantage in formal assessments.
+# Softened from original (1.10/0.92/0.85) — previous gap was ~23pp, target ~12-15pp.
+education_modifiers:
+  academic: 1.06
+  vocational: 0.96
+  no_qualifications: 0.92
+
+# Socio-economic rank modifier (rank 1=lowest, 8=highest)
+# Narrower ~18pp gradient — clan differences emerge from SES + education compounding,
+# not from a direct clan modifier.
+socio_economic_modifiers:
+  1: 0.91
+  2: 0.93
+  3: 0.95
+  4: 0.97
+  5: 1.03
+  6: 1.05
+  7: 1.07
+  8: 1.09

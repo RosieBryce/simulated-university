@@ -84,6 +84,7 @@ class AssessmentSystem:
         self._load_curriculum()
         self._load_module_characteristics()
         self._load_disability_modifiers()
+        self._load_assessment_modifiers()
 
     def _load_curriculum(self):
         """Load Modules sheet and build (programme_code, module_title) -> module_code lookup."""
@@ -128,6 +129,20 @@ class AssessmentSystem:
             for _, row in df.iterrows():
                 self.disability_modifiers[str(row['disability']).strip().lower()] = float(row['mark_modifier'])
 
+    def _load_assessment_modifiers(self):
+        """Load education and SES modifiers from config/assessment_modifiers.yaml."""
+        path = Path('config/assessment_modifiers.yaml')
+        if path.exists():
+            with open(path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f) or {}
+            self._education_modifiers = data.get('education_modifiers', {})
+            raw_ses = data.get('socio_economic_modifiers', {})
+            self._ses_modifiers = {int(k): float(v) for k, v in raw_ses.items()}
+        else:
+            print("Warning: assessment_modifiers.yaml not found. Using hardcoded defaults.")
+            self._education_modifiers = {'academic': 1.06, 'vocational': 0.96, 'no_qualifications': 0.92}
+            self._ses_modifiers = {1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
+
     def _get_assessment_type(self, module_title: str) -> str:
         """Get assessment_type from module_characteristics, else infer from title."""
         title = str(module_title).strip()
@@ -164,25 +179,19 @@ class AssessmentSystem:
         return 1.0
 
     def _get_education_modifier(self, education: str) -> float:
-        """Education modifier: academic backgrounds boost, vocational and no qualifications reduce.
-        Reflects prior academic preparation advantage in formal assessments."""
+        """Education modifier loaded from config/assessment_modifiers.yaml."""
         if pd.isna(education):
             return 1.0
         e = str(education).lower()
-        if 'academic' in e:
-            return 1.10
-        if 'vocational' in e:
-            return 0.92
-        if 'no_qualifications' in e:
-            return 0.85
+        for key, val in self._education_modifiers.items():
+            if key in e:
+                return float(val)
         return 1.0
 
     def _get_socio_economic_modifier(self, rank: int) -> float:
-        """Socio-economic rank modifier. Ranks 1 (lowest) to 8 (highest).
-        Narrower gradient (~18pp gap) after accounting for compounding education modifier."""
-        mapping = {1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
+        """Socio-economic rank modifier (rank 1=lowest, 8=highest) from config/assessment_modifiers.yaml."""
         r = int(rank) if not pd.isna(rank) else 4
-        return mapping.get(r, 1.0)
+        return self._ses_modifiers.get(r, 1.0)
 
     def _engagement_to_modifier(self, avg_engagement: float) -> float:
         """Convert engagement score (0-1) to mark modifier. High engagement slightly boosts marks.
