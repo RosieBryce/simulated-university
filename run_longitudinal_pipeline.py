@@ -113,10 +113,10 @@ def run_year(
     weekly_df["academic_year"] = academic_year
 
     # 3. Assessment — pass engagement DataFrame directly (no mid-loop disk write)
+    # assessment_date no longer passed; dates computed internally per module/semester
     assessment_df = assessment_sys.generate_assessment_data(
         enrolled_clean,
         academic_year=academic_year,
-        assessment_date=assessment_date,
         weekly_engagement_df=weekly_df,
     )
 

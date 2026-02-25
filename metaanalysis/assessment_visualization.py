@@ -96,7 +96,7 @@ def create_assessment_visualizations():
     
     # 7. Marks by socio-economic rank
     ax7 = plt.subplot(4, 3, 7)
-    df_rank = df.copy()
+    df_rank = df.dropna(subset=['socio_economic_rank']).copy()
     df_rank['socio_economic_rank'] = df_rank['socio_economic_rank'].astype(int)
     sns.boxplot(data=df_rank, x='socio_economic_rank', y='assessment_mark', ax=ax7)
     ax7.set_xlabel('Socio-Economic Rank (1=lowest)')

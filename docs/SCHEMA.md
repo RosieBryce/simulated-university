@@ -1,7 +1,7 @@
 # Stonegrove University Data Schema
 
-**Last Updated**: February 2026  
-**Version**: 2.0 (Longitudinal Individual-Level)
+**Last Updated**: 25 February 2026
+**Version**: 2.1 (Semester Structure + Two Assessment Components)
 
 This document describes all CSV output files and their column definitions.
 
@@ -107,35 +107,45 @@ This document describes all CSV output files and their column definitions.
 | `personality_extraversion` | float | Student extraversion (for analysis) |
 | `motivation_academic_drive` | float | Student academic drive (for analysis) |
 | `motivation_social_connection` | float | Student social connection motivation (for analysis) |
+| **`semester`** | integer | **Teaching semester the module belongs to (1 = Autumn, 2 = Spring)** |
 
 **Notes**:
 - Generated for all enrolled students each week
 - Only includes modules student is enrolled in for that year
+- `semester` reflects the module's assigned teaching semester from `config/module_characteristics.csv`
 
 ---
 
 ### `stonegrove_assessment_events.csv`
 
-**Purpose**: Assessment marks. One row per student per module per assessment.
+**Purpose**: Assessment marks. Two rows per student per module: MIDTERM and FINAL components.
 
 | Column | Type | Description |
 |--------|------|-------------|
 | `student_id` | string | Persistent unique identifier |
 | `academic_year` | string | Calendar academic year (e.g. "1046-47") |
 | `programme_code` | string | Programme code |
-| **`module_code`** | string | **Module code** (for joining/later: more assessments per module) |
-| **`component_code`** | string | **Assessment component code** (for future: multiple components per module) |
+| `module_code` | string | Module code (joins to `config/module_characteristics.csv`) |
+| **`component_code`** | string | **`MIDTERM` or `FINAL`** (was `MAIN` before v2.1) |
 | `module_title` | string | Module name |
 | `assessment_type` | string | Assessment type (e.g., "essay", "practical", "project", "mixed") |
-| `assessment_mark` | float | Mark (0.0-100.0) |
-| `grade` | string | Grade: "First", "2:1", "2:2", "Third", "Fail" |
-| `assessment_date` | string | Assessment date (ISO format: YYYY-MM-DD) |
-| `module_year` | integer | Year of module (1, 2, or 3) |
+| `assessment_mark` | float | Component mark (0.0–100.0): raw MIDTERM or raw FINAL mark |
+| **`combined_mark`** | float | **Weighted combined mark on FINAL rows only: 0.4 × MIDTERM + 0.6 × FINAL. Null on MIDTERM rows.** |
+| `grade` | string | MIDTERM: formative grade from component mark. FINAL: grade from `combined_mark`. |
+| `assessment_date` | string | Assessment date (ISO format: YYYY-MM-DD). 4 distinct dates per academic year (2 per semester). |
+| `module_year` | integer | Year of module in programme (1, 2, or 3) |
+
+**component_code values**:
+| Value | Description | Engagement window | Date (Semester 1) | Date (Semester 2) |
+|-------|-------------|-------------------|-------------------|-------------------|
+| `MIDTERM` | Formative mid-term assessment | Weeks 1–8 avg | `{year}-11-01` | `{year+1}-03-15` |
+| `FINAL` | Summative end-of-module assessment | All 12 weeks avg | `{year}-12-15` | `{year+1}-05-15` |
 
 **Notes**:
-- One assessment per module per year for now (end of module); `module_code` and `component_code` allow more later
-- `grade` thresholds: First (≥70), 2:1 (≥60), 2:2 (≥50), Third (≥40), Fail (<40)
-- Marks are modified by engagement (attendance, participation, academic_engagement from weekly data)
+- `combined_mark` on FINAL rows is the definitive mark for analysis and progression decisions
+- MIDTERM grade is formative only; progression uses `combined_mark` from FINAL rows
+- `grade` thresholds (applied to `combined_mark` for FINAL): First (≥70), 2:1 (≥60), 2:2 (≥50), Third (≥40), Fail (<40)
+- Engagement windows align with the temporal arc: weeks 1–8 capture early enthusiasm + midterm crunch; all 12 weeks capture the full arc including exam stress
 
 ---
 
@@ -157,7 +167,8 @@ This document describes all CSV output files and their column definitions.
 
 **Notes**:
 - `status = "graduated"` when Year 3 student passes all modules
-- `modules_passed` counts distinct modules (by module_code), not assessment rows
+- `modules_passed` counts distinct modules (by module_code) where `combined_mark ≥ 40` (FINAL rows only)
+- Progression uses `combined_mark` from FINAL rows; falls back to `assessment_mark` for legacy data
 - Progression decision uses trait-based log-odds model (see CALCULATIONS.md)
 
 ---
@@ -201,7 +212,7 @@ Semester summaries are not produced by the longitudinal pipeline. Analysts can a
 - `stonegrove_individual_students.csv`: `student_id`="0101", `academic_year`="1046-47"
 - `stonegrove_enrollment.csv`: `student_id`="0101", `academic_year`="1046-47", `programme_year`=1, `status`="enrolled", `status_change_at`="1046-09-01"
 - `stonegrove_weekly_engagement.csv`: Multiple rows (12 weeks × 2 modules = 24 rows)
-- `stonegrove_assessment_events.csv`: 2 rows (one per module), with `module_code`, `component_code`
+- `stonegrove_assessment_events.csv`: 4 rows (2 modules × 2 components: MIDTERM + FINAL), with `module_code`, `component_code`, `combined_mark` on FINAL rows
 
 **Year 2** (1047-48, if progressed):
 - `stonegrove_individual_students.csv`: `student_id`="0101", `academic_year`="1047-48"

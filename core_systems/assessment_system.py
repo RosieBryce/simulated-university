@@ -108,6 +108,7 @@ class AssessmentSystem:
                         'assessment_type': str(row.get('assessment_type', 'mixed')).strip() or 'mixed',
                         'difficulty_level': float(row.get('difficulty_level', 0.5)),
                         'mark_modifier':    float(raw_mod) if pd.notna(raw_mod) else None,
+                        'semester':         int(row.get('semester', 1)),
                     }
         elif yaml_path.exists():
             with open(yaml_path, 'r', encoding='utf-8') as f:
@@ -193,6 +194,19 @@ class AssessmentSystem:
         r = int(rank) if not pd.isna(rank) else 4
         return self._ses_modifiers.get(r, 1.0)
 
+    def _assessment_dates(self, academic_year: str, semester: int) -> Dict[str, str]:
+        """Return MIDTERM and FINAL assessment dates for a given academic year and teaching semester.
+
+        Semester 1 (Autumn): MIDTERM Nov 1, FINAL Dec 15 of the starting calendar year.
+        Semester 2 (Spring):  MIDTERM Mar 15, FINAL May 15 of the following calendar year.
+        """
+        start = int(academic_year.split('-')[0])  # e.g. 1046
+        end = start + 1                            # e.g. 1047
+        if semester == 1:
+            return {'MIDTERM': f"{start}-11-01", 'FINAL': f"{start}-12-15"}
+        else:
+            return {'MIDTERM': f"{end}-03-15", 'FINAL': f"{end}-05-15"}
+
     def _engagement_to_modifier(self, avg_engagement: float) -> float:
         """Convert engagement score (0-1) to mark modifier. High engagement slightly boosts marks.
         Formula: 0.88 + 0.24 * engagement, clipped to [0.88, 1.12].
@@ -237,45 +251,81 @@ class AssessmentSystem:
         engagement_df: Optional[pd.DataFrame] = None,
     ) -> Dict[tuple, float]:
         """
-        Load weekly engagement and return (student_id, module_title) -> avg_engagement.
+        Load weekly engagement and return (student_id, module_title) -> avg_engagement (all weeks).
         If engagement_df is provided, use it directly. Otherwise load from path.
         If academic_year given and column exists, filter to that year.
+        """
+        final_lookup, _ = self._load_engagement_lookups(
+            engagement_path, academic_year=academic_year, engagement_df=engagement_df
+        )
+        return final_lookup
+
+    def _load_engagement_lookups(
+        self,
+        engagement_path: str = "data/stonegrove_weekly_engagement.csv",
+        academic_year: Optional[str] = None,
+        engagement_df: Optional[pd.DataFrame] = None,
+    ) -> tuple:
+        """
+        Return (final_lookup, midterm_lookup):
+          - final_lookup:   (student_id, module_title) -> avg_engagement across all 12 weeks
+          - midterm_lookup: (student_id, module_title) -> avg_engagement across weeks 1-8
+
+        Midterm captures early enthusiasm + midterm crunch; final uses the full arc.
         """
         if engagement_df is not None:
             df = engagement_df.copy()
         else:
             path = Path(engagement_path)
             if not path.exists():
-                return {}
+                return {}, {}
             df = pd.read_csv(path)
         if df.empty or 'student_id' not in df.columns or 'module_title' not in df.columns:
-            return {}
+            return {}, {}
         if academic_year and 'academic_year' in df.columns:
             df = df[df['academic_year'] == academic_year]
         cols = [c for c in ['attendance_rate', 'participation_score', 'academic_engagement'] if c in df.columns]
         if not cols:
-            return {}
+            return {}, {}
+        df = df.copy()
         df['engagement'] = df[cols].mean(axis=1)
         df['student_id'] = df['student_id'].astype(str)
         df['module_title'] = df['module_title'].str.strip()
-        agg = df.groupby(['student_id', 'module_title'])['engagement'].mean()
-        return {k: float(v) for k, v in agg.items()}
+
+        # Final: all weeks
+        final_agg = df.groupby(['student_id', 'module_title'])['engagement'].mean()
+        final_lookup = {k: float(v) for k, v in final_agg.items()}
+
+        # Midterm: weeks 1-8 only
+        if 'week_number' in df.columns:
+            midterm_df = df[df['week_number'] <= 8]
+        else:
+            midterm_df = df  # fallback: use all weeks if week_number not present
+        midterm_agg = midterm_df.groupby(['student_id', 'module_title'])['engagement'].mean()
+        midterm_lookup = {k: float(v) for k, v in midterm_agg.items()}
+
+        return final_lookup, midterm_lookup
 
     def generate_assessment_data(
         self,
         enrolled_df: pd.DataFrame,
         academic_year: str = "1046-47",
-        assessment_date: str = "1046-12-15",
+        assessment_date: Optional[str] = None,  # deprecated; dates now computed per module/semester
         weekly_engagement_path: str = "data/stonegrove_weekly_engagement.csv",
         weekly_engagement_df: Optional[pd.DataFrame] = None,
     ) -> pd.DataFrame:
         """
         Generate assessment events for all enrolled students.
-        Reads year1_modules from each student, one assessment per module.
-        Uses weekly engagement (if available) as a modifier to marks.
-        Pass weekly_engagement_df to avoid disk I/O during the longitudinal loop.
+
+        Produces two rows per student per module: MIDTERM and FINAL components.
+        - MIDTERM: engagement from weeks 1-8 (early enthusiasm + midterm crunch)
+        - FINAL: engagement from all 12 weeks; combined_mark = 0.4*MIDTERM + 0.6*FINAL
+        - Progression uses combined_mark from FINAL rows only.
+
+        assessment_date parameter is deprecated and ignored; dates are now derived
+        from the module's teaching semester via _assessment_dates().
         """
-        engagement_lookup = self._load_engagement_by_student_module(
+        final_lookup, midterm_lookup = self._load_engagement_lookups(
             weekly_engagement_path, academic_year=academic_year,
             engagement_df=weekly_engagement_df,
         )
@@ -288,33 +338,60 @@ class AssessmentSystem:
             mod_col = f'year{prog_year}_modules'
             modules = _parse_module_list_csv(student.get(mod_col, student.get('year1_modules', '')))
 
-            for i, module_title in enumerate(modules):
+            for module_title in modules:
                 if not module_title.strip():
                     continue
+                module_title = module_title.strip()
                 module_code = self.module_code_lookup.get(
-                    (program_code, module_title.strip()),
+                    (program_code, module_title),
                     f"{program_code}.??"  # should not occur if curriculum is complete
                 )
-                component_code = "MAIN"
+                mod_chars = self.module_chars.get(module_title, {})
+                module_semester = mod_chars.get('semester', 1)
+                dates = self._assessment_dates(academic_year, module_semester)
+                assessment_type = self._get_assessment_type(module_title)
 
-                key = (student_id, module_title.strip())
-                avg_eng = engagement_lookup.get(key)
-                eng_mod = self._engagement_to_modifier(avg_eng) if avg_eng is not None else None
+                key = (student_id, module_title)
 
-                mark = self.generate_mark(student, module_title, engagement_modifier=eng_mod)
-                grade = _grade_from_mark(mark)
+                # MIDTERM: engagement from weeks 1-8 (captures early enthusiasm + midterm crunch)
+                midterm_avg = midterm_lookup.get(key)
+                midterm_eng_mod = self._engagement_to_modifier(midterm_avg) if midterm_avg is not None else None
+                midterm_mark = self.generate_mark(student, module_title, engagement_modifier=midterm_eng_mod)
+
+                # FINAL: engagement from all 12 weeks
+                final_avg = final_lookup.get(key)
+                final_eng_mod = self._engagement_to_modifier(final_avg) if final_avg is not None else None
+                final_mark = self.generate_mark(student, module_title, engagement_modifier=final_eng_mod)
+
+                # Combined mark weights: 40% midterm, 60% final
+                combined_mark = round(0.4 * midterm_mark + 0.6 * final_mark, 1)
 
                 records.append({
                     'student_id': student_id,
                     'academic_year': academic_year,
                     'programme_code': program_code,
                     'module_code': module_code,
-                    'component_code': component_code,
-                    'module_title': module_title.strip(),
-                    'assessment_type': self._get_assessment_type(module_title),
-                    'assessment_mark': mark,
-                    'grade': grade,
-                    'assessment_date': assessment_date,
+                    'component_code': 'MIDTERM',
+                    'module_title': module_title,
+                    'assessment_type': assessment_type,
+                    'assessment_mark': midterm_mark,
+                    'combined_mark': None,
+                    'grade': _grade_from_mark(midterm_mark),  # formative signal
+                    'assessment_date': dates['MIDTERM'],
+                    'module_year': prog_year,
+                })
+                records.append({
+                    'student_id': student_id,
+                    'academic_year': academic_year,
+                    'programme_code': program_code,
+                    'module_code': module_code,
+                    'component_code': 'FINAL',
+                    'module_title': module_title,
+                    'assessment_type': assessment_type,
+                    'assessment_mark': final_mark,
+                    'combined_mark': combined_mark,
+                    'grade': _grade_from_mark(combined_mark),
+                    'assessment_date': dates['FINAL'],
                     'module_year': prog_year,
                 })
 

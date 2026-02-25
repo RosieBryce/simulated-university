@@ -33,7 +33,8 @@ class WeeklyEngagement:
 class SemesterEngagement:
     """Container for semester-level engagement summary"""
     student_id: str
-    semester: int
+    programme_year: int   # year in programme (1/2/3); was 'semester' before Feb 2026 refactor
+    semester: int         # teaching semester (1 = Autumn, 2 = Spring); 0 if mixed/unknown
     program_code: str
     average_attendance: float
     average_participation: float
@@ -86,6 +87,7 @@ class EngagementSystem:
                         'difficulty': float(row.get('difficulty_level', 0.5)),
                         'social_requirements': float(row.get('social_requirements', 0.5)),
                         'creativity_requirements': float(row.get('creativity_requirements', 0.5)),
+                        'semester': int(row.get('semester', 1)),
                     }
         elif mc_yaml.exists():
             with open(mc_yaml, 'r', encoding='utf-8') as f:
@@ -359,7 +361,7 @@ class EngagementSystem:
     # Semester summary
     # ------------------------------------------------------------------
 
-    def generate_semester_engagement(self, student_id: str, semester: int,
+    def generate_semester_engagement(self, student_id: str, programme_year: int,
                                      weekly_engagements: List[WeeklyEngagement]
                                      ) -> Optional[SemesterEngagement]:
         """Generate semester-level engagement summary from weekly data."""
@@ -395,7 +397,8 @@ class EngagementSystem:
 
         return SemesterEngagement(
             student_id=student_id,
-            semester=semester,
+            programme_year=programme_year,
+            semester=0,  # summary mixes both teaching semesters
             program_code=weekly_engagements[0].program_code,
             average_attendance=float(avg_attendance),
             average_participation=float(avg_participation),
@@ -529,6 +532,9 @@ class EngagementSystem:
                     module_bases[m] = self.apply_module_modifiers(dict(base_engagement), module_chars, personality)
 
             # --- Autocorrelated week deviations ---
+            # Arc alignment: weeks 1-2 = early enthusiasm, 6-8 = midterm crunch, 10-12 = exam stress.
+            # The MIDTERM assessment component uses the weeks 1-8 engagement average (captures the crunch);
+            # the FINAL component uses all 12 weeks. This alignment is emergent from the temporal arc.
             noise_std = 0.12 + self._get_disability_std_extra(disabilities)
             week_devs = self._generate_week_deviations(weeks_per_semester, noise_std)
 
@@ -545,11 +551,13 @@ class EngagementSystem:
                         continue
 
                     mod_base = module_bases.get(m, base_engagement)
+                    mod_semester = self._module_chars.get(m, {}).get('semester', 1)
                     rec: Dict = {
                         'student_id':   student_id,
                         'week_number':  week,
                         'program_code': program_code,
                         'module_title': m,
+                        'semester':     mod_semester,
                     }
                     if ay:
                         rec['academic_year'] = ay
@@ -594,7 +602,7 @@ class EngagementSystem:
                 if sem:
                     d = {
                         'student_id':                    sem.student_id,
-                        'semester':                      sem.semester,
+                        'programme_year':                sem.programme_year,
                         'program_code':                  sem.program_code,
                         'average_attendance':            sem.average_attendance,
                         'average_participation':         sem.average_participation,

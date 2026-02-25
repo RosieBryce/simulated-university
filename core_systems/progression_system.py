@@ -186,20 +186,31 @@ class ProgressionSystem:
         if assessment_df.empty:
             return pd.DataFrame()
 
+        # Progression uses FINAL rows only (combined_mark = 0.4*MIDTERM + 0.6*FINAL).
+        # Backward compatible: if component_code absent or combined_mark null, falls back to assessment_mark.
+        if 'component_code' in assessment_df.columns:
+            finals = assessment_df[assessment_df['component_code'] == 'FINAL'].copy()
+        else:
+            finals = assessment_df.copy()
+        if 'combined_mark' in finals.columns:
+            finals['mark_for_progression'] = finals['combined_mark'].fillna(finals['assessment_mark'])
+        else:
+            finals['mark_for_progression'] = finals['assessment_mark']
+
         # Aggregate marks per student
         agg = (
-            assessment_df.groupby("student_id")
+            finals.groupby("student_id")
             .agg(
-                avg_mark=("assessment_mark", "mean"),
+                avg_mark=("mark_for_progression", "mean"),
                 modules_total=("module_code", "nunique"),
-                min_mark=("assessment_mark", "min"),
+                min_mark=("mark_for_progression", "min"),
             )
             .reset_index()
         )
         agg["year_outcome"] = agg["min_mark"].apply(
             lambda m: "pass" if m >= self.pass_threshold else "fail"
         )
-        passed_modules = assessment_df[assessment_df["assessment_mark"] >= self.pass_threshold]
+        passed_modules = finals[finals["mark_for_progression"] >= self.pass_threshold]
         modules_passed = passed_modules.groupby("student_id")["module_code"].nunique()
         agg["modules_passed"] = agg["student_id"].map(modules_passed).fillna(0).astype(int)
 

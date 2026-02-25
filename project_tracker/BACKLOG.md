@@ -83,11 +83,15 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [ ] **Config path constant** – shared `paths.py` or env for `data/`, `config/`, `visualizations/`.
 - [x] Single run script `run_pipeline.py` at root.
 
+## Module trailing (resit/carry-forward)
+
+- [ ] **Implement single-module trailing in subsequent academic years** — currently a student either passes the whole year or repeats the whole year. In reality, students who pass the year overall but have one module below 40 can "trail" that module into the next year and resit it alongside their new year's work. Logic: after progression, identify students with `year_outcome = pass` but one or more FINAL `combined_mark < 40`; flag those modules as trailed; generate a resit assessment row in the following academic year's data (new `component_code = "RESIT"`), engagement-weighted as appropriate. The student progresses to the next year regardless; a failed resit typically triggers a year repeat or cap on final classification. Requires changes to: `progression_system.py` (detect trailing modules), `assessment_system.py` (generate resit rows), and `docs/SCHEMA.md`.
+
 ## Semester structure and assessment timing
-- [ ] **Add semester to modules** – assign each module to semester 1 or 2 (in curriculum Excel or module_characteristics.csv). ~Half of each year's modules per semester.
-- [ ] **Two assessment dates per academic year** – semester 1 assessments in January (e.g. 1047-01-15), semester 2 in May (e.g. 1047-05-15). Update `generate_assessment_data` to use per-module semester dates.
-- [ ] **Engagement by semester** – engagement system currently generates 12 weeks all as semester 1. Split into two runs of 12 weeks each (or whatever the semester length should be). Engagement data should be filterable by semester.
-- [ ] **Two assessment components per module (midterm + final)** — engagement temporal arc explicitly models a midterm crunch (weeks 6–8) and an exam/final period (weeks 10–12), but assessment currently generates only one mark per module (`component_code = "MAIN"`). Need to decide: (a) add a midterm component (e.g. `component_code = "MIDTERM"` at week 8, `"FINAL"` at week 12) weighted separately, or (b) verify that the single end-of-module mark is intended to represent a summative final only and the midterm crunch in engagement reflects coursework stress with no separate mark. If (a), `generate_assessment_data` needs component-level logic and the engagement lookup should split by week range. This must be resolved before the semester structure work, as the two are tightly coupled.
+- [x] **Add semester to modules** – `config/module_characteristics.csv` has `semester` column (1=Autumn, 2=Spring). 221 S1, 132 S2 modules across 353 total. Engagement records also have `semester` column.
+- [x] **Two assessment dates per academic year** – `_assessment_dates()` in `assessment_system.py`. S1: Nov 1 (midterm), Dec 15 (final). S2: Mar 15 (midterm), May 15 (final). 4 distinct dates per academic year.
+- [x] **Engagement by semester** – weekly records have `semester` column from `_module_chars`. The 12-week arc is per-module and filterable by semester. (Arc is not split into two 6-week runs; the 12-week arc per module is the intended design.)
+- [x] **Two assessment components per module (midterm + final)** — MIDTERM + FINAL rows per student per module. MIDTERM uses weeks 1–8 engagement; FINAL uses all 12 weeks. `combined_mark = 0.4 × MIDTERM + 0.6 × FINAL` on FINAL rows. Progression uses `combined_mark` from FINAL rows only.
 
 ## Awarding gap (agent-level emergence)
 - [x] **Design awarding gap to emerge from individual-level factors** – Done: ~8.8pp Elf > Dwarf gap from clan-specific SES/education distributions, weighted clan recruitment, steeper modifiers. See DESIGN_DECISIONS.md.

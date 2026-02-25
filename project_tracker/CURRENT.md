@@ -4,13 +4,22 @@
 
 ## Recently completed (this session)
 
-- **Disability sampling wired per-clan** — `health_tendencies` section of `clan_personality_specifications.yaml` now drives disability prevalence. `disability_distribution.yaml` (per-species only) archived.
-- **Enrollment concentration fixed** — uniform floor added (`0.05 + base * multiplier * affinity`); affinity multipliers flattened (3.0/2.0/1.5/0.5 → 2.0/1.5/1.2/0.8). Top-5 programme share down from ~68% to ~42%.
-- **Engagement system overhauled** — AR(1) autocorrelated week deviations (alpha=0.4, fixed std=0.12); temporal arc (early enthusiasm, midterm crunch, exam stress); disability base adjustments + std_extra; SES rank modifiers. All driven from `config/engagement_modifiers.yaml`.
-- **Engagement system bug fixes** — semester now uses `prog_year` (was hardcoded 1); `academic_year` added to semester summaries.
-- **Assessment modifiers extracted to config** — `config/assessment_modifiers.yaml` created. Education gap softened: 1.10/0.92/0.85 → 1.06/0.96/0.92 (observed gap: 23pp → ~14pp).
-- **Progression scale fixed** — `trait_modifier_scale: 4` in YAML replaces hardcoded `× 10`. Withdrawal rate: 2.6% → 7.4% (UK HE target 5–8%). `caring_responsibilities` dead code removed.
-- **All docs and trackers updated** to reflect current state.
+- **Semester structure wired** — `config/module_characteristics.csv` now has `semester` column (1=Autumn, 2=Spring). First ceil(n/2) modules per (programme_code, year) group go to S1. 221 S1, 132 S2 modules.
+- **Two assessment components per module** — `assessment_system.py` now generates MIDTERM + FINAL rows per student per module. MIDTERM uses weeks 1–8 engagement; FINAL uses all 12 weeks. `combined_mark = 0.4 × MIDTERM + 0.6 × FINAL` stored on FINAL rows.
+- **Assessment dates per semester** — `_assessment_dates()` helper: S1 → Nov 1 (midterm), Dec 15 (final); S2 → Mar 15 (midterm), May 15 (final). 4 distinct dates per academic year.
+- **Progression updated** — filters to FINAL rows, uses `combined_mark` (fallback to `assessment_mark` for legacy data). Withdrawal rate 5.9% (within 5–8% target).
+- **Weekly engagement has `semester` column** — sourced from `_module_chars[m]['semester']` per weekly record.
+- **`SemesterEngagement` dataclass renamed** — `semester` field → `programme_year`; new `semester: int` field added; arc alignment comment added.
+- **`metaanalysis/student_paths.py` created** — per-student trajectories, path archetype distributions, species/SES breakdowns, case studies, coherence checks. All coherence checks pass.
+- **SCHEMA.md updated** — v2.1: semester column, component_code MIDTERM/FINAL, combined_mark, progression note.
+
+## Previously completed
+- Disability sampling wired per-clan
+- Enrollment concentration fixed
+- Engagement system overhauled (AR(1), temporal arc, disability/SES modifiers)
+- Engagement system bug fixes
+- Assessment modifiers extracted to config; education gap softened
+- Progression scale fixed (withdrawal rate: 2.6% → 7.4%)
 
 ## Previously completed
 
