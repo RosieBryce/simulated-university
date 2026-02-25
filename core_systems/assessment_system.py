@@ -84,9 +84,12 @@ class AssessmentSystem:
         self._load_disability_modifiers()
 
     def _load_curriculum(self):
-        """Load Modules sheet for programme-module mapping."""
+        """Load Modules sheet and build (programme_code, module_title) -> module_code lookup."""
         self.modules_df = pd.read_excel(self.curriculum_file, sheet_name='Modules')
-        self.year1_modules = self.modules_df[self.modules_df['Year'] == 1].copy()
+        self.module_code_lookup = {
+            (str(row['Programme code']).strip(), str(row['Module Title']).strip()): str(row['Module Code']).strip()
+            for _, row in self.modules_df.iterrows()
+        }
 
     def _load_module_characteristics(self):
         """Load module characteristics from CSV (preferred) or YAML. Used for assessment_type and difficulty."""
@@ -269,20 +272,13 @@ class AssessmentSystem:
             mod_col = f'year{prog_year}_modules'
             modules = _parse_module_list_csv(student.get(mod_col, student.get('year1_modules', '')))
 
-            # Offset code numbering so year-2/3 modules don't collide with year-1 codes
-            y1 = _parse_module_list_csv(student.get('year1_modules', ''))
-            y2 = _parse_module_list_csv(student.get('year2_modules', ''))
-            if prog_year == 2:
-                code_offset = len(y1)
-            elif prog_year == 3:
-                code_offset = len(y1) + len(y2)
-            else:
-                code_offset = 0
-
             for i, module_title in enumerate(modules):
                 if not module_title.strip():
                     continue
-                module_code = f"{program_code}.{code_offset + i + 1:02d}"
+                module_code = self.module_code_lookup.get(
+                    (program_code, module_title.strip()),
+                    f"{program_code}.??"  # should not occur if curriculum is complete
+                )
                 component_code = "MAIN"
 
                 key = (student_id, module_title.strip())
