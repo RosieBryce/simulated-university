@@ -114,7 +114,7 @@ class ProgramEnrollmentSystem:
             return 0.0
         affinity_level = self._classify_affinity(raw_affinity)
         multiplier = self.affinity_multipliers.get(affinity_level, 1.0)
-        clan_score = self.base_selection_probability * multiplier * raw_affinity
+        clan_score = 0.05 + self.base_selection_probability * multiplier * raw_affinity
 
         # --- Trait fit component (data-driven) ---
         programme_chars = self._get_programme_characteristics(program_name)

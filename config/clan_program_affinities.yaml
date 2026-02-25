@@ -713,11 +713,11 @@ settings:
     
     # Multiplier for each affinity level
     affinity_multipliers:
-      very_high: 3.0
-      high: 2.0
-      moderate: 1.5
+      very_high: 2.0
+      high: 1.5
+      moderate: 1.2
       low: 1.0
-      minimal: 0.5
+      minimal: 0.8
     
     # Maximum number of programs to consider per student
     max_programs_per_student: 8
