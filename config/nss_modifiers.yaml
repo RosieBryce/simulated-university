@@ -1,18 +1,30 @@
 # NSS (National Student Survey) Response Configuration — Stonegrove University
 # Generates one response per final-year student (programme_year == 3), including repeats.
 # Scores on a 1-5 scale; % positive = proportion scoring >= 4.
-# Real NSS benchmark: most themes sit around 3.5-4.2; assessment & student voice typically lower.
+#
+# Target % positive (calibrated to real UK NSS benchmarks):
+#   teaching_quality:         ~84%   learning_opportunities:  ~80%
+#   assessment_feedback:      ~65%   (most variable: mark-sensitive, wide spread)
+#   academic_support:         ~74%   organisation_management: ~62%  (lowest)
+#   learning_resources:       ~78%   student_voice:           ~68%
+#   overall_satisfaction:     ~72%
+#
+# Base scores account for net modifier drift observed in simulation:
+#   positive drift themes (engagement-driven): teaching_quality +0.35, learning_opps +0.35,
+#     student_voice +0.26, learning_resources +0.10
+#   negative drift themes (stress/disability-driven): academic_support -0.21,
+#     organisation_management -0.13, assessment_feedback -0.04
 
 # Base scores (1-5) before individual modifiers
 base_scores:
-  teaching_quality:         3.70
-  learning_opportunities:   3.60
-  assessment_feedback:      3.30   # historically the lowest-scoring NSS theme
-  academic_support:         3.50
-  organisation_management:  3.40
-  learning_resources:       3.65
-  student_voice:            3.20   # typically lowest; students feel less heard
-  overall_satisfaction:     3.60
+  teaching_quality:         3.70   # net drift +0.35 -> mean ~4.05 -> ~84% positive
+  learning_opportunities:   3.60   # net drift +0.35 -> mean ~3.95 -> ~80% positive
+  assessment_feedback:      3.78   # net drift -0.07 -> mean ~3.71 -> ~65% positive (most variable)
+  academic_support:         4.05   # net drift -0.21 -> mean ~3.84 -> ~75% positive
+  organisation_management:  3.75   # net drift -0.13 -> mean ~3.62 -> ~62% positive (lowest)
+  learning_resources:       3.75   # net drift +0.10 -> mean ~3.85 -> ~78% positive
+  student_voice:            3.50   # net drift +0.26 -> mean ~3.76 -> ~68% positive
+  overall_satisfaction:     3.95   # blend-weighted -> mean ~3.82 -> ~73% positive
 
 # Per-theme engagement drivers
 # Applied as: weight * (engagement_value - 0.5)  [engagement is 0-1 scale, centre at 0.5]
@@ -42,7 +54,7 @@ engagement_drivers:
 # Mark effect on satisfaction themes (additive per 10pp above/below 60)
 # e.g. avg_mark=70 -> +mark_modifier_per_10pp on that theme
 mark_modifier_per_10pp:
-  assessment_feedback:   0.18   # students who do well rate A&F much higher
+  assessment_feedback:   0.30   # most variable theme: strong mark-sensitivity creates wide spread
   overall_satisfaction:  0.08
 
 # SES modifiers (additive to all theme scores unless overridden)
