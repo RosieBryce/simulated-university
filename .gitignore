@@ -124,8 +124,15 @@ Thumbs.db
 ~$*.xlsx
 ~$*.xls
 
-# Generated data (regenerate with run_longitudinal_pipeline.py)
-data/
+# Generated data
+# The combined weekly engagement file is too large (~68 MB) — use data/weekly_engagement/ splits instead
+data/stonegrove_weekly_engagement.csv
+# Legacy/superseded files
+data/stonegrove_enrolled_students.csv
+data/stonegrove_semester_engagement.csv
+# Old relational schema and archive (pre-v2 pipeline outputs)
+data/relational/
+data/archive/
 
 # Backup files
 *.bak
