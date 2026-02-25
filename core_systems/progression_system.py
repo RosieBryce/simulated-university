@@ -100,36 +100,30 @@ class ProgressionSystem:
         outcome_type: 'progression', 'repeat', or 'withdrawal'
         """
         mods = self.config.get("modifiers", {})
+        scale = float(self.config.get("trait_modifier_scale", 10))
         log_odds = _log_odds(base_prob)
 
         consc = float(student.get("refined_conscientiousness", 0.5))
         acad = float(student.get("motivation_academic_drive", 0.5))
         neur = float(student.get("refined_neuroticism", 0.5))
 
-        # "Other stuff going on": significant disability, caring responsibilities
         significant_disability = self._has_significant_disability(student)
-        caring = bool(student.get("caring_responsibilities", False)) if "caring_responsibilities" in student.index else False
-
         if outcome_type == "progression":
-            log_odds += mods.get("conscientiousness_progression", 0) * (consc - 0.5) * 10
-            log_odds += mods.get("academic_drive_progression", 0) * (acad - 0.5) * 10
+            log_odds += mods.get("conscientiousness_progression", 0) * (consc - 0.5) * scale
+            log_odds += mods.get("academic_drive_progression", 0) * (acad - 0.5) * scale
             log_odds += mods.get("performance_progression", 0) * max(0, avg_mark - 50)
             if significant_disability:
                 log_odds += mods.get("significant_disability_progression", 0)
-            if caring:
-                log_odds += mods.get("caring_responsibilities_progression", 0)
         elif outcome_type == "repeat":
-            log_odds += mods.get("conscientiousness_repeat", 0) * (consc - 0.5) * 10
-            log_odds += mods.get("academic_drive_repeat", 0) * (acad - 0.5) * 10
+            log_odds += mods.get("conscientiousness_repeat", 0) * (consc - 0.5) * scale
+            log_odds += mods.get("academic_drive_repeat", 0) * (acad - 0.5) * scale
         elif outcome_type == "withdrawal":
-            log_odds += mods.get("conscientiousness_withdrawal", 0) * (consc - 0.5) * 10
-            log_odds += mods.get("academic_drive_withdrawal", 0) * (acad - 0.5) * 10
-            log_odds += mods.get("neuroticism_withdrawal", 0) * (neur - 0.5) * 10
+            log_odds += mods.get("conscientiousness_withdrawal", 0) * (consc - 0.5) * scale
+            log_odds += mods.get("academic_drive_withdrawal", 0) * (acad - 0.5) * scale
+            log_odds += mods.get("neuroticism_withdrawal", 0) * (neur - 0.5) * scale
             log_odds += mods.get("performance_withdrawal", 0) * max(0, avg_mark - 50)
             if significant_disability:
                 log_odds += mods.get("significant_disability_withdrawal", 0)
-            if caring:
-                log_odds += mods.get("caring_responsibilities_withdrawal", 0)
 
         return float(np.clip(_inv_log_odds(log_odds), 0.01, 0.99))
 
