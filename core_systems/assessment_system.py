@@ -215,15 +215,20 @@ class AssessmentSystem:
         self,
         engagement_path: str = "data/stonegrove_weekly_engagement.csv",
         academic_year: Optional[str] = None,
+        engagement_df: Optional[pd.DataFrame] = None,
     ) -> Dict[tuple, float]:
         """
         Load weekly engagement and return (student_id, module_title) -> avg_engagement.
+        If engagement_df is provided, use it directly. Otherwise load from path.
         If academic_year given and column exists, filter to that year.
         """
-        path = Path(engagement_path)
-        if not path.exists():
-            return {}
-        df = pd.read_csv(path)
+        if engagement_df is not None:
+            df = engagement_df.copy()
+        else:
+            path = Path(engagement_path)
+            if not path.exists():
+                return {}
+            df = pd.read_csv(path)
         if df.empty or 'student_id' not in df.columns or 'module_title' not in df.columns:
             return {}
         if academic_year and 'academic_year' in df.columns:
@@ -243,14 +248,17 @@ class AssessmentSystem:
         academic_year: str = "1046-47",
         assessment_date: str = "1046-12-15",
         weekly_engagement_path: str = "data/stonegrove_weekly_engagement.csv",
+        weekly_engagement_df: Optional[pd.DataFrame] = None,
     ) -> pd.DataFrame:
         """
         Generate assessment events for all enrolled students.
         Reads year1_modules from each student, one assessment per module.
         Uses weekly engagement (if available) as a modifier to marks.
+        Pass weekly_engagement_df to avoid disk I/O during the longitudinal loop.
         """
         engagement_lookup = self._load_engagement_by_student_module(
-            weekly_engagement_path, academic_year=academic_year
+            weekly_engagement_path, academic_year=academic_year,
+            engagement_df=weekly_engagement_df,
         )
         records = []
         for idx, student in enrolled_df.iterrows():

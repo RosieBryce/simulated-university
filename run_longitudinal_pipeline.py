@@ -112,18 +112,12 @@ def run_year(
     )
     weekly_df["academic_year"] = academic_year
 
-    # 3. Assessment (write weekly first so assessment can load engagement)
-    weekly_path = PROJECT_ROOT / "data" / "stonegrove_weekly_engagement.csv"
-    if weekly_path.exists():
-        prev = pd.read_csv(weekly_path)
-        weekly_df = pd.concat([prev, weekly_df], ignore_index=True)
-    weekly_df.to_csv(weekly_path, index=False)
-
+    # 3. Assessment — pass engagement DataFrame directly (no mid-loop disk write)
     assessment_df = assessment_sys.generate_assessment_data(
         enrolled_clean,
         academic_year=academic_year,
         assessment_date=assessment_date,
-        weekly_engagement_path=str(weekly_path),
+        weekly_engagement_df=weekly_df,
     )
 
     # 4. Progression (enrolled_clean already built above)
@@ -163,6 +157,7 @@ def main():
     all_assessment = []
     all_progression = []
     all_individual = []
+    all_weekly = []
 
     progression_prev = None
     prev_enrolled_df = None
@@ -175,6 +170,7 @@ def main():
         # New cohort (Year 1 only) every year
         new_students = generate_students(n=COHORT_SIZE, seed=seed)
         new_students["academic_year"] = acad_year
+        new_students["student_id"] = range(i * COHORT_SIZE, (i + 1) * COHORT_SIZE)
         all_individual.append(new_students)
 
         # Continuing students from previous progression (enrolled + repeating, not withdrawn)
@@ -211,12 +207,13 @@ def main():
         all_enrollment.append(enrolled_df.loc[:, ~enrolled_df.columns.duplicated()])
         all_assessment.append(assessment_df)
         all_progression.append(progression_df)
+        all_weekly.append(weekly_df)
         progression_prev = progression_df
         prev_enrolled_df = enrolled_df
 
         print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}")
 
-    # Concatenate and save
+    # Concatenate and save — all files overwritten fresh each run
     if all_enrollment:
         clean = [e.loc[:, ~e.columns.duplicated()] for e in all_enrollment]
         pd.concat(clean, ignore_index=True).to_csv(
@@ -234,6 +231,10 @@ def main():
     if all_individual:
         pd.concat(all_individual, ignore_index=True).to_csv(
             data_dir / "stonegrove_individual_students.csv", index=False
+        )
+    if all_weekly:
+        pd.concat(all_weekly, ignore_index=True).to_csv(
+            data_dir / "stonegrove_weekly_engagement.csv", index=False
         )
 
     # Write metadata

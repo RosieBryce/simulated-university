@@ -10,10 +10,28 @@
 - Medium-severity bugs fixed (modules_passed counting, .values alignment, metadata cohorts)
 - Cleanup: deleted unused program_affinity_system.py and module_characteristics_system.py, removed unused imports
 - Documentation: CALCULATIONS.md, SCHEMA.md, DATA_IO_PLAN.md, README.md all updated
+- Pipeline crash fix: removed mid-loop engagement disk write; engagement now accumulates in memory and writes once at end
+- Engagement append bug fixed: re-running the pipeline no longer doubles rows (clean overwrite every run)
+- Deprecated/orphaned CSVs archived: university_population, enrolled_population, assessment_marks, curriculum_assessment_marks, enrolled_students, semester_engagement
 
 ## Priority queue
 
-### 1. Semester structure (medium effort)
+### 1. Relational database outputs
+- Normalise CSV outputs into a clean star schema: dim_students, dim_modules, dim_programmes, dim_academic_years, fact_enrollment, fact_weekly_engagement, fact_assessment, fact_progression
+- Remove denormalised columns (demographics repeated per row, module characteristics repeated per engagement row)
+- Add student_id to individual_students output
+- See schema agreed in session: 4 dims, 4 facts
+
+### 2. Assessment year-level bug (HIGH — affects all progression analysis)
+- Continuing students (year 2/3) assessed on year-1 modules instead of their actual year-level modules
+- Fix in assessment_system.py — must use programme_year to select correct module set
+- dim_modules will fill out to ~96/131/126 per year once fixed
+
+### 3. Config fine-tuning
+- Tune after database outputs are sorted
+- Includes: clan/SES modifiers, disability modifiers, engagement band width, gender gap, awarding gap validation
+
+### 3. Semester structure (medium effort)
 - Add semester 1/2 to modules in curriculum config
 - Two assessment dates per academic year (Jan + May)
 - Engagement system generates both semesters

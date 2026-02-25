@@ -16,6 +16,10 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **BUG: Global `np.random.seed()` reset mid-pipeline** (`assessment_system.py:78`, `progression_system.py:37`) – Fixed: both systems now use `np.random.default_rng(seed)` as instance-level RNG instead of resetting global state.
 - [x] **BUG: Mark distribution lacks discriminative power** (`assessment_system.py:195-201`) – Fixed: with working clan/SES modifiers, marks now differentiate meaningfully (~12pt spread by clan, ~18pt spread by SES).
 
+### High severity
+
+- [ ] **BUG: Continuing students assessed on year-1 modules regardless of programme_year** (`assessment_system.py`) — dim_modules year distribution shows {1: 96, 2: 34, 3: 1} when it should be ~96/131/126. Year 2/3 students are getting year-1 module assessments. Affects all downstream analysis of progression and awarding gaps across years.
+
 ### Medium severity
 
 - [ ] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Looks for `conscientiousness` but pipeline produces `refined_conscientiousness`. All personality-dependent module modifiers silently fall back to 0.5. Note: this file is currently unused by the pipeline (see cleanup section), but should be fixed if it gets integrated.

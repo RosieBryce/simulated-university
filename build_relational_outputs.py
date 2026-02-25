@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""
+Build relational output tables from raw pipeline CSVs.
+
+Reads from data/ and config/, writes 8 clean tables to data/relational/:
+  Dimensions: dim_students, dim_programmes, dim_modules, dim_academic_years
+  Facts:       fact_enrollment, fact_weekly_engagement, fact_assessment, fact_progression
+
+Run from project root after run_longitudinal_pipeline.py.
+"""
+
+from pathlib import Path
+import pandas as pd
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+DATA_DIR = PROJECT_ROOT / "data"
+CONFIG_DIR = PROJECT_ROOT / "config"
+OUT_DIR = DATA_DIR / "relational"
+
+ACADEMIC_YEARS = ["1046-47", "1047-48", "1048-49", "1049-50", "1050-51", "1051-52", "1052-53"]
+
+
+# ---------------------------------------------------------------------------
+# Dimensions
+# ---------------------------------------------------------------------------
+
+def build_dim_academic_years() -> pd.DataFrame:
+    rows = []
+    for y in ACADEMIC_YEARS:
+        y1 = int(y.split("-")[0])
+        y2 = y1 + 1
+        rows.append({
+            "academic_year":        y,
+            "start_date":           f"{y1}-09-01",
+            "end_date":             f"{y2}-07-31",
+            "sem1_assessment_date": f"{y2}-01-15",
+            "sem2_assessment_date": f"{y2}-05-15",
+        })
+    return pd.DataFrame(rows)
+
+
+def build_dim_students(students_df: pd.DataFrame) -> pd.DataFrame:
+    base_cols = [
+        "base_openness", "base_conscientiousness", "base_extraversion",
+        "base_agreeableness", "base_neuroticism",
+    ]
+    df = students_df.drop(columns=[c for c in base_cols if c in students_df.columns])
+    df = df.rename(columns={"academic_year": "cohort_year"})
+    # student_id first, then cohort_year, then everything else
+    other = [c for c in df.columns if c not in ("student_id", "cohort_year")]
+    return df[["student_id", "cohort_year"] + other].reset_index(drop=True)
+
+
+def build_dim_programmes(prog_chars_df: pd.DataFrame, enrollment_df: pd.DataFrame) -> pd.DataFrame:
+    # Get programme_code, department from enrollment (one row per programme)
+    prog_lookup = (
+        enrollment_df[["program_code", "program_name", "department"]]
+        .drop_duplicates("program_code")
+        .rename(columns={"program_code": "programme_code", "program_name": "programme_name"})
+    )
+    # Merge characteristics (joined on programme_name)
+    merged = prog_lookup.merge(
+        prog_chars_df,
+        on="programme_name",
+        how="left",
+    )
+    # faculty comes from both sides — drop the duplicate
+    if "faculty_x" in merged.columns:
+        merged = merged.rename(columns={"faculty_x": "faculty"}).drop(columns=["faculty_y"])
+    col_order = [
+        "programme_code", "programme_name", "faculty", "department", "description",
+        "social_intensity", "practical_theoretical_balance", "stress_level",
+        "career_prospects", "academic_difficulty", "creativity_requirement",
+        "leadership_opportunities", "research_intensity", "community_engagement",
+        "innovation_focus",
+    ]
+    return merged[[c for c in col_order if c in merged.columns]].reset_index(drop=True)
+
+
+def build_dim_modules(assessment_df: pd.DataFrame, module_chars_df: pd.DataFrame) -> pd.DataFrame:
+    # One row per module_code, sourced from assessment events
+    core = (
+        assessment_df[["module_code", "module_title", "programme_code", "module_year", "assessment_type"]]
+        .drop_duplicates("module_code")
+        .copy()
+    )
+    # Supplement with characteristics config (keyed on module_title)
+    char_cols = [
+        "module_title", "difficulty_level", "social_requirements", "creativity_requirements",
+        "practical_theoretical_balance", "stress_level", "group_work_intensity",
+        "independent_study_requirement", "description",
+    ]
+    chars = (
+        module_chars_df[[c for c in char_cols if c in module_chars_df.columns]]
+        .drop_duplicates("module_title")
+    )
+    merged = core.merge(chars, on="module_title", how="left")
+    col_order = [
+        "module_code", "module_title", "programme_code", "module_year", "assessment_type",
+        "difficulty_level", "social_requirements", "creativity_requirements",
+        "practical_theoretical_balance", "stress_level", "group_work_intensity",
+        "independent_study_requirement", "description",
+    ]
+    return merged[[c for c in col_order if c in merged.columns]].reset_index(drop=True)
+
+
+# ---------------------------------------------------------------------------
+# Facts
+# ---------------------------------------------------------------------------
+
+def build_fact_enrollment(enrollment_df: pd.DataFrame) -> pd.DataFrame:
+    keep = [
+        "student_id", "academic_year", "program_code",
+        "programme_year", "status", "status_change_at",
+    ]
+    df = enrollment_df[[c for c in keep if c in enrollment_df.columns]].copy()
+    return df.rename(columns={"program_code": "programme_code"})
+
+
+def build_fact_weekly_engagement(
+    engagement_df: pd.DataFrame,
+    assessment_df: pd.DataFrame,
+) -> pd.DataFrame:
+    # Build (programme_code, module_title) → module_code lookup from assessment events
+    lookup = (
+        assessment_df[["programme_code", "module_title", "module_code"]]
+        .drop_duplicates(["programme_code", "module_title"])
+    )
+    df = engagement_df.rename(columns={"program_code": "programme_code"}).copy()
+    df = df.merge(lookup, on=["programme_code", "module_title"], how="left")
+
+    unmatched = df["module_code"].isna().sum()
+    if unmatched > 0:
+        print(f"  WARNING: {unmatched:,} engagement rows could not be matched to a module_code")
+
+    keep = [
+        "student_id", "academic_year", "week_number", "module_code",
+        "attendance_rate", "participation_score", "academic_engagement",
+        "social_engagement", "stress_level",
+    ]
+    return df[[c for c in keep if c in df.columns]]
+
+
+def build_fact_assessment(assessment_df: pd.DataFrame) -> pd.DataFrame:
+    keep = [
+        "student_id", "academic_year", "module_code", "component_code",
+        "assessment_mark", "grade", "assessment_date",
+    ]
+    return assessment_df[[c for c in keep if c in assessment_df.columns]].copy()
+
+
+def build_fact_progression(progression_df: pd.DataFrame) -> pd.DataFrame:
+    return progression_df.copy()
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    OUT_DIR.mkdir(exist_ok=True)
+
+    print("Loading raw pipeline outputs...")
+    students_df   = pd.read_csv(DATA_DIR / "stonegrove_individual_students.csv")
+    enrollment_df = pd.read_csv(DATA_DIR / "stonegrove_enrollment.csv")
+    engagement_df = pd.read_csv(DATA_DIR / "stonegrove_weekly_engagement.csv")
+    assessment_df = pd.read_csv(DATA_DIR / "stonegrove_assessment_events.csv")
+    progression_df = pd.read_csv(DATA_DIR / "stonegrove_progression_outcomes.csv")
+
+    print("Loading config files...")
+    prog_chars_df   = pd.read_csv(CONFIG_DIR / "programme_characteristics.csv")
+    module_chars_df = pd.read_csv(CONFIG_DIR / "module_characteristics.csv")
+
+    tables = {
+        "dim_academic_years":     build_dim_academic_years(),
+        "dim_students":           build_dim_students(students_df),
+        "dim_programmes":         build_dim_programmes(prog_chars_df, enrollment_df),
+        "dim_modules":            build_dim_modules(assessment_df, module_chars_df),
+        "fact_enrollment":        build_fact_enrollment(enrollment_df),
+        "fact_weekly_engagement": build_fact_weekly_engagement(engagement_df, assessment_df),
+        "fact_assessment":        build_fact_assessment(assessment_df),
+        "fact_progression":       build_fact_progression(progression_df),
+    }
+
+    print(f"\nWriting to {OUT_DIR}/:")
+    for name, df in tables.items():
+        path = OUT_DIR / f"{name}.csv"
+        df.to_csv(path, index=False)
+        print(f"  {name}.csv  — {len(df):,} rows × {len(df.columns)} cols")
+
+    print("\nDone.")
+
+
+if __name__ == "__main__":
+    main()
