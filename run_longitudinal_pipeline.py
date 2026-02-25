@@ -55,11 +55,13 @@ def run_year(
     from core_systems.engagement_system import EngagementSystem
     from core_systems.assessment_system import AssessmentSystem
     from core_systems.progression_system import ProgressionSystem
+    from core_systems.graduate_outcomes_system import GraduateOutcomesSystem
 
     enrollment_sys = ProgramEnrollmentSystem()
     engagement_sys = EngagementSystem()
     assessment_sys = AssessmentSystem(seed=seed)
     progression_sys = ProgressionSystem(seed=seed)
+    outcomes_sys = GraduateOutcomesSystem(seed=seed)
 
     status_change = _status_change_at(academic_year)
     assessment_date = _assessment_date(academic_year)
@@ -130,7 +132,19 @@ def run_year(
         prior_progression_df=prior_progression_df,
     )
 
-    return enrolled_df, progression_df, assessment_df, weekly_df, semester_df
+    # 5. Graduate outcomes — for students who graduated this year
+    graduates = enrolled_clean[
+        enrolled_clean.get('status', pd.Series(dtype=str)).astype(str) == 'graduated'
+    ] if 'status' in enrolled_clean.columns else pd.DataFrame()
+    if len(graduates) == 0:
+        # Also check progression_df for graduated students, merge back to get traits
+        grad_sids = progression_df[progression_df['status'] == 'graduated']['student_id'].astype(str).tolist()
+        graduates = enrolled_clean[enrolled_clean['student_id'].astype(str).isin(grad_sids)]
+    graduate_outcomes_df = outcomes_sys.generate_outcomes(
+        graduates, academic_year=academic_year, all_assessment_df=assessment_df
+    )
+
+    return enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df
 
 
 def main():
@@ -145,6 +159,7 @@ def main():
     from core_systems.engagement_system import EngagementSystem
     from core_systems.assessment_system import AssessmentSystem
     from core_systems.progression_system import ProgressionSystem
+    from core_systems.graduate_outcomes_system import GraduateOutcomesSystem
 
     print("Stonegrove University Longitudinal Pipeline")
     print("=" * 50)
@@ -160,6 +175,7 @@ def main():
     all_progression = []
     all_individual = []
     all_weekly = []
+    all_graduate_outcomes = []
 
     progression_prev = None
     prev_enrolled_df = None
@@ -199,7 +215,7 @@ def main():
             continuing_students = None
 
         # Run pipeline for this year
-        enrolled_df, progression_df, assessment_df, weekly_df, semester_df = run_year(
+        enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df = run_year(
             acad_year, i, new_students, continuing_students, progression_prev, seed,
             prior_progression_df=accumulated_progression,
         )
@@ -212,12 +228,15 @@ def main():
         all_assessment.append(assessment_df)
         all_progression.append(progression_df)
         all_weekly.append(weekly_df)
+        if graduate_outcomes_df is not None and len(graduate_outcomes_df) > 0:
+            all_graduate_outcomes.append(graduate_outcomes_df)
         progression_prev = progression_df
         prev_enrolled_df = enrolled_df
         # Accumulate all progression outcomes for repeat-history lookup in subsequent years
         accumulated_progression = pd.concat(all_progression, ignore_index=True)
 
-        print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}")
+        n_grads = len(graduate_outcomes_df) if graduate_outcomes_df is not None else 0
+        print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}, Graduates: {n_grads}")
 
     # Concatenate and save — all files overwritten fresh each run
     if all_enrollment:
@@ -242,6 +261,11 @@ def main():
         pd.concat(all_weekly, ignore_index=True).to_csv(
             data_dir / "stonegrove_weekly_engagement.csv", index=False
         )
+    if all_graduate_outcomes:
+        pd.concat(all_graduate_outcomes, ignore_index=True).to_csv(
+            data_dir / "stonegrove_graduate_outcomes.csv", index=False
+        )
+        print(f"Saved stonegrove_graduate_outcomes.csv")
 
     # Write metadata
     import subprocess

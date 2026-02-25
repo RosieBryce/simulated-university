@@ -173,6 +173,33 @@ This document describes all CSV output files and their column definitions.
 
 ---
 
+### `stonegrove_graduate_outcomes.csv`
+
+**Purpose**: Post-graduation employment outcomes (~15 months after graduation). One row per graduate.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `student_id` | string | Persistent unique identifier |
+| `academic_year_graduated` | string | Academic year in which student graduated (e.g. "1048-49") |
+| `programme_code` | string | Programme code |
+| `faculty` | string | Faculty number (first digit of programme_code) |
+| `degree_classification` | string | Weighted degree class: "First", "2:1", "2:2", "Third" (Y2 weight 1/3, Y3 weight 2/3) |
+| `degree_weighted_avg` | float | Weighted average mark used for classification |
+| `outcome_type` | string | "employed", "further_study", "unemployed", "unknown" |
+| `professional_level` | string | "professional" or "non_professional" (null if not employed) |
+| `employment_sector` | string | Faculty-mapped sector (null if unemployed/unknown; "further_study" if postgrad) |
+| `salary_band` | integer | 1–5 salary proxy (null if not employed) |
+| `time_to_outcome_months` | integer | Months from graduation to outcome (0–24) |
+| `outcome_recorded_at` | string | ISO date of outcome survey (~15 months post-graduation) |
+
+**Notes**:
+- Outcome gaps emerge from degree classification, SES, disability, and programme — no direct species/clan modifier
+- `degree_classification` uses UK standard weighting: Year 1 excluded, Year 2 = 1/3, Year 3 = 2/3
+- SES gradient on `professional_level` and `salary_band` is intentional (social capital effect)
+- `employment_sector` values are mapped from faculty: see `config/graduate_outcomes.yaml`
+
+---
+
 ### Semester summaries (not a core output)
 
 Semester summaries are not produced by the longitudinal pipeline. Analysts can aggregate from `stonegrove_weekly_engagement.csv` (e.g. by student, academic_year, semester) if needed.

@@ -1,0 +1,107 @@
+# Graduate Outcomes Configuration — Stonegrove University
+# Models employment outcomes ~15 months after graduation.
+# Same design principle as assessment: no direct species/clan modifier.
+# Gaps emerge from degree classification, SES, programme, disability.
+
+# Base outcome type probabilities (before modifiers)
+base_outcome_probabilities:
+  employed: 0.65
+  further_study: 0.20
+  unemployed: 0.10
+  unknown: 0.05
+
+# Degree classification modifiers (additive to log-odds of professional employment)
+# and on employed vs not-employed
+degree_classification_modifiers:
+  employment_log_odds:
+    First:  0.60
+    "2:1":  0.25
+    "2:2": -0.20
+    Third: -0.55
+  professional_log_odds:
+    First:  1.00
+    "2:1":  0.45
+    "2:2": -0.30
+    Third: -0.80
+  further_study_log_odds:
+    First:  0.50   # high performers more likely to pursue postgrad
+    "2:1":  0.20
+    "2:2": -0.10
+    Third: -0.40
+
+# Degree classification weight by module year (UK standard: Y1 excluded, Y3 weighted double)
+degree_year_weights:
+  1: 0.0
+  2: 0.333
+  3: 0.667
+
+# Salary band 1-5: base by degree classification (noise added in code)
+# 1 = lowest, 5 = highest
+salary_band_base:
+  First:  4
+  "2:1":  3
+  "2:2":  2
+  Third:  2
+
+# SES modifier on professional employment (log-odds) — social capital / network effect
+ses_professional_modifiers:
+  1: -0.55
+  2: -0.35
+  3: -0.15
+  4:  0.00
+  5:  0.10
+  6:  0.25
+  7:  0.40
+  8:  0.60
+
+# SES modifier on salary band (additive, rounded to nearest integer and clipped 1-5)
+ses_salary_modifiers:
+  1: -1.0
+  2: -0.5
+  3: -0.2
+  4:  0.0
+  5:  0.1
+  6:  0.3
+  7:  0.5
+  8:  0.8
+
+# Disability modifier (log-odds) — employment gap for disabled graduates is well-documented
+disability_employment_modifier: -0.35     # less likely to be employed
+disability_professional_modifier: -0.40  # less likely to be in professional role
+
+# Personality modifiers (log-odds, applied as trait * weight)
+# Extraversion helps with job-seeking / networking
+extraversion_employment_weight: 0.30
+extraversion_professional_weight: 0.25
+# Conscientiousness drives follow-through on applications
+conscientiousness_employment_weight: 0.40
+conscientiousness_professional_weight: 0.35
+# Career motivation increases professional employment likelihood
+career_focus_weight: 0.30
+
+# Faculty -> employment sectors (for sector assignment)
+# First digit of programme_code = faculty number
+faculty_sectors:
+  "1": ["cooperative_enterprise", "artisan_trades", "community_services", "guild_management"]
+  "2": ["natural_sciences", "engineering", "agricultural_sciences", "resource_management"]
+  "3": ["scholarly_professions", "education", "research_and_archives", "diplomatic_service"]
+  "4": ["applied_arts", "design_and_craft", "performance_and_culture", "heritage_curation"]
+
+# Base professional employment rate by faculty (before individual modifiers)
+# Some faculties have stronger vocational pipelines
+faculty_professional_base:
+  "1": 0.55
+  "2": 0.60
+  "3": 0.65
+  "4": 0.50
+
+# Months to outcome: distribution parameters by outcome type (min, mode, max for triangular)
+time_to_outcome_months:
+  employed:      {min: 0, mode: 3,  max: 12}
+  further_study: {min: 0, mode: 1,  max: 6}
+  unemployed:    {min: 6, mode: 15, max: 24}
+  unknown:       {min: 0, mode: 6,  max: 18}
+
+# Date: outcomes recorded this many months after the end of the graduation year
+# (UK Graduate Outcomes survey is ~15 months post-graduation)
+outcome_survey_months_after_graduation: 15
