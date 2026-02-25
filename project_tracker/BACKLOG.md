@@ -18,16 +18,16 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ### High severity
 
-- [ ] **BUG: Clan assessment modifier not wired in** (`assessment_system.py:_get_clan_modifier`) — method returns 1.0 always. Config values exist in `config/archive/clan_assessment_modifiers.csv` and should be loaded at init and applied in `generate_mark()`. Restoring this will make clan a live factor in mark generation (awarding gap work depends on it).
+- [x] **DESIGN DECISION: Clan assessment modifier not wired in** — `_get_clan_modifier` returns 1.0 by design. `config/archive/clan_assessment_modifiers.csv` is archived. Awarding gap emerges from SES/education/disability at individual level, not from a direct clan mark modifier. Do not re-wire.
 
-- [ ] **BUG: Continuing students assessed on year-1 modules regardless of programme_year** (`assessment_system.py`) — dim_modules year distribution shows {1: 96, 2: 34, 3: 1} when it should be ~96/131/126. Year 2/3 students are getting year-1 module assessments. Affects all downstream analysis of progression and awarding gaps across years.
+- [x] **BUG: Continuing students assessed on year-1 modules regardless of programme_year** (`assessment_system.py`) — Fixed: `generate_assessment_data` reads `programme_year` and uses `year{prog_year}_modules` column to select the correct module set for each student's year of study.
 
 ### Medium severity
 
-- [ ] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Looks for `conscientiousness` but pipeline produces `refined_conscientiousness`. All personality-dependent module modifiers silently fall back to 0.5. Note: this file is currently unused by the pipeline (see cleanup section), but should be fixed if it gets integrated.
-- [ ] **BUG: Semester hardcoded to 1** (`engagement_system.py:459`) – `generate_engagement_data` always passes `semester=1`. Semesters are 1 and 2 within each academic year, so this means semester 2 is never generated. Either generate both semesters or clarify that the pipeline only models one semester per year.
-- [ ] **BUG: Semester engagement records missing `academic_year`** (`engagement_system.py:462-473`) – The semester engagement dict never includes `academic_year`, making multi-year semester data impossible to filter by year.
-- [ ] **BUG: Weekly engagement clusters in narrow band** (`engagement_system.py:186-230,288-298`) – Base engagement range is ~[0.30, 0.85]; weekly variation std dev is only ~0.12. No shared within-week shocks across modules, no "bad weeks", seasonal patterns, or exam stress. Data is unrealistically smooth.
+- [ ] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Looks for `conscientiousness` but pipeline produces `refined_conscientiousness`. Note: this file is currently unused by the pipeline; fix if it gets integrated.
+- [x] **BUG: Semester hardcoded to 1** (`engagement_system.py`) – Fixed: semester now derived from `prog_year`; the engagement rewrite no longer hardcodes semester=1.
+- [x] **BUG: Semester engagement records missing `academic_year`** (`engagement_system.py`) – Fixed: `academic_year` now included in semester summary dicts.
+- [x] **BUG: Weekly engagement clusters in narrow band** (`engagement_system.py`) – Fixed: AR(1) autocorrelated week deviations (alpha=0.4, fixed std=0.12), temporal arc (early/midterm/exam), disability base adjustments + std_extra, SES rank modifiers. All driven from `config/engagement_modifiers.yaml`.
 - [x] **BUG: `modules_passed` counts rows not distinct modules** (`progression_system.py:208-210`) – Fixed: now uses `nunique()` on `module_code` for passed assessments.
 - [x] **BUG: `.values` strips index alignment** (`progression_system.py:210`) – Fixed: removed `.values`, letting pandas align by index.
 - [x] **BUG: Metadata says 5 cohorts but code generates 7** (`run_longitudinal_pipeline.py:256`) – Fixed: metadata now has `cohorts_total` (7 enrolled) and `cohorts_graduating` (5 complete a 3-year programme). Docstring clarified.
@@ -50,7 +50,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **Create progression_system.py** – pass/fail per module; year outcome (all modules ≥ 40); progression/repeat/withdrawal (student-level, emergent from marks + traits + motivation). Includes modifiers for significant disability, caring responsibilities (when field exists).
 - [x] **Add config/year_progression_rules.yaml** – base probabilities + individual modifiers.
 - [ ] **Progression: withdrawal-after-fail logic** – refine after more pipeline runs: (a) year-in-programme – Y1 repeat has lower withdrawal likelihood than Y2/Y3 (investment effect); (b) previous repeat at any level increases withdrawal likelihood.
-- [ ] **Add caring_responsibilities to student model** – for progression modifier (other stuff going on).
+- [ ] **Add caring_responsibilities to student model** – for progression modifier (other stuff going on). Note: dead code removed from `_apply_modifiers` in progression_system.py; must be added to student generation *first* before re-introducing the progression modifier.
 - [x] **Update enrollment system** – handle multiple years; one row per student per academic_year; add `status` (enrolled/repeating/withdrawn/graduated), `status_change_at`, `programme_year`.
 - [x] **Rename output** – `stonegrove_enrolled_students.csv` → `stonegrove_enrollment.csv` (per DESIGN: one row per student per academic year).
 - [x] **Add `academic_year`** – calendar format ("1046-47", …) to all domain tables (enrollment, weekly engagement, assessment events).

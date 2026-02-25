@@ -1,111 +1,116 @@
-# Stonegrove University Individual-Level Modeling System
-## Project Summary & Save Point
+# Stonegrove University — Project Summary & Pick-Up Guide
+
+**Last updated**: 25 February 2026
 
 ---
 
-## 🧭 PICK-UP GUIDE (Start Here After Time Away)
+## Where Are We?
 
-**Last updated**: Feb 2026
+The full longitudinal pipeline is **live and running**. All five core stages are implemented. The simulation generates 7 years of data across 5 cohorts with realistic individual-level awarding gaps.
 
-### Where Are We?
+| Stage | Status |
+|-------|--------|
+| Student generation (personality, disability, SES, motivation) | ✅ Done |
+| Programme enrollment (clan affinities + trait fit) | ✅ Done |
+| Weekly engagement (AR(1) variation, temporal arc, disability/SES mods) | ✅ Done |
+| Assessment (module marks, engagement modifier, SES/education mods) | ✅ Done |
+| Progression (pass/fail, log-odds model, 7.4% withdrawal) | ✅ Done |
+| Longitudinal loop (5 cohorts × 7 years) | ✅ Done |
 
-| Phase | Status | Next Action |
-|-------|--------|-------------|
-| Phase 1: Data Quality | **In progress** | Clarify engagement metrics (Issue 3); define motivation dimensions (Issue 4) |
-| Phase 2: Assessment | Not started | Create assessment system after Phase 1 |
-| Phase 3: Longitudinal | Not started | Year 2-3 progression |
-| Phase 4: Interventions | Not started | Extra-curriculars, support programs |
+### Key metrics (single-year pipeline, ~500 students)
 
-### Key Files to Read First
+- Pass rate: ~87%, Repeat: ~8%, Withdraw: ~7.4%
+- Elf > Dwarf awarding gap: ~6–9pp (emergent from SES/education/disability)
+- Progression to Year 2: ~84%
+- No direct species or clan mark modifiers — all gaps agent-level
 
-1. **This file** (`docs/PROJECT_SUMMARY.md`) – high-level status and plan
-2. **`project_tracker/CURRENT.md`** and **`project_tracker/BACKLOG.md`** – what we're doing now and what's next (for both human and AI)
-3. **`docs/DESIGN.md`** – architecture, academic_year calendar, 5 cohorts × 7 years
-4. **`docs/DATA_IO_PLAN.md`** – where data comes from and goes; regeneration order
-5. **`docs/SCHEMA.md`** – CSV column definitions
-6. **`metaanalysis/README.md`** – cross-cutting analysis and validation
-7. **`README.md`** – quick start and project structure
+---
 
-### Regenerate Data (if needed)
+## Key Files to Read First
+
+1. **`project_tracker/CURRENT.md`** — what's live and what's next
+2. **`docs/DESIGN.md`** — architecture, academic_year calendar, 5 cohorts × 7 years
+3. **`docs/CALCULATIONS.md`** — all formulas and modifier values
+4. **`docs/SCHEMA.md`** — CSV column definitions
+5. **`CLAUDE.md`** (project root) — pipeline commands and architecture summary
+
+---
+
+## Regenerate Data
 
 ```bash
-python core_systems/student_generation_pipeline.py
-python core_systems/program_enrollment_system.py
-python core_systems/engagement_system.py
+# Full longitudinal simulation (5 cohorts × 7 years)
+python run_longitudinal_pipeline.py
+
+# Single year (for quick iteration)
+python run_pipeline.py
 ```
-
-### Expected Files Checklist
-
-| File | Exists? | Produced By |
-|------|---------|-------------|
-| `data/stonegrove_individual_students.csv` | ✓ | student_generation_pipeline |
-| `data/stonegrove_enrolled_students.csv` | ✓ | program_enrollment_system |
-| `data/stonegrove_weekly_engagement.csv` | ✓ | engagement_system |
-| `data/stonegrove_enrollment.csv` | (future: replaces enrolled_students) | program_enrollment_system |
-| `data/stonegrove_assessment_events.csv` | (future) | assessment_system |
-| *Semester summaries* | *Not a core output* | *Derive from weekly engagement if needed* |
-| `visualizations/stonegrove_enrollment_analysis.png` | ✓ | archive_population_model/enrollment_visualization |
-| `visualizations/stonegrove_engagement_analysis.png` | ✓ | metaanalysis/engagement_visualization |
 
 ---
 
-### 🎯 **Project Overview**
-We have successfully built a sophisticated individual-level student modeling system for Stonegrove University, transitioning from population-level to individual-level modeling. The system now generates unique students with personality traits, motivations, and behavioral patterns that influence their academic journey.
+## Expected Output Files
 
-### ✅ **What We've Accomplished**
+| File | Produced by |
+|------|-------------|
+| `data/stonegrove_individual_students.csv` | student_generation_pipeline |
+| `data/stonegrove_enrollment.csv` | program_enrollment_system |
+| `data/stonegrove_weekly_engagement.csv` | engagement_system |
+| `data/stonegrove_assessment_events.csv` | assessment_system |
+| `data/stonegrove_progression_outcomes.csv` | progression_system |
+| `data/metadata.json` | run_longitudinal_pipeline |
 
-#### **1. Individual Student Generation Pipeline**
-- **500 individual students** with complete characteristics
-- **Species, Gender, Clan** assignment with realistic distributions (60% Dwarf, 40% Elf)
-- **Personality profiles** using Big Five + academic dimensions
-- **Motivation dimensions** (8 types) with personality nudging
-- **Health/disability status** with increased proportion of no disabilities (40.6%)
-- **Names** generated from authentic clan-specific pools
+---
 
-#### **2. Program Enrollment System**
-- **44 programs** across 4 faculties enrolled
-- **Clan-program affinities** driving selection with personality/motivation modifiers
-- **Year 1 modules** assigned to each student (average 2.1 modules per student)
-
-#### **3. Engagement System Model**
-- **Weekly engagement records** (12 weeks × ~2 modules × 500 students)
-- **Semester summaries** with trends and risk factors
-- **Module characteristics** (difficulty, social requirements, creativity) – feminist-aware
-
-### 📁 **Project Structure**
+## Project Structure
 
 ```
 simulated-university/
-├── config/                          # Configuration files
-├── core_systems/                    # Main modeling systems
-├── supporting_systems/              # Utility systems
-├── data/                            # Generated data (see docs/DATA_IO_PLAN.md)
+├── config/                          # All tunable parameters
+│   ├── clan_personality_specifications.yaml  # Big Five + health_tendencies (per-clan disability)
+│   ├── clan_program_affinities.yaml          # Clan–programme affinity scores
+│   ├── clan_name_pools.yaml                  # Name generation pools
+│   ├── clan_socioeconomic_distributions.csv  # Per-clan SES and education distributions
+│   ├── disability_assessment_modifiers.csv   # Mark modifiers per disability
+│   ├── engagement_modifiers.yaml             # Disability/SES engagement mods + temporal arc
+│   ├── assessment_modifiers.yaml             # Education and SES mark multipliers
+│   ├── module_characteristics.csv            # 353 modules: difficulty, assessment_type
+│   ├── programme_characteristics.csv         # 44 programmes: stress, social, creativity
+│   ├── personality_refinement_modifiers.yaml # Trait adjustments for disability/SES/age
+│   ├── trait_programme_mapping.csv           # Trait → programme fit scoring
+│   ├── year_progression_rules.yaml           # Progression probabilities + trait_modifier_scale
+│   └── archive/                              # Deprecated configs (disability_distribution.yaml, etc.)
+├── core_systems/                    # Pipeline stages (run in order)
+│   ├── student_generation_pipeline.py
+│   ├── program_enrollment_system.py
+│   ├── engagement_system.py
+│   ├── assessment_system.py
+│   ├── progression_system.py
+│   └── build_relational_outputs.py
+├── supporting_systems/              # Used by student generation
+│   ├── name_generator.py
+│   ├── personality_refinement_system.py
+│   └── motivation_profile_system.py
+├── data/                            # Generated output (gitignored)
 ├── docs/                            # Documentation
-│   ├── DESIGN.md                    # Architecture and design
-│   ├── DATA_IO_PLAN.md              # Data inputs/outputs
-│   ├── SCHEMA.md                    # CSV column definitions
-│   ├── CALCULATIONS.md              # Formulas and assumptions
-│   └── PROJECT_SUMMARY.md           # This file — pick-up guide and status
-├── metaanalysis/                    # Cross-cutting analysis and validation
-│   ├── README.md
-│   ├── engagement_visualization.py
-│   └── difficulty_analysis.py
-├── project_tracker/                 # Tickets and progress (CURRENT, BACKLOG, DONE)
-├── visualizations/                  # Analysis outputs (PNGs)
-├── Instructions and guides/         # Source materials
-├── archive_population_model/        # Archived population-level code
-└── README.md                        # Project overview and quick start
+├── project_tracker/                 # CURRENT, BACKLOG, DONE, DESIGN_DECISIONS
+├── metaanalysis/                    # Validation and analysis scripts
+├── Instructions and guides/         # Curriculum Excel + world-building
+└── archive_population_model/        # Deprecated population-level approach
 ```
-
-### ⚠️ **Issues (Open & Resolved)**
-
-#### ✅ **1. Module Name Parsing** — RESOLVED
-#### ✅ **2. Module Difficulty Assessment** — RESOLVED (feminist-aware)
-
-#### **3. Social Engagement vs Participation Confusion** — Open
-#### **4. Intellectual vs Academic Motivation** — Open
-#### **5. Program-Level Characteristics** — Open
 
 ---
 
-**Next Focus**: See `project_tracker/BACKLOG.md` — assessment system, progression, longitudinal structure.
+## Open Work (summary)
+
+See `project_tracker/BACKLOG.md` for full detail. Key remaining items:
+
+- **Semester structure** — assign modules to semesters, two assessment dates per year
+- **Gender awarding gap** — currently flat by design; could emerge from engagement patterns
+- **Disability modifier tuning** — decide Stonegrove's support story (barriers vs embedded adjustments)
+- **Validate emergent gaps** — metaanalysis script to confirm species/SES/clan gaps are visible and traceable
+- **Gender clan overrides** — `_determine_gender` ignores clan-specific gender distributions
+- **Withdrawal-after-fail refinement** — programme year investment effect (Y1 vs Y2/Y3 repeaters)
+
+---
+
+**See also**: `project_tracker/DESIGN_DECISIONS.md` for rationale on key choices (awarding gap design, config-driven enrollment, disability sampling approach).

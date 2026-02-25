@@ -2,46 +2,59 @@
 
 **Last updated**: 25 Feb 2026
 
-## Recently completed
+## Recently completed (this session)
 
-- Validation script built and all 4 WARNs resolved:
-  - Graduate/withdrawal rate (was 0%): fixed validate_outputs.py to read `status` not `year_outcome`
-  - SES gap (was 27.6pp): SES modifier narrowed from 0.80–1.20 to 0.91–1.09 → now 14.7pp
-  - Difficulty→mark correlation (was +0.022): strengthened modifier slope + added deterministic within-year difficulty jitter to migration → now -0.121
-  - Mark progression now realistic: Year 1: 61.2, Year 2: 59.3, Year 3: 56.8
-- Emergent awarding gap (6.0pp Elf > Dwarf) from agent-level factors
-- All high-severity bugs fixed (disability sampling, dates, SES, species, seed reset, modules_passed)
-- Pipeline crash fix + engagement append bug fixed
-- Relational schema: 4 dims + 4 facts in data/relational/ (build_relational_outputs.py)
-- Module codes sourced from curriculum Excel (one-time migration, no more runtime computation)
-- Assessment year-level bug fixed: year 2/3 students now assessed on correct modules
-- Config fully populated: all 353 modules, all 44 programmes, no nulls
-- Config folder cleaned: 8 unused files archived, 10 active files remain
+- **Disability sampling wired per-clan** — `health_tendencies` section of `clan_personality_specifications.yaml` now drives disability prevalence. `disability_distribution.yaml` (per-species only) archived.
+- **Enrollment concentration fixed** — uniform floor added (`0.05 + base * multiplier * affinity`); affinity multipliers flattened (3.0/2.0/1.5/0.5 → 2.0/1.5/1.2/0.8). Top-5 programme share down from ~68% to ~42%.
+- **Engagement system overhauled** — AR(1) autocorrelated week deviations (alpha=0.4, fixed std=0.12); temporal arc (early enthusiasm, midterm crunch, exam stress); disability base adjustments + std_extra; SES rank modifiers. All driven from `config/engagement_modifiers.yaml`.
+- **Engagement system bug fixes** — semester now uses `prog_year` (was hardcoded 1); `academic_year` added to semester summaries.
+- **Assessment modifiers extracted to config** — `config/assessment_modifiers.yaml` created. Education gap softened: 1.10/0.92/0.85 → 1.06/0.96/0.92 (observed gap: 23pp → ~14pp).
+- **Progression scale fixed** — `trait_modifier_scale: 4` in YAML replaces hardcoded `× 10`. Withdrawal rate: 2.6% → 7.4% (UK HE target 5–8%). `caring_responsibilities` dead code removed.
+- **All docs and trackers updated** to reflect current state.
+
+## Previously completed
+
+- Validation script built and all 4 WARNs resolved
+- Emergent awarding gap (~6–9pp Elf > Dwarf) from agent-level factors
+- All high-severity bugs fixed (disability sampling, dates, SES, species modifier, seed reset, modules_passed)
+- Pipeline crash fixes; engagement append bug fixed
+- Relational schema: 4 dims + 4 facts in data/relational/
+- Module codes from curriculum Excel; assessment year-level bug fixed
+- Config fully populated (353 modules, 44 programmes); config folder cleaned
+
+---
 
 ## Priority queue
 
-### 1. Awarding gap and modifier tuning
-- Wire in clan assessment modifier (config/archive/clan_assessment_modifiers.csv ready)
-- Gender gap (via engagement patterns, not direct modifiers)
-- Disability modifier tuning (decide Stonegrove's support story)
-- Engagement band too narrow — widen for more realistic variation
+### 1. Validate emergent gaps
+- Run metaanalysis scripts to confirm: species gap visible? By clan? By SES? Can analyst trace to structural factors?
+- `metaanalysis/validate_outputs.py` exists — check it covers awarding gap checks
 
-### 3. Remaining medium bugs
-- Gender clan overrides bypassed (sample_gender hardcoded 45/45/10)
-- Semester hardcoded to 1 (engagement_system.py:459)
-- Semester engagement records missing academic_year
-
-### 4. Semester structure (medium effort)
-- Assign each module to semester 1 or 2 in curriculum Excel
+### 2. Semester structure (medium effort)
+- Assign each module to semester 1 or 2 (in curriculum Excel or module_characteristics.csv)
 - Two assessment dates per year (Jan + May)
 - Engagement system generates both semesters
 
+### 3. Gender awarding gap
+- Currently flat by design; could emerge from engagement patterns rather than a direct modifier
+- Decide approach before implementing
+
+### 4. Disability modifier tuning
+- Decide Stonegrove's support story: embedded reasonable adjustments (modifiers → ~1.0) or barriers still present (current values)
+
 ### 5. Later
-- Progression: withdrawal-after-fail refinement
-- Caring responsibilities field
+- **Gender clan overrides** — `_determine_gender` ignores clan-specific gender distributions in `clan_name_pools.yaml`; hardcoded 45/45/10
+- **Withdrawal-after-fail refinement** — Y1 vs Y2/Y3 investment effect; prior repeat history
+- **Add caring_responsibilities to student model** — field was removed as dead code; needs to be generated before it can be used in progression
 - Sample data on git
 - Status rolls, interventions, case study extraction
 
 ## Blocked
 
-- (none)
+(none)
+
+## Design decisions (standing)
+
+- **No direct clan mark modifier** — `config/archive/clan_assessment_modifiers.csv` archived; gaps must emerge from SES/education/disability. Do not re-wire.
+- **No caring_responsibilities in progression** — field not generated; removed from modifier code. Add to student generation first if this becomes a priority.
+- **Gender gap flat** — intentional; do not add direct gender modifier.

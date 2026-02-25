@@ -18,3 +18,10 @@ Short log of completed work. Add a line when something is finished.
 - 2026-02: Bug fixes — disability sampling (independent Bernoulli + comorbidities), assessment dates (May of second year), SES modifier (ranks 1–8), removed hardcoded species modifier.
 - 2026-02: Emergent awarding gap (~8.8pp Elf > Dwarf) — clan-specific SES/education distributions, weighted clan recruitment, steeper SES/education/disability modifiers. All agent-level, no top-down group modifiers. See DESIGN_DECISIONS.md.
 - 2026-02: `data/` added to .gitignore; removed from git history with filter-branch.
+- 2026-02-25: Per-clan disability sampling — `health_tendencies` section of `clan_personality_specifications.yaml` wired in; `disability_distribution.yaml` (per-species) archived.
+- 2026-02-25: Enrollment concentration fix — uniform floor (0.05 + ...) + flatter affinity multipliers (max 2.0 was 3.0). Top-5 share ~42% (was ~68%).
+- 2026-02-25: Engagement system overhaul — AR(1) week deviations (alpha=0.4, std=0.12), temporal arc, disability/SES base modifiers. `config/engagement_modifiers.yaml` created. Semester and academic_year bugs fixed.
+- 2026-02-25: Assessment modifiers extracted — `config/assessment_modifiers.yaml` created. Education gap softened from ~23pp to ~14pp (1.06/0.96/0.92 replaces 1.10/0.92/0.85).
+- 2026-02-25: Progression scale fix — `trait_modifier_scale: 4` in YAML (was hardcoded 10). Withdrawal 2.6% → 7.4%. Dead code (`caring_responsibilities`) removed from `_apply_modifiers`.
+- 2026-02-25: Clan assessment modifier closed as design decision — direct clan mark modifiers rejected; gaps emergent from SES/education/disability. `clan_assessment_modifiers.csv` remains archived.
+- 2026-02-25: All docs and trackers updated (CALCULATIONS, DESIGN, PROJECT_SUMMARY, CURRENT, BACKLOG, DONE, README).

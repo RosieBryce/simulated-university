@@ -1,8 +1,8 @@
 # Stonegrove University Simulation - Design Document
 
-**Version**: 2.0 (Longitudinal Individual-Level)  
-**Last Updated**: February 2026  
-**Status**: Design Phase
+**Version**: 2.2 (Engagement overhaul, progression scale fix, config extraction)
+**Last Updated**: 25 February 2026
+**Status**: Active — longitudinal pipeline running
 
 ---
 
@@ -155,24 +155,32 @@ All outputs in `data/`:
 
 ## Configuration Files
 
-### Keep as YAML
+### Active YAML configs
 
-- `config/clan_personality_specifications.yaml` — clan personality ranges
-- `config/clan_program_affinities.yaml` — clan–programme affinities
-- `config/disability_distribution.yaml` — disability distributions
+- `config/clan_personality_specifications.yaml` — clan personality ranges + `health_tendencies` (per-clan disability prevalence rates)
+- `config/clan_program_affinities.yaml` — clan–programme affinity scores + selection settings (multipliers, floor)
+- `config/year_progression_rules.yaml` — base progression/repeat/withdrawal probabilities + trait modifier weights + `trait_modifier_scale`
+- `config/engagement_modifiers.yaml` — per-disability base adjustments and noise std_extra; SES rank modifiers; temporal arc (early/midterm/exam)
+- `config/assessment_modifiers.yaml` — education modifier (academic/vocational/no_qualifications) and SES rank mark multipliers
 
-### Migrate to CSV (tabular, easier for data people to edit)
+### Active CSV configs (tabular, Excel-editable)
 
-- `config/module_characteristics.yaml` → **`config/module_characteristics.csv`**
-- `config/program_characteristics.yaml` → **`config/programme_characteristics.csv`**
+- `config/module_characteristics.csv` — 353 modules: difficulty_level, assessment_type, mark_modifier
+- `config/programme_characteristics.csv` — 44 programmes: stress_level, social_intensity, creativity_requirements
+- `config/clan_socioeconomic_distributions.csv` — per-clan SES rank and education distributions
+- `config/disability_assessment_modifiers.csv` — mark modifiers per disability type
+- `config/trait_programme_mapping.csv` — maps student traits to programme characteristics for enrollment fit scoring
+- `config/personality_refinement_modifiers.yaml` — trait adjustments for disability, SES, age
 
-### New config
+### Archived (config/archive/)
 
-- **`config/year_progression_rules.yaml`** — Short file: base probabilities (e.g. progression, withdrawal, repeat) **plus** individual modifiers. All progression is modelled at student level; this file only holds base rates and modifier rules.
+- `disability_distribution.yaml` — superseded by `health_tendencies` in `clan_personality_specifications.yaml`
+- `clan_assessment_modifiers.csv` — archived by design: direct clan mark modifiers removed; gaps now emergent from SES/education/disability
+- Various old YAML formats migrated to CSV
 
 ### No analyst-facing assessment config
 
-- Mark distributions used inside the model are for **internal validation only** (e.g. metaanalysis checks). Analysts work with raw assessment data; we do not publish `assessment_distributions.csv`. Any such config is meta/internal only.
+Mark distributions are for internal validation only. Analysts work with raw assessment data.
 
 ### Source Data (Excel, read-only)
 
@@ -334,29 +342,19 @@ For each academic_year from "1046-47" to "1052-53":
 
 ---
 
-## Migration Path
+## Migration Path (completed)
 
-### Phase 1: Current State → Longitudinal Foundation
+Phases 1–3 are complete as of February 2026:
 
-1. **Add `academic_year` to all domain tables**
-2. **Create `assessment_system.py`** (end-of-module marks)
-3. **Create `progression_system.py`** (pass/fail, progression logic)
-4. **Update enrollment system** to handle multiple years
-5. **Update engagement system** to work with `academic_year`
+- All domain tables include `academic_year` and `programme_year`
+- `assessment_system.py` and `progression_system.py` built and running
+- Enrollment system handles multi-year flow (new cohorts + continuing students)
+- Engagement system generates temporal arc, AR(1) weekly variation, disability/SES modifiers
+- Module and programme characteristics migrated from YAML to CSV
+- `year_progression_rules.yaml`, `engagement_modifiers.yaml`, `assessment_modifiers.yaml` in place
+- SCHEMA.md, CALCULATIONS.md, USER_GUIDE.md written and maintained
 
-### Phase 2: Config migration (module & programme only to CSV)
-
-1. **Define CSV schemas** for `module_characteristics` and `programme_characteristics`
-2. **Create migration script** (YAML → CSV) for those two only
-3. **Update code** to read CSV for modules and programmes; keep clan, disability, affinities as YAML
-4. **Add** `config/year_progression_rules.yaml` (base probabilities + modifier rules)
-
-### Phase 3: Documentation
-
-1. **Write SCHEMA.md** (all CSV columns)
-2. **Write CALCULATIONS.md** (all formulas)
-3. **Write USER_GUIDE.md** (how to use)
-4. **Update README.md** with links
+See `project_tracker/BACKLOG.md` for remaining open work (semester structure, gender gap, validation scripts).
 
 ---
 

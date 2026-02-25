@@ -1,7 +1,7 @@
 # Stonegrove University - Calculation Reference
 
-**Last Updated**: February 2026
-**Version**: 2.1 (Agent-Level Awarding Gap)
+**Last Updated**: 25 February 2026
+**Version**: 2.2 (Engagement overhaul, progression scale fix, config extraction)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
 
@@ -27,10 +27,11 @@ Sampled per-clan from `config/clan_socioeconomic_distributions.csv`:
 
 ### Disability Sampling
 
-From `config/disability_distribution.yaml` — independent Bernoulli draws per disability:
-- Each disability has a species-specific prevalence rate
+From the `health_tendencies` section of `config/clan_personality_specifications.yaml` — independent Bernoulli draws per disability type:
+- Each disability has a **clan-specific** prevalence rate (not species-level)
 - Students can have multiple disabilities (comorbidities)
 - If no disabilities drawn, assigned `no_known_disabilities`
+- `config/archive/disability_distribution.yaml` (per-species only) is archived — superseded
 
 ### Personality Traits
 
@@ -68,7 +69,8 @@ All refined traits clamped to [0.0, 1.0].
 **Clan Affinity** (from `config/clan_program_affinities.yaml`):
 - Each clan has affinity scores (0.0-1.0) for each programme
 - Affinity classified into levels using `affinity_levels` config
-- Score = `base_selection_probability * affinity_multiplier * raw_affinity`
+- Score = `0.05 + base_selection_probability * affinity_multiplier * raw_affinity`
+- The `0.05` floor ensures every programme above the affinity threshold has a baseline probability, preventing extreme concentration in top-affinity programmes
 - Programmes below `minimum_affinity_threshold` get probability 0
 
 **Trait-Programme Fit** (from `config/trait_programme_mapping.csv`):
@@ -164,11 +166,39 @@ creativity_modifier = (openness - 0.5) * creativity_requirements * 0.3
 academic_engagement += creativity_modifier
 ```
 
-### Weekly Variation
+### Disability and SES Modifiers (base adjustments)
+
+From `config/engagement_modifiers.yaml`:
+- **Disability modifiers**: per-disability adjustments to base attendance, academic_engagement, stress, and `std_extra` (additional weekly noise). E.g. `mental_health_disability`: attendance -0.08, academic_engagement -0.06, stress +0.12, std_extra +0.06.
+- **SES rank modifiers**: lower SES → lower attendance, higher stress. E.g. rank 1: attendance -0.10, stress +0.12. Applied once to base values before weekly generation.
+
+### Temporal Arc
+
+Also from `config/engagement_modifiers.yaml`. Applied per-week as additive shifts to base values:
+- **Weeks 1–2 (early)**: attendance +0.04, academic_engagement +0.03, stress -0.04 (fresher enthusiasm)
+- **Weeks 6–8 (midterm)**: attendance -0.03, stress +0.12
+- **Weeks 10–12 (exam)**:
+  - All students: stress +0.18
+  - High conscientiousness (≥ 0.6): attendance +0.03, academic_engagement +0.05
+  - Low conscientiousness (< 0.6): attendance -0.06
+
+### Weekly Variation (AR(1) autocorrelated)
+
+A shared weekly deviation is generated for each student using a first-order autoregressive process:
+```
+# alpha = 0.4 (week-to-week persistence)
+scale = sqrt(1 - alpha²) * noise_std
+devs[i] = alpha * devs[i-1] + normal(0, scale)
+```
+- `noise_std` = 0.12 (fixed, not proportional to base value)
+- `std_extra` from disability config adds extra noise for affected students
+- The same deviation applies to all modules in a given week (a bad week is bad everywhere)
+- Stress deviation is **inverted**: a positive week deviation reduces stress
 
 ```
-weekly_value = base_value + random_normal(0, 0.05)
-weekly_value = clamp(weekly_value, 0.1, 0.95)
+metric_value = base_value + week_deviation + temporal_mod + small_module_noise(std=0.05)
+stress_value = base_stress - week_deviation + temporal_stress_mod
+metric_value = clamp(metric_value, 0.0, 1.0)
 ```
 
 ---
@@ -203,14 +233,15 @@ All modifiers are multiplicative and applied at the individual student level.
 - `wheelchair_user`: x0.98
 - Multiple disabilities compound multiplicatively.
 
-**Education Modifier**:
-- Academic: x1.10
-- Vocational: x0.92
-- No qualifications: x0.85
+**Education Modifier** (from `config/assessment_modifiers.yaml`):
+- Academic: x1.06
+- Vocational: x0.96
+- No qualifications: x0.92
+- Softened from earlier values (was 1.10/0.92/0.85) — gap was ~23pp, target ~12–15pp
 
-**Socio-Economic Modifier** (ranks 1-8):
+**Socio-Economic Modifier** (ranks 1–8, from `config/assessment_modifiers.yaml`):
 ```
-{1: 0.80, 2: 0.85, 3: 0.90, 4: 0.96, 5: 1.02, 6: 1.08, 7: 1.14, 8: 1.20}
+{1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
 ```
 
 **Module Difficulty Modifier**:
@@ -264,7 +295,7 @@ Uses log-odds model with trait-based modifiers (from `config/year_progression_ru
 
 **If Year Passed**: Roll between `enrolled` (progressed) and `withdrawn`.
 - Base progression probability ~0.90
-- Modified by conscientiousness, academic_drive, average mark, significant disability, caring responsibilities
+- Modified by conscientiousness, academic_drive, average mark, significant disability
 
 **If Year Failed**: Roll between `repeating` and `withdrawn`.
 - Base repeat probability ~0.60
@@ -275,9 +306,11 @@ Uses log-odds model with trait-based modifiers (from `config/year_progression_ru
 **Modifiers** applied via log-odds transformation:
 ```
 log_odds = log(p / (1-p))
-log_odds += modifier_weight * (trait_value - 0.5) * 10
+log_odds += modifier_weight * (trait_value - 0.5) * scale
 adjusted_p = 1 / (1 + exp(-log_odds))
 ```
+`scale` is read from `config/year_progression_rules.yaml` → `trait_modifier_scale` (currently **4**).
+Maps trait range [0, 1] to ±(0.5 × scale) in log-odds space. Scale=10 was too aggressive (swamped base rates, giving ~2.6% withdrawal); scale=4 gives ~7% withdrawal, within UK HE target 5–8%.
 
 ---
 
@@ -288,7 +321,7 @@ The species awarding gap (~8-12pp, Elf > Dwarf) emerges from **individual-level 
 1. **Clan-specific SES distributions** — disadvantaged clans concentrated at low SES ranks
 2. **Clan-specific education distributions** — disadvantaged clans have fewer academic backgrounds
 3. **Weighted clan recruitment** — more students from lower-SES Dwarf clans, higher-SES Elf clans
-4. **Disability prevalence differences** — species-specific rates in config
+4. **Clan-specific disability prevalence** — per-clan rates in `health_tendencies` section of `clan_personality_specifications.yaml`
 5. **Steeper individual modifiers** — SES (0.80-1.20), education (0.85-1.10) create meaningful spread
 
 No top-down species or clan mark modifiers. All group-level patterns are traceable to individual characteristics. See `project_tracker/DESIGN_DECISIONS.md`.

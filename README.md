@@ -100,10 +100,11 @@ See `docs/SCHEMA.md` for full column definitions.
 - `module_characteristics.csv` — module difficulty, assessment type
 
 ### Hierarchical config (YAML)
-- `clan_personality_specifications.yaml` — Big Five personality ranges per clan
+- `clan_personality_specifications.yaml` — Big Five personality ranges per clan + `health_tendencies` (per-clan disability prevalence)
 - `clan_program_affinities.yaml` — clan-programme affinity scores + selection settings
-- `disability_distribution.yaml` — disability prevalence rates per species
-- `year_progression_rules.yaml` — progression probabilities and trait modifiers
+- `year_progression_rules.yaml` — progression probabilities, trait modifier weights, `trait_modifier_scale`
+- `engagement_modifiers.yaml` — disability/SES base adjustments, weekly std_extra, temporal arc
+- `assessment_modifiers.yaml` — education and SES mark multipliers
 
 ## Documentation
 
