@@ -1,6 +1,13 @@
 # Current focus
 
-**Last updated**: 25 Feb 2026
+**Last updated**: 26 Feb 2026
+
+## Completed this session (26 Feb 2026)
+
+- **Data cleanup** — flat pipeline output CSVs in `data/` root removed (superseded by relational schema). Dead metaanalysis scripts retired: `assessment_visualization.py`, `difficulty_analysis.py`, `engagement_visualization.py`, `student_paths.py`. `validate_outputs.py` kept (reads from relational).
+- **Weekly engagement strategy confirmed** — per-year files in `data/weekly_engagement/` are the canonical store; monolithic `stonegrove_weekly_engagement.csv` removed.
+- **Pipeline validated on seed 99** — all 10 relational tables generated cleanly. All validate_outputs checks pass: pass rate 89.8%, withdrawal 5.7%, Elf–Dwarf gap 5.5pp, SES gap 14.3pp, engagement→mark r=0.227, difficulty→mark r=-0.169.
+- **Tracker housekeeping** — backlog items ticked: personality mismatch bug (file deleted), semester summaries dropped, assessment events columns, 5-cohort longitudinal loop, USER_GUIDE.md.
 
 ## Completed this session (25 Feb 2026)
 

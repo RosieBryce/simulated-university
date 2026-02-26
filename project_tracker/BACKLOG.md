@@ -24,7 +24,7 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ### Medium severity
 
-- [ ] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Looks for `conscientiousness` but pipeline produces `refined_conscientiousness`. Note: this file is currently unused by the pipeline; fix if it gets integrated.
+- [x] **BUG: Personality column prefix mismatch in ModuleCharacteristicsSystem** (`supporting_systems/module_characteristics_system.py`) – Moot: `module_characteristics_system.py` was deleted (cleanup). Assessment and engagement systems load module characteristics directly from CSV.
 - [x] **BUG: Semester hardcoded to 1** (`engagement_system.py`) – Fixed: semester now derived from `prog_year`; the engagement rewrite no longer hardcodes semester=1.
 - [x] **BUG: Semester engagement records missing `academic_year`** (`engagement_system.py`) – Fixed: `academic_year` now included in semester summary dicts.
 - [x] **BUG: Weekly engagement clusters in narrow band** (`engagement_system.py`) – Fixed: AR(1) autocorrelated week deviations (alpha=0.4, fixed std=0.12), temporal arc (early/midterm/exam), disability base adjustments + std_extra, SES rank modifiers. All driven from `config/engagement_modifiers.yaml`.
@@ -61,8 +61,8 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] **Add data/metadata.json** – version, seed, timestamp, config_versions, cohort_size, years_generated, academic_years list, cohorts count (per DESIGN Versioning).
 
 ### Output changes (per DESIGN)
-- [ ] **Drop semester summaries as core output** – DESIGN: derive from weekly engagement if needed; remove or demote `stonegrove_semester_engagement.csv` from pipeline.
-- [ ] Ensure assessment events include `module_code`, `component_code` (done).
+- [x] **Drop semester summaries as core output** – `stonegrove_semester_engagement.csv` removed; pipeline does not output semester summaries. Derived from weekly engagement if needed.
+- [x] Ensure assessment events include `module_code`, `component_code` (done).
 
 ## Phase 2: Config (DESIGN – mostly done)
 - [x] Migrate `module_characteristics` and `programme_characteristics` to CSV.
@@ -108,5 +108,5 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 
 ## What's next (after progression + longitudinal)
 
-1. **5 cohorts × 7 years loop** – full longitudinal simulation.
-2. **USER_GUIDE.md** – run pipeline, read data.
+1. [x] **5 cohorts × 7 years loop** – full longitudinal simulation. Done.
+2. [x] **USER_GUIDE.md** – run pipeline, read data. Done: `docs/USER_GUIDE.md` exists.
