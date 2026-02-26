@@ -1,8 +1,8 @@
 {
   "model_version": "v2.0-longitudinal",
-  "git_commit": "48c28fdd9efa",
-  "random_seed": 42,
-  "generation_timestamp": "2026-02-25T22:15:17Z",
+  "git_commit": "df85a279098c",
+  "random_seed": 99,
+  "generation_timestamp": "2026-02-26T17:51:53Z",
   "config_versions": {
     "progression_rules": "v1.0"
   },

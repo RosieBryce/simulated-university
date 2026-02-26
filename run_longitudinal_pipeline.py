@@ -180,6 +180,8 @@ def main():
 
     data_dir = PROJECT_ROOT / "data"
     data_dir.mkdir(exist_ok=True)
+    relational_dir = data_dir / "relational"
+    relational_dir.mkdir(exist_ok=True)
 
     all_enrollment = []
     all_assessment = []
@@ -240,6 +242,7 @@ def main():
         all_assessment.append(assessment_df)
         all_progression.append(progression_df)
         all_weekly.append(weekly_df)
+        weekly_df.to_csv(relational_dir / f"fact_weekly_engagement_{acad_year}.csv", index=False)
         if graduate_outcomes_df is not None and len(graduate_outcomes_df) > 0:
             all_graduate_outcomes.append(graduate_outcomes_df)
         if nss_df is not None and len(nss_df) > 0:
@@ -271,10 +274,6 @@ def main():
     if all_individual:
         pd.concat(all_individual, ignore_index=True).to_csv(
             data_dir / "stonegrove_individual_students.csv", index=False
-        )
-    if all_weekly:
-        pd.concat(all_weekly, ignore_index=True).to_csv(
-            data_dir / "stonegrove_weekly_engagement.csv", index=False
         )
     if all_graduate_outcomes:
         pd.concat(all_graduate_outcomes, ignore_index=True).to_csv(

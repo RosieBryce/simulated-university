@@ -4,8 +4,9 @@ Build relational output tables from raw pipeline CSVs.
 
 Reads from data/ and config/, writes 10 clean tables to data/relational/:
   Dimensions: dim_students, dim_programmes, dim_modules, dim_academic_years
-  Facts:       fact_enrollment, fact_weekly_engagement, fact_assessment,
-               fact_progression, fact_graduate_outcomes, fact_nss_responses
+  Facts:       fact_enrollment, fact_assessment, fact_progression,
+               fact_graduate_outcomes, fact_nss_responses,
+               fact_weekly_engagement_YYYY-YY.csv (one file per academic year)
 
 Run from project root after run_longitudinal_pipeline.py.
 """
@@ -26,15 +27,12 @@ ACADEMIC_YEARS = ["1046-47", "1047-48", "1048-49", "1049-50", "1050-51", "1051-5
 # ---------------------------------------------------------------------------
 
 def load_weekly_engagement() -> pd.DataFrame:
-    """Load weekly engagement — combined file if present, else concat per-year splits."""
-    combined = DATA_DIR / "stonegrove_weekly_engagement.csv"
-    if combined.exists():
-        return pd.read_csv(combined)
-    splits = sorted((DATA_DIR / "weekly_engagement").glob("stonegrove_weekly_engagement_*.csv"))
+    """Load weekly engagement from per-year splits in data/relational/."""
+    splits = sorted((DATA_DIR / "relational").glob("fact_weekly_engagement_*.csv"))
     if not splits:
         raise FileNotFoundError(
-            "No weekly engagement data found. Run run_longitudinal_pipeline.py or ensure "
-            "data/weekly_engagement/ contains per-year CSVs."
+            "No weekly engagement data found. Run run_longitudinal_pipeline.py first — "
+            "it writes fact_weekly_engagement_YYYY-YY.csv to data/relational/."
         )
     return pd.concat([pd.read_csv(p) for p in splits], ignore_index=True)
 
@@ -197,7 +195,6 @@ def main():
         "dim_programmes":         build_dim_programmes(prog_chars_df, enrollment_df),
         "dim_modules":            build_dim_modules(assessment_df, module_chars_df),
         "fact_enrollment":        build_fact_enrollment(enrollment_df),
-        "fact_weekly_engagement": build_fact_weekly_engagement(engagement_df, assessment_df),
         "fact_assessment":        build_fact_assessment(assessment_df),
         "fact_progression":       build_fact_progression(progression_df),
         "fact_graduate_outcomes": build_fact_graduate_outcomes(grad_outcomes_df),
@@ -209,6 +206,14 @@ def main():
         path = OUT_DIR / f"{name}.csv"
         df.to_csv(path, index=False)
         print(f"  {name}.csv  — {len(df):,} rows × {len(df.columns)} cols")
+
+    # Weekly engagement: write one cleaned file per academic year
+    for year in ACADEMIC_YEARS:
+        year_eng = engagement_df[engagement_df["academic_year"] == year]
+        year_fact = build_fact_weekly_engagement(year_eng, assessment_df)
+        path = OUT_DIR / f"fact_weekly_engagement_{year}.csv"
+        year_fact.to_csv(path, index=False)
+        print(f"  fact_weekly_engagement_{year}.csv  — {len(year_fact):,} rows × {len(year_fact.columns)} cols")
 
     print("\nDone.")
 
