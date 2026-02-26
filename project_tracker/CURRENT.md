@@ -2,11 +2,19 @@
 
 **Last updated**: 26 Feb 2026
 
-## Completed this session (26 Feb 2026)
+## Completed this session (26 Feb 2026) — part 2
+
+- **Weekly engagement moved to `data/relational/`** — per-year files renamed `fact_weekly_engagement_YYYY-YY.csv`, moved out of `data/weekly_engagement/` (folder removed). Pipeline now writes them to `data/relational/` directly. `build_relational_outputs.py` reads from there and writes cleaned per-year files back. Monolithic `stonegrove_weekly_engagement.csv` creation removed from pipeline.
+- **All relational data now tracked in git** — gitignore updated: `data/relational/` no longer blanket-ignored. 16 files tracked: 4 dims + 6 facts (weekly as 7 per-year files). Only the combined weekly file (not generated anymore) is excluded.
+- **Public site built** — `docs/` folder created with `index.html`, `style.css`, `main.js`, and 11 CSVs in `docs/data/`. Dark academia design from `stonegrove-proof.html`. All URLs wired (GitHub, download zip, Bluesky, LinkedIn, email).
+- **Gap metric corrected** — copy and chart updated from mean mark gap (~4pp) to good degree attainment gap (~18pp, Elf 48% vs Dwarf 30%). Matches UK HE convention for reporting awarding gaps.
+- **Aggregation scripts** — `scripts/aggregate_gap.py` and `scripts/aggregate_engagement.py` generate the two summary CSVs for the site from pipeline outputs.
+- **GitHub Pages ready** — enable tomorrow: Settings → Pages → master / /docs.
+
+## Completed this session (26 Feb 2026) — part 1
 
 - **Data cleanup** — flat pipeline output CSVs in `data/` root removed (superseded by relational schema). Dead metaanalysis scripts retired: `assessment_visualization.py`, `difficulty_analysis.py`, `engagement_visualization.py`, `student_paths.py`. `validate_outputs.py` kept (reads from relational).
-- **Weekly engagement strategy confirmed** — per-year files in `data/weekly_engagement/` are the canonical store; monolithic `stonegrove_weekly_engagement.csv` removed.
-- **Pipeline validated on seed 99** — all 10 relational tables generated cleanly. All validate_outputs checks pass: pass rate 89.8%, withdrawal 5.7%, Elf–Dwarf gap 5.5pp, SES gap 14.3pp, engagement→mark r=0.227, difficulty→mark r=-0.169.
+- **Pipeline validated on seed 99** — all relational tables generated cleanly. All validate_outputs checks pass: pass rate 89.8%, withdrawal 5.7%, Elf–Dwarf gap 5.5pp (mark), SES gap 14.3pp, engagement→mark r=0.227, difficulty→mark r=-0.169.
 - **Tracker housekeeping** — backlog items ticked: personality mismatch bug (file deleted), semester summaries dropped, assessment events columns, 5-cohort longitudinal loop, USER_GUIDE.md.
 
 ## Completed this session (25 Feb 2026)
@@ -34,14 +42,20 @@
 
 ## Priority queue (next up)
 
-### 1. Module trailing
+### 1. Enable GitHub Pages
+Settings → Pages → master / /docs. Rosie to action when GitHub Pro available (~27 Feb).
+
+### 2. Pre-launch site check
+Read through `docs/index.html` before 17 March: fix "is the designed" → "is designed" (Section 5), check dataset table still matches pipeline output.
+
+### 3. Module trailing
 Students who pass the year overall but have one module < 40 trail it as a RESIT in the following year. Complex: touches `progression_system.py` (detect trailing modules), `assessment_system.py` (generate RESIT rows), `docs/SCHEMA.md`. See backlog for full spec.
 
-### 3. Status rolls / life events
-Optional random events at year start (e.g. family crisis, sudden free time). 
+### 4. Status rolls / life events
+Optional random events at year start (e.g. family crisis, sudden free time).
 
 ---
 
 ## Blocked
 
-(none)
+- **GitHub Pages** — requires GitHub Pro. Rosie getting paid ~27 Feb.

@@ -74,6 +74,13 @@ Items to do next. Move to CURRENT when starting. Aligned with DESIGN.md Phase 1�
 - [x] SCHEMA.md, CALCULATIONS.md – Updated: progression_outcomes table added, all assessment modifiers current, awarding gap section, enrollment formula updated.
 - [x] Update README.md – Rewritten: current project structure, config files, output files, documentation links.
 
+## Public site (docs/)
+
+- [ ] **Enable GitHub Pages** — Settings → Pages → master / /docs. Blocked on GitHub Pro (Rosie to action ~27 Feb 2026).
+- [ ] **Pre-launch proofread** — fix "is the designed" → "is designed" in `docs/index.html` Section 5. Check dataset table (10 rows) still matches current pipeline output. Deadline: 17 March 2026.
+- [ ] **Rerun aggregation scripts after pipeline changes** — if pipeline is re-run with a new seed or config, run `scripts/aggregate_gap.py` and `scripts/aggregate_engagement.py` and commit updated CSVs to `docs/data/`.
+- [ ] **Archive `website_design/`** — folder is now superseded by `docs/`. Consider moving to archive or deleting before repo goes public.
+
 ## Optional / nice-to-have
 - [ ] **Config path constant** – shared `paths.py` or env for `data/`, `config/`, `visualizations/`.
 - [x] Single run script `run_pipeline.py` at root.
