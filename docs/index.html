@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Stonegrove University — synthetic higher education data for research, teaching, and hackathons.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonegrove University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+<nav>
+  <a href="#hero" class="nav-wordmark">Stonegrove University</a>
+  <ul class="nav-links">
+    <li><a href="#origins">Origins</a></li>
+    <li><a href="#dataset">The data</a></li>
+    <li><a href="#gap">The gap</a></li>
+    <li><a href="#build">Build with this</a></li>
+    <li><a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip">Download</a></li>
+  </ul>
+</nav>
+
+
+<!-- =====================================================
+     SECTION 1 — HERO
+===================================================== -->
+<section id="hero">
+  <div class="hero-ornament">❧</div>
+  <span class="section-label" style="justify-content:center; display:block; text-align:center">OPEN SOURCE · SYNTHETIC DATA · HIGHER EDUCATION</span>
+  <h1>Stonegrove University</h1>
+  <p class="hero-tagline">Innovating Together for Middle Earth.</p>
+  <p class="hero-subtext">An automated university set in a fantasy world of dwarves and elves, which simulates a small UK Higher Education Institution. This is an open-source project inviting you to play with the code or the data it produces.</p>
+  <div class="stat-row">
+    <div class="stat-box">
+      <span class="stat-number">3,500</span>
+      <span class="stat-label">students</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number">44</span>
+      <span class="stat-label">programmes</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number">7</span>
+      <span class="stat-label">academic years</span>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a href="#gap" class="btn btn-primary">Explore the data</a>
+    <a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip" class="btn btn-outline">Download</a>
+    <a href="https://github.com/RosieBryce/simulated-university" class="btn btn-ghost">GitHub ↗</a>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 2 — PROJECT ORIGINS
+===================================================== -->
+<section id="origins">
+  <div class="container">
+    <span class="section-label">SECTION 01 / ORIGINS</span>
+    <h1>Project origins</h1>
+    <p>Universities are medieval institutions – Oxford predates the printing press, the Renaissance, the Black Death, the Ottoman Empire, and the existence of the United States. Modern universities have inherited legacy structures like the academic year, programmes, lectures, and exams from a period of history long since passed. Most of us who work in higher education spend a significant portion of our time working around them rather than with them. We are trying to do something genuinely innovative within structures that predate the internet by several centuries.</p>
+    <p>The question I kept returning to was: what would high-quality, genuinely student-centred pedagogy look like if you could design for it from scratch? If you weren't inheriting the scaffolding, if there were no programmes that have 'always been this way', no assessment calendar that exists because it has always existed, what would you actually build?</p>
+    <p>A good way of exploring this, I decided, was to build the university in a fantasy realm. And why not throw AI into the mix while I'm at it?</p>
+    <p>I worked with one AI to do some world-building, and then with another agent to code a simulated student population journeying through the UK HEI-adjacent institution we called 'Stonegrove'. This project is the result of that experiment.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 3 — THREE UNIVERSITIES
+===================================================== -->
+<section id="universities">
+  <div class="container-wide">
+    <div class="section-header-centre">
+      <span class="section-label">SECTION 02 / THE WORLD</span>
+      <h1 style="font-size:2.6rem">Three universities</h1>
+      <p class="intro-para">My fantasy world actually contains three universities. Understanding Stonegrove properly means understanding all three, because Stonegrove only makes sense in relation to the others.</p>
+    </div>
+    <div class="cards-row">
+
+      <div class="uni-card" style="border-left-color:var(--elf-green)">
+        <h3>Elder Grove</h3>
+        <span class="species-pill elf-pill">Elven institution</span>
+        <p>Elder Grove is an elven institution, ancient and prestigious, built on the conviction that knowledge is precious, and that the value of students' learning has a direct relationship with the opacity of the teaching strategy.</p>
+        <p>To enrol as a student at Elder Grove, you must first pass a series of trials, which are notoriously unfair and 'meta'. Once you have enrolled, your next test is to work out from the stack of scrolls presented to you where and when your first lecture might be. Nothing about Elder Grove has changed in several centuries, which is also considered a point of pride. Elder Grove has literal ivory towers.</p>
+        <p>This is satire, of course – you can draw your own analogies.</p>
+      </div>
+
+      <div class="uni-card" style="border-left-color:var(--dwarf-gold)">
+        <h3>Stoneborn</h3>
+        <span class="species-pill dwarf-pill">Dwarven institution</span>
+        <p>Stoneborn is the dwarven institution and the opposite in almost every respect. It is pedagogy-first: learning is mostly project-based, and knowledge is shared between staff and students freely. There is no formal course structure, students stay until they feel they have learned enough to move on. There is no final degree awarded, no classification or stratification of students. Soft skills such as collaboration and negotiation are given the same status as knowledge accretion.</p>
+        <p>Side note: I'd be really interested in hearing from people who want to shape up this vision into something more concrete.</p>
+      </div>
+
+      <div class="uni-card" style="border-left-color:var(--gold)">
+        <h3>Stonegrove</h3>
+        <span class="species-pill mixed-pill">Mixed institution</span>
+        <p>Stonegrove is the middle sister. An awkward peacetime collaboration between the species of dwarves and elves. It has inherited elven structures: programmes, modules, pathways, assessment deadlines, annual progression boards but is genuinely trying to apply dwarven pedagogical values within them. This tension between the inherited architecture and the intended ambition is where most of us seem to work in the real world.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 4 — ABOUT STONEGROVE UNIVERSITY
+===================================================== -->
+<section id="about">
+  <div class="container-wide">
+    <span class="section-label">SECTION 03 / THE INSTITUTION</span>
+    <h1>About Stonegrove University</h1>
+    <div class="stats-meta">
+      <span>Est. 1023</span><span class="dot">·</span>
+      <span>14 clans</span><span class="dot">·</span>
+      <span>44 programmes</span><span class="dot">·</span>
+      <span>4 faculties</span>
+    </div>
+    <p>Stonegrove is structured across four faculties:</p>
+
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <h4>Faculty of Hearth and Transformation</h4>
+        <p>Care, Craft and Continuity · Dreaming and Somatic Inquiry · Mutual Aid and Guild Governance</p>
+      </div>
+      <div class="faculty-card">
+        <h4>Faculty of Living Lore</h4>
+        <p>Timekeeping in Plural Cultures · Storyweaving &amp; Community Histories · Runic Infrastructure</p>
+      </div>
+      <div class="faculty-card">
+        <h4>Faculty of Applied Forging</h4>
+        <p>Mycelial Cultivation and Biotech · Hydraulics, Heuristics &amp; Harmonics · Earth-Aligned Agriculture</p>
+      </div>
+      <div class="faculty-card">
+        <h4>Faculty of Integrative Inquiry</h4>
+        <p>Ancient Tongues and Translation · Conflict Transformation through Cultural Design · Comparative Runes and Scripts</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding:0">
+      <p>Stonegrove is home to 14 clans, eight dwarven, and six elven. Each clan arrives with its own history and its own relationship to education, its own socioeconomic distribution, its own genes and patterns of disability prevalence.</p>
+      <p>Each student is modelled as an individual agent in the simulation. Each student has a personality profile drawn from the Big Five, eight motivation dimensions, social dynamics, and stress responses that evolve across the academic year.</p>
+      <p>Outcomes are modelled at student level, shaped by who they are and what they encounter week by week, module by module, year by year, with just a hint of extra randomness built in. The data at the other end is just a record of what emerges from that process.</p>
+
+      <h2 class="sub-h2" style="font-family:var(--font-heading);font-weight:700;font-size:1.55rem;color:var(--text-navy);margin:2.5rem 0 0.75rem;position:relative;padding-bottom:0.85rem;">Inspired by Dwarf Fortress</h2>
+      <p>This project would not exist without Dwarf Fortress, the colony simulation by Bay 12 Games in which an entire world is simulated from the day 0 across whole geological epochs before your seven dwarves even arrive. Your dwarves have personalities, memories, preferences, opinions, and strong feelings about art. They form friendships, mourn their dead, and occasionally go completely berserk because someone killed their cat, or because they did not find exactly the right type of bone for their flute-making project. You do not manage them so much as try to shepherd them in a general direction while they pursue their own agendas. The outcomes of your colony are emergent properties of individual dwarves living their lives, not directives from above.</p>
+      <p>That agent-first philosophy is what Stonegrove is built on. Enormous and sincere credit to Tarn and Zach Adams.</p>
+
+      <h2 class="sub-h2" style="font-family:var(--font-heading);font-weight:700;font-size:1.55rem;color:var(--text-navy);margin:2.5rem 0 0.75rem;position:relative;padding-bottom:0.85rem;">A note on emergence</h2>
+      <div class="pullquote">
+        <p>I found a student in one of my test runs, amusingly given the name 'Doni Pickface', a dwarf of the Flint clan. Poor Doni ended up having to repeat their third year three times: the simulation gives students a gradually increasing reluctance to withdraw as they accumulate time at the university - the sunk-cost effect, modelled at agent level. Doni kept failing the year, kept deciding not to leave, and eventually (finally!) passed on their third attempt.</p>
+        <p>I didn't decide for that to happen - it just emerged from how the model works. I really enjoy that the system produces stories I did not write.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 5 — WHAT'S IN THE DATASET
+===================================================== -->
+<section id="dataset">
+  <div class="container-wide">
+    <span class="section-label">SECTION 04 / THE DATA</span>
+    <h1>What's in the dataset</h1>
+    <div class="intro-block">
+      <p>One of the obstacles to digital innovation in higher education is that real student data tends to be fragmented across systems that do not share definitions, and joining things together tends to be very messy and time consuming. This dataset is the designed to be structured, documented, and ready to use without any cleaning.<!-- NOTE: "is the designed" is a typo in v2 — Rosie to correct before launch --></p>
+      <p>All data is synthetic, generated by the simulation and not derived from any real student records. The same random seed produces the same dataset every time, and the full methodology is documented and open.</p>
+      <p>All five datasets join on student_id and academic_year. Full schema documentation, including column definitions and data types, is available in the GitHub repository.<!-- NOTE: "All five datasets" is inconsistent — table lists ten. Rosie to update before launch --></p>
+    </div>
+
+    <div class="data-table-wrap">
+      <!-- TODO: Rosie to verify dataset list is final before launch -->
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>What it contains</th>
+            <th>Approx. rows</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>dim_students.csv</td><td>Species, clan, Big Five personality profile, eight motivation dimensions, disability status, socioeconomic rank, prior qualifications. One row per student.</td><td>~3,500</td></tr>
+          <tr><td>dim_programmes.csv</td><td>Programme profiles across four faculties: difficulty, social intensity, career prospects, creativity requirement, research intensity. One row per programme.</td><td>~44</td></tr>
+          <tr><td>dim_modules.csv</td><td>Module characteristics: difficulty level, assessment type, stress level, group work and creativity requirements, semester and programme linkage. One row per module.</td><td>~353</td></tr>
+          <tr><td>dim_academic_years.csv</td><td>Academic year calendar with semester start dates, midterm and final assessment dates. One row per academic year.</td><td>~7</td></tr>
+          <tr><td>fact_enrollment.csv</td><td>Programme, year of study, module allocation, and enrolment status. One row per student per academic year.</td><td>~8,900</td></tr>
+          <tr><td>fact_weekly_engagement.csv</td><td>Attendance rates, participation scores, academic and social engagement, stress levels. One row per student per module per week.</td><td>~281,000</td></tr>
+          <tr><td>fact_assessment.csv</td><td>Module marks, UK grade classifications (First, 2:1, 2:2, Third, Fail), assessment component and date. One row per assessment event.</td><td>~46,800</td></tr>
+          <tr><td>fact_progression.csv</td><td>Year outcome, modules passed, average mark, and next-year status. One row per student per academic year.</td><td>~8,900</td></tr>
+          <tr><td>fact_nss_responses.csv</td><td>Synthetic NSS scores across teaching quality, assessment feedback, academic support, learning resources, and overall satisfaction.</td><td>~2,300</td></tr>
+          <tr><td>fact_graduate_outcomes.csv</td><td>Degree classification, employment sector, salary band, and time to first professional outcome. One row per graduate.</td><td>~1,950</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">The weekly engagement file is ~69MB and cannot be served from the browser. Only pre-aggregated JSON files are included in the site assets. The full raw CSVs are distributed via GitHub Releases.</p>
+    <div class="dataset-cta">
+      <a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip" class="btn btn-primary">Download the full dataset</a>
+      <a href="https://github.com/RosieBryce/simulated-university" class="btn btn-outline">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 6 — THE GAP
+===================================================== -->
+<section id="gap">
+  <div class="container">
+    <span class="section-label">SECTION 05 / THE GAP</span>
+    <h1>What you will find in the data</h1>
+    <p>There is a gap in the data. Elven students outperform dwarven students by something like eighteen percentage points in good degree attainment — that is, in the proportion achieving a First or 2:1 — and this persists across cohorts, across programmes, and across all seven academic years. You will find it fairly quickly.</p>
+    <p>The gap is not there because there is a species modifier in the model that says elves score higher. It emerges because dwarven clans are more likely to enter university with a range of previous qualifications, more likely to have certain disabilities, more likely to come from lower socioeconomic backgrounds. Those factors compound through engagement patterns, through assessment performance, through progression rates, and what you observe at the top is a gap that looks like it is about species but is actually about structure.</p>
+    <p>If you're interested in modelling the effects of policy interventions on differential outcomes, this codebase and dataset may go some way to supporting you to test ideas before trying them out in the real world. Disclaimer, of course – this is a fantasy universe, dwarves and elves are not humans, and my simulation does not capture more than the tiniest, most meagre sliver of the lives of real people.</p>
+
+    <div class="chart-wrapper">
+      <p class="chart-title">Average module mark by species · across seven academic years</p>
+      <canvas id="gapChart" height="200"></canvas>
+      <div class="chart-legend">
+        <span><span class="legend-dot" style="background:var(--elf-green)"></span>Elves</span>
+        <span><span class="legend-dot" style="background:var(--dwarf-gold)"></span>Dwarves</span>
+        <span style="margin-left:auto; color:var(--gap-coral); font-weight:600; font-style:italic">≈ 18pp gap</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 7 — BUILD WITH THIS
+===================================================== -->
+<section id="build">
+  <div class="container-wide">
+    <span class="section-label">SECTION 06 / BUILD WITH THIS</span>
+    <h1>What could you build?</h1>
+    <p class="build-intro">This simulation and its data are tools for making things with. Scrappy, proof-of-concepts that you could take back to your institution to test further. Some starting points:</p>
+    <div class="build-grid">
+
+      <div class="build-card">
+        <div class="card-label">Build idea 01</div>
+        <h4>Interactive dashboard</h4>
+        <p>Use AI to build an interactive dashboard to explore the data, without touching Power BI or a line of code yourself.</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 02</div>
+        <h4>An early alert tool</h4>
+        <p>By week six, the weekly engagement data carries signals about which students are struggling: attendance dropping, participation falling, stress rising. Use AI to build a machine learning tool that surfaces those signals clearly enough that a personal tutor could actually act on them in time. A question to ask of the data is 'who is heading into trouble, and how early can you tell?'</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 03</div>
+        <h4>A gap decomposition tool</h4>
+        <p>The eighteen-point gap in good degree attainment is not one thing. Build an AI enabled tool that pulls that number apart and see how much of it comes from prior qualifications, how much from socioeconomic rank, how much from disability and could change when you change one factor in the config files.</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 04</div>
+        <h4>A programme recommendation tool</h4>
+        <p>Students' clan characteristics, personality profiles, and motivation dimensions correlate with programme fit in ways that are transparent and documented in the code. Use AI to build a recommendation tool for students to select appropriate programmes.</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 05</div>
+        <h4>Model the effect of implementing disability support</h4>
+        <p>In the current simulation, no students have disability support plans, so disabilities have a detrimental effect on participation and therefore on marks. Use AI to model a system that mitigates this effect, and observe how this affects marks, NSS, graduate outcomes…</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 06</div>
+        <h4>AI enabled data explorer</h4>
+        <p>Use AI to build a RAG (Retrieval Augmented Generation) chatbot that answers questions like 'which Dwarf clans had the highest dropout rates? Does this vary by faculty?'</p>
+      </div>
+
+      <div class="build-card">
+        <div class="card-label">Build idea 07</div>
+        <h4>Persona-based focus group simulator</h4>
+        <p>Given a proposed policy change (e.g. 'remove all resit opportunities'), prompt an LLM to roleplay as five different student archetypes drawn from the data and debate the policy.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 8 — BUILT WITH AI
+===================================================== -->
+<section id="ai">
+  <div class="container">
+    <span class="section-label">SECTION 07 / BUILT WITH AI</span>
+    <h1>This project was built with AI</h1>
+    <p>AI helped with both the world building and the writing of the code. The world and lore building was created in collaboration with ChatGPT-4o, which turned out to be extremely well-suited to enthusiastically creating an entire fantasy world.</p>
+    <p>The pipeline code was vibe-coded with Claude. The dataset was generated by running the simulation.</p>
+    <p>AI made the building faster, but it did not decide what to build. The three-university framework, the design philosophy, the decision to make the simulation run on agent level all came from me, through years of working in UK higher education and thinking carefully about what makes the problems hard.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 9 — CREDITS AND CONTRIBUTE
+===================================================== -->
+<section id="credits">
+  <div class="container-wide">
+    <div class="credits-grid">
+
+      <div>
+        <h1>About this project</h1>
+        <p>Stonegrove University was created by Rosie Bryce, Business Insight and Analytics Manager at the University of Salford. It is open source, fully documented, and designed to be extended. Contributions and forks are welcome.</p>
+        <div class="credits-links">
+          <a href="https://github.com/RosieBryce/simulated-university">GitHub</a>
+          <span class="sep">·</span>
+          <a href="https://www.linkedin.com/in/rosie-bryce-3a2969193/">LinkedIn</a>
+          <span class="sep">·</span>
+          <a href="https://bsky.app/profile/rosiebryce.bsky.social">Bluesky</a>
+          <span class="sep">·</span>
+          <a href="mailto:rosie.bryce@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Contribute!</h2>
+        <p>I would love to hear from people who want to take this idea further. Some ideas I'd love to explore include:</p>
+        <ul>
+          <li>Can we turn this into a web-based simulation game, like a Crusader Kings for Higher Education??</li>
+          <li>How can we extend the simulation to model more emergent behaviours, such as social connections?</li>
+          <li>Can we model personality changes over time?</li>
+          <li>Can we surface students' goals and motivations, and how these might change over time?</li>
+          <li>Can we make this more realistic by implementing students support systems?</li>
+          <li>What happens if we also model teaching staff and academic support staff?</li>
+          <li>Random event system to add a bit of stochasticity, such as family illnesses, or changes in life circumstances.</li>
+        </ul>
+        <p class="stoneborn-heading">Stoneborn:</p>
+        <ul>
+          <li>Ideas for what a pedagogy-first institution might look like, and how it would function.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="footer-divider">✦ ◆ ✦</div>
+  <p>Stonegrove University &nbsp;·&nbsp; Open source &nbsp;·&nbsp; <a href="https://github.com/RosieBryce/simulated-university">GitHub</a> &nbsp;·&nbsp; Built with AI</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,595 @@
+
+    /* =========================================================
+       CSS VARIABLES — Dark Academia palette
+    ========================================================= */
+    :root {
+      --parchment:     #f5f0e0;
+      --parchment-deep:#ede8dc;
+      --bg-navy:       #1a1a2e;
+      --bg-white:      #ffffff;
+      --text-navy:     #1a1a2e;
+      --text-body:     #2e2e42;
+      --text-muted:    #888880;
+      --elf-green:     #7a9e82;
+      --dwarf-gold:    #c9a84c;
+      --gap-coral:     #d98878;
+      --gold:          #c9a84c;
+      --border-gold:   #c9a84c;
+      --border-warm:   #e0d8c4;
+      --font-heading:  'Playfair Display', Georgia, serif;
+      --font-body:     'Source Sans 3', system-ui, sans-serif;
+    }
+
+    /* =========================================================
+       RESET + BASE
+    ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-body);
+      background: var(--parchment);
+    }
+
+    /* =========================================================
+       NAVIGATION — parchment with gold top stripe
+    ========================================================= */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--parchment);
+      border-top: 3px solid var(--gold);
+      border-bottom: 1px solid var(--border-warm);
+      padding: 0 2.5rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-wordmark {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-navy);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-body);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* =========================================================
+       SECTION LAYOUT
+    ========================================================= */
+    section { padding: 90px 2rem; }
+    .container      { max-width: 780px;  margin: 0 auto; }
+    .container-wide { max-width: 1080px; margin: 0 auto; }
+
+    /* =========================================================
+       SECTION LABELS
+    ========================================================= */
+    .section-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .section-label.on-navy { color: rgba(245,240,224,0.45); }
+
+    /* =========================================================
+       HEADINGS
+       All h2 sections get a gold ✦ ornament beneath
+    ========================================================= */
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--text-navy);
+      margin-bottom: 1.4rem;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-navy);
+      position: relative;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h2::after {
+      content: "✦";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+    h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--text-navy);
+    }
+
+    /* =========================================================
+       SECTION 1 — HERO (parchment)
+    ========================================================= */
+    #hero {
+      background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-deep) 100%);
+      border-bottom: 2px solid var(--gold);
+      padding: 7rem 2rem 6rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero-ornament {
+      font-size: 2rem;
+      color: var(--gold);
+      opacity: 0.4;
+      margin-bottom: 1.25rem;
+    }
+    #hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900;
+      color: var(--text-navy);
+      margin-bottom: 0.5rem;
+    }
+    .hero-tagline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      color: #5a5a7a;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtext {
+      font-size: 1rem;
+      color: #5a5a6e;
+      max-width: 560px;
+      margin: 1rem auto 2.75rem;
+      line-height: 1.8;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2.25rem 0 2.75rem;
+      flex-wrap: wrap;
+    }
+    .stat-box {
+      background: var(--bg-white);
+      border: 2px solid var(--gold);
+      padding: 1.25rem 2rem;
+      border-radius: 2px;
+      text-align: center;
+      min-width: 130px;
+    }
+    .stat-number {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.35rem;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      border-radius: 2px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #fff;
+    }
+    .btn-primary:hover { background: #a68b3a; transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--text-navy);
+      color: var(--text-navy);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1.5px solid var(--border-warm);
+    }
+    .btn-ghost:hover { color: var(--text-navy); border-color: var(--text-navy); }
+
+    /* =========================================================
+       SECTION 2 — ORIGINS (white)
+    ========================================================= */
+    #origins { background: var(--bg-white); }
+    #origins h1 { font-size: 2.6rem; }
+    #origins p  { margin-bottom: 1.2rem; font-size: 1.02rem; }
+    #origins p:last-child { margin-bottom: 0; }
+
+    /* =========================================================
+       SECTION 3 — THREE UNIVERSITIES (parchment)
+    ========================================================= */
+    #universities { background: var(--parchment-deep); }
+    .section-header-centre {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+    #universities h1 { font-size: 2.6rem; }
+    .intro-para {
+      color: #5a5a6e;
+      font-size: 1rem;
+    }
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .uni-card {
+      background: var(--bg-white);
+      border: 2px solid var(--border-warm);
+      border-left: 4px solid;
+      border-radius: 2px;
+      padding: 1.75rem;
+      transition: box-shadow 0.2s;
+    }
+    .uni-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .uni-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.45rem;
+    }
+    .species-pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      border-radius: 2px;
+      margin-bottom: 0.9rem;
+    }
+    .elf-pill   { background: rgba(122,158,130,0.15); color: #4a7a58; }
+    .dwarf-pill { background: rgba(201,168,76,0.15);  color: #8b6b20; }
+    .mixed-pill { background: rgba(26,26,46,0.08);    color: var(--text-navy); }
+    .uni-card p {
+      font-size: 0.95rem;
+      line-height: 1.72;
+      color: #4a4a60;
+      margin-bottom: 0.75rem;
+    }
+    .uni-card p:last-child { margin-bottom: 0; }
+
+    /* =========================================================
+       SECTION 4 — ABOUT (white)
+    ========================================================= */
+    #about { background: var(--bg-white); }
+    #about h1 { font-size: 2.6rem; }
+    .stats-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    .stats-meta span { margin-right: 1rem; }
+    .stats-meta .dot { color: var(--gold); margin-right: 1rem; }
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.1rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .faculty-card {
+      background: var(--parchment);
+      border: 2px solid var(--border-warm);
+      border-radius: 2px;
+      padding: 1.25rem 1.4rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .faculty-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .faculty-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.45rem;
+    }
+    .faculty-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+    #about .sub-h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--text-navy);
+      margin: 2.5rem 0 0.75rem;
+    }
+    #about p { margin-bottom: 1.15rem; font-size: 1.02rem; }
+    .pullquote {
+      border-left: 4px solid var(--gold);
+      padding: 1rem 1.6rem;
+      margin: 1.75rem 0;
+      background: var(--parchment);
+      border-radius: 0 2px 2px 0;
+    }
+    .pullquote p {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-navy);
+      margin-bottom: 0.65rem !important;
+    }
+    .pullquote p:last-child { margin-bottom: 0 !important; }
+
+    /* =========================================================
+       SECTION 5 — DATASET (parchment)
+    ========================================================= */
+    #dataset { background: var(--parchment-deep); }
+    #dataset h1 { font-size: 2.6rem; }
+    .intro-block p {
+      font-size: 1.02rem;
+      color: var(--text-body);
+      margin-bottom: 1rem;
+    }
+    .data-table-wrap { overflow-x: auto; margin: 2rem 0 0.75rem; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .data-table thead tr { border-bottom: 2px solid var(--gold); }
+    .data-table th {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.5rem 0.85rem;
+      text-align: left;
+      background: var(--bg-white);
+    }
+    .data-table td {
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid var(--border-warm);
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.55;
+      background: var(--bg-white);
+    }
+    .data-table td:first-child {
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      color: #3a7a58;
+      white-space: nowrap;
+    }
+    .data-table td:last-child {
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .data-table tbody tr:hover td { background: var(--parchment); }
+    .table-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .dataset-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+
+    /* =========================================================
+       SECTION 6 — GAP (white)
+    ========================================================= */
+    #gap {
+      background: var(--bg-white);
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
+    }
+    #gap h1 { font-size: 2.6rem; }
+    #gap p   { margin-bottom: 1.2rem; font-size: 1.02rem; }
+    #gap p:last-of-type { margin-bottom: 0; }
+    .chart-wrapper {
+      background: var(--parchment);
+      border: 1px solid var(--border-warm);
+      border-top: 3px solid var(--gold);
+      border-radius: 2px;
+      padding: 1.75rem 1.75rem 1.25rem;
+      margin: 2.25rem 0 0;
+    }
+    .chart-title {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .chart-legend {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      align-items: center;
+    }
+    .legend-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 2px;
+      margin-right: 0.35rem;
+      vertical-align: middle;
+    }
+
+    /* =========================================================
+       SECTION 7 — BUILD WITH THIS (parchment)
+    ========================================================= */
+    #build { background: var(--parchment-deep); }
+    #build h1 { font-size: 2.6rem; }
+    .build-intro { color: #4a4a60; margin-bottom: 2.5rem; font-size: 1.02rem; }
+    .build-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+    }
+    .build-card {
+      background: var(--bg-white);
+      border: 2px solid var(--border-warm);
+      border-radius: 2px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .build-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    }
+    .card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+    }
+    .build-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--text-navy);
+      margin-bottom: 0.55rem;
+    }
+    .build-card p {
+      font-size: 0.88rem;
+      color: #4a4a60;
+      line-height: 1.68;
+      margin: 0;
+    }
+
+    /* =========================================================
+       SECTION 8 — AI (white)
+    ========================================================= */
+    #ai { background: var(--bg-white); }
+    #ai h1 { font-size: 2.6rem; }
+    #ai p  { margin-bottom: 1.2rem; font-size: 1.02rem; }
+    #ai p:last-child { margin-bottom: 0; }
+
+    /* =========================================================
+       SECTION 9 — CREDITS (dark navy)
+    ========================================================= */
+    #credits {
+      background: var(--bg-navy);
+      border-top: 3px solid var(--gold);
+    }
+    .credits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+    #credits h1 {
+      color: var(--parchment);
+      font-size: 2.1rem;
+    }
+    #credits h1::after { display: none; } /* suppress ornament on dark bg */
+    #credits h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--parchment);
+      margin-bottom: 0.9rem;
+    }
+    #credits h2::after { color: var(--gold); }
+    #credits p {
+      color: rgba(245,240,224,0.68);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .credits-links { display: flex; gap: 1rem; margin-top: 1.25rem; align-items: center; }
+    .credits-links a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .credits-links a:hover { text-decoration: underline; }
+    .credits-links .sep { color: rgba(245,240,224,0.2); }
+    #credits ul { list-style: none; padding: 0; }
+    #credits ul li {
+      color: rgba(245,240,224,0.65);
+      font-size: 0.92rem;
+      line-height: 1.68;
+      padding: 0.3rem 0 0.3rem 1.1rem;
+      position: relative;
+    }
+    #credits ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
+    .stoneborn-heading {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--gold);
+      margin: 1.5rem 0 0.4rem;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    footer {
+      background: #12121e;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.25);
+    }
+    .footer-divider { color: var(--gold); letter-spacing: 0.5em; font-size: 1rem; margin-bottom: 0.75rem; }
+    footer p { font-size: 0.78rem; color: rgba(245,240,224,0.3); }
+    footer a { color: rgba(201,168,76,0.6); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+    @media (max-width: 920px) {
+      .cards-row, .faculty-grid, .credits-grid { grid-template-columns: 1fr; }
+      .build-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      section { padding: 60px 1.25rem; }
+      .build-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 1rem; }
+      .nav-links { display: none; }
+      h1 { font-size: 2rem; }
+    }
