@@ -124,13 +124,15 @@ Thumbs.db
 ~$*.xlsx
 ~$*.xls
 
-# Generated data
-# Flat pipeline output files (intermediate — superseded by data/relational/)
-data/stonegrove_weekly_engagement.csv
-data/stonegrove_enrolled_students.csv
-data/stonegrove_semester_engagement.csv
-# data/relational/ is tracked. Only the combined weekly engagement file is excluded (too large ~68 MB).
-# Per-year splits (fact_weekly_engagement_YYYY-YY.csv) are tracked instead.
+# Claude Code local config
+.claude/
+
+# Archive folder — kept locally, not published
+_archive/
+website_design/
+
+# Generated data — flat pipeline outputs (intermediate, superseded by data/relational/)
+data/stonegrove_*.csv
 data/relational/fact_weekly_engagement.csv
 data/archive/
 
