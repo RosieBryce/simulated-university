@@ -18,7 +18,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 # Academic years: 7 years, 5 cohorts (first graduates year 3)
 ACADEMIC_YEARS_FULL = ["1046-47", "1047-48", "1048-49", "1049-50", "1050-51", "1051-52", "1052-53"]
 ACADEMIC_YEARS = ACADEMIC_YEARS_FULL
-COHORT_SIZE = 500
+COHORT_SIZE = 5000
 BASE_SEED = 42
 
 

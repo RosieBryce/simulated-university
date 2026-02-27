@@ -22,7 +22,8 @@
     <li><a href="#dataset">The data</a></li>
     <li><a href="#gap">The gap</a></li>
     <li><a href="#build">Build with this</a></li>
-    <li><a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip">Download</a></li>
+    <li><a href="#contribute">Contribute</a></li>
+    <li><a href="https://github.com/RosieBryce/simulated-university/tree/master/data/relational">Download</a></li>
   </ul>
 </nav>
 
@@ -38,7 +39,7 @@
   <p class="hero-subtext">An automated university set in a fantasy world of dwarves and elves, which simulates a small UK Higher Education Institution. This is an open-source project inviting you to play with the code or the data it produces.</p>
   <div class="stat-row">
     <div class="stat-box">
-      <span class="stat-number">3,500</span>
+      <span class="stat-number">25,000</span>
       <span class="stat-label">students</span>
     </div>
     <div class="stat-box">
@@ -52,8 +53,7 @@
   </div>
   <div class="cta-row">
     <a href="#gap" class="btn btn-primary">Explore the data</a>
-    <a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip" class="btn btn-outline">Download</a>
-    <a href="https://github.com/RosieBryce/simulated-university" class="btn btn-ghost">GitHub ↗</a>
+    <a href="https://github.com/RosieBryce/simulated-university/tree/master/data/relational" class="btn btn-outline">Download the data</a>
   </div>
 </section>
 
@@ -151,14 +151,12 @@
       <p>Outcomes are modelled at student level, shaped by who they are and what they encounter week by week, module by module, year by year, with just a hint of extra randomness built in. The data at the other end is just a record of what emerges from that process.</p>
 
       <h2 class="sub-h2" style="font-family:var(--font-heading);font-weight:700;font-size:1.55rem;color:var(--text-navy);margin:2.5rem 0 0.75rem;position:relative;padding-bottom:0.85rem;">Inspired by Dwarf Fortress</h2>
-      <p>This project would not exist without Dwarf Fortress, the colony simulation by Bay 12 Games in which an entire world is simulated from the day 0 across whole geological epochs before your seven dwarves even arrive. Your dwarves have personalities, memories, preferences, opinions, and strong feelings about art. They form friendships, mourn their dead, and occasionally go completely berserk because someone killed their cat, or because they did not find exactly the right type of bone for their flute-making project. You do not manage them so much as try to shepherd them in a general direction while they pursue their own agendas. The outcomes of your colony are emergent properties of individual dwarves living their lives, not directives from above.</p>
+      <p>This project would not exist without <a href="https://www.bay12games.com/dwarves/" target="_blank" rel="noopener">Dwarf Fortress</a>, the colony simulation by Bay 12 Games in which an entire world is simulated from the day 0 across whole geological epochs before your seven dwarves even arrive. Your dwarves have personalities, memories, preferences, opinions, and strong feelings about art. They form friendships, mourn their dead, and occasionally go completely berserk because someone killed their cat, or because they did not find exactly the right type of bone for their flute-making project. You do not manage them so much as try to shepherd them in a general direction while they pursue their own agendas. The outcomes of your colony are emergent properties of individual dwarves living their lives, not directives from above.</p>
       <p>That agent-first philosophy is what Stonegrove is built on. Enormous and sincere credit to Tarn and Zach Adams.</p>
 
       <h2 class="sub-h2" style="font-family:var(--font-heading);font-weight:700;font-size:1.55rem;color:var(--text-navy);margin:2.5rem 0 0.75rem;position:relative;padding-bottom:0.85rem;">A note on emergence</h2>
-      <div class="pullquote">
-        <p>I found a student in one of my test runs, amusingly given the name 'Doni Pickface', a dwarf of the Flint clan. Poor Doni ended up having to repeat their third year three times: the simulation gives students a gradually increasing reluctance to withdraw as they accumulate time at the university - the sunk-cost effect, modelled at agent level. Doni kept failing the year, kept deciding not to leave, and eventually (finally!) passed on their third attempt.</p>
-        <p>I didn't decide for that to happen - it just emerged from how the model works. I really enjoy that the system produces stories I did not write.</p>
-      </div>
+      <p>I found a student in one of my test runs, amusingly given the name 'Doni Pickface', a dwarf of the Flint clan. Poor Doni ended up having to repeat their third year three times: the simulation gives students a gradually increasing reluctance to withdraw as they accumulate time at the university - the sunk-cost effect, modelled at agent level. Doni kept failing the year, kept deciding not to leave, and eventually (finally!) passed on their third attempt.</p>
+      <p>I didn't decide for that to happen - it just emerged from how the model works. I really enjoy that the system produces stories I did not write.</p>
     </div>
   </div>
 </section>
@@ -201,10 +199,9 @@
         </tbody>
       </table>
     </div>
-    <p class="table-note">The weekly engagement file is ~69MB and cannot be served from the browser. Only pre-aggregated JSON files are included in the site assets. The full raw CSVs are distributed via GitHub Releases.</p>
+    <p class="table-note">The weekly engagement data is split into per-year files and available in full via the GitHub repository. Only pre-aggregated summary files are included in the site assets.</p>
     <div class="dataset-cta">
-      <a href="https://github.com/RosieBryce/simulated-university/archive/refs/heads/master.zip" class="btn btn-primary">Download the full dataset</a>
-      <a href="https://github.com/RosieBryce/simulated-university" class="btn btn-outline">View on GitHub</a>
+      <a href="https://github.com/RosieBryce/simulated-university/tree/master/data/relational" class="btn btn-primary">Download the data</a>
     </div>
   </div>
 </section>
@@ -306,44 +303,45 @@
 
 
 <!-- =====================================================
-     SECTION 9 — CREDITS AND CONTRIBUTE
+     SECTION 9 — CONTRIBUTE
+===================================================== -->
+<section id="contribute" style="background:var(--parchment-deep);">
+  <div class="container">
+    <span class="section-label">SECTION 08 / CONTRIBUTE</span>
+    <h1>Contribute</h1>
+    <p>I would love to hear from people who want to take this idea further. Some ideas I'd love to explore include:</p>
+    <ul style="margin:1.5rem 0 1.5rem 1.25rem; line-height:2;">
+      <li>Can we turn this into a web-based simulation game, like a Crusader Kings for Higher Education??</li>
+      <li>How can we extend the simulation to model more emergent behaviours, such as social connections?</li>
+      <li>Can we model personality changes over time?</li>
+      <li>Can we surface students' goals and motivations, and how these might change over time?</li>
+      <li>Can we make this more realistic by implementing student support systems?</li>
+      <li>What happens if we also model teaching staff and academic support staff?</li>
+      <li>Random event system to add a bit of stochasticity, such as family illnesses, or changes in life circumstances.</li>
+    </ul>
+    <p class="stoneborn-heading">Stoneborn:</p>
+    <ul style="margin:1rem 0 0 1.25rem; line-height:2;">
+      <li>Ideas for what a pedagogy-first institution might look like, and how it would function.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 10 — CREDITS
 ===================================================== -->
 <section id="credits">
-  <div class="container-wide">
-    <div class="credits-grid">
-
-      <div>
-        <h1>About this project</h1>
-        <p>Stonegrove University was created by Rosie Bryce, Business Insight and Analytics Manager at the University of Salford. It is open source, fully documented, and designed to be extended. Contributions and forks are welcome.</p>
-        <div class="credits-links">
-          <a href="https://github.com/RosieBryce/simulated-university">GitHub</a>
-          <span class="sep">·</span>
-          <a href="https://www.linkedin.com/in/rosie-bryce-3a2969193/">LinkedIn</a>
-          <span class="sep">·</span>
-          <a href="https://bsky.app/profile/rosiebryce.bsky.social">Bluesky</a>
-          <span class="sep">·</span>
-          <a href="mailto:rosie.bryce@gmail.com">Email</a>
-        </div>
-      </div>
-
-      <div>
-        <h2>Contribute!</h2>
-        <p>I would love to hear from people who want to take this idea further. Some ideas I'd love to explore include:</p>
-        <ul>
-          <li>Can we turn this into a web-based simulation game, like a Crusader Kings for Higher Education??</li>
-          <li>How can we extend the simulation to model more emergent behaviours, such as social connections?</li>
-          <li>Can we model personality changes over time?</li>
-          <li>Can we surface students' goals and motivations, and how these might change over time?</li>
-          <li>Can we make this more realistic by implementing students support systems?</li>
-          <li>What happens if we also model teaching staff and academic support staff?</li>
-          <li>Random event system to add a bit of stochasticity, such as family illnesses, or changes in life circumstances.</li>
-        </ul>
-        <p class="stoneborn-heading">Stoneborn:</p>
-        <ul>
-          <li>Ideas for what a pedagogy-first institution might look like, and how it would function.</li>
-        </ul>
-      </div>
-
+  <div class="container">
+    <h1>About this project</h1>
+    <p>Stonegrove University was created by Rosie Bryce, Business Insight and Analytics Manager at the University of Salford. It is open source, fully documented, and designed to be extended.</p>
+    <div class="credits-links">
+      <a href="https://github.com/RosieBryce/simulated-university">GitHub</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/rosie-bryce-3a2969193/">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="https://bsky.app/profile/rosiebryce.bsky.social">Bluesky</a>
+      <span class="sep">·</span>
+      <a href="mailto:rosie.bryce@gmail.com">Email</a>
     </div>
   </div>
 </section>
