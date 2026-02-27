@@ -1,12 +1,12 @@
 {
   "model_version": "v2.0-longitudinal",
-  "git_commit": "df85a279098c",
-  "random_seed": 99,
-  "generation_timestamp": "2026-02-26T17:51:53Z",
+  "git_commit": "89b96be780bd",
+  "random_seed": 42,
+  "generation_timestamp": "2026-02-27T20:46:35Z",
   "config_versions": {
     "progression_rules": "v1.0"
   },
-  "cohort_size": 500,
+  "cohort_size": 5000,
   "years_generated": 7,
   "academic_years": [
     "1046-47",

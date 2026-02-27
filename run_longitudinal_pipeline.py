@@ -310,6 +310,11 @@ def main():
         json.dump(metadata, f, indent=2)
     print(f"\nSaved data/metadata.json")
 
+    # Build relational schema outputs
+    print("\nBuilding relational schema...")
+    from core_systems import build_relational_outputs
+    build_relational_outputs.main()
+
     print("\nPipeline complete.")
 
 

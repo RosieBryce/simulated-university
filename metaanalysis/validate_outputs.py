@@ -64,7 +64,7 @@ def check_shapes(t):
     section("1. SHAPE AND COMPLETENESS")
     expected = {
         "dim_academic_years":     (7,   "7 academic years"),
-        "dim_students":           (3500, "7 cohorts × 500 students"),
+        "dim_students":           (35000, "7 cohorts × 5000 students"),
         "dim_programmes":         (44,  "44 programmes"),
         "dim_modules":            (353, "353 curriculum modules"),
     }
