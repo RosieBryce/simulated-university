@@ -1,115 +1,119 @@
-# Stonegrove University Individual-Level Modeling System
+# Stonegrove University — Synthetic Higher Education Dataset
 
-A simulation system for modeling individual student behavior, engagement, and academic progression at Stonegrove University — a fantasy higher education institution with Dwarves and Elves.
+A synthetic data generator for a fictional fantasy university, producing realistic UK-style student lifecycle data for use in data analysis teaching, education research, and awarding gap investigation.
 
-## Project Overview
+Stonegrove University is set at the meeting point of ancient forest and mountain. Its students are Dwarves and Elves, sorted into 14 clans, studying across 44 programmes in 4 faculties. The fantasy setting sidesteps privacy concerns entirely while preserving the structural patterns that make real higher education data interesting: awarding gaps, engagement arcs, progression risk, NSS variation, and graduate outcomes.
 
-This system generates unique students with personality traits, motivations, and behavioral patterns that influence their academic journey. It produces realistic datasets with emergent awarding gaps for use in teaching data analysis and educational research methods.
+## What's in the dataset
 
-Key features:
-- **Individual-level modeling** — all outcomes emerge from student-level characteristics, not top-down group effects
-- **Longitudinal simulation** — 7 cohorts across 7 academic years with progression, repetition, withdrawal, and graduation
-- **Config-driven** — all tunable parameters in YAML/CSV files, no hardcoded values
-- **Emergent awarding gaps** — species/clan/SES differences visible in aggregate analysis, traceable to structural factors
+A full relational schema across 10 tables — 4 dimension tables and 6 fact tables — covering 7 academic years with 5,000 new students enrolling each year.
 
-## Quick Start
+| Table | Description | ~Rows |
+|---|---|---|
+| `dim_students` | Species, clan, Big Five personality, 8 motivation dimensions, disability, SES, prior qualifications | 35,000 |
+| `dim_programmes` | 44 programmes: difficulty, social intensity, career prospects, creativity, research intensity | 44 |
+| `dim_modules` | 353 modules: difficulty, assessment type, stress, group work, semester | 353 |
+| `dim_academic_years` | Academic year calendar with semester and assessment dates | 7 |
+| `fact_enrollment` | Programme, year of study, module allocation, enrolment status | 89,000 |
+| `fact_weekly_engagement` | Attendance, participation, academic/social engagement, stress — per student per module per week | 2,800,000 |
+| `fact_assessment` | Module marks, UK grade classifications (First, 2:1, 2:2, Third, Fail), component and date | 468,000 |
+| `fact_progression` | Year outcome, modules passed, average mark, next-year status | 89,000 |
+| `fact_nss_responses` | Synthetic NSS scores across 7 themes + overall satisfaction | 23,000 |
+| `fact_graduate_outcomes` | Degree classification, employment sector, salary band, time to first professional outcome | 19,500 |
 
-**Run all commands from the project root.**
+All tables join on `student_id` + `academic_year`. See `docs/SCHEMA.md` for full column definitions.
 
-### Prerequisites
+The dataset is committed directly to this repository under `data/relational/`. Weekly engagement is split into per-year files (`fact_weekly_engagement_YYYY-YY.csv`) due to file size.
+
+## Key features
+
+- **Individual-level** — all outcomes emerge from student characteristics, not top-down group effects
+- **Emergent awarding gaps** — an ~18pp good degree attainment gap between Elves and Dwarves arises from SES, prior education, and disability distributions, with no direct species modifier on marks
+- **Longitudinal** — 7 cohorts across 7 academic years with progression, repetition, withdrawal, and graduation
+- **Config-driven** — all parameters in YAML/CSV, no hardcoded values; reproducible via seed
+
+## Quick start
+
 ```bash
-pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
-```
-
-### Run the full longitudinal pipeline
-```bash
+pip install -r requirements.txt
 python run_longitudinal_pipeline.py
 ```
-Generates 7 years of data: student generation -> enrollment -> engagement -> assessment -> progression, repeated per academic year with new cohorts and continuing students.
 
-### Run single-year pipeline (Year 1 only)
+This runs all 7 pipeline stages across 7 academic years and builds the full relational schema automatically. Runtime: ~10–15 minutes.
+
+To regenerate the summary CSVs used by the public site:
+
 ```bash
-python run_pipeline.py
+python scripts/aggregate_gap.py
+python scripts/aggregate_engagement.py
 ```
 
-## Project Structure
+To validate outputs against expected ranges:
+
+```bash
+python metaanalysis/validate_outputs.py
+```
+
+## Project structure
 
 ```
 simulated-university/
-├── config/                              # Configuration files (YAML + CSV)
+├── config/                         # All tunable parameters
 │   ├── clan_personality_specifications.yaml
 │   ├── clan_program_affinities.yaml
-│   ├── clan_name_pools.yaml
-│   ├── clan_socioeconomic_distributions.csv
-│   ├── disability_distribution.yaml
-│   ├── disability_assessment_modifiers.csv
+│   ├── year_progression_rules.yaml
+│   ├── graduate_outcomes.yaml
+│   ├── nss_modifiers.yaml
 │   ├── module_characteristics.csv
-│   ├── programme_characteristics.csv
-│   ├── trait_programme_mapping.csv
-│   └── year_progression_rules.yaml
-├── core_systems/                        # Pipeline stages
+│   └── ...
+├── core_systems/                   # Pipeline stages (run in order)
 │   ├── student_generation_pipeline.py
 │   ├── program_enrollment_system.py
 │   ├── engagement_system.py
 │   ├── assessment_system.py
-│   └── progression_system.py
-├── supporting_systems/                  # Utilities
-│   ├── name_generator.py
-│   ├── personality_refinement_system.py
-│   └── motivation_profile_system.py
-├── data/                                # Generated data (gitignored)
-├── docs/                                # Documentation
-│   ├── DESIGN.md                        # Architecture and longitudinal flow
-│   ├── SCHEMA.md                        # Column definitions for all outputs
-│   ├── CALCULATIONS.md                  # Formulas and modifiers reference
-│   ├── DATA_IO_PLAN.md                  # Data flow and conventions
-│   └── USER_GUIDE.md                    # How to run and read data
-├── project_tracker/                     # Development tracking
-│   ├── CURRENT.md                       # Priority queue
-│   ├── BACKLOG.md                       # All open items
-│   ├── DONE.md                          # Completed work
-│   └── DESIGN_DECISIONS.md             # Rationale for key choices
-├── Instructions and guides/             # Source materials and world-building
-├── metaanalysis/                        # Analysis scripts
-├── run_pipeline.py                      # Single-year pipeline
-└── run_longitudinal_pipeline.py         # Full longitudinal pipeline
+│   ├── progression_system.py
+│   ├── graduate_outcomes_system.py
+│   ├── nss_system.py
+│   └── build_relational_outputs.py
+├── supporting_systems/             # Shared utilities
+├── data/
+│   └── relational/                 # The dataset (committed to git)
+├── docs/                           # Documentation + public site
+│   ├── SCHEMA.md
+│   ├── DESIGN.md
+│   ├── CALCULATIONS.md
+│   ├── PIPELINE_FLOW.md
+│   └── index.html                  # GitHub Pages site
+├── metaanalysis/
+│   └── validate_outputs.py
+├── scripts/
+│   ├── aggregate_gap.py
+│   └── aggregate_engagement.py
+├── Instructions and guides/        # Curriculum source + world-building
+├── requirements.txt
+└── run_longitudinal_pipeline.py
 ```
-
-## Output Data
-
-All generated CSVs are in `data/` (gitignored). Key files:
-
-| File | Description |
-|------|-------------|
-| `stonegrove_individual_students.csv` | Student demographics, personality, motivation |
-| `stonegrove_enrollment.csv` | Programme enrollment per student per year |
-| `stonegrove_weekly_engagement.csv` | Weekly attendance, participation, engagement |
-| `stonegrove_assessment_events.csv` | Module marks and grades |
-| `stonegrove_progression_outcomes.csv` | Year-end pass/fail and progression decisions |
-| `metadata.json` | Version, seed, timestamp for reproducibility |
-
-See `docs/SCHEMA.md` for full column definitions.
 
 ## Configuration
 
-### Tabular config (CSV, end-user editable)
-- `clan_socioeconomic_distributions.csv` — SES rank and education distributions per clan
-- `disability_assessment_modifiers.csv` — mark modifiers per disability
-- `trait_programme_mapping.csv` — which student traits attract to which programme characteristics
-- `programme_characteristics.csv` — programme attributes (social intensity, difficulty, etc.)
-- `module_characteristics.csv` — module difficulty, assessment type
+**Tabular (CSV — editable in Excel):**
+- `module_characteristics.csv` — difficulty, assessment type, semester per module
+- `programme_characteristics.csv` — programme attributes
+- `clan_socioeconomic_distributions.csv` — SES and prior education distributions per clan
+- `disability_assessment_modifiers.csv` — mark modifiers per disability type
+- `trait_programme_mapping.csv` — trait-to-programme affinity weights
 
-### Hierarchical config (YAML)
-- `clan_personality_specifications.yaml` — Big Five personality ranges per clan + `health_tendencies` (per-clan disability prevalence)
-- `clan_program_affinities.yaml` — clan-programme affinity scores + selection settings
-- `year_progression_rules.yaml` — progression probabilities, trait modifier weights, `trait_modifier_scale`
-- `engagement_modifiers.yaml` — disability/SES base adjustments, weekly std_extra, temporal arc
-- `assessment_modifiers.yaml` — education and SES mark multipliers
+**Hierarchical (YAML):**
+- `clan_personality_specifications.yaml` — Big Five ranges and disability prevalence per clan
+- `clan_program_affinities.yaml` — clan-programme affinity scores
+- `year_progression_rules.yaml` — progression probabilities and trait modifier weights
+- `graduate_outcomes.yaml` — employment sector, salary band, and outcome distributions
+- `nss_modifiers.yaml` — theme weights and mark/engagement sensitivity
 
 ## Documentation
 
-- `docs/USER_GUIDE.md` — how to run the pipeline and read the data
+- `docs/SCHEMA.md` — column definitions for all 10 tables
 - `docs/DESIGN.md` — architecture and longitudinal flow
-- `docs/SCHEMA.md` — column definitions for all output files
 - `docs/CALCULATIONS.md` — formulas, modifiers, and assumptions
-- `project_tracker/DESIGN_DECISIONS.md` — rationale for key design choices
+- `docs/PIPELINE_FLOW.md` — student_id assignment and join conventions
+- `docs/USER_GUIDE.md` — how to run, modify, and extend the pipeline
