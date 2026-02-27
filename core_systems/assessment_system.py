@@ -75,7 +75,7 @@ class AssessmentSystem:
     Uses module_characteristics (CSV or YAML) for assessment_type and difficulty.
     """
 
-    def __init__(self, seed: int = 42, curriculum_file: str = "Instructions and guides/Stonegrove_University_Curriculum.xlsx"):
+    def __init__(self, seed: int = 42, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum.xlsx"):
         self.seed = seed
         self.rng = np.random.default_rng(seed)
         self.curriculum_file = curriculum_file

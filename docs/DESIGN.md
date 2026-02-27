@@ -184,7 +184,7 @@ Mark distributions are for internal validation only. Analysts work with raw asse
 
 ### Source Data (Excel, read-only)
 
-- `Instructions and guides/Stonegrove_University_Curriculum.xlsx` - Programme and module structure
+- `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` - Programme and module structure
 
 ---
 

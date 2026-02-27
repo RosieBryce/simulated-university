@@ -89,7 +89,7 @@ simulated-university/
 ├── scripts/
 │   ├── aggregate_gap.py
 │   └── aggregate_engagement.py
-├── Instructions and guides/        # Curriculum source + world-building
+├── curriculum-and-lore/            # Curriculum source + world-building
 ├── requirements.txt
 └── run_longitudinal_pipeline.py
 ```

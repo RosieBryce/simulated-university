@@ -31,7 +31,7 @@ class ProgramEnrollmentSystem:
     based on clan affinities, personality, and other characteristics.
     """
     
-    def __init__(self, curriculum_file: str = "Instructions and guides/Stonegrove_University_Curriculum.xlsx"):
+    def __init__(self, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum.xlsx"):
         """Initialize the enrollment system with curriculum data"""
         self.curriculum_file = curriculum_file
         self.programs_df = None

@@ -94,7 +94,7 @@ simulated-university/
 ├── docs/                            # Documentation
 ├── project_tracker/                 # CURRENT, BACKLOG, DONE, DESIGN_DECISIONS
 ├── metaanalysis/                    # Validation and analysis scripts
-├── Instructions and guides/         # Curriculum Excel + world-building
+├── curriculum-and-lore/             # Curriculum Excel + world-building
 └── archive_population_model/        # Deprecated population-level approach
 ```
 

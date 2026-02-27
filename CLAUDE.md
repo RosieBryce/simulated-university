@@ -65,7 +65,7 @@ Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 
 ### Key Design Decisions
 
-- The canonical curriculum source is `Instructions and guides/Stonegrove_University_Curriculum.xlsx` (44 programmes, 4 faculties, Year 1/2/3 modules).
+- The canonical curriculum source is `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (44 programmes, 4 faculties, Year 1/2/3 modules).
 - "Species" is used instead of "Race" throughout the codebase.
 - No direct clan/species mark modifier — the ~18pp good degree attainment gap (Elf vs Dwarf) emerges from SES, prior education, and disability distributions only.
 - Gender awarding gap is flat by design.
