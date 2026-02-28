@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Stonegrove University Prospectus — Year 1052. Where forest meets mountain, and tradition meets its creativity.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prospectus — Stonegrove University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* =========================================================
+       HERO — full-bleed image with overlay
+    ========================================================= */
+    #p-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 3px solid var(--gold);
+      padding: 4rem 2rem 7rem;
+    }
+    .p-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/stonegrove/sunset-wide-shot.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.36) saturate(0.85);
+    }
+    .p-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .p-hero-crest {
+      width: 112px;
+      height: auto;
+      margin: 0 auto 2rem;
+      filter: drop-shadow(0 2px 16px rgba(0,0,0,0.65));
+    }
+    #p-hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      color: var(--parchment);
+      margin-bottom: 0.3rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+      letter-spacing: 0.01em;
+    }
+    .p-established {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+    }
+    .p-tagline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: rgba(245,240,224,0.86);
+      line-height: 1.6;
+    }
+    .p-hero-jumpnav {
+      position: absolute;
+      bottom: 2.25rem;
+      left: 0; right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      z-index: 2;
+    }
+    .p-hero-jumpnav a {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245,240,224,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .p-hero-jumpnav a:hover { color: var(--gold); }
+
+    /* =========================================================
+       TWO-COLUMN SPLIT — image + text
+    ========================================================= */
+    .split-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 540px;
+    }
+    .split-img { overflow: hidden; }
+    .split-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .split-text {
+      padding: 5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .split-text.bg-navy    { background: var(--bg-navy); }
+    .split-text.bg-white   { background: var(--bg-white); }
+    .split-text.bg-parchment      { background: var(--parchment); }
+    .split-text.bg-parchment-deep { background: var(--parchment-deep); }
+
+    .split-text h2 { font-size: 2rem; margin-bottom: 1.25rem; }
+    .split-text.bg-navy h2       { color: var(--parchment); }
+    .split-text.bg-navy h2::after { color: var(--gold); }
+
+    .split-text p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .split-text.bg-navy p { color: rgba(245,240,224,0.72); }
+    .split-text p:last-child { margin-bottom: 0; }
+
+    .chancellor-sig {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(201,168,76,0.3);
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       CLOISTERS BANNER
+    ========================================================= */
+    .img-banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .banner-caption {
+      background: var(--bg-navy);
+      border-top: 3px solid var(--gold);
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.9rem;
+    }
+    .cap-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--parchment);
+      white-space: nowrap;
+    }
+    .cap-div { color: rgba(201,168,76,0.4); }
+    .cap-desc {
+      font-size: 0.82rem;
+      color: rgba(245,240,224,0.48);
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       FACULTIES
+    ========================================================= */
+    #p-faculties { background: var(--parchment-deep); }
+    #p-faculties .section-intro {
+      max-width: 600px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 0;
+    }
+    .faculty-grid-p {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
+      margin-top: 3rem;
+    }
+    .faculty-entry-p {
+      border-top: 3px solid var(--gold);
+      padding-top: 1.4rem;
+    }
+    .f-count {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.45rem;
+    }
+    .faculty-entry-p h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.7rem;
+      color: var(--text-navy);
+    }
+    .faculty-entry-p p {
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* =========================================================
+       FACILITIES IMAGE GRID
+    ========================================================= */
+    #p-facilities { background: var(--bg-navy); }
+    #p-facilities .fac-label {
+      padding: 2.5rem 2.5rem 1.5rem;
+    }
+    .fac-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .fac-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .fac-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .fac-item:hover img { transform: scale(1.06); }
+    .fac-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,22,0.92) 0%, rgba(10,10,22,0) 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.25rem 1.2rem;
+    }
+    .fac-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--parchment);
+      margin-bottom: 0.25rem;
+    }
+    .fac-desc {
+      font-size: 0.76rem;
+      color: rgba(245,240,224,0.58);
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       PROSE SECTIONS
+    ========================================================= */
+    .p-prose { padding: 80px 2rem; }
+    .p-prose .container { max-width: 720px; }
+    .p-prose h2 { font-size: 2rem; margin-bottom: 1.4rem; }
+    .p-prose p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.15rem;
+    }
+    .p-prose p:last-child { margin-bottom: 0; }
+    .p-prose.bg-navy h2       { color: var(--parchment); }
+    .p-prose.bg-navy h2::after { color: var(--gold); }
+    .p-prose.bg-navy p { color: rgba(245,240,224,0.72); }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+    @media (max-width: 900px) {
+      .split-row { grid-template-columns: 1fr; min-height: auto; }
+      .split-row .split-img { height: 300px; }
+      .split-text { padding: 3rem 2rem; }
+      .faculty-grid-p { grid-template-columns: 1fr; gap: 1.75rem; }
+      .fac-strip { grid-template-columns: 1fr 1fr; }
+      .p-hero-jumpnav { display: none; }
+    }
+    @media (max-width: 540px) {
+      .fac-strip { grid-template-columns: 1fr; }
+      section { padding: 60px 1.25rem; }
+      .p-prose { padding: 60px 1.25rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+<nav>
+  <a href="index.html" class="nav-wordmark">Stonegrove University</a>
+  <ul class="nav-links">
+    <li><a href="#p-welcome">Welcome</a></li>
+    <li><a href="#p-about">About</a></li>
+    <li><a href="#p-faculties">Faculties</a></li>
+    <li><a href="#p-facilities">Facilities</a></li>
+    <li><a href="#p-admissions">Admissions</a></li>
+    <li><a href="index.html">← Back to project</a></li>
+  </ul>
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+<section id="p-hero">
+  <div class="p-hero-bg"></div>
+  <div class="p-hero-content">
+    <img
+      src="images/stonegrove/stongegrove-coat-of-arms-transparent-bg.png"
+      alt="Stonegrove University coat of arms"
+      class="p-hero-crest"
+    >
+    <h1>Stonegrove University</h1>
+    <span class="p-established">Est. Year 642 &nbsp;·&nbsp; Ironspine Foothills</span>
+    <p class="p-tagline">Where forest meets mountain,<br>and tradition meets its creativity.</p>
+  </div>
+  <nav class="p-hero-jumpnav" aria-label="Page sections">
+    <a href="#p-welcome">Welcome</a>
+    <a href="#p-about">About</a>
+    <a href="#p-faculties">Faculties</a>
+    <a href="#p-facilities">Facilities</a>
+    <a href="#p-admissions">Admissions</a>
+  </nav>
+</section>
+
+
+<!-- =====================================================
+     WELCOME FROM THE CHANCELLOR
+===================================================== -->
+<div class="split-row" id="p-welcome">
+  <div class="split-img">
+    <img src="images/stonegrove/university-wide-shot-3.jpg" alt="Stonegrove University courtyard">
+  </div>
+  <div class="split-text bg-navy">
+    <span class="section-label on-navy">Welcome from the Chancellor</span>
+    <h2>A message from Chancellor Sorrelbark</h2>
+    <p>Stonegrove was founded on an agreement: that knowledge should not belong to any one people.</p>
+    <p>Four centuries ago, the Elves and Dwarves who had spent a generation fighting over the Ironspine foothills decided to build something there instead. The university was part of the peace terms. It has outlasted the disagreements that made it necessary.</p>
+    <p>Our graduates leave with more than credentials. They leave knowing how to work alongside people whose instincts are different from their own.</p>
+    <p>We admit students from all fourteen clans. We offer forty-four programmes across four faculties. We ask that you do the work.</p>
+    <div class="chancellor-sig">
+      Chancellor Evanthe Sorrelbark, BSc MPhil (Eldengrove), FRS<br>
+      Stonegrove University, Year 1052
+    </div>
+  </div>
+</div>
+
+
+<!-- =====================================================
+     ABOUT THE UNIVERSITY
+===================================================== -->
+<div class="split-row" id="p-about">
+  <div class="split-text bg-parchment">
+    <span class="section-label">About the university</span>
+    <h2>Four centuries in the making</h2>
+    <p>Stonegrove was established in Year 642 as part of the peace agreement between the Elven and Dwarven peoples. The founding congress, depicted in the frescoes of the Thornwood Archive, brought together seven Elven scholars and nine Dwarven pedagogues. They disagreed about almost everything except the location.</p>
+    <p>The campus sits at the meeting point of the Greenwood Forest and the Ironspine range. Both are visible from every courtyard.</p>
+    <p>The university holds to formal robes for convocation, an academic schedule unchanged in any significant way since Year 710, and an advisory council whose full remit is not published. These are not accidents of history. They are choices, and they are regularly argued about.</p>
+    <p>Assessment includes oral examination, peer symposia, and practical demonstration alongside written work. Governance is shared across student, staff, and community groups. The result is an institution where little is fully settled, which the founders would probably have considered appropriate.</p>
+  </div>
+  <div class="split-img">
+    <img src="images/stonegrove/university-wide-shot.jpg" alt="Stonegrove main courtyard with mountain beyond">
+  </div>
+</div>
+
+
+<!-- =====================================================
+     CLOISTERS FULL-WIDTH BANNER
+===================================================== -->
+<div>
+  <img src="images/stonegrove/vaulted-arches.jpg" alt="The Cloisters" class="img-banner">
+  <div class="banner-caption">
+    <span class="cap-name">The Cloisters</span>
+    <span class="cap-div">—</span>
+    <span class="cap-desc">The covered walkways date from the original construction. The lanterns were enchanted in Year 941 and have not required maintenance since.</span>
+  </div>
+</div>
+
+
+<!-- =====================================================
+     OUR FACULTIES
+===================================================== -->
+<section id="p-faculties">
+  <div class="container-wide">
+    <span class="section-label">Our faculties</span>
+    <h2>Forty-four programmes. Four faculties.</h2>
+    <p class="section-intro">Stonegrove organises its curriculum across four faculties. Students are admitted to a programme within a faculty.</p>
+    <div class="faculty-grid-p">
+
+      <div class="faculty-entry-p">
+        <div class="f-count">10 programmes</div>
+        <h3>Faculty of Applied Forging</h3>
+        <p>Craft, engineering, agriculture, and the material sciences. Assessment is partly through making things that must demonstrably work. The forge workshops and field sites run from the first bell to the ninth, six days a week.</p>
+      </div>
+
+      <div class="faculty-entry-p">
+        <div class="f-count">15 programmes</div>
+        <h3>Faculty of Living Lore</h3>
+        <p>Language, runic studies, cultural transmission, distributed economics, and the knowledge systems of both species. The faculty occupies the oldest wing of the university. Its library holds materials in twenty-three scripts, several taught nowhere else.</p>
+      </div>
+
+      <div class="faculty-entry-p">
+        <div class="f-count">9 programmes</div>
+        <h3>Faculty of Hearth and Transformation</h3>
+        <p>Governance, mutual aid, mentorship, and community design. Formally constituted sixty years after the university's founding, when it became apparent that the work students were doing did not fit the existing faculties. It has grown consistently since.</p>
+      </div>
+
+      <div class="faculty-entry-p">
+        <div class="f-count">8 programmes</div>
+        <h3>Faculty of Integrative Inquiry</h3>
+        <p>Research methodology, epistemology, and the practice of knowledge-making. Students spend considerable time on how knowledge is produced, by whom, and under what conditions — before turning to what it contains.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     FACILITIES PHOTO GRID
+===================================================== -->
+<div id="p-facilities">
+  <div class="fac-label container-wide">
+    <span class="section-label on-navy" style="color:rgba(245,240,224,0.45)">Facilities</span>
+  </div>
+  <div class="fac-strip">
+
+    <div class="fac-item">
+      <img src="images/stonegrove/library-1.jpg" alt="The Thornwood Archive">
+      <div class="fac-overlay">
+        <div class="fac-name">The Thornwood Archive</div>
+        <div class="fac-desc">The largest collection of bilingual Dwarven-Elven texts outside Eldengrove. Restricted holdings available to third-year students by application.</div>
+      </div>
+    </div>
+
+    <div class="fac-item">
+      <img src="images/stonegrove/elven-library.jpg" alt="The Reading Rooms">
+      <div class="fac-overlay">
+        <div class="fac-name">The Reading Rooms</div>
+        <div class="fac-desc">The upper library operates under silence rules dating from Year 903. These are observed.</div>
+      </div>
+    </div>
+
+    <div class="fac-item">
+      <img src="images/stonegrove/forge-1.jpg" alt="The Forge Quarter">
+      <div class="fac-overlay">
+        <div class="fac-name">The Forge Quarter</div>
+        <div class="fac-desc">Workshop buildings open directly onto the forest edge. Available to all students by arrangement. First bell to ninth, six days a week.</div>
+      </div>
+    </div>
+
+    <div class="fac-item">
+      <img src="images/stonegrove/oration-chamber.jpg" alt="The Conclave Chamber">
+      <div class="fac-overlay">
+        <div class="fac-name">The Conclave Chamber</div>
+        <div class="fac-desc">A circular hall for oral examination and public symposia. The skylight was a late addition. Records suggest it was contested.</div>
+      </div>
+    </div>
+
+    <div class="fac-item">
+      <img src="images/stonegrove/dining-hall.jpg" alt="Skalder Hall">
+      <div class="fac-overlay">
+        <div class="fac-name">Skalder Hall</div>
+        <div class="fac-desc">Seats four hundred. Meals twice daily. Banners represent each of the fourteen clans. Three petitions to add a new clan banner have been granted in the university's history.</div>
+      </div>
+    </div>
+
+    <div class="fac-item">
+      <img src="images/stonegrove/outdoor-classroom-1.jpg" alt="The Teaching Grove">
+      <div class="fac-overlay">
+        <div class="fac-name">The Teaching Grove</div>
+        <div class="fac-desc">Seminars held beside a tree that predates the university by an estimated three centuries. Weather permitting.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+     STUDENT LIFE
+===================================================== -->
+<section class="p-prose" style="background: var(--bg-white);">
+  <div class="container">
+    <span class="section-label">Student life</span>
+    <h2>All fourteen clans</h2>
+    <p>Stonegrove admits students from all fourteen clans. Accommodation, dining, and assessment are not segregated by clan or species. Clan affiliation matters to most students. It is not a factor in academic decisions.</p>
+    <p>The Student Assembly meets fortnightly and has advisory power over timetabling, welfare, and formal ceremonies. Voter turnout is published annually.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     ADMISSIONS
+===================================================== -->
+<section class="p-prose" id="p-admissions" style="background: var(--parchment-deep);">
+  <div class="container">
+    <span class="section-label">Admissions</span>
+    <h2>How to apply</h2>
+    <p>Applications are accepted from candidates who have completed secondary education, a guild apprenticeship, or an equivalent programme recognised by the Admissions Board.</p>
+    <p>Stonegrove does not operate a quota system by clan or species. Admission is based on prior learning, a written statement of purpose, and — for some programmes — a portfolio or practical assessment.</p>
+    <p>We receive more applications than we can accommodate.</p>
+    <p>Write to the Admissions Office, Stonegrove University, Ironspine Foothills. Responses are issued within one semester.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     A NOTE ON TRADITION
+===================================================== -->
+<section class="p-prose bg-navy" style="background: var(--bg-navy);">
+  <div class="container">
+    <span class="section-label on-navy">A note on tradition</span>
+    <h2>What kind of place this is</h2>
+    <p>Stonegrove retains many of the forms it inherited from older institutions: formal robes, an arcane academic schedule, advisory councils whose full remit is not entirely clear to incoming students. We do not retain them uncritically.</p>
+    <p>This university was built by two peoples who have not always agreed. It is still run by people who do not always agree. We consider this a working condition rather than a problem to be resolved.</p>
+    <p>If you are looking for a university where everything has already been settled, Stonegrove is probably not the right choice.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="footer-divider">✦ ◆ ✦</div>
+  <p>Stonegrove University &nbsp;·&nbsp; Prospectus Year 1052 &nbsp;·&nbsp; <a href="index.html">← Back to the project</a></p>
+</footer>
+
+
+</body>
+</html>
