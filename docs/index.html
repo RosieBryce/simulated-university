@@ -25,7 +25,7 @@
       background-image: url('images/stonegrove/university-wide-shot.jpg');
       background-size: cover;
       background-position: center 40%;
-      opacity: 0.07;
+      opacity: 0.22;
       z-index: 0;
     }
     #hero > * { position: relative; z-index: 1; }
@@ -125,6 +125,94 @@
       text-decoration: underline;
     }
 
+    /* =========================================================
+       HERO CREST
+    ========================================================= */
+    .hero-crest {
+      width: 72px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1.25rem;
+      opacity: 0.9;
+    }
+
+    /* =========================================================
+       ATMOSPHERIC IMAGE BREAKS
+    ========================================================= */
+    .img-break {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    .img-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* =========================================================
+       SECTION 3 — PROSPECTUS CTA BANNER
+    ========================================================= */
+    .prosp-cta {
+      position: relative;
+      margin-top: 3rem;
+      height: 260px;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .prosp-cta img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+      filter: brightness(0.42);
+    }
+    .prosp-cta-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .prosp-cta-inner span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .prosp-cta-inner h3 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: 1.25rem;
+    }
+    .prosp-cta-inner a {
+      display: inline-block;
+      color: var(--parchment);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border: 1px solid rgba(245,240,224,0.6);
+      padding: 0.5rem 1.75rem;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .prosp-cta-inner a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
   </style>
 </head>
 <body>
@@ -151,7 +239,7 @@
      SECTION 1 — HERO
 ===================================================== -->
 <section id="hero">
-  <div class="hero-ornament">❧</div>
+  <img src="images/stonegrove/stongegrove-coat-of-arms-transparent-bg.png" alt="Stonegrove University coat of arms" class="hero-crest">
   <span class="section-label" style="justify-content:center; display:block; text-align:center">OPEN SOURCE · SYNTHETIC DATA · HIGHER EDUCATION</span>
   <h1>Stonegrove University</h1>
   <p class="hero-tagline">Innovating Together for Middle Earth.</p>
@@ -193,6 +281,11 @@
 </section>
 
 
+<div class="img-break">
+  <img src="images/stonegrove/vaulted-arches.jpg" alt="The cloisters at Stonegrove University">
+</div>
+
+
 <!-- =====================================================
      SECTION 3 — THREE UNIVERSITIES
 ===================================================== -->
@@ -227,6 +320,16 @@
       </div>
 
     </div>
+
+    <div class="prosp-cta">
+      <img src="images/stonegrove/sunset-wide-shot.jpg" alt="Stonegrove University at sunset">
+      <div class="prosp-cta-inner">
+        <span>In-universe · Year 1052</span>
+        <h3>Explore Stonegrove in its own words</h3>
+        <a href="prospectus.html">Read the prospectus →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -439,6 +542,11 @@
 </section>
 
 
+<div class="img-break">
+  <img src="images/stonegrove/forge-1.jpg" alt="The forge at Stonegrove University">
+</div>
+
+
 <!-- =====================================================
      SECTION 8 — BUILT WITH AI
 ===================================================== -->
@@ -451,6 +559,11 @@
     <p>AI made the building faster, but it did not decide what to build. The three-university framework, the design philosophy, the decision to make the simulation run on agent level all came from me, through years of working in UK higher education and thinking carefully about what makes the problems hard.</p>
   </div>
 </section>
+
+
+<div class="img-break">
+  <img src="images/stonegrove/oration-chamber.jpg" alt="The oration chamber at Stonegrove University">
+</div>
 
 
 <!-- =====================================================
