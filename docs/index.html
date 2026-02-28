@@ -9,6 +9,123 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* =========================================================
+       HERO — subtle campus background
+    ========================================================= */
+    #hero {
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/stonegrove/university-wide-shot.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.07;
+      z-index: 0;
+    }
+    #hero > * { position: relative; z-index: 1; }
+
+    /* =========================================================
+       EXPLORE CARDS
+    ========================================================= */
+    #explore {
+      background: var(--bg-navy);
+      padding: 72px 2rem;
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
+    }
+    #explore .section-label {
+      color: rgba(201,168,76,0.6);
+      display: block;
+      text-align: center;
+      margin-bottom: 0.6rem;
+    }
+    #explore > .explore-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--parchment);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .explore-cards {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .explore-cards { grid-template-columns: 1fr; }
+    }
+    .explore-card {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      height: 420px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .explore-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(10,8,20,0.94) 0%,
+        rgba(10,8,20,0.5) 50%,
+        rgba(10,8,20,0.15) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.25rem 2.5rem;
+      transition: background 0.25s;
+    }
+    .explore-card:hover .explore-card-overlay {
+      background: linear-gradient(to top,
+        rgba(10,8,20,0.97) 0%,
+        rgba(10,8,20,0.65) 55%,
+        rgba(10,8,20,0.25) 100%);
+    }
+    .explore-card-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .explore-card h3 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 900;
+      color: var(--parchment);
+      margin-bottom: 0.65rem;
+    }
+    .explore-card p {
+      font-size: 0.92rem;
+      color: rgba(245,240,224,0.75);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      max-width: 38ch;
+    }
+    .explore-card-cta {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+    }
+    .explore-card:hover .explore-card-cta {
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -161,6 +278,36 @@
       <p>I found a student in one of my test runs, amusingly given the name 'Doni Pickface', a dwarf of the Flint clan. Poor Doni ended up having to repeat their third year three times: the simulation gives students a gradually increasing reluctance to withdraw as they accumulate time at the university - the sunk-cost effect, modelled at agent level. Doni kept failing the year, kept deciding not to leave, and eventually (finally!) passed on their third attempt.</p>
       <p>I didn't decide for that to happen - it just emerged from how the model works. I really enjoy that the system produces stories I did not write.</p>
     </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     EXPLORE CARDS — Prospectus + Our Students
+===================================================== -->
+<section id="explore">
+  <span class="section-label">EXPLORE THE UNIVERSITY</span>
+  <p class="explore-heading">See the world we built</p>
+  <div class="explore-cards">
+
+    <a href="prospectus.html" class="explore-card" style="background-image: url('images/stonegrove/sunset-wide-shot.jpg')">
+      <div class="explore-card-overlay">
+        <span class="explore-card-label">Year 1052 &nbsp;·&nbsp; In-universe</span>
+        <h3>Stonegrove Prospectus</h3>
+        <p>The university in its own words — the Chancellor's welcome, the four faculties, facilities, and admissions.</p>
+        <span class="explore-card-cta">Read the prospectus →</span>
+      </div>
+    </a>
+
+    <a href="clans.html" class="explore-card" style="background-image: url('images/stonegrove/outdoor-classroom-1.jpg')">
+      <div class="explore-card-overlay">
+        <span class="explore-card-label">Fourteen clans &nbsp;·&nbsp; Two species</span>
+        <h3>Our Students</h3>
+        <p>Eight dwarven clans, six elven — their homelands, languages, and cultures, as shared by the clan elders.</p>
+        <span class="explore-card-cta">Meet the clans →</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
