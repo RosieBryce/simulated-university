@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the fourteen clans of Stonegrove University — eight dwarven, six elven.">
+  <title>Our Students — Stonegrove University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* =========================================================
+       PAGE HEADER
+    ========================================================= */
+    #cs-header {
+      background: var(--bg-navy);
+      padding: 80px 2rem 72px;
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+    }
+    .cs-crest {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 1.5rem;
+      display: block;
+      opacity: 0.85;
+    }
+    #cs-header h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--parchment);
+      margin-bottom: 0.5rem;
+    }
+    .cs-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.75rem;
+    }
+    .cs-intro {
+      max-width: 600px;
+      margin: 0 auto 0.9rem;
+      font-size: 1rem;
+      color: rgba(245,240,224,0.78);
+      line-height: 1.85;
+    }
+
+    /* =========================================================
+       SPECIES DIVIDERS
+    ========================================================= */
+    .cs-species-divider {
+      background: var(--bg-navy);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.25);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+    .cs-species-divider h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .cs-species-divider.cs-dwarf h2 { color: var(--dwarf-gold); }
+    .cs-species-divider.cs-elf   h2 { color: var(--elf-green); }
+    .cs-species-divider p {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+    }
+    .cs-species-divider.cs-dwarf p { color: rgba(201,168,76,0.5); }
+    .cs-species-divider.cs-elf   p { color: rgba(122,158,130,0.6); }
+
+    /* =========================================================
+       CLAN GRID
+    ========================================================= */
+    .cs-grid-section {
+      padding: 3.5rem 2rem 4rem;
+    }
+    .cs-grid-section.dwarves { background: var(--parchment); }
+    .cs-grid-section.elves   { background: var(--parchment-deep); }
+
+    .cs-grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 720px) {
+      .cs-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       CLAN CARD
+    ========================================================= */
+    .clan-card {
+      background: #fff;
+      border: 1px solid var(--border-warm);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .clan-imgs {
+      display: flex;
+      height: 260px;
+      overflow: hidden;
+    }
+    .clan-imgs img {
+      flex: 1;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .clan-imgs.single img {
+      width: 100%;
+    }
+    .clan-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+      flex: 1;
+    }
+    .clan-name {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+    .dwarf-card .clan-name { color: #6b4a0a; }
+    .elf-card   .clan-name { color: #2d5e3a; }
+
+    .clan-epithet {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .clan-body p {
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: var(--text-body);
+      margin-bottom: 0.8rem;
+    }
+    .clan-body p:last-child { margin-bottom: 0; }
+
+    /* =========================================================
+       PAGE FOOTER
+    ========================================================= */
+    .cs-footer {
+      background: var(--bg-navy);
+      padding: 2rem;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+    .cs-footer a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin: 0 1.5rem;
+    }
+    .cs-footer a:hover { text-decoration: underline; }
+
+  </style>
+</head>
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+<nav>
+  <a href="index.html" class="nav-wordmark">Stonegrove University</a>
+  <ul class="nav-links">
+    <li><a href="#dwarves">Dwarves</a></li>
+    <li><a href="#elves">Elves</a></li>
+    <li><a href="prospectus.html">Prospectus</a></li>
+    <li><a href="index.html">← Back to project</a></li>
+  </ul>
+</nav>
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+<section id="cs-header">
+  <img
+    src="images/stonegrove/stongegrove-coat-of-arms-transparent-bg.png"
+    alt="Stonegrove University coat of arms"
+    class="cs-crest"
+  >
+  <h1>Our Students</h1>
+  <span class="cs-sub">Fourteen Clans &nbsp;·&nbsp; Two Species &nbsp;·&nbsp; One University</span>
+  <p class="cs-intro">Stonegrove University draws its students from fourteen clans — eight dwarven, six elven — spanning the full range of the known world's geographies, languages, and traditions. The university was founded on the principle that elves and dwarves could share a common institution. That founding question remains, in practice, an ongoing project.</p>
+  <p class="cs-intro">In the interests of fostering collaboration across clan lines, the university invited clan elders to contribute to this record of cultural backgrounds. What follows is drawn from those contributions — a starting point, not a comprehensive account.</p>
+</section>
+
+
+<!-- =====================================================
+     DWARVES
+===================================================== -->
+<div id="dwarves" class="cs-species-divider cs-dwarf">
+  <h2>The Dwarven Clans</h2>
+  <p>Eight clans &nbsp;·&nbsp; The Ironspine Mountains and beyond</p>
+</div>
+
+<div class="cs-grid-section dwarves">
+  <div class="cs-grid">
+
+    <!-- Alabaster -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/alabaster-dwarves.png" alt="Alabaster dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Alabaster Dwarves</h3>
+        <span class="clan-epithet">The Hollowbound</span>
+        <p>The Alabaster dwarves come from the Pale Reaches — chalk plains and hollowed quarries in the far south, built on salvaged stone and subsidence-prone ground. Their homeland has been stripped of most of its mineral wealth and is largely overlooked by trade routes; their towns persist through resourcefulness rather than prosperity. Their language, Albaic, was once a courtly dialect and is now worn thin — elders preserve its old songs while younger Alabasters tend toward a clipped, practical blend of Albaic and common dwarvish.</p>
+        <p>Alabaster culture treats repair as a form of resistance. The Shard Rite — in which young dwarves carve a stone and carry it until they find the right place to set it down — shapes a worldview where endurance without recognition is the highest mark of character. Many work as underpaid labourers in the cities of wealthier clans, maintaining infrastructure others consider beneath their attention: sewerworks, mine supports, boundary walls. Their stonecraft is quiet and precise.</p>
+      </div>
+    </article>
+
+    <!-- Bismuth -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/bismuth-dwarves-1.png" alt="Bismuth dwarves">
+        <img src="images/clans/bismuth-dwarves-2.png" alt="Bismuth dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Bismuth Dwarves</h3>
+        <span class="clan-epithet">The Fractallers</span>
+        <p>The Bismuth dwarves live deep beneath geothermal strata in the Prismvault — a crystalline canyon of spiral mineral formations, iridescent bismuth veins, and thermal springs that cast a constantly shifting spectrum of colour. Their architecture bends traditional dwarven geometry into stepped, twisting structures; no two homes look alike. Their language, Kaleid, is polyphonic and layered, requiring sight, sound, and context to be understood fully — a well-crafted ambiguity is considered more elegant than a plain statement.</p>
+        <p>Bismuth culture holds that the self is not fixed but ever-refracting. Adolescents undergo the Blooming — shattering a crafted object and reforging it to mark a new identity — and Facet Days celebrate the different sides a person can show to the world. They are known as alchemists, architects of unusual spaces, and mirror-scribes, employed widely across dwarven and elven lands as pattern-interpreters and adaptive toolsmiths. Hierarchy within the clan is measured not by age or title, but by how many facets of oneself one has been willing to reveal.</p>
+      </div>
+    </article>
+
+    <!-- Flint -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/flint-dwarves-1.png" alt="Flint dwarves">
+        <img src="images/clans/flint-dwarves-2.png" alt="Flint dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Flint Dwarves</h3>
+        <span class="clan-epithet">The Sparked</span>
+        <p>The Flint dwarves come from the Ashen Marches — volcanic beds and flint cliffs in the west, where the terrain is shaped by fire and pressure and homes are built as fortified, fireproofed bunkers. The land is treacherous but mineral-rich, and Flint culture reflects both qualities: direct, fast-paced, and not particularly interested in tact. Their dialect, Flintspeech, has no patience for pauses mid-sentence — read as doubt or deceit. Disputes are settled through tests of speed, flamecraft, or engineering ingenuity rather than argument.</p>
+        <p>Flint dwarves are weapon-smiths, pyrotechnicians, and mechanical engineers, frequently contracted for fortress traps, automata, and volcanic mining operations. Their Trial of Sparks — forging a tool unassisted in a volcanic forge, starting again if it breaks — sets the template for how they approach most things: results under pressure, no complaint. They hold a long-standing mutual respect with the Ash elves, both clans valuing skill and endurance over ceremony. The saying attributed to Flintspeech — "Better to spark and fail than smoulder in silence" — captures their general approach.</p>
+      </div>
+    </article>
+
+    <!-- Granite -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/granite-dwarves.png" alt="Granite dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Granite Dwarves</h3>
+        <span class="clan-epithet">The Stoneheart Line</span>
+        <p>The Granite dwarves come from the Ironplate Mountains — cold, high peaks with fortified citadels carved directly into cliff faces. Architecture is monumental and defensive; food is mostly imported or farmed in deep stonewalled terraces. Their dialect, Granska, is terse and formal, spoken with military precision, and conversation typically includes rank and achievement as a matter of course. Every family maintains a Stone Ledger — a physical tablet recording deeds, contributions, and disgraceful acts alike, none removed.</p>
+        <p>Granite dwarves work as masons, siege tacticians, and stone-armour smiths, and are among the clans most sought after as elite guards or mercenaries abroad. The Graven Oath — in which each adult carves their name into the family's ancestral wall, permanently — defines their relationship to commitment: once made, it cannot be undone. The annual Stonemarch, a mountain pilgrimage that kills some of those who attempt it, is treated as an affirmation of unity rather than a hardship. They are widely respected among dwarf clans and generally mistrustful of elves.</p>
+      </div>
+    </article>
+
+    <!-- Malachite -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/malachite-dwarves.png" alt="Malachite dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Malachite Dwarves</h3>
+        <span class="clan-epithet">The Verdant Forgefolk</span>
+        <p>The Malachite dwarves live in the Emerald Warrens — vertically stacked settlements carved into mineral-rich cavern walls, lit by glowing mosses and warmed by thermal vents. Rope bridges and spiral lifts connect the levels; suspended gardens grow fungi and lichen cultivated over generations. Their dialect, Malgrim, borrows heavily from elvish and is sung rather than spoken at formal occasions. They have maintained trade relationships with Holly and Rowan elves for centuries, and it shows in their manner.</p>
+        <p>Malachite culture prizes balance: between work and rest, craft and community, wealth and humility. Craftsmanship is treated as a spiritual practice rather than a means of income. Their animist tradition holds that stone has a spirit and some stones are awake — their temples are acoustically perfect chambers where stone sings back when chanted to. The Stonebinding tradition enchants tools with ancestral memory through mineral resonance, so a well-made Malachite instrument remembers how it was used. They are generally well-regarded across both species, though sometimes considered eccentric by more pragmatic clans.</p>
+      </div>
+    </article>
+
+    <!-- Obsidian -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/obsidian-dwarves-1.png" alt="Obsidian dwarves">
+        <img src="images/clans/obsidian-dwarves-2.png" alt="Obsidian dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Obsidian Dwarves</h3>
+        <span class="clan-epithet">The Nightforged</span>
+        <p>The Obsidian dwarves inhabit the Deep Mirror — a network of volcanic tunnels, obsidian cliffs, and lightless echo-chambers far beneath the surface. Their cities are smooth and faceted, built from obsidian and basalt, lit by molten channels and glowing fungi. Their dialect, Vulkarn, is deep-throated and slow, designed to travel through stone rather than air — many messages are tapped, echoed, or sung into walls rather than spoken aloud. Silence is etiquette. Loudness is considered spiritually violent.</p>
+        <p>Among dwarf clans, the Obsidian are the least visible — some surface dwarves treat them as myth. They work as vault-makers, crypt designers, stealth engineers, and truthsayers. The Mirrorwake tradition — in which adolescents sit alone in an obsidian chamber and listen for their true name in the returning echo — shapes a culture of introspection and restraint. In Obsidian philosophy, what is hidden is not considered false, only incomplete.</p>
+      </div>
+    </article>
+
+    <!-- Sandstone -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/sandstone-dwarves.png" alt="Sandstone dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Sandstone Dwarves</h3>
+        <span class="clan-epithet">The Weathered Kin</span>
+        <p>The Sandstone dwarves come from the Amber Fold — sunlit tablelands and wind-shaped spires in the central lowlands. Unlike most dwarves, they build outward rather than inward: settlements carved into cliff faces, connected by rope bridges and light towers, close to the sky and open air. Their dialect, Sundermouth, is warm and proverb-rich; arguments are often resolved through competing parables. Lore is preserved in wind-sung carvings and resonant cliff chimes rather than written texts.</p>
+        <p>Sandstone culture values flexibility and communal voice — no decision is made alone, and wisdom is understood to emerge slowly through many perspectives. They work as acoustic engineers, mediators, and ritual designers, and are among the more diplomatically active of the dwarf clans. Their Dustcall ceremony at equinox — scattering carved stone dust into the wind as a release of errors made — reflects a worldview built around adaptation and impermanence. They share close bonds with Holly and Palm elves, and some elven scholars have apprenticed with Sandstone dwarves to learn tonal carving.</p>
+      </div>
+    </article>
+
+    <!-- Slate -->
+    <article class="clan-card dwarf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/slate-dwarves-1.png" alt="Slate dwarves">
+        <img src="images/clans/slate-dwarves-2.png" alt="Slate dwarves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Slate Dwarves</h3>
+        <span class="clan-epithet">The Shardbound</span>
+        <p>The Slate dwarves live in the Grey Reaches — wind-scoured plateaus of fractured strata where avalanches are common and paths are precarious. Their villages are built into crevices, stacked and layered, with a muted, deliberate aesthetic of grey stone, moss green, and soot brown. Their dialect, Tharn, is economical: the fewest words for the most meaning, with silence carrying its own syntax. Disagreement is not spoken — it is a pause, long and heavy and absolute.</p>
+        <p>Slate dwarves work in infrastructure repair, load-bearing design, and disaster response — rarely in command, but often the last standing. Their Breaking Day ritual — splitting a hand-carved slab precisely down its fault line — reflects a culture that treats fracture as testimony rather than failure. They are underestimated by most clans and turned to in a crisis, a dynamic they have long accepted. They share rituals of fracture and remembrance with the Yew elves, one of the more enduring cross-species affinities in the university.</p>
+      </div>
+    </article>
+
+  </div><!-- /cs-grid -->
+</div><!-- /cs-grid-section dwarves -->
+
+
+<!-- =====================================================
+     ELVES
+===================================================== -->
+<div id="elves" class="cs-species-divider cs-elf">
+  <h2>The Elven Clans</h2>
+  <p>Six clans &nbsp;·&nbsp; The Forest Reaches and Coastal Archipelago</p>
+</div>
+
+<div class="cs-grid-section elves">
+  <div class="cs-grid">
+
+    <!-- Ash -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/ash-elves.png" alt="Ash elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Ash Elves</h3>
+        <span class="clan-epithet">The Stormborne</span>
+        <p>The Ash elves come from the Cindering Reach — a landscape of scorched steppe and regrowth forest, where lightning fires clear the ground regularly and ash trees regenerate in their wake. Their camps are nomadic, built for movement: collapsible structures of oiled hide and stormwood, with ash trees left untouched as sacred anchors. Their dialect, Kalenash, was developed for chanting through windstorms and battle cries — verbs are central, sentences are rarely longer than breath allows.</p>
+        <p>Ash elf culture treats reinvention as a core value: identity is shaped by survival, not by lineage. Their Trial of Smoke sends adolescents into a controlled burn to return with a living ember. They work as scouts, herbalists, and disaster wardens, skilled in controlled fire magic and smoke signalling. They have a long-standing mutual respect with the Flint dwarves, both clans valuing skill and endurance over ceremony. They tend to arrive at Stonegrove having already tested themselves against hard conditions, and it shows.</p>
+      </div>
+    </article>
+
+    <!-- Baobab -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/baobab-elves.png" alt="Baobab elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Baobab Elves</h3>
+        <span class="clan-epithet">The Eldest Bough</span>
+        <p>The Baobab elves come from the Canopy Expanse — a sunlit plateau where ancient baobab trees serve as both city and lineage, some centuries old with their own family records. Bridges of silk and vine connect the upper canopies. Their dialect, Oraneth, is refined and slow-spoken, built for rhetorical duelling; youth train in argumentation from childhood, and precision of speech is a marker of standing. Root Archives — sealed vaults inside each tree containing scrolls and ancestral codes — are rarely accessed, but deeply revered.</p>
+        <p>Among elven clans, the Baobab are considered the most formally educated and the most tradition-bound. They work as advisors, archivists, and high diplomats; their textile artisans weave baobab silk embroidered with stories complex enough to take years to read. Knowledge is treated as inheritance — not freely given, but tested before it is passed on. Legacy is weighted above immediacy, and self-control above emotion. Students from other clans sometimes find Baobab elves difficult to read; Baobab students sometimes find the rest of Stonegrove insufficiently serious.</p>
+      </div>
+    </article>
+
+    <!-- Holly -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/holly-elves-1.png" alt="Holly elves">
+        <img src="images/clans/holly-elves-2.png" alt="Holly elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Holly Elves</h3>
+        <span class="clan-epithet">The Winterwatch</span>
+        <p>The Holly elves come from the Bleeding Glades — frost-hardened woodland where holly grows in tangled thickets and red berries stain the snow year-round. Settlements are woven into the living forest: treehouses, thorn-ringed halls, and frosted archways carved from bark. Their dialect, Ithalen, is crisp and tonal, built around half-rhymes. To speak unnecessarily is a breach of grace; silence holds as much meaning as words.</p>
+        <p>Holly elf culture centres on endurance and memory. The Thornfasting — a solo winter in the woods, returning with a story, a scar, and a new name — is among the more demanding coming-of-age traditions observed by any of the fourteen clans. They work as wardens, healers, and ritual guardians, skilled in cold-weather herbalism and protective crafts. Holly elves hold grudges longer than most elves forget, a reputation they neither dispute nor particularly explain. Their long-standing mutual respect with the Malachite dwarves, forged along shared trade routes, is one of the more stable cross-species relationships represented at Stonegrove.</p>
+      </div>
+    </article>
+
+    <!-- Palm -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs single">
+        <img src="images/clans/palm-elves.png" alt="Palm elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Palm Elves</h3>
+        <span class="clan-epithet">The Tidebound</span>
+        <p>The Palm elves come from the Whispering Reaches — a coastal jungle archipelago of sea cliffs, tidal caverns, and stilted towns built to sway rather than stand firm. Their history of displacement is recent enough to be personal, and their culture has developed around carrying loss without being defined by it. Their dialect, Lumea, is melodic and indirect — what sounds like flirtation may carry grief or prophecy beneath, and hands often say what mouths leave out.</p>
+        <p>Palm elf culture treats joy as a form of defiance. Their arts carry coded histories — a dance may tell of exodus, a fermented drink of mourning — and storytelling is an act of preservation rather than entertainment. They work as navigators, ritual healers, and perfume-makers, encoding memory and meaning in scent and touch. Seen by some clans as unserious or ungrounded, Palm elves tend to meet that assessment with equanimity, having long since learned to perform calm under scrutiny.</p>
+      </div>
+    </article>
+
+    <!-- Rowan -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/rowan-elves-1.png" alt="Rowan elves">
+        <img src="images/clans/rowan-elves-2.png" alt="Rowan elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Rowan Elves</h3>
+        <span class="clan-epithet">The Hearthbinders</span>
+        <p>The Rowan elves come from the Firegroves — a warm highland woodland of volcanic springs and ancient stone circles, where rowan trees are considered to house protective spirits and hearths are maintained as sacred objects. Their dialect, Emberish, is lively and expressive, full of idioms rooted in cooking and firekeeping. Hospitality phrases are treated as rituals: "Come in from the dark" is a traditional greeting. Their Kindling Rite sends adolescents to tend an elder's hearth for a full lunar cycle without letting it go out — learning to hold someone else's needs before their own.</p>
+        <p>Rowan elves are known across both species as teachers, apothecaries, and mediators — the clan most likely to know their neighbours' traditions and be welcome at both tables. They excel in oral history, protective charms, and food alchemy. The Storypoles outside each Rowan home — large carved totems with a notch for every tale told or kindness received — give a sense of how their values operate: warmth is not softness, it is a form of record-keeping. Their mutual respect with the Malachite and Gypsum dwarves has been built along shared trade routes and family feasts over generations.</p>
+      </div>
+    </article>
+
+    <!-- Yew -->
+    <article class="clan-card elf-card">
+      <div class="clan-imgs">
+        <img src="images/clans/yew-elves-1.png" alt="Yew elves">
+        <img src="images/clans/yew-elves-2.png" alt="Yew elves">
+      </div>
+      <div class="clan-body">
+        <h3 class="clan-name">Yew Elves</h3>
+        <span class="clan-epithet">The Deathkeepers</span>
+        <p>The Yew elves come from the Hollowmere — a mist-wreathed forest of ancient yew groves and burial barrows, where time moves differently and the line between home and tomb is deliberately blurred. Settlements are carved into dead trees, hollowed hills, and root-buried halls. Their dialect, Nyareth, is spoken in paired phrases — one for the living, one for the dead — and ceremonies involve choral whispering, bell chimes, and walking in spirals. The Rootcall Rite plants a yew sapling into the heart of the deceased; over generations, each grove has become a record of the clan's dead.</p>
+        <p>Yew elf culture holds death not as an ending but as a dispersal — reverent and unsentimental rather than morbid. They work as funerary priests, ancestral lorekeepers, and inter-clan arbiters, called in to mediate disputes where loss or legacy is at stake. Their reputation for neutrality holds across all fourteen clans. Their affinity with the Slate dwarves — both cultures built around treating fracture as testimony rather than failure — is the most frequently noted cross-species bond in contemporary Stonegrove records.</p>
+      </div>
+    </article>
+
+  </div><!-- /cs-grid -->
+</div><!-- /cs-grid-section elves -->
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<div class="cs-footer">
+  <a href="prospectus.html">← Prospectus</a>
+  <a href="index.html">Back to project</a>
+</div>
+
+</body>
+</html>
