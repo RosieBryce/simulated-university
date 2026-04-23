@@ -117,3 +117,7 @@ simulated-university/
 - `docs/CALCULATIONS.md` — formulas, modifiers, and assumptions
 - `docs/PIPELINE_FLOW.md` — student_id assignment and join conventions
 - `docs/USER_GUIDE.md` — how to run, modify, and extend the pipeline
+
+## Licence
+
+Copyright (c) 2026 Rosie Bryce. All rights reserved. Source code and configuration files in this repository may not be reproduced, modified, or distributed without explicit written permission. See `LICENSE` for details.
