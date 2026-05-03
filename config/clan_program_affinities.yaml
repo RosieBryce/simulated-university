@@ -1,726 +1,864 @@
-# Clan Program Affinities for Stonegrove University
-# Based on programme propensity data
-# Affinity scores range from 0.0 (no affinity) to 1.0 (strongest affinity)
-# Top 5 programs per clan get high affinity scores, others get lower scores
+# Clan Programme Affinities — Stonegrove University
+# Generated programmatically: clan personality midpoints x programme characteristics
+# Formula: 0.5 + sum(weight * (trait - 0.5) * (characteristic - 0.5))
+# Scores scaled per-clan to [0.05, 0.95]. Higher = stronger enrolment pull.
 
 clans:
-  # ===== DWARF CLANS =====
-  
   malachite:
     name: "Malachite Dwarves"
-    description: "The Verdant Forgefolk - Balanced, cooperative, spiritually attuned craftspeople"
+    description: "Verdant Forgefolk — balanced, cooperative, spiritually attuned craftspeople"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Pedagogies of the Hand": 0.95
-      "Earth-Aligned Agriculture": 0.90
-      "Mycelial Cultivation and Biotech": 0.85
-      "Wisdom Traditions and Moral Craft": 0.80
-      "Care, Craft and Continuity": 0.75
-      
-      # Moderate affinity programs (related to their values)
-      "Hospitality as Praxis": 0.60
-      "Intergenerational Learning": 0.55
-      "Integrated Mind-Body": 0.50
-      "Folkloric Transmission and Archiving": 0.45
-      "Storyweaving & Community Histories": 0.40
-      
-      # Lower affinity programs
-      "Strategic Rituals and Civic Memory": 0.30
-      "Ancient Tongues and Translation": 0.25
-      "Elven Ethics in Modern Governance": 0.20
-      "Critical Power": 0.15
-      "Consensus Systems in Hybrid Societies": 0.10
-      
-      # Minimal affinity programs
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Multispecies Semantics": 0.05
-      "Epistemological Justice": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Knowledge System Prototyping": 0.05
-      "Embodied Research Methods": 0.05
-      "Runic Infrastructure": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Timekeeping in Plural Cultures": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "5_2_4": 0.95  # Modern Technologies
+      "4_2_12": 0.94  # Somatic Wellbeing Enquiry
+      "5_2_6": 0.90  # Mycelial Cultivation and Biotech
+      "5_3_9": 0.87  # Chemistry
+      "4_1_3": 0.82  # Intergenerational Learning
+      "3_5_9": 0.81  # Conflict Transformation
+      "2_4_12": 0.79  # Space Design
+      "2_3_8": 0.78  # Brewcraft and Fermentation Systems
+      "3_3_5": 0.77  # Multispecies Linguistics
+      "3_6_14": 0.76  # Psychology
+      "4_1_1": 0.75  # Education Studies
+      "2_2_4": 0.74  # Illustration
+      "3_5_10": 0.74  # Economics
+      "4_2_4": 0.73  # Herbal Practice and Energy Work
+      "2_1_1": 0.72  # Architecture
+      "4_1_2": 0.71  # Educational Mentorship
+      "4_2_7": 0.70  # Nursing and Care
+      "4_2_10": 0.69  # Physiotherapy
+      "2_2_2": 0.67  # Cyanophotography and Printmaking
+      "2_3_7": 0.67  # Artefact Restoration
+      "3_4_7": 0.67  # Philosophy of Religion and Ethics
+      "4_2_8": 0.67  # Occupational Therapy
+      "2_2_5": 0.66  # Media Studies
+      "2_2_3": 0.65  # Fine Art
+      "5_3_10": 0.65  # Environmental Science
+      "5_3_7": 0.64  # Biology
+      "4_2_11": 0.63  # Social Work
+      "2_4_10": 0.62  # Fashion Design
+      "5_2_5": 0.62  # Multi-system Technology
+      "3_4_6": 0.61  # Ceremonies
+      "4_2_6": 0.60  # Midwifery
+      "5_1_3": 0.58  # Systems Engineering
+      "3_5_13": 0.56  # Politics and Relations
+      "3_4_8": 0.55  # Ritual and Recollection
+      "3_6_15": 0.55  # Sociology
+      "3_3_3": 0.54  # Languages and Literature
+      "4_2_5": 0.53  # Integrated Mind-Body
+      "1_1_3": 0.50  # Entrepreneurship and Trade
+      "3_2_2": 0.50  # History
+      "3_5_12": 0.50  # Narrative Governance and Institution Building
+      "3_5_11": 0.47  # Elven Ethics in Modern Governance
+      "4_2_9": 0.45  # Pharmacy
+      "2_2_6": 0.44  # Music
+      "1_1_2": 0.42  # Business Management
+      "1_2_1": 0.42  # Law
+      "5_1_2": 0.40  # Mechanical Engineering
+      "1_1_4": 0.39  # Hospitality and Tourism Management
+      "2_3_9": 0.36  # Precision Smithing and Design
+      "5_3_11": 0.35  # Mathematics
+      "1_1_1": 0.32  # Accounting & Finance
+      "1_1_5": 0.28  # Person Resource Management
+      "2_4_11": 0.28  # Graphic Design
+      "5_3_8": 0.25  # Biomedical Science
+      "3_1_1": 0.20  # Geography
+      "5_3_12": 0.05  # Physics
 
   granite:
     name: "Granite Dwarves"
     description: "Stoic, hierarchical, tradition-bound warriors and civic leaders"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Strategic Rituals and Civic Memory": 0.95
-      "Narrative Governance and Institution Building": 0.90
-      "Conflict Transformation through Cultural Design": 0.85
-      "Ancient Tongues and Translation": 0.80
-      "Comparative Runes and Scripts": 0.75
-      
-      # Moderate affinity programs
-      "Critical Power": 0.60
-      "Consensus Systems in Hybrid Societies": 0.55
-      "Elven Ethics in Modern Governance": 0.50
-      "Wisdom Traditions and Moral Craft": 0.45
-      "Pedagogies for Uncertain Times": 0.40
-      
-      # Lower affinity programs
-      "Runic Infrastructure": 0.30
-      "Lorekeeper Apprenticeship": 0.25
-      "Epistemological Justice": 0.20
-      "Timekeeping in Plural Cultures": 0.15
-      "Mutual Aid and Guild Governance": 0.10
-      
-      # Minimal affinity programs
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Care, Craft and Continuity": 0.05
-      "Hospitality as Praxis": 0.05
-      "Intergenerational Learning": 0.05
-      "Integrated Mind-Body": 0.05
-      "Folkloric Transmission and Archiving": 0.05
-      "Storyweaving & Community Histories": 0.05
-      "Knowledge System Prototyping": 0.05
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "4_2_12": 0.95  # Somatic Wellbeing Enquiry
+      "5_2_6": 0.92  # Mycelial Cultivation and Biotech
+      "5_2_4": 0.91  # Modern Technologies
+      "5_2_5": 0.87  # Multi-system Technology
+      "5_3_7": 0.85  # Biology
+      "4_2_4": 0.84  # Herbal Practice and Energy Work
+      "4_2_6": 0.83  # Midwifery
+      "4_2_8": 0.76  # Occupational Therapy
+      "5_1_3": 0.76  # Systems Engineering
+      "5_3_9": 0.75  # Chemistry
+      "4_1_2": 0.74  # Educational Mentorship
+      "2_4_12": 0.73  # Space Design
+      "4_2_5": 0.73  # Integrated Mind-Body
+      "4_1_1": 0.72  # Education Studies
+      "4_1_3": 0.72  # Intergenerational Learning
+      "5_1_2": 0.71  # Mechanical Engineering
+      "4_2_7": 0.70  # Nursing and Care
+      "4_2_10": 0.70  # Physiotherapy
+      "4_2_11": 0.68  # Social Work
+      "5_3_10": 0.68  # Environmental Science
+      "2_2_4": 0.66  # Illustration
+      "2_2_3": 0.62  # Fine Art
+      "2_3_7": 0.62  # Artefact Restoration
+      "3_5_9": 0.62  # Conflict Transformation
+      "3_4_6": 0.61  # Ceremonies
+      "2_2_2": 0.59  # Cyanophotography and Printmaking
+      "2_3_8": 0.59  # Brewcraft and Fermentation Systems
+      "1_1_3": 0.56  # Entrepreneurship and Trade
+      "2_1_1": 0.54  # Architecture
+      "3_3_5": 0.53  # Multispecies Linguistics
+      "1_1_4": 0.52  # Hospitality and Tourism Management
+      "2_2_5": 0.51  # Media Studies
+      "5_3_8": 0.50  # Biomedical Science
+      "3_6_15": 0.49  # Sociology
+      "2_4_10": 0.46  # Fashion Design
+      "1_1_2": 0.44  # Business Management
+      "2_4_11": 0.44  # Graphic Design
+      "2_2_6": 0.43  # Music
+      "1_1_1": 0.42  # Accounting & Finance
+      "4_2_9": 0.42  # Pharmacy
+      "3_5_10": 0.41  # Economics
+      "3_6_14": 0.41  # Psychology
+      "3_5_13": 0.39  # Politics and Relations
+      "3_5_12": 0.38  # Narrative Governance and Institution Building
+      "2_3_9": 0.36  # Precision Smithing and Design
+      "1_1_5": 0.35  # Person Resource Management
+      "3_4_7": 0.34  # Philosophy of Religion and Ethics
+      "5_3_11": 0.34  # Mathematics
+      "5_3_12": 0.32  # Physics
+      "3_1_1": 0.28  # Geography
+      "3_3_3": 0.27  # Languages and Literature
+      "3_4_8": 0.22  # Ritual and Recollection
+      "1_2_1": 0.21  # Law
+      "3_2_2": 0.09  # History
+      "3_5_11": 0.05  # Elven Ethics in Modern Governance
 
   flint:
     name: "Flint Dwarves"
     description: "Gritty, tough, blunt miners, frontline workers, and pragmatists"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Earth-Aligned Agriculture": 0.95
-      "Mycelial Cultivation and Biotech": 0.90
-      "Food System Resilience": 0.85
-      "Herbal Practice and Energy Work": 0.80
-      "Pedagogies of the Hand": 0.75
-      
-      # Moderate affinity programs
-      "Care, Craft and Continuity": 0.60
-      "Integrated Mind-Body": 0.55
-      "Resilience Studies and Crisis Pedagogies": 0.50
-      "Wisdom Traditions and Moral Craft": 0.45
-      "Pedagogies for Uncertain Times": 0.40
-      
-      # Lower affinity programs
-      "Mutual Aid and Guild Governance": 0.30
-      "Intergenerational Learning": 0.25
-      "Hospitality as Praxis": 0.20
-      "Folkloric Transmission and Archiving": 0.15
-      "Storyweaving & Community Histories": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Ancient Tongues and Translation": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Epistemological Justice": 0.05
-      "Knowledge System Prototyping": 0.05
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Timekeeping in Plural Cultures": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "4_2_12": 0.95  # Somatic Wellbeing Enquiry
+      "5_2_6": 0.92  # Mycelial Cultivation and Biotech
+      "5_3_7": 0.87  # Biology
+      "5_2_4": 0.86  # Modern Technologies
+      "4_2_4": 0.84  # Herbal Practice and Energy Work
+      "2_4_12": 0.81  # Space Design
+      "2_2_4": 0.79  # Illustration
+      "4_1_2": 0.79  # Educational Mentorship
+      "4_2_7": 0.79  # Nursing and Care
+      "4_2_8": 0.79  # Occupational Therapy
+      "5_2_5": 0.79  # Multi-system Technology
+      "4_2_10": 0.78  # Physiotherapy
+      "5_3_9": 0.78  # Chemistry
+      "4_1_3": 0.77  # Intergenerational Learning
+      "4_2_6": 0.77  # Midwifery
+      "2_2_2": 0.76  # Cyanophotography and Printmaking
+      "2_3_7": 0.75  # Artefact Restoration
+      "5_1_3": 0.75  # Systems Engineering
+      "4_2_11": 0.74  # Social Work
+      "5_1_2": 0.73  # Mechanical Engineering
+      "4_1_1": 0.71  # Education Studies
+      "2_3_8": 0.70  # Brewcraft and Fermentation Systems
+      "4_2_5": 0.69  # Integrated Mind-Body
+      "2_2_3": 0.68  # Fine Art
+      "5_3_10": 0.68  # Environmental Science
+      "2_1_1": 0.62  # Architecture
+      "2_2_5": 0.61  # Media Studies
+      "2_3_9": 0.60  # Precision Smithing and Design
+      "2_4_10": 0.60  # Fashion Design
+      "3_4_6": 0.60  # Ceremonies
+      "4_2_9": 0.59  # Pharmacy
+      "5_3_8": 0.59  # Biomedical Science
+      "2_4_11": 0.55  # Graphic Design
+      "3_5_9": 0.55  # Conflict Transformation
+      "2_2_6": 0.53  # Music
+      "3_3_5": 0.47  # Multispecies Linguistics
+      "5_3_11": 0.42  # Mathematics
+      "1_1_3": 0.41  # Entrepreneurship and Trade
+      "3_5_10": 0.40  # Economics
+      "5_3_12": 0.39  # Physics
+      "1_1_4": 0.38  # Hospitality and Tourism Management
+      "3_5_12": 0.37  # Narrative Governance and Institution Building
+      "3_6_15": 0.37  # Sociology
+      "1_1_2": 0.35  # Business Management
+      "3_6_14": 0.34  # Psychology
+      "1_1_1": 0.33  # Accounting & Finance
+      "3_1_1": 0.30  # Geography
+      "3_4_7": 0.30  # Philosophy of Religion and Ethics
+      "3_3_3": 0.29  # Languages and Literature
+      "3_5_13": 0.27  # Politics and Relations
+      "1_1_5": 0.25  # Person Resource Management
+      "3_4_8": 0.23  # Ritual and Recollection
+      "1_2_1": 0.10  # Law
+      "3_2_2": 0.08  # History
+      "3_5_11": 0.05  # Elven Ethics in Modern Governance
 
   alabaster:
     name: "Alabaster Dwarves"
-    description: "Marginalized, dignified, enduring - often in lower-status roles, value community. Includes former Gypsum clan characteristics: scholarly, gentle, introspective healers, alchemists, and archivists"
+    description: "Marginalized, dignified, enduring scholars, healers, and archivists"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Hospitality as Praxis": 0.95
-      "Intergenerational Learning": 0.90
-      "Mutual Aid and Guild Governance": 0.85
-      "Timekeeping in Plural Cultures": 0.80
-      "Folkloric Transmission and Archiving": 0.75
-      
-      # Moderate affinity programs
-      "Care, Craft and Continuity": 0.60
-      "Storyweaving & Community Histories": 0.55
-      "Integrated Mind-Body": 0.50
-      "Pedagogies of the Hand": 0.45
-      "Wisdom Traditions and Moral Craft": 0.40
-      
-      # Lower affinity programs
-      "Ancient Tongues and Translation": 0.30
-      "Knowledge System Prototyping": 0.25
-      "Embodied Research Methods": 0.20
-      "Multispecies Semantics": 0.15
-      "Epistemological Justice": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_3_5": 0.91  # Multispecies Linguistics
+      "3_5_9": 0.90  # Conflict Transformation
+      "3_5_10": 0.88  # Economics
+      "3_4_7": 0.87  # Philosophy of Religion and Ethics
+      "2_3_8": 0.80  # Brewcraft and Fermentation Systems
+      "3_5_11": 0.80  # Elven Ethics in Modern Governance
+      "3_5_13": 0.80  # Politics and Relations
+      "4_2_12": 0.78  # Somatic Wellbeing Enquiry
+      "3_2_2": 0.77  # History
+      "3_3_3": 0.76  # Languages and Literature
+      "3_6_15": 0.75  # Sociology
+      "5_2_4": 0.75  # Modern Technologies
+      "3_4_8": 0.74  # Ritual and Recollection
+      "4_1_1": 0.74  # Education Studies
+      "4_1_3": 0.72  # Intergenerational Learning
+      "5_3_9": 0.72  # Chemistry
+      "2_4_12": 0.71  # Space Design
+      "2_1_1": 0.70  # Architecture
+      "2_2_5": 0.70  # Media Studies
+      "2_4_10": 0.68  # Fashion Design
+      "3_5_12": 0.68  # Narrative Governance and Institution Building
+      "2_2_4": 0.67  # Illustration
+      "3_4_6": 0.67  # Ceremonies
+      "5_2_6": 0.66  # Mycelial Cultivation and Biotech
+      "1_2_1": 0.64  # Law
+      "2_2_3": 0.64  # Fine Art
+      "2_3_7": 0.64  # Artefact Restoration
+      "4_2_4": 0.63  # Herbal Practice and Energy Work
+      "4_2_11": 0.63  # Social Work
+      "4_1_2": 0.62  # Educational Mentorship
+      "4_2_7": 0.62  # Nursing and Care
+      "4_2_10": 0.62  # Physiotherapy
+      "1_1_3": 0.59  # Entrepreneurship and Trade
+      "4_2_8": 0.59  # Occupational Therapy
+      "2_2_2": 0.58  # Cyanophotography and Printmaking
+      "4_2_6": 0.56  # Midwifery
+      "1_1_2": 0.54  # Business Management
+      "2_2_6": 0.53  # Music
+      "4_2_5": 0.52  # Integrated Mind-Body
+      "5_3_10": 0.52  # Environmental Science
+      "1_1_4": 0.50  # Hospitality and Tourism Management
+      "5_1_3": 0.50  # Systems Engineering
+      "1_1_5": 0.48  # Person Resource Management
+      "5_3_7": 0.48  # Biology
+      "4_2_9": 0.45  # Pharmacy
+      "5_2_5": 0.45  # Multi-system Technology
+      "1_1_1": 0.44  # Accounting & Finance
+      "3_1_1": 0.39  # Geography
+      "2_3_9": 0.36  # Precision Smithing and Design
+      "5_3_11": 0.32  # Mathematics
+      "2_4_11": 0.30  # Graphic Design
+      "5_1_2": 0.24  # Mechanical Engineering
+      "5_3_8": 0.18  # Biomedical Science
+      "5_3_12": 0.05  # Physics
 
   sandstone:
     name: "Sandstone Dwarves"
-    description: "Adaptable and upbeat traders, messengers, and builders of bridges"
+    description: "Adaptable and upbeat traders, messengers, and bridge-builders"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Distributed Workshop Economies": 0.95
-      "Mutual Aid and Guild Governance": 0.90
-      "Listening Circles Facilitation": 0.85
-      "Mediation": 0.80
-      "Elven Ethics in Modern Governance": 0.75
-      
-      # Moderate affinity programs
-      "Hospitality as Praxis": 0.60
-      "Intergenerational Learning": 0.55
-      "Storyweaving & Community Histories": 0.50
-      "Care, Craft and Continuity": 0.45
-      "Integrated Mind-Body": 0.40
-      
-      # Lower affinity programs
-      "Narrative Governance and Institution Building": 0.30
-      "Strategic Rituals and Civic Memory": 0.25
-      "Consensus Systems in Hybrid Societies": 0.20
-      "Timekeeping in Plural Cultures": 0.15
-      "Folkloric Transmission and Archiving": 0.10
-      
-      # Minimal affinity programs
-      "Conflict Transformation through Cultural Design": 0.05
-      "Ancient Tongues and Translation": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Critical Power": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Epistemological Justice": 0.05
-      "Knowledge System Prototyping": 0.05
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Wisdom Traditions and Moral Craft": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "4_2_12": 0.95  # Somatic Wellbeing Enquiry
+      "3_5_9": 0.86  # Conflict Transformation
+      "3_3_5": 0.84  # Multispecies Linguistics
+      "4_1_1": 0.79  # Education Studies
+      "3_5_10": 0.78  # Economics
+      "5_2_4": 0.78  # Modern Technologies
+      "2_4_12": 0.77  # Space Design
+      "4_2_4": 0.77  # Herbal Practice and Energy Work
+      "3_4_7": 0.76  # Philosophy of Religion and Ethics
+      "3_6_15": 0.76  # Sociology
+      "2_2_4": 0.75  # Illustration
+      "4_1_3": 0.75  # Intergenerational Learning
+      "5_2_6": 0.75  # Mycelial Cultivation and Biotech
+      "2_2_2": 0.74  # Cyanophotography and Printmaking
+      "3_6_14": 0.74  # Psychology
+      "2_2_5": 0.73  # Media Studies
+      "2_3_7": 0.73  # Artefact Restoration
+      "3_5_13": 0.73  # Politics and Relations
+      "2_1_1": 0.72  # Architecture
+      "2_3_8": 0.72  # Brewcraft and Fermentation Systems
+      "4_2_8": 0.72  # Occupational Therapy
+      "4_2_11": 0.72  # Social Work
+      "2_2_3": 0.70  # Fine Art
+      "2_4_10": 0.69  # Fashion Design
+      "3_4_6": 0.69  # Ceremonies
+      "3_5_12": 0.69  # Narrative Governance and Institution Building
+      "4_2_7": 0.69  # Nursing and Care
+      "4_1_2": 0.68  # Educational Mentorship
+      "4_2_6": 0.67  # Midwifery
+      "1_1_3": 0.66  # Entrepreneurship and Trade
+      "3_4_8": 0.65  # Ritual and Recollection
+      "4_2_10": 0.64  # Physiotherapy
+      "5_3_7": 0.63  # Biology
+      "5_3_9": 0.63  # Chemistry
+      "3_3_3": 0.61  # Languages and Literature
+      "5_1_3": 0.60  # Systems Engineering
+      "1_1_2": 0.59  # Business Management
+      "1_1_4": 0.59  # Hospitality and Tourism Management
+      "2_2_6": 0.59  # Music
+      "5_2_5": 0.59  # Multi-system Technology
+      "4_2_5": 0.58  # Integrated Mind-Body
+      "3_2_2": 0.57  # History
+      "3_5_11": 0.56  # Elven Ethics in Modern Governance
+      "5_3_10": 0.53  # Environmental Science
+      "1_1_5": 0.52  # Person Resource Management
+      "2_3_9": 0.52  # Precision Smithing and Design
+      "1_2_1": 0.50  # Law
+      "4_2_9": 0.47  # Pharmacy
+      "1_1_1": 0.44  # Accounting & Finance
+      "2_4_11": 0.44  # Graphic Design
+      "5_1_2": 0.41  # Mechanical Engineering
+      "3_1_1": 0.40  # Geography
+      "5_3_8": 0.31  # Biomedical Science
+      "5_3_11": 0.12  # Mathematics
+      "5_3_12": 0.05  # Physics
 
   obsidian:
     name: "Obsidian Dwarves"
     description: "Mysterious, elegant, philosophical spiritual leaders and lorekeepers"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Comparative Runes and Scripts": 0.95
-      "Multispecies Semantics": 0.90
-      "Epistemological Justice": 0.85
-      "Lorekeeper Apprenticeship": 0.80
-      "Wisdom Traditions and Moral Craft": 0.75
-      
-      # Moderate affinity programs
-      "Ancient Tongues and Translation": 0.60
-      "Knowledge System Prototyping": 0.55
-      "Embodied Research Methods": 0.50
-      "Storyweaving & Community Histories": 0.45
-      "Folkloric Transmission and Archiving": 0.40
-      
-      # Lower affinity programs
-      "Strategic Rituals and Civic Memory": 0.30
-      "Runic Infrastructure": 0.25
-      "Timekeeping in Plural Cultures": 0.20
-      "Integrated Mind-Body": 0.15
-      "Care, Craft and Continuity": 0.10
-      
-      # Minimal affinity programs
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Hospitality as Praxis": 0.05
-      "Intergenerational Learning": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_5_9": 0.79  # Conflict Transformation
+      "3_5_10": 0.79  # Economics
+      "3_2_2": 0.76  # History
+      "3_4_7": 0.76  # Philosophy of Religion and Ethics
+      "3_5_13": 0.74  # Politics and Relations
+      "3_3_5": 0.73  # Multispecies Linguistics
+      "3_5_11": 0.73  # Elven Ethics in Modern Governance
+      "1_2_1": 0.72  # Law
+      "3_6_15": 0.69  # Sociology
+      "3_4_8": 0.67  # Ritual and Recollection
+      "5_2_4": 0.64  # Modern Technologies
+      "2_1_1": 0.60  # Architecture
+      "3_3_3": 0.59  # Languages and Literature
+      "1_1_3": 0.58  # Entrepreneurship and Trade
+      "5_3_9": 0.56  # Chemistry
+      "1_1_2": 0.54  # Business Management
+      "5_2_6": 0.54  # Mycelial Cultivation and Biotech
+      "2_3_8": 0.53  # Brewcraft and Fermentation Systems
+      "1_1_4": 0.52  # Hospitality and Tourism Management
+      "2_2_5": 0.51  # Media Studies
+      "4_1_3": 0.51  # Intergenerational Learning
+      "2_4_12": 0.49  # Space Design
+      "4_2_12": 0.48  # Somatic Wellbeing Enquiry
+      "1_1_5": 0.47  # Person Resource Management
+      "3_5_12": 0.47  # Narrative Governance and Institution Building
+      "5_3_10": 0.47  # Environmental Science
+      "4_1_1": 0.46  # Education Studies
+      "2_2_3": 0.45  # Fine Art
+      "2_4_10": 0.44  # Fashion Design
+      "1_1_1": 0.42  # Accounting & Finance
+      "2_2_4": 0.42  # Illustration
+      "3_4_6": 0.42  # Ceremonies
+      "5_2_5": 0.42  # Multi-system Technology
+      "2_3_7": 0.38  # Artefact Restoration
+      "2_2_2": 0.37  # Cyanophotography and Printmaking
+      "5_1_3": 0.36  # Systems Engineering
+      "4_1_2": 0.34  # Educational Mentorship
+      "4_2_7": 0.34  # Nursing and Care
+      "4_2_4": 0.33  # Herbal Practice and Energy Work
+      "5_3_11": 0.30  # Mathematics
+      "4_2_10": 0.28  # Physiotherapy
+      "4_2_5": 0.27  # Integrated Mind-Body
+      "4_2_6": 0.27  # Midwifery
+      "5_3_7": 0.27  # Biology
+      "4_2_8": 0.26  # Occupational Therapy
+      "4_2_11": 0.26  # Social Work
+      "2_2_6": 0.24  # Music
+      "3_1_1": 0.23  # Geography
+      "5_1_2": 0.20  # Mechanical Engineering
+      "4_2_9": 0.15  # Pharmacy
+      "2_3_9": 0.11  # Precision Smithing and Design
+      "2_4_11": 0.06  # Graphic Design
+      "5_3_12": 0.06  # Physics
+      "5_3_8": 0.05  # Biomedical Science
 
   bismuth:
     name: "Bismuth Dwarves"
-    description: "Iridescent and enigmatic creatives, polymaths, and eccentric thinkers"
+    description: "Iridescent, enigmatic creatives, polymaths, and eccentric thinkers"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Knowledge System Prototyping": 0.95
-      "Embodied Research Methods": 0.90
-      "Storyweaving & Community Histories": 0.85
-      "Integrated Mind-Body": 0.80
-      "Folkloric Transmission and Archiving": 0.75
-      
-      # Moderate affinity programs
-      "Multispecies Semantics": 0.60
-      "Epistemological Justice": 0.55
-      "Wisdom Traditions and Moral Craft": 0.50
-      "Care, Craft and Continuity": 0.45
-      "Intergenerational Learning": 0.40
-      
-      # Lower affinity programs
-      "Ancient Tongues and Translation": 0.30
-      "Comparative Runes and Scripts": 0.25
-      "Lorekeeper Apprenticeship": 0.20
-      "Timekeeping in Plural Cultures": 0.15
-      "Hospitality as Praxis": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_5_9": 0.84  # Conflict Transformation
+      "3_5_10": 0.84  # Economics
+      "3_4_7": 0.79  # Philosophy of Religion and Ethics
+      "3_3_5": 0.77  # Multispecies Linguistics
+      "3_2_2": 0.75  # History
+      "3_5_13": 0.75  # Politics and Relations
+      "3_5_11": 0.72  # Elven Ethics in Modern Governance
+      "3_6_15": 0.71  # Sociology
+      "5_2_4": 0.71  # Modern Technologies
+      "3_4_8": 0.70  # Ritual and Recollection
+      "1_2_1": 0.68  # Law
+      "2_1_1": 0.68  # Architecture
+      "2_3_8": 0.63  # Brewcraft and Fermentation Systems
+      "3_3_3": 0.63  # Languages and Literature
+      "5_2_6": 0.62  # Mycelial Cultivation and Biotech
+      "5_3_9": 0.62  # Chemistry
+      "2_2_5": 0.60  # Media Studies
+      "1_1_3": 0.59  # Entrepreneurship and Trade
+      "2_4_12": 0.59  # Space Design
+      "4_2_12": 0.59  # Somatic Wellbeing Enquiry
+      "4_1_3": 0.58  # Intergenerational Learning
+      "2_4_10": 0.56  # Fashion Design
+      "1_1_2": 0.55  # Business Management
+      "2_2_4": 0.54  # Illustration
+      "2_2_3": 0.53  # Fine Art
+      "4_1_1": 0.53  # Education Studies
+      "1_1_4": 0.52  # Hospitality and Tourism Management
+      "3_5_12": 0.52  # Narrative Governance and Institution Building
+      "2_2_2": 0.51  # Cyanophotography and Printmaking
+      "2_3_7": 0.50  # Artefact Restoration
+      "5_3_10": 0.50  # Environmental Science
+      "3_4_6": 0.48  # Ceremonies
+      "5_2_5": 0.47  # Multi-system Technology
+      "1_1_5": 0.46  # Person Resource Management
+      "4_2_7": 0.45  # Nursing and Care
+      "4_1_2": 0.43  # Educational Mentorship
+      "4_2_4": 0.43  # Herbal Practice and Energy Work
+      "5_1_3": 0.42  # Systems Engineering
+      "1_1_1": 0.41  # Accounting & Finance
+      "4_2_10": 0.37  # Physiotherapy
+      "4_2_8": 0.36  # Occupational Therapy
+      "4_2_11": 0.36  # Social Work
+      "5_3_7": 0.36  # Biology
+      "2_2_6": 0.33  # Music
+      "4_2_6": 0.33  # Midwifery
+      "4_2_5": 0.31  # Integrated Mind-Body
+      "3_1_1": 0.26  # Geography
+      "5_3_11": 0.26  # Mathematics
+      "5_1_2": 0.25  # Mechanical Engineering
+      "2_3_9": 0.24  # Precision Smithing and Design
+      "4_2_9": 0.23  # Pharmacy
+      "2_4_11": 0.13  # Graphic Design
+      "5_3_8": 0.10  # Biomedical Science
+      "5_3_12": 0.05  # Physics
 
   slate:
     name: "Slate Dwarves"
-    description: "Quiet, brittle, and focused planners, engineers, and precision workers"
+    description: "Quiet, brittle, focused planners, engineers, and precision workers"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Runic Infrastructure": 0.95
-      "Critical Power": 0.90
-      "Consensus Systems in Hybrid Societies": 0.85
-      "Strategic Rituals and Civic Memory": 0.80
-      "Pedagogies for Uncertain Times": 0.75
-      
-      # Moderate affinity programs
-      "Narrative Governance and Institution Building": 0.60
-      "Elven Ethics in Modern Governance": 0.55
-      "Ancient Tongues and Translation": 0.50
-      "Comparative Runes and Scripts": 0.45
-      "Epistemological Justice": 0.40
-      
-      # Lower affinity programs
-      "Knowledge System Prototyping": 0.30
-      "Lorekeeper Apprenticeship": 0.25
-      "Timekeeping in Plural Cultures": 0.20
-      "Multispecies Semantics": 0.15
-      "Wisdom Traditions and Moral Craft": 0.10
-      
-      # Minimal affinity programs
-      "Conflict Transformation through Cultural Design": 0.05
-      "Embodied Research Methods": 0.05
-      "Storyweaving & Community Histories": 0.05
-      "Integrated Mind-Body": 0.05
-      "Care, Craft and Continuity": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Hospitality as Praxis": 0.05
-      "Intergenerational Learning": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Folkloric Transmission and Archiving": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "5_3_11": 0.95  # Mathematics
+      "5_3_9": 0.90  # Chemistry
+      "5_2_6": 0.80  # Mycelial Cultivation and Biotech
+      "5_2_4": 0.76  # Modern Technologies
+      "5_3_10": 0.72  # Environmental Science
+      "2_3_8": 0.69  # Brewcraft and Fermentation Systems
+      "5_3_12": 0.69  # Physics
+      "5_1_2": 0.67  # Mechanical Engineering
+      "5_2_5": 0.64  # Multi-system Technology
+      "2_4_12": 0.62  # Space Design
+      "5_3_7": 0.61  # Biology
+      "4_2_10": 0.60  # Physiotherapy
+      "5_1_3": 0.60  # Systems Engineering
+      "2_2_4": 0.57  # Illustration
+      "4_1_3": 0.57  # Intergenerational Learning
+      "4_2_7": 0.56  # Nursing and Care
+      "4_1_2": 0.55  # Educational Mentorship
+      "2_1_1": 0.54  # Architecture
+      "5_3_8": 0.53  # Biomedical Science
+      "2_2_3": 0.50  # Fine Art
+      "2_3_7": 0.50  # Artefact Restoration
+      "3_6_14": 0.48  # Psychology
+      "2_2_2": 0.47  # Cyanophotography and Printmaking
+      "2_4_10": 0.47  # Fashion Design
+      "4_2_9": 0.45  # Pharmacy
+      "4_2_5": 0.44  # Integrated Mind-Body
+      "4_2_4": 0.42  # Herbal Practice and Energy Work
+      "2_2_5": 0.41  # Media Studies
+      "4_2_12": 0.41  # Somatic Wellbeing Enquiry
+      "3_5_9": 0.37  # Conflict Transformation
+      "4_2_6": 0.37  # Midwifery
+      "2_3_9": 0.36  # Precision Smithing and Design
+      "3_5_10": 0.34  # Economics
+      "4_2_8": 0.34  # Occupational Therapy
+      "3_4_6": 0.33  # Ceremonies
+      "4_1_1": 0.33  # Education Studies
+      "4_2_11": 0.31  # Social Work
+      "2_4_11": 0.29  # Graphic Design
+      "3_3_3": 0.28  # Languages and Literature
+      "1_1_1": 0.27  # Accounting & Finance
+      "2_2_6": 0.26  # Music
+      "3_3_5": 0.23  # Multispecies Linguistics
+      "3_2_2": 0.19  # History
+      "1_2_1": 0.18  # Law
+      "1_1_2": 0.16  # Business Management
+      "3_1_1": 0.16  # Geography
+      "3_5_11": 0.16  # Elven Ethics in Modern Governance
+      "1_1_3": 0.15  # Entrepreneurship and Trade
+      "1_1_4": 0.15  # Hospitality and Tourism Management
+      "3_4_8": 0.15  # Ritual and Recollection
+      "3_4_7": 0.14  # Philosophy of Religion and Ethics
+      "3_5_13": 0.09  # Politics and Relations
+      "3_6_15": 0.09  # Sociology
+      "3_5_12": 0.06  # Narrative Governance and Institution Building
+      "1_1_5": 0.05  # Person Resource Management
 
-  # ===== ELF CLANS =====
-  
   holly:
     name: "Holly Elves"
-    description: "Scholarly and devout caretakers of knowledge and ritual, balanced by warmth"
+    description: "Scholarly and devout caretakers of knowledge and ritual"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Care, Craft and Continuity": 0.95
-      "Ritual and Recollection": 0.90
-      "Ancient Tongues and Translation": 0.85
-      "Hospitality as Praxis": 0.80
-      "Pedagogies for Uncertain Times": 0.75
-      
-      # Moderate affinity programs
-      "Intergenerational Learning": 0.60
-      "Wisdom Traditions and Moral Craft": 0.55
-      "Folkloric Transmission and Archiving": 0.50
-      "Integrated Mind-Body": 0.45
-      "Strategic Rituals and Civic Memory": 0.40
-      
-      # Lower affinity programs
-      "Comparative Runes and Scripts": 0.30
-      "Lorekeeper Apprenticeship": 0.25
-      "Timekeeping in Plural Cultures": 0.20
-      "Care, Craft and Continuity": 0.15
-      "Storyweaving & Community Histories": 0.10
-      
-      # Minimal affinity programs
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Epistemological Justice": 0.05
-      "Knowledge System Prototyping": 0.05
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_5_9": 0.90  # Conflict Transformation
+      "3_3_5": 0.86  # Multispecies Linguistics
+      "3_5_10": 0.86  # Economics
+      "5_2_4": 0.84  # Modern Technologies
+      "3_4_7": 0.81  # Philosophy of Religion and Ethics
+      "4_2_12": 0.79  # Somatic Wellbeing Enquiry
+      "5_3_9": 0.77  # Chemistry
+      "2_3_8": 0.76  # Brewcraft and Fermentation Systems
+      "5_2_6": 0.76  # Mycelial Cultivation and Biotech
+      "3_5_13": 0.75  # Politics and Relations
+      "2_1_1": 0.73  # Architecture
+      "2_4_12": 0.73  # Space Design
+      "4_1_3": 0.73  # Intergenerational Learning
+      "3_2_2": 0.71  # History
+      "3_6_15": 0.71  # Sociology
+      "3_5_11": 0.70  # Elven Ethics in Modern Governance
+      "4_1_1": 0.70  # Education Studies
+      "3_4_8": 0.69  # Ritual and Recollection
+      "2_2_5": 0.67  # Media Studies
+      "3_3_3": 0.67  # Languages and Literature
+      "2_2_4": 0.66  # Illustration
+      "2_2_3": 0.63  # Fine Art
+      "2_4_10": 0.63  # Fashion Design
+      "1_2_1": 0.62  # Law
+      "2_3_7": 0.61  # Artefact Restoration
+      "3_4_6": 0.61  # Ceremonies
+      "4_2_4": 0.61  # Herbal Practice and Energy Work
+      "1_1_3": 0.60  # Entrepreneurship and Trade
+      "4_1_2": 0.60  # Educational Mentorship
+      "4_2_7": 0.60  # Nursing and Care
+      "2_2_2": 0.59  # Cyanophotography and Printmaking
+      "5_3_10": 0.59  # Environmental Science
+      "3_5_12": 0.58  # Narrative Governance and Institution Building
+      "4_2_10": 0.57  # Physiotherapy
+      "4_2_8": 0.55  # Occupational Therapy
+      "4_2_11": 0.55  # Social Work
+      "5_2_5": 0.54  # Multi-system Technology
+      "1_1_2": 0.53  # Business Management
+      "5_1_3": 0.53  # Systems Engineering
+      "4_2_6": 0.51  # Midwifery
+      "5_3_7": 0.51  # Biology
+      "1_1_4": 0.50  # Hospitality and Tourism Management
+      "4_2_5": 0.48  # Integrated Mind-Body
+      "1_1_5": 0.43  # Person Resource Management
+      "2_2_6": 0.43  # Music
+      "1_1_1": 0.41  # Accounting & Finance
+      "4_2_9": 0.37  # Pharmacy
+      "5_3_11": 0.33  # Mathematics
+      "5_1_2": 0.31  # Mechanical Engineering
+      "2_3_9": 0.30  # Precision Smithing and Design
+      "3_1_1": 0.29  # Geography
+      "2_4_11": 0.23  # Graphic Design
+      "5_3_8": 0.17  # Biomedical Science
+      "5_3_12": 0.05  # Physics
 
   yew:
     name: "Yew Elves"
-    description: "Stern, ancient, and politically savvy guardians of long memory and cultural power"
+    description: "Stern, ancient, politically savvy guardians of long memory and cultural power"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Elven Ethics in Modern Governance": 0.95
-      "Narrative Governance and Institution Building": 0.90
-      "Strategic Rituals and Civic Memory": 0.85
-      "Critical Power": 0.80
-      "Consensus Systems in Hybrid Societies": 0.75
-      
-      # Moderate affinity programs
-      "Ancient Tongues and Translation": 0.60
-      "Timekeeping in Plural Cultures": 0.55
-      "Comparative Runes and Scripts": 0.50
-      "Epistemological Justice": 0.45
-      "Lorekeeper Apprenticeship": 0.40
-      
-      # Lower affinity programs
-      "Runic Infrastructure": 0.30
-      "Pedagogies for Uncertain Times": 0.25
-      "Conflict Transformation through Cultural Design": 0.20
-      "Wisdom Traditions and Moral Craft": 0.15
-      "Knowledge System Prototyping": 0.10
-      
-      # Minimal affinity programs
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Storyweaving & Community Histories": 0.05
-      "Integrated Mind-Body": 0.05
-      "Care, Craft and Continuity": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Hospitality as Praxis": 0.05
-      "Intergenerational Learning": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Folkloric Transmission and Archiving": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "5_2_4": 0.95  # Modern Technologies
+      "5_2_6": 0.91  # Mycelial Cultivation and Biotech
+      "3_5_9": 0.90  # Conflict Transformation
+      "3_6_14": 0.89  # Psychology
+      "4_2_12": 0.87  # Somatic Wellbeing Enquiry
+      "2_4_12": 0.79  # Space Design
+      "5_2_5": 0.77  # Multi-system Technology
+      "5_3_9": 0.75  # Chemistry
+      "3_5_10": 0.74  # Economics
+      "2_1_1": 0.73  # Architecture
+      "3_3_5": 0.73  # Multispecies Linguistics
+      "4_1_3": 0.72  # Intergenerational Learning
+      "3_6_15": 0.71  # Sociology
+      "2_3_8": 0.70  # Brewcraft and Fermentation Systems
+      "2_2_4": 0.67  # Illustration
+      "2_2_3": 0.66  # Fine Art
+      "4_1_1": 0.66  # Education Studies
+      "3_5_13": 0.65  # Politics and Relations
+      "4_2_4": 0.65  # Herbal Practice and Energy Work
+      "5_1_3": 0.65  # Systems Engineering
+      "5_3_10": 0.65  # Environmental Science
+      "1_1_3": 0.64  # Entrepreneurship and Trade
+      "2_2_5": 0.63  # Media Studies
+      "5_3_7": 0.63  # Biology
+      "2_3_7": 0.62  # Artefact Restoration
+      "3_4_7": 0.62  # Philosophy of Religion and Ethics
+      "2_2_2": 0.60  # Cyanophotography and Printmaking
+      "4_1_2": 0.58  # Educational Mentorship
+      "4_2_7": 0.58  # Nursing and Care
+      "1_1_4": 0.57  # Hospitality and Tourism Management
+      "4_2_6": 0.56  # Midwifery
+      "3_4_6": 0.55  # Ceremonies
+      "2_4_10": 0.54  # Fashion Design
+      "1_1_2": 0.53  # Business Management
+      "4_2_5": 0.51  # Integrated Mind-Body
+      "4_2_8": 0.51  # Occupational Therapy
+      "4_2_10": 0.50  # Physiotherapy
+      "5_1_2": 0.49  # Mechanical Engineering
+      "4_2_11": 0.48  # Social Work
+      "3_4_8": 0.47  # Ritual and Recollection
+      "1_2_1": 0.46  # Law
+      "3_2_2": 0.45  # History
+      "3_3_3": 0.45  # Languages and Literature
+      "3_5_12": 0.42  # Narrative Governance and Institution Building
+      "1_1_5": 0.40  # Person Resource Management
+      "1_1_1": 0.39  # Accounting & Finance
+      "3_5_11": 0.39  # Elven Ethics in Modern Governance
+      "2_2_6": 0.29  # Music
+      "5_3_11": 0.23  # Mathematics
+      "2_3_9": 0.22  # Precision Smithing and Design
+      "4_2_9": 0.19  # Pharmacy
+      "5_3_8": 0.19  # Biomedical Science
+      "2_4_11": 0.16  # Graphic Design
+      "3_1_1": 0.15  # Geography
+      "5_3_12": 0.05  # Physics
 
   rowan:
     name: "Rowan Elves"
-    description: "Expressive, curious, and poetic nature-linked seers and storytellers"
+    description: "Expressive, curious, poetic nature-linked seers and storytellers"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Storyweaving & Community Histories": 0.95
-      "Multispecies Semantics": 0.90
-      "Embodied Research Methods": 0.85
-      "Intergenerational Learning": 0.80
-      "Folkloric Transmission and Archiving": 0.75
-      
-      # Moderate affinity programs
-      "Integrated Mind-Body": 0.60
-      "Care, Craft and Continuity": 0.55
-      "Hospitality as Praxis": 0.50
-      "Wisdom Traditions and Moral Craft": 0.45
-      "Knowledge System Prototyping": 0.40
-      
-      # Lower affinity programs
-      "Ancient Tongues and Translation": 0.30
-      "Comparative Runes and Scripts": 0.25
-      "Epistemological Justice": 0.20
-      "Timekeeping in Plural Cultures": 0.15
-      "Lorekeeper Apprenticeship": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_5_9": 0.95  # Conflict Transformation
+      "3_3_5": 0.93  # Multispecies Linguistics
+      "4_2_12": 0.91  # Somatic Wellbeing Enquiry
+      "3_6_14": 0.89  # Psychology
+      "3_4_7": 0.88  # Philosophy of Religion and Ethics
+      "3_5_10": 0.88  # Economics
+      "3_6_15": 0.86  # Sociology
+      "3_5_13": 0.85  # Politics and Relations
+      "5_2_4": 0.81  # Modern Technologies
+      "4_1_1": 0.79  # Education Studies
+      "2_4_12": 0.76  # Space Design
+      "3_4_8": 0.76  # Ritual and Recollection
+      "2_1_1": 0.75  # Architecture
+      "2_2_5": 0.75  # Media Studies
+      "4_1_3": 0.75  # Intergenerational Learning
+      "2_3_8": 0.74  # Brewcraft and Fermentation Systems
+      "3_5_12": 0.74  # Narrative Governance and Institution Building
+      "5_2_6": 0.74  # Mycelial Cultivation and Biotech
+      "1_1_3": 0.73  # Entrepreneurship and Trade
+      "2_2_4": 0.73  # Illustration
+      "4_2_4": 0.73  # Herbal Practice and Energy Work
+      "3_2_2": 0.72  # History
+      "3_5_11": 0.72  # Elven Ethics in Modern Governance
+      "2_2_2": 0.71  # Cyanophotography and Printmaking
+      "2_3_7": 0.71  # Artefact Restoration
+      "2_4_10": 0.71  # Fashion Design
+      "3_3_3": 0.71  # Languages and Literature
+      "3_4_6": 0.71  # Ceremonies
+      "2_2_3": 0.69  # Fine Art
+      "4_2_11": 0.69  # Social Work
+      "4_2_8": 0.68  # Occupational Therapy
+      "1_1_2": 0.66  # Business Management
+      "4_1_2": 0.66  # Educational Mentorship
+      "4_2_7": 0.66  # Nursing and Care
+      "5_3_9": 0.66  # Chemistry
+      "1_1_4": 0.65  # Hospitality and Tourism Management
+      "1_2_1": 0.65  # Law
+      "4_2_6": 0.64  # Midwifery
+      "4_2_10": 0.61  # Physiotherapy
+      "1_1_5": 0.60  # Person Resource Management
+      "5_2_5": 0.59  # Multi-system Technology
+      "5_3_7": 0.59  # Biology
+      "2_2_6": 0.58  # Music
+      "5_1_3": 0.58  # Systems Engineering
+      "4_2_5": 0.57  # Integrated Mind-Body
+      "5_3_10": 0.56  # Environmental Science
+      "1_1_1": 0.50  # Accounting & Finance
+      "2_3_9": 0.46  # Precision Smithing and Design
+      "3_1_1": 0.44  # Geography
+      "4_2_9": 0.44  # Pharmacy
+      "2_4_11": 0.39  # Graphic Design
+      "5_1_2": 0.37  # Mechanical Engineering
+      "5_3_8": 0.26  # Biomedical Science
+      "5_3_11": 0.16  # Mathematics
+      "5_3_12": 0.05  # Physics
 
   ash:
     name: "Ash Elves"
-    description: "Resilient and passionate storm-walkers who see rebirth through fire and adversity"
+    description: "Resilient and passionate storm-walkers who see rebirth through adversity"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Food System Resilience": 0.95
-      "Herbal Practice and Energy Work": 0.90
-      "Resilience Studies and Crisis Pedagogies": 0.85
-      "Earth-Aligned Agriculture": 0.80
-      "Pedagogies for Uncertain Times": 0.75
-      
-      # Moderate affinity programs
-      "Integrated Mind-Body": 0.60
-      "Care, Craft and Continuity": 0.55
-      "Mycelial Cultivation and Biotech": 0.50
-      "Wisdom Traditions and Moral Craft": 0.45
-      "Storyweaving & Community Histories": 0.40
-      
-      # Lower affinity programs
-      "Intergenerational Learning": 0.30
-      "Folkloric Transmission and Archiving": 0.25
-      "Hospitality as Praxis": 0.20
-      "Knowledge System Prototyping": 0.15
-      "Embodied Research Methods": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Ancient Tongues and Translation": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Epistemological Justice": 0.05
-      "Multispecies Semantics": 0.05
-      "Timekeeping in Plural Cultures": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_5_9": 0.94  # Conflict Transformation
+      "5_2_4": 0.90  # Modern Technologies
+      "3_5_10": 0.85  # Economics
+      "5_2_6": 0.84  # Mycelial Cultivation and Biotech
+      "4_2_12": 0.83  # Somatic Wellbeing Enquiry
+      "3_3_5": 0.82  # Multispecies Linguistics
+      "2_1_1": 0.78  # Architecture
+      "2_4_12": 0.78  # Space Design
+      "2_3_8": 0.76  # Brewcraft and Fermentation Systems
+      "3_4_7": 0.76  # Philosophy of Religion and Ethics
+      "3_6_15": 0.75  # Sociology
+      "5_3_9": 0.75  # Chemistry
+      "3_5_13": 0.74  # Politics and Relations
+      "4_1_3": 0.73  # Intergenerational Learning
+      "2_2_4": 0.71  # Illustration
+      "2_2_5": 0.71  # Media Studies
+      "2_2_2": 0.67  # Cyanophotography and Printmaking
+      "2_2_3": 0.67  # Fine Art
+      "2_3_7": 0.67  # Artefact Restoration
+      "4_1_1": 0.67  # Education Studies
+      "5_2_5": 0.66  # Multi-system Technology
+      "2_4_10": 0.65  # Fashion Design
+      "1_1_3": 0.64  # Entrepreneurship and Trade
+      "3_4_8": 0.63  # Ritual and Recollection
+      "4_2_4": 0.63  # Herbal Practice and Energy Work
+      "3_2_2": 0.62  # History
+      "5_3_10": 0.62  # Environmental Science
+      "4_2_7": 0.61  # Nursing and Care
+      "5_1_3": 0.60  # Systems Engineering
+      "3_3_3": 0.59  # Languages and Literature
+      "3_4_6": 0.59  # Ceremonies
+      "4_1_2": 0.59  # Educational Mentorship
+      "3_5_11": 0.58  # Elven Ethics in Modern Governance
+      "1_1_2": 0.57  # Business Management
+      "1_1_4": 0.57  # Hospitality and Tourism Management
+      "1_2_1": 0.57  # Law
+      "5_3_7": 0.57  # Biology
+      "3_5_12": 0.53  # Narrative Governance and Institution Building
+      "4_2_8": 0.53  # Occupational Therapy
+      "4_2_10": 0.53  # Physiotherapy
+      "4_2_6": 0.52  # Midwifery
+      "4_2_11": 0.52  # Social Work
+      "4_2_5": 0.47  # Integrated Mind-Body
+      "1_1_5": 0.45  # Person Resource Management
+      "1_1_1": 0.41  # Accounting & Finance
+      "5_1_2": 0.41  # Mechanical Engineering
+      "2_2_6": 0.40  # Music
+      "2_3_9": 0.33  # Precision Smithing and Design
+      "4_2_9": 0.30  # Pharmacy
+      "3_1_1": 0.25  # Geography
+      "5_3_11": 0.24  # Mathematics
+      "2_4_11": 0.21  # Graphic Design
+      "5_3_8": 0.19  # Biomedical Science
+      "5_3_12": 0.05  # Physics
 
   baobab:
     name: "Baobab Elves"
-    description: "Majestic and powerful deeply rooted elites with ceremonial grace and social control"
+    description: "Majestic, powerful, deeply rooted elites with ceremonial grace and social control"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Elven Ethics in Modern Governance": 0.95
-      "Timekeeping in Plural Cultures": 0.90
-      "Ancient Tongues and Translation": 0.85
-      "Critical Power": 0.80
-      "Strategic Rituals and Civic Memory": 0.75
-      
-      # Moderate affinity programs
-      "Narrative Governance and Institution Building": 0.60
-      "Consensus Systems in Hybrid Societies": 0.55
-      "Comparative Runes and Scripts": 0.50
-      "Epistemological Justice": 0.45
-      "Lorekeeper Apprenticeship": 0.40
-      
-      # Lower affinity programs
-      "Runic Infrastructure": 0.30
-      "Pedagogies for Uncertain Times": 0.25
-      "Conflict Transformation through Cultural Design": 0.20
-      "Wisdom Traditions and Moral Craft": 0.15
-      "Knowledge System Prototyping": 0.10
-      
-      # Minimal affinity programs
-      "Embodied Research Methods": 0.05
-      "Multispecies Semantics": 0.05
-      "Storyweaving & Community Histories": 0.05
-      "Integrated Mind-Body": 0.05
-      "Care, Craft and Continuity": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Hospitality as Praxis": 0.05
-      "Intergenerational Learning": 0.05
-      "Mutual Aid and Guild Governance": 0.05
-      "Folkloric Transmission and Archiving": 0.05
-      "Distributed Workshop Economies": 0.05
-      "Listening Circles Facilitation": 0.05
-      "Mediation": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "3_6_14": 0.95  # Psychology
+      "3_5_9": 0.86  # Conflict Transformation
+      "5_2_4": 0.82  # Modern Technologies
+      "5_2_6": 0.77  # Mycelial Cultivation and Biotech
+      "3_6_15": 0.76  # Sociology
+      "5_2_5": 0.75  # Multi-system Technology
+      "3_5_10": 0.73  # Economics
+      "3_5_13": 0.71  # Politics and Relations
+      "1_1_3": 0.69  # Entrepreneurship and Trade
+      "1_1_4": 0.67  # Hospitality and Tourism Management
+      "2_1_1": 0.66  # Architecture
+      "3_3_5": 0.66  # Multispecies Linguistics
+      "2_4_12": 0.64  # Space Design
+      "5_3_9": 0.63  # Chemistry
+      "3_4_7": 0.61  # Philosophy of Religion and Ethics
+      "5_3_10": 0.61  # Environmental Science
+      "1_1_2": 0.60  # Business Management
+      "1_2_1": 0.60  # Law
+      "4_2_12": 0.60  # Somatic Wellbeing Enquiry
+      "5_1_3": 0.60  # Systems Engineering
+      "2_3_8": 0.57  # Brewcraft and Fermentation Systems
+      "2_2_3": 0.56  # Fine Art
+      "2_2_5": 0.54  # Media Studies
+      "4_1_3": 0.54  # Intergenerational Learning
+      "3_2_2": 0.53  # History
+      "1_1_5": 0.51  # Person Resource Management
+      "2_2_4": 0.51  # Illustration
+      "5_3_7": 0.50  # Biology
+      "1_1_1": 0.49  # Accounting & Finance
+      "4_1_1": 0.49  # Education Studies
+      "5_1_2": 0.49  # Mechanical Engineering
+      "2_3_7": 0.48  # Artefact Restoration
+      "3_4_8": 0.48  # Ritual and Recollection
+      "3_5_11": 0.47  # Elven Ethics in Modern Governance
+      "3_4_6": 0.46  # Ceremonies
+      "4_2_4": 0.46  # Herbal Practice and Energy Work
+      "3_3_3": 0.45  # Languages and Literature
+      "2_2_2": 0.44  # Cyanophotography and Printmaking
+      "2_4_10": 0.44  # Fashion Design
+      "4_2_5": 0.42  # Integrated Mind-Body
+      "4_2_6": 0.42  # Midwifery
+      "4_2_7": 0.42  # Nursing and Care
+      "4_1_2": 0.40  # Educational Mentorship
+      "3_5_12": 0.37  # Narrative Governance and Institution Building
+      "4_2_8": 0.31  # Occupational Therapy
+      "4_2_10": 0.31  # Physiotherapy
+      "4_2_11": 0.28  # Social Work
+      "5_3_11": 0.28  # Mathematics
+      "3_1_1": 0.20  # Geography
+      "2_2_6": 0.19  # Music
+      "5_3_12": 0.18  # Physics
+      "5_3_8": 0.17  # Biomedical Science
+      "2_3_9": 0.10  # Precision Smithing and Design
+      "2_4_11": 0.07  # Graphic Design
+      "4_2_9": 0.05  # Pharmacy
 
   palm:
     name: "Palm Elves"
-    description: "Joyful yet tragic seafaring survivors who turn hardship into celebration and beauty"
+    description: "Joyful yet tragic seafaring survivors who turn hardship into celebration"
     program_affinities:
-      # Top 5 programs (high affinity)
-      "Listening Circles Facilitation": 0.95
-      "Mediation": 0.90
-      "Integrated Mind-Body": 0.85
-      "Storyweaving & Community Histories": 0.80
-      "Hospitality as Praxis": 0.75
-      
-      # Moderate affinity programs
-      "Care, Craft and Continuity": 0.60
-      "Intergenerational Learning": 0.55
-      "Folkloric Transmission and Archiving": 0.50
-      "Mutual Aid and Guild Governance": 0.45
-      "Distributed Workshop Economies": 0.40
-      
-      # Lower affinity programs
-      "Wisdom Traditions and Moral Craft": 0.30
-      "Knowledge System Prototyping": 0.25
-      "Embodied Research Methods": 0.20
-      "Multispecies Semantics": 0.15
-      "Timekeeping in Plural Cultures": 0.10
-      
-      # Minimal affinity programs
-      "Strategic Rituals and Civic Memory": 0.05
-      "Narrative Governance and Institution Building": 0.05
-      "Conflict Transformation through Cultural Design": 0.05
-      "Ancient Tongues and Translation": 0.05
-      "Comparative Runes and Scripts": 0.05
-      "Critical Power": 0.05
-      "Consensus Systems in Hybrid Societies": 0.05
-      "Elven Ethics in Modern Governance": 0.05
-      "Runic Infrastructure": 0.05
-      "Lorekeeper Apprenticeship": 0.05
-      "Epistemological Justice": 0.05
-      "Pedagogies of the Hand": 0.05
-      "Earth-Aligned Agriculture": 0.05
-      "Mycelial Cultivation and Biotech": 0.05
-      "Food System Resilience": 0.05
-      "Herbal Practice and Energy Work": 0.05
-      "Resilience Studies and Crisis Pedagogies": 0.05
-      "Pedagogies for Uncertain Times": 0.05
-      "Ritual and Recollection": 0.05
-      "Brewcraft and Fermentation Systems": 0.05
-      "Transdisciplinary Design and Praxis": 0.05
-      "Language and Symbol": 0.05
+      "4_2_12": 0.95  # Somatic Wellbeing Enquiry
+      "3_3_5": 0.83  # Multispecies Linguistics
+      "3_5_9": 0.83  # Conflict Transformation
+      "4_1_1": 0.80  # Education Studies
+      "4_2_4": 0.78  # Herbal Practice and Energy Work
+      "3_4_7": 0.76  # Philosophy of Religion and Ethics
+      "3_5_10": 0.75  # Economics
+      "3_6_15": 0.75  # Sociology
+      "4_2_8": 0.75  # Occupational Therapy
+      "4_2_11": 0.75  # Social Work
+      "5_2_4": 0.75  # Modern Technologies
+      "2_4_12": 0.74  # Space Design
+      "4_1_3": 0.74  # Intergenerational Learning
+      "2_2_2": 0.73  # Cyanophotography and Printmaking
+      "2_2_4": 0.73  # Illustration
+      "3_5_13": 0.72  # Politics and Relations
+      "2_2_5": 0.71  # Media Studies
+      "2_3_7": 0.71  # Artefact Restoration
+      "3_5_12": 0.71  # Narrative Governance and Institution Building
+      "5_2_6": 0.71  # Mycelial Cultivation and Biotech
+      "3_4_6": 0.70  # Ceremonies
+      "2_3_8": 0.69  # Brewcraft and Fermentation Systems
+      "3_6_14": 0.69  # Psychology
+      "4_2_6": 0.69  # Midwifery
+      "4_2_7": 0.69  # Nursing and Care
+      "2_1_1": 0.68  # Architecture
+      "2_2_3": 0.68  # Fine Art
+      "2_4_10": 0.68  # Fashion Design
+      "4_1_2": 0.68  # Educational Mentorship
+      "1_1_3": 0.65  # Entrepreneurship and Trade
+      "3_4_8": 0.65  # Ritual and Recollection
+      "4_2_10": 0.64  # Physiotherapy
+      "5_3_7": 0.63  # Biology
+      "2_2_6": 0.61  # Music
+      "3_3_3": 0.61  # Languages and Literature
+      "5_3_9": 0.60  # Chemistry
+      "1_1_2": 0.59  # Business Management
+      "1_1_4": 0.59  # Hospitality and Tourism Management
+      "4_2_5": 0.59  # Integrated Mind-Body
+      "5_1_3": 0.58  # Systems Engineering
+      "5_2_5": 0.57  # Multi-system Technology
+      "3_2_2": 0.56  # History
+      "3_5_11": 0.56  # Elven Ethics in Modern Governance
+      "2_3_9": 0.54  # Precision Smithing and Design
+      "1_1_5": 0.53  # Person Resource Management
+      "5_3_10": 0.51  # Environmental Science
+      "1_2_1": 0.50  # Law
+      "4_2_9": 0.50  # Pharmacy
+      "2_4_11": 0.47  # Graphic Design
+      "1_1_1": 0.44  # Accounting & Finance
+      "3_1_1": 0.43  # Geography
+      "5_1_2": 0.40  # Mechanical Engineering
+      "5_3_8": 0.32  # Biomedical Science
+      "5_3_11": 0.10  # Mathematics
+      "5_3_12": 0.05  # Physics
 
-# Program affinity settings
 settings:
-  # Affinity score interpretation
   affinity_levels:
-    very_high: [0.90, 1.00]    # Top 5 programs per clan
-    high: [0.75, 0.89]         # Strong affinity
-    moderate: [0.50, 0.74]     # Moderate affinity
-    low: [0.20, 0.49]          # Lower affinity
-    minimal: [0.05, 0.19]      # Minimal affinity
-    
-  # Program selection rules
+    very_high: [0.90, 1.00]
+    high: [0.75, 0.89]
+    moderate: [0.50, 0.74]
+    low: [0.20, 0.49]
+    minimal: [0.05, 0.19]
+
   selection_rules:
-    # Base probability of selecting a program based on affinity
     base_selection_probability: 0.3
-    
-    # Multiplier for each affinity level
     affinity_multipliers:
       very_high: 2.0
       high: 1.5
       moderate: 1.2
       low: 1.0
       minimal: 0.8
-    
-    # Maximum number of programs to consider per student
     max_programs_per_student: 8
-    
-    # Minimum affinity threshold for consideration
-    minimum_affinity_threshold: 0.05 
+    minimum_affinity_threshold: 0.05

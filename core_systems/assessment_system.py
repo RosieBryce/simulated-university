@@ -46,13 +46,21 @@ def _get_module_difficulty_modifier_fallback(module_title: str) -> float:
 def _get_assessment_type_fallback(module_title: str) -> str:
     """Fallback: infer assessment type from module title when not in config."""
     title_lower = module_title.lower()
-    if any(w in title_lower for w in ['practical', 'hands', 'craft', 'practice']):
-        return 'practical'
-    if any(w in title_lower for w in ['project', 'design', 'praxis']):
-        return 'project'
-    if any(w in title_lower for w in ['essay', 'theory', 'critical']):
-        return 'essay'
-    return 'mixed'
+    if any(w in title_lower for w in ['viva', 'oral', 'defence']):
+        return 'Viva'
+    if any(w in title_lower for w in ['presentation', 'seminar', 'pitch']):
+        return 'Presentation'
+    if any(w in title_lower for w in ['practical', 'lab', 'clinical', 'studio']):
+        return 'Practical exam'
+    if any(w in title_lower for w in ['project', 'dissertation', 'capstone', 'portfolio']):
+        return 'Professional artefact'
+    if any(w in title_lower for w in ['groupwork', 'group work', 'collaborative']):
+        return 'Groupwork'
+    if any(w in title_lower for w in ['multiple choice', 'mcq']):
+        return 'Multi-choice exam'
+    if any(w in title_lower for w in ['exam', 'test', 'unseen']):
+        return 'Written exam'
+    return 'Written coursework'
 
 
 def _grade_from_mark(mark: float) -> str:
@@ -75,7 +83,7 @@ class AssessmentSystem:
     Uses module_characteristics (CSV or YAML) for assessment_type and difficulty.
     """
 
-    def __init__(self, seed: int = 42, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum.xlsx"):
+    def __init__(self, seed: int = 42, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx"):
         self.seed = seed
         self.rng = np.random.default_rng(seed)
         self.curriculum_file = curriculum_file
@@ -105,7 +113,7 @@ class AssessmentSystem:
                 if title:
                     raw_mod = row.get('mark_modifier')
                     self.module_chars[title] = {
-                        'assessment_type': str(row.get('assessment_type', 'mixed')).strip() or 'mixed',
+                        'assessment_type': str(row.get('assessment_type', 'Written coursework')).strip() or 'Written coursework',
                         'difficulty_level': float(row.get('difficulty_level', 0.5)),
                         'mark_modifier':    float(raw_mod) if pd.notna(raw_mod) else None,
                         'semester':         int(row.get('semester', 1)),

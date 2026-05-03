@@ -81,19 +81,24 @@ career_focus_weight: 0.30
 
 # Faculty -> employment sectors (for sector assignment)
 # First digit of programme_code = faculty number
+# 1=Business & Law, 2=Craft Art & Architecture, 3=Culture & Social Sciences,
+# 4=Health & Education, 5=Science & Engineering
 faculty_sectors:
-  "1": ["cooperative_enterprise", "artisan_trades", "community_services", "guild_management"]
-  "2": ["natural_sciences", "engineering", "agricultural_sciences", "resource_management"]
-  "3": ["scholarly_professions", "education", "research_and_archives", "diplomatic_service"]
-  "4": ["applied_arts", "design_and_craft", "performance_and_culture", "heritage_curation"]
+  "1": ["finance_and_banking", "legal_services", "management_consulting", "human_resources", "hospitality_and_tourism"]
+  "2": ["architecture_and_built_environment", "creative_industries", "design_and_media", "heritage_and_curation", "craft_and_making"]
+  "3": ["education", "public_sector_and_civil_service", "research_and_academia", "ngo_and_charity", "media_and_communications"]
+  "4": ["healthcare_and_nhs", "social_care", "education", "public_health", "allied_health_professions"]
+  "5": ["engineering_and_manufacturing", "technology_and_software", "research_and_academia", "pharmaceutical_and_biotech", "environmental_and_sustainability"]
 
 # Base professional employment rate by faculty (before individual modifiers)
-# Some faculties have stronger vocational pipelines
+# Health & Education highest — NHS/teaching have direct vocational pipelines
+# Craft, Art & Architecture lowest — creative industries are competitive and precarious
 faculty_professional_base:
-  "1": 0.55
-  "2": 0.60
-  "3": 0.65
-  "4": 0.50
+  "1": 0.65
+  "2": 0.45
+  "3": 0.55
+  "4": 0.75
+  "5": 0.65
 
 # Months to outcome: distribution parameters by outcome type (min, mode, max for triangular)
 time_to_outcome_months:

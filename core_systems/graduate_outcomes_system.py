@@ -285,7 +285,7 @@ class GraduateOutcomesSystem:
         for _, student in grads.iterrows():
             sid = str(student['student_id'])
             degree_class, weighted_avg = classifications.get(sid, ("2:2", 50.0))
-            faculty = str(student.get('program_code', student.get('programme_code', '1.1.1'))).split('.')[0]
+            faculty = str(student.get('program_code', student.get('programme_code', '1_1_1'))).split('_')[0]
 
             outcome_type = self._get_outcome_type(student, degree_class)
 

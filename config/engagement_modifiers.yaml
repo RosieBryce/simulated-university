@@ -8,32 +8,32 @@
 # Keys match disability values in stonegrove_individual_students.csv
 disability_modifiers:
   mental_health_disability:
-    base: {attendance: -0.08, academic_engagement: -0.06, stress: 0.12}
-    std_extra: 0.06
+    base: {attendance: -0.11, academic_engagement: -0.09, stress: 0.15}
+    std_extra: 0.08
 
   adhd:
-    base: {participation: -0.04, academic_engagement: -0.05, stress: 0.08}
-    std_extra: 0.08
+    base: {participation: -0.05, academic_engagement: -0.08, stress: 0.10}
+    std_extra: 0.10
 
   autistic_spectrum:
     base: {participation: -0.06, social_engagement: -0.08, academic_engagement: 0.04}
     std_extra: 0.04
 
   specific_learning_disability:
-    base: {academic_engagement: -0.05, stress: 0.08}
-    std_extra: 0.03
+    base: {academic_engagement: -0.08, stress: 0.10}
+    std_extra: 0.05
 
   dyslexia:
-    base: {academic_engagement: -0.04, stress: 0.06}
-    std_extra: 0.02
-
-  physical_disability:
-    base: {attendance: -0.07, stress: 0.05}
+    base: {academic_engagement: -0.06, stress: 0.08}
     std_extra: 0.03
 
+  physical_disability:
+    base: {attendance: -0.10, stress: 0.07}
+    std_extra: 0.04
+
   deaf_or_hearing_impaired:
-    base: {participation: -0.05, stress: 0.04}
-    std_extra: 0.02
+    base: {participation: -0.07, stress: 0.06}
+    std_extra: 0.03
 
   blind_or_visually_impaired:
     base: {academic_engagement: -0.05, stress: 0.05}
