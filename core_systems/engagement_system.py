@@ -107,7 +107,7 @@ class EngagementSystem:
         if pc_csv.exists():
             df = pd.read_csv(pc_csv)
             for _, row in df.iterrows():
-                name = str(row.get('programme_name', '')).strip()
+                name = str(row.get('programme_code', '')).strip()
                 if name:
                     self._programme_chars[name] = {
                         'social_intensity': float(row.get('social_intensity', 0.5)),
@@ -193,9 +193,9 @@ class EngagementSystem:
             'creativity_requirements': np.clip(creativity_requirements, 0.2, 0.9)
         }
 
-    def get_programme_characteristics(self, programme_name: str) -> Dict[str, float]:
-        """Get characteristics for a specific programme (by programme name)."""
-        name = str(programme_name).strip()
+    def get_programme_characteristics(self, programme_code: str) -> Dict[str, float]:
+        """Get characteristics for a specific programme (by programme code)."""
+        name = str(programme_code).strip()
         if name in self._programme_chars:
             return self._programme_chars[name].copy()
         return {
@@ -213,6 +213,7 @@ class EngagementSystem:
                                   motivation: Dict[str, float]) -> Dict[str, float]:
         """Calculate base engagement levels from personality and motivation."""
         base_attendance = (
+            0.35 +
             personality.get('refined_conscientiousness', 0.5) * 0.4 +
             motivation.get('motivation_academic_drive', 0.5) * 0.3 +
             personality.get('refined_resilience', 0.5) * 0.2 +

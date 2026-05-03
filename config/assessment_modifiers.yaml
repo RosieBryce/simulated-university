@@ -2,11 +2,11 @@
 
 # Prior education background modifier
 # Reflects academic preparation advantage in formal assessments.
-# Softened from original (1.10/0.92/0.85) — previous gap was ~23pp, target ~12-15pp.
+# Widened to target Elf–Dwarf gap ~13–15pp (was 4.9pp with 1.06/0.96/0.92).
 education_modifiers:
-  academic: 1.06
-  vocational: 0.96
-  no_qualifications: 0.92
+  academic: 1.10
+  vocational: 0.93
+  no_qualifications: 0.85
 
 # Socio-economic rank modifier (rank 1=lowest, 8=highest)
 # Narrower ~18pp gradient — clan differences emerge from SES + education compounding,

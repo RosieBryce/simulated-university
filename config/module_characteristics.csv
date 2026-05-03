@@ -1,354 +1,661 @@
-module_code,module_title,programme_code,year,difficulty_level,mark_modifier,social_requirements,creativity_requirements,practical_theoretical_balance,stress_level,group_work_intensity,independent_study_requirement,assessment_type,description,semester
-1.1.1.01,Introduction to Cooperative Crafting,1.1.1,1,0.25,1.0379,0.76,0.68,0.8,0.31,0.8,0.37,practical,Introductory community labour & cooperative innovation module establishing core concepts and practices.,1
-1.1.1.02,Material Cultures and Local Economies,1.1.1,1,0.35,1.0225,0.65,0.64,0.82,0.34,0.7,0.43,practical,Foundation module in Community Labour & Cooperative Innovation: Material Cultures and Local Economies.,1
-1.1.1.03,"Tools, Skills, and Guild Technologies",1.1.1,1,0.25,1.0375,0.66,0.61,0.78,0.35,0.67,0.41,practical,"Foundation module in Community Labour & Cooperative Innovation: Tools, Skills, and Guild Technologies.",2
-1.1.1.04,Distributed Production Models,1.1.1,2,0.64,0.9482,0.65,0.65,0.81,0.52,0.71,0.51,practical,Intermediate module in Community Labour & Cooperative Innovation: Distributed Production Models.,1
-1.1.1.05,Platform Cooperativism and Digital Infrastructure,1.1.1,2,0.47,1.0045,0.68,0.61,0.75,0.49,0.71,0.58,practical,Intermediate module in Community Labour & Cooperative Innovation: Platform Cooperativism and Digital Infrastructure.,1
-1.1.1.06,"Supply Chains, Commons, and Ethics",1.1.1,2,0.47,1.0045,0.71,0.58,0.75,0.46,0.7,0.56,practical,"Intermediate module in Community Labour & Cooperative Innovation: Supply Chains, Commons, and Ethics.",2
-1.1.1.07,Designing Resilient Workshop Networks,1.1.1,3,0.69,0.9297,0.68,0.71,0.76,0.62,0.66,0.72,practical,Advanced module in Community Labour & Cooperative Innovation: Designing Resilient Workshop Networks.,1
-1.1.1.08,Capstone Project: Building a Distributed Enterprise,1.1.1,3,0.71,0.9223,0.72,0.66,0.78,0.71,0.7,0.83,project,Final-year integrative project in Community Labour & Cooperative Innovation: Capstone Project: Building a Distributed Enterprise.,1
-1.1.1.09,Cooperative Finance and Circular Economies,1.1.1,3,0.76,0.9038,0.73,0.66,0.74,0.69,0.76,0.74,practical,Advanced module in Community Labour & Cooperative Innovation: Cooperative Finance and Circular Economies.,2
-1.1.2.01,History of Mutual Aid and Guild Traditions,1.1.2,1,0.35,1.0225,0.79,0.6,0.78,0.35,0.8,0.41,practical,Foundation module in Community Labour & Cooperative Innovation: History of Mutual Aid and Guild Traditions.,1
-1.1.2.02,Foundations of Self-Governance,1.1.2,1,0.34,1.0245,0.72,0.59,0.74,0.3,0.69,0.42,practical,Introductory community labour & cooperative innovation module establishing core concepts and practices.,2
-1.1.2.03,Legal Frameworks for Commons and Cooperatives,1.1.2,2,0.48,1.003,0.8,0.66,0.78,0.53,0.76,0.51,practical,Intermediate module in Community Labour & Cooperative Innovation: Legal Frameworks for Commons and Cooperatives.,1
-1.1.2.04,Facilitation and Decision-Making in Flat Structures,1.1.2,2,0.6,0.963,0.7,0.67,0.74,0.52,0.69,0.55,practical,Intermediate module in Community Labour & Cooperative Innovation: Facilitation and Decision-Making in Flat Structures.,1
-1.1.2.05,Intergenerational Knowledge and Care Systems,1.1.2,2,0.6,0.963,0.65,0.58,0.75,0.46,0.67,0.54,practical,Intermediate module in Community Labour & Cooperative Innovation: Intergenerational Knowledge and Care Systems.,2
-1.1.2.06,Conflict Transformation and Restorative Governance,1.1.2,3,0.61,0.9593,0.72,0.61,0.77,0.64,0.72,0.67,practical,Advanced module in Community Labour & Cooperative Innovation: Conflict Transformation and Restorative Governance.,1
-1.1.2.07,Capstone Project: Establishing a Living Charter,1.1.2,3,0.73,0.9149,0.72,0.61,0.81,0.76,0.66,0.86,project,Final-year integrative project in Community Labour & Cooperative Innovation: Capstone Project: Establishing a Living Charter.,1
-1.1.2.08,Governance Design for Emergent Communities,1.1.2,3,0.6,0.963,0.72,0.65,0.77,0.61,0.71,0.71,practical,Advanced module in Community Labour & Cooperative Innovation: Governance Design for Emergent Communities.,2
-1.1.3.01,Learning Through Making: Foundations,1.1.3,1,0.26,1.036,0.71,0.66,0.77,0.36,0.67,0.4,practical,Foundation module in Community Labour & Cooperative Innovation: Learning Through Making: Foundations.,1
-1.1.3.02,Embodied Knowledge and Apprenticeship Models,1.1.3,1,0.41,1.0135,0.68,0.65,0.81,0.33,0.71,0.39,practical,Foundation module in Community Labour & Cooperative Innovation: Embodied Knowledge and Apprenticeship Models.,2
-1.1.3.03,Tactile Thinking and Material Pedagogies,1.1.3,2,0.5,1.0,0.69,0.65,0.82,0.5,0.72,0.53,practical,Intermediate module in Community Labour & Cooperative Innovation: Tactile Thinking and Material Pedagogies.,1
-1.1.3.04,Workshop as Classroom: Designing Learning Environments,1.1.3,2,0.54,0.9852,0.72,0.67,0.79,0.46,0.68,0.55,practical,Intermediate module in Community Labour & Cooperative Innovation: Workshop as Classroom: Designing Learning Environments.,2
-1.1.3.05,Teaching as Craft: Mentorship and Scaffolding,1.1.3,3,0.6,0.963,0.64,0.67,0.81,0.68,0.69,0.7,practical,Advanced module in Community Labour & Cooperative Innovation: Teaching as Craft: Mentorship and Scaffolding.,1
-1.1.3.06,Capstone Project: Designing a Maker-Education Programme,1.1.3,3,0.81,0.8853,0.64,0.65,0.74,0.73,0.69,0.85,project,Final-year integrative project in Community Labour & Cooperative Innovation: Capstone Project: Designing a Maker-Education Programme.,1
-1.1.3.07,Ethics and Politics of Manual Learning,1.1.3,3,0.76,0.9038,0.71,0.66,0.8,0.66,0.7,0.7,practical,Advanced module in Community Labour & Cooperative Innovation: Ethics and Politics of Manual Learning.,2
-1.2.4.01,Foundations of Permaculture and Ecological Design,1.2.4,1,0.31,1.029,0.58,0.67,0.84,0.26,0.5,0.38,practical,Introductory food and sustenance technologies module establishing core concepts and practices.,1
-1.2.4.02,"Soil as System: Chemistry, Life, and Lore",1.2.4,1,0.25,1.0375,0.58,0.65,0.83,0.34,0.51,0.41,practical,"Foundation module in Food and Sustenance Technologies: Soil as System: Chemistry, Life, and Lore.",1
-1.2.4.03,Agroecology in Practice,1.2.4,1,0.39,1.0165,0.54,0.65,0.78,0.36,0.53,0.43,practical,Foundation module in Food and Sustenance Technologies: Agroecology in Practice.,2
-1.2.4.04,Seasonal Cycles and Climate-Resilient Cropping,1.2.4,2,0.56,0.9778,0.6,0.62,0.79,0.46,0.49,0.53,practical,Intermediate module in Food and Sustenance Technologies: Seasonal Cycles and Climate-Resilient Cropping.,1
-1.2.4.05,Agroforestry and Companion Planting,1.2.4,2,0.65,0.9445,0.58,0.65,0.84,0.47,0.51,0.55,practical,Intermediate module in Food and Sustenance Technologies: Agroforestry and Companion Planting.,1
-1.2.4.06,Land Stewardship and the Commons,1.2.4,2,0.45,1.0075,0.57,0.66,0.79,0.5,0.5,0.53,practical,Intermediate module in Food and Sustenance Technologies: Land Stewardship and the Commons.,2
-1.2.4.07,Community-Supported Agriculture Models,1.2.4,3,0.73,0.9149,0.68,0.59,0.83,0.69,0.6,0.69,practical,Advanced module in Food and Sustenance Technologies: Community-Supported Agriculture Models.,1
-1.2.4.08,Capstone: Design a Regenerative Micro-Farm,1.2.4,3,0.76,0.9038,0.57,0.68,0.83,0.78,0.5,0.8,project,Final-year integrative project in Food and Sustenance Technologies: Capstone: Design a Regenerative Micro-Farm.,1
-1.2.4.09,"Policy, Power, and the Future of Food",1.2.4,3,0.8,0.889,0.61,0.61,0.86,0.61,0.51,0.69,practical,"Advanced module in Food and Sustenance Technologies: Policy, Power, and the Future of Food.",2
-1.2.5.01,Introduction to Fungal Kingdoms,1.2.5,1,0.23,1.041,0.59,0.62,0.85,0.31,0.5,0.36,practical,Introductory food and sustenance technologies module establishing core concepts and practices.,1
-1.2.5.02,Growing Mediums and Spore Cultivation,1.2.5,1,0.26,1.036,0.6,0.61,0.85,0.32,0.56,0.36,practical,Foundation module in Food and Sustenance Technologies: Growing Mediums and Spore Cultivation.,2
-1.2.5.03,Lab Methods for Mycology and Biofabrication,1.2.5,2,0.61,0.9593,0.59,0.64,0.83,0.53,0.52,0.59,practical,Intermediate module in Food and Sustenance Technologies: Lab Methods for Mycology and Biofabrication.,1
-1.2.5.04,Fungi in Soil Health and Ecosystem Repair,1.2.5,2,0.49,1.0015,0.61,0.61,0.81,0.46,0.52,0.58,practical,Intermediate module in Food and Sustenance Technologies: Fungi in Soil Health and Ecosystem Repair.,1
-1.2.5.05,"Mycelium as Material: Packaging, Building, Healing",1.2.5,2,0.62,0.9556,0.6,0.62,0.8,0.49,0.56,0.57,practical,"Intermediate module in Food and Sustenance Technologies: Mycelium as Material: Packaging, Building, Healing.",2
-1.2.5.06,Capstone: Biotech Solutions with Mycelial Systems,1.2.5,3,0.76,0.9038,0.61,0.59,0.82,0.76,0.54,0.83,project,Final-year integrative project in Food and Sustenance Technologies: Capstone: Biotech Solutions with Mycelial Systems.,1
-1.2.5.07,Ethics and Entanglements in Biotech Innovation,1.2.5,3,0.78,0.8964,0.62,0.63,0.82,0.69,0.56,0.69,practical,Advanced module in Food and Sustenance Technologies: Ethics and Entanglements in Biotech Innovation.,2
-1.2.6.01,The Alchemy of Fermentation,1.2.6,1,0.28,1.033,0.55,0.66,0.86,0.36,0.55,0.39,practical,Foundation module in Food and Sustenance Technologies: The Alchemy of Fermentation.,1
-1.2.6.02,"Yeasts, Bacteria, and Microbial Worlds",1.2.6,1,0.4,1.015,0.59,0.63,0.82,0.34,0.48,0.42,practical,"Foundation module in Food and Sustenance Technologies: Yeasts, Bacteria, and Microbial Worlds.",2
-1.2.6.03,Brewing Traditions and Cultural Practice,1.2.6,2,0.6,0.963,0.62,0.66,0.84,0.46,0.49,0.52,practical,Intermediate module in Food and Sustenance Technologies: Brewing Traditions and Cultural Practice.,1
-1.2.6.04,Chemistry and Safety in Ferment Labs,1.2.6,2,0.45,1.0075,0.6,0.66,0.81,0.46,0.48,0.57,practical,Intermediate module in Food and Sustenance Technologies: Chemistry and Safety in Ferment Labs.,1
-1.2.6.05,"Designing Flavour: Herbs, Temperature, and Time",1.2.6,2,0.53,0.9889,0.58,0.71,0.81,0.49,0.54,0.53,practical,"Intermediate module in Food and Sustenance Technologies: Designing Flavour: Herbs, Temperature, and Time.",2
-1.2.6.06,Capstone: Create a Heritage-Inspired Brew Line,1.2.6,3,0.81,0.8853,0.54,0.62,0.78,0.73,0.53,0.83,project,Final-year integrative project in Food and Sustenance Technologies: Capstone: Create a Heritage-Inspired Brew Line.,1
-1.2.6.07,"Fermentation Futures: Probiotics, Policy, and Place",1.2.6,3,0.65,0.9445,0.58,0.63,0.81,0.62,0.55,0.74,practical,"Advanced module in Food and Sustenance Technologies: Fermentation Futures: Probiotics, Policy, and Place.",2
-1.3.7.01,Fundamentals of Metal and Flame,1.3.7,1,0.37,1.0199,0.48,0.65,0.9,0.25,0.41,0.39,practical,Introductory forge arts and metallurgy module establishing core concepts and practices.,1
-1.3.7.02,"Tools, Temperatures, and Techniques",1.3.7,1,0.28,1.033,0.53,0.68,0.88,0.36,0.41,0.4,practical,"Foundation module in Forge Arts and Metallurgy: Tools, Temperatures, and Techniques.",1
-1.3.7.03,"Drawing, Modelling, and Material Thinking",1.3.7,1,0.33,1.0255,0.53,0.66,0.91,0.38,0.36,0.36,practical,"Foundation module in Forge Arts and Metallurgy: Drawing, Modelling, and Material Thinking.",2
-1.3.7.04,Alloy Theory and Practical Metallurgy,1.3.7,2,0.57,0.9741,0.48,0.71,0.84,0.51,0.34,0.55,practical,Intermediate module in Forge Arts and Metallurgy: Alloy Theory and Practical Metallurgy.,1
-1.3.7.05,"Forging for Fit: Joints, Hinges, and Mechanisms",1.3.7,2,0.57,0.9741,0.53,0.67,0.91,0.48,0.39,0.56,practical,"Intermediate module in Forge Arts and Metallurgy: Forging for Fit: Joints, Hinges, and Mechanisms.",1
-1.3.7.06,Form and Function: Design Studio I,1.3.7,2,0.52,0.9926,0.53,0.71,0.91,0.46,0.41,0.55,project,Intermediate module in Forge Arts and Metallurgy: Form and Function: Design Studio I.,2
-1.3.7.07,Design Studio II: Commissions and Constraints,1.3.7,3,0.6,0.963,0.47,0.73,0.87,0.62,0.4,0.7,project,Advanced module in Forge Arts and Metallurgy: Design Studio II: Commissions and Constraints.,1
-1.3.7.08,Capstone: Precision Artefact for Client or Cause,1.3.7,3,0.83,0.8779,0.52,0.68,0.88,0.72,0.36,0.84,project,Final-year integrative project in Forge Arts and Metallurgy: Capstone: Precision Artefact for Client or Cause.,1
-1.3.7.09,"Ethics in Craft, Ownership, and Replication",1.3.7,3,0.71,0.9223,0.53,0.71,0.91,0.64,0.42,0.72,practical,"Advanced module in Forge Arts and Metallurgy: Ethics in Craft, Ownership, and Replication.",2
-1.3.8.01,"Hammer as Pedagogue: Rhythm, Impact, Intent",1.3.8,1,0.31,1.0285,0.5,0.69,0.88,0.36,0.39,0.42,practical,"Foundation module in Forge Arts and Metallurgy: Hammer as Pedagogue: Rhythm, Impact, Intent.",1
-1.3.8.02,"Embodied Skills Lab: Holding, Striking, Shaping",1.3.8,1,0.44,1.009,0.53,0.7,0.91,0.37,0.38,0.4,practical,"Foundation module in Forge Arts and Metallurgy: Embodied Skills Lab: Holding, Striking, Shaping.",2
-1.3.8.03,"Advanced Techniques: Folded Steel, Damascus, Etching",1.3.8,2,0.59,0.9667,0.47,0.69,0.84,0.54,0.42,0.57,practical,"Intermediate module in Forge Arts and Metallurgy: Advanced Techniques: Folded Steel, Damascus, Etching.",1
-1.3.8.04,The Forge as Ritual Space,1.3.8,2,0.51,0.9963,0.5,0.65,0.89,0.54,0.35,0.58,practical,Intermediate module in Forge Arts and Metallurgy: The Forge as Ritual Space.,1
-1.3.8.05,Apprenticeship Studio: Teaching Through Craft,1.3.8,2,0.52,0.9926,0.46,0.72,0.9,0.51,0.4,0.56,project,Intermediate module in Forge Arts and Metallurgy: Apprenticeship Studio: Teaching Through Craft.,2
-1.3.8.06,Capstone: Performative Craft and the Public Forge,1.3.8,3,0.8,0.889,0.54,0.75,0.89,0.78,0.36,0.83,project,Final-year integrative project in Forge Arts and Metallurgy: Capstone: Performative Craft and the Public Forge.,1
-1.3.8.07,History and Philosophy of the Hammered Object,1.3.8,3,0.77,0.9001,0.49,0.72,0.86,0.61,0.39,0.74,practical,Advanced module in Forge Arts and Metallurgy: History and Philosophy of the Hammered Object.,2
-1.3.9.01,Reading the Object: Material Histories and Markings,1.3.9,1,0.39,1.0165,0.5,0.64,0.91,0.36,0.41,0.42,practical,Foundation module in Forge Arts and Metallurgy: Reading the Object: Material Histories and Markings.,1
-1.3.9.02,Principles of Conservation and Ethical Restoration,1.3.9,1,0.21,1.0439,0.51,0.69,0.91,0.3,0.36,0.43,practical,Foundation module in Forge Arts and Metallurgy: Principles of Conservation and Ethical Restoration.,2
-1.3.9.03,"Techniques for Metal, Wood, and Mixed Materials",1.3.9,2,0.53,0.9889,0.53,0.68,0.88,0.51,0.35,0.55,practical,"Intermediate module in Forge Arts and Metallurgy: Techniques for Metal, Wood, and Mixed Materials.",1
-1.3.9.04,Fieldwork: Documenting and Mapping Lost Techniques,1.3.9,2,0.62,0.9556,0.46,0.7,0.85,0.5,0.4,0.55,practical,Intermediate module in Forge Arts and Metallurgy: Fieldwork: Documenting and Mapping Lost Techniques.,1
-1.3.9.05,Cultural Entanglements in Artefact Recovery,1.3.9,2,0.6,0.963,0.53,0.65,0.84,0.5,0.36,0.57,practical,Intermediate module in Forge Arts and Metallurgy: Cultural Entanglements in Artefact Recovery.,2
-1.3.9.06,Capstone: Restore a Historical Object (with Archive Companion),1.3.9,3,0.82,0.8816,0.52,0.65,0.86,0.72,0.34,0.86,project,Final-year integrative project in Forge Arts and Metallurgy: Capstone: Restore a Historical Object (with Archive Companion).,1
-1.3.9.07,Speculative Restoration: Imagining Futures from Fragments,1.3.9,3,0.75,0.9075,0.52,0.73,0.92,0.68,0.34,0.69,practical,Advanced module in Forge Arts and Metallurgy: Speculative Restoration: Imagining Futures from Fragments.,2
-1.4.10.01,Foundations of Systems Thinking,1.4.10,1,0.34,1.0243,0.46,0.61,0.7,0.26,0.44,0.39,practical,Introductory mechanics and engineering module establishing core concepts and practices.,1
-1.4.10.02,Logic and Pattern Recognition,1.4.10,1,0.35,1.0225,0.54,0.62,0.71,0.34,0.45,0.36,practical,Foundation module in Mechanics and Engineering: Logic and Pattern Recognition.,1
-1.4.10.03,"Machines, Mechanisms, and Leverage",1.4.10,1,0.32,1.027,0.51,0.6,0.75,0.37,0.51,0.41,practical,"Foundation module in Mechanics and Engineering: Machines, Mechanisms, and Leverage.",2
-1.4.10.04,Complex Systems and Emergent Behaviour,1.4.10,2,0.69,0.9297,0.46,0.58,0.71,0.5,0.49,0.57,practical,Intermediate module in Mechanics and Engineering: Complex Systems and Emergent Behaviour.,1
-1.4.10.05,"Modelling Tools: Diagrams, Simulations, and Sand Tables",1.4.10,2,0.6,0.963,0.5,0.59,0.74,0.49,0.51,0.54,practical,"Intermediate module in Mechanics and Engineering: Modelling Tools: Diagrams, Simulations, and Sand Tables.",1
-1.4.10.06,Ethics in Infrastructure and Innovation,1.4.10,2,0.5,1.0,0.46,0.61,0.74,0.53,0.52,0.57,practical,Intermediate module in Mechanics and Engineering: Ethics in Infrastructure and Innovation.,2
-1.4.10.07,Capstone: Design a Regenerative Systems Intervention,1.4.10,3,0.79,0.8927,0.51,0.67,0.75,0.77,0.48,0.86,project,Final-year integrative project in Mechanics and Engineering: Capstone: Design a Regenerative Systems Intervention.,1
-1.4.10.08,"Feedback, Control, and Agency",1.4.10,3,0.83,0.8779,0.51,0.62,0.76,0.67,0.44,0.74,practical,"Advanced module in Mechanics and Engineering: Feedback, Control, and Agency.",1
-1.4.10.09,"Power, Failure, and Resilience in Engineered Systems",1.4.10,3,0.81,0.8853,0.54,0.66,0.72,0.63,0.5,0.69,practical,"Advanced module in Mechanics and Engineering: Power, Failure, and Resilience in Engineered Systems.",2
-1.4.11.01,"Water, Flow, and the Shaping of Matter",1.4.11,1,0.32,1.027,0.47,0.63,0.74,0.34,0.51,0.37,practical,"Foundation module in Mechanics and Engineering: Water, Flow, and the Shaping of Matter.",1
-1.4.11.02,Introduction to Heuristics: Intuition in Systems Design,1.4.11,1,0.37,1.0198,0.46,0.7,0.7,0.29,0.48,0.42,practical,Introductory mechanics and engineering module establishing core concepts and practices.,1
-1.4.11.03,Sound and Structure: Principles of Harmonics,1.4.11,1,0.25,1.0378,0.5,0.6,0.75,0.3,0.51,0.41,practical,Foundation module in Mechanics and Engineering: Sound and Structure: Principles of Harmonics.,2
-1.4.11.04,"Hydraulic Logic: Pressure, Pulse, and Purpose",1.4.11,2,0.55,0.9815,0.47,0.59,0.76,0.54,0.49,0.54,practical,"Intermediate module in Mechanics and Engineering: Hydraulic Logic: Pressure, Pulse, and Purpose.",1
-1.4.11.05,"Experimental Heuristics: Trial, Error, and Adaptation",1.4.11,2,0.64,0.9482,0.48,0.62,0.76,0.53,0.51,0.59,practical,"Intermediate module in Mechanics and Engineering: Experimental Heuristics: Trial, Error, and Adaptation.",1
-1.4.11.06,Acoustic Architecture and Vibrational Engineering,1.4.11,2,0.62,0.9556,0.47,0.64,0.71,0.48,0.48,0.53,practical,Intermediate module in Mechanics and Engineering: Acoustic Architecture and Vibrational Engineering.,2
-1.4.11.07,"Capstone: Multisensory Systems Design (Water, Sound, Motion)",1.4.11,3,0.77,0.9001,0.46,0.65,0.74,0.76,0.51,0.8,project,"Final-year integrative project in Mechanics and Engineering: Capstone: Multisensory Systems Design (Water, Sound, Motion).",1
-1.4.11.08,"Philosophy of Flow: Tribal, Dwarven, and Ecological Perspectives",1.4.11,3,0.83,0.8779,0.52,0.62,0.69,0.65,0.51,0.72,practical,"Advanced module in Mechanics and Engineering: Philosophy of Flow: Tribal, Dwarven, and Ecological Perspectives.",2
-1.5.12.01,Introduction to Rune Logic and Symbolic Systems,1.5.12,1,0.22,1.0425,0.48,0.68,0.7,0.27,0.46,0.44,practical,Introductory stonework and structural alchemy module establishing core concepts and practices.,1
-1.5.12.02,Foundations of Structural Enchantment,1.5.12,1,0.26,1.0365,0.54,0.72,0.69,0.25,0.48,0.39,practical,Introductory stonework and structural alchemy module establishing core concepts and practices.,1
-1.5.12.03,"Inscription Techniques: Stone, Metal, Clay",1.5.12,1,0.29,1.0315,0.46,0.68,0.7,0.32,0.49,0.36,practical,"Foundation module in Stonework and Structural Alchemy: Inscription Techniques: Stone, Metal, Clay.",2
-1.5.12.04,Infrastructure as Interface: Ancient and Modern,1.5.12,2,0.48,1.003,0.46,0.68,0.7,0.49,0.52,0.53,practical,Intermediate module in Stonework and Structural Alchemy: Infrastructure as Interface: Ancient and Modern.,1
-1.5.12.05,"Binding, Warding, and Flow in Public Works",1.5.12,2,0.63,0.9519,0.53,0.65,0.7,0.54,0.48,0.59,practical,"Intermediate module in Stonework and Structural Alchemy: Binding, Warding, and Flow in Public Works.",1
-1.5.12.06,Translation and Recovery of Forgotten Runes,1.5.12,2,0.53,0.9889,0.5,0.65,0.73,0.53,0.45,0.57,practical,Intermediate module in Stonework and Structural Alchemy: Translation and Recovery of Forgotten Runes.,2
-1.5.12.07,Capstone: Re-imagining a Public Utility Through Runes,1.5.12,3,0.71,0.9223,0.53,0.69,0.7,0.77,0.49,0.84,project,Final-year integrative project in Stonework and Structural Alchemy: Capstone: Re-imagining a Public Utility Through Runes.,1
-1.5.12.08,Regulatory Glyphs and Civic Design,1.5.12,3,0.73,0.9149,0.52,0.73,0.74,0.61,0.5,0.72,practical,Advanced module in Stonework and Structural Alchemy: Regulatory Glyphs and Civic Design.,1
-1.5.12.09,Ethics of Enchantment in Shared Environments,1.5.12,3,0.76,0.9038,0.55,0.66,0.71,0.66,0.52,0.67,practical,Advanced module in Stonework and Structural Alchemy: Ethics of Enchantment in Shared Environments.,2
-1.5.13.01,Principles of Stone Lore and Material Memory,1.5.13,1,0.3,1.0305,0.48,0.67,0.72,0.28,0.5,0.4,practical,Foundation module in Stonework and Structural Alchemy: Principles of Stone Lore and Material Memory.,1
-1.5.13.02,Sacred Geometry and Form,1.5.13,1,0.44,1.009,0.48,0.66,0.72,0.32,0.49,0.39,practical,Foundation module in Stonework and Structural Alchemy: Sacred Geometry and Form.,1
-1.5.13.03,Drawing and Modelling in Organic Structures,1.5.13,1,0.33,1.0255,0.54,0.71,0.75,0.39,0.44,0.44,practical,Foundation module in Stonework and Structural Alchemy: Drawing and Modelling in Organic Structures.,2
-1.5.13.04,"Foundation Techniques: Earth, Time, and Load",1.5.13,2,0.58,0.9704,0.53,0.66,0.76,0.53,0.45,0.51,practical,"Intermediate module in Stonework and Structural Alchemy: Foundation Techniques: Earth, Time, and Load.",1
-1.5.13.05,Adaptive Architecture: Growing with Place,1.5.13,2,0.64,0.9482,0.48,0.68,0.76,0.5,0.46,0.58,practical,Intermediate module in Stonework and Structural Alchemy: Adaptive Architecture: Growing with Place.,1
-1.5.13.06,Working With Living Rock and Elemental Consent,1.5.13,2,0.45,1.0075,0.46,0.69,0.76,0.48,0.49,0.57,practical,Intermediate module in Stonework and Structural Alchemy: Working With Living Rock and Elemental Consent.,2
-1.5.13.07,Capstone: Design and Construct a Habitat Aligned with Ecosystem Needs,1.5.13,3,0.79,0.8927,0.46,0.7,0.7,0.72,0.45,0.82,project,Final-year integrative project in Stonework and Structural Alchemy: Capstone: Design and Construct a Habitat Aligned with Ecosystem Needs.,1
-1.5.13.08,Regenerative Ruins: Architecture Across Time,1.5.13,3,0.68,0.9334,0.46,0.66,0.7,0.64,0.52,0.73,practical,Advanced module in Stonework and Structural Alchemy: Regenerative Ruins: Architecture Across Time.,1
-1.5.13.09,Stone as Story: Embedding Meaning into Form,1.5.13,3,0.66,0.9408,0.5,0.7,0.75,0.66,0.47,0.73,practical,Advanced module in Stonework and Structural Alchemy: Stone as Story: Embedding Meaning into Form.,2
-1.5.14.01,Histories of Dwarven Infrastructure,1.5.14,1,0.43,1.0105,0.52,0.7,0.71,0.34,0.52,0.36,practical,Foundation module in Stonework and Structural Alchemy: Histories of Dwarven Infrastructure.,1
-1.5.14.02,"Listening to the System: Scent, Sound, Shift",1.5.14,1,0.45,1.0075,0.6,0.68,0.7,0.39,0.51,0.4,practical,"Foundation module in Stonework and Structural Alchemy: Listening to the System: Scent, Sound, Shift.",2
-1.5.14.03,"Tools of Maintenance: Hammer, Song, and Seal",1.5.14,2,0.5,1.0,0.49,0.66,0.76,0.46,0.49,0.52,practical,"Intermediate module in Stonework and Structural Alchemy: Tools of Maintenance: Hammer, Song, and Seal.",1
-1.5.14.04,Ritual Practices in Preventative Architecture,1.5.14,2,0.58,0.9704,0.46,0.69,0.69,0.49,0.51,0.53,practical,Intermediate module in Stonework and Structural Alchemy: Ritual Practices in Preventative Architecture.,1
-1.5.14.05,Repairing with Respect: Cultural Protocols for Care,1.5.14,2,0.6,0.963,0.48,0.7,0.72,0.51,0.49,0.58,practical,Intermediate module in Stonework and Structural Alchemy: Repairing with Respect: Cultural Protocols for Care.,2
-1.5.14.06,Capstone: Restore or Re-invent an Ancient System,1.5.14,3,0.88,0.8594,0.5,0.75,0.75,0.79,0.51,0.83,project,Final-year integrative project in Stonework and Structural Alchemy: Capstone: Restore or Re-invent an Ancient System.,1
-1.5.14.07,Ritual Futures: Designing for Durable Complexity,1.5.14,3,0.8,0.889,0.47,0.74,0.7,0.64,0.46,0.72,practical,Advanced module in Stonework and Structural Alchemy: Ritual Futures: Designing for Durable Complexity.,2
-2.1.15.01,"The Mentor’s Role: Presence, Power, and Practice",2.1.15,1,0.26,1.036,0.83,0.72,0.63,0.33,0.63,0.41,mixed,"Foundation module in Education, Eldership, and Mentoring: The Mentor’s Role: Presence, Power, and Practice.",1
-2.1.15.02,Foundations in Relational Learning,2.1.15,1,0.23,1.041,0.83,0.72,0.63,0.31,0.62,0.38,mixed,"Introductory education, eldership, and mentoring module establishing core concepts and practices.",2
-2.1.15.03,Building Trust Across Difference,2.1.15,2,0.49,1.0015,0.83,0.64,0.59,0.49,0.62,0.53,mixed,"Intermediate module in Education, Eldership, and Mentoring: Building Trust Across Difference.",1
-2.1.15.04,"Scaffolding Growth: Encouragement, Challenge, Timing",2.1.15,2,0.49,1.0015,0.8,0.71,0.6,0.53,0.59,0.53,mixed,"Intermediate module in Education, Eldership, and Mentoring: Scaffolding Growth: Encouragement, Challenge, Timing.",1
-2.1.15.05,"Mentorship in Context I: Personal, Cultural, Political",2.1.15,2,0.53,0.9889,0.76,0.66,0.57,0.48,0.54,0.64,mixed,"Intermediate module in Education, Eldership, and Mentoring: Mentorship in Context I: Personal, Cultural, Political.",2
-2.1.15.06,Mentorship in Context II: Practicum and Peer Feedback,2.1.15,3,0.69,0.9297,0.82,0.68,0.59,0.68,0.6,0.73,mixed,"Advanced module in Education, Eldership, and Mentoring: Mentorship in Context II: Practicum and Peer Feedback.",1
-2.1.15.07,Capstone: Designing a Radical Mentorship Programme,2.1.15,3,0.88,0.8594,0.77,0.71,0.58,0.77,0.63,0.81,project,"Final-year integrative project in Education, Eldership, and Mentoring: Capstone: Designing a Radical Mentorship Programme.",1
-2.1.15.08,"Navigating Endings: Legacy, Loss, and Letting Go",2.1.15,3,0.61,0.9593,0.83,0.65,0.56,0.67,0.64,0.73,mixed,"Advanced module in Education, Eldership, and Mentoring: Navigating Endings: Legacy, Loss, and Letting Go.",2
-2.1.16.01,Deep Listening: Practices from Many Traditions,2.1.16,1,0.29,1.0315,0.86,0.67,0.63,0.39,0.66,0.38,mixed,"Foundation module in Education, Eldership, and Mentoring: Deep Listening: Practices from Many Traditions.",1
-2.1.16.02,"Circle Structures: Time, Space, and Agreement",2.1.16,1,0.44,1.009,0.88,0.7,0.59,0.32,0.67,0.41,mixed,"Foundation module in Education, Eldership, and Mentoring: Circle Structures: Time, Space, and Agreement.",2
-2.1.16.03,Holding Silence and Speaking Truth,2.1.16,2,0.64,0.9482,0.78,0.71,0.61,0.52,0.61,0.53,mixed,"Intermediate module in Education, Eldership, and Mentoring: Holding Silence and Speaking Truth.",1
-2.1.16.04,Facilitator Ethics and Role Fluidity,2.1.16,2,0.62,0.9556,0.83,0.72,0.61,0.46,0.63,0.56,essay,"Intermediate module in Education, Eldership, and Mentoring: Facilitator Ethics and Role Fluidity.",1
-2.1.16.05,Listening Across Conflict and Power Imbalances,2.1.16,2,0.58,0.9704,0.85,0.64,0.63,0.46,0.64,0.53,mixed,"Intermediate module in Education, Eldership, and Mentoring: Listening Across Conflict and Power Imbalances.",2
-2.1.16.06,Capstone: Facilitate a Series of Public Listening Circles,2.1.16,3,0.86,0.8668,0.88,0.67,0.57,0.73,0.69,0.84,project,"Final-year integrative project in Education, Eldership, and Mentoring: Capstone: Facilitate a Series of Public Listening Circles.",1
-2.1.16.07,Designing Circles for Systemic Change,2.1.16,3,0.64,0.9482,0.85,0.74,0.62,0.69,0.73,0.7,mixed,"Advanced module in Education, Eldership, and Mentoring: Designing Circles for Systemic Change.",1
-2.1.16.08,Circle Pedagogies and Collective Memory,2.1.16,3,0.64,0.9482,0.87,0.72,0.57,0.66,0.67,0.66,mixed,"Advanced module in Education, Eldership, and Mentoring: Circle Pedagogies and Collective Memory.",2
-2.1.17.01,Theories of Care: Interdependence and Responsibility,2.1.17,1,0.39,1.0165,0.83,0.64,0.63,0.39,0.6,0.38,essay,"Foundation module in Education, Eldership, and Mentoring: Theories of Care: Interdependence and Responsibility.",1
-2.1.17.02,Craft as Teaching: Making with Meaning,2.1.17,1,0.39,1.0165,0.79,0.74,0.6,0.31,0.61,0.44,mixed,"Foundation module in Education, Eldership, and Mentoring: Craft as Teaching: Making with Meaning.",2
-2.1.17.03,Intergenerational Practice: Elderhood and Youth Wisdom,2.1.17,2,0.53,0.9889,0.83,0.69,0.63,0.52,0.66,0.57,mixed,"Intermediate module in Education, Eldership, and Mentoring: Intergenerational Practice: Elderhood and Youth Wisdom.",1
-2.1.17.04,"Continuity in Fragile Systems: Ritual, Routine, Rehearsal",2.1.17,2,0.51,0.9963,0.8,0.72,0.57,0.5,0.62,0.56,mixed,"Intermediate module in Education, Eldership, and Mentoring: Continuity in Fragile Systems: Ritual, Routine, Rehearsal.",1
-2.1.17.05,Cultivating Presence Through Slow Making,2.1.17,2,0.47,1.0045,0.83,0.74,0.61,0.52,0.6,0.59,mixed,"Intermediate module in Education, Eldership, and Mentoring: Cultivating Presence Through Slow Making.",2
-2.1.17.06,Capstone: Weaving a Continuity Practice for a Community,2.1.17,3,0.79,0.8927,0.87,0.64,0.56,0.76,0.71,0.86,project,"Final-year integrative project in Education, Eldership, and Mentoring: Capstone: Weaving a Continuity Practice for a Community.",1
-2.1.17.07,Designing Care-Centred Institutions,2.1.17,3,0.71,0.9223,0.84,0.72,0.61,0.66,0.66,0.69,mixed,"Advanced module in Education, Eldership, and Mentoring: Designing Care-Centred Institutions.",1
-2.1.17.08,Understanding Through Witnessing and Storycatching,2.1.17,3,0.69,0.9297,0.79,0.69,0.58,0.66,0.59,0.72,mixed,"Advanced module in Education, Eldership, and Mentoring: Understanding Through Witnessing and Storycatching.",2
-2.2.18.01,"Plant Allies: Identification, Ethics, and Harvesting",2.2.18,1,0.35,1.0225,0.73,0.64,0.65,0.39,0.68,0.44,mixed,"Foundation module in Healing and Embodied Knowledge: Plant Allies: Identification, Ethics, and Harvesting.",1
-2.2.18.02,"Introduction to Energy Work: Hands, Breath, Field",2.2.18,1,0.3,1.0305,0.74,0.64,0.66,0.28,0.67,0.44,mixed,Introductory healing and embodied knowledge module establishing core concepts and practices.,2
-2.2.18.03,"Herbal Preparations: Teas, Salves, and Tinctures",2.2.18,2,0.5,1.0,0.74,0.68,0.66,0.53,0.71,0.59,mixed,"Intermediate module in Healing and Embodied Knowledge: Herbal Preparations: Teas, Salves, and Tinctures.",1
-2.2.18.04,Elemental Correspondences in Healing,2.2.18,2,0.61,0.9593,0.75,0.71,0.69,0.47,0.71,0.56,mixed,Intermediate module in Healing and Embodied Knowledge: Elemental Correspondences in Healing.,1
-2.2.18.05,Practicum: Healing in Community Contexts,2.2.18,2,0.61,0.9593,0.76,0.7,0.65,0.51,0.76,0.53,practical,Intermediate module in Healing and Embodied Knowledge: Practicum: Healing in Community Contexts.,2
-2.2.18.06,Capstone: Design a Personal or Communal Apothecary,2.2.18,3,0.78,0.8964,0.71,0.75,0.63,0.79,0.58,0.92,project,Final-year integrative project in Healing and Embodied Knowledge: Capstone: Design a Personal or Communal Apothecary.,1
-2.2.18.07,Energetic Boundaries and Practitioner Resilience,2.2.18,3,0.63,0.9519,0.71,0.65,0.64,0.63,0.69,0.7,mixed,Advanced module in Healing and Embodied Knowledge: Energetic Boundaries and Practitioner Resilience.,1
-2.2.18.08,Rewilding the Self: Herbal Knowledge,2.2.18,3,0.78,0.8964,0.73,0.67,0.63,0.61,0.72,0.71,mixed,Advanced module in Healing and Embodied Knowledge: Rewilding the Self: Herbal Knowledge.,2
-2.2.19.01,"Embodied Learning: Movement, Stillness, Attention",2.2.19,1,0.32,1.027,0.68,0.7,0.66,0.33,0.65,0.41,mixed,"Foundation module in Healing and Embodied Knowledge: Embodied Learning: Movement, Stillness, Attention.",1
-2.2.19.02,Foundations of Somatic Awareness,2.2.19,1,0.28,1.0334,0.74,0.68,0.66,0.32,0.72,0.42,mixed,Introductory healing and embodied knowledge module establishing core concepts and practices.,2
-2.2.19.03,Teaching With the Body: Facilitation as Flow,2.2.19,2,0.63,0.9519,0.76,0.69,0.63,0.48,0.69,0.53,mixed,Intermediate module in Healing and Embodied Knowledge: Teaching With the Body: Facilitation as Flow.,1
-2.2.19.04,"Breath, Touch, and Grounding Techniques",2.2.19,2,0.65,0.9445,0.72,0.71,0.64,0.47,0.71,0.58,mixed,"Intermediate module in Healing and Embodied Knowledge: Breath, Touch, and Grounding Techniques.",1
-2.2.19.05,Interoception and Trauma-Informed Practice,2.2.19,2,0.5,1.0,0.73,0.69,0.67,0.52,0.71,0.57,mixed,Intermediate module in Healing and Embodied Knowledge: Interoception and Trauma-Informed Practice.,2
-2.2.19.06,Capstone: Facilitate a Series of Body-Centred Workshops,2.2.19,3,0.8,0.889,0.79,0.68,0.68,0.78,0.68,0.85,project,Final-year integrative project in Healing and Embodied Knowledge: Capstone: Facilitate a Series of Body-Centred Workshops.,1
-2.2.19.07,"Reflective Practice: Journaling, Mapping, Witnessing",2.2.19,3,0.67,0.9371,0.71,0.65,0.67,0.66,0.58,0.8,mixed,"Advanced module in Healing and Embodied Knowledge: Reflective Practice: Journaling, Mapping, Witnessing.",1
-2.2.19.08,The Body in Learning Institutions: Politics and Potential,2.2.19,3,0.6,0.963,0.76,0.66,0.68,0.65,0.65,0.73,mixed,Advanced module in Healing and Embodied Knowledge: The Body in Learning Institutions: Politics and Potential.,2
-2.2.20.01,Dreamtime Foundations: Personal and Cultural Archetypes,2.2.20,1,0.31,1.0285,0.73,0.71,0.68,0.38,0.57,0.54,mixed,Foundation module in Healing and Embodied Knowledge: Dreamtime Foundations: Personal and Cultural Archetypes.,1
-2.2.20.02,Introduction to Somatic Inquiry Methods,2.2.20,1,0.39,1.017,0.7,0.69,0.61,0.3,0.64,0.36,mixed,Introductory healing and embodied knowledge module establishing core concepts and practices.,2
-2.2.20.03,Recording and Mapping the Dream Body,2.2.20,2,0.46,1.006,0.73,0.66,0.66,0.5,0.69,0.53,mixed,Intermediate module in Healing and Embodied Knowledge: Recording and Mapping the Dream Body.,1
-2.2.20.04,"Night as Pedagogue: Sleep, Memory, Imagination",2.2.20,2,0.62,0.9556,0.73,0.72,0.63,0.54,0.67,0.53,mixed,"Intermediate module in Healing and Embodied Knowledge: Night as Pedagogue: Sleep, Memory, Imagination.",1
-2.2.20.05,Guided Movement and Embodied Dream Reenactment,2.2.20,2,0.54,0.9852,0.75,0.68,0.61,0.51,0.65,0.51,mixed,Intermediate module in Healing and Embodied Knowledge: Guided Movement and Embodied Dream Reenactment.,2
-2.2.20.06,Capstone: Dream Inquiry Portfolio or Performance,2.2.20,3,0.73,0.9149,0.7,0.66,0.64,0.74,0.66,0.79,project,Final-year integrative project in Healing and Embodied Knowledge: Capstone: Dream Inquiry Portfolio or Performance.,1
-2.2.20.07,Cross-Cultural Perspectives on Dream Work,2.2.20,3,0.76,0.9038,0.76,0.68,0.65,0.69,0.65,0.66,mixed,Advanced module in Healing and Embodied Knowledge: Cross-Cultural Perspectives on Dream Work.,1
-2.2.20.08,Dreaming in Systems: Collective Unconscious and Social Change,2.2.20,3,0.62,0.9556,0.8,0.7,0.67,0.63,0.74,0.74,mixed,Advanced module in Healing and Embodied Knowledge: Dreaming in Systems: Collective Unconscious and Social Change.,2
-2.3.21.01,Principles of Restorative Space,2.3.21,1,0.31,1.029,0.81,0.69,0.6,0.33,0.74,0.37,mixed,Foundation module in Hospitality and Conflict Holding: Principles of Restorative Space.,1
-2.3.21.02,"Materials, Light, and Layout for Healing",2.3.21,1,0.29,1.0315,0.86,0.68,0.64,0.31,0.7,0.39,mixed,"Foundation module in Hospitality and Conflict Holding: Materials, Light, and Layout for Healing.",1
-2.3.21.03,Thresholds and Transitions: Entering With Intention,2.3.21,1,0.41,1.0135,0.85,0.66,0.63,0.38,0.72,0.42,mixed,Foundation module in Hospitality and Conflict Holding: Thresholds and Transitions: Entering With Intention.,2
-2.3.21.04,Sensory Architecture and Emotional Atmosphere,2.3.21,2,0.55,0.9815,0.87,0.7,0.59,0.51,0.74,0.57,mixed,Intermediate module in Hospitality and Conflict Holding: Sensory Architecture and Emotional Atmosphere.,1
-2.3.21.05,Ritual and Symbol in Spatial Design,2.3.21,2,0.64,0.9482,0.88,0.72,0.62,0.53,0.71,0.52,mixed,Intermediate module in Hospitality and Conflict Holding: Ritual and Symbol in Spatial Design.,1
-2.3.21.06,Co-Designing With Community Needs,2.3.21,2,0.52,0.9926,0.92,0.72,0.62,0.5,0.82,0.55,mixed,Intermediate module in Hospitality and Conflict Holding: Co-Designing With Community Needs.,2
-2.3.21.07,Capstone: Transform a Space for Restorative Use,2.3.21,3,0.82,0.8816,0.89,0.68,0.59,0.72,0.74,0.78,project,Final-year integrative project in Hospitality and Conflict Holding: Capstone: Transform a Space for Restorative Use.,1
-2.3.21.08,Ethics of Hospitality and Access,2.3.21,3,0.79,0.8927,0.83,0.71,0.63,0.61,0.71,0.71,essay,Advanced module in Hospitality and Conflict Holding: Ethics of Hospitality and Access.,1
-2.3.21.09,"Designing for Uncertainty: Crisis, Grief, Renewal",2.3.21,3,0.72,0.9186,0.89,0.73,0.63,0.65,0.68,0.69,mixed,"Advanced module in Hospitality and Conflict Holding: Designing for Uncertainty: Crisis, Grief, Renewal.",2
-2.3.22.01,Foundations of Mediation and Dialogue,2.3.22,1,0.29,1.0319,0.91,0.72,0.61,0.26,0.7,0.4,mixed,Introductory hospitality and conflict holding module establishing core concepts and practices.,1
-2.3.22.02,"Listening Between: Power, Culture, Emotion",2.3.22,1,0.39,1.0165,0.92,0.72,0.57,0.38,0.74,0.43,mixed,"Foundation module in Hospitality and Conflict Holding: Listening Between: Power, Culture, Emotion.",2
-2.3.22.03,Conflict as Opportunity: Theories and Practices,2.3.22,2,0.6,0.963,0.87,0.7,0.64,0.47,0.72,0.58,mixed,Intermediate module in Hospitality and Conflict Holding: Conflict as Opportunity: Theories and Practices.,1
-2.3.22.04,Holding the Heat: De-escalation and Reframing,2.3.22,2,0.6,0.963,0.86,0.66,0.64,0.46,0.76,0.56,mixed,Intermediate module in Hospitality and Conflict Holding: Holding the Heat: De-escalation and Reframing.,1
-2.3.22.05,"Mediation Across Difference: Language, Ability, Identity",2.3.22,2,0.54,0.9852,0.92,0.67,0.56,0.51,0.68,0.56,mixed,"Intermediate module in Hospitality and Conflict Holding: Mediation Across Difference: Language, Ability, Identity.",2
-2.3.22.06,Capstone: Mediation in Practice — Live or Simulated Casework,2.3.22,3,0.79,0.8927,0.89,0.66,0.59,0.73,0.71,0.85,project,Final-year integrative project in Hospitality and Conflict Holding: Capstone: Mediation in Practice — Live or Simulated Casework.,1
-2.3.22.07,Reflective Practitioner Portfolio,2.3.22,3,0.73,0.9149,0.83,0.69,0.56,0.65,0.65,0.79,project,Advanced module in Hospitality and Conflict Holding: Reflective Practitioner Portfolio.,1
-2.3.22.08,Peacebuilding and Structural Justice,2.3.22,3,0.73,0.9149,0.89,0.68,0.56,0.62,0.7,0.7,mixed,Advanced module in Hospitality and Conflict Holding: Peacebuilding and Structural Justice.,2
-2.3.23.01,Histories and Futures of Hospitality,2.3.23,1,0.33,1.0255,0.85,0.68,0.58,0.33,0.76,0.36,essay,Foundation module in Hospitality and Conflict Holding: Histories and Futures of Hospitality.,1
-2.3.23.02,The Host as Educator and Healer,2.3.23,1,0.42,1.012,0.86,0.71,0.61,0.37,0.7,0.41,mixed,Foundation module in Hospitality and Conflict Holding: The Host as Educator and Healer.,2
-2.3.23.03,"Radical Welcome: Access, Consent, and Cultural Warmth",2.3.23,2,0.58,0.9704,0.81,0.66,0.58,0.53,0.75,0.54,mixed,"Intermediate module in Hospitality and Conflict Holding: Radical Welcome: Access, Consent, and Cultural Warmth.",1
-2.3.23.04,"Designing Encounters: Food, Gesture, Environment",2.3.23,2,0.49,1.0015,0.81,0.73,0.64,0.48,0.71,0.51,mixed,"Intermediate module in Hospitality and Conflict Holding: Designing Encounters: Food, Gesture, Environment.",1
-2.3.23.05,"Hospitality and Power: Who Serves, Who Rests?",2.3.23,2,0.5,1.0,0.84,0.67,0.56,0.5,0.71,0.57,mixed,"Intermediate module in Hospitality and Conflict Holding: Hospitality and Power: Who Serves, Who Rests?.",2
-2.3.23.06,Capstone: Design and Host a Multi-Species Hospitality Event,2.3.23,3,0.87,0.8631,0.92,0.75,0.58,0.74,0.78,0.82,project,Final-year integrative project in Hospitality and Conflict Holding: Capstone: Design and Host a Multi-Species Hospitality Event.,1
-2.3.23.07,Anti-Extractive Hosting in Institutional Settings,2.3.23,3,0.61,0.9593,0.81,0.71,0.62,0.64,0.7,0.67,mixed,Advanced module in Hospitality and Conflict Holding: Anti-Extractive Hosting in Institutional Settings.,1
-2.3.23.08,"Maintenance, Mess, and Mutuality in Daily Life",2.3.23,3,0.71,0.9223,0.92,0.68,0.63,0.61,0.77,0.7,mixed,"Advanced module in Hospitality and Conflict Holding: Maintenance, Mess, and Mutuality in Daily Life.",2
-2.4.24.01,"What Is a Ceremony? Structures, Symbols, Intentions",2.4.24,1,0.37,1.0199,0.76,0.7,0.54,0.3,0.64,0.42,essay,"Foundation module in Rites, Rest, and Renewal: What Is a Ceremony? Structures, Symbols, Intentions.",1
-2.4.24.02,"Elements of Ritual: Object, Word, Movement, Space",2.4.24,1,0.3,1.03,0.71,0.73,0.58,0.38,0.69,0.43,mixed,"Foundation module in Rites, Rest, and Renewal: Elements of Ritual: Object, Word, Movement, Space.",2
-2.4.24.03,"Ceremonies of Passage: Birth, Death, Thresholds",2.4.24,2,0.54,0.9852,0.76,0.72,0.59,0.48,0.64,0.58,mixed,"Intermediate module in Rites, Rest, and Renewal: Ceremonies of Passage: Birth, Death, Thresholds.",1
-2.4.24.04,Designing with Sensory Awareness,2.4.24,2,0.54,0.9852,0.72,0.81,0.56,0.47,0.7,0.51,mixed,"Intermediate module in Rites, Rest, and Renewal: Designing with Sensory Awareness.",1
-2.4.24.05,The Role of Witnesses and Co-Creators,2.4.24,2,0.59,0.9667,0.7,0.71,0.51,0.54,0.65,0.58,mixed,"Intermediate module in Rites, Rest, and Renewal: The Role of Witnesses and Co-Creators.",2
-2.4.24.06,Capstone: Design and Facilitate a Public Ceremony,2.4.24,3,0.7,0.926,0.8,0.8,0.55,0.78,0.68,0.83,project,"Final-year integrative project in Rites, Rest, and Renewal: Capstone: Design and Facilitate a Public Ceremony.",1
-2.4.24.07,Ceremony in Activism and Social Change,2.4.24,3,0.75,0.9075,0.72,0.76,0.52,0.61,0.64,0.73,mixed,"Advanced module in Rites, Rest, and Renewal: Ceremony in Activism and Social Change.",1
-2.4.24.08,Ethics of Cultural Borrowing and Ancestral Respect,2.4.24,3,0.78,0.8964,0.69,0.69,0.52,0.68,0.72,0.71,essay,"Advanced module in Rites, Rest, and Renewal: Ethics of Cultural Borrowing and Ancestral Respect.",2
-2.4.25.01,"Time as Construct: Clocks, Moons, and Memory",2.4.25,1,0.37,1.0195,0.75,0.75,0.52,0.32,0.67,0.4,mixed,"Foundation module in Rites, Rest, and Renewal: Time as Construct: Clocks, Moons, and Memory.",1
-2.4.25.02,"Rhythms of the Body, Land, and Cosmos",2.4.25,1,0.29,1.0315,0.69,0.74,0.57,0.36,0.68,0.38,mixed,"Foundation module in Rites, Rest, and Renewal: Rhythms of the Body, Land, and Cosmos.",2
-2.4.25.03,Calendars and Cosmologies: Comparative Temporal Systems,2.4.25,2,0.68,0.9334,0.68,0.73,0.56,0.46,0.71,0.51,essay,"Intermediate module in Rites, Rest, and Renewal: Calendars and Cosmologies: Comparative Temporal Systems.",1
-2.4.25.04,Interrupting the Clock: Rituals of Rest and Reversal,2.4.25,2,0.51,0.9963,0.7,0.72,0.52,0.54,0.64,0.52,mixed,"Intermediate module in Rites, Rest, and Renewal: Interrupting the Clock: Rituals of Rest and Reversal.",1
-2.4.25.05,Designing Temporal Tools for Community Use,2.4.25,2,0.6,0.963,0.81,0.8,0.53,0.46,0.75,0.55,mixed,"Intermediate module in Rites, Rest, and Renewal: Designing Temporal Tools for Community Use.",2
-2.4.25.06,Capstone: Construct a Plural-Time Framework for a Real-World Setting,2.4.25,3,0.76,0.9038,0.71,0.73,0.55,0.74,0.69,0.81,project,"Final-year integrative project in Rites, Rest, and Renewal: Capstone: Construct a Plural-Time Framework for a Real-World Setting.",1
-2.4.25.07,"Timekeeping and Power: Whose Time, Whose Pace?",2.4.25,3,0.75,0.9075,0.69,0.68,0.52,0.61,0.71,0.7,mixed,"Advanced module in Rites, Rest, and Renewal: Timekeeping and Power: Whose Time, Whose Pace?.",1
-2.4.25.08,Futures of Time: Nonlinear Learning and Post-Work Worlds,2.4.25,3,0.73,0.9149,0.69,0.75,0.59,0.69,0.72,0.7,mixed,"Advanced module in Rites, Rest, and Renewal: Futures of Time: Nonlinear Learning and Post-Work Worlds.",2
-2.4.26.01,"Rites of the Ancients: Elven, Dwarven, and Beyond",2.4.26,1,0.42,1.012,0.75,0.71,0.54,0.38,0.66,0.43,mixed,"Foundation module in Rites, Rest, and Renewal: Rites of the Ancients: Elven, Dwarven, and Beyond.",1
-2.4.26.02,Reading Ritual Traces in Landscape and Object,2.4.26,1,0.44,1.009,0.69,0.76,0.51,0.39,0.7,0.38,mixed,"Foundation module in Rites, Rest, and Renewal: Reading Ritual Traces in Landscape and Object.",2
-2.4.26.03,"Reconstructing Ceremony: Inference, Integrity, Imagination",2.4.26,2,0.7,0.926,0.75,0.71,0.52,0.5,0.65,0.56,mixed,"Intermediate module in Rites, Rest, and Renewal: Reconstructing Ceremony: Inference, Integrity, Imagination.",1
-2.4.26.04,"Embodied Practice: Chants, Tools, Gestures",2.4.26,2,0.56,0.9778,0.7,0.73,0.54,0.47,0.68,0.52,mixed,"Intermediate module in Rites, Rest, and Renewal: Embodied Practice: Chants, Tools, Gestures.",1
-2.4.26.05,Ritual Language and Sacred Scripts,2.4.26,2,0.57,0.9741,0.75,0.68,0.52,0.54,0.64,0.54,mixed,"Intermediate module in Rites, Rest, and Renewal: Ritual Language and Sacred Scripts.",2
-2.4.26.06,Capstone: Design a Rite Rooted in Place and Lineage,2.4.26,3,0.8,0.889,0.72,0.75,0.58,0.77,0.68,0.78,project,"Final-year integrative project in Rites, Rest, and Renewal: Capstone: Design a Rite Rooted in Place and Lineage.",1
-2.4.26.07,"Living Rites: Revival, Adaptation, and Resistance",2.4.26,3,0.66,0.9408,0.7,0.7,0.54,0.66,0.67,0.72,mixed,"Advanced module in Rites, Rest, and Renewal: Living Rites: Revival, Adaptation, and Resistance.",1
-2.4.26.08,Archive as Altar: Preservation and Continuation of Rites,2.4.26,3,0.6,0.963,0.76,0.68,0.56,0.69,0.67,0.7,mixed,"Advanced module in Rites, Rest, and Renewal: Archive as Altar: Preservation and Continuation of Rites.",2
-3.1.27.01,What Counts as Knowledge? A Critical Introduction,3.1.27,1,0.53,0.9885,0.56,0.73,0.24,0.28,0.44,0.52,essay,Foundation module in Ecologies of Knowledge: What Counts as Knowledge? A Critical Introduction.,1
-3.1.27.02,"Mapping Epistemic Power: Institutions, Identity, Inheritance",3.1.27,1,0.45,1.0075,0.51,0.73,0.21,0.39,0.49,0.57,essay,"Foundation module in Ecologies of Knowledge: Mapping Epistemic Power: Institutions, Identity, Inheritance.",2
-3.1.27.03,Marginalised Knowledges: Case Studies and Counter-Stories,3.1.27,2,0.59,0.9667,0.56,0.75,0.16,0.53,0.48,0.71,essay,Intermediate module in Ecologies of Knowledge: Marginalised Knowledges: Case Studies and Counter-Stories.,1
-3.1.27.04,Pedagogies of Refusal and Disobedience,3.1.27,2,0.58,0.9704,0.56,0.69,0.22,0.46,0.45,0.67,essay,Intermediate module in Ecologies of Knowledge: Pedagogies of Refusal and Disobedience.,1
-3.1.27.05,Research as Repair: Methods for Epistemic Accountability,3.1.27,2,0.48,1.003,0.53,0.75,0.16,0.47,0.52,0.71,essay,Intermediate module in Ecologies of Knowledge: Research as Repair: Methods for Epistemic Accountability.,2
-3.1.27.06,Capstone: Design an Intervention for Epistemic Justice in a Chosen Setting,3.1.27,3,0.88,0.8594,0.58,0.77,0.16,0.72,0.45,0.86,project,Final-year integrative project in Ecologies of Knowledge: Capstone: Design an Intervention for Epistemic Justice in a Chosen Setting.,1
-3.1.27.07,"Ethics of Citation, Silence, and Centreing",3.1.27,3,0.61,0.9593,0.58,0.76,0.17,0.61,0.44,0.85,essay,"Advanced module in Ecologies of Knowledge: Ethics of Citation, Silence, and Centreing.",1
-3.1.27.08,From Justice to Joy: Knowledge for Liberation,3.1.27,3,0.61,0.9593,0.59,0.74,0.18,0.66,0.48,0.86,essay,Advanced module in Ecologies of Knowledge: From Justice to Joy: Knowledge for Liberation.,2
-3.1.28.01,Introduction to Indigenous and Folk Epistemologies,3.1.28,1,0.48,1.0029,0.54,0.69,0.24,0.25,0.52,0.51,essay,Introductory ecologies of knowledge module establishing core concepts and practices.,1
-3.1.28.02,"Story, Land, and Lineage as Knowledge Archives",3.1.28,1,0.64,0.9482,0.51,0.72,0.23,0.31,0.5,0.51,essay,"Foundation module in Ecologies of Knowledge: Story, Land, and Lineage as Knowledge Archives.",2
-3.1.28.03,Seasonal Cycles and Place-Based Know-How,3.1.28,2,0.48,1.003,0.59,0.72,0.21,0.46,0.46,0.66,essay,Intermediate module in Ecologies of Knowledge: Seasonal Cycles and Place-Based Know-How.,1
-3.1.28.04,"Oral Tradition, Performance, and Craft Transmission",3.1.28,2,0.63,0.9519,0.57,0.79,0.16,0.52,0.44,0.66,essay,"Intermediate module in Ecologies of Knowledge: Oral Tradition, Performance, and Craft Transmission.",1
-3.1.28.05,Fieldwork: Learning with Local Knowledge Holders,3.1.28,2,0.62,0.9556,0.56,0.73,0.22,0.49,0.47,0.66,mixed,Intermediate module in Ecologies of Knowledge: Fieldwork: Learning with Local Knowledge Holders.,2
-3.1.28.06,Capstone: Collaborative Knowledge Project with a Community or Elder,3.1.28,3,0.71,0.9223,0.61,0.72,0.16,0.71,0.56,0.84,project,Final-year integrative project in Ecologies of Knowledge: Capstone: Collaborative Knowledge Project with a Community or Elder.,1
-3.1.28.07,Continuity and Innovation: Keeping Knowledge Alive,3.1.28,3,0.62,0.9556,0.51,0.72,0.23,0.63,0.46,0.82,essay,Advanced module in Ecologies of Knowledge: Continuity and Innovation: Keeping Knowledge Alive.,1
-3.1.28.08,"Knowledge Under Threat: Colonisation, Climate, and Cultural Loss",3.1.28,3,0.65,0.9445,0.51,0.75,0.24,0.65,0.49,0.83,essay,"Advanced module in Ecologies of Knowledge: Knowledge Under Threat: Colonisation, Climate, and Cultural Loss.",2
-3.2.29.01,"Lifespan Learning: Cognitive, Emotional, and Social Perspectives",3.2.29,1,0.26,1.036,0.57,0.7,0.32,0.31,0.46,0.45,essay,"Foundation module in Learning Futures: Lifespan Learning: Cognitive, Emotional, and Social Perspectives.",1
-3.2.29.02,"The Role of Elders, Children, and Peers in Knowledge Cultures",3.2.29,1,0.43,1.0105,0.56,0.71,0.3,0.32,0.47,0.43,essay,"Foundation module in Learning Futures: The Role of Elders, Children, and Peers in Knowledge Cultures.",2
-3.2.29.03,Designing for Dialogue Across Generations,3.2.29,2,0.57,0.9741,0.65,0.76,0.35,0.46,0.45,0.56,essay,Intermediate module in Learning Futures: Designing for Dialogue Across Generations.,1
-3.2.29.04,"Memory, Story, and Shared Futures",3.2.29,2,0.63,0.9519,0.63,0.72,0.29,0.51,0.56,0.56,essay,"Intermediate module in Learning Futures: Memory, Story, and Shared Futures.",1
-3.2.29.05,"Intergenerational Learning in Family, Community, and Institutional Settings",3.2.29,2,0.55,0.9815,0.67,0.76,0.35,0.46,0.54,0.58,essay,"Intermediate module in Learning Futures: Intergenerational Learning in Family, Community, and Institutional Settings.",2
-3.2.29.06,Capstone: Design and Evaluate a Multi-Generational Learning Experience,3.2.29,3,0.74,0.9112,0.67,0.74,0.3,0.76,0.53,0.82,project,Final-year integrative project in Learning Futures: Capstone: Design and Evaluate a Multi-Generational Learning Experience.,1
-3.2.29.07,Learning as Kinship: Ethics and Boundaries of Relational Education,3.2.29,3,0.76,0.9038,0.6,0.74,0.35,0.63,0.47,0.71,essay,Advanced module in Learning Futures: Learning as Kinship: Ethics and Boundaries of Relational Education.,1
-3.2.29.08,"Time, Trust, and Transmission: Rethinking Educational Legacies",3.2.29,3,0.75,0.9075,0.55,0.72,0.34,0.62,0.45,0.71,essay,"Advanced module in Learning Futures: Time, Trust, and Transmission: Rethinking Educational Legacies.",2
-3.2.30.01,Learning in Crisis: Adaptive Theories of Change,3.2.30,1,0.34,1.024,0.55,0.69,0.36,0.32,0.5,0.47,essay,Foundation module in Learning Futures: Learning in Crisis: Adaptive Theories of Change.,1
-3.2.30.02,"Uncertainty as Curriculum: Improvisation, Reflection, and Risk",3.2.30,1,0.31,1.0285,0.58,0.76,0.34,0.35,0.49,0.43,essay,"Foundation module in Learning Futures: Uncertainty as Curriculum: Improvisation, Reflection, and Risk.",2
-3.2.30.03,Slow Pedagogies and the Politics of Urgency,3.2.30,2,0.58,0.9704,0.59,0.69,0.31,0.48,0.47,0.57,essay,Intermediate module in Learning Futures: Slow Pedagogies and the Politics of Urgency.,1
-3.2.30.04,Teaching for Futures Not Yet Known,3.2.30,2,0.55,0.9815,0.6,0.75,0.32,0.49,0.44,0.56,essay,Intermediate module in Learning Futures: Teaching for Futures Not Yet Known.,1
-3.2.30.05,"Climate, Collapse, and the Emotional Life of Learners",3.2.30,2,0.46,1.006,0.55,0.71,0.33,0.51,0.48,0.62,essay,"Intermediate module in Learning Futures: Climate, Collapse, and the Emotional Life of Learners.",2
-3.2.30.06,Capstone: Prototype a Learning Process for a Complex Challenge,3.2.30,3,0.92,0.8446,0.55,0.68,0.29,0.72,0.44,0.79,project,Final-year integrative project in Learning Futures: Capstone: Prototype a Learning Process for a Complex Challenge.,1
-3.2.30.07,Rehearsing the Unthinkable: Scenario Pedagogies and Ritual Learning,3.2.30,3,0.8,0.889,0.62,0.74,0.32,0.62,0.44,0.71,essay,Advanced module in Learning Futures: Rehearsing the Unthinkable: Scenario Pedagogies and Ritual Learning.,1
-3.2.30.08,"Rebuilding from the Rubble: Hope, Failure, and Regenerative Education",3.2.30,3,0.61,0.9593,0.58,0.7,0.31,0.69,0.45,0.73,essay,"Advanced module in Learning Futures: Rebuilding from the Rubble: Hope, Failure, and Regenerative Education.",2
-3.3.31.01,Foundations of Systems and Frameworks,3.3.31,1,0.26,1.0365,0.54,0.75,0.49,0.29,0.51,0.43,essay,Introductory transdisciplinary design and praxis module establishing core concepts and practices.,1
-3.3.31.02,Mapping Knowledge: Visualisation and Vocabulary,3.3.31,1,0.44,1.009,0.57,0.74,0.48,0.38,0.51,0.42,essay,Foundation module in Transdisciplinary Design and Praxis: Mapping Knowledge: Visualisation and Vocabulary.,2
-3.3.31.03,"Designing for Complexity: Models, Tools, and Tensions",3.3.31,2,0.67,0.9371,0.55,0.83,0.46,0.53,0.44,0.64,essay,"Intermediate module in Transdisciplinary Design and Praxis: Designing for Complexity: Models, Tools, and Tensions.",1
-3.3.31.04,Rapid Prototyping for Learning and Decision-Making,3.3.31,2,0.54,0.9852,0.58,0.88,0.47,0.54,0.45,0.59,essay,Intermediate module in Transdisciplinary Design and Praxis: Rapid Prototyping for Learning and Decision-Making.,1
-3.3.31.05,"Failure, Feedback, and Iteration in Knowledge Design",3.3.31,2,0.62,0.9556,0.52,0.8,0.54,0.47,0.52,0.64,essay,"Intermediate module in Transdisciplinary Design and Praxis: Failure, Feedback, and Iteration in Knowledge Design.",2
-3.3.31.06,Capstone: Build and Test a Knowledge System for a Real-World Context,3.3.31,3,0.76,0.9038,0.56,0.76,0.51,0.74,0.49,0.84,project,Final-year integrative project in Transdisciplinary Design and Praxis: Capstone: Build and Test a Knowledge System for a Real-World Context.,1
-3.3.31.07,"Ethics of Representation, Abstraction, and Power",3.3.31,3,0.78,0.8964,0.58,0.75,0.54,0.61,0.46,0.75,essay,"Advanced module in Transdisciplinary Design and Praxis: Ethics of Representation, Abstraction, and Power.",1
-3.3.31.08,Translating Between Worlds: Interdisciplinary Bridge-Building,3.3.31,3,0.68,0.9334,0.58,0.82,0.47,0.61,0.48,0.74,essay,Advanced module in Transdisciplinary Design and Praxis: Translating Between Worlds: Interdisciplinary Bridge-Building.,2
-3.3.32.01,"The Body as Instrument, Archive, and Witness",3.3.32,1,0.26,1.036,0.52,0.79,0.48,0.31,0.45,0.47,essay,"Foundation module in Transdisciplinary Design and Praxis: The Body as Instrument, Archive, and Witness.",1
-3.3.32.02,Introduction to Embodied Inquiry Practices,3.3.32,1,0.34,1.0245,0.54,0.75,0.52,0.26,0.44,0.47,essay,Introductory transdisciplinary design and praxis module establishing core concepts and practices.,2
-3.3.32.03,"Movement, Memory, and Meaning-Making",3.3.32,2,0.49,1.0015,0.59,0.88,0.46,0.54,0.51,0.57,essay,"Intermediate module in Transdisciplinary Design and Praxis: Movement, Memory, and Meaning-Making.",1
-3.3.32.04,Autoethnography and Sensory Documentation,3.3.32,2,0.61,0.9593,0.58,0.81,0.46,0.48,0.47,0.56,essay,Intermediate module in Transdisciplinary Design and Praxis: Autoethnography and Sensory Documentation.,1
-3.3.32.05,Ethics of Vulnerability and Exposure in Research,3.3.32,2,0.52,0.9926,0.54,0.75,0.47,0.53,0.48,0.58,essay,Intermediate module in Transdisciplinary Design and Praxis: Ethics of Vulnerability and Exposure in Research.,2
-3.3.32.06,Capstone: Perform or Document an Embodied Research Process,3.3.32,3,0.72,0.9186,0.56,0.75,0.49,0.78,0.45,0.83,project,Final-year integrative project in Transdisciplinary Design and Praxis: Capstone: Perform or Document an Embodied Research Process.,1
-3.3.32.07,Designing Research with Care and Consent,3.3.32,3,0.64,0.9482,0.53,0.81,0.48,0.68,0.52,0.75,essay,Advanced module in Transdisciplinary Design and Praxis: Designing Research with Care and Consent.,1
-3.3.32.08,Beyond Objectivity: Knowing Through Being and Becoming,3.3.32,3,0.71,0.9223,0.59,0.81,0.54,0.66,0.49,0.73,essay,Advanced module in Transdisciplinary Design and Praxis: Beyond Objectivity: Knowing Through Being and Becoming.,2
-4.1.33.01,"Introduction to Ancient Lexicons: Form, Function, Power",4.1.33,1,0.2,1.045,0.63,0.7,0.32,0.26,0.53,0.36,essay,Introductory language and symbol module establishing core concepts and practices.,1
-4.1.33.02,Script and Sound: Orthography Through Time,4.1.33,1,0.37,1.0195,0.62,0.7,0.34,0.35,0.52,0.44,essay,Foundation module in Language and Symbol: Script and Sound: Orthography Through Time.,2
-4.1.33.03,Translators as Bridgebuilders: Ethics and Dilemmas,4.1.33,2,0.57,0.9741,0.64,0.69,0.38,0.5,0.51,0.58,essay,Intermediate module in Language and Symbol: Translators as Bridgebuilders: Ethics and Dilemmas.,1
-4.1.33.04,Reconstructing Lost Grammar Systems,4.1.33,2,0.7,0.926,0.64,0.75,0.37,0.51,0.53,0.58,essay,Intermediate module in Language and Symbol: Reconstructing Lost Grammar Systems.,1
-4.1.33.05,Magical Texts and Forbidden Phrases,4.1.33,2,0.54,0.9852,0.63,0.69,0.33,0.49,0.51,0.59,essay,Intermediate module in Language and Symbol: Magical Texts and Forbidden Phrases.,2
-4.1.33.06,Capstone: Translate and Annotate a Ritual or Found Text,4.1.33,3,0.78,0.8964,0.61,0.75,0.36,0.74,0.56,0.81,project,Final-year integrative project in Language and Symbol: Capstone: Translate and Annotate a Ritual or Found Text.,1
-4.1.33.07,Language Death and Revival: A Political Linguistics Practicum,4.1.33,3,0.74,0.9112,0.64,0.73,0.35,0.62,0.51,0.7,mixed,Advanced module in Language and Symbol: Language Death and Revival: A Political Linguistics Practicum.,1
-4.1.33.08,Polyphonic Meaning: Translating Without Colonising,4.1.33,3,0.67,0.9371,0.57,0.73,0.33,0.64,0.5,0.66,essay,Advanced module in Language and Symbol: Polyphonic Meaning: Translating Without Colonising.,2
-4.1.34.01,"Introduction to Runic Systems: Function, Form, Origin",4.1.34,1,0.2,1.045,0.58,0.71,0.37,0.33,0.48,0.39,essay,Introductory language and symbol module establishing core concepts and practices.,1
-4.1.34.02,Scripts as Tools and Talismans,4.1.34,1,0.33,1.0255,0.6,0.76,0.38,0.37,0.53,0.4,essay,Foundation module in Language and Symbol: Scripts as Tools and Talismans.,2
-4.1.34.03,"Carved Knowledge: Stone, Wood, Bone, Metal",4.1.34,2,0.58,0.9704,0.57,0.75,0.35,0.46,0.55,0.52,essay,"Intermediate module in Language and Symbol: Carved Knowledge: Stone, Wood, Bone, Metal.",1
-4.1.34.04,"Comparative Semiotics: Elven, Dwarven, Human, Other",4.1.34,2,0.73,0.9149,0.59,0.75,0.34,0.53,0.52,0.56,essay,"Intermediate module in Language and Symbol: Comparative Semiotics: Elven, Dwarven, Human, Other.",1
-4.1.34.05,Inscription Lab: Designing Functional Symbol Systems,4.1.34,2,0.5,1.0,0.56,0.81,0.32,0.48,0.5,0.59,mixed,Intermediate module in Language and Symbol: Inscription Lab: Designing Functional Symbol Systems.,2
-4.1.34.06,Capstone: Develop a Scripted System for a Specific Community or Use,4.1.34,3,0.72,0.9186,0.65,0.73,0.37,0.75,0.64,0.85,project,Final-year integrative project in Language and Symbol: Capstone: Develop a Scripted System for a Specific Community or Use.,1
-4.1.34.07,Runic Encoding and Hidden Messages,4.1.34,3,0.62,0.9556,0.63,0.72,0.35,0.66,0.55,0.68,essay,Advanced module in Language and Symbol: Runic Encoding and Hidden Messages.,1
-4.1.34.08,"Power and the Written Form: Archives, Seals, and Spells",4.1.34,3,0.62,0.9556,0.61,0.76,0.39,0.68,0.49,0.66,essay,"Advanced module in Language and Symbol: Power and the Written Form: Archives, Seals, and Spells.",2
-4.1.35.01,Foundations in Cross-Species Communication,4.1.35,1,0.27,1.035,0.6,0.74,0.35,0.26,0.52,0.39,essay,Introductory language and symbol module establishing core concepts and practices.,1
-4.1.35.02,"Meaning Beyond Words: Gesture, Scent, Frequency",4.1.35,1,0.4,1.015,0.58,0.68,0.31,0.36,0.5,0.4,essay,"Foundation module in Language and Symbol: Meaning Beyond Words: Gesture, Scent, Frequency.",2
-4.1.35.03,Listening to the More-Than-Human World,4.1.35,2,0.5,1.0,0.66,0.76,0.34,0.52,0.5,0.51,essay,Intermediate module in Language and Symbol: Listening to the More-Than-Human World.,1
-4.1.35.04,"Shared Contexts: Place, Pattern, and Play",4.1.35,2,0.45,1.0075,0.67,0.69,0.32,0.46,0.63,0.57,essay,"Intermediate module in Language and Symbol: Shared Contexts: Place, Pattern, and Play.",1
-4.1.35.05,Ethical Dilemmas in Inter-species Contact and Representation,4.1.35,2,0.65,0.9445,0.7,0.72,0.31,0.54,0.54,0.52,essay,Intermediate module in Language and Symbol: Ethical Dilemmas in Inter-species Contact and Representation.,2
-4.1.35.06,Capstone: Design a Communicative Interface or Ritual Across Species,4.1.35,3,0.9,0.852,0.64,0.79,0.39,0.71,0.54,0.83,project,Final-year integrative project in Language and Symbol: Capstone: Design a Communicative Interface or Ritual Across Species.,1
-4.1.35.07,"Decentralised Semantics: Forests, Swarms, Systems",4.1.35,3,0.8,0.889,0.64,0.76,0.35,0.63,0.48,0.68,essay,"Advanced module in Language and Symbol: Decentralised Semantics: Forests, Swarms, Systems.",1
-4.1.35.08,Toward a Planetary Grammar: Futures of Communication,4.1.35,3,0.87,0.8631,0.6,0.74,0.39,0.66,0.55,0.7,essay,Advanced module in Language and Symbol: Toward a Planetary Grammar: Futures of Communication.,2
-4.2.36.01,"Memory as Method: Ritual, Repetition, Refrain",4.2.36,1,0.33,1.0255,0.69,0.64,0.48,0.34,0.53,0.36,essay,"Foundation module in Oral Histories and Memorycraft: Memory as Method: Ritual, Repetition, Refrain.",1
-4.2.36.02,Personal and Collective Recollection Practices,4.2.36,1,0.44,1.009,0.82,0.7,0.44,0.36,0.52,0.48,essay,Foundation module in Oral Histories and Memorycraft: Personal and Collective Recollection Practices.,2
-4.2.36.03,"Rituals of Grief, Joy, and Transition",4.2.36,2,0.51,0.9963,0.72,0.72,0.45,0.49,0.52,0.55,essay,"Intermediate module in Oral Histories and Memorycraft: Rituals of Grief, Joy, and Transition.",1
-4.2.36.04,Objects as Anchors: Material Memorywork,4.2.36,2,0.52,0.9926,0.7,0.65,0.41,0.54,0.55,0.54,essay,Intermediate module in Oral Histories and Memorycraft: Objects as Anchors: Material Memorywork.,1
-4.2.36.05,Intergenerational Storyholding,4.2.36,2,0.56,0.9778,0.73,0.65,0.49,0.46,0.55,0.56,essay,Intermediate module in Oral Histories and Memorycraft: Intergenerational Storyholding.,2
-4.2.36.06,Capstone: Design a Community Ritual of Remembrance,4.2.36,3,0.79,0.8927,0.76,0.75,0.41,0.79,0.61,0.82,project,Final-year integrative project in Oral Histories and Memorycraft: Capstone: Design a Community Ritual of Remembrance.,1
-4.2.36.07,Time Loops and Re-Enactment in Social Healing,4.2.36,3,0.75,0.9075,0.69,0.67,0.46,0.66,0.48,0.72,essay,Advanced module in Oral Histories and Memorycraft: Time Loops and Re-Enactment in Social Healing.,1
-4.2.36.08,Forgetting as a Political Act: Erasure and Resistance,4.2.36,3,0.79,0.8927,0.7,0.68,0.41,0.65,0.5,0.74,essay,Advanced module in Oral Histories and Memorycraft: Forgetting as a Political Act: Erasure and Resistance.,2
-4.2.37.01,"Oral Histories: Ethics, Skills, and Power Dynamics",4.2.37,1,0.44,1.009,0.71,0.72,0.44,0.37,0.48,0.39,essay,"Foundation module in Oral Histories and Memorycraft: Oral Histories: Ethics, Skills, and Power Dynamics.",1
-4.2.37.02,"The Storyweaver’s Craft: Listening, Shaping, Returning",4.2.37,1,0.43,1.0105,0.81,0.75,0.44,0.34,0.5,0.37,essay,"Foundation module in Oral Histories and Memorycraft: The Storyweaver’s Craft: Listening, Shaping, Returning.",2
-4.2.37.03,"Fieldwork: Interviewing, Mapping, Interpreting",4.2.37,2,0.51,0.9963,0.82,0.65,0.42,0.54,0.48,0.54,mixed,"Intermediate module in Oral Histories and Memorycraft: Fieldwork: Interviewing, Mapping, Interpreting.",1
-4.2.37.04,Digital and Physical Story Archives,4.2.37,2,0.53,0.9889,0.74,0.66,0.42,0.52,0.55,0.59,essay,Intermediate module in Oral Histories and Memorycraft: Digital and Physical Story Archives.,1
-4.2.37.05,Community Consent and Cultural Stewardship,4.2.37,2,0.51,0.9963,0.78,0.66,0.43,0.47,0.56,0.59,essay,Intermediate module in Oral Histories and Memorycraft: Community Consent and Cultural Stewardship.,2
-4.2.37.06,Capstone: Co-Create a Storyweaving Project With a Living Community,4.2.37,3,0.75,0.9075,0.83,0.71,0.47,0.75,0.57,0.78,project,Final-year integrative project in Oral Histories and Memorycraft: Capstone: Co-Create a Storyweaving Project With a Living Community.,1
-4.2.37.07,Counter-Histories and Disobedient Narratives,4.2.37,3,0.66,0.9408,0.71,0.68,0.49,0.66,0.52,0.71,essay,Advanced module in Oral Histories and Memorycraft: Counter-Histories and Disobedient Narratives.,1
-4.2.37.08,"Narrating the Future: Hope, Speculation, Legacy",4.2.37,3,0.72,0.9186,0.72,0.64,0.44,0.63,0.55,0.71,essay,"Advanced module in Oral Histories and Memorycraft: Narrating the Future: Hope, Speculation, Legacy.",2
-4.2.38.01,"Introduction to Folklore: Forms, Functions, Foundations",4.2.38,1,0.35,1.023,0.7,0.7,0.42,0.3,0.54,0.41,essay,Introductory oral histories and memorycraft module establishing core concepts and practices.,1
-4.2.38.02,"Modes of Transmission: Voice, Object, Movement",4.2.38,1,0.35,1.0225,0.76,0.71,0.48,0.37,0.51,0.41,essay,"Foundation module in Oral Histories and Memorycraft: Modes of Transmission: Voice, Object, Movement.",2
-4.2.38.03,"Fieldwork in Folk Practice: Song, Craft, Ceremony",4.2.38,2,0.46,1.006,0.69,0.78,0.48,0.5,0.52,0.57,mixed,"Intermediate module in Oral Histories and Memorycraft: Fieldwork in Folk Practice: Song, Craft, Ceremony.",1
-4.2.38.04,Archive as Living Entity: Curation and Custodianship,4.2.38,2,0.62,0.9556,0.75,0.64,0.43,0.5,0.48,0.58,essay,Intermediate module in Oral Histories and Memorycraft: Archive as Living Entity: Curation and Custodianship.,1
-4.2.38.05,Adaptation and Drift in Oral Tradition,4.2.38,2,0.49,1.0015,0.73,0.67,0.42,0.51,0.56,0.56,essay,Intermediate module in Oral Histories and Memorycraft: Adaptation and Drift in Oral Tradition.,2
-4.2.38.06,Capstone: Curate a Multimodal Folklore Archive,4.2.38,3,0.84,0.8742,0.69,0.65,0.44,0.78,0.5,0.79,project,Final-year integrative project in Oral Histories and Memorycraft: Capstone: Curate a Multimodal Folklore Archive.,1
-4.2.38.07,"Rituals of Retelling: When to Hold, When to Change",4.2.38,3,0.7,0.926,0.76,0.68,0.49,0.64,0.54,0.66,essay,"Advanced module in Oral Histories and Memorycraft: Rituals of Retelling: When to Hold, When to Change.",1
-4.2.38.08,Decolonising the Archive: Authority and Access,4.2.38,3,0.65,0.9445,0.7,0.67,0.48,0.68,0.55,0.68,essay,Advanced module in Oral Histories and Memorycraft: Decolonising the Archive: Authority and Access.,2
-4.3.39.01,Rooted Reasoning: Foundations of Elven Moral Thought,4.3.39,1,0.42,1.0127,0.66,0.75,0.12,0.28,0.49,0.5,essay,Introductory philosophy and ethics module establishing core concepts and practices.,1
-4.3.39.02,Harmonies and Hierarchies: Structures of Elven Governance,4.3.39,1,0.55,0.9815,0.62,0.74,0.16,0.37,0.48,0.52,essay,Foundation module in Philosophy and Ethics: Harmonies and Hierarchies: Structures of Elven Governance.,2
-4.3.39.03,"Governing With Grace: Silence, Consensus, and Song",4.3.39,2,0.67,0.9371,0.63,0.73,0.12,0.52,0.52,0.66,essay,"Intermediate module in Philosophy and Ethics: Governing With Grace: Silence, Consensus, and Song.",1
-4.3.39.04,Dissonance and the Disobedient Leaf: When Laws Falter,4.3.39,2,0.55,0.9815,0.67,0.72,0.14,0.5,0.5,0.64,essay,Intermediate module in Philosophy and Ethics: Dissonance and the Disobedient Leaf: When Laws Falter.,1
-4.3.39.05,"Comparative Ethics: Dwarven, Human, Elven Codes in Tension",4.3.39,2,0.76,0.9038,0.62,0.76,0.17,0.46,0.48,0.66,essay,"Intermediate module in Philosophy and Ethics: Comparative Ethics: Dwarven, Human, Elven Codes in Tension.",2
-4.3.39.06,Capstone: Design a Governance Ritual for a Fractured Realm,4.3.39,3,0.88,0.8594,0.63,0.77,0.15,0.73,0.48,0.83,project,Final-year integrative project in Philosophy and Ethics: Capstone: Design a Governance Ritual for a Fractured Realm.,1
-4.3.39.07,"Shadow of the Grove: Corruption, Exile, and Redemption",4.3.39,3,0.72,0.9186,0.66,0.73,0.14,0.63,0.56,0.77,essay,"Advanced module in Philosophy and Ethics: Shadow of the Grove: Corruption, Exile, and Redemption.",1
-4.3.39.08,Legacy and Liminality: Ruling Across Time and Species,4.3.39,3,0.78,0.8964,0.61,0.74,0.13,0.69,0.52,0.81,essay,Advanced module in Philosophy and Ethics: Legacy and Liminality: Ruling Across Time and Species.,2
-4.3.40.01,"Power as Pattern: Visibility, Inheritance, Flow",4.3.40,1,0.5,1.0,0.64,0.73,0.18,0.32,0.56,0.51,essay,"Foundation module in Philosophy and Ethics: Power as Pattern: Visibility, Inheritance, Flow.",1
-4.3.40.02,"Naming the Bindings: Ideology, Myth, and Control",4.3.40,1,0.68,0.9334,0.69,0.68,0.16,0.35,0.54,0.45,essay,"Foundation module in Philosophy and Ethics: Naming the Bindings: Ideology, Myth, and Control.",2
-4.3.40.03,"Resistance as Ritual: Stories, Stones, and Sabotage",4.3.40,2,0.49,1.0015,0.63,0.71,0.12,0.52,0.52,0.61,essay,"Intermediate module in Philosophy and Ethics: Resistance as Ritual: Stories, Stones, and Sabotage.",1
-4.3.40.04,Quiet Revolutions: Subtle Acts of Elven Defiance,4.3.40,2,0.61,0.9593,0.61,0.71,0.13,0.47,0.51,0.63,essay,Intermediate module in Philosophy and Ethics: Quiet Revolutions: Subtle Acts of Elven Defiance.,1
-4.3.40.05,"Power and the Gaze: Who Watches, Who Speaks, Who Remembers",4.3.40,2,0.63,0.9519,0.69,0.7,0.17,0.54,0.56,0.61,essay,"Intermediate module in Philosophy and Ethics: Power and the Gaze: Who Watches, Who Speaks, Who Remembers.",2
-4.3.40.06,Capstone: Re-map a System Through Critical Cartography,4.3.40,3,0.85,0.8705,0.63,0.69,0.14,0.75,0.48,0.86,project,Final-year integrative project in Philosophy and Ethics: Capstone: Re-map a System Through Critical Cartography.,1
-4.3.40.07,The Hollow Tree: Power’s Absences and Afterlives,4.3.40,3,0.72,0.9186,0.66,0.76,0.14,0.66,0.5,0.78,essay,Advanced module in Philosophy and Ethics: The Hollow Tree: Power’s Absences and Afterlives.,1
-4.3.40.08,Dreaming New Structures: An Ethics of Emergence,4.3.40,3,0.67,0.9371,0.64,0.68,0.19,0.65,0.55,0.76,essay,Advanced module in Philosophy and Ethics: Dreaming New Structures: An Ethics of Emergence.,2
-4.3.41.01,The Loom of Lore: Threads from Ancients and Elders,4.3.41,1,0.49,1.0015,0.63,0.75,0.18,0.39,0.56,0.51,essay,Foundation module in Philosophy and Ethics: The Loom of Lore: Threads from Ancients and Elders.,1
-4.3.41.02,"Tales That Teach: Fable, Parable, and Prophecy",4.3.41,1,0.5,1.0,0.62,0.75,0.12,0.34,0.52,0.45,essay,"Foundation module in Philosophy and Ethics: Tales That Teach: Fable, Parable, and Prophecy.",2
-4.3.41.03,"Ethical Weaving: Truth, Ambiguity, and the Patterned Life",4.3.41,2,0.54,0.9852,0.64,0.73,0.15,0.51,0.48,0.66,essay,"Intermediate module in Philosophy and Ethics: Ethical Weaving: Truth, Ambiguity, and the Patterned Life.",1
-4.3.41.04,"Moral Craft in Practice: Decision, Care, and Consequence",4.3.41,2,0.5,1.0,0.63,0.76,0.12,0.48,0.55,0.62,essay,"Intermediate module in Philosophy and Ethics: Moral Craft in Practice: Decision, Care, and Consequence.",1
-4.3.41.05,"Silence, Stars, and Stillness: Ethical Insight from Nature",4.3.41,2,0.59,0.9667,0.61,0.71,0.17,0.54,0.49,0.61,essay,"Intermediate module in Philosophy and Ethics: Silence, Stars, and Stillness: Ethical Insight from Nature.",2
-4.3.41.06,Capstone: Curate a Living Codex of Wisdom for a Future Generation,4.3.41,3,0.8,0.889,0.68,0.74,0.15,0.76,0.56,0.81,project,Final-year integrative project in Philosophy and Ethics: Capstone: Curate a Living Codex of Wisdom for a Future Generation.,1
-4.3.41.07,Walking the Spiral Path: Unknowing as Moral Maturity,4.3.41,3,0.79,0.8927,0.69,0.73,0.15,0.67,0.54,0.81,essay,Advanced module in Philosophy and Ethics: Walking the Spiral Path: Unknowing as Moral Maturity.,1
-4.3.41.08,The Listener’s Burden: Ethics in Reception and Response,4.3.41,3,0.62,0.9556,0.61,0.76,0.12,0.68,0.48,0.74,essay,Advanced module in Philosophy and Ethics: The Listener’s Burden: Ethics in Reception and Response.,2
-4.4.42.01,"Foundations of Consensus: Song, Circle, and Signal",4.4.42,1,0.27,1.035,0.76,0.68,0.32,0.32,0.59,0.37,essay,Introductory political myth and governance module establishing core concepts and practices.,1
-4.4.42.02,Polylogic: Speaking Across Worlds and Logics,4.4.42,1,0.3,1.03,0.66,0.72,0.27,0.32,0.54,0.36,essay,Foundation module in Political Myth and Governance: Polylogic: Speaking Across Worlds and Logics.,2
-4.4.42.03,Rhizomatic Authority: When Roots Speak Without Kings,4.4.42,2,0.52,0.9926,0.67,0.69,0.24,0.52,0.49,0.51,essay,Intermediate module in Political Myth and Governance: Rhizomatic Authority: When Roots Speak Without Kings.,1
-4.4.42.04,Systems of Slowness: Deep Time Decision-Making,4.4.42,2,0.54,0.9852,0.64,0.81,0.25,0.52,0.53,0.56,essay,Intermediate module in Political Myth and Governance: Systems of Slowness: Deep Time Decision-Making.,1
-4.4.42.05,"Friction, Ritual, and the Role of Pause",4.4.42,2,0.62,0.9556,0.64,0.76,0.29,0.54,0.5,0.58,essay,"Intermediate module in Political Myth and Governance: Friction, Ritual, and the Role of Pause.",2
-4.4.42.06,Capstone: Design a Consensus Model for a Fractured Society,4.4.42,3,0.87,0.8631,0.68,0.78,0.32,0.76,0.5,0.81,project,Final-year integrative project in Political Myth and Governance: Capstone: Design a Consensus Model for a Fractured Society.,1
-4.4.42.07,Dissent as Design Element,4.4.42,3,0.63,0.9519,0.63,0.81,0.27,0.65,0.55,0.72,essay,Advanced module in Political Myth and Governance: Dissent as Design Element.,1
-4.4.42.08,Sustaining Consent in the Face of Chaos and Change,4.4.42,3,0.6,0.963,0.64,0.72,0.25,0.64,0.5,0.69,essay,Advanced module in Political Myth and Governance: Sustaining Consent in the Face of Chaos and Change.,2
-4.4.43.01,Conflict as Pattern: Myths of Harmony and Rupture,4.4.43,1,0.35,1.0225,0.62,0.68,0.31,0.34,0.55,0.39,essay,Foundation module in Political Myth and Governance: Conflict as Pattern: Myths of Harmony and Rupture.,1
-4.4.43.02,Design Principles for Holding Heat,4.4.43,1,0.37,1.0195,0.61,0.82,0.24,0.39,0.49,0.44,essay,Foundation module in Political Myth and Governance: Design Principles for Holding Heat.,2
-4.4.43.03,"Symbol, Space, and Story in Conflict Mediation",4.4.43,2,0.62,0.9556,0.72,0.7,0.25,0.54,0.54,0.56,essay,"Intermediate module in Political Myth and Governance: Symbol, Space, and Story in Conflict Mediation.",1
-4.4.43.04,Ritual Technologies for Cultural Transformation,4.4.43,2,0.46,1.006,0.67,0.72,0.31,0.48,0.54,0.59,essay,Intermediate module in Political Myth and Governance: Ritual Technologies for Cultural Transformation.,1
-4.4.43.05,Restorying the Broken: Case Studies in Aesthetic Intervention,4.4.43,2,0.54,0.9852,0.67,0.77,0.31,0.5,0.51,0.59,essay,Intermediate module in Political Myth and Governance: Restorying the Broken: Case Studies in Aesthetic Intervention.,2
-4.4.43.06,Capstone: Design a Ritual Process for Conflict Repair,4.4.43,3,0.79,0.8927,0.66,0.8,0.25,0.74,0.48,0.83,project,Final-year integrative project in Political Myth and Governance: Capstone: Design a Ritual Process for Conflict Repair.,1
-4.4.43.07,From Fracture to Fractal: Nested Conflict Systems,4.4.43,3,0.7,0.926,0.67,0.75,0.24,0.68,0.55,0.69,essay,Advanced module in Political Myth and Governance: From Fracture to Fractal: Nested Conflict Systems.,1
-4.4.43.08,Beauty as Mediator: Aesthetic Practice in Governance Repair,4.4.43,3,0.66,0.9408,0.66,0.82,0.28,0.65,0.49,0.73,essay,Advanced module in Political Myth and Governance: Beauty as Mediator: Aesthetic Practice in Governance Repair.,2
-4.4.44.01,"Institutions as Stories: Memory, Myth, Mechanism",4.4.44,1,0.32,1.027,0.69,0.73,0.27,0.37,0.49,0.38,essay,"Foundation module in Political Myth and Governance: Institutions as Stories: Memory, Myth, Mechanism.",1
-4.4.44.02,Governance Through Narrative Form,4.4.44,1,0.38,1.018,0.64,0.73,0.31,0.37,0.51,0.43,essay,Foundation module in Political Myth and Governance: Governance Through Narrative Form.,2
-4.4.44.03,Scripts and Charters: The Architecture of Belief,4.4.44,2,0.58,0.9704,0.63,0.69,0.27,0.53,0.53,0.52,essay,Intermediate module in Political Myth and Governance: Scripts and Charters: The Architecture of Belief.,1
-4.4.44.04,Storytelling in Public Policy and Civic Ritual,4.4.44,2,0.61,0.9593,0.69,0.73,0.27,0.54,0.52,0.59,essay,Intermediate module in Political Myth and Governance: Storytelling in Public Policy and Civic Ritual.,1
-4.4.44.05,"Institutional Archetypes: The Tower, the Grove, the Gate",4.4.44,2,0.64,0.9482,0.69,0.76,0.29,0.53,0.53,0.54,essay,"Intermediate module in Political Myth and Governance: Institutional Archetypes: The Tower, the Grove, the Gate.",2
-4.4.44.06,Capstone: Build a Narrative Framework for an Imagined Institution,4.4.44,3,0.72,0.9186,0.69,0.82,0.29,0.74,0.49,0.86,project,Final-year integrative project in Political Myth and Governance: Capstone: Build a Narrative Framework for an Imagined Institution.,1
-4.4.44.07,Collapse and Rewriting: Institutional Myth as Adaptive Device,4.4.44,3,0.74,0.9112,0.69,0.72,0.27,0.68,0.52,0.73,essay,Advanced module in Political Myth and Governance: Collapse and Rewriting: Institutional Myth as Adaptive Device.,1
-4.4.44.08,"Governance as Theatre: Staging Trust, Accountability, and Change",4.4.44,3,0.69,0.9297,0.64,0.71,0.28,0.63,0.5,0.69,essay,"Advanced module in Political Myth and Governance: Governance as Theatre: Staging Trust, Accountability, and Change.",2
+module_code,module_title,programme_code,programme_name,year,level,semester,final_project,assessment_type,difficulty_level,mark_modifier,social_requirements,creativity_requirements,practical_theoretical_balance,group_work_intensity,independent_study_requirement,stress_level
+411101,Financial Accounting,1_1_1,Accounting & Finance,1,4,1,,Written exam,0.29,1.0315,0.3,0.62,0.52,0.71,0.4,0.38
+411102,Management Accounting,1_1_1,Accounting & Finance,1,4,1,,Multi-choice exam,0.44,1.009,0.3,0.62,0.35,0.63,0.47,0.39
+411103,Business Economics,1_1_1,Accounting & Finance,1,4,2,,Written exam,0.31,1.0285,0.3,0.68,0.29,0.6,0.34,0.34
+411104,Quantitative Methods for Business,1_1_1,Accounting & Finance,1,4,2,,Multi-choice exam,0.44,1.009,0.83,0.6,0.56,0.8,0.39,0.49
+511101,Accounting and Reporting,1_1_1,Accounting & Finance,2,5,1,,Groupwork,0.61,0.9593,0.78,0.66,0.54,0.84,0.58,0.64
+511102,Taxation,1_1_1,Accounting & Finance,2,5,1,,Written coursework,0.59,0.9667,0.72,0.72,0.45,0.76,0.52,0.56
+511103,Corporate Finance,1_1_1,Accounting & Finance,2,5,2,,Multi-choice exam,0.42,1.012,0.84,0.62,0.57,0.8,0.47,0.45
+511104,Financial Markets & Institutions,1_1_1,Accounting & Finance,2,5,2,,Multi-choice exam,0.4,1.015,0.8,0.65,0.53,0.78,0.49,0.51
+611101,Advanced Financial Reporting,1_1_1,Accounting & Finance,3,6,1,,Viva,0.7,0.926,0.74,0.65,0.54,0.73,0.69,0.67
+611102,Audit & Assurance,1_1_1,Accounting & Finance,3,6,1,,Viva,0.74,0.9112,0.63,0.6,0.52,0.66,0.72,0.68
+611103,Dissertation / Research Project,1_1_1,Accounting & Finance,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.64,0.46,0.38,0.95,0.8
+611104,Strategic Financial Management,1_1_1,Accounting & Finance,3,6,2,,Viva,0.77,0.9001,0.62,0.68,0.29,0.62,0.66,0.69
+411201,Principles of Management,1_1_2,Business Management,1,4,1,,Written exam,0.3,1.03,0.67,0.6,0.25,0.7,0.39,0.3
+411202,Introduction to Marketing,1_1_2,Business Management,1,4,1,,Written exam,0.26,1.036,0.5,0.71,0.45,0.54,0.33,0.28
+411103,Business Economics,1_1_2,Business Management,1,4,2,,Written exam,0.33,1.0255,0.56,0.66,0.33,0.52,0.4,0.29
+411203,Organisational Behaviour,1_1_2,Business Management,1,4,2,,Presentation,0.27,1.0345,0.83,0.69,0.44,0.79,0.29,0.3
+511201,Business Operations,1_1_2,Business Management,2,5,1,,Groupwork,0.44,1.009,0.77,0.67,0.49,0.87,0.43,0.5
+511202,People Resource Management,1_1_2,Business Management,2,5,1,,Written exam,0.55,0.9815,0.57,0.68,0.24,0.62,0.45,0.51
+511103,Corporate Finance,1_1_2,Business Management,2,5,2,,Written coursework,0.63,0.9519,0.68,0.63,0.52,0.78,0.7,0.66
+511203,Business Analytics,1_1_2,Business Management,2,5,2,,Written coursework,0.63,0.9519,0.85,0.58,0.56,0.82,0.66,0.64
+611201,Strategic Management,1_1_2,Business Management,3,6,1,,Viva,0.83,0.8779,0.53,0.62,0.21,0.47,0.78,0.73
+611202,Dissertation / Research Project,1_1_2,Business Management,3,6,1,1.0,Written coursework,0.94,0.8372,0.68,0.73,0.39,0.38,0.95,0.78
+611203,Entrepreneurship,1_1_2,Business Management,3,6,2,,Groupwork,0.71,0.9223,0.79,0.75,0.38,0.93,0.62,0.74
+611204,Business Ethics & Corporate Governance,1_1_2,Business Management,3,6,2,,Written coursework,0.62,0.9556,0.57,0.67,0.16,0.47,0.73,0.6
+411301,Introduction to Entrepreneurship,1_1_3,Entrepreneurship and Trade,1,4,1,,Presentation,0.27,1.0345,0.81,0.73,0.58,0.82,0.19,0.31
+411302,Marketing Fundamentals,1_1_3,Entrepreneurship and Trade,1,4,1,,Written exam,0.35,1.0225,0.64,0.65,0.22,0.6,0.28,0.34
+411103,Business Economics,1_1_3,Entrepreneurship and Trade,1,4,2,,Written exam,0.33,1.0255,0.68,0.68,0.26,0.61,0.32,0.25
+411202,Introduction to Marketing,1_1_3,Entrepreneurship and Trade,1,4,2,,Written coursework,0.33,1.0255,0.71,0.61,0.38,0.62,0.45,0.35
+511301,New Venture Creation,1_1_3,Entrepreneurship and Trade,2,5,1,,Written exam,0.48,1.003,0.69,0.65,0.49,0.76,0.58,0.46
+511302,Global Trade & Investment,1_1_3,Entrepreneurship and Trade,2,5,1,,Multi-choice exam,0.53,0.9889,0.76,0.63,0.45,0.8,0.36,0.46
+511303,Supply Chain Management,1_1_3,Entrepreneurship and Trade,2,5,2,,Written coursework,0.59,0.9667,0.58,0.74,0.29,0.58,0.63,0.56
+511304,Entrepreneurial Finance,1_1_3,Entrepreneurship and Trade,2,5,2,,Written coursework,0.63,0.9519,0.8,0.61,0.54,0.83,0.61,0.65
+611301,Strategic Entrepreneurship,1_1_3,Entrepreneurship and Trade,3,6,1,,Written coursework,0.75,0.9075,0.9,0.65,0.42,0.8,0.78,0.74
+611302,Dissertation / Research Project,1_1_3,Entrepreneurship and Trade,3,6,1,1.0,Written coursework,0.95,0.8335,0.6,0.68,0.54,0.38,0.95,0.79
+611303,Innovation Management,1_1_3,Entrepreneurship and Trade,3,6,2,,Written coursework,0.61,0.9593,0.63,0.71,0.18,0.64,0.64,0.64
+611304,Emerging Markets & Trade Policy,1_1_3,Entrepreneurship and Trade,3,6,2,,Viva,0.8,0.889,0.7,0.69,0.16,0.66,0.8,0.76
+411401,Introduction to Hospitality & Tourism,1_1_4,Hospitality and Tourism Management,1,4,1,,Written coursework,0.34,1.024,0.81,0.6,0.62,0.74,0.26,0.35
+411402,Customer Experience Management,1_1_4,Hospitality and Tourism Management,1,4,1,,Multi-choice exam,0.42,1.012,0.74,0.56,0.41,0.6,0.41,0.38
+411302,Marketing Fundamentals,1_1_4,Hospitality and Tourism Management,1,4,2,,Written coursework,0.42,1.012,0.74,0.69,0.21,0.54,0.29,0.37
+411403,Business Operations,1_1_4,Hospitality and Tourism Management,1,4,2,,Groupwork,0.19,1.0465,0.8,0.65,0.54,0.85,0.24,0.21
+511401,Hospitality Operations Management,1_1_4,Hospitality and Tourism Management,2,5,1,,Written exam,0.56,0.9778,0.64,0.71,0.1,0.61,0.53,0.53
+511402,Tourism Planning & Development,1_1_4,Hospitality and Tourism Management,2,5,1,,Written coursework,0.33,1.0255,0.76,0.71,0.51,0.83,0.49,0.46
+511403,Revenue & Yield Management,1_1_4,Hospitality and Tourism Management,2,5,2,,Written exam,0.53,0.9889,0.57,0.76,0.12,0.6,0.48,0.5
+511404,Events Management,1_1_4,Hospitality and Tourism Management,2,5,2,,Multi-choice exam,0.52,0.9926,0.65,0.62,0.26,0.61,0.4,0.43
+611401,Strategic Hospitality Management,1_1_4,Hospitality and Tourism Management,3,6,1,,Viva,0.74,0.9112,0.56,0.66,0.31,0.64,0.8,0.77
+611402,Sustainable Tourism,1_1_4,Hospitality and Tourism Management,3,6,1,,Viva,0.72,0.9186,0.57,0.61,0.55,0.86,0.81,0.76
+611403,Dissertation / Research Project,1_1_4,Hospitality and Tourism Management,3,6,2,1.0,Written coursework,0.93,0.8409,0.57,0.76,0.42,0.38,0.92,0.81
+611404,Hospitality Entrepreneurship,1_1_4,Hospitality and Tourism Management,3,6,2,,Groupwork,0.71,0.9223,0.79,0.6,0.65,0.88,0.72,0.7
+411203,Organisational Behaviour,1_1_5,Person Resource Management,1,4,1,,Multi-choice exam,0.41,1.0135,0.78,0.62,0.4,0.68,0.41,0.35
+411501,Introduction to Person Resource Management,1_1_5,Person Resource Management,1,4,1,,Written exam,0.44,1.009,0.61,0.69,0.24,0.55,0.41,0.4
+411502,Business Management Fundamentals,1_1_5,Person Resource Management,1,4,2,,Written exam,0.34,1.024,0.45,0.69,0.24,0.58,0.34,0.36
+411503,Employment Relations,1_1_5,Person Resource Management,1,4,2,,Groupwork,0.22,1.042,0.81,0.6,0.68,0.85,0.24,0.32
+511501,Talent Management & Resourcing,1_1_5,Person Resource Management,2,5,1,,Written exam,0.46,1.006,0.68,0.68,0.31,0.73,0.5,0.54
+511502,Learning & Development,1_1_5,Person Resource Management,2,5,1,,Written coursework,0.47,1.0045,0.72,0.7,0.32,0.7,0.53,0.51
+511503,Performance & Reward Management,1_1_5,Person Resource Management,2,5,2,,Multi-choice exam,0.42,1.012,0.61,0.62,0.34,0.59,0.46,0.47
+511504,Person Analytics,1_1_5,Person Resource Management,2,5,2,,Written coursework,0.59,0.9667,0.75,0.59,0.45,0.75,0.67,0.56
+611501,Dissertation / Research Project,1_1_5,Person Resource Management,3,6,1,1.0,Written coursework,0.95,0.8335,0.73,0.63,0.53,0.38,0.95,0.84
+611502,Employment Law,1_1_5,Person Resource Management,3,6,1,,Written exam,0.64,0.9482,0.59,0.74,0.18,0.68,0.6,0.63
+611503,Leadership & Change Management,1_1_5,Person Resource Management,3,6,2,,Multi-choice exam,0.53,0.9889,0.75,0.64,0.33,0.58,0.54,0.57
+611504,Diversity & Inclusion,1_1_5,Person Resource Management,3,6,2,,Written coursework,0.65,0.9445,0.7,0.69,0.41,0.72,0.53,0.62
+412101,Contract Law,1_2_1,Law,1,4,1,,Written exam,0.36,1.021,0.61,0.69,0.19,0.6,0.35,0.28
+412102,Criminal Law,1_2_1,Law,1,4,1,,Written exam,0.3,1.03,0.53,0.68,0.29,0.59,0.34,0.28
+412103,Public Law,1_2_1,Law,1,4,2,,Written exam,0.33,1.0255,0.62,0.73,0.1,0.59,0.3,0.35
+412104,Legal System & Skills,1_2_1,Law,1,4,2,,Practical exam,0.53,0.9889,0.52,0.54,0.88,0.51,0.26,0.42
+512101,Tort Law,1_2_1,Law,2,5,1,,Multi-choice exam,0.51,0.9963,0.6,0.59,0.29,0.61,0.49,0.46
+512102,Land Law,1_2_1,Law,2,5,1,,Written exam,0.67,0.9371,0.67,0.68,0.28,0.58,0.59,0.65
+512103,EU Law,1_2_1,Law,2,5,2,,Written exam,0.46,1.006,0.55,0.7,0.1,0.51,0.45,0.39
+512104,Equity & Trusts,1_2_1,Law,2,5,2,,Groupwork,0.6,0.963,0.82,0.67,0.51,0.95,0.49,0.58
+612101,Company Law,1_2_1,Law,3,6,1,,Viva,0.82,0.8816,0.6,0.75,0.13,0.62,0.74,0.69
+612102,Dissertation / Research Project,1_2_1,Law,3,6,1,1.0,Written coursework,0.95,0.8335,0.58,0.61,0.45,0.38,0.91,0.82
+612103,International Law,1_2_1,Law,3,6,2,,Viva,0.79,0.8927,0.65,0.71,0.22,0.6,0.78,0.79
+612104,Jurisprudence,1_2_1,Law,3,6,2,,Viva,0.77,0.9001,0.58,0.71,0.14,0.52,0.73,0.7
+421101,Design Studio I,2_1_1,Architecture,1,4,1,,Written coursework,0.38,1.018,0.64,0.83,0.55,0.76,0.23,0.36
+421102,Architectural History & Theory I,2_1_1,Architecture,1,4,1,,Written exam,0.38,1.018,0.64,0.85,0.21,0.64,0.37,0.33
+421103,Building Construction & Materials,2_1_1,Architecture,1,4,2,,Professional artefact,0.45,1.0075,0.64,0.81,0.61,0.88,0.27,0.52
+421104,Environmental Design Principles,2_1_1,Architecture,1,4,2,,Professional artefact,0.31,1.0285,0.64,0.83,0.7,0.81,0.45,0.42
+521101,Design Studio II,2_1_1,Architecture,2,5,1,,Professional artefact,0.71,0.9223,0.64,0.77,0.67,0.81,0.63,0.65
+521102,Architectural History & Theory II,2_1_1,Architecture,2,5,1,,Viva,0.73,0.9149,0.64,0.84,0.31,0.54,0.73,0.59
+521103,Structures & Structural Design,2_1_1,Architecture,2,5,2,,Presentation,0.53,0.9889,0.78,0.79,0.6,0.79,0.58,0.53
+521104,Building Services & Sustainability,2_1_1,Architecture,2,5,2,,Professional artefact,0.43,1.0105,0.67,0.85,0.66,0.76,0.51,0.45
+621101,Major Project / Dissertation,2_1_1,Architecture,3,6,1,1.0,Written coursework,0.85,0.8705,0.76,0.75,0.65,0.38,0.95,0.76
+621102,Professional Practice & Management,2_1_1,Architecture,3,6,1,,Viva,0.69,0.9297,0.62,0.84,0.32,0.56,0.69,0.68
+621103,Urban Design & Planning,2_1_1,Architecture,3,6,2,,Written coursework,0.75,0.9075,0.69,0.8,0.6,0.72,0.54,0.75
+621104,Advanced Architectural Technology,2_1_1,Architecture,3,6,2,,Professional artefact,0.81,0.8853,0.7,0.87,0.66,0.75,0.69,0.78
+422201,Introduction to Printmaking Techniques,2_2_2,Cyanophotography and Printmaking,1,4,1,,Professional artefact,0.42,1.012,0.57,0.79,0.9,0.7,0.39,0.35
+422202,Cyanotype Processes,2_2_2,Cyanophotography and Printmaking,1,4,1,,Presentation,0.28,1.033,0.77,0.81,0.6,0.81,0.31,0.36
+422203,Drawing & Image Development,2_2_2,Cyanophotography and Printmaking,1,4,2,,Professional artefact,0.21,1.0435,0.54,0.73,0.91,0.43,0.25,0.26
+422204,Art History & Visual Culture,2_2_2,Cyanophotography and Printmaking,1,4,2,,Written exam,0.32,1.027,0.45,0.8,0.41,0.51,0.38,0.27
+522201,Advanced Printmaking,2_2_2,Cyanophotography and Printmaking,2,5,1,,Professional artefact,0.58,0.9704,0.51,0.74,0.72,0.55,0.43,0.56
+522202,Experimental Photographic Processes,2_2_2,Cyanophotography and Printmaking,2,5,1,,Professional artefact,0.46,1.006,0.79,0.75,0.64,0.74,0.48,0.46
+522203,Studio Practice,2_2_2,Cyanophotography and Printmaking,2,5,2,,Professional artefact,0.57,0.9741,0.82,0.73,0.66,0.75,0.64,0.52
+522204,Professional Skills for Artists,2_2_2,Cyanophotography and Printmaking,2,5,2,,Professional artefact,0.49,1.0015,0.65,0.78,0.87,0.65,0.42,0.5
+622201,Major Studio Project,2_2_2,Cyanophotography and Printmaking,3,6,1,1.0,Professional artefact,0.89,0.8557,0.72,0.83,0.58,0.38,0.95,0.83
+622202,Advanced Cyanotype & Alternative Photography,2_2_2,Cyanophotography and Printmaking,3,6,1,,Professional artefact,0.73,0.9149,0.82,0.8,0.72,0.76,0.79,0.74
+622203,Exhibition & Portfolio Development,2_2_2,Cyanophotography and Printmaking,3,6,2,,Written coursework,0.77,0.9001,0.78,0.66,0.62,0.83,0.78,0.78
+622204,Critical Studies in Contemporary Art,2_2_2,Cyanophotography and Printmaking,3,6,2,,Written exam,0.65,0.9445,0.66,0.94,0.29,0.55,0.57,0.63
+422301,Studio Practice I,2_2_3,Fine Art,1,4,1,,Professional artefact,0.43,1.0105,0.7,0.75,0.76,0.77,0.4,0.42
+422302,Drawing & Visual Language,2_2_3,Fine Art,1,4,1,,Professional artefact,0.28,1.033,0.3,0.73,0.89,0.54,0.32,0.26
+422303,Art History & Context,2_2_3,Fine Art,1,4,2,,Written exam,0.3,1.03,0.66,0.83,0.36,0.53,0.43,0.29
+422304,Materials & Processes,2_2_3,Fine Art,1,4,2,,Professional artefact,0.45,1.0075,0.77,0.79,0.72,0.82,0.45,0.45
+522301,Studio Practice II,2_2_3,Fine Art,2,5,1,,Professional artefact,0.5,1.0,0.78,0.78,0.72,0.82,0.56,0.54
+522302,Contemporary Art Theory,2_2_3,Fine Art,2,5,1,,Written exam,0.56,0.9778,0.46,0.81,0.39,0.55,0.4,0.48
+522303,Interdisciplinary Practice,2_2_3,Fine Art,2,5,2,,Professional artefact,0.57,0.9741,0.65,0.8,0.69,0.59,0.58,0.49
+522304,Professional Development,2_2_3,Fine Art,2,5,2,,Professional artefact,0.62,0.9556,0.74,0.77,0.74,0.82,0.61,0.59
+622301,Studio Practice III,2_2_3,Fine Art,3,6,1,,Viva,0.7,0.926,0.7,0.83,0.59,0.74,0.65,0.68
+622302,Major Project / Dissertation,2_2_3,Fine Art,3,6,1,1.0,Written coursework,0.87,0.8631,0.46,0.83,0.62,0.38,0.95,0.75
+622303,Exhibition Practice,2_2_3,Fine Art,3,6,2,,Professional artefact,0.77,0.9001,0.74,0.83,0.69,0.72,0.75,0.73
+622304,Critical & Contextual Studies,2_2_3,Fine Art,3,6,2,,Written coursework,0.67,0.9371,0.6,0.95,0.28,0.63,0.62,0.73
+422401,Introduction to Illustration,2_2_4,Illustration,1,4,1,,Written coursework,0.33,1.0255,0.75,0.71,0.76,0.72,0.34,0.39
+422402,Drawing & Image-Making,2_2_4,Illustration,1,4,1,,Professional artefact,0.27,1.0345,0.38,0.77,0.95,0.58,0.28,0.26
+422403,Visual Communication,2_2_4,Illustration,1,4,2,,Professional artefact,0.43,1.0105,0.73,0.75,0.81,0.67,0.42,0.37
+422404,Digital Skills for Illustrators,2_2_4,Illustration,1,4,2,,Professional artefact,0.38,1.018,0.38,0.73,0.92,0.59,0.36,0.38
+522401,Narrative Illustration,2_2_4,Illustration,2,5,1,,Groupwork,0.56,0.9778,0.75,0.79,0.56,0.87,0.53,0.6
+522402,Editorial & Publishing Illustration,2_2_4,Illustration,2,5,1,,Professional artefact,0.47,1.0045,0.81,0.8,0.64,0.79,0.56,0.54
+522403,Character & Concept Design,2_2_4,Illustration,2,5,2,,Professional artefact,0.52,0.9926,0.8,0.78,0.76,0.82,0.58,0.5
+522404,Professional Practice,2_2_4,Illustration,2,5,2,,Presentation,0.6,0.963,0.81,0.87,0.42,0.82,0.5,0.57
+622401,Advanced Illustration Project,2_2_4,Illustration,3,6,1,1.0,Professional artefact,0.87,0.8631,0.57,0.9,0.51,0.38,0.88,0.72
+622402,Portfolio Development,2_2_4,Illustration,3,6,1,,Professional artefact,0.54,0.9852,0.71,0.81,0.67,0.76,0.57,0.53
+622403,Self-Promotion & Freelancing,2_2_4,Illustration,3,6,2,,Professional artefact,0.67,0.9371,0.72,0.82,0.65,0.78,0.66,0.7
+622404,Contemporary Illustration Contexts,2_2_4,Illustration,3,6,2,,Professional artefact,0.85,0.8705,0.95,0.76,0.7,0.82,0.82,0.85
+422501,Introduction to Media Studies,2_2_5,Media Studies,1,4,1,,Written coursework,0.25,1.0375,0.56,0.77,0.57,0.52,0.29,0.25
+422502,Media Industries & Institutions,2_2_5,Media Studies,1,4,1,,Practical exam,0.36,1.021,0.57,0.68,0.76,0.58,0.33,0.32
+422503,Media Production,2_2_5,Media Studies,1,4,2,,Professional artefact,0.39,1.0165,0.73,0.76,0.76,0.78,0.37,0.42
+422504,Media Audiences & Representation,2_2_5,Media Studies,1,4,2,,Presentation,0.24,1.039,0.74,0.82,0.76,0.8,0.3,0.31
+522501,Media Theory,2_2_5,Media Studies,2,5,1,,Written exam,0.59,0.9667,0.68,0.73,0.37,0.62,0.59,0.5
+522502,Media Analysis,2_2_5,Media Studies,2,5,1,,Viva,0.7,0.926,0.57,0.82,0.44,0.6,0.63,0.75
+522503,Social Media Cultures,2_2_5,Media Studies,2,5,2,,Written exam,0.63,0.9519,0.62,0.86,0.4,0.55,0.58,0.55
+522504,Research Methods in Media,2_2_5,Media Studies,2,5,2,,Written coursework,0.7,0.926,0.74,0.88,0.6,0.73,0.62,0.68
+622501,Advanced Media Theory,2_2_5,Media Studies,3,6,1,,Viva,0.7,0.926,0.65,0.83,0.5,0.54,0.84,0.71
+622502,Global Media & Communication,2_2_5,Media Studies,3,6,1,,Presentation,0.7,0.926,0.82,0.77,0.57,0.73,0.57,0.69
+622503,Media Project / Dissertation,2_2_5,Media Studies,3,6,2,1.0,Written coursework,0.85,0.8705,0.54,0.87,0.41,0.38,0.95,0.73
+622504,Political Economy of Media,2_2_5,Media Studies,3,6,2,,Presentation,0.68,0.9334,0.88,0.82,0.6,0.81,0.66,0.72
+422601,Music Theory & Harmony,2_2_6,Music,1,4,1,,Written exam,0.28,1.033,0.67,0.73,0.49,0.61,0.23,0.27
+422602,Performance I,2_2_6,Music,1,4,1,,Professional artefact,0.16,1.051,0.85,0.82,0.79,0.82,0.25,0.29
+422603,Music History,2_2_6,Music,1,4,2,,Written exam,0.33,1.0255,0.66,0.78,0.48,0.56,0.29,0.32
+422604,Composition I,2_2_6,Music,1,4,2,,Professional artefact,0.34,1.024,0.67,0.76,0.67,0.85,0.34,0.39
+522601,Advanced Music Theory,2_2_6,Music,2,5,1,,Written exam,0.59,0.9667,0.62,0.89,0.42,0.52,0.59,0.51
+522602,Performance II,2_2_6,Music,2,5,1,,Professional artefact,0.49,1.0015,0.78,0.8,0.72,0.82,0.35,0.5
+522603,Music Analysis,2_2_6,Music,2,5,2,,Written exam,0.49,1.0015,0.54,0.77,0.39,0.58,0.61,0.48
+522604,Music Technology,2_2_6,Music,2,5,2,,Professional artefact,0.57,0.9741,0.75,0.79,0.63,0.74,0.52,0.59
+622601,Performance III / Recital,2_2_6,Music,3,6,1,1.0,Professional artefact,0.95,0.8335,0.65,0.84,0.6,0.38,0.95,0.81
+622602,Composition II,2_2_6,Music,3,6,1,,Groupwork,0.8,0.889,0.81,0.85,0.65,0.95,0.75,0.82
+622603,Musicology,2_2_6,Music,3,6,2,,Groupwork,0.69,0.9297,0.75,0.85,0.67,0.85,0.77,0.71
+622604,Professional Practice in Music,2_2_6,Music,3,6,2,,Presentation,0.65,0.9445,0.79,0.66,0.73,0.79,0.58,0.67
+423701,Reading the Object: Material Histories and Markings,2_3_7,Artefact Restoration,1,4,1,,Groupwork,0.31,1.0285,0.76,0.86,0.59,0.89,0.38,0.35
+423702,Principles of Conservation and Ethical Restoration,2_3_7,Artefact Restoration,1,4,1,,Groupwork,0.33,1.0255,0.83,0.79,0.78,0.95,0.29,0.35
+423703,"Techniques for Metal, Wood, and Mixed Materials",2_3_7,Artefact Restoration,1,4,2,,Practical exam,0.33,1.0255,0.6,0.68,0.84,0.51,0.37,0.29
+423704,World Prehistory,2_3_7,Artefact Restoration,1,4,2,,Written exam,0.42,1.012,0.6,0.74,0.51,0.68,0.23,0.43
+523701,Fieldwork & Excavation Techniques,2_3_7,Artefact Restoration,2,5,1,,Professional artefact,0.63,0.9519,0.65,0.73,0.7,0.7,0.9,0.65
+523702,Fieldwork: Documenting and Mapping,2_3_7,Artefact Restoration,2,5,1,,Professional artefact,0.67,0.9371,0.58,0.75,0.65,0.63,0.77,0.64
+523703,Cultural Entanglements in Artefact Recovery,2_3_7,Artefact Restoration,2,5,2,,Professional artefact,0.47,1.0045,0.78,0.79,0.76,0.68,0.52,0.46
+523704,Material Culture Studies,2_3_7,Artefact Restoration,2,5,2,,Written exam,0.59,0.9667,0.55,0.89,0.23,0.49,0.44,0.57
+623701,Dissertation / Research Project,2_3_7,Artefact Restoration,3,6,1,1.0,Written coursework,0.74,0.9112,0.67,0.8,0.53,0.38,0.95,0.62
+623702,Speculative Restoration: Imagining Futures from Fragments,2_3_7,Artefact Restoration,3,6,1,,Groupwork,0.76,0.9038,0.84,0.72,0.72,0.92,0.65,0.77
+623703,Ancient Civilisations,2_3_7,Artefact Restoration,3,6,2,,Professional artefact,0.74,0.9112,0.84,0.76,0.71,0.77,0.67,0.73
+623704,Public Heritage,2_3_7,Artefact Restoration,3,6,2,,Professional artefact,0.58,0.9704,0.68,0.84,0.64,0.7,0.59,0.68
+423801,The Alchemy of Fermentation,2_3_8,Brewcraft and Fermentation Systems,1,4,1,,Professional artefact,0.31,1.0285,0.69,0.8,0.65,0.68,0.24,0.31
+423802,"Yeasts, Bacteria, and Microbial Worlds",2_3_8,Brewcraft and Fermentation Systems,1,4,1,,Written coursework,0.32,1.027,0.64,0.84,0.55,0.72,0.33,0.35
+423803,Brewing Traditions and Cultural Practice,2_3_8,Brewcraft and Fermentation Systems,1,4,2,,Professional artefact,0.37,1.0195,0.47,0.8,0.83,0.41,0.32,0.29
+423804,Chemistry of Beer & Fermentation,2_3_8,Brewcraft and Fermentation Systems,1,4,2,,Professional artefact,0.4,1.015,0.8,0.8,0.71,0.82,0.21,0.45
+523801,Quality Control & Sensory Analysis,2_3_8,Brewcraft and Fermentation Systems,2,5,1,,Written exam,0.71,0.9223,0.67,0.83,0.34,0.61,0.47,0.67
+523802,Chemistry and Safety in Ferment Labs,2_3_8,Brewcraft and Fermentation Systems,2,5,1,,Practical exam,0.52,0.9926,0.54,0.67,0.95,0.66,0.51,0.49
+523803,"Designing Flavour: Herbs, Temperature, and Time",2_3_8,Brewcraft and Fermentation Systems,2,5,2,,Professional artefact,0.57,0.9741,0.82,0.88,0.65,0.68,0.62,0.5
+523804,Capstone: Create a Heritage-Inspired Brew Line,2_3_8,Brewcraft and Fermentation Systems,2,5,2,,Written coursework,0.67,0.9371,0.7,0.85,0.58,0.55,0.8,0.62
+623801,"Fermentation Futures: Probiotics, Policy, and Place",2_3_8,Brewcraft and Fermentation Systems,3,6,1,,Written coursework,0.67,0.9371,0.56,0.89,0.28,0.53,0.69,0.6
+623802,Quality Control & Sensory Analysis,2_3_8,Brewcraft and Fermentation Systems,3,6,1,,Viva,0.77,0.9001,0.56,0.74,0.47,0.61,0.68,0.69
+623803,Distillation & Alternative Fermentations,2_3_8,Brewcraft and Fermentation Systems,3,6,2,,Groupwork,0.8,0.889,0.81,0.8,0.62,0.86,0.92,0.75
+623804,Dissertation / Research Project,2_3_8,Brewcraft and Fermentation Systems,3,6,2,1.0,Written coursework,0.87,0.8631,0.58,0.83,0.55,0.38,0.95,0.72
+423901,Introduction to Metalworking,2_3_9,Precision Smithing and Design,1,4,1,,Professional artefact,0.23,1.0405,0.75,0.8,0.7,0.73,0.32,0.22
+423902,Materials & Metallurgy,2_3_9,Precision Smithing and Design,1,4,1,,Written coursework,0.22,1.042,0.71,0.91,0.52,0.71,0.27,0.29
+423903,Workshop Practice & Safety,2_3_9,Precision Smithing and Design,1,4,2,,Professional artefact,0.21,1.0435,0.3,0.76,0.95,0.52,0.1,0.2
+423904,Technical Drawing & Design,2_3_9,Precision Smithing and Design,1,4,2,,Practical exam,0.26,1.036,0.5,0.72,0.93,0.46,0.26,0.24
+523901,Surface Finishing & Treatment,2_3_9,Precision Smithing and Design,2,5,1,,Professional artefact,0.53,0.9889,0.83,0.77,0.68,0.79,0.69,0.62
+523902,Alloy Theory and Practical Metallurgy,2_3_9,Precision Smithing and Design,2,5,1,,Professional artefact,0.51,0.9963,0.56,0.75,0.87,0.45,0.4,0.47
+523903,"Forging for Fit: Joints, Hinges, and Mechanisms",2_3_9,Precision Smithing and Design,2,5,2,,Professional artefact,0.57,0.9741,0.56,0.77,0.89,0.54,0.4,0.48
+523904,Form and Function: Design Studio I,2_3_9,Precision Smithing and Design,2,5,2,,Groupwork,0.46,1.006,0.85,0.91,0.52,0.92,0.45,0.59
+623901,Design Studio II: Commissions and Constraints,2_3_9,Precision Smithing and Design,3,6,1,,Professional artefact,0.6,0.963,0.72,0.85,0.67,0.69,0.57,0.62
+623902,Capstone: Precision Artefact for Client or Cause,2_3_9,Precision Smithing and Design,3,6,1,1.0,Written coursework,0.93,0.8409,0.72,0.82,0.6,0.38,0.95,0.79
+623903,"Ethics in Craft, Ownership, and Replication",2_3_9,Precision Smithing and Design,3,6,2,,Written coursework,0.53,0.9889,0.72,0.75,0.48,0.69,0.71,0.57
+623904,Professional Practice & Entrepreneurship,2_3_9,Precision Smithing and Design,3,6,2,,Written coursework,0.61,0.9593,0.67,0.8,0.6,0.7,0.59,0.66
+4241001,Introduction to Fashion Design,2_4_10,Fashion Design,1,4,1,,Professional artefact,0.35,1.0225,0.69,0.79,0.72,0.81,0.3,0.35
+4241002,Drawing & Illustration for Fashion,2_4_10,Fashion Design,1,4,1,,Professional artefact,0.23,1.0405,0.54,0.8,0.91,0.57,0.2,0.23
+4241003,Pattern Cutting & Garment Construction,2_4_10,Fashion Design,1,4,2,,Written coursework,0.24,1.039,0.74,0.87,0.57,0.79,0.26,0.27
+4241004,Fashion History & Context,2_4_10,Fashion Design,1,4,2,,Written exam,0.4,1.015,0.65,0.8,0.46,0.62,0.43,0.33
+5241001,Fashion Design Development,2_4_10,Fashion Design,2,5,1,,Professional artefact,0.5,1.0,0.62,0.74,0.7,0.74,0.4,0.52
+5241002,Textiles & Fabric Innovation,2_4_10,Fashion Design,2,5,1,,Presentation,0.51,0.9963,0.76,0.85,0.57,0.8,0.53,0.49
+5241003,Draping & Advanced Construction,2_4_10,Fashion Design,2,5,2,,Professional artefact,0.52,0.9926,0.79,0.83,0.62,0.79,0.62,0.51
+5241004,Fashion Marketing & Branding,2_4_10,Fashion Design,2,5,2,,Written exam,0.59,0.9667,0.5,0.91,0.31,0.59,0.53,0.52
+622402,Portfolio Development,2_4_10,Fashion Design,3,6,1,,Written coursework,0.73,0.9149,0.74,0.83,0.56,0.71,0.62,0.69
+6241001,Final Collection / Major Project,2_4_10,Fashion Design,3,6,1,1.0,Written coursework,0.95,0.8335,0.56,0.82,0.54,0.38,0.95,0.83
+6241002,Professional Practice in Fashion,2_4_10,Fashion Design,3,6,2,,Professional artefact,0.73,0.9149,0.76,0.81,0.63,0.83,0.66,0.73
+6241003,Sustainable Fashion Design,2_4_10,Fashion Design,3,6,2,,Written coursework,0.69,0.9297,0.71,0.85,0.52,0.82,0.48,0.66
+4241101,Introduction to Graphic Design,2_4_11,Graphic Design,1,4,1,,Professional artefact,0.31,1.0285,0.46,0.74,0.79,0.75,0.34,0.31
+4241102,Typography & Runography,2_4_11,Graphic Design,1,4,1,,Professional artefact,0.2,1.045,0.76,0.73,0.66,0.72,0.32,0.23
+422403,Visual Communication,2_4_11,Graphic Design,1,4,2,,Professional artefact,0.26,1.036,0.67,0.74,0.75,0.73,0.13,0.28
+4241103,Digital Design Skills,2_4_11,Graphic Design,1,4,2,,Practical exam,0.32,1.027,0.51,0.69,0.94,0.59,0.26,0.33
+5241101,Branding & Identity Design,2_4_11,Graphic Design,2,5,1,,Professional artefact,0.51,0.9963,0.75,0.79,0.66,0.77,0.52,0.54
+5241102,Editorial & Publication Design,2_4_11,Graphic Design,2,5,1,,Professional artefact,0.51,0.9963,0.46,0.81,0.74,0.64,0.61,0.48
+5241103,Person-Centred Design,2_4_11,Graphic Design,2,5,2,,Written coursework,0.52,0.9926,0.72,0.76,0.58,0.77,0.52,0.52
+5241104,Design History & Theory,2_4_11,Graphic Design,2,5,2,,Written coursework,0.61,0.9593,0.46,0.82,0.44,0.61,0.64,0.58
+622402,Portfolio Development,2_4_11,Graphic Design,3,6,1,,Professional artefact,0.72,0.9186,0.46,0.77,0.71,0.87,0.63,0.7
+6241101,Major Design Project,2_4_11,Graphic Design,3,6,1,1.0,Professional artefact,0.9,0.852,0.63,0.75,0.73,0.38,0.95,0.76
+6241102,Professional Practice,2_4_11,Graphic Design,3,6,2,,Practical exam,0.67,0.9371,0.65,0.67,0.73,0.77,0.69,0.66
+6241103,Contemporary Design Issues,2_4_11,Graphic Design,3,6,2,,Presentation,0.76,0.9038,0.81,0.85,0.56,0.78,0.74,0.75
+4241201,Introduction to Interior Design,2_4_12,Space Design,1,4,1,,Professional artefact,0.42,1.012,0.65,0.81,0.63,0.76,0.33,0.39
+4241202,Drawing & Spatial Visualisation,2_4_12,Space Design,1,4,1,,Practical exam,0.29,1.0315,0.3,0.66,0.92,0.52,0.51,0.31
+4241203,Materials & Finishes,2_4_12,Space Design,1,4,2,,Professional artefact,0.33,1.0255,0.74,0.79,0.7,0.82,0.28,0.33
+4241204,History of Interiors,2_4_12,Space Design,1,4,2,,Written exam,0.26,1.036,0.57,0.82,0.26,0.59,0.33,0.26
+5241201,Interior Design Studio,2_4_12,Space Design,2,5,1,,Professional artefact,0.58,0.9704,0.85,0.77,0.65,0.83,0.55,0.58
+5241202,Lighting & Environmental Design,2_4_12,Space Design,2,5,1,,Groupwork,0.58,0.9704,0.8,0.76,0.65,0.84,0.58,0.59
+5241103,Person-Centred Design,2_4_12,Space Design,2,5,2,,Professional artefact,0.59,0.9667,0.78,0.8,0.69,0.81,0.56,0.56
+5241203,Modelling,2_4_12,Space Design,2,5,2,,Professional artefact,0.47,1.0045,0.73,0.74,0.66,0.85,0.58,0.49
+6241102,Professional Practice,2_4_12,Space Design,3,6,1,,Professional artefact,0.83,0.8779,0.72,0.85,0.67,0.78,0.72,0.84
+6241201,Final Interior Design Project,2_4_12,Space Design,3,6,1,1.0,Professional artefact,0.95,0.8335,0.66,0.78,0.69,0.38,0.95,0.78
+6241202,Sustainable Interior Design,2_4_12,Space Design,3,6,2,,Viva,0.69,0.9297,0.71,0.85,0.59,0.72,0.71,0.64
+6241203,Advanced Spatial Design,2_4_12,Space Design,3,6,2,,Professional artefact,0.74,0.9112,0.81,0.76,0.67,0.83,0.63,0.76
+431101,Physical Geography,3_1_1,Geography,1,4,1,,Groupwork,0.25,1.0375,0.84,0.63,0.51,0.95,0.34,0.34
+431102,Person-Centred Geography,3_1_1,Geography,1,4,1,,Presentation,0.22,1.042,0.78,0.74,0.5,0.82,0.21,0.31
+431103,Geographical Skills,3_1_1,Geography,1,4,2,,Practical exam,0.45,1.0075,0.46,0.66,0.89,0.45,0.34,0.33
+431104,Earth Systems,3_1_1,Geography,1,4,2,,Written exam,0.32,1.027,0.69,0.72,0.46,0.78,0.37,0.32
+531101,Environmental Change,3_1_1,Geography,2,5,1,,Written exam,0.5,1.0,0.46,0.75,0.47,0.81,0.53,0.48
+531102,Urban & Economic Geography,3_1_1,Geography,2,5,1,,Written coursework,0.63,0.9519,0.73,0.72,0.38,0.75,0.67,0.6
+531103,Geospatial Analysis,3_1_1,Geography,2,5,2,,Written exam,0.53,0.9889,0.46,0.78,0.29,0.56,0.52,0.46
+531104,Research Methods in Geography,3_1_1,Geography,2,5,2,,Written coursework,0.51,0.9963,0.68,0.72,0.42,0.75,0.64,0.57
+631101,Advanced Topics in Geography,3_1_1,Geography,3,6,1,,Viva,0.74,0.9112,0.46,0.7,0.53,0.74,0.81,0.74
+631102,Dissertation / Field Research Project,3_1_1,Geography,3,6,1,1.0,Written coursework,0.89,0.8557,0.66,0.75,0.5,0.38,0.84,0.77
+631103,Ecosystems & Sustainability,3_1_1,Geography,3,6,2,,Groupwork,0.53,0.9889,0.83,0.72,0.36,0.85,0.56,0.63
+631104,Global Development,3_1_1,Geography,3,6,2,,Written coursework,0.68,0.9334,0.66,0.83,0.28,0.74,0.77,0.67
+432201,Early Modern History,3_2_2,History,1,4,1,,Written exam,0.43,1.0105,0.3,0.86,0.13,0.64,0.44,0.42
+432202,Modern World History,3_2_2,History,1,4,1,,Written coursework,0.44,1.009,0.71,0.71,0.22,0.77,0.36,0.39
+432203,Historical Methods,3_2_2,History,1,4,2,,Groupwork,0.25,1.0375,0.76,0.72,0.58,0.9,0.28,0.38
+432204,Themes in World History,3_2_2,History,1,4,2,,Written exam,0.42,1.012,0.3,0.76,0.32,0.59,0.41,0.36
+532201,Social & Cultural History,3_2_2,History,2,5,1,,Written exam,0.65,0.9445,0.53,0.83,0.19,0.38,0.58,0.42
+532202,Political History,3_2_2,History,2,5,1,,Written exam,0.43,1.0105,0.61,0.79,0.25,0.71,0.51,0.41
+532203,Historiography,3_2_2,History,2,5,2,,Presentation,0.62,0.9556,0.77,0.69,0.6,0.82,0.59,0.62
+532204,Archival Research Methods,3_2_2,History,2,5,2,,Written coursework,0.61,0.9593,0.3,0.74,0.58,0.75,0.57,0.66
+632201,Special Subject in History,3_2_2,History,3,6,1,,Viva,0.78,0.8964,0.3,0.74,0.19,0.77,0.84,0.77
+632202,Dissertation,3_2_2,History,3,6,1,1.0,Written coursework,0.88,0.8594,0.54,0.71,0.46,0.38,0.95,0.76
+632203,Public History,3_2_2,History,3,6,2,,Viva,0.76,0.9038,0.65,0.79,0.21,0.55,0.68,0.66
+632204,Global Historical Perspectives,3_2_2,History,3,6,2,,Written exam,0.63,0.9519,0.69,0.72,0.46,0.74,0.61,0.72
+533502,Writing Systems & Runes,3_3_10,Multispecies Linguistics,2,5,1,,Presentation,0.71,0.9223,0.78,0.68,0.63,0.75,0.65,0.66
+533304,Culture & Society,3_3_10,Languages and Literature,2,5,2,,Written exam,0.51,0.9963,0.58,0.76,0.21,0.45,0.57,0.48
+533503,Sociolinguistics of Mixed-Species Societies,3_3_11,Multispecies Linguistics,2,5,2,,Written exam,0.55,0.9815,0.69,0.82,0.18,0.62,0.53,0.51
+633301,Advanced Language Skills,3_3_11,Languages and Literature,3,6,1,,Professional artefact,0.75,0.9075,0.55,0.74,0.74,0.55,0.75,0.69
+533504,Field Methods in Multispecies Linguistics,3_3_12,Multispecies Linguistics,2,5,2,,Presentation,0.57,0.9741,0.91,0.7,0.65,0.53,0.49,0.51
+633302,Dissertation / Research Project,3_3_12,Languages and Literature,3,6,1,1.0,Written coursework,0.95,0.8335,0.79,0.63,0.54,0.38,0.95,0.76
+633501,Advanced Translation & Interpretation,3_3_13,Multispecies Linguistics,3,6,1,,Presentation,0.75,0.9075,0.8,0.72,0.46,0.8,0.68,0.76
+633303,Comparative Literature,3_3_13,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.73,0.78,0.2,0.73,0.79,0.75
+633502,Language Contact & Hybridisation,3_3_14,Multispecies Linguistics,3,6,1,,Presentation,0.68,0.9334,0.91,0.81,0.18,0.52,0.62,0.63
+633304,Contemporary Literature & Criticism,3_3_14,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.62,0.83,0.1,0.61,0.75,0.68
+633503,Endangered & Ancient Languages,3_3_15,Multispecies Linguistics,3,6,2,,Written coursework,0.66,0.9408,0.6,0.83,0.1,0.65,0.71,0.66
+633504,Dissertation / Field Research Project,3_3_16,Multispecies Linguistics,3,6,2,1.0,Written coursework,0.91,0.8483,0.76,0.73,0.45,0.38,0.95,0.75
+433301,Language Skills I,3_3_3,Languages and Literature,1,4,1,,Written coursework,0.33,1.0255,0.74,0.66,0.63,0.51,0.23,0.24
+433302,Introduction to Literature,3_3_4,Languages and Literature,1,4,1,,Written exam,0.38,1.018,0.38,0.71,0.19,0.6,0.23,0.29
+433501,Introduction to Multispecies Communication,3_3_5,Multispecies Linguistics,1,4,1,,Groupwork,0.4,1.015,1.0,0.7,0.55,0.86,0.21,0.44
+433303,Grammar & Linguistics,3_3_5,Languages and Literature,1,4,2,,Written exam,0.23,1.0405,0.38,0.72,0.32,0.7,0.24,0.25
+433502,Foundations of Linguistics,3_3_6,Multispecies Linguistics,1,4,1,,Multi-choice exam,0.45,1.0075,0.65,0.66,0.35,0.54,0.43,0.41
+433304,Cultural Studies,3_3_6,Languages and Literature,1,4,2,,Written exam,0.31,1.0285,0.57,0.76,0.26,0.53,0.29,0.27
+433503,Phonetics & Phonology Across Species,3_3_7,Multispecies Linguistics,1,4,2,,Written coursework,0.38,1.018,0.74,0.82,0.36,0.77,0.4,0.43
+533301,Language Skills II,3_3_7,Languages and Literature,2,5,1,,Practical exam,0.55,0.9815,0.7,0.67,0.81,0.55,0.54,0.48
+433504,"Language, Culture & Society",3_3_8,Multispecies Linguistics,1,4,2,,Written exam,0.25,1.0375,0.62,0.79,0.33,0.5,0.15,0.23
+533302,Literary Analysis,3_3_8,Languages and Literature,2,5,1,,Written exam,0.51,0.9963,0.61,0.72,0.1,0.63,0.48,0.46
+533501,"Comparative Grammar (Elvish, Dwarvish & Common Tongue)",3_3_9,Multispecies Linguistics,2,5,1,,Groupwork,0.56,0.9778,0.79,0.75,0.38,0.85,0.64,0.6
+533303,Translation Studies,3_3_9,Languages and Literature,2,5,2,,Written exam,0.42,1.012,0.56,0.82,0.18,0.54,0.42,0.34
+434704,Ethics in Everyday Life,3_4_10,Philosophy of Religion and Ethics,1,4,2,,Written coursework,0.44,1.009,0.7,0.73,0.24,0.66,0.41,0.39
+434803,Oral Traditions,3_4_10,Ritual and Recollection,1,4,2,,Written coursework,0.22,1.042,0.74,0.72,0.47,0.82,0.27,0.25
+534601,Courtly & Civic Ceremonies,3_4_10,Ceremonies,2,5,1,,Written coursework,0.6,0.963,0.7,0.71,0.47,0.64,0.55,0.52
+434804,Material Culture & Memory,3_4_11,Ritual and Recollection,1,4,2,,Written coursework,0.42,1.012,0.71,0.84,0.15,0.68,0.2,0.33
+534602,Funerary & Ancestral Rites,3_4_11,Ceremonies,2,5,1,,Groupwork,0.41,1.0135,0.88,0.73,0.45,0.88,0.44,0.4
+534701,Metaphysics of the Divine,3_4_11,Philosophy of Religion and Ethics,2,5,1,,Multi-choice exam,0.57,0.9741,0.73,0.63,0.5,0.84,0.45,0.61
+534702,Comparative Religious Thought,3_4_12,Philosophy of Religion and Ethics,2,5,1,,Written coursework,0.48,1.003,0.75,0.76,0.51,0.72,0.46,0.47
+534801,Collective Memory & Identity,3_4_12,Ritual and Recollection,2,5,1,,Written exam,0.53,0.9889,0.63,0.77,0.11,0.61,0.48,0.57
+534603,Performance & Procession Design,3_4_12,Ceremonies,2,5,2,,Written coursework,0.53,0.9889,0.77,0.58,0.59,0.82,0.64,0.53
+534802,"Archives, Artefacts & Ruins",3_4_13,Ritual and Recollection,2,5,1,,Written exam,0.54,0.9852,0.62,0.8,0.37,0.67,0.55,0.5
+534604,Intercultural Ceremonial Exchange,3_4_13,Ceremonies,2,5,2,,Presentation,0.57,0.9741,0.76,0.73,0.47,0.79,0.45,0.53
+534703,Applied Ethics,3_4_13,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.49,1.0015,0.62,0.85,0.14,0.69,0.42,0.46
+534704,Philosophy of Mind & Soul,3_4_14,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.56,0.9778,0.65,0.76,0.25,0.64,0.45,0.48
+534803,Commemoration & Memorialisation,3_4_14,Ritual and Recollection,2,5,2,,Groupwork,0.7,0.926,0.77,0.75,0.54,0.87,0.59,0.66
+634601,Grand Ceremony Design Project,3_4_14,Ceremonies,3,6,1,1.0,Professional artefact,0.95,0.8335,0.61,0.73,0.48,0.38,0.95,0.83
+534804,Ritual Performance,3_4_15,Ritual and Recollection,2,5,2,,Written exam,0.53,0.9889,0.48,0.76,0.28,0.53,0.35,0.49
+634602,Diplomacy & Protocol,3_4_15,Ceremonies,3,6,1,,Presentation,0.57,0.9741,0.76,0.72,0.65,0.75,0.61,0.64
+634701,Advanced Topics in Philosophy of Religion,3_4_15,Philosophy of Religion and Ethics,3,6,1,,Viva,0.78,0.8964,0.56,0.73,0.29,0.55,0.76,0.67
+634702,Political & Social Ethics,3_4_16,Philosophy of Religion and Ethics,3,6,1,,Viva,0.8,0.889,0.66,0.77,0.13,0.57,0.74,0.73
+634801,Advanced Studies in Memory & Ritual,3_4_16,Ritual and Recollection,3,6,1,,Written coursework,0.66,0.9408,0.57,0.72,0.31,0.68,0.62,0.68
+634603,"Crisis, Mourning & Renewal Rituals",3_4_16,Ceremonies,3,6,2,,Written coursework,0.72,0.9186,0.73,0.74,0.22,0.7,0.58,0.75
+634802,"Trauma, Loss & Remembrance",3_4_17,Ritual and Recollection,3,6,1,,Presentation,0.77,0.9001,0.8,0.73,0.53,0.77,0.71,0.71
+634604,Living Traditions & Reinvention,3_4_17,Ceremonies,3,6,2,,Groupwork,0.71,0.9223,0.78,0.75,0.52,0.88,0.72,0.82
+634703,Philosophy of Death & Afterlife,3_4_17,Philosophy of Religion and Ethics,3,6,2,,Written coursework,0.68,0.9334,0.53,0.84,0.15,0.58,0.84,0.66
+634704,Dissertation,3_4_18,Philosophy of Religion and Ethics,3,6,2,1.0,Written coursework,0.81,0.8853,0.57,0.71,0.43,0.38,0.82,0.67
+634803,Living Archives & Heritage,3_4_18,Ritual and Recollection,3,6,2,,Viva,0.78,0.8964,0.69,0.81,0.47,0.75,0.7,0.71
+634804,Major Project / Fieldwork,3_4_19,Ritual and Recollection,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.86,0.37,0.38,0.95,0.86
+434601,Introduction to Ceremonial Practice,3_4_6,Ceremonies,1,4,1,,Groupwork,0.36,1.021,0.97,0.69,0.64,0.93,0.3,0.43
+434602,"Symbols, Dress & Pageantry",3_4_7,Ceremonies,1,4,1,,Written coursework,0.17,1.0495,0.73,0.67,0.55,0.8,0.22,0.25
+434701,Introduction to Philosophy of Religion,3_4_7,Philosophy of Religion and Ethics,1,4,1,,Written exam,0.23,1.0405,0.56,0.83,0.24,0.47,0.38,0.24
+434702,Moral Philosophy,3_4_8,Philosophy of Religion and Ethics,1,4,1,,Written coursework,0.44,1.009,0.7,0.72,0.23,0.6,0.4,0.31
+434801,"Memory, Myth & Storytelling",3_4_8,Ritual and Recollection,1,4,1,,Written exam,0.42,1.012,0.63,0.75,0.19,0.61,0.45,0.38
+434603,"Calendars, Seasons & Festivals",3_4_8,Ceremonies,1,4,2,,Written coursework,0.23,1.0405,0.74,0.7,0.49,0.74,0.19,0.27
+434802,Introduction to Ritual Practice,3_4_9,Ritual and Recollection,1,4,1,,Written exam,0.33,1.0255,0.54,0.75,0.22,0.61,0.28,0.34
+434604,Ritual Spaces & Sacred Architecture,3_4_9,Ceremonies,1,4,2,,Written exam,0.47,1.0045,0.62,0.77,0.14,0.66,0.43,0.37
+434703,"Myth, Belief & Reason",3_4_9,Philosophy of Religion and Ethics,1,4,2,,Presentation,0.38,1.018,0.78,0.72,0.46,0.8,0.47,0.45
+435902,Communication & Mediation Skills,3_5_10,Conflict Transformation,1,4,1,,Professional artefact,0.43,1.0105,0.57,0.73,0.65,0.54,0.42,0.37
+4351001,Principles of Economics,3_5_10,Economics,1,4,1,,Written exam,0.38,1.018,0.65,0.76,0.19,0.6,0.41,0.33
+4351002,"Markets, Trade & Resources",3_5_11,Economics,1,4,1,,Written coursework,0.33,1.0255,0.69,0.77,0.57,0.82,0.32,0.35
+4351101,Foundations of Elven Moral Thought,3_5_11,Elven Ethics in Modern Governance,1,4,1,,Written coursework,0.35,1.0225,0.61,0.65,0.61,0.76,0.4,0.48
+435903,"Power, Identity & Society",3_5_11,Conflict Transformation,1,4,2,,Written exam,0.35,1.0225,0.61,0.68,0.25,0.62,0.25,0.32
+4351102,Governance Traditions of the Forest Realms,3_5_12,Elven Ethics in Modern Governance,1,4,1,,Written exam,0.42,1.012,0.61,0.83,0.11,0.54,0.48,0.41
+4351201,"Stories, Myths & Power",3_5_12,Narrative Governance and Institution Building,1,4,1,,Written coursework,0.21,1.0435,0.73,0.7,0.54,0.81,0.27,0.29
+435904,History of Conflicts,3_5_12,Conflict Transformation,1,4,2,,Written exam,0.38,1.018,0.69,0.74,0.19,0.64,0.38,0.38
+4351003,Economic History of Realms,3_5_12,Economics,1,4,2,,Written exam,0.49,1.0015,0.61,0.74,0.33,0.61,0.37,0.42
+4351202,Introduction to Institutions,3_5_13,Narrative Governance and Institution Building,1,4,1,,Written coursework,0.23,1.0405,0.73,0.7,0.46,0.81,0.28,0.34
+4351301,Introduction to Politics,3_5_13,Politics and Relations,1,4,1,,Written coursework,0.37,1.0195,0.7,0.76,0.22,0.66,0.42,0.38
+4351004,Quantitative Methods,3_5_13,Economics,1,4,2,,Written coursework,0.3,1.03,0.7,0.7,0.42,0.89,0.33,0.39
+4351103,"Ethics, Law & Stewardship",3_5_13,Elven Ethics in Modern Governance,1,4,2,,Written exam,0.3,1.03,0.61,0.74,0.18,0.43,0.46,0.28
+535901,Negotiation & Diplomacy,3_5_13,Conflict Transformation,2,5,1,,Presentation,0.61,0.9593,0.76,0.75,0.55,0.82,0.56,0.63
+4351302,Political Ideas & Thinkers,3_5_14,Politics and Relations,1,4,1,,Groupwork,0.21,1.0435,0.83,0.77,0.48,0.89,0.28,0.24
+4351104,"Power, Duty & Longevity",3_5_14,Elven Ethics in Modern Governance,1,4,2,,Multi-choice exam,0.38,1.018,0.62,0.61,0.53,0.75,0.36,0.36
+4351203,Narrative & Identity,3_5_14,Narrative Governance and Institution Building,1,4,2,,Presentation,0.36,1.021,0.77,0.69,0.43,0.78,0.3,0.45
+535902,Peacebuilding & Reconciliation,3_5_14,Conflict Transformation,2,5,1,,Written coursework,0.55,0.9815,0.7,0.7,0.44,0.75,0.57,0.51
+5351001,Microeconomics (Guilds & Households),3_5_14,Economics,2,5,1,,Written exam,0.59,0.9667,0.61,0.72,0.13,0.52,0.6,0.56
+4351204,Foundations of Governance,3_5_15,Narrative Governance and Institution Building,1,4,2,,Written exam,0.2,1.045,0.67,0.73,0.13,0.57,0.24,0.16
+4351303,"Power, Authority & the State",3_5_15,Politics and Relations,1,4,2,,Presentation,0.38,1.018,0.83,0.74,0.48,0.78,0.24,0.34
+5351002,Macroeconomics (Kingdoms & Empires),3_5_15,Economics,2,5,1,,Written coursework,0.66,0.9408,0.6,0.76,0.24,0.67,0.62,0.54
+5351101,Applied Elven Ethics in Policy,3_5_15,Elven Ethics in Modern Governance,2,5,1,,Viva,0.71,0.9223,0.63,0.81,0.1,0.5,0.73,0.62
+535903,Justice Systems & Restorative Practice,3_5_15,Conflict Transformation,2,5,2,,Written coursework,0.62,0.9556,0.75,0.75,0.53,0.79,0.59,0.55
+4351304,Inter-Realm Relations,3_5_16,Politics and Relations,1,4,2,,Presentation,0.29,1.0315,0.76,0.71,0.54,0.82,0.42,0.35
+5351102,"Justice, Harmony & Collective Good",3_5_16,Elven Ethics in Modern Governance,2,5,1,,Presentation,0.54,0.9852,0.76,0.72,0.46,0.79,0.55,0.55
+5351201,Narrative Strategy in Governance,3_5_16,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.63,0.9519,0.5,0.84,0.16,0.57,0.64,0.53
+535904,Intercultural Dialogue,3_5_16,Conflict Transformation,2,5,2,,Groupwork,0.6,0.963,0.8,0.64,0.52,0.84,0.61,0.57
+5351003,"Trade, Coinage & Value Systems",3_5_16,Economics,2,5,2,,Written coursework,0.4,1.015,0.75,0.69,0.43,0.77,0.51,0.45
+5351202,Institutional Design & Legitimacy,3_5_17,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.3,1.03,0.72,0.77,0.49,0.75,0.39,0.35
+5351301,Comparative Politics,3_5_17,Politics and Relations,2,5,1,,Written exam,0.52,0.9926,0.64,0.69,0.16,0.58,0.43,0.54
+5351004,Econometrics,3_5_17,Economics,2,5,2,,Presentation,0.41,1.0135,0.8,0.72,0.51,0.72,0.38,0.43
+5351103,Comparative Ethics (Elven & Dwarven),3_5_17,Elven Ethics in Modern Governance,2,5,2,,Viva,0.7,0.926,0.61,0.79,0.1,0.75,0.65,0.68
+635901,Advanced Conflict Transformation,3_5_17,Conflict Transformation,3,6,1,,Presentation,0.63,0.9519,0.78,0.69,0.54,0.72,0.64,0.69
+5351302,International Relations (Kingdoms & Alliances),3_5_18,Politics and Relations,2,5,1,,Groupwork,0.62,0.9556,0.74,0.71,0.5,0.86,0.62,0.59
+5351104,Leadership & Responsibility,3_5_18,Elven Ethics in Modern Governance,2,5,2,,Written coursework,0.54,0.9852,0.86,0.69,0.59,0.83,0.51,0.55
+5351203,"Ritual, Symbol & Authority",3_5_18,Narrative Governance and Institution Building,2,5,2,,Presentation,0.56,0.9778,0.78,0.78,0.3,0.73,0.5,0.56
+635902,Post-Conflict Societies,3_5_18,Conflict Transformation,3,6,1,,Groupwork,0.75,0.9075,0.82,0.7,0.61,0.94,0.71,0.76
+6351001,Advanced Economic Theory,3_5_18,Economics,3,6,1,,Viva,0.76,0.9038,0.64,0.78,0.2,0.65,0.77,0.73
+5351204,Communication & Public Trust,3_5_19,Narrative Governance and Institution Building,2,5,2,,Written coursework,0.51,0.9963,0.73,0.73,0.53,0.7,0.45,0.54
+5351303,Political Economy,3_5_19,Politics and Relations,2,5,2,,Written coursework,0.57,0.9741,0.73,0.78,0.42,0.86,0.56,0.6
+6351002,Development & Inequality (Across Species),3_5_19,Economics,3,6,1,,Presentation,0.71,0.9223,0.85,0.79,0.57,0.78,0.63,0.74
+6351101,Ethics of Modern Governance,3_5_19,Elven Ethics in Modern Governance,3,6,1,,Written coursework,0.62,0.9556,0.69,0.76,0.14,0.67,0.69,0.65
+635903,Leadership in Crisis,3_5_19,Conflict Transformation,3,6,2,,Written coursework,0.62,0.9556,0.78,0.74,0.36,0.83,0.7,0.68
+5351304,Conflict & Cooperation,3_5_20,Politics and Relations,2,5,2,,Presentation,0.43,1.0105,0.8,0.75,0.45,0.82,0.38,0.5
+6351102,Environmental Stewardship & Future Generations,3_5_20,Elven Ethics in Modern Governance,3,6,1,,Presentation,0.71,0.9223,0.77,0.76,0.32,0.79,0.67,0.73
+6351201,Advanced Narrative Governance,3_5_20,Narrative Governance and Institution Building,3,6,1,,Viva,0.86,0.8668,0.68,0.81,0.12,0.63,0.81,0.84
+635904,Dissertation / Applied Project,3_5_20,Conflict Transformation,3,6,2,1.0,Written coursework,0.95,0.8335,0.7,0.73,0.35,0.38,0.95,0.78
+6351003,Political Economy of Realms,3_5_20,Economics,3,6,2,,Presentation,0.8,0.889,0.77,0.73,0.44,0.76,0.66,0.72
+6351202,"Crisis, Change & Institutional Renewal",3_5_21,Narrative Governance and Institution Building,3,6,1,,Groupwork,0.65,0.9445,0.82,0.69,0.52,0.87,0.66,0.66
+6351301,Advanced Political Theory,3_5_21,Politics and Relations,3,6,1,,Presentation,0.78,0.8964,0.77,0.7,0.29,0.7,0.75,0.73
+6351004,Dissertation,3_5_21,Economics,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.78,0.4,0.38,0.95,0.81
+6351103,Moral Dilemmas in Inter-Realm Politics,3_5_21,Elven Ethics in Modern Governance,3,6,2,,Viva,0.75,0.9075,0.55,0.77,0.17,0.55,0.76,0.69
+6351302,Global Governance & Diplomacy,3_5_22,Politics and Relations,3,6,1,,Viva,0.82,0.8816,0.53,0.77,0.15,0.59,0.76,0.76
+6351104,Dissertation,3_5_22,Elven Ethics in Modern Governance,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.71,0.41,0.38,0.95,0.82
+6351203,Worldbuilding & Policy Design,3_5_22,Narrative Governance and Institution Building,3,6,2,,Written coursework,0.67,0.9371,0.74,0.66,0.36,0.69,0.65,0.61
+6351204,Major Project,3_5_23,Narrative Governance and Institution Building,3,6,2,1.0,Written coursework,0.85,0.8705,0.61,0.73,0.5,0.38,0.95,0.75
+6351303,Security & Strategy,3_5_23,Politics and Relations,3,6,2,,Viva,0.88,0.8594,0.73,0.77,0.11,0.57,0.76,0.79
+6351304,Dissertation,3_5_24,Politics and Relations,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.71,0.42,0.38,0.95,0.75
+435901,Introduction to Conflict Studies,3_5_9,Conflict Transformation,1,4,1,,Written exam,0.46,1.006,0.57,0.8,0.21,0.48,0.33,0.41
+4361401,Introduction to Psychology,3_6_14,Psychology,1,4,1,,Written exam,0.41,1.0135,0.65,0.82,0.21,0.51,0.5,0.38
+4361402,Cognitive Psychology,3_6_15,Psychology,1,4,1,,Written exam,0.35,1.0225,0.56,0.71,0.26,0.57,0.37,0.3
+4361501,Introduction to Sociology,3_6_15,Sociology,1,4,1,,Written exam,0.39,1.0165,0.67,0.78,0.23,0.59,0.42,0.32
+4361502,Culture & Society,3_6_16,Sociology,1,4,1,,Written exam,0.34,1.024,0.6,0.82,0.12,0.57,0.3,0.26
+4361403,Developmental Psychology,3_6_16,Psychology,1,4,2,,Written coursework,0.34,1.024,0.7,0.7,0.35,0.59,0.44,0.37
+4361404,Research Methods,3_6_17,Psychology,1,4,2,,Written coursework,0.43,1.0105,0.7,0.78,0.41,0.76,0.36,0.43
+4361503,Social Inequality,3_6_17,Sociology,1,4,2,,Presentation,0.19,1.0465,0.88,0.76,0.49,0.82,0.28,0.34
+4361504,Sociological Theory,3_6_18,Sociology,1,4,2,,Written exam,0.3,1.03,0.59,0.68,0.23,0.57,0.39,0.24
+5361401,Social Psychology,3_6_18,Psychology,2,5,1,,Written exam,0.55,0.9815,0.55,0.73,0.28,0.65,0.44,0.56
+5361402,Biological Psychology,3_6_19,Psychology,2,5,1,,Written coursework,0.66,0.9408,0.67,0.85,0.1,0.61,0.68,0.64
+5361501,Research Methods in Sociology,3_6_19,Sociology,2,5,1,,Written exam,0.57,0.9741,0.67,0.77,0.26,0.64,0.57,0.52
+5361502,Social Institutions,3_6_20,Sociology,2,5,1,,Presentation,0.44,1.009,0.79,0.75,0.38,0.79,0.53,0.56
+5361403,Personality & Individual Differences,3_6_20,Psychology,2,5,2,,Multi-choice exam,0.56,0.9778,0.7,0.67,0.43,0.78,0.54,0.6
+5361404,Psychological Research Methods,3_6_21,Psychology,2,5,2,,Presentation,0.59,0.9667,0.78,0.76,0.42,0.68,0.43,0.54
+5361503,Identity & Diversity,3_6_21,Sociology,2,5,2,,Groupwork,0.47,1.0045,0.81,0.73,0.54,0.85,0.62,0.55
+5361504,Globalisation & Society,3_6_22,Sociology,2,5,2,,Written exam,0.61,0.9593,0.55,0.7,0.28,0.45,0.58,0.49
+6361401,Advanced Topics in Psychology,3_6_22,Psychology,3,6,1,,Viva,0.73,0.9149,0.59,0.78,0.35,0.5,0.67,0.7
+6361402,Clinical & Health Psychology,3_6_23,Psychology,3,6,1,,Written coursework,0.73,0.9149,0.6,0.69,0.61,0.57,0.62,0.68
+6361501,Advanced Sociological Theory,3_6_23,Sociology,3,6,1,,Written coursework,0.68,0.9334,0.58,0.77,0.19,0.6,0.73,0.71
+6361502,Contemporary Social Issues,3_6_24,Sociology,3,6,1,,Groupwork,0.71,0.9223,0.81,0.74,0.52,0.85,0.69,0.69
+6361403,Applied Psychology,3_6_24,Psychology,3,6,2,,Viva,0.69,0.9297,0.65,0.79,0.14,0.62,0.68,0.7
+6361404,Dissertation,3_6_25,Psychology,3,6,2,1.0,Written coursework,0.95,0.8335,0.58,0.76,0.45,0.38,0.95,0.77
+6361503,Power & Social Change,3_6_25,Sociology,3,6,2,,Viva,0.83,0.8779,0.75,0.74,0.42,0.83,0.73,0.83
+6361504,Dissertation,3_6_26,Sociology,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.73,0.41,0.38,0.94,0.85
+441101,Foundations of Education,4_1_1,Education Studies,1,4,1,,Professional artefact,0.24,1.039,0.67,0.79,0.66,0.78,0.37,0.28
+541304,Community-Based Learning Design,4_1_10,Intergenerational Learning,2,5,2,,Professional artefact,0.59,0.9667,0.71,0.73,0.74,0.78,0.45,0.58
+641102,Global Education Systems,4_1_10,Education Studies,3,6,1,,Groupwork,0.68,0.9334,0.81,0.7,0.75,0.88,0.71,0.69
+641201,Strategic Mentorship in Institutions,4_1_10,Educational Mentorship,3,6,1,,Written coursework,0.71,0.9223,0.72,0.64,0.72,0.75,0.61,0.63
+641202,Crisis Support & Developmental Intervention,4_1_11,Educational Mentorship,3,6,1,,Groupwork,0.76,0.9038,0.82,0.71,0.7,0.87,0.71,0.82
+641301,Intergenerational Knowledge Systems,4_1_11,Intergenerational Learning,3,6,1,,Written coursework,0.56,0.9778,0.78,0.62,0.76,0.73,0.54,0.63
+641103,Educational Leadership & Change,4_1_11,Education Studies,3,6,2,,Groupwork,0.7,0.926,0.84,0.57,0.77,0.92,0.74,0.83
+641302,"Heritage, Continuity & Change",4_1_12,Intergenerational Learning,3,6,1,,Viva,0.8,0.889,0.7,0.69,0.56,0.77,0.7,0.78
+641104,Dissertation,4_1_12,Education Studies,3,6,2,1.0,Written coursework,0.95,0.8335,0.57,0.73,0.57,0.38,0.95,0.77
+641203,Mentorship Program Design,4_1_12,Educational Mentorship,3,6,2,,Presentation,0.78,0.8964,0.8,0.67,0.61,0.77,0.67,0.72
+641204,Practice-Based Project,4_1_13,Educational Mentorship,3,6,2,1.0,Written coursework,0.93,0.8409,0.56,0.66,0.65,0.38,0.95,0.82
+641303,Designing Multi-Age Learning Environments,4_1_13,Intergenerational Learning,3,6,2,,Written coursework,0.79,0.8927,0.79,0.65,0.77,0.82,0.9,0.83
+641304,Dissertation / Applied Project,4_1_14,Intergenerational Learning,3,6,2,1.0,Written coursework,0.95,0.8335,0.68,0.6,0.65,0.38,0.95,0.82
+441102,Learning Theories,4_1_2,Education Studies,1,4,1,,Practical exam,0.33,1.0255,0.69,0.66,0.75,0.73,0.34,0.26
+441201,Principles of Mentorship,4_1_2,Educational Mentorship,1,4,1,,Written coursework,0.34,1.024,0.71,0.61,0.72,0.72,0.37,0.34
+441202,Communication & Coaching Skills,4_1_3,Educational Mentorship,1,4,1,,Written coursework,0.22,1.042,0.97,0.61,0.95,0.52,0.32,0.28
+441301,Foundations of Lifespan Learning,4_1_3,Intergenerational Learning,1,4,1,,Written coursework,0.44,1.009,0.81,0.57,0.82,0.79,0.36,0.36
+441103,Child & Adolescent Development,4_1_3,Education Studies,1,4,2,,Professional artefact,0.29,1.0315,0.63,0.74,0.73,0.73,0.36,0.26
+441302,"Memory, Story & Oral Tradition",4_1_4,Intergenerational Learning,1,4,1,,Written exam,0.49,1.0015,0.58,0.72,0.46,0.64,0.41,0.39
+441104,Education Systems & Policy,4_1_4,Education Studies,1,4,2,,Written exam,0.3,1.03,0.57,0.7,0.41,0.48,0.29,0.24
+441203,Development Across Lifespans,4_1_4,Educational Mentorship,1,4,2,,Practical exam,0.33,1.0255,0.69,0.68,0.76,0.69,0.26,0.34
+441204,Ethics of Guidance & Support,4_1_5,Educational Mentorship,1,4,2,,Written exam,0.32,1.027,0.62,0.67,0.4,0.66,0.34,0.34
+441303,Social Structures Across Ages,4_1_5,Intergenerational Learning,1,4,2,,Presentation,0.37,1.0195,0.77,0.72,0.78,0.65,0.47,0.39
+541101,Curriculum Design & Assessment,4_1_5,Education Studies,2,5,1,,Written coursework,0.58,0.9704,0.73,0.65,0.69,0.71,0.57,0.54
+441304,Learning in Community Contexts,4_1_6,Intergenerational Learning,1,4,2,,Written coursework,0.39,1.0165,0.69,0.71,0.65,0.8,0.39,0.4
+541102,Inclusive Education,4_1_6,Education Studies,2,5,1,,Professional artefact,0.39,1.0165,0.74,0.76,0.63,0.75,0.4,0.44
+541201,Advanced Mentoring Practice,4_1_6,Educational Mentorship,2,5,1,,Groupwork,0.6,0.963,0.83,0.69,0.7,0.84,0.67,0.64
+541202,Reflective Practice & Supervision,4_1_7,Educational Mentorship,2,5,1,,Groupwork,0.57,0.9741,0.77,0.71,0.67,0.87,0.65,0.61
+541301,Knowledge Transfer Systems,4_1_7,Intergenerational Learning,2,5,1,,Groupwork,0.53,0.9889,0.8,0.65,0.68,0.87,0.51,0.55
+541103,Classroom Practice & Pedagogy,4_1_7,Education Studies,2,5,2,,Written coursework,0.61,0.9593,0.78,0.61,0.64,0.64,0.54,0.55
+541302,Apprenticeship & Guild Learning Models,4_1_8,Intergenerational Learning,2,5,1,,Written coursework,0.56,0.9778,0.69,0.68,0.67,0.82,0.57,0.56
+541104,Research Methods in Education,4_1_8,Education Studies,2,5,2,,Practical exam,0.74,0.9112,0.65,0.63,0.77,0.68,0.51,0.65
+541203,Supporting Learning Pathways,4_1_8,Educational Mentorship,2,5,2,,Written coursework,0.57,0.9741,0.69,0.7,0.69,0.72,0.44,0.51
+541204,Group Facilitation Techniques,4_1_9,Educational Mentorship,2,5,2,,Practical exam,0.42,1.012,0.52,0.63,0.92,0.62,0.47,0.47
+541303,"Age, Identity & Social Roles",4_1_9,Intergenerational Learning,2,5,2,,Groupwork,0.7,0.926,0.77,0.77,0.57,0.86,0.49,0.73
+641101,Critical Perspectives in Education,4_1_9,Education Studies,3,6,1,,Groupwork,0.71,0.9223,0.81,0.6,0.66,0.84,0.75,0.8
+442902,Biology & Physiology,4_2_10,Pharmacy,1,4,1,,Practical exam,0.31,1.0285,0.53,0.65,0.73,0.88,0.33,0.43
+4421001,"Anatomy, Physiology & Movement",4_2_10,Physiotherapy,1,4,1,,Written coursework,0.35,1.0225,0.73,0.67,0.86,0.78,0.23,0.34
+442703,Professionalism & Ethics in Care,4_2_10,Nursing and Care,1,4,2,,Written coursework,0.48,1.003,0.69,0.7,0.6,0.6,0.39,0.42
+442802,Occupation & Daily Living,4_2_10,Occupational Therapy,1,4,2,,Written coursework,0.35,1.0225,0.82,0.64,0.75,0.83,0.38,0.33
+542502,"Movement, Breath & Awareness Practices",4_2_10,Integrated Mind-Body,2,5,1,,Written coursework,0.41,1.0135,0.72,0.66,0.65,0.75,0.55,0.48
+542601,Labour & Birth Management,4_2_10,Midwifery,2,5,1,,Practical exam,0.53,0.9889,0.53,0.58,0.95,0.63,0.52,0.51
+542403,Healing Traditions Across Realms,4_2_10,Herbal Practice and Energy Work,2,5,2,,Written coursework,0.61,0.9593,0.72,0.68,0.76,0.72,0.59,0.62
+4421002,Foundations of Physiotherapy,4_2_11,Physiotherapy,1,4,1,,Practical exam,0.32,1.027,0.71,0.57,0.81,0.78,0.39,0.32
+4421101,Introduction to Social Work,4_2_11,Social Work,1,4,1,,Practical exam,0.29,1.0315,0.71,0.61,0.83,0.74,0.22,0.21
+442604,Professional Practice & Ethics,4_2_11,Occupational Therapy,1,4,2,,Written exam,0.35,1.0225,0.65,0.67,0.51,0.61,0.33,0.32
+442903,Pharmaceutical Chemistry,4_2_11,Pharmacy,1,4,2,,Practical exam,0.27,1.0345,0.53,0.65,0.75,0.79,0.27,0.31
+542602,Postnatal Care & Neonatal Health,4_2_11,Midwifery,2,5,1,,Written coursework,0.6,0.963,0.73,0.56,0.79,0.78,0.56,0.56
+542701,"Adult, Child & Mental Health Nursing",4_2_11,Nursing and Care,2,5,1,,Presentation,0.58,0.9704,0.77,0.73,0.59,0.73,0.6,0.55
+542404,Field Practice & Observation,4_2_11,Herbal Practice and Energy Work,2,5,2,,Groupwork,0.41,1.0135,0.77,0.65,0.67,0.85,0.57,0.5
+542503,"Pain, Recovery & Adaptation",4_2_11,Integrated Mind-Body,2,5,2,,Presentation,0.67,0.9371,0.79,0.7,0.68,0.81,0.58,0.68
+4421102,Development & Lifespan,4_2_12,Social Work,1,4,1,,Written coursework,0.36,1.021,0.76,0.64,0.77,0.77,0.3,0.39
+4421201,Foundations of Somatic Awareness,4_2_12,Somatic Wellbeing Enquiry,1,4,1,,Practical exam,0.25,1.0375,0.69,0.6,0.93,0.65,0.34,0.24
+442904,Introduction to Pharmacy Practice,4_2_12,Pharmacy,1,4,2,,Practical exam,0.4,1.015,0.53,0.61,0.87,0.61,0.21,0.34
+4421003,Physiology & Pathophysiology,4_2_12,Physiotherapy,1,4,2,,Groupwork,0.32,1.027,0.83,0.68,0.77,0.85,0.3,0.33
+542702,Pharmacology & Medication Management,4_2_12,Nursing and Care,2,5,1,,Written coursework,0.67,0.9371,0.67,0.64,0.64,0.43,0.52,0.55
+542801,Therapeutic Interventions & Techniques,4_2_12,Occupational Therapy,2,5,1,,Written coursework,0.31,1.0285,0.77,0.58,0.95,0.53,0.33,0.34
+542504,Therapeutic Communication,4_2_12,Integrated Mind-Body,2,5,2,,Written coursework,0.61,0.9593,0.72,0.64,0.63,0.74,0.48,0.54
+542603,Complications in Pregnancy & Birth,4_2_12,Midwifery,2,5,2,,Written coursework,0.5,1.0,0.8,0.62,0.73,0.8,0.5,0.54
+642401,Advanced Herbal Practice,4_2_12,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.67,0.9371,0.82,0.64,0.74,0.75,0.74,0.69
+4421202,Body Systems & Embodied Experience,4_2_13,Somatic Wellbeing Enquiry,1,4,1,,Groupwork,0.37,1.0195,0.98,0.73,0.59,0.95,0.31,0.42
+4421004,Professional Practice & Communication,4_2_13,Physiotherapy,1,4,2,,Written coursework,0.35,1.0225,0.9,0.55,0.83,0.83,0.28,0.33
+4421103,"Law, Policy & Welfare Systems",4_2_13,Social Work,1,4,2,,Written exam,0.33,1.0255,0.62,0.73,0.46,0.47,0.3,0.31
+542802,Mental Health & Physical Rehabilitation,4_2_13,Occupational Therapy,2,5,1,,Written coursework,0.51,0.9963,0.75,0.71,0.72,0.74,0.38,0.47
+542901,Pharmacokinetics & Pharmacodynamics,4_2_13,Pharmacy,2,5,1,,Written coursework,0.5,1.0,0.53,0.7,0.66,0.83,0.47,0.46
+542604,Clinical Practice Placement,4_2_13,Midwifery,2,5,2,,Practical exam,0.49,1.0015,0.6,0.62,0.88,0.58,0.44,0.45
+5421004,Clinical Skills & Assessment,4_2_13,Nursing and Care,2,5,2,,Practical exam,0.45,1.0075,0.66,0.67,0.86,0.59,0.49,0.45
+642402,Integrative Healing Systems,4_2_13,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.6,0.963,0.8,0.64,0.81,0.79,0.75,0.63
+642501,Advanced Integrated Care Models,4_2_13,Integrated Mind-Body,3,6,1,,Presentation,0.68,0.9334,0.82,0.69,0.63,0.77,0.78,0.68
+4421104,Communication & Safeguarding,4_2_14,Social Work,1,4,2,,Groupwork,0.3,1.03,0.82,0.66,0.76,0.86,0.29,0.34
+4421203,"Movement, Breath & Attention",4_2_14,Somatic Wellbeing Enquiry,1,4,2,,Written coursework,0.28,1.033,0.71,0.66,0.72,0.77,0.47,0.4
+542902,Microbiology & Infectious Disease,4_2_14,Pharmacy,2,5,1,,Written coursework,0.51,0.9963,0.53,0.63,0.71,0.71,0.4,0.49
+5421001,Musculoskeletal Physiotherapy,4_2_14,Physiotherapy,2,5,1,,Written coursework,0.53,0.9889,0.74,0.61,0.76,0.74,0.46,0.52
+542803,Assistive Technology & Adaptation,4_2_14,Occupational Therapy,2,5,2,,Written coursework,0.52,0.9926,0.77,0.6,0.64,0.82,0.51,0.57
+5421104,Practice Placement,4_2_14,Nursing and Care,2,5,2,,Practical exam,0.33,1.0255,0.52,0.58,0.95,0.39,0.33,0.31
+642502,Complex Case Integration,4_2_14,Integrated Mind-Body,3,6,1,,Written coursework,0.79,0.8927,0.73,0.69,0.77,0.85,0.72,0.8
+642601,Advanced Midwifery Practice,4_2_14,Midwifery,3,6,1,,Written coursework,0.66,0.9408,0.78,0.68,0.72,0.83,0.64,0.71
+642403,Ethical Practice in Healing Arts,4_2_14,Herbal Practice and Energy Work,3,6,2,,Presentation,0.74,0.9112,0.78,0.78,0.55,0.81,0.63,0.75
+4421204,Introduction to Contemplative Practice,4_2_15,Somatic Wellbeing Enquiry,1,4,2,,Groupwork,0.36,1.021,0.87,0.6,0.76,0.85,0.37,0.36
+5421002,Neurological Rehabilitation,4_2_15,Physiotherapy,2,5,1,,Written coursework,0.46,1.006,0.72,0.69,0.72,0.78,0.35,0.43
+5421101,Social Work Practice Methods,4_2_15,Social Work,2,5,1,,Written coursework,0.35,1.0225,0.86,0.63,0.75,0.77,0.46,0.42
+542903,Drug Development & Formulation,4_2_15,Pharmacy,2,5,2,,Written coursework,0.47,1.0045,0.73,0.65,0.84,0.71,0.47,0.43
+5421104,Practice Placement,4_2_15,Occupational Therapy,2,5,2,,Practical exam,0.58,0.9704,0.62,0.67,0.86,0.62,0.45,0.55
+642602,Complex Birth & Risk Management,4_2_15,Midwifery,3,6,1,,Viva,0.8,0.889,0.65,0.71,0.39,0.56,0.68,0.75
+642701,Advanced Clinical Practice,4_2_15,Nursing and Care,3,6,1,,Practical exam,0.75,0.9075,0.53,0.6,0.95,0.54,0.74,0.71
+642404,Major Practical Project / Portfolio,4_2_15,Herbal Practice and Energy Work,3,6,2,1.0,Professional artefact,0.95,0.8335,0.65,0.65,0.77,0.38,0.95,0.87
+642503,Holistic Assessment & Intervention,4_2_15,Integrated Mind-Body,3,6,2,,Written coursework,0.82,0.8816,0.76,0.6,0.69,0.77,0.71,0.8
+5421102,Mental Health & Vulnerability,4_2_16,Social Work,2,5,1,,Groupwork,0.58,0.9704,0.78,0.78,0.54,0.87,0.54,0.61
+5421201,"Trauma, Regulation & Embodiment",4_2_16,Somatic Wellbeing Enquiry,2,5,1,,Written coursework,0.53,0.9889,0.68,0.62,0.68,0.65,0.47,0.47
+542904,Clinical Pharmacy Practice,4_2_16,Pharmacy,2,5,2,,Practical exam,0.45,1.0075,0.48,0.66,0.92,0.54,0.36,0.42
+5421003,Cardiopulmonary Physiotherapy,4_2_16,Physiotherapy,2,5,2,,Written coursework,0.58,0.9704,0.71,0.68,0.72,0.75,0.67,0.55
+642702,Complex Care & Decision-Making,4_2_16,Nursing and Care,3,6,1,,Presentation,0.7,0.926,0.78,0.68,0.63,0.76,0.62,0.7
+642801,Advanced Occupational Therapy Practice,4_2_16,Occupational Therapy,3,6,1,,Professional artefact,0.86,0.8668,0.85,0.73,0.65,0.8,0.8,0.73
+642504,Dissertation / Practice Portfolio,4_2_16,Integrated Mind-Body,3,6,2,1.0,Written coursework,0.87,0.8631,0.78,0.72,0.54,0.38,0.95,0.79
+642603,Leadership in Maternity Care,4_2_16,Midwifery,3,6,2,,Professional artefact,0.79,0.8927,0.81,0.74,0.63,0.69,0.69,0.75
+5421202,Somatic Research Methods,4_2_17,Somatic Wellbeing Enquiry,2,5,1,,Professional artefact,0.6,0.963,0.77,0.73,0.74,0.77,0.52,0.56
+5421004,Clinical Skills & Assessment,4_2_17,Physiotherapy,2,5,2,,Practical exam,0.42,1.012,0.62,0.67,0.9,0.54,0.37,0.38
+5421103,"Ethics, Power & Inequality",4_2_17,Social Work,2,5,2,,Multi-choice exam,0.59,0.9667,0.6,0.67,0.47,0.64,0.51,0.53
+642901,Dissertation / Research Project,4_2_17,Pharmacy,3,6,1,1.0,Written coursework,0.94,0.8372,0.66,0.76,0.65,0.38,0.95,0.81
+6421002,Complex Case Management,4_2_17,Occupational Therapy,3,6,1,,Written coursework,0.61,0.9593,0.65,0.63,0.48,0.55,0.78,0.63
+642604,Dissertation / Practice Portfolio,4_2_17,Midwifery,3,6,2,1.0,Written coursework,0.95,0.8335,0.81,0.7,0.65,0.38,0.95,0.8
+642703,Leadership in Healthcare Settings,4_2_17,Nursing and Care,3,6,2,,Groupwork,0.59,0.9667,0.94,0.71,0.74,0.95,0.57,0.64
+5421104,Practice Placement,4_2_18,Social Work,2,5,2,,Practical exam,0.49,1.0015,0.66,0.62,0.95,0.65,0.53,0.49
+5421203,Integrative Wellbeing Practices,4_2_18,Somatic Wellbeing Enquiry,2,5,2,,Groupwork,0.49,1.0015,0.83,0.65,0.73,0.84,0.59,0.56
+642902,Patient Care & Clinical Decision-Making,4_2_18,Pharmacy,3,6,1,,Practical exam,0.65,0.9445,0.52,0.7,0.9,0.54,0.64,0.63
+6421001,Advanced Rehabilitation Practice,4_2_18,Physiotherapy,3,6,1,,Written coursework,0.68,0.9334,0.73,0.69,0.66,0.73,0.71,0.69
+642704,Dissertation / Practice Portfolio,4_2_18,Nursing and Care,3,6,2,1.0,Written coursework,0.78,0.8964,0.72,0.72,0.56,0.38,0.91,0.69
+642802,Community & Social Inclusion,4_2_18,Occupational Therapy,3,6,2,,Written coursework,0.75,0.9075,0.72,0.67,0.83,0.74,0.69,0.74
+5421204,Relational & Group Dynamics,4_2_19,Somatic Wellbeing Enquiry,2,5,2,,Written coursework,0.51,0.9963,0.73,0.68,0.66,0.72,0.69,0.54
+6421002,Complex Case Management,4_2_19,Physiotherapy,3,6,1,,Viva,0.72,0.9186,0.64,0.67,0.42,0.57,0.87,0.69
+6421101,Advanced Social Work Practice,4_2_19,Social Work,3,6,1,,Professional artefact,0.65,0.9445,0.81,0.74,0.67,0.8,0.7,0.63
+642803,Dissertation / Practice Portfolio,4_2_19,Occupational Therapy,3,6,2,1.0,Written coursework,0.7,0.926,0.67,0.72,0.6,0.38,0.94,0.64
+642903,Medicines Management & Public Health,4_2_19,Pharmacy,3,6,2,,Written coursework,0.61,0.9593,0.79,0.65,0.44,0.73,0.63,0.68
+6421102,"Risk, Protection & Complex Cases",4_2_20,Social Work,3,6,1,,Written coursework,0.65,0.9445,0.74,0.7,0.68,0.8,0.56,0.68
+6421201,Advanced Somatic Enquiry,4_2_20,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.72,0.9186,0.84,0.73,0.65,0.95,0.79,0.7
+642904,Professional Practice & Ethics,4_2_20,Pharmacy,3,6,2,,Written coursework,0.71,0.9223,0.7,0.7,0.48,0.57,0.62,0.65
+6421003,Leadership in Clinical Practice,4_2_20,Physiotherapy,3,6,2,,Practical exam,0.7,0.926,0.44,0.63,0.92,0.52,0.56,0.63
+6421202,Applied Embodied Interventions,4_2_21,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.77,0.9001,0.77,0.61,0.69,0.86,0.78,0.76
+6421004,Dissertation / Clinical Portfolio,4_2_21,Physiotherapy,3,6,2,1.0,Written coursework,0.95,0.8335,0.64,0.64,0.58,0.38,0.95,0.81
+6421103,Leadership & Professional Responsibility,4_2_21,Social Work,3,6,2,,Written coursework,0.55,0.9815,0.7,0.63,0.68,0.81,0.75,0.65
+6421104,Dissertation / Practice Portfolio,4_2_22,Social Work,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.7,0.54,0.38,0.95,0.81
+6421203,Ethics of Care & Presence,4_2_22,Somatic Wellbeing Enquiry,3,6,2,,Viva,0.81,0.8853,0.58,0.6,0.51,0.49,0.79,0.73
+6421204,Dissertation / Practice-Based Enquiry,4_2_23,Somatic Wellbeing Enquiry,3,6,2,1.0,Written coursework,0.95,0.8335,0.55,0.66,0.75,0.38,0.95,0.76
+442401,Introduction to Herbal Lore,4_2_4,Herbal Practice and Energy Work,1,4,1,,Groupwork,0.18,1.048,0.82,0.7,0.76,0.84,0.41,0.28
+442402,Plant Identification & Ecology,4_2_5,Herbal Practice and Energy Work,1,4,1,,Groupwork,0.34,1.024,0.81,0.68,0.8,0.84,0.32,0.37
+442501,Foundations of Mind-Body Systems,4_2_5,Integrated Mind-Body,1,4,1,,Written coursework,0.29,1.0315,0.69,0.68,0.69,0.8,0.3,0.34
+442502,Anatomy & Physiology,4_2_6,Integrated Mind-Body,1,4,1,,Written coursework,0.38,1.018,0.75,0.63,0.76,0.82,0.48,0.41
+442601,Foundations of Midwifery Care,4_2_6,Midwifery,1,4,1,,Written coursework,0.24,1.039,0.72,0.66,0.82,0.81,0.28,0.31
+442403,Foundations of Vital Energies,4_2_6,Herbal Practice and Energy Work,1,4,2,,Professional artefact,0.45,1.0075,0.74,0.76,0.68,0.77,0.34,0.44
+442602,Anatomy & Physiology of Birth,4_2_7,Midwifery,1,4,1,,Written coursework,0.27,1.0345,0.89,0.64,0.74,0.78,0.31,0.31
+442701,Foundations of Nursing Practice,4_2_7,Nursing and Care,1,4,1,,Presentation,0.33,1.0255,0.79,0.67,0.79,0.65,0.35,0.33
+442404,Preparation & Safety in Herbal Practice,4_2_7,Herbal Practice and Energy Work,1,4,2,,Groupwork,0.43,1.0105,0.84,0.67,0.76,0.85,0.47,0.49
+442503,Introduction to Somatic Practice,4_2_7,Integrated Mind-Body,1,4,2,,Written coursework,0.26,1.036,0.75,0.55,0.88,0.71,0.19,0.37
+442502,Anatomy & Physiology,4_2_8,Nursing and Care,1,4,1,,Written coursework,0.4,1.015,0.83,0.54,0.85,0.78,0.35,0.38
+442801,Introduction to Occupational Therapy,4_2_8,Occupational Therapy,1,4,1,,Practical exam,0.43,1.0105,0.7,0.58,0.77,0.69,0.37,0.4
+442504,"Health, Stress & Regulation",4_2_8,Integrated Mind-Body,1,4,2,,Practical exam,0.26,1.036,0.68,0.64,0.82,0.78,0.23,0.29
+442603,Pregnancy & Prenatal Development,4_2_8,Midwifery,1,4,2,,Written coursework,0.35,1.0225,0.83,0.64,0.85,0.82,0.31,0.29
+542401,Applied Herbal Formulations,4_2_8,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.78,0.69,0.73,0.81,0.48,0.5
+442901,Foundations of Pharmacology,4_2_9,Pharmacy,1,4,1,,Practical exam,0.36,1.021,0.53,0.63,0.74,0.86,0.39,0.45
+4421001,"Anatomy, Physiology & Movement",4_2_9,Occupational Therapy,1,4,1,,Written coursework,0.41,1.0135,0.77,0.65,0.81,0.81,0.34,0.4
+442604,Professional Practice & Ethics,4_2_9,Midwifery,1,4,2,,Written coursework,0.33,1.0255,0.6,0.66,0.55,0.57,0.43,0.33
+442702,Fundamentals of Patient Care,4_2_9,Nursing and Care,1,4,2,,Presentation,0.35,1.0225,0.76,0.73,0.59,0.8,0.39,0.41
+542402,Energy Systems & Balance,4_2_9,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.77,0.72,0.74,0.67,0.4,0.53
+542501,Psychosomatic Health,4_2_9,Integrated Mind-Body,2,5,1,,Practical exam,0.58,0.9704,0.7,0.66,0.75,0.72,0.51,0.5
+551304,Interfacing Mechanical and Magical Systems,5_1_10,Systems Engineering,2,5,2,,Written coursework,0.5,1.0,0.66,0.65,0.72,0.76,0.49,0.53
+651201,Advanced Mechanical Systems,5_1_10,Mechanical Engineering,3,6,1,,Presentation,0.69,0.9297,0.87,0.71,0.73,0.78,0.65,0.65
+651202,Power Transmission & Energy Systems,5_1_11,Mechanical Engineering,3,6,1,,Written coursework,0.77,0.9001,0.82,0.61,0.76,0.8,0.69,0.77
+651301,Advanced Systems Architecture,5_1_11,Systems Engineering,3,6,1,,Written coursework,0.72,0.9186,0.73,0.59,0.67,0.93,0.81,0.74
+651302,Large-Scale Infrastructure Design,5_1_12,Systems Engineering,3,6,1,,Written coursework,0.58,0.9704,0.73,0.65,0.71,0.8,0.65,0.64
+651203,Dissertation / Practice-Based Enquiry,5_1_12,Mechanical Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.77,0.62,0.65,0.38,0.95,0.82
+651204,Professional Engineering Practice,5_1_13,Mechanical Engineering,3,6,2,,Written coursework,0.73,0.9149,0.82,0.68,0.64,0.83,0.73,0.77
+651303,Failure Analysis & System Resilience,5_1_13,Systems Engineering,3,6,2,,Written coursework,0.59,0.9667,0.6,0.59,0.52,0.58,0.66,0.62
+651304,Capstone Systems Integration Project,5_1_14,Systems Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.62,0.7,0.64,0.38,0.95,0.76
+451201,Foundations of Mechanics,5_1_2,Mechanical Engineering,1,4,1,,Written coursework,0.25,1.0375,0.79,0.57,0.91,0.75,0.3,0.28
+451202,Materials & Craft of Metals and Stone,5_1_3,Mechanical Engineering,1,4,1,,Practical exam,0.31,1.0285,0.54,0.61,0.82,0.75,0.5,0.35
+451301,Introduction to Systems Thinking,5_1_3,Systems Engineering,1,4,1,,Written coursework,0.34,1.024,0.73,0.61,0.73,0.71,0.31,0.35
+451302,Basic Engineering Principles,5_1_4,Systems Engineering,1,4,1,,Groupwork,0.44,1.009,0.76,0.66,0.67,0.87,0.42,0.41
+451203,Thermodynamics of Engines,5_1_4,Mechanical Engineering,1,4,2,,Practical exam,0.24,1.039,0.44,0.59,0.88,0.85,0.36,0.33
+451204,Technical Drawing & Workshop Practice,5_1_5,Mechanical Engineering,1,4,2,,Practical exam,0.2,1.045,0.3,0.64,0.88,0.57,0.24,0.28
+451303,"Signals, Flows & Feedback Loops",5_1_5,Systems Engineering,1,4,2,,Practical exam,0.32,1.027,0.66,0.61,0.91,0.78,0.37,0.37
+451304,Tools of Measurement & Analysis,5_1_6,Systems Engineering,1,4,2,,Written exam,0.28,1.033,0.54,0.63,0.53,0.52,0.35,0.24
+551201,Dynamics of Machines,5_1_6,Mechanical Engineering,2,5,1,,Practical exam,0.5,1.0,0.44,0.58,0.81,0.89,0.51,0.5
+551202,Fluid Systems & Hydraulic Power,5_1_7,Mechanical Engineering,2,5,1,,Practical exam,0.58,0.9704,0.44,0.66,0.76,0.88,0.65,0.57
+551301,Integrated System Design,5_1_7,Systems Engineering,2,5,1,,Written coursework,0.47,1.0045,0.73,0.61,0.81,0.76,0.52,0.47
+551302,Control Systems & Automation,5_1_8,Systems Engineering,2,5,1,,Practical exam,0.48,1.003,0.69,0.68,0.75,0.67,0.45,0.42
+551203,Structural Mechanics,5_1_8,Mechanical Engineering,2,5,2,,Written coursework,0.56,0.9778,0.74,0.69,0.71,0.73,0.41,0.6
+551204,Mechanical Design & Fabrication,5_1_9,Mechanical Engineering,2,5,2,,Practical exam,0.5,1.0,0.59,0.58,0.95,0.44,0.42,0.44
+551303,Reliability & Risk in Complex Systems,5_1_9,Systems Engineering,2,5,2,,Practical exam,0.56,0.9778,0.66,0.69,0.74,0.79,0.54,0.56
+552502,Complex Networked Mechanisms,5_2_10,Multi-system Technology,2,5,1,,Written coursework,0.63,0.9519,0.89,0.6,0.65,0.83,0.7,0.64
+552601,Applied Mycelial Engineering,5_2_10,Mycelial Cultivation and Biotech,2,5,1,,Written coursework,0.44,1.009,0.74,0.61,0.67,0.73,0.57,0.5
+552403,Autonomous Devices & Constructs,5_2_10,Modern Technologies,2,5,2,,Written coursework,0.58,0.9704,0.75,0.66,0.66,0.74,0.48,0.48
+552602,Bio-Systems Integration & Growth Environments,5_2_11,Mycelial Cultivation and Biotech,2,5,1,,Groupwork,0.67,0.9371,0.79,0.6,0.78,0.84,0.67,0.65
+552404,Technology Ethics & Society,5_2_11,Modern Technologies,2,5,2,,Written exam,0.58,0.9704,0.66,0.61,0.49,0.61,0.59,0.55
+552503,Adaptive Control Systems,5_2_11,Multi-system Technology,2,5,2,,Written coursework,0.58,0.9704,0.73,0.64,0.7,0.8,0.51,0.62
+552504,Field Testing & Diagnostics,5_2_12,Multi-system Technology,2,5,2,,Practical exam,0.41,1.0135,0.47,0.55,0.95,0.47,0.69,0.45
+552603,Genetic Modification of Organisms,5_2_12,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.45,1.0075,0.69,0.74,0.6,0.76,0.49,0.48
+652401,Advanced Technological Applications,5_2_12,Modern Technologies,3,6,1,,Written coursework,0.88,0.8594,0.72,0.63,0.75,0.78,0.8,0.88
+552604,Symbiotic Systems & Ecological Roles,5_2_13,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.48,1.003,0.68,0.58,0.71,0.83,0.42,0.54
+652402,Future Systems Design,5_2_13,Modern Technologies,3,6,1,,Written coursework,0.73,0.9149,0.8,0.62,0.75,0.83,0.83,0.71
+652501,Advanced Multi-System Engineering,5_2_13,Multi-system Technology,3,6,1,,Written coursework,0.76,0.9038,0.79,0.6,0.75,0.72,0.89,0.79
+652502,Self-Regulating Infrastructure,5_2_14,Multi-system Technology,3,6,1,,Written coursework,0.58,0.9704,0.69,0.66,0.65,0.81,0.59,0.68
+652601,Advanced Biotechnological Design,5_2_14,Mycelial Cultivation and Biotech,3,6,1,,Groupwork,0.66,0.9408,0.88,0.7,0.7,0.91,0.69,0.73
+652403,Cross-Realm Tech Integration,5_2_14,Modern Technologies,3,6,2,,Written coursework,0.87,0.8631,0.8,0.4,0.95,0.8,0.72,0.77
+652602,Living Infrastructure & Material Production,5_2_15,Mycelial Cultivation and Biotech,3,6,1,,Written coursework,0.82,0.8816,0.72,0.62,0.83,0.8,0.66,0.77
+652404,Innovation Capstone Project,5_2_15,Modern Technologies,3,6,2,1.0,Written coursework,0.91,0.8483,0.56,0.69,0.69,0.38,0.95,0.76
+652503,System Harmony & Stability Design,5_2_15,Multi-system Technology,3,6,2,,Written coursework,0.81,0.8853,0.84,0.55,0.74,0.73,0.77,0.81
+652504,Major Integration Project,5_2_16,Multi-system Technology,3,6,2,1.0,Professional artefact,0.95,0.8335,0.62,0.62,0.58,0.38,0.95,0.8
+652603,Ethical Practice in Bio-Engineering,5_2_16,Mycelial Cultivation and Biotech,3,6,2,,Practical exam,0.84,0.8742,0.68,0.69,0.78,0.76,0.78,0.78
+652604,Major Research / Cultivation Project,5_2_17,Mycelial Cultivation and Biotech,3,6,2,1.0,Professional artefact,0.95,0.8335,0.63,0.6,0.83,0.38,0.95,0.84
+452401,Introduction to Contemporary Arcane-Technics,5_2_4,Modern Technologies,1,4,1,,Practical exam,0.4,1.015,0.69,0.62,0.75,0.8,0.41,0.42
+452402,Materials of the Modern Age,5_2_5,Modern Technologies,1,4,1,,Practical exam,0.31,1.0285,0.62,0.5,0.83,0.75,0.3,0.34
+452501,Foundations of Multi-System Design,5_2_5,Multi-system Technology,1,4,1,,Written coursework,0.58,0.9704,0.74,0.57,0.72,0.76,0.41,0.51
+452502,Interoperability of Magical & Mechanical Systems,5_2_6,Multi-system Technology,1,4,1,,Written coursework,0.28,1.033,0.72,0.59,0.79,0.66,0.38,0.27
+452601,Introduction to Mycology & Mycelial Systems,5_2_6,Mycelial Cultivation and Biotech,1,4,1,,Written coursework,0.5,1.0,0.75,0.69,0.71,0.74,0.57,0.53
+452403,"Energy, Power & Light Systems",5_2_6,Modern Technologies,1,4,2,,Written coursework,0.35,1.0225,0.63,0.66,0.71,0.87,0.26,0.44
+452602,Cellular Biology of Fungal Networks,5_2_7,Mycelial Cultivation and Biotech,1,4,1,,Practical exam,0.43,1.0105,0.6,0.62,0.8,0.9,0.46,0.47
+452404,Digital-Magical Interfaces,5_2_7,Modern Technologies,1,4,2,,Written coursework,0.36,1.021,0.76,0.63,0.67,0.79,0.33,0.38
+452503,Energy Routing & Distribution,5_2_7,Multi-system Technology,1,4,2,,Groupwork,0.36,1.021,0.81,0.6,0.76,0.84,0.36,0.39
+452504,Basic System Architecture,5_2_8,Multi-system Technology,1,4,2,,Written coursework,0.31,1.0285,0.72,0.63,0.8,0.69,0.28,0.29
+452603,Laboratory Skills & Safe Cultivation,5_2_8,Mycelial Cultivation and Biotech,1,4,2,,Practical exam,0.21,1.0435,0.61,0.52,0.95,0.55,0.25,0.19
+552401,Emerging Technologies & Innovations,5_2_8,Modern Technologies,2,5,1,,Written coursework,0.67,0.9371,0.75,0.56,0.78,0.83,0.53,0.67
+452604,Principles of Biotechnical Design,5_2_9,Mycelial Cultivation and Biotech,1,4,2,,Written coursework,0.4,1.015,0.73,0.62,0.74,0.85,0.45,0.43
+552402,Enchanted Systems,5_2_9,Modern Technologies,2,5,1,,Practical exam,0.57,0.9741,0.63,0.59,0.75,0.86,0.61,0.6
+552501,Hybrid Systems Integration,5_2_9,Multi-system Technology,2,5,1,,Written coursework,0.6,0.963,0.65,0.68,0.68,0.83,0.44,0.54
+453902,Organic Chemistry Fundamentals,5_3_10,Chemistry,1,4,1,,Practical exam,0.33,1.0255,0.61,0.5,0.9,0.76,0.23,0.28
+4531001,Earth Systems & Environments,5_3_10,Environmental Science,1,4,1,,Practical exam,0.39,1.0165,0.6,0.58,0.89,0.81,0.46,0.4
+453704,Evolutionary Biology,5_3_10,Biology,1,4,2,,Written coursework,0.43,1.0105,0.8,0.61,0.77,0.81,0.4,0.39
+453803,Biochemistry for Life Sciences,5_3_10,Biomedical Science,1,4,2,,Practical exam,0.24,1.039,0.55,0.58,0.75,0.73,0.36,0.31
+4531002,Ecology & Biodiversity,5_3_11,Environmental Science,1,4,1,,Written coursework,0.35,1.0225,0.81,0.61,0.67,0.73,0.28,0.38
+4531101,Calculus & Algebra,5_3_11,Mathematics,1,4,1,,Practical exam,0.48,1.003,0.38,0.56,0.82,0.85,0.38,0.48
+453804,Laboratory Skills & Diagnostics,5_3_11,Biomedical Science,1,4,2,,Practical exam,0.41,1.0135,0.5,0.6,0.95,0.5,0.34,0.33
+453903,Inorganic Chemistry,5_3_11,Chemistry,1,4,2,,Practical exam,0.45,1.0075,0.61,0.57,0.74,0.8,0.41,0.41
+553701,Microbiology & Immunity,5_3_11,Biology,2,5,1,,Practical exam,0.61,0.9593,0.67,0.66,0.74,0.73,0.44,0.59
+4531102,Discrete Mathematics,5_3_12,Mathematics,1,4,1,,Practical exam,0.47,1.0045,0.38,0.64,0.76,0.67,0.37,0.43
+4531201,Classical Mechanics,5_3_12,Physics,1,4,1,,Written coursework,0.28,1.033,0.49,0.61,0.7,0.81,0.42,0.3
+453904,Practical Laboratory Techniques,5_3_12,Chemistry,1,4,2,,Practical exam,0.23,1.0405,0.61,0.55,0.95,0.52,0.25,0.21
+4531003,Environmental Chemistry,5_3_12,Environmental Science,1,4,2,,Written coursework,0.32,1.027,0.72,0.66,0.71,0.81,0.26,0.36
+553702,Physiology of Organisms,5_3_12,Biology,2,5,1,,Practical exam,0.53,0.9889,0.64,0.65,0.74,0.67,0.55,0.54
+553801,Disease Mechanisms,5_3_12,Biomedical Science,2,5,1,,Practical exam,0.71,0.9223,0.55,0.59,0.79,0.87,0.55,0.71
+4531202,Waves & Oscillations,5_3_13,Physics,1,4,1,,Practical exam,0.37,1.0195,0.49,0.65,0.85,0.79,0.38,0.34
+4531004,Field Methods,5_3_13,Environmental Science,1,4,2,,Practical exam,0.23,1.0405,0.53,0.65,0.92,0.56,0.5,0.24
+4531103,Introduction to Mathematical Thinking,5_3_13,Mathematics,1,4,2,,Practical exam,0.26,1.036,0.2,0.53,0.82,0.88,0.24,0.32
+553802,Medical Microbiology,5_3_13,Biomedical Science,2,5,1,,Practical exam,0.47,1.0045,0.55,0.56,0.81,0.76,0.61,0.51
+553901,Physical Chemistry,5_3_13,Chemistry,2,5,1,,Practical exam,0.52,0.9926,0.61,0.48,0.91,0.89,0.51,0.55
+553703,Molecular Biology,5_3_13,Biology,2,5,2,,Practical exam,0.35,1.0225,0.55,0.57,0.95,0.89,0.26,0.47
+4531104,Probability & Statistics,5_3_14,Mathematics,1,4,2,,Practical exam,0.25,1.0375,0.2,0.54,0.79,0.92,0.32,0.39
+4531203,Electricity & Magnetism,5_3_14,Physics,1,4,2,,Practical exam,0.47,1.0045,0.2,0.61,0.75,0.76,0.44,0.48
+553902,Analytical Chemistry,5_3_14,Chemistry,2,5,1,,Multi-choice exam,0.52,0.9926,0.61,0.62,0.56,0.83,0.52,0.55
+5531001,Climate Systems & Change,5_3_14,Environmental Science,2,5,1,,Written coursework,0.7,0.926,0.73,0.57,0.74,0.86,0.48,0.66
+553704,Field & Laboratory Techniques,5_3_14,Biology,2,5,2,,Practical exam,0.42,1.012,0.55,0.62,0.93,0.48,0.4,0.42
+553803,Haematology & Immunology,5_3_14,Biomedical Science,2,5,2,,Written coursework,0.46,1.006,0.55,0.65,0.61,0.89,0.53,0.54
+4531204,Mathematical Methods for Physics,5_3_15,Physics,1,4,2,,Practical exam,0.25,1.0375,0.3,0.56,0.83,0.64,0.29,0.31
+5531002,Resource Management,5_3_15,Environmental Science,2,5,1,,Multi-choice exam,0.6,0.963,0.49,0.65,0.48,0.48,0.5,0.51
+5531101,Linear Algebra,5_3_15,Mathematics,2,5,1,,Written coursework,0.55,0.9815,0.24,0.6,0.66,0.76,0.5,0.56
+553804,Clinical Laboratory Practice,5_3_15,Biomedical Science,2,5,2,,Practical exam,0.39,1.0165,0.45,0.53,0.95,0.64,0.46,0.36
+553903,Reaction Mechanisms,5_3_15,Chemistry,2,5,2,,Groupwork,0.58,0.9704,0.76,0.62,0.81,0.85,0.5,0.59
+653701,Advanced Biology Topics,5_3_15,Biology,3,6,1,,Groupwork,0.61,0.9593,0.92,0.62,0.79,0.84,0.67,0.72
+5531102,Differential Equations,5_3_16,Mathematics,2,5,1,,Practical exam,0.65,0.9445,0.38,0.61,0.83,0.79,0.59,0.6
+5531201,Quantum Physics,5_3_16,Physics,2,5,1,,Written coursework,0.71,0.9223,0.49,0.63,0.69,0.85,0.61,0.67
+553904,Spectroscopy & Structure Analysis,5_3_16,Chemistry,2,5,2,,Multi-choice exam,0.6,0.963,0.6,0.67,0.41,0.62,0.54,0.54
+5531003,Environmental Monitoring & Data,5_3_16,Environmental Science,2,5,2,,Practical exam,0.6,0.963,0.61,0.6,0.75,0.74,0.54,0.6
+653702,Conservation & Biodiversity,5_3_16,Biology,3,6,1,,Groupwork,0.74,0.9112,0.84,0.59,0.66,0.84,0.71,0.72
+653801,Advanced Biomedical Diagnostics,5_3_16,Biomedical Science,3,6,1,,Practical exam,0.53,0.9889,0.45,0.62,0.95,0.54,0.56,0.53
+5531202,Thermodynamics,5_3_17,Physics,2,5,1,,Practical exam,0.5,1.0,0.49,0.56,0.75,0.67,0.6,0.46
+5531004,Conservation Science,5_3_17,Environmental Science,2,5,2,,Practical exam,0.63,0.9519,0.61,0.59,0.75,0.86,0.59,0.59
+5531103,Mathematical Methods,5_3_17,Mathematics,2,5,2,,Practical exam,0.57,0.9741,0.24,0.56,0.83,0.84,0.53,0.6
+653802,Translational Medicine,5_3_17,Biomedical Science,3,6,1,,Practical exam,0.66,0.9408,0.45,0.58,0.8,0.87,0.67,0.69
+653901,Advanced Organic Synthesis,5_3_17,Chemistry,3,6,1,,Practical exam,0.76,0.9038,0.71,0.58,0.78,0.87,0.76,0.77
+653703,Systems & Integrative Biology,5_3_17,Biology,3,6,2,,Practical exam,0.74,0.9112,0.55,0.6,0.73,0.69,0.7,0.74
+5531104,Statistical Modelling,5_3_18,Mathematics,2,5,2,,Practical exam,0.49,1.0015,0.24,0.67,0.79,0.85,0.57,0.54
+5531203,Optics & Light Systems,5_3_18,Physics,2,5,2,,Written exam,0.48,1.003,0.49,0.7,0.49,0.77,0.51,0.51
+653902,Materials Chemistry,5_3_18,Chemistry,3,6,1,,Written coursework,0.73,0.9149,0.8,0.59,0.77,0.83,0.67,0.74
+6531001,Advanced Environmental Analysis,5_3_18,Environmental Science,3,6,1,,Written coursework,0.64,0.9482,0.75,0.63,0.52,0.61,0.63,0.65
+653704,Dissertation,5_3_18,Biology,3,6,2,1.0,Written coursework,0.87,0.8631,0.54,0.71,0.59,0.38,0.9,0.73
+653803,Research Methods in Biomedicine,5_3_18,Biomedical Science,3,6,2,,Professional artefact,0.65,0.9445,0.8,0.75,0.67,0.8,0.78,0.73
+5531204,Experimental Physics,5_3_19,Physics,2,5,2,,Written coursework,0.48,1.003,0.49,0.6,0.71,0.79,0.52,0.48
+6531002,Sustainability & Policy,5_3_19,Environmental Science,3,6,1,,Viva,0.83,0.8779,0.48,0.58,0.56,0.55,0.69,0.69
+6531101,Advanced Pure Mathematics,5_3_19,Mathematics,3,6,1,,Practical exam,0.75,0.9075,0.36,0.62,0.76,0.88,0.72,0.74
+653804,Dissertation,5_3_19,Biomedical Science,3,6,2,1.0,Written coursework,0.93,0.8409,0.45,0.6,0.69,0.38,0.95,0.73
+653903,Chemical Research Methods,5_3_19,Chemistry,3,6,2,,Presentation,0.78,0.8964,0.77,0.67,0.65,0.8,0.81,0.81
+6531102,Applied Mathematics,5_3_20,Mathematics,3,6,1,,Practical exam,0.77,0.9001,0.36,0.64,0.73,0.8,0.75,0.76
+6531201,Advanced Theoretical Physics,5_3_20,Physics,3,6,1,,Written coursework,0.62,0.9556,0.49,0.57,0.69,0.91,0.67,0.78
+653904,Dissertation,5_3_20,Chemistry,3,6,2,1.0,Written coursework,0.95,0.8335,0.63,0.6,0.67,0.38,0.95,0.79
+6531003,Ecosystem Management,5_3_20,Environmental Science,3,6,2,,Written coursework,0.68,0.9334,0.63,0.64,0.49,0.58,0.67,0.72
+6531202,Astrophysics & Cosmology,5_3_21,Physics,3,6,1,,Practical exam,0.73,0.9149,0.49,0.54,0.73,0.81,0.59,0.7
+6531004,Dissertation / Field Project,5_3_21,Environmental Science,3,6,2,1.0,Written coursework,0.94,0.8372,0.72,0.67,0.69,0.38,0.95,0.75
+6531103,Mathematical Modelling,5_3_21,Mathematics,3,6,2,,Practical exam,0.83,0.8779,0.36,0.63,0.91,0.84,0.8,0.84
+6531104,Dissertation / Research Project,5_3_22,Mathematics,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.6,0.74,0.38,0.95,0.87
+6531203,Particle & Field Physics,5_3_22,Physics,3,6,2,,Written coursework,0.57,0.9741,0.49,0.64,0.68,0.84,0.62,0.61
+6531204,Dissertation / Research Project,5_3_23,Physics,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.62,0.7,0.38,0.95,0.82
+453701,Cell Biology & Life Processes,5_3_7,Biology,1,4,1,,Practical exam,0.38,1.018,0.55,0.71,0.73,0.83,0.38,0.47
+453702,Genetics & Inheritance,5_3_8,Biology,1,4,1,,Written coursework,0.46,1.006,0.75,0.69,0.75,0.81,0.44,0.39
+453801,Anatomy & Physiology,5_3_8,Biomedical Science,1,4,1,,Practical exam,0.34,1.024,0.63,0.54,0.83,0.61,0.38,0.38
+453802,Cellular Pathology,5_3_9,Biomedical Science,1,4,1,,Practical exam,0.26,1.036,0.55,0.53,0.87,0.8,0.25,0.31
+453901,General Chemistry Principles,5_3_9,Chemistry,1,4,1,,Practical exam,0.5,1.0,0.61,0.63,0.81,0.81,0.41,0.47
+453703,Ecology & Ecosystems,5_3_9,Biology,1,4,2,,Groupwork,0.31,1.0285,0.84,0.56,0.89,0.86,0.34,0.34

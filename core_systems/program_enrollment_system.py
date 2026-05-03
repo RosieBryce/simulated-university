@@ -31,7 +31,7 @@ class ProgramEnrollmentSystem:
     based on clan affinities, personality, and other characteristics.
     """
     
-    def __init__(self, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum.xlsx"):
+    def __init__(self, curriculum_file: str = "curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx"):
         """Initialize the enrollment system with curriculum data"""
         self.curriculum_file = curriculum_file
         self.programs_df = None
@@ -74,7 +74,7 @@ class ProgramEnrollmentSystem:
         self.programme_chars_df = pd.read_csv('config/programme_characteristics.csv')
         self._programme_chars_lookup = {}
         for _, row in self.programme_chars_df.iterrows():
-            self._programme_chars_lookup[row['programme_name']] = row.to_dict()
+            self._programme_chars_lookup[str(row['programme_code']).strip()] = row.to_dict()
 
     def _load_trait_mapping(self):
         """Load trait-to-programme-characteristic mapping from CSV"""
@@ -87,19 +87,18 @@ class ProgramEnrollmentSystem:
                 return level
         return "minimal"
 
-    def _get_programme_characteristics(self, program_name: str) -> Optional[Dict]:
-        """Look up programme characteristics by name."""
-        return self._programme_chars_lookup.get(program_name)
+    def _get_programme_characteristics(self, program_code: str) -> Optional[Dict]:
+        """Look up programme characteristics by programme code."""
+        return self._programme_chars_lookup.get(str(program_code).strip())
 
-    def get_program_affinity(self, clan: str, program_name: str) -> float:
-        """Get affinity score for a clan-program combination"""
+    def get_program_affinity(self, clan: str, program_code: str) -> float:
+        """Get affinity score for a clan-program combination (keyed by programme code)."""
         if clan not in self.clan_affinities:
-            return 0.05  # Default minimal affinity
-            
+            return 0.05
         affinities = self.clan_affinities[clan]['program_affinities']
-        return affinities.get(program_name, 0.05)  # Default minimal affinity
-        
-    def calculate_enrollment_probability(self, clan: str, program_name: str,
+        return affinities.get(str(program_code).strip(), 0.05)
+
+    def calculate_enrollment_probability(self, clan: str, program_code: str,
                                        personality: Dict[str, float],
                                        motivation: Dict[str, float]) -> float:
         """
@@ -109,7 +108,7 @@ class ProgramEnrollmentSystem:
           programme_characteristics.csv, no hardcoded programme names or keywords
         """
         # --- Clan component (config-driven) ---
-        raw_affinity = self.get_program_affinity(clan, program_name)
+        raw_affinity = self.get_program_affinity(clan, program_code)
         if raw_affinity < self.min_affinity_threshold:
             return 0.0
         affinity_level = self._classify_affinity(raw_affinity)
@@ -117,7 +116,7 @@ class ProgramEnrollmentSystem:
         clan_score = 0.05 + self.base_selection_probability * multiplier * raw_affinity
 
         # --- Trait fit component (data-driven) ---
-        programme_chars = self._get_programme_characteristics(program_name)
+        programme_chars = self._get_programme_characteristics(program_code)
         if programme_chars is None:
             return clan_score
 
@@ -150,7 +149,7 @@ class ProgramEnrollmentSystem:
             program_code = row['Programme code']
             program_name = row['Programme']
             
-            prob = self.calculate_enrollment_probability(clan, program_name, personality, motivation)
+            prob = self.calculate_enrollment_probability(clan, program_code, personality, motivation)
             program_probabilities.append((program_code, program_name, prob))
             
         # Convert to numpy array for weighted choice
@@ -202,9 +201,9 @@ class ProgramEnrollmentSystem:
         
         # Create enrollment factors for analysis
         enrollment_factors = {
-            'clan_affinity': self.get_program_affinity(clan, program_name),
+            'clan_affinity': self.get_program_affinity(clan, program_code),
             'selection_probability': selection_prob,
-            'personality_modifier': selection_prob - self.get_program_affinity(clan, program_name),
+            'personality_modifier': selection_prob - self.get_program_affinity(clan, program_code),
             'motivation_modifier': 0.0  # Could be calculated more precisely
         }
         

@@ -23,14 +23,15 @@ RELATIONAL = Path("data/relational")
 
 # Expected ranges for flagging
 TARGETS = {
-    "progression_pass_rate":    (0.70, 0.92),
-    "withdrawal_rate":          (0.03, 0.18),
-    "overall_mean_mark":        (52.0, 68.0),
-    "overall_std_mark":         (10.0, 22.0),
-    "elf_dwarf_gap_pp":         (3.0, 18.0),   # Elf > Dwarf, percentage points
-    "ses_gap_pp":               (5.0, 25.0),   # rank 8 vs rank 1
-    "engagement_mark_corr":     (0.05, 0.60),  # weak-to-moderate positive
-    "difficulty_mark_corr":     (-0.60, -0.02), # negative (harder = lower marks)
+    "progression_pass_rate":        (0.70, 0.92),
+    "withdrawal_rate":              (0.03, 0.18),
+    "overall_mean_mark":            (52.0, 68.0),
+    "overall_std_mark":             (10.0, 22.0),
+    "elf_dwarf_mark_gap_pp":        (3.0, 18.0),    # Elf > Dwarf, mean module mark
+    "elf_dwarf_good_degree_gap_pp": (10.0, 25.0),   # Elf > Dwarf, % getting First/2:1 — UK ethnicity gap ~18–20pp
+    "ses_gap_pp":                   (5.0, 25.0),    # rank 8 vs rank 1
+    "engagement_mark_corr":         (0.05, 0.60),   # weak-to-moderate positive
+    "difficulty_mark_corr":         (-0.60, -0.02), # negative (harder = lower marks)
 }
 
 
@@ -49,12 +50,25 @@ def section(title):
 def load():
     tables = {}
     for name in ["dim_students", "dim_modules", "dim_programmes", "dim_academic_years",
-                 "fact_enrollment", "fact_weekly_engagement", "fact_assessment", "fact_progression"]:
+                 "fact_enrollment", "fact_assessment", "fact_progression"]:
         path = RELATIONAL / f"{name}.csv"
         if not path.exists():
             print(f"MISSING: {path}")
             sys.exit(1)
         tables[name] = pd.read_csv(path)
+
+    # Graduate outcomes (optional — skip section if absent)
+    grad_path = RELATIONAL / "fact_graduate_outcomes.csv"
+    tables["fact_graduate_outcomes"] = pd.read_csv(grad_path) if grad_path.exists() else None
+
+    # Weekly engagement stored per academic year — load first available year for correlation checks
+    eng_files = sorted(RELATIONAL.glob("fact_weekly_engagement_*.csv"))
+    if eng_files:
+        tables["fact_weekly_engagement"] = pd.read_csv(eng_files[0])
+        tables["_engagement_years_found"] = len(eng_files)
+    else:
+        print("MISSING: fact_weekly_engagement_*.csv (no per-year files found)")
+        sys.exit(1)
     return tables
 
 
@@ -62,12 +76,14 @@ def load():
 
 def check_shapes(t):
     section("1. SHAPE AND COMPLETENESS")
+    eng_years = t.get("_engagement_years_found", 0)
     expected = {
         "dim_academic_years":     (7,   "7 academic years"),
         "dim_students":           (35000, "7 cohorts × 5000 students"),
-        "dim_programmes":         (44,  "44 programmes"),
-        "dim_modules":            (353, "353 curriculum modules"),
+        "dim_programmes":         (55,  "55 programmes"),
+        "dim_modules":            (333, "333 curriculum modules"),
     }
+    print(f"  OK   fact_weekly_engagement_*.csv: {eng_years} per-year files found")
     for name, (exp, note) in expected.items():
         n = len(t[name])
         ok = "  OK " if n == exp else " WARN"
@@ -80,7 +96,7 @@ def check_shapes(t):
         ("fact_enrollment",        "programme_code"),
         ("fact_assessment",        "assessment_mark"),
         ("fact_assessment",        "module_code"),
-        ("fact_weekly_engagement", "module_code"),
+        ("fact_weekly_engagement", "program_code"),  # first year only
         ("fact_progression",       "year_outcome"),
     ]
     for tbl, col in checks:
@@ -172,7 +188,7 @@ def check_marks(t):
 
 def check_awarding_gaps(t):
     section("4. AWARDING GAPS")
-    assess  = t["fact_assessment"]
+    assess   = t["fact_assessment"]
     students = t["dim_students"][["student_id", "species", "clan", "socio_economic_rank", "gender"]]
     df = assess.merge(students, on="student_id", how="left")
 
@@ -186,8 +202,8 @@ def check_awarding_gaps(t):
     dwarf_mean = sp.loc["Dwarf", "mean"] if "Dwarf" in sp.index else None
     if elf_mean and dwarf_mean:
         gap = elf_mean - dwarf_mean
-        lo, hi = TARGETS["elf_dwarf_gap_pp"]
-        print(f"\n{flag(gap, lo, hi, 'Elf–Dwarf gap (pp)')}")
+        lo, hi = TARGETS["elf_dwarf_mark_gap_pp"]
+        print(f"\n{flag(gap, lo, hi, 'Elf–Dwarf mean mark gap (pp)')}")
 
     # SES
     print()
@@ -207,7 +223,29 @@ def check_awarding_gaps(t):
     for gender, row in gen.iterrows():
         print(f"    {gender:<15}  {row['mean']:.1f}  (n={int(row['count'])})")
 
-    # Top 5 clans by gap from overall mean
+    # Good degree rate (First + 2:1) from classified graduates
+    grad = t.get("fact_graduate_outcomes")
+    if grad is not None:
+        print()
+        print("  Good degree rate (First + 2:1) by species:")
+        gd = grad.merge(students[["student_id","species","clan"]], on="student_id", how="left")
+        gd["good_degree"] = gd["degree_classification"].isin(["First", "2:1"])
+        gd_sp = gd.groupby("species")["good_degree"].mean() * 100
+        for species, rate in gd_sp.sort_values(ascending=False).items():
+            n = gd[gd["species"] == species]["student_id"].nunique()
+            print(f"    {species:<10}  {rate:.1f}%  (n={n})")
+        if "Elf" in gd_sp.index and "Dwarf" in gd_sp.index:
+            gd_gap = gd_sp["Elf"] - gd_sp["Dwarf"]
+            lo, hi = TARGETS["elf_dwarf_good_degree_gap_pp"]
+            print(f"\n{flag(gd_gap, lo, hi, 'Elf–Dwarf good degree gap (pp)')}")
+
+        print()
+        print("  Good degree rate by clan:")
+        gd_clan = gd.groupby("clan")["good_degree"].mean() * 100
+        for c, r in gd_clan.sort_values(ascending=False).items():
+            print(f"    {c:<20}  {r:.1f}%")
+
+    # Mean mark by clan
     print()
     overall = df["assessment_mark"].mean()
     clan = df.groupby("clan")["assessment_mark"].mean().sort_values(ascending=False)
@@ -224,17 +262,29 @@ def check_correlations(t):
     section("5. ENGAGEMENT AND DIFFICULTY CORRELATIONS")
 
     # Engagement -> mark
+    # Engagement is stored per programme (program_code); assessment is per module.
+    # Join via dim_modules.programme_code, then correlate at programme level.
     eng   = t["fact_weekly_engagement"]
     assess = t["fact_assessment"]
+    mods  = t["dim_modules"][["module_code", "programme_code"]].drop_duplicates()
 
+    # Average engagement per student × programme × year
     eng_avg = (
-        eng.groupby(["student_id", "academic_year", "module_code"])
+        eng.groupby(["student_id", "academic_year", "program_code"])
         [["attendance_rate", "participation_score", "academic_engagement"]]
         .mean()
         .mean(axis=1)
         .reset_index(name="avg_engagement")
+        .rename(columns={"program_code": "programme_code"})
     )
-    merged = assess.merge(eng_avg, on=["student_id", "academic_year", "module_code"], how="inner")
+    # Average mark per student × programme × year
+    assess_prog = (
+        assess.merge(mods, on="module_code", how="inner")
+        .groupby(["student_id", "academic_year", "programme_code"])["assessment_mark"]
+        .mean()
+        .reset_index()
+    )
+    merged = assess_prog.merge(eng_avg, on=["student_id", "academic_year", "programme_code"], how="inner")
     if len(merged) > 100:
         corr = merged["avg_engagement"].corr(merged["assessment_mark"])
         lo, hi = TARGETS["engagement_mark_corr"]

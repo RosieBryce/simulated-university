@@ -1,7 +1,7 @@
 # Stonegrove University - Calculation Reference
 
-**Last Updated**: 25 February 2026
-**Version**: 2.2 (Engagement overhaul, progression scale fix, config extraction)
+**Last Updated**: 3 May 2026
+**Version**: 2.3 (Faculty rework, v7 curriculum; attendance intercept fix; award algorithm documented)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
 
@@ -98,11 +98,13 @@ probability = max(probability, 0.001)
 **Attendance**:
 ```
 base_attendance =
+    0.35 +
     conscientiousness * 0.4 +
     academic_drive * 0.3 +
     resilience * 0.2 +
     practical_skills_motivation * 0.1
 ```
+The `0.35` intercept anchors the average student (all traits 0.5) at 0.85, matching UK HE attendance benchmarks of 80–85%. Without it, the trait-weighted sum alone produces ~0.50 for an average student. With it, the plausible range runs from ~0.45 (low-trait, high-disability) to ~0.95 (clipped ceiling), giving realistic differentiation.
 
 **Participation**:
 ```
@@ -219,25 +221,26 @@ All modifiers are multiplicative and applied at the individual student level.
 **Clan Modifier**: Always 1.0 (no direct clan effect — gaps emerge from underlying factors).
 
 **Disability Modifiers** (from `config/disability_assessment_modifiers.csv`):
-- `requires_personal_care`: x0.88
-- `blind_or_visually_impaired`: x0.90
-- `communication_difficulties`: x0.90
-- `specific_learning_disability`: x0.92
-- `mental_health_disability`: x0.93
-- `dyslexia`: x0.93
-- `adhd`: x0.94
-- `deaf_or_hearing_impaired`: x0.94
-- `physical_disability`: x0.96
-- `other_neurodivergence`: x0.96
-- `autistic_spectrum`: x0.97
-- `wheelchair_user`: x0.98
+- `requires_personal_care`: x0.85
+- `blind_or_visually_impaired`: x0.87
+- `specific_learning_disability`: x0.88
+- `communication_difficulties`: x0.88
+- `mental_health_disability`: x0.90
+- `dyslexia`: x0.90
+- `adhd`: x0.91
+- `deaf_or_hearing_impaired`: x0.91
+- `physical_disability`: x0.93
+- `other_neurodivergence`: x0.94
+- `autistic_spectrum`: x0.96
+- `wheelchair_user`: x0.97
 - Multiple disabilities compound multiplicatively.
+- Disability also affects marks indirectly via the engagement path (lower attendance/academic engagement → lower engagement modifier). Both paths are intentional and cumulative.
 
 **Education Modifier** (from `config/assessment_modifiers.yaml`):
-- Academic: x1.06
-- Vocational: x0.96
-- No qualifications: x0.92
-- Softened from earlier values (was 1.10/0.92/0.85) — gap was ~23pp, target ~12–15pp
+- Academic: x1.10
+- Vocational: x0.93
+- No qualifications: x0.85
+- Spread widened from earlier values (was 1.06/0.96/0.92) to achieve Elf–Dwarf good degree rate gap of ~19pp. Combined with disability path and SES gradient, the gap emerges from the composition of individual factors without any direct clan modifier. Calibrated to match the UK ethnicity awarding gap (~18–20pp, OfS data).
 
 **Socio-Economic Modifier** (ranks 1–8, from `config/assessment_modifiers.yaml`):
 ```
@@ -314,9 +317,48 @@ Maps trait range [0, 1] to ±(0.5 × scale) in log-odds space. Scale=10 was too 
 
 ---
 
+## Graduate Outcomes
+
+### Degree Classification (Award Algorithm)
+
+Degree class is calculated from module marks across Years 2 and 3 using a weighted average. Year 1 marks are excluded from classification (common UK practice). The weighting is configured in `config/graduate_outcomes.yaml` under `degree_year_weights`:
+
+```
+degree_year_weights:
+  1: 0.0    # excluded
+  2: 0.333  # one-third weight
+  3: 0.667  # two-thirds weight
+```
+
+**Formula:**
+```
+weighted_mark = (mean(Y2_module_marks) × 0.333 + mean(Y3_module_marks) × 0.667)
+              / (0.333 + 0.667)
+             = mean(Y2_marks) × 0.333 + mean(Y3_marks) × 0.667
+```
+
+The denominator simplifies to 1.0 because the active weights sum to 1.
+
+**Boundary adjustments** (`boundary_boost` in config): Students within a configured number of marks below a boundary receive a small upward nudge, reflecting real classification board discretion.
+
+**Classification thresholds** (standard UK):
+```
+≥ 70 → First
+≥ 60 → 2:1
+≥ 50 → 2:2
+≥ 40 → Third
+< 40  → Unclassified (pass degree)
+```
+
+**Edge case — Y1-only data**: If a student has no Y2 or Y3 marks (edge case only, unreachable in practice for graduates), the system falls back to the unweighted mean of all available marks. This path exists in the code but is never exercised during normal runs because students must pass Y3 to graduate.
+
+**Implementation:** `core_systems/graduate_outcomes_system.py` lines ~81–121. The `module_year` column in the assessment data maps directly to programme year (1/2/3), not a separate year numbering.
+
+---
+
 ## Awarding Gap Design
 
-The species awarding gap (~8-12pp, Elf > Dwarf) emerges from **individual-level factors only**:
+The species awarding gap (~19pp good degree rate, Elf > Dwarf) emerges from **individual-level factors only**. This is consistent with the UK ethnicity awarding gap (~18–20pp white vs Black students as measured by OfS), making it realistic rather than artificially narrowed:
 
 1. **Clan-specific SES distributions** — disadvantaged clans concentrated at low SES ranks
 2. **Clan-specific education distributions** — disadvantaged clans have fewer academic backgrounds
@@ -341,7 +383,12 @@ No top-down species or clan mark modifiers. All group-level patterns are traceab
 ### Assessment
 - Mark distribution: centred around 55-65
 - Pass rate: ~80-90% per module
-- Species gap: ~8-12pp (Elf > Dwarf)
+- Species gap (good degree rate, First + 2:1): ~19pp (Elf > Dwarf) — calibrated to UK ethnicity awarding gap
+- Mean module mark gap: ~5pp (Elf > Dwarf)
+
+### Attendance
+- Mean attendance rate: ~80–85% (UK HE benchmark)
+- Disadvantaged students (low SES + high disability): realistically lower, ~64–74%
 
 ### Progression
 - Year 1 -> Year 2: ~80-90%
