@@ -290,18 +290,10 @@ module_code,module_title,programme_code,module_year,semester,assessment_type,dif
 611304,Emerging Markets & Trade Policy,1_1_3,3,2,Viva,0.8,0.7,0.69,0.16,0.76,0.66,0.8
 611301,Strategic Entrepreneurship,1_1_3,3,1,Written coursework,0.75,0.9,0.65,0.42,0.74,0.8,0.78
 611303,Innovation Management,1_1_3,3,2,Written coursework,0.61,0.63,0.71,0.18,0.64,0.64,0.64
-611501,Dissertation / Research Project,1_1_5,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-611502,Employment Law,1_1_5,3,1,Written exam,0.64,0.59,0.74,0.18,0.63,0.68,0.6
-611503,Leadership & Change Management,1_1_5,3,2,Multi-choice exam,0.53,0.75,0.64,0.33,0.57,0.58,0.54
-611504,Diversity & Inclusion,1_1_5,3,2,Written coursework,0.65,0.7,0.69,0.41,0.62,0.72,0.53
 622302,Major Project / Dissertation,2_2_3,3,1,Written coursework,0.85,0.76,0.75,0.65,0.76,0.38,0.95
 622303,Exhibition Practice,2_2_3,3,2,Professional artefact,0.77,0.74,0.83,0.69,0.73,0.72,0.75
 622301,Studio Practice III,2_2_3,3,1,Viva,0.7,0.7,0.83,0.59,0.68,0.74,0.65
 622304,Critical & Contextual Studies,2_2_3,3,2,Written coursework,0.67,0.6,0.95,0.28,0.73,0.63,0.62
-622601,Performance III / Recital,2_2_6,3,1,Professional artefact,0.95,0.65,0.84,0.6,0.81,0.38,0.95
-622603,Musicology,2_2_6,3,2,Groupwork,0.69,0.75,0.85,0.67,0.71,0.85,0.77
-622602,Composition II,2_2_6,3,1,Groupwork,0.8,0.81,0.85,0.65,0.82,0.95,0.75
-622604,Professional Practice in Music,2_2_6,3,2,Presentation,0.65,0.79,0.66,0.73,0.67,0.79,0.58
 642401,Advanced Herbal Practice,4_2_12,3,1,Written coursework,0.67,0.82,0.64,0.74,0.69,0.75,0.74
 6241201,Final Interior Design Project,2_4_12,3,1,Professional artefact,0.95,0.66,0.78,0.69,0.78,0.38,0.95
 6241102,Professional Practice,2_4_12,3,2,Professional artefact,0.6,0.81,0.87,0.42,0.57,0.82,0.5
@@ -315,14 +307,18 @@ module_code,module_title,programme_code,module_year,semester,assessment_type,dif
 622501,Advanced Media Theory,2_2_5,3,1,Viva,0.7,0.65,0.83,0.5,0.71,0.54,0.84
 622504,Political Economy of Media,2_2_5,3,2,Presentation,0.68,0.88,0.82,0.6,0.72,0.81,0.66
 622502,Global Media & Communication,2_2_5,3,1,Presentation,0.7,0.82,0.77,0.57,0.69,0.73,0.57
+611501,Dissertation / Research Project,1_1_5,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+611502,Employment Law,1_1_5,3,1,Written exam,0.64,0.59,0.74,0.18,0.63,0.68,0.6
+611503,Leadership & Change Management,1_1_5,3,2,Multi-choice exam,0.53,0.75,0.64,0.33,0.57,0.58,0.54
+611504,Diversity & Inclusion,1_1_5,3,2,Written coursework,0.65,0.7,0.69,0.41,0.62,0.72,0.53
 632202,Dissertation,3_2_2,3,1,Written coursework,0.88,0.54,0.71,0.46,0.76,0.38,0.95
 632201,Special Subject in History,3_2_2,3,1,Viva,0.78,0.3,0.74,0.19,0.77,0.77,0.84
 632203,Public History,3_2_2,3,2,Viva,0.76,0.65,0.79,0.21,0.66,0.55,0.68
 632204,Global Historical Perspectives,3_2_2,3,2,Written exam,0.63,0.69,0.72,0.46,0.72,0.74,0.61
-623902,Capstone: Precision Artefact for Client or Cause,2_3_9,3,1,Written coursework,0.93,0.72,0.82,0.6,0.79,0.38,0.95
-623903,"Ethics in Craft, Ownership, and Replication",2_3_9,3,2,Written coursework,0.53,0.72,0.75,0.48,0.57,0.69,0.71
-623904,Professional Practice & Entrepreneurship,2_3_9,3,2,Written coursework,0.61,0.67,0.8,0.6,0.66,0.7,0.59
-623901,Design Studio II: Commissions and Constraints,2_3_9,3,1,Professional artefact,0.6,0.72,0.85,0.67,0.62,0.69,0.57
+622601,Performance III / Recital,2_2_6,3,1,Professional artefact,0.95,0.65,0.84,0.6,0.81,0.38,0.95
+622603,Musicology,2_2_6,3,2,Groupwork,0.69,0.75,0.85,0.67,0.71,0.85,0.77
+622602,Composition II,2_2_6,3,1,Groupwork,0.8,0.81,0.85,0.65,0.82,0.95,0.75
+622604,Professional Practice in Music,2_2_6,3,2,Presentation,0.65,0.79,0.66,0.73,0.67,0.79,0.58
 622401,Advanced Illustration Project,2_2_4,3,1,Professional artefact,0.87,0.57,0.9,0.51,0.72,0.38,0.88
 622404,Contemporary Illustration Contexts,2_2_4,3,2,Professional artefact,0.85,0.95,0.76,0.7,0.85,0.82,0.82
 622403,Self-Promotion & Freelancing,2_2_4,3,2,Professional artefact,0.67,0.72,0.82,0.65,0.7,0.78,0.66
@@ -332,3 +328,7 @@ module_code,module_title,programme_code,module_year,semester,assessment_type,dif
 631103,Ecosystems & Sustainability,3_1_1,3,2,Groupwork,0.53,0.83,0.72,0.36,0.63,0.85,0.56
 6241101,Major Design Project,2_4_11,3,1,Professional artefact,0.9,0.63,0.75,0.73,0.76,0.38,0.95
 6241103,Contemporary Design Issues,2_4_11,3,2,Presentation,0.76,0.81,0.85,0.56,0.75,0.78,0.74
+623902,Capstone: Precision Artefact for Client or Cause,2_3_9,3,1,Written coursework,0.93,0.72,0.82,0.6,0.79,0.38,0.95
+623903,"Ethics in Craft, Ownership, and Replication",2_3_9,3,2,Written coursework,0.53,0.72,0.75,0.48,0.57,0.69,0.71
+623904,Professional Practice & Entrepreneurship,2_3_9,3,2,Written coursework,0.61,0.67,0.8,0.6,0.66,0.7,0.59
+623901,Design Studio II: Commissions and Constraints,2_3_9,3,1,Professional artefact,0.6,0.72,0.85,0.67,0.62,0.69,0.57

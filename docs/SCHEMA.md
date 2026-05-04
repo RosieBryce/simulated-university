@@ -108,11 +108,17 @@ This document describes all CSV output files and their column definitions.
 | `motivation_academic_drive` | float | Student academic drive (for analysis) |
 | `motivation_social_connection` | float | Student social connection motivation (for analysis) |
 | **`semester`** | integer | **Teaching semester the module belongs to (1 = Autumn, 2 = Spring)** |
+| `vle_logins` | integer | LMS logins that week. Trimodal: ~50% students average 0–2/week, ~43% average 5–10, ~7% average 40+ (power users). Weakly correlated with academic engagement by design. |
+| `vle_resource_views` | integer | Lecture recordings, readings, and slides accessed. Proportional to `vle_logins`; boosted by module difficulty and assessment proximity (2× in exam weeks). Attenuated engagement floor reflects compensatory online access by low-attending students. |
+| `vle_forum_posts` | integer | Discussion board posts and replies. Poisson(λ≈1) for average student; driven by `social_engagement` and extraversion. |
+| `vle_mean_login_hour` | float | Mean login hour that week (0–23, mod 24). Modal ~14:00 for typical students. Shifts later under high stress combined with low conscientiousness (up to ~00:00–04:00 for extreme cases). ADHD and mental health disabilities widen the distribution. Useful for distress signal analysis. |
 
 **Notes**:
 - Generated for all enrolled students each week
 - Only includes modules student is enrolled in for that year
 - `semester` reflects the module's assigned teaching semester from `config/module_characteristics.csv`
+- VLE usage type (low/mid/power-user) is assigned once per student per semester; weekly counts are drawn from a Poisson with that student's λ
+- `vle_mean_login_hour` is circular (mod 24): 4am appears as 4.0, not 28.0
 
 ---
 
