@@ -1,7 +1,7 @@
 # Stonegrove University - Calculation Reference
 
 **Last Updated**: 3 May 2026
-**Version**: 2.3 (Faculty rework, v7 curriculum; attendance intercept fix; award algorithm documented)
+**Version**: 2.4 (+ first_gen flag; Enrolment Survey system)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
 
@@ -459,6 +459,101 @@ No top-down species or clan mark modifiers. All group-level patterns are traceab
 - Year 1 -> Year 2: ~80-90%
 - Withdrawal rate: ~5-15% per year
 - Repeat rate: ~5-10% per year
+
+---
+
+---
+
+## First-Generation Student Flag
+
+`first_gen` (boolean) is generated at student intake. It approximates whether neither parent attended higher education.
+
+**Formula**: linear taper by SES rank, with a small boost for `no_qualifications` prior education:
+
+```
+base_prob = 0.65 − (ses_rank − 1) × (0.64 / 7)
+          ≈ 0.65 at SES 1 → 0.01 at SES 8
+
+if education == 'no_qualifications': base_prob = min(base_prob + 0.08, 0.95)
+first_gen = Bernoulli(base_prob)
+```
+
+Expected prevalence: ~35–40% of the full cohort (concentrated in lower SES ranks).
+
+**Uses in this simulation:**
+- `academic_self_efficacy` in the Enrolment Survey (−0.30 penalty on 1–5 scale)
+
+**Backlog**: Wire `first_gen` into progression log-odds model and assessment difficulty modifier. Currently only used by the Enrolment Survey.
+
+---
+
+## Enrolment Survey
+
+Annual survey of all enrolled students. One row per student per academic year; ~82% response rate.
+
+### Response Probability
+
+```
+p_response = clip(0.82 + (academic_engagement − 0.5) × 2 × 0.10, 0.10, 0.98)
+```
+
+Low-engagement students are slightly less likely to respond (±10pp max shift from base).
+
+### Career Thinking (career_clarity, career_confidence)
+
+Both items drawn independently from the same model:
+
+```
+score = 3.0
+      + year_arc[programme_year]          # −0.50 Y1 / 0.00 Y2 / +0.50 Y3
+      + career_prospects × 0.30           # from programme_characteristics.csv, normalised 0–1
+      + conscientiousness × 0.25
+      + motivation_career_development × 0.25
+      + (ses_rank − 4.5) / 7.0 × 0.20    # higher SES → more career clarity
+      + N(0, 0.35)
+```
+
+Clipped to [1, 5].
+
+### Belonging (belonging_peers, belonging_programme)
+
+Both items drawn independently. Disability penalties are additive:
+
+```
+score = 3.0
+      + year_arc[programme_year]          # 0.00 Y1 / −0.30 Y2 / −0.10 Y3  (U-shape dip)
+      + social_engagement × 0.35
+      + extraversion × 0.20
+      − (ses_rank − 1) / 7.0 × 0.20      # lower SES → lower belonging
+      + Σ disability_penalties            # MH: −0.40, social_anxiety: −0.35, autism: −0.25
+      + N(0, 0.40)
+```
+
+### Academic Self-Efficacy
+
+```
+score = 3.0
+      + prior_education_score             # academic: +0.20 / vocational: +0.05 / no_quals: −0.15
+      + conscientiousness × 0.30
+      + resilience × 0.25
+      + prior_mark_norm × 0.20           # Y2+ only; (mean_mark − 30) / 70, clipped 0–1
+      + (−0.30 if first_gen else 0)
+      + N(0, 0.35)
+```
+
+### Support Satisfaction
+
+```
+score = 3.0
+      + prior_education_score             # academic: +0.15 / vocational: +0.05 / no_quals: −0.10
+      + extraversion × 0.15
+      + academic_engagement × 0.25
+      − (ses_rank − 1) / 7.0 × 0.15
+      + prior_mark_norm × 0.15
+      + N(0, 0.45)
+```
+
+No disability modifier — satisfaction reflects perceived access to support, not the quality of the support experience.
 
 ---
 

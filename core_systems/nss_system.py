@@ -273,21 +273,27 @@ class NSSSystem:
             if not mark_agg.empty else {}
 
         student_bias_std = float(self.config.get('student_bias_std', 0.28))
+        base_response_rate = float(self.config.get('base_response_rate', 0.68))
+        eng_mod = float(self.config.get('engagement_response_modifier', 0.12))
 
         records = []
         for _, student in yr3.iterrows():
             sid = str(student['student_id'])
             is_repeat = str(student.get('status', '')).lower() == 'repeating'
-            avg_mark = float(mark_lookup.get(sid, student.get('avg_mark', 55.0) or 55.0))
             eng_row = eng_lookup.loc[sid] if (not eng_lookup.empty and sid in eng_lookup.index) else None
 
-            # One student-level bias (systematic over/under-rater)
-            student_bias = float(self.rng.normal(0, student_bias_std))
-
-            theme_raws = self._generate_theme_scores(
-                student, eng_row, avg_mark, is_repeat, student_bias
-            )
-            overall_raw = self._generate_overall(theme_raws, student, is_repeat, student_bias)
+            # Response probability — nudged by mean engagement
+            if eng_row is not None:
+                eng_mean = float(np.mean([
+                    eng_row.get('attendance_rate', 0.5),
+                    eng_row.get('academic_engagement', 0.5),
+                ]))
+            else:
+                eng_mean = 0.5
+            p_respond = float(np.clip(
+                base_response_rate + (eng_mean - 0.5) * 2.0 * eng_mod, 0.10, 0.98
+            ))
+            survey_responded = bool(self.rng.random() < p_respond)
 
             rec = {
                 'student_id': sid,
@@ -295,7 +301,23 @@ class NSSSystem:
                 'programme_code': student.get('program_code', student.get('programme_code')),
                 'programme_year': 3,
                 'is_repeat_year': is_repeat,
+                'survey_responded': survey_responded,
             }
+
+            if not survey_responded:
+                for theme in THEMES:
+                    rec[theme] = None
+                rec['overall_satisfaction'] = None
+                records.append(rec)
+                continue
+
+            avg_mark = float(mark_lookup.get(sid, student.get('avg_mark', 55.0) or 55.0))
+            student_bias = float(self.rng.normal(0, student_bias_std))
+            theme_raws = self._generate_theme_scores(
+                student, eng_row, avg_mark, is_repeat, student_bias
+            )
+            overall_raw = self._generate_overall(theme_raws, student, is_repeat, student_bias)
+
             for theme in THEMES:
                 rec[theme] = int(np.clip(round(theme_raws[theme]), 1, 5))
             rec['overall_satisfaction'] = int(np.clip(round(overall_raw), 1, 5))

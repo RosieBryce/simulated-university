@@ -280,12 +280,33 @@ class GraduateOutcomesSystem:
         )
 
         recorded_at = self._outcome_recorded_at(academic_year)
+        survey_response_rate = float(self.config.get("survey_response_rate", 0.70))
 
         records = []
         for _, student in grads.iterrows():
             sid = str(student['student_id'])
             degree_class, weighted_avg = classifications.get(sid, ("2:2", 50.0))
             faculty = str(student.get('program_code', student.get('programme_code', '1_1_1'))).split('_')[0]
+
+            survey_responded = bool(self.rng.random() < survey_response_rate)
+
+            if not survey_responded:
+                records.append({
+                    "student_id": sid,
+                    "academic_year_graduated": academic_year,
+                    "programme_code": student.get('program_code', student.get('programme_code')),
+                    "faculty": faculty,
+                    "degree_classification": degree_class,
+                    "degree_weighted_avg": weighted_avg,
+                    "survey_responded": False,
+                    "outcome_type": None,
+                    "professional_level": None,
+                    "employment_sector": None,
+                    "salary_band": None,
+                    "time_to_outcome_months": None,
+                    "outcome_recorded_at": recorded_at,
+                })
+                continue
 
             outcome_type = self._get_outcome_type(student, degree_class)
 
@@ -311,6 +332,7 @@ class GraduateOutcomesSystem:
                 "faculty": faculty,
                 "degree_classification": degree_class,
                 "degree_weighted_avg": weighted_avg,
+                "survey_responded": True,
                 "outcome_type": outcome_type,
                 "professional_level": professional_level,
                 "employment_sector": employment_sector,
