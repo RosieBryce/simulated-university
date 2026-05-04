@@ -96,7 +96,7 @@ def check_shapes(t):
         ("fact_enrollment",        "programme_code"),
         ("fact_assessment",        "assessment_mark"),
         ("fact_assessment",        "module_code"),
-        ("fact_weekly_engagement", "program_code"),  # first year only
+        ("fact_weekly_engagement", "module_code"),   # first year only
         ("fact_progression",       "year_outcome"),
     ]
     for tbl, col in checks:
@@ -262,29 +262,19 @@ def check_correlations(t):
     section("5. ENGAGEMENT AND DIFFICULTY CORRELATIONS")
 
     # Engagement -> mark
-    # Engagement is stored per programme (program_code); assessment is per module.
-    # Join via dim_modules.programme_code, then correlate at programme level.
+    # Relational engagement file has module_code directly — join on student × module × year.
     eng   = t["fact_weekly_engagement"]
     assess = t["fact_assessment"]
-    mods  = t["dim_modules"][["module_code", "programme_code"]].drop_duplicates()
 
-    # Average engagement per student × programme × year
+    # Average engagement per student × module × year
     eng_avg = (
-        eng.groupby(["student_id", "academic_year", "program_code"])
+        eng.groupby(["student_id", "academic_year", "module_code"])
         [["attendance_rate", "participation_score", "academic_engagement"]]
         .mean()
         .mean(axis=1)
         .reset_index(name="avg_engagement")
-        .rename(columns={"program_code": "programme_code"})
     )
-    # Average mark per student × programme × year
-    assess_prog = (
-        assess.merge(mods, on="module_code", how="inner")
-        .groupby(["student_id", "academic_year", "programme_code"])["assessment_mark"]
-        .mean()
-        .reset_index()
-    )
-    merged = assess_prog.merge(eng_avg, on=["student_id", "academic_year", "programme_code"], how="inner")
+    merged = assess.merge(eng_avg, on=["student_id", "academic_year", "module_code"], how="inner")
     if len(merged) > 100:
         corr = merged["avg_engagement"].corr(merged["assessment_mark"])
         lo, hi = TARGETS["engagement_mark_corr"]

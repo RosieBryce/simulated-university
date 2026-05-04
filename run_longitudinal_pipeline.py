@@ -11,6 +11,7 @@ Execute from project root.
 """
 
 import sys
+import time
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -172,6 +173,7 @@ def main():
     from core_systems.graduate_outcomes_system import GraduateOutcomesSystem
     from core_systems.nss_system import NSSSystem
 
+    pipeline_start = time.time()
     print("Stonegrove University Longitudinal Pipeline")
     print("=" * 50)
     print(f"Academic years: {ACADEMIC_YEARS[0]} to {ACADEMIC_YEARS[-1]}")
@@ -196,6 +198,7 @@ def main():
     accumulated_progression = None  # all prior years' progression (for repeat history)
 
     for i, acad_year in enumerate(ACADEMIC_YEARS):
+        year_start = time.time()
         print(f"\n--- {acad_year} ---")
 
         seed = BASE_SEED + i * 1000
@@ -254,7 +257,9 @@ def main():
 
         n_grads = len(graduate_outcomes_df) if graduate_outcomes_df is not None else 0
         n_nss = len(nss_df) if nss_df is not None else 0
+        year_elapsed = time.time() - year_start
         print(f"  Enrolled: {len(enrolled_df)}, Assessments: {len(assessment_df)}, Graduates: {n_grads}, NSS: {n_nss}")
+        print(f"  Year runtime: {year_elapsed/60:.1f} min")
 
     # Concatenate and save — all files overwritten fresh each run
     if all_enrollment:
@@ -299,6 +304,7 @@ def main():
         "git_commit": git_commit,
         "random_seed": BASE_SEED,
         "generation_timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "pipeline_runtime_seconds": round(time.time() - pipeline_start, 1),
         "config_versions": {"progression_rules": "v1.0"},
         "cohort_size": COHORT_SIZE,
         "years_generated": len(ACADEMIC_YEARS),
@@ -312,10 +318,13 @@ def main():
 
     # Build relational schema outputs
     print("\nBuilding relational schema...")
+    build_start = time.time()
     from core_systems import build_relational_outputs
     build_relational_outputs.main()
+    print(f"  Build time: {(time.time() - build_start)/60:.1f} min")
 
-    print("\nPipeline complete.")
+    total_elapsed = time.time() - pipeline_start
+    print(f"\nPipeline complete. Total runtime: {total_elapsed/60:.1f} min ({total_elapsed:.0f}s)")
 
 
 if __name__ == "__main__":

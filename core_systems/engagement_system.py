@@ -140,11 +140,13 @@ class EngagementSystem:
             raw_ses = data.get('ses_modifiers', {})
             self._ses_eng_mods = {int(k): v for k, v in raw_ses.items()}
             self._temporal_arc = data.get('temporal_arc', {})
+            self._vle_cfg = data.get('vle_modifiers', {})
         else:
             print("Warning: engagement_modifiers.yaml not found. Disability/SES/temporal modifiers disabled.")
             self._disability_eng_mods = {}
             self._ses_eng_mods = {}
             self._temporal_arc = {}
+            self._vle_cfg = {}
 
     # ------------------------------------------------------------------
     # Module / programme characteristics
@@ -464,6 +466,92 @@ class EngagementSystem:
         )
 
     # ------------------------------------------------------------------
+    # VLE metric generation
+    # ------------------------------------------------------------------
+
+    def _assign_vle_lambda(self, academic_engagement: float) -> float:
+        """Draw a per-student Poisson λ for weekly VLE logins from the trimodal mixture.
+
+        The association with academic_engagement is kept weak by design: some disengaged
+        students work entirely online (high logins, low attendance), and the VLE signal
+        should retain independent predictive value for any downstream combined metric.
+        """
+        cfg = self._vle_cfg.get('logins', {})
+        base_probs = cfg.get('type_probs', [0.50, 0.43, 0.07])
+        lambdas    = cfg.get('type_lambdas', [0.8, 7.0, 45.0])
+        shift      = float(cfg.get('engagement_shift', 0.08))
+        tilt = (academic_engagement - 0.5) * shift * 2.0   # range [−shift, +shift]
+        p = np.array([base_probs[0] - tilt, base_probs[1], base_probs[2] + tilt], dtype=float)
+        p = np.clip(p, 0.01, None)
+        p /= p.sum()
+        vle_type = int(np.random.choice(3, p=p))
+        return float(lambdas[vle_type])
+
+    def _vle_login_hour_params(self, personality: Dict[str, float],
+                                disabilities: str, ses_rank: int) -> Tuple[float, float]:
+        """Return (base_hour, hour_std) for the per-student login-hour distribution."""
+        cfg       = self._vle_cfg.get('mean_login_hour', {})
+        base_hour = float(cfg.get('base_hour', 14.0))
+        base_std  = float(cfg.get('base_std', 1.5))
+        extrav    = personality.get('refined_extraversion', 0.5)
+        # Higher extraversion → slightly earlier login (social daytime patterns)
+        base_hour += (0.5 - extrav) * float(cfg.get('extraversion_shift', 1.5))
+        # Lower SES → wider distribution (work obligations, irregular hours)
+        ses_extra = (1.0 - ses_rank / 8.0) * float(cfg.get('ses_std_scale', 1.2))
+        hour_std  = base_std + ses_extra
+        if 'adhd' in disabilities:
+            hour_std += float(cfg.get('adhd_std_extra', 2.5))
+        if 'mental_health_disability' in disabilities:
+            hour_std += float(cfg.get('mental_health_std_extra', 1.5))
+        return base_hour, hour_std
+
+    def _generate_vle_columns(self, vle_lambda: float, base_hour: float, hour_std: float,
+                               week: int, stress_level: float, conscientiousness: float,
+                               academic_engagement: float, social_engagement: float,
+                               extraversion: float, module_difficulty: float) -> Dict[str, object]:
+        """Generate the 4 VLE columns for one student × module × week record."""
+        cfg = self._vle_cfg
+
+        # vle_logins: draw from student's persistent Poisson distribution
+        vle_logins = int(np.random.poisson(max(0.01, vle_lambda)))
+
+        # vle_resource_views: logins × difficulty boost × assessment-proximity boost × engagement floor
+        rv = cfg.get('resource_views', {})
+        base_views = vle_logins * float(rv.get('views_per_login_base', 2.5))
+        diff_mult  = 1.0 + (module_difficulty - 0.5) * float(rv.get('difficulty_multiplier', 0.5))
+        if week >= 10:
+            time_mult = float(rv.get('exam_weeks_multiplier', 2.0))
+        elif 6 <= week <= 8:
+            time_mult = float(rv.get('midterm_weeks_multiplier', 1.4))
+        else:
+            time_mult = 1.0
+        # Engagement floor > 0: disengaged students partially compensate by accessing
+        # lecture recordings and slides online rather than attending in person.
+        eng_floor = float(rv.get('engagement_floor', 0.65))
+        eng_mod   = eng_floor + (1.0 - eng_floor) * academic_engagement
+        vle_resource_views = max(0, round(base_views * diff_mult * time_mult * eng_mod))
+
+        # vle_forum_posts: Poisson λ ≈ 1 for average student, driven by social traits
+        fp = cfg.get('forum_posts', {})
+        lambda_fp = (float(fp.get('base_lambda', 0.2)) +
+                     social_engagement * float(fp.get('social_engagement_weight', 1.2)) +
+                     extraversion      * float(fp.get('extraversion_weight', 0.6)))
+        vle_forum_posts = int(np.random.poisson(max(0.01, lambda_fp)))
+
+        # vle_mean_login_hour: stress × (1 − conscientiousness) shifts login time later;
+        # mod 24 handles midnight wrap-around (4am = 4.0, not 28.0)
+        hr = cfg.get('mean_login_hour', {})
+        stress_shift = stress_level * (1.0 - conscientiousness) * float(hr.get('stress_shift_max', 10.0))
+        mean_hour    = (base_hour + stress_shift + np.random.normal(0, hour_std)) % 24.0
+
+        return {
+            'vle_logins':          vle_logins,
+            'vle_resource_views':  vle_resource_views,
+            'vle_forum_posts':     vle_forum_posts,
+            'vle_mean_login_hour': round(float(mean_hour), 2),
+        }
+
+    # ------------------------------------------------------------------
     # Main batch generation
     # ------------------------------------------------------------------
 
@@ -524,6 +612,10 @@ class EngagementSystem:
                 if bk in base_engagement:
                     base_engagement[bk] = float(np.clip(base_engagement[bk] + adj, 0.05, 0.95))
 
+            # --- VLE: persistent per-student parameters ---
+            vle_lambda    = self._assign_vle_lambda(base_engagement.get('base_academic_engagement', 0.5))
+            vle_base_hour, vle_hour_std = self._vle_login_hour_params(personality, disabilities, ses_rank)
+
             # --- Per-module base (module difficulty/social/creativity) ---
             module_bases: Dict[str, Dict] = {}
             for module in modules:
@@ -582,6 +674,20 @@ class EngagementSystem:
                     rec['personality_extraversion']       = personality.get('refined_extraversion', 0.5)
                     rec['motivation_academic_drive']      = motivation.get('motivation_academic_drive', 0.5)
                     rec['motivation_social_connection']   = motivation.get('motivation_social_connection', 0.5)
+
+                    # VLE columns
+                    rec.update(self._generate_vle_columns(
+                        vle_lambda=vle_lambda,
+                        base_hour=vle_base_hour,
+                        hour_std=vle_hour_std,
+                        week=week,
+                        stress_level=rec['stress_level'],
+                        conscientiousness=personality.get('refined_conscientiousness', 0.5),
+                        academic_engagement=rec['academic_engagement'],
+                        social_engagement=rec['social_engagement'],
+                        extraversion=personality.get('refined_extraversion', 0.5),
+                        module_difficulty=module_chars['difficulty'],
+                    ))
 
                     all_weekly.append(WeeklyEngagement(
                         student_id=student_id,

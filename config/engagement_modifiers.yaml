@@ -88,3 +88,43 @@ temporal_arc:
     academic_engagement: 0.05
   exam_low_conscientiousness:     # Applied for conscientiousness <= 0.6
     attendance: -0.06
+
+# --- VLE engagement metrics ---
+# Generates 4 columns per student × module × week in fact_weekly_engagement.
+vle_modifiers:
+
+  logins:
+    # Trimodal mixture: usage type assigned once per student per semester.
+    # Association with academic_engagement is intentionally weak — some disengaged
+    # students are heavy VLE users (work from home / lecture capture only).
+    type_probs:      [0.50, 0.43, 0.07]   # base P(low-user, mid-user, power-user)
+    type_lambdas:    [0.8, 7.0, 45.0]     # Poisson λ per type (logins/week)
+    engagement_shift: 0.08                 # academic_engagement tilts type_probs by ±this
+
+  resource_views:
+    # Proportional to logins; boosted by module difficulty and assessment proximity.
+    # engagement_floor > 0 captures the compensatory effect: disengaged students still
+    # access recordings/slides online even when attendance and participation are low.
+    views_per_login_base:      2.5         # mean resource views per login (normal week)
+    difficulty_multiplier:     0.5         # extra multiplier per unit difficulty above 0.5
+    exam_weeks_multiplier:     2.0         # weeks 10–12
+    midterm_weeks_multiplier:  1.4         # weeks 6–8
+    engagement_floor:          0.65        # min engagement modifier (compensatory floor)
+
+  forum_posts:
+    # Poisson λ ≈ 1 for average student; driven by social traits.
+    base_lambda:              0.2
+    social_engagement_weight: 1.2
+    extraversion_weight:      0.6
+
+  mean_login_hour:
+    # Float 0–23 (mod 24 applied, so 4am appears as 4.0 not 28.0).
+    # Stress × (1 − conscientiousness) shifts login time later; ADHD / mental health
+    # and low SES widen the distribution (irregular/nocturnal patterns).
+    base_hour:               14.0          # modal login time (2pm)
+    base_std:                 1.5          # weekly noise SD (hours)
+    stress_shift_max:        10.0          # max shift later for stress=1, conscientiousness=0
+    adhd_std_extra:           2.5          # extra SD for ADHD
+    mental_health_std_extra:  1.5          # extra SD for mental health disability
+    ses_std_scale:            1.2          # extra SD at SES 1; scales linearly to 0 at SES 8
+    extraversion_shift:       1.5          # max shift earlier (hours) for high extraversion

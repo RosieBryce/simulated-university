@@ -317,6 +317,71 @@ Maps trait range [0, 1] to ±(0.5 × scale) in log-odds space. Scale=10 was too 
 
 ---
 
+## VLE Engagement Metrics
+
+Four columns added to `fact_weekly_engagement` per student × module × week. Config in `config/engagement_modifiers.yaml` under `vle_modifiers`.
+
+### vle_logins
+
+Trimodal mixture model. Each student is assigned a usage type **once per semester** (persistent), reflecting genuine variation in how students engage with the LMS rather than just engagement level:
+
+| Type | ~% of students | Poisson λ | Typical weekly range |
+|------|---------------|-----------|----------------------|
+| Low (non-users / home workers) | 50% | 0.8 | 0–2 |
+| Mid (regular users) | 43% | 7.0 | 5–10 |
+| Power users | 7% | 45.0 | 40+ |
+
+Academic engagement **weakly** tilts the type probabilities (max ±8pp shift) — intentionally not the primary driver, so `vle_logins` retains independent information for any future combined engagement metric.
+
+### vle_resource_views
+
+```
+base_views  = vle_logins × views_per_login_base (2.5)
+diff_mult   = 1 + (difficulty − 0.5) × difficulty_multiplier (0.5)
+time_mult   = 2.0 (weeks 10–12) | 1.4 (weeks 6–8) | 1.0 (otherwise)
+eng_mod     = engagement_floor (0.65) + (1 − floor) × academic_engagement
+resource_views = round(base_views × diff_mult × time_mult × eng_mod)
+```
+
+The `engagement_floor > 0` is deliberate: disengaged students who skip lectures still access recordings and slides online, so resource views don't collapse to zero at low engagement. This is the compensatory online-access effect.
+
+### vle_forum_posts
+
+```
+λ_forum = base_lambda (0.2) + social_engagement × 1.2 + extraversion × 0.6
+vle_forum_posts ~ Poisson(λ_forum)
+```
+
+Average student (both traits 0.5): λ ≈ 1.1, producing mostly 0–2 posts/week. Highly social students reach λ ≈ 1.6–2.0.
+
+### vle_mean_login_hour
+
+Float 0–23 (mod 24 wrap-around — 4am appears as 4.0, not 28.0).
+
+**Per-student base hour** (persistent):
+```
+base_hour = 14.0 + (0.5 − extraversion) × extraversion_shift (1.5)
+```
+High extraversion → slightly earlier (daytime social patterns); introversion → slightly later.
+
+**Per-student hour std** (persistent):
+```
+hour_std = base_std (1.5) + (1 − ses_rank/8) × ses_std_scale (1.2)
+         + adhd_std_extra (2.5) if ADHD
+         + mental_health_std_extra (1.5) if mental_health_disability
+```
+
+**Per-week value**:
+```
+stress_shift = stress_level × (1 − conscientiousness) × stress_shift_max (10.0)
+mean_hour = (base_hour + stress_shift + Normal(0, hour_std)) % 24
+```
+
+Typical student (stress 0.5, conscientiousness 0.5): stress_shift ≈ 2.5 hrs → mean ~16:30.  
+High-stress, low-conscientiousness, ADHD student: shift up to 8 hrs + std ≈ 4 hrs → mean ~22:00 with tail to 04:00+.
+
+---
+
 ## Graduate Outcomes
 
 ### Degree Classification (Award Algorithm)

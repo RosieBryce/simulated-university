@@ -145,6 +145,7 @@ def build_fact_weekly_engagement(
         "student_id", "academic_year", "week_number", "module_code", "semester",
         "attendance_rate", "participation_score", "academic_engagement",
         "social_engagement", "stress_level",
+        "vle_logins", "vle_resource_views", "vle_forum_posts", "vle_mean_login_hour",
     ]
     return df[[c for c in keep if c in df.columns]]
 
