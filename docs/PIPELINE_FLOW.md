@@ -54,7 +54,10 @@ All receive `enrolled_clean` (deduplicated columns). Built once after concat, pa
 |--------|-------|-------------------|-------|
 | **Engagement** | enrolled_clean | `student.get('student_id', idx)` with Series handling | Was using idx; fixed to use actual student_id |
 | **Assessment** | enrolled_clean | `student.get('student_id', idx)` with Series handling | Robust to duplicate columns |
+| **Enrolment Survey** | enrolled_clean, assessment_df | From enrolled_clean iteration | Runs after assessment (step 3b); ~82% response rate |
 | **Progression** | enrolled_clean, assessment_df | From assessment agg; itertuples for scalars | agg deduped; student_lookup from enrolled_clean |
+| **Graduate Outcomes** | enrolled_clean (graduates only) | From enrolled_clean iteration | ~70% survey response rate; degree_classification always populated |
+| **NSS** | enrolled_clean (Yr3 only) | From enrolled_clean iteration | ~68% response rate; non-respondents stored with null scores |
 
 ## 6. Output Concatenation
 

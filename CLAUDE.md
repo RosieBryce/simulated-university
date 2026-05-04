@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Stonegrove University is a **synthetic data generator** for a fictional fantasy university. It simulates realistic higher-education student lifecycle data (UK-style) using a Middle-Earth-inspired setting (Dwarves, Elves, 14 clans) to avoid privacy concerns. The output is a relational schema of 10 tables for use in education research, AI hackathons, and awarding gap analysis.
+Stonegrove University is a **synthetic data generator** for a fictional fantasy university. It simulates realistic higher-education student lifecycle data (UK-style) using a Middle-Earth-inspired setting (Dwarves, Elves, 14 clans) to avoid privacy concerns. The output is a relational schema of 11 tables for use in education research, AI hackathons, and awarding gap analysis.
 
 ## Running the Pipeline
 
@@ -41,19 +41,20 @@ python metaanalysis/validate_outputs.py
 
 ### Pipeline Flow (strictly sequential)
 
-1. **Student Generation** (`core_systems/student_generation_pipeline.py`) — 5,000 students/cohort with species, clan, Big Five personality, 8 motivation dimensions, disabilities, SES. Uses `PersonalityRefinementSystem`, `MotivationProfileSystem`, `ClanNameGenerator` from `supporting_systems/`.
+1. **Student Generation** (`core_systems/student_generation_pipeline.py`) — 5,000 students/cohort with species, clan, Big Five personality, 8 motivation dimensions, disabilities, SES, `first_gen` boolean. Uses `PersonalityRefinementSystem`, `MotivationProfileSystem`, `ClanNameGenerator` from `supporting_systems/`.
 2. **Enrollment** (`core_systems/program_enrollment_system.py`) — Assigns students to 1 of 55 programmes across 5 faculties using clan-programme affinities + personality modifiers. Assigns Year 1/2/3 modules.
 3. **Engagement** (`core_systems/engagement_system.py`) — Generates 12 weeks × modules of attendance, participation, academic/social engagement, stress. Personality traits drive metrics (e.g., conscientiousness→attendance r=0.856).
 4. **Assessment** (`core_systems/assessment_system.py`) — Two components per module (MIDTERM + FINAL). `combined_mark = 0.4×MIDTERM + 0.6×FINAL` on FINAL rows. UK-style mark distribution modified by difficulty and engagement.
 5. **Progression** (`core_systems/progression_system.py`) — Pass/fail/withdraw/repeat decisions via log-odds model with trait-based modifiers from `config/year_progression_rules.yaml`. Filters to `component_code == 'FINAL'`, uses `combined_mark`.
-6. **Graduate Outcomes** (`core_systems/graduate_outcomes_system.py`) — Degree classification (Y2 1/3, Y3 2/3 weighting), employment sector, salary band, professional level. SES gradient on salary and professional employment.
-7. **NSS** (`core_systems/nss_system.py`) — One response per Year 3 student per academic year. 7 themes + overall satisfaction (1–5). Calibrated to UK NSS benchmarks.
+6. **Graduate Outcomes** (`core_systems/graduate_outcomes_system.py`) — Degree classification (Y2 1/3, Y3 2/3 weighting), employment sector, salary band, professional level. ~70% survey response rate (HESA benchmark); `survey_responded` column present for all graduates.
+7. **NSS** (`core_systems/nss_system.py`) — One row per Year 3 student per academic year. 7 themes + overall satisfaction (1–5). ~68% response rate (UK NSS benchmark); `survey_responded` column flags non-respondents (null scores).
+3b. **Enrolment Survey** (`core_systems/enrolment_survey_system.py`) — Runs after assessment each year for all enrolled students. Career thinking, belonging, self-efficacy, support satisfaction (1–5 float). ~82% response rate.
 
-**Longitudinal loop**: `run_longitudinal_pipeline.py` wraps stages 1–7 across 7 academic years, re-enrolling continuing students from prior years. `build_relational_outputs.py` runs automatically at the end.
+**Longitudinal loop**: `run_longitudinal_pipeline.py` wraps stages 1–7 (+ 3b) across 7 academic years, re-enrolling continuing students from prior years. `build_relational_outputs.py` runs automatically at the end.
 
 ### Relational Schema
 
-10 tables in `data/relational/`: 4 dims + 6 facts. Weekly engagement is stored as 7 per-year files (`fact_weekly_engagement_YYYY-YY.csv`) — no combined file. All tracked in git except the (no longer generated) combined weekly file.
+11 tables in `data/relational/`: 4 dims + 7 facts. Weekly engagement stored as 7 per-year files (`fact_weekly_engagement_YYYY-YY.csv`) — no combined file. All 11 tables tracked in git.
 
 Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 

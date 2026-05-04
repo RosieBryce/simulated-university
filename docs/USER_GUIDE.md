@@ -6,72 +6,67 @@ How to run the simulation pipeline and work with the generated data.
 
 ## Prerequisites
 
-**Python 3.8+** with:
+**Python 3.10+** with:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scipy openpyxl xlrd PyYAML
+pip install -r requirements.txt
 ```
 
-All commands below are run from the **project root** (`simulated-university/`).
+All commands run from the **project root** (`simulated-university/`).
 
 ---
 
 ## Running the Pipeline
 
-### Full pipeline (single year, 500 students)
-
-```bash
-python run_pipeline.py
-```
-
-Runs all 5 steps in order:
-
-### Longitudinal pipeline (5 cohorts × 7 years)
-
 ```bash
 python run_longitudinal_pipeline.py
 ```
 
-Runs the full longitudinal simulation: academic years 1046-47 to 1052-53, with new cohorts each year and progression/repeat/withdrawal. Outputs `stonegrove_enrollment.csv` (per DESIGN) and `data/metadata.json`.
+Runs the full longitudinal simulation: 7 academic years (1046-47 to 1052-53), 5,000 new students per year. Re-enrols continuing students each year based on prior-year progression outcomes. Automatically calls `build_relational_outputs.py` at the end.
 
-**Single-year outputs:**
+**Runtime: ~2 hours** (dominated by engagement and assessment generation across ~89,000 student-years).
 
-1. **Student generation** → `data/stonegrove_individual_students.csv`
-2. **Program enrollment** → `data/stonegrove_enrolled_students.csv`
-3. **Engagement** → `data/stonegrove_weekly_engagement.csv`, `data/stonegrove_semester_engagement.csv`
-4. **Assessment** → `data/stonegrove_assessment_events.csv`
-5. **Progression** → `data/stonegrove_progression_outcomes.csv`
-
-Each step overwrites its output files. A full run takes about 30–60 seconds for 500 students.
-
-### Individual steps
+After the pipeline, regenerate the site summary CSVs:
 
 ```bash
-python core_systems/student_generation_pipeline.py
-python core_systems/program_enrollment_system.py
-python core_systems/engagement_system.py
-python core_systems/assessment_system.py
-python core_systems/progression_system.py
+python scripts/aggregate_gap.py
+python scripts/aggregate_engagement.py
 ```
 
-**Order matters.** Each step reads from the previous outputs. Run in sequence.
+Validate outputs:
+
+```bash
+python metaanalysis/validate_outputs.py
+```
 
 ---
 
 ## Output Files
 
-All outputs are written to `data/`.
+The pipeline writes raw outputs to `data/` and clean relational tables to `data/relational/`.
 
-| File | Description |
-|------|--------------|
-| `stonegrove_individual_students.csv` | Student demographics, personality, motivation (one row per student) |
-| `stonegrove_enrolled_students.csv` | Program enrollment and Year 1 modules (merged with student data) |
-| `stonegrove_weekly_engagement.csv` | Weekly engagement metrics per student per module |
-| `stonegrove_semester_engagement.csv` | Semester summaries (engagement trends, risk factors) |
-| `stonegrove_assessment_events.csv` | End-of-module marks and grades |
-| `stonegrove_progression_outcomes.csv` | Year outcomes (pass/fail) and next-year status (progress/repeat/withdraw) |
-| `stonegrove_enrollment.csv` | Longitudinal output: one row per student per academic year (with `status`, `status_change_at`, `programme_year`) |
-| `data/metadata.json` | Version, seed, timestamp, cohort info (longitudinal runs only) |
+**Use `data/relational/` for analysis** — the raw `data/stonegrove_*.csv` files are intermediates.
+
+### Dimensions (one row per entity)
+
+| File | Description | Rows |
+|------|-------------|------|
+| `dim_students.csv` | Species, clan, personality, motivation, SES, disabilities, `first_gen`. One row per student. | ~35,000 |
+| `dim_programmes.csv` | 55 programmes across 5 faculties: difficulty, career prospects, social intensity. | 55 |
+| `dim_modules.csv` | 333 modules: difficulty, assessment type, stress level, semester, programme linkage. | 333 |
+| `dim_academic_years.csv` | Academic year calendar with semester and assessment dates. | 7 |
+
+### Facts (one row per event)
+
+| File | Description | Rows |
+|------|-------------|------|
+| `fact_enrollment.csv` | Programme, year of study, module allocation, enrolment status. | ~89,000 |
+| `fact_weekly_engagement_YYYY-YY.csv` | Attendance, participation, engagement, stress, VLE metrics. One per academic year. | ~400,000/yr |
+| `fact_assessment.csv` | MIDTERM + FINAL marks per module per student. `combined_mark` on FINAL rows. | ~468,000 |
+| `fact_progression.csv` | Year outcome, modules passed, avg mark, next-year status. | ~58,000 |
+| `fact_enrolment_survey.csv` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response. | ~89,000 |
+| `fact_graduate_outcomes.csv` | Degree classification, employment sector, salary band. ~70% survey response. | ~19,500 |
+| `fact_nss_responses.csv` | NSS-style satisfaction scores for all Yr3 students. ~68% response rate. | ~23,000 |
 
 Full column definitions: `docs/SCHEMA.md`
 
@@ -84,101 +79,87 @@ Full column definitions: `docs/SCHEMA.md`
 ```python
 import pandas as pd
 
-# Students
-students = pd.read_csv("data/stonegrove_individual_students.csv")
+RELATIONAL = "data/relational"
 
-# Enrolled (includes program, modules, affinity)
-enrolled = pd.read_csv("data/stonegrove_enrolled_students.csv")
+# Dimensions
+students    = pd.read_csv(f"{RELATIONAL}/dim_students.csv")
+programmes  = pd.read_csv(f"{RELATIONAL}/dim_programmes.csv")
+modules     = pd.read_csv(f"{RELATIONAL}/dim_modules.csv")
 
-# Join students + enrollment (enrolled already has student cols)
-# Use student_id as key
-merged = enrolled  # already merged in pipeline
+# Facts
+enrollment  = pd.read_csv(f"{RELATIONAL}/fact_enrollment.csv")
+assessment  = pd.read_csv(f"{RELATIONAL}/fact_assessment.csv")
+progression = pd.read_csv(f"{RELATIONAL}/fact_progression.csv")
+nss         = pd.read_csv(f"{RELATIONAL}/fact_nss_responses.csv")
+outcomes    = pd.read_csv(f"{RELATIONAL}/fact_graduate_outcomes.csv")
+survey      = pd.read_csv(f"{RELATIONAL}/fact_enrolment_survey.csv")
 
-# Assessment marks
-assessments = pd.read_csv("data/stonegrove_assessment_events.csv")
-
-# Progression outcomes
-progression = pd.read_csv("data/stonegrove_progression_outcomes.csv")
+# Weekly engagement — one file per academic year
+import glob
+eng_files = sorted(glob.glob(f"{RELATIONAL}/fact_weekly_engagement_*.csv"))
+engagement = pd.concat([pd.read_csv(f) for f in eng_files], ignore_index=True)
 ```
 
 ### Joining tables
 
-Use `student_id` to link records:
+All tables join on `student_id`. Most also join on `academic_year`.
 
 ```python
-# Add progression status to enrolled students
-enrolled = pd.read_csv("data/stonegrove_enrolled_students.csv")
-prog = pd.read_csv("data/stonegrove_progression_outcomes.csv")
-enrolled_with_status = enrolled.merge(
-    prog[["student_id", "year_outcome", "status", "avg_mark"]],
-    on="student_id",
-    how="left"
+# Assessment marks with species and SES
+marks_with_demo = assessment.merge(
+    students[["student_id", "species", "clan", "socio_economic_rank"]],
+    on="student_id", how="left"
 )
 
-# Average mark by species
-assessments = pd.read_csv("data/stonegrove_assessment_events.csv")
-enrolled = pd.read_csv("data/stonegrove_enrolled_students.csv")
-combined = assessments.merge(enrolled[["student_id", "species", "clan"]], on="student_id", how="left")
-combined.groupby("species")["assessment_mark"].mean()
+# Awarding gap: good degree rate by species
+finals = assessment[assessment["component_code"] == "FINAL"]
+grads  = outcomes[outcomes["survey_responded"] == True]
+grads_with_species = grads.merge(students[["student_id", "species"]], on="student_id")
+grads_with_species["good_degree"] = grads_with_species["degree_classification"].isin(["First", "2:1"])
+grads_with_species.groupby("species")["good_degree"].mean()
+
+# NSS scores — respondents only
+nss_respondents = nss[nss["survey_responded"] == True]
+nss_respondents.groupby(nss_respondents["academic_year"])["overall_satisfaction"].mean()
 ```
 
-### Excel / R / other tools
+### Key columns
 
-Open the CSVs directly. All files use standard CSV (comma-separated, UTF-8).  
-Module lists may contain quoted commas (e.g. `"Module A, Part 1"`)—use a proper CSV parser.
-
----
-
-## Key Columns
-
-- **`student_id`**: Persistent ID across all tables
-- **`academic_year`**: Calendar year (e.g. `"1046-47"`). Currently Year 1 only; multi-year coming.
-- **`species`**, **`clan`**, **`gender`**: Demographics
-- **`refined_*`**: Personality traits (0–1)
-- **`motivation_*`**: Motivation dimensions (0–1)
-- **`assessment_mark`**: Module mark (0–100); **`grade`**: First, 2:1, 2:2, Third, Fail
-- **`status`** (progression): `enrolled` (progressed), `repeating`, `withdrawn`
-- **`year_outcome`** (progression): `pass` or `fail`
+- **`student_id`** — persistent across all tables and all years
+- **`academic_year`** — e.g. `"1046-47"`; join key for time-varying facts
+- **`combined_mark`** — on FINAL rows in `fact_assessment`; use this for analysis (not `assessment_mark`)
+- **`survey_responded`** — boolean in NSS and graduate outcomes; filter to `True` before analysing scores
+- **`component_code`** — `"MIDTERM"` or `"FINAL"` in `fact_assessment`; progression uses FINAL rows only
+- **`programme_year`** — 1, 2, or 3 within the degree
 
 ---
 
-## Configuration
+## Key Design Decisions
 
-Edit config files to change behaviour:
-
-| Config | Purpose |
-|--------|---------|
-| `config/clan_personality_specifications.yaml` | Clan personality ranges, disability tendencies |
-| `config/clan_program_affinities.yaml` | Clan–program affinity scores |
-| `config/disability_distribution.yaml` | Disability prevalence by species |
-| `config/year_progression_rules.yaml` | Pass threshold, base progression/repeat/withdrawal rates, modifiers |
-| `config/module_characteristics.csv` | Module difficulty, assessment type |
-
-After changing config, re-run the full pipeline to regenerate data.
-
----
-
-## Visualizations
-
-Optional analysis scripts:
-
-```bash
-python archive_population_model/enrollment_visualization.py   # Writes to visualizations/
-python metaanalysis/engagement_visualization.py
-python metaanalysis/assessment_visualization.py
-```
+- **No direct species/clan modifier on marks.** The ~18pp Elf–Dwarf good degree gap emerges from SES, prior education, and disability distributions only.
+- **Gender gap is flat by design.**
+- **first_gen** — first-generation student flag (~32% of cohort); used in enrolment survey self-efficacy. Backlog: wire into progression and assessment.
+- **`combined_mark`** is the definitive mark. Progression and degree classification use FINAL rows with `combined_mark = 0.4 × MIDTERM + 0.6 × FINAL`.
+- **Survey non-respondents are present** in NSS and graduate outcomes with `survey_responded=False` and null score columns — the count of eligible students is known.
 
 ---
 
 ## Reproducibility
 
-The pipeline uses a fixed random seed (42 by default). Same code + config + seed → same output.
+All systems accept a `seed` parameter. The top-level seed is set in `run_longitudinal_pipeline.py`:
+
+```python
+BASE_SEED = 42          # global seed
+seed = BASE_SEED + i * 1000  # per-year seed (i = year index 0–6)
+```
+
+Running with the same seed produces the same dataset. Metadata (seed, git commit, timestamp, runtime) is written to `data/metadata.json` after each run.
 
 ---
 
-## Further reading
+## Extending the Pipeline
 
-- **`docs/DESIGN.md`** – Architecture and longitudinal flow
-- **`docs/SCHEMA.md`** – Full column definitions
-- **`docs/CALCULATIONS.md`** – How marks, engagement, progression are computed
-- **`docs/PROJECT_SUMMARY.md`** – Project status and next steps
+- **New student trait**: add a `sample_*` function in `student_generation_pipeline.py` and add to the student dict. Wire into downstream systems as needed (see `docs/BACKLOG.md` for the `first_gen` example).
+- **New config**: YAML for hierarchical data (personality ranges, progression rules), CSV for tabular data (programme/module characteristics).
+- **New fact table**: create a new system class with a `generate_*` method, wire into `run_year()` in `run_longitudinal_pipeline.py`, add a `build_fact_*` function in `build_relational_outputs.py`.
+- **Curriculum changes**: edit `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (canonical source), regenerate `config/programme_characteristics.csv` and `config/module_characteristics.csv`, re-run the pipeline.
