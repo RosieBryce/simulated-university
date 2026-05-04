@@ -1,202 +1,185 @@
 module_code,module_title,programme_code,module_year,semester,assessment_type,difficulty_level,social_requirements,creativity_requirements,practical_theoretical_balance,stress_level,group_work_intensity,independent_study_requirement
 452401,Introduction to Contemporary Arcane-Technics,5_2_4,1,1,Practical exam,0.4,0.69,0.62,0.75,0.42,0.8,0.41
-442404,Preparation & Safety in Herbal Practice,4_2_7,1,2,Groupwork,0.43,0.84,0.67,0.76,0.49,0.85,0.47
-442701,Foundations of Nursing Practice,4_2_7,1,1,Presentation,0.33,0.79,0.67,0.79,0.33,0.65,0.35
-442602,Anatomy & Physiology of Birth,4_2_7,1,1,Written coursework,0.27,0.89,0.64,0.74,0.31,0.78,0.31
-442503,Introduction to Somatic Practice,4_2_7,1,2,Written coursework,0.26,0.75,0.55,0.88,0.37,0.71,0.19
-453901,General Chemistry Principles,5_3_9,1,1,Practical exam,0.5,0.61,0.63,0.81,0.47,0.81,0.41
-453703,Ecology & Ecosystems,5_3_9,1,2,Groupwork,0.31,0.84,0.56,0.89,0.34,0.86,0.34
-453802,Cellular Pathology,5_3_9,1,1,Practical exam,0.26,0.55,0.53,0.87,0.31,0.8,0.25
-4531201,Classical Mechanics,5_3_12,1,1,Written coursework,0.28,0.49,0.61,0.7,0.3,0.81,0.42
-4531102,Discrete Mathematics,5_3_12,1,1,Practical exam,0.47,0.38,0.64,0.76,0.43,0.67,0.37
-4531003,Environmental Chemistry,5_3_12,1,2,Written coursework,0.32,0.72,0.66,0.71,0.36,0.81,0.26
-453904,Practical Laboratory Techniques,5_3_12,1,2,Practical exam,0.23,0.61,0.55,0.95,0.21,0.52,0.25
-442502,Anatomy & Physiology,4_2_6,1,1,Practical exam,0.38,0.75,0.63,0.76,0.41,0.82,0.48
-442403,Foundations of Vital Energies,4_2_6,1,2,Professional artefact,0.45,0.74,0.76,0.68,0.44,0.77,0.34
-442601,Foundations of Midwifery Care,4_2_6,1,1,Written coursework,0.24,0.72,0.66,0.82,0.31,0.81,0.28
-434601,Introduction to Ceremonial Practice,3_4_6,1,1,Groupwork,0.36,0.97,0.69,0.64,0.43,0.93,0.3
-4421002,Foundations of Physiotherapy,4_2_11,1,1,Practical exam,0.32,0.71,0.57,0.81,0.32,0.78,0.39
-442604,Professional Practice & Ethics,4_2_11,1,2,Written coursework,0.35,0.65,0.67,0.51,0.32,0.61,0.33
-442903,Pharmaceutical Chemistry,4_2_11,1,2,Practical exam,0.27,0.53,0.65,0.75,0.31,0.79,0.27
-4421101,Introduction to Social Work,4_2_11,1,1,Practical exam,0.29,0.71,0.61,0.83,0.21,0.74,0.22
-433301,Language Skills I,3_3_3,1,1,Written coursework,0.33,0.74,0.66,0.63,0.24,0.51,0.23
+452601,Introduction to Mycology & Mycelial Systems,5_2_6,1,1,Written coursework,0.5,0.75,0.69,0.71,0.53,0.74,0.57
+452502,Interoperability of Magical & Mechanical Systems,5_2_6,1,1,Written coursework,0.28,0.72,0.59,0.79,0.27,0.66,0.38
+452403,"Energy, Power & Light Systems",5_2_6,1,2,Written coursework,0.35,0.63,0.66,0.71,0.44,0.87,0.26
 422403,Visual Communication,2_2_4,1,2,Professional artefact,0.43,0.73,0.75,0.81,0.37,0.67,0.42
 422404,Digital Skills for Illustrators,2_2_4,1,2,Professional artefact,0.38,0.38,0.73,0.92,0.38,0.59,0.36
 422401,Introduction to Illustration,2_2_4,1,1,Written coursework,0.33,0.75,0.71,0.76,0.39,0.72,0.34
 422402,Drawing & Image-Making,2_2_4,1,1,Professional artefact,0.27,0.38,0.77,0.95,0.26,0.58,0.28
-441101,Foundations of Education,4_1_1,1,1,Professional artefact,0.24,0.67,0.79,0.66,0.28,0.78,0.37
-4361401,Introduction to Psychology,3_6_14,1,1,Written exam,0.41,0.65,0.82,0.21,0.38,0.51,0.5
-433303,Grammar & Linguistics,3_3_5,1,2,Written exam,0.23,0.38,0.72,0.32,0.25,0.7,0.24
-433501,Introduction to Multispecies Communication,3_3_5,1,1,Groupwork,0.4,1.0,0.7,0.55,0.44,0.86,0.21
-423802,"Yeasts, Bacteria, and Microbial Worlds",2_3_8,1,1,Written coursework,0.32,0.64,0.84,0.55,0.35,0.72,0.33
-423803,Brewing Traditions and Cultural Practice,2_3_8,1,2,Professional artefact,0.37,0.47,0.8,0.83,0.29,0.41,0.32
-423801,The Alchemy of Fermentation,2_3_8,1,1,Professional artefact,0.31,0.69,0.8,0.65,0.31,0.68,0.24
-423804,Chemistry of Beer & Fermentation,2_3_8,1,2,Professional artefact,0.4,0.8,0.8,0.71,0.45,0.82,0.21
-411103,Business Economics,1_1_2,1,2,Written exam,0.31,0.3,0.68,0.29,0.34,0.6,0.34
-411201,Principles of Management,1_1_2,1,1,Written exam,0.3,0.67,0.6,0.25,0.3,0.7,0.39
-411202,Introduction to Marketing,1_1_2,1,1,Written coursework,0.26,0.5,0.71,0.45,0.28,0.54,0.33
-411203,Organisational Behaviour,1_1_2,1,2,Multi-choice exam,0.27,0.83,0.69,0.44,0.3,0.79,0.29
-442401,Introduction to Herbal Lore,4_2_4,1,1,Groupwork,0.18,0.82,0.7,0.76,0.28,0.84,0.41
-421104,Environmental Design Principles,2_1_1,1,2,Professional artefact,0.31,0.64,0.83,0.7,0.42,0.81,0.45
-421102,Architectural History & Theory I,2_1_1,1,1,Written exam,0.38,0.64,0.85,0.21,0.33,0.64,0.37
-421103,Building Construction & Materials,2_1_1,1,2,Professional artefact,0.45,0.64,0.81,0.61,0.52,0.88,0.27
-421101,Design Studio I,2_1_1,1,1,Written coursework,0.38,0.64,0.83,0.55,0.36,0.76,0.23
-435902,Communication & Mediation Skills,3_5_10,1,1,Professional artefact,0.43,0.57,0.73,0.65,0.37,0.54,0.42
-4351001,Principles of Economics,3_5_10,1,1,Written exam,0.38,0.65,0.76,0.19,0.33,0.6,0.41
-441201,Principles of Mentorship,4_1_2,1,1,Written coursework,0.34,0.71,0.61,0.72,0.34,0.72,0.37
-441102,Learning Theories,4_1_2,1,1,Practical exam,0.33,0.69,0.66,0.75,0.26,0.73,0.34
-453903,Inorganic Chemistry,5_3_11,1,2,Practical exam,0.45,0.61,0.57,0.74,0.41,0.8,0.41
-4531101,Calculus & Algebra,5_3_11,1,1,Practical exam,0.48,0.38,0.56,0.82,0.48,0.85,0.38
-453804,Laboratory Skills & Diagnostics,5_3_11,1,2,Practical exam,0.41,0.5,0.6,0.95,0.33,0.5,0.34
-4531002,Ecology & Biodiversity,5_3_11,1,1,Written coursework,0.35,0.81,0.61,0.67,0.38,0.73,0.28
-451202,Materials & Craft of Metals and Stone,5_1_3,1,1,Practical exam,0.31,0.54,0.61,0.82,0.35,0.75,0.5
-451301,Introduction to Systems Thinking,5_1_3,1,1,Written coursework,0.34,0.73,0.61,0.73,0.35,0.71,0.31
-452601,Introduction to Mycology & Mycelial Systems,5_2_6,1,1,Written coursework,0.5,0.75,0.69,0.71,0.53,0.74,0.57
-452502,Interoperability of Magical & Mechanical Systems,5_2_6,1,1,Written coursework,0.28,0.72,0.59,0.79,0.27,0.66,0.38
-452403,"Energy, Power & Light Systems",5_2_6,1,2,Written coursework,0.35,0.63,0.66,0.71,0.44,0.87,0.26
-412101,Contract Law,1_2_1,1,1,Written exam,0.36,0.61,0.69,0.19,0.28,0.6,0.35
-412102,Criminal Law,1_2_1,1,1,Written exam,0.3,0.53,0.68,0.29,0.28,0.59,0.34
-412103,Public Law,1_2_1,1,2,Written exam,0.33,0.62,0.73,0.1,0.35,0.59,0.3
-412104,Legal System & Skills,1_2_1,1,2,Practical exam,0.53,0.52,0.54,0.88,0.42,0.51,0.26
-422503,Media Production,2_2_5,1,2,Professional artefact,0.39,0.73,0.76,0.76,0.42,0.78,0.37
-422502,Media Industries & Institutions,2_2_5,1,1,Practical exam,0.36,0.57,0.68,0.76,0.32,0.58,0.33
-422504,Media Audiences & Representation,2_2_5,1,2,Presentation,0.24,0.74,0.82,0.76,0.31,0.8,0.3
-422501,Introduction to Media Studies,2_2_5,1,1,Written coursework,0.25,0.56,0.77,0.57,0.25,0.52,0.29
+453701,Cell Biology & Life Processes,5_3_7,1,1,Practical exam,0.38,0.55,0.71,0.73,0.47,0.83,0.38
+434801,"Memory, Myth & Storytelling",3_4_8,1,1,Written exam,0.42,0.63,0.75,0.19,0.38,0.61,0.45
+434702,Moral Philosophy,3_4_8,1,1,Written coursework,0.44,0.7,0.72,0.23,0.31,0.6,0.4
+434603,"Calendars, Seasons & Festivals",3_4_8,1,2,Written coursework,0.23,0.74,0.7,0.49,0.27,0.74,0.19
 422201,Introduction to Printmaking Techniques,2_2_2,1,1,Professional artefact,0.42,0.57,0.79,0.9,0.35,0.7,0.39
 422204,Art History & Visual Culture,2_2_2,1,2,Written exam,0.32,0.45,0.8,0.41,0.27,0.51,0.38
 422202,Cyanotype Processes,2_2_2,1,1,Presentation,0.28,0.77,0.81,0.6,0.36,0.81,0.31
 422203,Drawing & Image Development,2_2_2,1,2,Professional artefact,0.21,0.54,0.73,0.91,0.26,0.43,0.25
-435901,Introduction to Conflict Studies,3_5_9,1,1,Written exam,0.46,0.57,0.8,0.21,0.41,0.48,0.33
-4351102,Governance Traditions of the Forest Realms,3_5_12,1,1,Written exam,0.42,0.61,0.83,0.11,0.41,0.54,0.48
-435904,History of Conflicts,3_5_12,1,2,Written exam,0.38,0.69,0.74,0.19,0.38,0.64,0.38
-4351003,Economic History of Realms,3_5_12,1,2,Written exam,0.49,0.61,0.74,0.33,0.42,0.61,0.37
-4351201,"Stories, Myths & Power",3_5_12,1,1,Written coursework,0.21,0.73,0.7,0.54,0.29,0.81,0.27
-4241004,Fashion History & Context,2_4_10,1,2,Written exam,0.4,0.65,0.8,0.46,0.33,0.62,0.43
-4241001,Introduction to Fashion Design,2_4_10,1,1,Professional artefact,0.35,0.69,0.79,0.72,0.35,0.81,0.3
-4241003,Pattern Cutting & Garment Construction,2_4_10,1,2,Written coursework,0.24,0.74,0.87,0.57,0.27,0.79,0.26
-4241002,Drawing & Illustration for Fashion,2_4_10,1,1,Professional artefact,0.23,0.54,0.8,0.91,0.23,0.57,0.2
 452501,Foundations of Multi-System Design,5_2_5,1,1,Written coursework,0.58,0.74,0.57,0.72,0.51,0.76,0.41
 452402,Materials of the Modern Age,5_2_5,1,1,Practical exam,0.31,0.62,0.5,0.83,0.34,0.75,0.3
-442402,Plant Identification & Ecology,4_2_5,1,1,Groupwork,0.34,0.81,0.68,0.8,0.37,0.84,0.32
-442501,Foundations of Mind-Body Systems,4_2_5,1,1,Written coursework,0.29,0.69,0.68,0.69,0.34,0.8,0.3
-434801,"Memory, Myth & Storytelling",3_4_8,1,1,Written exam,0.42,0.63,0.75,0.19,0.38,0.61,0.45
-434702,Moral Philosophy,3_4_8,1,1,Written coursework,0.44,0.7,0.72,0.23,0.31,0.6,0.4
-434603,"Calendars, Seasons & Festivals",3_4_8,1,2,Written coursework,0.23,0.74,0.7,0.49,0.27,0.74,0.19
-423701,Reading the Object: Material Histories and Markings,2_3_7,1,1,Groupwork,0.31,0.76,0.86,0.59,0.35,0.89,0.38
-423703,"Techniques for Metal, Wood, and Mixed Materials",2_3_7,1,2,Practical exam,0.33,0.6,0.68,0.84,0.29,0.51,0.37
-423702,Principles of Conservation and Ethical Restoration,2_3_7,1,1,Groupwork,0.33,0.83,0.79,0.78,0.35,0.95,0.29
-423704,World Prehistory,2_3_7,1,2,Written exam,0.42,0.6,0.74,0.51,0.43,0.68,0.23
-4351103,"Ethics, Law & Stewardship",3_5_13,1,2,Written exam,0.3,0.61,0.74,0.18,0.28,0.43,0.46
-4351301,Introduction to Politics,3_5_13,1,1,Written coursework,0.37,0.7,0.76,0.22,0.38,0.66,0.42
-4351004,Quantitative Methods,3_5_13,1,2,Written coursework,0.3,0.7,0.7,0.42,0.39,0.89,0.33
-4351202,Introduction to Institutions,3_5_13,1,1,Written coursework,0.23,0.73,0.7,0.46,0.34,0.81,0.28
-4531001,Earth Systems & Environments,5_3_10,1,1,Practical exam,0.39,0.6,0.58,0.89,0.4,0.81,0.46
-453704,Evolutionary Biology,5_3_10,1,2,Written coursework,0.43,0.8,0.61,0.77,0.39,0.81,0.4
-453803,Biochemistry for Life Sciences,5_3_10,1,2,Practical exam,0.24,0.55,0.58,0.75,0.31,0.73,0.36
-453902,Organic Chemistry Fundamentals,5_3_10,1,1,Practical exam,0.33,0.61,0.5,0.9,0.28,0.76,0.23
-4241202,Drawing & Spatial Visualisation,2_4_12,1,1,Practical exam,0.29,0.3,0.66,0.92,0.31,0.52,0.51
-4241204,History of Interiors,2_4_12,1,2,Written exam,0.26,0.57,0.82,0.26,0.26,0.59,0.33
-4241201,Introduction to Interior Design,2_4_12,1,1,Professional artefact,0.42,0.65,0.81,0.63,0.39,0.76,0.33
-4241203,Materials & Finishes,2_4_12,1,2,Professional artefact,0.33,0.74,0.79,0.7,0.33,0.82,0.28
-423901,Introduction to Metalworking,2_3_9,1,1,Professional artefact,0.23,0.75,0.8,0.7,0.22,0.73,0.32
-423902,Materials & Metallurgy,2_3_9,1,1,Written coursework,0.22,0.71,0.91,0.52,0.29,0.71,0.27
-423904,Technical Drawing & Design,2_3_9,1,2,Practical exam,0.26,0.5,0.72,0.93,0.24,0.46,0.26
-423903,Workshop Practice & Safety,2_3_9,1,2,Professional artefact,0.21,0.3,0.76,0.95,0.2,0.52,0.1
-4351101,Foundations of Elven Moral Thought,3_5_11,1,1,Written coursework,0.35,0.61,0.65,0.61,0.48,0.76,0.4
-4351002,"Markets, Trade & Resources",3_5_11,1,1,Written coursework,0.33,0.69,0.77,0.57,0.35,0.82,0.32
-435903,"Power, Identity & Society",3_5_11,1,2,Written exam,0.35,0.61,0.68,0.25,0.32,0.62,0.25
-451201,Foundations of Mechanics,5_1_2,1,1,Written coursework,0.25,0.79,0.57,0.91,0.28,0.75,0.3
+441103,Child & Adolescent Development,4_1_3,1,2,Professional artefact,0.29,0.63,0.74,0.73,0.26,0.73,0.36
+441301,Foundations of Lifespan Learning,4_1_3,1,1,Written coursework,0.44,0.81,0.57,0.82,0.36,0.79,0.36
+441202,Communication & Coaching Skills,4_1_3,1,1,Written coursework,0.22,0.97,0.61,0.95,0.28,0.52,0.32
+435902,Communication & Mediation Skills,3_5_10,1,1,Professional artefact,0.43,0.57,0.73,0.65,0.37,0.54,0.42
+4351001,Principles of Economics,3_5_10,1,1,Written exam,0.38,0.65,0.76,0.19,0.33,0.6,0.41
+434701,Introduction to Philosophy of Religion,3_4_7,1,1,Written exam,0.23,0.56,0.83,0.24,0.24,0.47,0.38
+434602,"Symbols, Dress & Pageantry",3_4_7,1,1,Written coursework,0.17,0.73,0.67,0.55,0.25,0.8,0.22
 4421201,Foundations of Somatic Awareness,4_2_12,1,1,Practical exam,0.25,0.69,0.6,0.93,0.24,0.65,0.34
 4421102,Development & Lifespan,4_2_12,1,1,Written coursework,0.36,0.76,0.64,0.77,0.39,0.77,0.3
 4421003,Physiology & Pathophysiology,4_2_12,1,2,Groupwork,0.32,0.83,0.68,0.77,0.33,0.85,0.3
 442904,Introduction to Pharmacy Practice,4_2_12,1,2,Practical exam,0.4,0.53,0.61,0.87,0.34,0.61,0.21
-442801,Introduction to Occupational Therapy,4_2_8,1,1,Practical exam,0.43,0.7,0.58,0.77,0.4,0.69,0.37
-442603,Pregnancy & Prenatal Development,4_2_8,1,2,Written coursework,0.35,0.83,0.64,0.85,0.29,0.82,0.31
-442504,"Health, Stress & Regulation",4_2_8,1,2,Practical exam,0.26,0.68,0.64,0.82,0.29,0.78,0.23
-422604,Composition I,2_2_6,1,2,Professional artefact,0.34,0.67,0.76,0.67,0.39,0.85,0.34
-422603,Music History,2_2_6,1,2,Written exam,0.33,0.66,0.78,0.48,0.32,0.56,0.29
-422602,Performance I,2_2_6,1,1,Professional artefact,0.16,0.85,0.82,0.79,0.29,0.82,0.25
-422601,Music Theory & Harmony,2_2_6,1,1,Written exam,0.28,0.67,0.73,0.49,0.27,0.61,0.23
-434701,Introduction to Philosophy of Religion,3_4_7,1,1,Written exam,0.23,0.56,0.83,0.24,0.24,0.47,0.38
-434602,"Symbols, Dress & Pageantry",3_4_7,1,1,Written coursework,0.17,0.73,0.67,0.55,0.25,0.8,0.22
-442702,Fundamentals of Patient Care,4_2_9,1,2,Presentation,0.35,0.76,0.73,0.59,0.41,0.8,0.39
-442901,Foundations of Pharmacology,4_2_9,1,1,Practical exam,0.36,0.53,0.63,0.74,0.45,0.86,0.39
-4421001,"Anatomy, Physiology & Movement",4_2_9,1,1,Written coursework,0.35,0.73,0.67,0.86,0.34,0.78,0.23
-442703,Professionalism & Ethics in Care,4_2_10,1,2,Written coursework,0.48,0.69,0.7,0.6,0.42,0.6,0.39
-442802,Occupation & Daily Living,4_2_10,1,2,Written coursework,0.35,0.82,0.64,0.75,0.33,0.83,0.38
-442902,Biology & Physiology,4_2_10,1,1,Practical exam,0.31,0.53,0.65,0.73,0.43,0.88,0.33
-411102,Management Accounting,1_1_1,1,1,Multi-choice exam,0.44,0.3,0.62,0.35,0.39,0.63,0.47
-411101,Financial Accounting,1_1_1,1,1,Written exam,0.29,0.3,0.62,0.52,0.38,0.71,0.4
-411104,Quantitative Methods for Business,1_1_1,1,2,Multi-choice exam,0.44,0.83,0.6,0.56,0.49,0.8,0.39
-441103,Child & Adolescent Development,4_1_3,1,2,Professional artefact,0.29,0.63,0.74,0.73,0.26,0.73,0.36
-441301,Foundations of Lifespan Learning,4_1_3,1,1,Written coursework,0.44,0.81,0.57,0.82,0.36,0.79,0.36
-441202,Communication & Coaching Skills,4_1_3,1,1,Written coursework,0.22,0.97,0.61,0.95,0.28,0.52,0.32
-411302,Marketing Fundamentals,1_1_3,1,1,Written coursework,0.35,0.64,0.65,0.22,0.34,0.6,0.28
-411301,Introduction to Entrepreneurship,1_1_3,1,1,Presentation,0.27,0.81,0.73,0.58,0.31,0.82,0.19
-411501,Introduction to Person Resource Management,1_1_5,1,1,Written exam,0.44,0.61,0.69,0.24,0.4,0.55,0.41
-411502,Business Management Fundamentals,1_1_5,1,2,Written exam,0.34,0.45,0.69,0.24,0.36,0.58,0.34
-411503,Employment Relations,1_1_5,1,2,Groupwork,0.22,0.81,0.6,0.68,0.32,0.85,0.24
-4361501,Introduction to Sociology,3_6_15,1,1,Written exam,0.39,0.67,0.78,0.23,0.32,0.59,0.42
-4361402,Cognitive Psychology,3_6_15,1,1,Written exam,0.35,0.56,0.71,0.26,0.3,0.57,0.37
+411103,Business Economics,1_1_2,1,2,Written exam,0.31,0.3,0.68,0.29,0.34,0.6,0.34
+411201,Principles of Management,1_1_2,1,1,Written exam,0.3,0.67,0.6,0.25,0.3,0.7,0.39
+411202,Introduction to Marketing,1_1_2,1,1,Written coursework,0.26,0.5,0.71,0.45,0.28,0.54,0.33
+411203,Organisational Behaviour,1_1_2,1,2,Multi-choice exam,0.27,0.83,0.69,0.44,0.3,0.79,0.29
 432201,Early Modern History,3_2_2,1,1,Written exam,0.43,0.3,0.86,0.13,0.42,0.64,0.44
 432204,Themes in World History,3_2_2,1,2,Written exam,0.42,0.3,0.76,0.32,0.36,0.59,0.41
 432202,Modern World History,3_2_2,1,1,Written coursework,0.44,0.71,0.71,0.22,0.39,0.77,0.36
 432203,Historical Methods,3_2_2,1,2,Groupwork,0.25,0.76,0.72,0.58,0.38,0.9,0.28
-4241101,Introduction to Graphic Design,2_4_11,1,1,Professional artefact,0.31,0.46,0.74,0.79,0.31,0.75,0.34
-4241102,Typography & Runography,2_4_11,1,1,Professional artefact,0.2,0.76,0.73,0.66,0.23,0.72,0.32
-4241103,Digital Design Skills,2_4_11,1,2,Practical exam,0.32,0.51,0.69,0.94,0.33,0.59,0.26
-422304,Materials & Processes,2_2_3,1,2,Professional artefact,0.45,0.77,0.79,0.72,0.45,0.82,0.45
-422303,Art History & Context,2_2_3,1,2,Written exam,0.3,0.66,0.83,0.36,0.29,0.53,0.43
-422301,Studio Practice I,2_2_3,1,1,Professional artefact,0.43,0.7,0.75,0.76,0.42,0.77,0.4
-422302,Drawing & Visual Language,2_2_3,1,1,Professional artefact,0.28,0.3,0.73,0.89,0.26,0.54,0.32
-453702,Genetics & Inheritance,5_3_8,1,1,Written coursework,0.46,0.75,0.69,0.75,0.39,0.81,0.44
-453801,Anatomy & Physiology,5_3_8,1,1,Practical exam,0.38,0.75,0.63,0.76,0.41,0.82,0.48
-411402,Customer Experience Management,1_1_4,1,1,Multi-choice exam,0.42,0.74,0.56,0.41,0.38,0.6,0.41
-411401,Introduction to Hospitality & Tourism,1_1_4,1,1,Written coursework,0.34,0.81,0.6,0.62,0.35,0.74,0.26
-411403,Business Operations,1_1_4,1,1,Groupwork,0.44,0.77,0.67,0.49,0.5,0.87,0.43
-453701,Cell Biology & Life Processes,5_3_7,1,1,Practical exam,0.38,0.55,0.71,0.73,0.47,0.83,0.38
+433303,Grammar & Linguistics,3_3_5,1,2,Written exam,0.23,0.38,0.72,0.32,0.25,0.7,0.24
+433501,Introduction to Multispecies Communication,3_3_5,1,1,Groupwork,0.4,1.0,0.7,0.55,0.44,0.86,0.21
+4241202,Drawing & Spatial Visualisation,2_4_12,1,1,Practical exam,0.29,0.3,0.66,0.92,0.31,0.52,0.51
+4241204,History of Interiors,2_4_12,1,2,Written exam,0.26,0.57,0.82,0.26,0.26,0.59,0.33
+4241201,Introduction to Interior Design,2_4_12,1,1,Professional artefact,0.42,0.65,0.81,0.63,0.39,0.76,0.33
+4241203,Materials & Finishes,2_4_12,1,2,Professional artefact,0.33,0.74,0.79,0.7,0.33,0.82,0.28
+442401,Introduction to Herbal Lore,4_2_4,1,1,Groupwork,0.18,0.82,0.7,0.76,0.28,0.84,0.41
+453901,General Chemistry Principles,5_3_9,1,1,Practical exam,0.5,0.61,0.63,0.81,0.47,0.81,0.41
+453703,Ecology & Ecosystems,5_3_9,1,2,Groupwork,0.31,0.84,0.56,0.89,0.34,0.86,0.34
+453802,Cellular Pathology,5_3_9,1,1,Practical exam,0.26,0.55,0.53,0.87,0.31,0.8,0.25
+435901,Introduction to Conflict Studies,3_5_9,1,1,Written exam,0.46,0.57,0.8,0.21,0.41,0.48,0.33
+4351101,Foundations of Elven Moral Thought,3_5_11,1,1,Written coursework,0.35,0.61,0.65,0.61,0.48,0.76,0.4
+4351002,"Markets, Trade & Resources",3_5_11,1,1,Written coursework,0.33,0.69,0.77,0.57,0.35,0.82,0.32
+435903,"Power, Identity & Society",3_5_11,1,2,Written exam,0.35,0.61,0.68,0.25,0.32,0.62,0.25
+441101,Foundations of Education,4_1_1,1,1,Professional artefact,0.24,0.67,0.79,0.66,0.28,0.78,0.37
+441201,Principles of Mentorship,4_1_2,1,1,Written coursework,0.34,0.71,0.61,0.72,0.34,0.72,0.37
+441102,Learning Theories,4_1_2,1,1,Practical exam,0.33,0.69,0.66,0.75,0.26,0.73,0.34
+442402,Plant Identification & Ecology,4_2_5,1,1,Groupwork,0.34,0.81,0.68,0.8,0.37,0.84,0.32
+442501,Foundations of Mind-Body Systems,4_2_5,1,1,Written coursework,0.29,0.69,0.68,0.69,0.34,0.8,0.3
+422604,Composition I,2_2_6,1,2,Professional artefact,0.34,0.67,0.76,0.67,0.39,0.85,0.34
+422603,Music History,2_2_6,1,2,Written exam,0.33,0.66,0.78,0.48,0.32,0.56,0.29
+422602,Performance I,2_2_6,1,1,Professional artefact,0.16,0.85,0.82,0.79,0.29,0.82,0.25
+422601,Music Theory & Harmony,2_2_6,1,1,Written exam,0.28,0.67,0.73,0.49,0.27,0.61,0.23
+4361501,Introduction to Sociology,3_6_15,1,1,Written exam,0.39,0.67,0.78,0.23,0.32,0.59,0.42
+4361402,Cognitive Psychology,3_6_15,1,1,Written exam,0.35,0.56,0.71,0.26,0.3,0.57,0.37
+412101,Contract Law,1_2_1,1,1,Written exam,0.36,0.61,0.69,0.19,0.28,0.6,0.35
+412102,Criminal Law,1_2_1,1,1,Written exam,0.3,0.53,0.68,0.29,0.28,0.59,0.34
+412103,Public Law,1_2_1,1,2,Written exam,0.33,0.62,0.73,0.1,0.35,0.59,0.3
+412104,Legal System & Skills,1_2_1,1,2,Practical exam,0.53,0.52,0.54,0.88,0.42,0.51,0.26
+423701,Reading the Object: Material Histories and Markings,2_3_7,1,1,Groupwork,0.31,0.76,0.86,0.59,0.35,0.89,0.38
+423703,"Techniques for Metal, Wood, and Mixed Materials",2_3_7,1,2,Practical exam,0.33,0.6,0.68,0.84,0.29,0.51,0.37
+423702,Principles of Conservation and Ethical Restoration,2_3_7,1,1,Groupwork,0.33,0.83,0.79,0.78,0.35,0.95,0.29
+423704,World Prehistory,2_3_7,1,2,Written exam,0.42,0.6,0.74,0.51,0.43,0.68,0.23
+442801,Introduction to Occupational Therapy,4_2_8,1,1,Practical exam,0.43,0.7,0.58,0.77,0.4,0.69,0.37
+442502,Anatomy & Physiology,4_2_8,1,1,Practical exam,0.38,0.75,0.63,0.76,0.41,0.82,0.48
+442603,Pregnancy & Prenatal Development,4_2_8,1,2,Written coursework,0.35,0.83,0.64,0.85,0.29,0.82,0.31
+442504,"Health, Stress & Regulation",4_2_8,1,2,Practical exam,0.26,0.68,0.64,0.82,0.29,0.78,0.23
+4531001,Earth Systems & Environments,5_3_10,1,1,Practical exam,0.39,0.6,0.58,0.89,0.4,0.81,0.46
+453704,Evolutionary Biology,5_3_10,1,2,Written coursework,0.43,0.8,0.61,0.77,0.39,0.81,0.4
+453803,Biochemistry for Life Sciences,5_3_10,1,2,Practical exam,0.24,0.55,0.58,0.75,0.31,0.73,0.36
+453902,Organic Chemistry Fundamentals,5_3_10,1,1,Practical exam,0.33,0.61,0.5,0.9,0.28,0.76,0.23
 431104,Earth Systems,3_1_1,1,2,Written exam,0.32,0.69,0.72,0.46,0.32,0.78,0.37
 431103,Geographical Skills,3_1_1,1,2,Practical exam,0.45,0.46,0.66,0.89,0.33,0.45,0.34
 431101,Physical Geography,3_1_1,1,1,Groupwork,0.25,0.84,0.63,0.51,0.34,0.95,0.34
 431102,Person-Centred Geography,3_1_1,1,1,Presentation,0.22,0.78,0.74,0.5,0.31,0.82,0.21
-511103,Corporate Finance,1_1_2,2,2,Written coursework,0.42,0.84,0.62,0.57,0.45,0.8,0.47
-511203,Business Analytics,1_1_2,2,2,Written coursework,0.63,0.85,0.58,0.56,0.64,0.82,0.66
-511202,People Resource Management,1_1_2,2,1,Written exam,0.55,0.57,0.68,0.24,0.51,0.62,0.45
-511201,Business Operations,1_1_2,2,1,Groupwork,0.44,0.77,0.67,0.49,0.5,0.87,0.43
-511101,Accounting and Reporting,1_1_1,2,1,Groupwork,0.61,0.78,0.66,0.54,0.64,0.84,0.58
-511102,Taxation,1_1_1,2,1,Written coursework,0.59,0.72,0.72,0.45,0.56,0.76,0.52
-511104,Financial Markets & Institutions,1_1_1,2,2,Multi-choice exam,0.4,0.8,0.65,0.53,0.51,0.78,0.49
-542501,Psychosomatic Health,4_2_9,2,1,Practical exam,0.58,0.7,0.66,0.75,0.5,0.72,0.51
-542402,Energy Systems & Balance,4_2_9,2,1,Presentation,0.5,0.77,0.72,0.74,0.53,0.67,0.4
-542701,"Adult, Child & Mental Health Nursing",4_2_11,2,1,Presentation,0.58,0.77,0.73,0.59,0.55,0.73,0.6
-542503,"Pain, Recovery & Adaptation",4_2_11,2,2,Presentation,0.67,0.79,0.7,0.68,0.68,0.81,0.58
-542404,Field Practice & Observation,4_2_11,2,2,Groupwork,0.41,0.77,0.65,0.67,0.5,0.85,0.57
-542602,Postnatal Care & Neonatal Health,4_2_11,2,1,Written coursework,0.6,0.73,0.56,0.79,0.56,0.78,0.56
+421104,Environmental Design Principles,2_1_1,1,2,Professional artefact,0.31,0.64,0.83,0.7,0.42,0.81,0.45
+421102,Architectural History & Theory I,2_1_1,1,1,Written exam,0.38,0.64,0.85,0.21,0.33,0.64,0.37
+421103,Building Construction & Materials,2_1_1,1,2,Professional artefact,0.45,0.64,0.81,0.61,0.52,0.88,0.27
+421101,Design Studio I,2_1_1,1,1,Written coursework,0.38,0.64,0.83,0.55,0.36,0.76,0.23
+451201,Foundations of Mechanics,5_1_2,1,1,Written coursework,0.25,0.79,0.57,0.91,0.28,0.75,0.3
+4241004,Fashion History & Context,2_4_10,1,2,Written exam,0.4,0.65,0.8,0.46,0.33,0.62,0.43
+4241001,Introduction to Fashion Design,2_4_10,1,1,Professional artefact,0.35,0.69,0.79,0.72,0.35,0.81,0.3
+4241003,Pattern Cutting & Garment Construction,2_4_10,1,2,Written coursework,0.24,0.74,0.87,0.57,0.27,0.79,0.26
+4241002,Drawing & Illustration for Fashion,2_4_10,1,1,Professional artefact,0.23,0.54,0.8,0.91,0.23,0.57,0.2
+422503,Media Production,2_2_5,1,2,Professional artefact,0.39,0.73,0.76,0.76,0.42,0.78,0.37
+422502,Media Industries & Institutions,2_2_5,1,1,Practical exam,0.36,0.57,0.68,0.76,0.32,0.58,0.33
+422504,Media Audiences & Representation,2_2_5,1,2,Presentation,0.24,0.74,0.82,0.76,0.31,0.8,0.3
+422501,Introduction to Media Studies,2_2_5,1,1,Written coursework,0.25,0.56,0.77,0.57,0.25,0.52,0.29
+422304,Materials & Processes,2_2_3,1,2,Professional artefact,0.45,0.77,0.79,0.72,0.45,0.82,0.45
+422303,Art History & Context,2_2_3,1,2,Written exam,0.3,0.66,0.83,0.36,0.29,0.53,0.43
+422301,Studio Practice I,2_2_3,1,1,Professional artefact,0.43,0.7,0.75,0.76,0.42,0.77,0.4
+422302,Drawing & Visual Language,2_2_3,1,1,Professional artefact,0.28,0.3,0.73,0.89,0.26,0.54,0.32
+442403,Foundations of Vital Energies,4_2_6,1,2,Professional artefact,0.45,0.74,0.76,0.68,0.44,0.77,0.34
+442601,Foundations of Midwifery Care,4_2_6,1,1,Written coursework,0.24,0.72,0.66,0.82,0.31,0.81,0.28
+423802,"Yeasts, Bacteria, and Microbial Worlds",2_3_8,1,1,Written coursework,0.32,0.64,0.84,0.55,0.35,0.72,0.33
+423803,Brewing Traditions and Cultural Practice,2_3_8,1,2,Professional artefact,0.37,0.47,0.8,0.83,0.29,0.41,0.32
+423801,The Alchemy of Fermentation,2_3_8,1,1,Professional artefact,0.31,0.69,0.8,0.65,0.31,0.68,0.24
+423804,Chemistry of Beer & Fermentation,2_3_8,1,2,Professional artefact,0.4,0.8,0.8,0.71,0.45,0.82,0.21
+451202,Materials & Craft of Metals and Stone,5_1_3,1,1,Practical exam,0.31,0.54,0.61,0.82,0.35,0.75,0.5
+451301,Introduction to Systems Thinking,5_1_3,1,1,Written coursework,0.34,0.73,0.61,0.73,0.35,0.71,0.31
+434601,Introduction to Ceremonial Practice,3_4_6,1,1,Groupwork,0.36,0.97,0.69,0.64,0.43,0.93,0.3
+453903,Inorganic Chemistry,5_3_11,1,2,Practical exam,0.45,0.61,0.57,0.74,0.41,0.8,0.41
+4531101,Calculus & Algebra,5_3_11,1,1,Practical exam,0.48,0.38,0.56,0.82,0.48,0.85,0.38
+453804,Laboratory Skills & Diagnostics,5_3_11,1,2,Practical exam,0.41,0.5,0.6,0.95,0.33,0.5,0.34
+4531002,Ecology & Biodiversity,5_3_11,1,1,Written coursework,0.35,0.81,0.61,0.67,0.38,0.73,0.28
+433301,Language Skills I,3_3_3,1,1,Written coursework,0.33,0.74,0.66,0.63,0.24,0.51,0.23
+4351102,Governance Traditions of the Forest Realms,3_5_12,1,1,Written exam,0.42,0.61,0.83,0.11,0.41,0.54,0.48
+435904,History of Conflicts,3_5_12,1,2,Written exam,0.38,0.69,0.74,0.19,0.38,0.64,0.38
+4351003,Economic History of Realms,3_5_12,1,2,Written exam,0.49,0.61,0.74,0.33,0.42,0.61,0.37
+4351201,"Stories, Myths & Power",3_5_12,1,1,Written coursework,0.21,0.73,0.7,0.54,0.29,0.81,0.27
+411302,Marketing Fundamentals,1_1_3,1,1,Written coursework,0.35,0.64,0.65,0.22,0.34,0.6,0.28
+411301,Introduction to Entrepreneurship,1_1_3,1,1,Presentation,0.27,0.81,0.73,0.58,0.31,0.82,0.19
+423901,Introduction to Metalworking,2_3_9,1,1,Professional artefact,0.23,0.75,0.8,0.7,0.22,0.73,0.32
+423902,Materials & Metallurgy,2_3_9,1,1,Written coursework,0.22,0.71,0.91,0.52,0.29,0.71,0.27
+423904,Technical Drawing & Design,2_3_9,1,2,Practical exam,0.26,0.5,0.72,0.93,0.24,0.46,0.26
+423903,Workshop Practice & Safety,2_3_9,1,2,Professional artefact,0.21,0.3,0.76,0.95,0.2,0.52,0.1
+4351103,"Ethics, Law & Stewardship",3_5_13,1,2,Written exam,0.3,0.61,0.74,0.18,0.28,0.43,0.46
+4351301,Introduction to Politics,3_5_13,1,1,Written coursework,0.37,0.7,0.76,0.22,0.38,0.66,0.42
+4351004,Quantitative Methods,3_5_13,1,2,Written coursework,0.3,0.7,0.7,0.42,0.39,0.89,0.33
+4351202,Introduction to Institutions,3_5_13,1,1,Written coursework,0.23,0.73,0.7,0.46,0.34,0.81,0.28
+4361401,Introduction to Psychology,3_6_14,1,1,Written exam,0.41,0.65,0.82,0.21,0.38,0.51,0.5
+453702,Genetics & Inheritance,5_3_8,1,1,Written coursework,0.46,0.75,0.69,0.75,0.39,0.81,0.44
+453801,Anatomy & Physiology,5_3_8,1,1,Practical exam,0.38,0.75,0.63,0.76,0.41,0.82,0.48
+4421002,Foundations of Physiotherapy,4_2_11,1,1,Practical exam,0.32,0.71,0.57,0.81,0.32,0.78,0.39
+442604,Professional Practice & Ethics,4_2_11,1,2,Written coursework,0.35,0.65,0.67,0.51,0.32,0.61,0.33
+442903,Pharmaceutical Chemistry,4_2_11,1,2,Practical exam,0.27,0.53,0.65,0.75,0.31,0.79,0.27
+4421101,Introduction to Social Work,4_2_11,1,1,Practical exam,0.29,0.71,0.61,0.83,0.21,0.74,0.22
+4241101,Introduction to Graphic Design,2_4_11,1,1,Professional artefact,0.31,0.46,0.74,0.79,0.31,0.75,0.34
+4241102,Typography & Runography,2_4_11,1,1,Professional artefact,0.2,0.76,0.73,0.66,0.23,0.72,0.32
+4241103,Digital Design Skills,2_4_11,1,2,Practical exam,0.32,0.51,0.69,0.94,0.33,0.59,0.26
+442404,Preparation & Safety in Herbal Practice,4_2_7,1,2,Groupwork,0.43,0.84,0.67,0.76,0.49,0.85,0.47
+442701,Foundations of Nursing Practice,4_2_7,1,1,Presentation,0.33,0.79,0.67,0.79,0.33,0.65,0.35
+442602,Anatomy & Physiology of Birth,4_2_7,1,1,Written coursework,0.27,0.89,0.64,0.74,0.31,0.78,0.31
+442503,Introduction to Somatic Practice,4_2_7,1,2,Written coursework,0.26,0.75,0.55,0.88,0.37,0.71,0.19
+411102,Management Accounting,1_1_1,1,1,Multi-choice exam,0.44,0.3,0.62,0.35,0.39,0.63,0.47
+411101,Financial Accounting,1_1_1,1,1,Written exam,0.29,0.3,0.62,0.52,0.38,0.71,0.4
+411104,Quantitative Methods for Business,1_1_1,1,2,Multi-choice exam,0.44,0.83,0.6,0.56,0.49,0.8,0.39
+411402,Customer Experience Management,1_1_4,1,1,Multi-choice exam,0.42,0.74,0.56,0.41,0.38,0.6,0.41
+411401,Introduction to Hospitality & Tourism,1_1_4,1,1,Written coursework,0.34,0.81,0.6,0.62,0.35,0.74,0.26
+411403,Business Operations,1_1_4,1,1,Groupwork,0.44,0.77,0.67,0.49,0.5,0.87,0.43
+442703,Professionalism & Ethics in Care,4_2_10,1,2,Written coursework,0.48,0.69,0.7,0.6,0.42,0.6,0.39
+442802,Occupation & Daily Living,4_2_10,1,2,Written coursework,0.35,0.82,0.64,0.75,0.33,0.83,0.38
+442902,Biology & Physiology,4_2_10,1,1,Practical exam,0.31,0.53,0.65,0.73,0.43,0.88,0.33
+4421001,"Anatomy, Physiology & Movement",4_2_10,1,1,Written coursework,0.35,0.73,0.67,0.86,0.34,0.78,0.23
+411501,Introduction to Person Resource Management,1_1_5,1,1,Written exam,0.44,0.61,0.69,0.24,0.4,0.55,0.41
+411502,Business Management Fundamentals,1_1_5,1,2,Written exam,0.34,0.45,0.69,0.24,0.36,0.58,0.34
+411503,Employment Relations,1_1_5,1,2,Groupwork,0.22,0.81,0.6,0.68,0.32,0.85,0.24
+442702,Fundamentals of Patient Care,4_2_9,1,2,Presentation,0.35,0.76,0.73,0.59,0.41,0.8,0.39
+442901,Foundations of Pharmacology,4_2_9,1,1,Practical exam,0.36,0.53,0.63,0.74,0.45,0.86,0.39
+4531201,Classical Mechanics,5_3_12,1,1,Written coursework,0.28,0.49,0.61,0.7,0.3,0.81,0.42
+4531102,Discrete Mathematics,5_3_12,1,1,Practical exam,0.47,0.38,0.64,0.76,0.43,0.67,0.37
+4531003,Environmental Chemistry,5_3_12,1,2,Written coursework,0.32,0.72,0.66,0.71,0.36,0.81,0.26
+453904,Practical Laboratory Techniques,5_3_12,1,2,Practical exam,0.23,0.61,0.55,0.95,0.21,0.52,0.25
+512102,Land Law,1_2_1,2,1,Written exam,0.67,0.67,0.68,0.28,0.65,0.58,0.59
+512101,Tort Law,1_2_1,2,1,Multi-choice exam,0.51,0.6,0.59,0.29,0.46,0.61,0.49
+512104,Equity & Trusts,1_2_1,2,2,Groupwork,0.6,0.82,0.67,0.51,0.58,0.95,0.49
+512103,EU Law,1_2_1,2,2,Written exam,0.46,0.55,0.7,0.1,0.39,0.51,0.45
+542702,Pharmacology & Medication Management,4_2_12,2,1,Written coursework,0.67,0.67,0.64,0.64,0.55,0.43,0.52
+542603,Complications in Pregnancy & Birth,4_2_12,2,2,Written coursework,0.5,0.8,0.62,0.73,0.54,0.8,0.5
+542504,Therapeutic Communication,4_2_12,2,2,Written coursework,0.61,0.72,0.64,0.63,0.54,0.74,0.48
+542801,Therapeutic Interventions & Techniques,4_2_12,2,1,Written coursework,0.31,0.77,0.58,0.95,0.34,0.53,0.33
+535901,Negotiation & Diplomacy,3_5_13,2,1,Presentation,0.61,0.76,0.75,0.55,0.63,0.82,0.56
 521102,Architectural History & Theory II,2_1_1,2,1,Viva,0.73,0.64,0.84,0.31,0.59,0.54,0.73
 521101,Design Studio II,2_1_1,2,1,Professional artefact,0.71,0.64,0.77,0.67,0.65,0.81,0.63
 521103,Structures & Structural Design,2_1_1,2,2,Presentation,0.53,0.78,0.79,0.6,0.53,0.79,0.58
 521104,Building Services & Sustainability,2_1_1,2,2,Professional artefact,0.43,0.67,0.85,0.66,0.45,0.76,0.51
-522203,Studio Practice,2_2_2,2,2,Professional artefact,0.57,0.82,0.73,0.66,0.52,0.75,0.64
-522202,Experimental Photographic Processes,2_2_2,2,1,Professional artefact,0.46,0.79,0.75,0.64,0.46,0.74,0.48
-522201,Advanced Printmaking,2_2_2,2,1,Professional artefact,0.58,0.51,0.74,0.72,0.56,0.55,0.43
-522204,Professional Skills for Artists,2_2_2,2,2,Professional artefact,0.49,0.65,0.78,0.87,0.5,0.65,0.42
-553701,Microbiology & Immunity,5_3_11,2,1,Practical exam,0.61,0.67,0.66,0.74,0.59,0.73,0.44
-523701,Fieldwork & Excavation Techniques,2_3_7,2,1,Professional artefact,0.63,0.65,0.73,0.7,0.65,0.7,0.9
-523702,Fieldwork: Documenting and Mapping,2_3_7,2,1,Professional artefact,0.67,0.58,0.75,0.65,0.64,0.63,0.77
-523703,Cultural Entanglements in Artefact Recovery,2_3_7,2,2,Professional artefact,0.47,0.78,0.79,0.76,0.46,0.68,0.52
-523704,Material Culture Studies,2_3_7,2,2,Written exam,0.59,0.55,0.89,0.23,0.57,0.49,0.44
-523804,Capstone: Create a Heritage-Inspired Brew Line,2_3_8,2,2,Written coursework,0.67,0.7,0.85,0.58,0.62,0.55,0.8
-523803,"Designing Flavour: Herbs, Temperature, and Time",2_3_8,2,2,Professional artefact,0.57,0.82,0.88,0.65,0.5,0.68,0.62
-523802,Chemistry and Safety in Ferment Labs,2_3_8,2,1,Practical exam,0.52,0.54,0.67,0.95,0.49,0.66,0.51
-523801,Quality Control & Sensory Analysis,2_3_8,2,1,Viva,0.71,0.67,0.83,0.34,0.67,0.61,0.47
-5241003,Draping & Advanced Construction,2_4_10,2,2,Professional artefact,0.52,0.79,0.83,0.62,0.51,0.79,0.62
-5241004,Fashion Marketing & Branding,2_4_10,2,2,Written exam,0.59,0.5,0.91,0.31,0.52,0.59,0.53
-5241002,Textiles & Fabric Innovation,2_4_10,2,1,Presentation,0.51,0.76,0.85,0.57,0.49,0.8,0.53
-5241001,Fashion Design Development,2_4_10,2,1,Professional artefact,0.5,0.62,0.74,0.7,0.52,0.74,0.4
-511401,Hospitality Operations Management,1_1_4,2,1,Written exam,0.56,0.64,0.71,0.1,0.53,0.61,0.53
-511402,Tourism Planning & Development,1_1_4,2,1,Written coursework,0.33,0.76,0.71,0.51,0.46,0.83,0.49
-511403,Revenue & Yield Management,1_1_4,2,2,Written exam,0.53,0.57,0.76,0.12,0.5,0.6,0.48
-511404,Events Management,1_1_4,2,2,Multi-choice exam,0.52,0.65,0.62,0.26,0.43,0.61,0.4
+5241202,Lighting & Environmental Design,2_4_12,2,1,Groupwork,0.58,0.8,0.76,0.65,0.59,0.84,0.58
+5241203,Modelling,2_4_12,2,2,Professional artefact,0.47,0.73,0.74,0.66,0.49,0.85,0.58
+5241103,Person-Centred Design,2_4_12,2,2,Professional artefact,0.52,0.72,0.76,0.58,0.52,0.77,0.52
+5241201,Interior Design Studio,2_4_12,2,1,Professional artefact,0.58,0.85,0.77,0.65,0.58,0.83,0.55
+522403,Character & Concept Design,2_2_4,2,2,Professional artefact,0.52,0.8,0.78,0.76,0.5,0.82,0.58
+522402,Editorial & Publishing Illustration,2_2_4,2,1,Professional artefact,0.47,0.81,0.8,0.64,0.54,0.79,0.56
+522401,Narrative Illustration,2_2_4,2,1,Groupwork,0.56,0.75,0.79,0.56,0.6,0.87,0.53
+522404,Professional Practice,2_2_4,2,2,Professional artefact,0.6,0.81,0.87,0.42,0.57,0.82,0.5
 511303,Supply Chain Management,1_1_3,2,2,Written coursework,0.59,0.58,0.74,0.29,0.56,0.58,0.63
 511304,Entrepreneurial Finance,1_1_3,2,2,Written coursework,0.63,0.8,0.61,0.54,0.65,0.83,0.61
 511301,New Venture Creation,1_1_3,2,1,Written exam,0.48,0.69,0.65,0.49,0.46,0.76,0.58
@@ -205,130 +188,147 @@ module_code,module_title,programme_code,module_year,semester,assessment_type,dif
 511502,Learning & Development,1_1_5,2,1,Written coursework,0.47,0.72,0.7,0.32,0.51,0.7,0.53
 511501,Talent Management & Resourcing,1_1_5,2,1,Written exam,0.46,0.68,0.68,0.31,0.54,0.73,0.5
 511503,Performance & Reward Management,1_1_5,2,2,Multi-choice exam,0.42,0.61,0.62,0.34,0.47,0.59,0.46
-522304,Professional Development,2_2_3,2,2,Professional artefact,0.62,0.74,0.77,0.74,0.59,0.82,0.61
-522303,Interdisciplinary Practice,2_2_3,2,2,Professional artefact,0.57,0.65,0.8,0.69,0.49,0.59,0.58
-522301,Studio Practice II,2_2_3,2,1,Professional artefact,0.5,0.78,0.78,0.72,0.54,0.82,0.56
-522302,Contemporary Art Theory,2_2_3,2,1,Written exam,0.56,0.46,0.81,0.39,0.48,0.55,0.4
-542702,Pharmacology & Medication Management,4_2_12,2,1,Written coursework,0.67,0.67,0.64,0.64,0.55,0.43,0.52
-542603,Complications in Pregnancy & Birth,4_2_12,2,2,Written coursework,0.5,0.8,0.62,0.73,0.54,0.8,0.5
-542504,Therapeutic Communication,4_2_12,2,2,Written coursework,0.61,0.72,0.64,0.63,0.54,0.74,0.48
-542801,Therapeutic Interventions & Techniques,4_2_12,2,1,Written coursework,0.31,0.77,0.58,0.95,0.34,0.53,0.33
-553702,Physiology of Organisms,5_3_12,2,1,Practical exam,0.53,0.64,0.65,0.74,0.54,0.67,0.55
-553801,Disease Mechanisms,5_3_12,2,1,Practical exam,0.71,0.55,0.59,0.79,0.71,0.87,0.55
-535901,Negotiation & Diplomacy,3_5_13,2,1,Presentation,0.61,0.76,0.75,0.55,0.63,0.82,0.56
 522603,Music Analysis,2_2_6,2,2,Written exam,0.49,0.54,0.77,0.39,0.48,0.58,0.61
 522601,Advanced Music Theory,2_2_6,2,1,Written exam,0.59,0.62,0.89,0.42,0.51,0.52,0.59
 522604,Music Technology,2_2_6,2,2,Professional artefact,0.57,0.75,0.79,0.63,0.59,0.74,0.52
 522602,Performance II,2_2_6,2,1,Professional artefact,0.49,0.78,0.8,0.72,0.5,0.82,0.35
-542403,Healing Traditions Across Realms,4_2_10,2,2,Written coursework,0.61,0.72,0.68,0.76,0.62,0.72,0.59
-542502,"Movement, Breath & Awareness Practices",4_2_10,2,1,Written coursework,0.41,0.72,0.66,0.65,0.48,0.75,0.55
-542601,Labour & Birth Management,4_2_10,2,1,Practical exam,0.53,0.53,0.58,0.95,0.51,0.63,0.52
-542401,Applied Herbal Formulations,4_2_8,2,1,Presentation,0.5,0.78,0.69,0.73,0.5,0.81,0.48
-5241202,Lighting & Environmental Design,2_4_12,2,1,Groupwork,0.58,0.8,0.76,0.65,0.59,0.84,0.58
-5241203,Modelling,2_4_12,2,2,Professional artefact,0.47,0.73,0.74,0.66,0.49,0.85,0.58
-5241103,Person-Centred Design,2_4_12,2,2,Professional artefact,0.52,0.72,0.76,0.58,0.52,0.77,0.52
-5241201,Interior Design Studio,2_4_12,2,1,Professional artefact,0.58,0.85,0.77,0.65,0.58,0.83,0.55
-512102,Land Law,1_2_1,2,1,Written exam,0.67,0.67,0.68,0.28,0.65,0.58,0.59
-512101,Tort Law,1_2_1,2,1,Multi-choice exam,0.51,0.6,0.59,0.29,0.46,0.61,0.49
-512104,Equity & Trusts,1_2_1,2,2,Groupwork,0.6,0.82,0.67,0.51,0.58,0.95,0.49
-512103,EU Law,1_2_1,2,2,Written exam,0.46,0.55,0.7,0.1,0.39,0.51,0.45
-522502,Media Analysis,2_2_5,2,1,Viva,0.7,0.57,0.82,0.44,0.75,0.6,0.63
-522504,Research Methods in Media,2_2_5,2,2,Written coursework,0.7,0.74,0.88,0.6,0.68,0.73,0.62
-522501,Media Theory,2_2_5,2,1,Written exam,0.59,0.68,0.73,0.37,0.5,0.62,0.59
-522503,Social Media Cultures,2_2_5,2,2,Written exam,0.63,0.62,0.86,0.4,0.55,0.55,0.58
-532203,Historiography,3_2_2,2,2,Presentation,0.62,0.77,0.69,0.6,0.62,0.82,0.59
-532201,Social & Cultural History,3_2_2,2,1,Written exam,0.65,0.53,0.83,0.19,0.42,0.38,0.58
-532204,Archival Research Methods,3_2_2,2,2,Written coursework,0.61,0.3,0.74,0.58,0.66,0.75,0.57
-532202,Political History,3_2_2,2,1,Written exam,0.43,0.61,0.79,0.25,0.41,0.71,0.51
-523901,Surface Finishing & Treatment,2_3_9,2,1,Professional artefact,0.53,0.83,0.77,0.68,0.62,0.79,0.69
-523904,Form and Function: Design Studio I,2_3_9,2,2,Groupwork,0.46,0.85,0.91,0.52,0.59,0.92,0.45
-523902,Alloy Theory and Practical Metallurgy,2_3_9,2,1,Professional artefact,0.51,0.56,0.75,0.87,0.47,0.45,0.4
-523903,"Forging for Fit: Joints, Hinges, and Mechanisms",2_3_9,2,2,Professional artefact,0.57,0.56,0.77,0.89,0.48,0.54,0.4
-522403,Character & Concept Design,2_2_4,2,2,Professional artefact,0.52,0.8,0.78,0.76,0.5,0.82,0.58
-522402,Editorial & Publishing Illustration,2_2_4,2,1,Professional artefact,0.47,0.81,0.8,0.64,0.54,0.79,0.56
-522401,Narrative Illustration,2_2_4,2,1,Groupwork,0.56,0.75,0.79,0.56,0.6,0.87,0.53
-522404,Professional Practice,2_2_4,2,2,Professional artefact,0.6,0.81,0.87,0.42,0.57,0.82,0.5
+523804,Capstone: Create a Heritage-Inspired Brew Line,2_3_8,2,2,Written coursework,0.67,0.7,0.85,0.58,0.62,0.55,0.8
+523803,"Designing Flavour: Herbs, Temperature, and Time",2_3_8,2,2,Professional artefact,0.57,0.82,0.88,0.65,0.5,0.68,0.62
+523802,Chemistry and Safety in Ferment Labs,2_3_8,2,1,Practical exam,0.52,0.54,0.67,0.95,0.49,0.66,0.51
+523801,Quality Control & Sensory Analysis,2_3_8,2,1,Viva,0.71,0.67,0.83,0.34,0.67,0.61,0.47
+522203,Studio Practice,2_2_2,2,2,Professional artefact,0.57,0.82,0.73,0.66,0.52,0.75,0.64
+522202,Experimental Photographic Processes,2_2_2,2,1,Professional artefact,0.46,0.79,0.75,0.64,0.46,0.74,0.48
+522201,Advanced Printmaking,2_2_2,2,1,Professional artefact,0.58,0.51,0.74,0.72,0.56,0.55,0.43
+522204,Professional Skills for Artists,2_2_2,2,2,Professional artefact,0.49,0.65,0.78,0.87,0.5,0.65,0.42
+553702,Physiology of Organisms,5_3_12,2,1,Practical exam,0.53,0.64,0.65,0.74,0.54,0.67,0.55
+553801,Disease Mechanisms,5_3_12,2,1,Practical exam,0.71,0.55,0.59,0.79,0.71,0.87,0.55
+511401,Hospitality Operations Management,1_1_4,2,1,Written exam,0.56,0.64,0.71,0.1,0.53,0.61,0.53
+511402,Tourism Planning & Development,1_1_4,2,1,Written coursework,0.33,0.76,0.71,0.51,0.46,0.83,0.49
+511403,Revenue & Yield Management,1_1_4,2,2,Written exam,0.53,0.57,0.76,0.12,0.5,0.6,0.48
+511404,Events Management,1_1_4,2,2,Multi-choice exam,0.52,0.65,0.62,0.26,0.43,0.61,0.4
+553701,Microbiology & Immunity,5_3_11,2,1,Practical exam,0.61,0.67,0.66,0.74,0.59,0.73,0.44
+522304,Professional Development,2_2_3,2,2,Professional artefact,0.62,0.74,0.77,0.74,0.59,0.82,0.61
+522303,Interdisciplinary Practice,2_2_3,2,2,Professional artefact,0.57,0.65,0.8,0.69,0.49,0.59,0.58
+522301,Studio Practice II,2_2_3,2,1,Professional artefact,0.5,0.78,0.78,0.72,0.54,0.82,0.56
+522302,Contemporary Art Theory,2_2_3,2,1,Written exam,0.56,0.46,0.81,0.39,0.48,0.55,0.4
+511101,Accounting and Reporting,1_1_1,2,1,Groupwork,0.61,0.78,0.66,0.54,0.64,0.84,0.58
+511102,Taxation,1_1_1,2,1,Written coursework,0.59,0.72,0.72,0.45,0.56,0.76,0.52
+511104,Financial Markets & Institutions,1_1_1,2,2,Multi-choice exam,0.4,0.8,0.65,0.53,0.51,0.78,0.49
+511103,Corporate Finance,1_1_1,2,2,Written coursework,0.42,0.84,0.62,0.57,0.45,0.8,0.47
 531102,Urban & Economic Geography,3_1_1,2,1,Written coursework,0.63,0.73,0.72,0.38,0.6,0.75,0.67
 531104,Research Methods in Geography,3_1_1,2,2,Written coursework,0.51,0.68,0.72,0.42,0.57,0.75,0.64
 531101,Environmental Change,3_1_1,2,1,Written exam,0.5,0.46,0.75,0.47,0.48,0.81,0.53
 531103,Geospatial Analysis,3_1_1,2,2,Written exam,0.53,0.46,0.78,0.29,0.46,0.56,0.52
+523701,Fieldwork & Excavation Techniques,2_3_7,2,1,Professional artefact,0.63,0.65,0.73,0.7,0.65,0.7,0.9
+523702,Fieldwork: Documenting and Mapping,2_3_7,2,1,Professional artefact,0.67,0.58,0.75,0.65,0.64,0.63,0.77
+523703,Cultural Entanglements in Artefact Recovery,2_3_7,2,2,Professional artefact,0.47,0.78,0.79,0.76,0.46,0.68,0.52
+523704,Material Culture Studies,2_3_7,2,2,Written exam,0.59,0.55,0.89,0.23,0.57,0.49,0.44
+511203,Business Analytics,1_1_2,2,2,Written coursework,0.63,0.85,0.58,0.56,0.64,0.82,0.66
+511202,People Resource Management,1_1_2,2,1,Written exam,0.55,0.57,0.68,0.24,0.51,0.62,0.45
+511201,Business Operations,1_1_2,2,1,Groupwork,0.44,0.77,0.67,0.49,0.5,0.87,0.43
+523901,Surface Finishing & Treatment,2_3_9,2,1,Professional artefact,0.53,0.83,0.77,0.68,0.62,0.79,0.69
+523904,Form and Function: Design Studio I,2_3_9,2,2,Groupwork,0.46,0.85,0.91,0.52,0.59,0.92,0.45
+523902,Alloy Theory and Practical Metallurgy,2_3_9,2,1,Professional artefact,0.51,0.56,0.75,0.87,0.47,0.45,0.4
+523903,"Forging for Fit: Joints, Hinges, and Mechanisms",2_3_9,2,2,Professional artefact,0.57,0.56,0.77,0.89,0.48,0.54,0.4
+542403,Healing Traditions Across Realms,4_2_10,2,2,Written coursework,0.61,0.72,0.68,0.76,0.62,0.72,0.59
+542502,"Movement, Breath & Awareness Practices",4_2_10,2,1,Written coursework,0.41,0.72,0.66,0.65,0.48,0.75,0.55
+542601,Labour & Birth Management,4_2_10,2,1,Practical exam,0.53,0.53,0.58,0.95,0.51,0.63,0.52
+522502,Media Analysis,2_2_5,2,1,Viva,0.7,0.57,0.82,0.44,0.75,0.6,0.63
+522504,Research Methods in Media,2_2_5,2,2,Written coursework,0.7,0.74,0.88,0.6,0.68,0.73,0.62
+522501,Media Theory,2_2_5,2,1,Written exam,0.59,0.68,0.73,0.37,0.5,0.62,0.59
+522503,Social Media Cultures,2_2_5,2,2,Written exam,0.63,0.62,0.86,0.4,0.55,0.55,0.58
+5241003,Draping & Advanced Construction,2_4_10,2,2,Professional artefact,0.52,0.79,0.83,0.62,0.51,0.79,0.62
+5241004,Fashion Marketing & Branding,2_4_10,2,2,Written exam,0.59,0.5,0.91,0.31,0.52,0.59,0.53
+5241002,Textiles & Fabric Innovation,2_4_10,2,1,Presentation,0.51,0.76,0.85,0.57,0.49,0.8,0.53
+5241001,Fashion Design Development,2_4_10,2,1,Professional artefact,0.5,0.62,0.74,0.7,0.52,0.74,0.4
+542401,Applied Herbal Formulations,4_2_8,2,1,Presentation,0.5,0.78,0.69,0.73,0.5,0.81,0.48
+532203,Historiography,3_2_2,2,2,Presentation,0.62,0.77,0.69,0.6,0.62,0.82,0.59
+532201,Social & Cultural History,3_2_2,2,1,Written exam,0.65,0.53,0.83,0.19,0.42,0.38,0.58
+532204,Archival Research Methods,3_2_2,2,2,Written coursework,0.61,0.3,0.74,0.58,0.66,0.75,0.57
+532202,Political History,3_2_2,2,1,Written exam,0.43,0.61,0.79,0.25,0.41,0.71,0.51
+542701,"Adult, Child & Mental Health Nursing",4_2_11,2,1,Presentation,0.58,0.77,0.73,0.59,0.55,0.73,0.6
+542503,"Pain, Recovery & Adaptation",4_2_11,2,2,Presentation,0.67,0.79,0.7,0.68,0.68,0.81,0.58
+542404,Field Practice & Observation,4_2_11,2,2,Groupwork,0.41,0.77,0.65,0.67,0.5,0.85,0.57
+542602,Postnatal Care & Neonatal Health,4_2_11,2,1,Written coursework,0.6,0.73,0.56,0.79,0.56,0.78,0.56
 5241104,Design History & Theory,2_4_11,2,2,Written coursework,0.61,0.46,0.82,0.44,0.58,0.61,0.64
 5241102,Editorial & Publication Design,2_4_11,2,1,Professional artefact,0.51,0.46,0.81,0.74,0.48,0.64,0.61
 5241101,Branding & Identity Design,2_4_11,2,1,Professional artefact,0.51,0.75,0.79,0.66,0.54,0.77,0.52
-611202,Dissertation / Research Project,1_1_2,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-611201,Strategic Management,1_1_2,3,1,Viva,0.83,0.53,0.62,0.21,0.73,0.47,0.78
-611204,Business Ethics & Corporate Governance,1_1_2,3,2,Written coursework,0.62,0.57,0.67,0.16,0.6,0.47,0.73
-611203,Entrepreneurship,1_1_2,3,2,Groupwork,0.71,0.79,0.75,0.38,0.74,0.93,0.62
-611103,Dissertation / Research Project,1_1_1,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-611102,Audit & Assurance,1_1_1,3,1,Viva,0.74,0.63,0.6,0.52,0.68,0.66,0.72
-611101,Advanced Financial Reporting,1_1_1,3,1,Viva,0.7,0.74,0.65,0.54,0.67,0.73,0.69
-611104,Strategic Financial Management,1_1_1,3,2,Viva,0.77,0.62,0.68,0.29,0.69,0.62,0.66
-621101,Major Project / Dissertation,2_1_1,3,1,Written coursework,0.85,0.76,0.75,0.65,0.76,0.38,0.95
-621102,Professional Practice & Management,2_1_1,3,1,Viva,0.69,0.62,0.84,0.32,0.68,0.56,0.69
-621104,Advanced Architectural Technology,2_1_1,3,2,Professional artefact,0.81,0.7,0.87,0.66,0.78,0.75,0.69
-621103,Urban Design & Planning,2_1_1,3,2,Written coursework,0.75,0.69,0.8,0.6,0.75,0.72,0.54
-622201,Major Studio Project,2_2_2,3,1,Professional artefact,0.89,0.72,0.83,0.58,0.83,0.38,0.95
-622202,Advanced Cyanotype & Alternative Photography,2_2_2,3,1,Professional artefact,0.73,0.82,0.8,0.72,0.74,0.76,0.79
-622203,Exhibition & Portfolio Development,2_2_2,3,2,Written coursework,0.77,0.78,0.66,0.62,0.78,0.83,0.78
-622204,Critical Studies in Contemporary Art,2_2_2,3,2,Written exam,0.65,0.66,0.94,0.29,0.63,0.55,0.57
-623701,Dissertation / Research Project,2_3_7,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-623703,Ancient Civilisations,2_3_7,3,2,Professional artefact,0.74,0.84,0.76,0.71,0.73,0.77,0.67
-623702,Speculative Restoration: Imagining Futures from Fragments,2_3_7,3,1,Groupwork,0.76,0.84,0.72,0.72,0.77,0.92,0.65
-623704,Public Heritage,2_3_7,3,2,Professional artefact,0.58,0.68,0.84,0.64,0.68,0.7,0.59
-623804,Dissertation / Research Project,2_3_8,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-623803,Distillation & Alternative Fermentations,2_3_8,3,2,Groupwork,0.8,0.81,0.8,0.62,0.75,0.86,0.92
-623801,"Fermentation Futures: Probiotics, Policy, and Place",2_3_8,3,1,Written coursework,0.67,0.56,0.89,0.28,0.6,0.53,0.69
-6241001,Final Collection / Major Project,2_4_10,3,1,Written coursework,0.95,0.56,0.82,0.54,0.83,0.38,0.95
-6241002,Professional Practice in Fashion,2_4_10,3,2,Professional artefact,0.73,0.76,0.81,0.63,0.73,0.83,0.66
-622402,Portfolio Development,2_4_10,3,1,Professional artefact,0.54,0.71,0.81,0.67,0.53,0.76,0.57
-6241003,Sustainable Fashion Design,2_4_10,3,2,Written coursework,0.69,0.71,0.85,0.52,0.66,0.82,0.48
-611403,Dissertation / Research Project,1_1_4,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-611402,Sustainable Tourism,1_1_4,3,1,Viva,0.72,0.57,0.61,0.55,0.76,0.86,0.81
-611401,Strategic Hospitality Management,1_1_4,3,1,Viva,0.74,0.56,0.66,0.31,0.77,0.64,0.8
-611404,Hospitality Entrepreneurship,1_1_4,3,2,Groupwork,0.71,0.79,0.6,0.65,0.7,0.88,0.72
-611302,Dissertation / Research Project,1_1_3,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
-611304,Emerging Markets & Trade Policy,1_1_3,3,2,Viva,0.8,0.7,0.69,0.16,0.76,0.66,0.8
-611301,Strategic Entrepreneurship,1_1_3,3,1,Written coursework,0.75,0.9,0.65,0.42,0.74,0.8,0.78
-611303,Innovation Management,1_1_3,3,2,Written coursework,0.61,0.63,0.71,0.18,0.64,0.64,0.64
-622302,Major Project / Dissertation,2_2_3,3,1,Written coursework,0.85,0.76,0.75,0.65,0.76,0.38,0.95
-622303,Exhibition Practice,2_2_3,3,2,Professional artefact,0.77,0.74,0.83,0.69,0.73,0.72,0.75
-622301,Studio Practice III,2_2_3,3,1,Viva,0.7,0.7,0.83,0.59,0.68,0.74,0.65
-622304,Critical & Contextual Studies,2_2_3,3,2,Written coursework,0.67,0.6,0.95,0.28,0.73,0.63,0.62
-642401,Advanced Herbal Practice,4_2_12,3,1,Written coursework,0.67,0.82,0.64,0.74,0.69,0.75,0.74
-6241201,Final Interior Design Project,2_4_12,3,1,Professional artefact,0.95,0.66,0.78,0.69,0.78,0.38,0.95
-6241102,Professional Practice,2_4_12,3,2,Professional artefact,0.6,0.81,0.87,0.42,0.57,0.82,0.5
-6241202,Sustainable Interior Design,2_4_12,3,2,Viva,0.69,0.71,0.85,0.59,0.64,0.72,0.71
-6241203,Advanced Spatial Design,2_4_12,3,2,Professional artefact,0.74,0.81,0.76,0.67,0.76,0.83,0.63
+542501,Psychosomatic Health,4_2_9,2,1,Practical exam,0.58,0.7,0.66,0.75,0.5,0.72,0.51
+542402,Energy Systems & Balance,4_2_9,2,1,Presentation,0.5,0.77,0.72,0.74,0.53,0.67,0.4
 612102,Dissertation / Research Project,1_2_1,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
 612103,International Law,1_2_1,3,2,Viva,0.79,0.65,0.71,0.22,0.79,0.6,0.78
 612101,Company Law,1_2_1,3,1,Viva,0.82,0.6,0.75,0.13,0.69,0.62,0.74
 612104,Jurisprudence,1_2_1,3,2,Viva,0.77,0.58,0.71,0.14,0.7,0.52,0.73
-622503,Media Project / Dissertation,2_2_5,3,2,Written coursework,0.85,0.54,0.87,0.41,0.73,0.38,0.95
-622501,Advanced Media Theory,2_2_5,3,1,Viva,0.7,0.65,0.83,0.5,0.71,0.54,0.84
-622504,Political Economy of Media,2_2_5,3,2,Presentation,0.68,0.88,0.82,0.6,0.72,0.81,0.66
-622502,Global Media & Communication,2_2_5,3,1,Presentation,0.7,0.82,0.77,0.57,0.69,0.73,0.57
+642401,Advanced Herbal Practice,4_2_12,3,1,Written coursework,0.67,0.82,0.64,0.74,0.69,0.75,0.74
+621101,Major Project / Dissertation,2_1_1,3,1,Written coursework,0.85,0.76,0.75,0.65,0.76,0.38,0.95
+621102,Professional Practice & Management,2_1_1,3,1,Viva,0.69,0.62,0.84,0.32,0.68,0.56,0.69
+621104,Advanced Architectural Technology,2_1_1,3,2,Professional artefact,0.81,0.7,0.87,0.66,0.78,0.75,0.69
+621103,Urban Design & Planning,2_1_1,3,2,Written coursework,0.75,0.69,0.8,0.6,0.75,0.72,0.54
+6241201,Final Interior Design Project,2_4_12,3,1,Professional artefact,0.95,0.66,0.78,0.69,0.78,0.38,0.95
+6241102,Professional Practice,2_4_12,3,2,Professional artefact,0.6,0.81,0.87,0.42,0.57,0.82,0.5
+6241202,Sustainable Interior Design,2_4_12,3,2,Viva,0.69,0.71,0.85,0.59,0.64,0.72,0.71
+6241203,Advanced Spatial Design,2_4_12,3,2,Professional artefact,0.74,0.81,0.76,0.67,0.76,0.83,0.63
+622401,Advanced Illustration Project,2_2_4,3,1,Professional artefact,0.87,0.57,0.9,0.51,0.72,0.38,0.88
+622404,Contemporary Illustration Contexts,2_2_4,3,2,Professional artefact,0.85,0.95,0.76,0.7,0.85,0.82,0.82
+622403,Self-Promotion & Freelancing,2_2_4,3,2,Professional artefact,0.67,0.72,0.82,0.65,0.7,0.78,0.66
+622402,Portfolio Development,2_2_4,3,1,Professional artefact,0.54,0.71,0.81,0.67,0.53,0.76,0.57
+611302,Dissertation / Research Project,1_1_3,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+611304,Emerging Markets & Trade Policy,1_1_3,3,2,Viva,0.8,0.7,0.69,0.16,0.76,0.66,0.8
+611301,Strategic Entrepreneurship,1_1_3,3,1,Written coursework,0.75,0.9,0.65,0.42,0.74,0.8,0.78
+611303,Innovation Management,1_1_3,3,2,Written coursework,0.61,0.63,0.71,0.18,0.64,0.64,0.64
 611501,Dissertation / Research Project,1_1_5,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
 611502,Employment Law,1_1_5,3,1,Written exam,0.64,0.59,0.74,0.18,0.63,0.68,0.6
 611503,Leadership & Change Management,1_1_5,3,2,Multi-choice exam,0.53,0.75,0.64,0.33,0.57,0.58,0.54
 611504,Diversity & Inclusion,1_1_5,3,2,Written coursework,0.65,0.7,0.69,0.41,0.62,0.72,0.53
-632202,Dissertation,3_2_2,3,1,Written coursework,0.88,0.54,0.71,0.46,0.76,0.38,0.95
-632201,Special Subject in History,3_2_2,3,1,Viva,0.78,0.3,0.74,0.19,0.77,0.77,0.84
-632203,Public History,3_2_2,3,2,Viva,0.76,0.65,0.79,0.21,0.66,0.55,0.68
-632204,Global Historical Perspectives,3_2_2,3,2,Written exam,0.63,0.69,0.72,0.46,0.72,0.74,0.61
 622601,Performance III / Recital,2_2_6,3,1,Professional artefact,0.95,0.65,0.84,0.6,0.81,0.38,0.95
 622603,Musicology,2_2_6,3,2,Groupwork,0.69,0.75,0.85,0.67,0.71,0.85,0.77
 622602,Composition II,2_2_6,3,1,Groupwork,0.8,0.81,0.85,0.65,0.82,0.95,0.75
 622604,Professional Practice in Music,2_2_6,3,2,Presentation,0.65,0.79,0.66,0.73,0.67,0.79,0.58
-622401,Advanced Illustration Project,2_2_4,3,1,Professional artefact,0.87,0.57,0.9,0.51,0.72,0.38,0.88
-622404,Contemporary Illustration Contexts,2_2_4,3,2,Professional artefact,0.85,0.95,0.76,0.7,0.85,0.82,0.82
-622403,Self-Promotion & Freelancing,2_2_4,3,2,Professional artefact,0.67,0.72,0.82,0.65,0.7,0.78,0.66
+622201,Major Studio Project,2_2_2,3,1,Professional artefact,0.89,0.72,0.83,0.58,0.83,0.38,0.95
+622202,Advanced Cyanotype & Alternative Photography,2_2_2,3,1,Professional artefact,0.73,0.82,0.8,0.72,0.74,0.76,0.79
+622203,Exhibition & Portfolio Development,2_2_2,3,2,Written coursework,0.77,0.78,0.66,0.62,0.78,0.83,0.78
+622204,Critical Studies in Contemporary Art,2_2_2,3,2,Written exam,0.65,0.66,0.94,0.29,0.63,0.55,0.57
+622302,Major Project / Dissertation,2_2_3,3,1,Written coursework,0.85,0.76,0.75,0.65,0.76,0.38,0.95
+622303,Exhibition Practice,2_2_3,3,2,Professional artefact,0.77,0.74,0.83,0.69,0.73,0.72,0.75
+622301,Studio Practice III,2_2_3,3,1,Viva,0.7,0.7,0.83,0.59,0.68,0.74,0.65
+622304,Critical & Contextual Studies,2_2_3,3,2,Written coursework,0.67,0.6,0.95,0.28,0.73,0.63,0.62
+611103,Dissertation / Research Project,1_1_1,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+611102,Audit & Assurance,1_1_1,3,1,Viva,0.74,0.63,0.6,0.52,0.68,0.66,0.72
+611101,Advanced Financial Reporting,1_1_1,3,1,Viva,0.7,0.74,0.65,0.54,0.67,0.73,0.69
+611104,Strategic Financial Management,1_1_1,3,2,Viva,0.77,0.62,0.68,0.29,0.69,0.62,0.66
 631102,Dissertation / Field Research Project,3_1_1,3,1,Written coursework,0.89,0.66,0.75,0.5,0.77,0.38,0.84
 631101,Advanced Topics in Geography,3_1_1,3,1,Viva,0.74,0.46,0.7,0.53,0.74,0.74,0.81
 631104,Global Development,3_1_1,3,2,Written coursework,0.68,0.66,0.83,0.28,0.67,0.74,0.77
 631103,Ecosystems & Sustainability,3_1_1,3,2,Groupwork,0.53,0.83,0.72,0.36,0.63,0.85,0.56
-6241101,Major Design Project,2_4_11,3,1,Professional artefact,0.9,0.63,0.75,0.73,0.76,0.38,0.95
-6241103,Contemporary Design Issues,2_4_11,3,2,Presentation,0.76,0.81,0.85,0.56,0.75,0.78,0.74
+611403,Dissertation / Research Project,1_1_4,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+611402,Sustainable Tourism,1_1_4,3,1,Viva,0.72,0.57,0.61,0.55,0.76,0.86,0.81
+611401,Strategic Hospitality Management,1_1_4,3,1,Viva,0.74,0.56,0.66,0.31,0.77,0.64,0.8
+611404,Hospitality Entrepreneurship,1_1_4,3,2,Groupwork,0.71,0.79,0.6,0.65,0.7,0.88,0.72
+623701,Dissertation / Research Project,2_3_7,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+623703,Ancient Civilisations,2_3_7,3,2,Professional artefact,0.74,0.84,0.76,0.71,0.73,0.77,0.67
+623702,Speculative Restoration: Imagining Futures from Fragments,2_3_7,3,1,Groupwork,0.76,0.84,0.72,0.72,0.77,0.92,0.65
+623704,Public Heritage,2_3_7,3,2,Professional artefact,0.58,0.68,0.84,0.64,0.68,0.7,0.59
+611202,Dissertation / Research Project,1_1_2,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+611201,Strategic Management,1_1_2,3,1,Viva,0.83,0.53,0.62,0.21,0.73,0.47,0.78
+611204,Business Ethics & Corporate Governance,1_1_2,3,2,Written coursework,0.62,0.57,0.67,0.16,0.6,0.47,0.73
+611203,Entrepreneurship,1_1_2,3,2,Groupwork,0.71,0.79,0.75,0.38,0.74,0.93,0.62
 623902,Capstone: Precision Artefact for Client or Cause,2_3_9,3,1,Written coursework,0.93,0.72,0.82,0.6,0.79,0.38,0.95
 623903,"Ethics in Craft, Ownership, and Replication",2_3_9,3,2,Written coursework,0.53,0.72,0.75,0.48,0.57,0.69,0.71
 623904,Professional Practice & Entrepreneurship,2_3_9,3,2,Written coursework,0.61,0.67,0.8,0.6,0.66,0.7,0.59
 623901,Design Studio II: Commissions and Constraints,2_3_9,3,1,Professional artefact,0.6,0.72,0.85,0.67,0.62,0.69,0.57
+622503,Media Project / Dissertation,2_2_5,3,2,Written coursework,0.85,0.54,0.87,0.41,0.73,0.38,0.95
+622501,Advanced Media Theory,2_2_5,3,1,Viva,0.7,0.65,0.83,0.5,0.71,0.54,0.84
+622504,Political Economy of Media,2_2_5,3,2,Presentation,0.68,0.88,0.82,0.6,0.72,0.81,0.66
+622502,Global Media & Communication,2_2_5,3,1,Presentation,0.7,0.82,0.77,0.57,0.69,0.73,0.57
+6241001,Final Collection / Major Project,2_4_10,3,1,Written coursework,0.95,0.56,0.82,0.54,0.83,0.38,0.95
+6241002,Professional Practice in Fashion,2_4_10,3,2,Professional artefact,0.73,0.76,0.81,0.63,0.73,0.83,0.66
+6241003,Sustainable Fashion Design,2_4_10,3,2,Written coursework,0.69,0.71,0.85,0.52,0.66,0.82,0.48
+632202,Dissertation,3_2_2,3,1,Written coursework,0.88,0.54,0.71,0.46,0.76,0.38,0.95
+632201,Special Subject in History,3_2_2,3,1,Viva,0.78,0.3,0.74,0.19,0.77,0.77,0.84
+632203,Public History,3_2_2,3,2,Viva,0.76,0.65,0.79,0.21,0.66,0.55,0.68
+632204,Global Historical Perspectives,3_2_2,3,2,Written exam,0.63,0.69,0.72,0.46,0.72,0.74,0.61
+623804,Dissertation / Research Project,2_3_8,3,2,Written coursework,0.95,0.6,0.64,0.46,0.8,0.38,0.95
+623803,Distillation & Alternative Fermentations,2_3_8,3,2,Groupwork,0.8,0.81,0.8,0.62,0.75,0.86,0.92
+623801,"Fermentation Futures: Probiotics, Policy, and Place",2_3_8,3,1,Written coursework,0.67,0.56,0.89,0.28,0.6,0.53,0.69
+6241101,Major Design Project,2_4_11,3,1,Professional artefact,0.9,0.63,0.75,0.73,0.76,0.38,0.95
+6241103,Contemporary Design Issues,2_4_11,3,2,Presentation,0.76,0.81,0.85,0.56,0.75,0.78,0.74

@@ -1,56 +1,56 @@
 programme_name,faculty,social_intensity,practical_theoretical_balance,stress_level,career_prospects,academic_difficulty,creativity_requirement,leadership_opportunities,research_intensity,community_engagement,innovation_focus
 Modern Technologies,Science & Engineering,0.74,0.74,0.77,0.64,0.91,0.59,0.7,0.75,0.7,0.6
-Nursing and Care,Health & Education,0.71,0.73,0.48,0.68,0.57,0.68,0.56,0.53,0.76,0.66
-Chemistry,Science & Engineering,0.65,0.78,0.65,0.66,0.9,0.56,0.55,0.77,0.65,0.58
-Physics,Science & Engineering,0.45,0.74,0.6,0.68,0.63,0.58,0.47,0.51,0.39,0.61
-Midwifery,Health & Education,0.73,0.68,0.48,0.64,0.53,0.59,0.68,0.48,0.83,0.58
-Ceremonies,Culture & Social Sciences,0.72,0.55,0.44,0.66,0.54,0.66,0.58,0.62,0.8,0.59
-Social Work,Health & Education,0.74,0.67,0.4,0.63,0.46,0.68,0.59,0.42,0.87,0.62
-Languages and Literature,Culture & Social Sciences,0.61,0.4,0.56,0.63,0.64,0.74,0.48,0.74,0.71,0.66
-Illustration,"Craft, Art & Architecture",0.69,0.7,0.54,0.73,0.54,0.79,0.55,0.52,0.74,0.75
-Education Studies,Health & Education,0.7,0.63,0.59,0.58,0.58,0.7,0.69,0.53,0.85,0.63
-Psychology,Culture & Social Sciences,0.58,0.33,0.7,0.73,0.87,0.81,0.56,0.92,0.63,0.77
-Multispecies Linguistics,Culture & Social Sciences,0.73,0.4,0.63,0.61,0.69,0.72,0.61,0.78,0.82,0.66
-Brewcraft and Fermentation Systems,"Craft, Art & Architecture",0.63,0.63,0.72,0.81,0.65,0.78,0.44,0.61,0.72,0.81
-Business Management,Business & Law School,0.69,0.4,0.63,0.61,0.61,0.7,0.66,0.72,0.66,0.67
-Herbal Practice and Energy Work,Health & Education,0.76,0.72,0.57,0.63,0.53,0.65,0.68,0.49,0.84,0.67
-Architecture,"Craft, Art & Architecture",0.65,0.59,0.7,0.71,0.67,0.82,0.57,0.65,0.65,0.77
-Economics,Culture & Social Sciences,0.68,0.39,0.68,0.65,0.72,0.78,0.56,0.85,0.71,0.71
-Educational Mentorship,Health & Education,0.71,0.74,0.53,0.64,0.6,0.63,0.59,0.54,0.78,0.61
-Mathematics,Science & Engineering,0.34,0.82,0.65,0.59,0.85,0.56,0.48,0.67,0.39,0.6
-Systems Engineering,Science & Engineering,0.67,0.69,0.49,0.75,0.61,0.66,0.62,0.56,0.67,0.69
 Mycelial Cultivation and Biotech,Science & Engineering,0.71,0.8,0.68,0.68,0.78,0.64,0.69,0.68,0.68,0.67
-Law,Business & Law School,0.61,0.31,0.68,0.52,0.82,0.66,0.6,0.89,0.59,0.58
-Media Studies,"Craft, Art & Architecture",0.67,0.56,0.6,0.72,0.6,0.84,0.54,0.52,0.72,0.83
-Cyanophotography and Printmaking,"Craft, Art & Architecture",0.73,0.69,0.5,0.71,0.47,0.84,0.55,0.47,0.72,0.79
-Conflict Transformation,Culture & Social Sciences,0.73,0.41,0.72,0.72,0.75,0.77,0.62,0.77,0.76,0.73
-Narrative Governance and Institution Building,Culture & Social Sciences,0.7,0.41,0.46,0.58,0.43,0.74,0.58,0.67,0.8,0.66
-Fashion Design,"Craft, Art & Architecture",0.68,0.57,0.49,0.77,0.54,0.82,0.44,0.54,0.72,0.87
-Multi-system Technology,Science & Engineering,0.71,0.71,0.7,0.71,0.77,0.6,0.72,0.6,0.62,0.63
-Integrated Mind-Body,Health & Education,0.65,0.67,0.56,0.67,0.54,0.62,0.64,0.49,0.76,0.66
-Ritual and Recollection,Culture & Social Sciences,0.66,0.37,0.55,0.53,0.71,0.76,0.55,0.76,0.69,0.68
-Artefact Restoration,"Craft, Art & Architecture",0.69,0.66,0.6,0.76,0.53,0.82,0.53,0.44,0.74,0.8
-Politics and Relations,Culture & Social Sciences,0.71,0.26,0.6,0.64,0.67,0.74,0.61,0.82,0.74,0.69
-Environmental Science,Science & Engineering,0.62,0.73,0.65,0.64,0.8,0.61,0.63,0.68,0.59,0.64
-Space Design,"Craft, Art & Architecture",0.66,0.69,0.66,0.76,0.58,0.8,0.59,0.55,0.73,0.75
-Precision Smithing and Design,"Craft, Art & Architecture",0.65,0.7,0.31,0.69,0.28,0.84,0.46,0.36,0.67,0.78
-Elven Ethics in Modern Governance,Culture & Social Sciences,0.56,0.27,0.74,0.56,0.73,0.77,0.47,0.84,0.65,0.68
-Mechanical Engineering,Science & Engineering,0.63,0.79,0.55,0.71,0.62,0.63,0.64,0.49,0.54,0.7
-Somatic Wellbeing Enquiry,Health & Education,0.8,0.73,0.72,0.6,0.54,0.71,0.76,0.53,0.9,0.62
-Occupational Therapy,Health & Education,0.76,0.72,0.51,0.58,0.55,0.63,0.65,0.41,0.86,0.57
-Music,"Craft, Art & Architecture",0.7,0.58,0.48,0.66,0.42,0.72,0.48,0.47,0.77,0.68
-Philosophy of Religion and Ethics,Culture & Social Sciences,0.7,0.33,0.63,0.57,0.69,0.75,0.58,0.83,0.76,0.63
-Pharmacy,Health & Education,0.61,0.75,0.42,0.58,0.48,0.68,0.48,0.42,0.71,0.64
-Physiotherapy,Health & Education,0.67,0.77,0.52,0.66,0.53,0.63,0.53,0.54,0.78,0.62
-Accounting & Finance,Business & Law School,0.62,0.47,0.67,0.61,0.68,0.63,0.62,0.65,0.61,0.58
-Intergenerational Learning,Health & Education,0.66,0.73,0.75,0.59,0.71,0.71,0.66,0.56,0.75,0.65
-Entrepreneurship and Trade,Business & Law School,0.73,0.4,0.56,0.6,0.65,0.66,0.72,0.75,0.7,0.64
-Person Resource Management,Business & Law School,0.67,0.35,0.5,0.61,0.53,0.7,0.64,0.69,0.66,0.69
-Sociology,Culture & Social Sciences,0.73,0.29,0.62,0.69,0.61,0.77,0.65,0.74,0.75,0.67
-History,Culture & Social Sciences,0.56,0.3,0.67,0.54,0.75,0.78,0.52,0.86,0.62,0.66
-Graphic Design,"Craft, Art & Architecture",0.63,0.69,0.55,0.61,0.36,0.7,0.55,0.35,0.7,0.72
-Fine Art,"Craft, Art & Architecture",0.63,0.63,0.6,0.73,0.53,0.81,0.59,0.53,0.71,0.75
-Biomedical Science,Science & Engineering,0.57,0.78,0.5,0.64,0.5,0.64,0.56,0.39,0.57,0.64
-Hospitality and Tourism Management,Business & Law School,0.71,0.39,0.55,0.65,0.55,0.68,0.69,0.75,0.66,0.67
+Illustration,"Craft, Art & Architecture",0.69,0.7,0.54,0.73,0.54,0.79,0.55,0.52,0.74,0.75
 Biology,Science & Engineering,0.73,0.78,0.47,0.7,0.6,0.62,0.64,0.49,0.72,0.7
+Ritual and Recollection,Culture & Social Sciences,0.66,0.37,0.55,0.53,0.71,0.76,0.55,0.76,0.69,0.68
+Cyanophotography and Printmaking,"Craft, Art & Architecture",0.73,0.69,0.5,0.71,0.47,0.84,0.55,0.47,0.72,0.79
+Multi-system Technology,Science & Engineering,0.71,0.71,0.7,0.71,0.77,0.6,0.72,0.6,0.62,0.63
+Intergenerational Learning,Health & Education,0.66,0.73,0.75,0.59,0.71,0.71,0.66,0.56,0.75,0.65
+Economics,Culture & Social Sciences,0.68,0.39,0.68,0.65,0.72,0.78,0.56,0.85,0.71,0.71
+Philosophy of Religion and Ethics,Culture & Social Sciences,0.7,0.33,0.63,0.57,0.69,0.75,0.58,0.83,0.76,0.63
+Somatic Wellbeing Enquiry,Health & Education,0.8,0.73,0.72,0.6,0.54,0.71,0.76,0.53,0.9,0.62
+Business Management,Business & Law School,0.69,0.4,0.63,0.61,0.61,0.7,0.66,0.72,0.66,0.67
+History,Culture & Social Sciences,0.56,0.3,0.67,0.54,0.75,0.78,0.52,0.86,0.62,0.66
+Multispecies Linguistics,Culture & Social Sciences,0.73,0.4,0.63,0.61,0.69,0.72,0.61,0.78,0.82,0.66
+Space Design,"Craft, Art & Architecture",0.66,0.69,0.66,0.76,0.58,0.8,0.59,0.55,0.73,0.75
+Herbal Practice and Energy Work,Health & Education,0.76,0.72,0.57,0.63,0.53,0.65,0.68,0.49,0.84,0.67
+Chemistry,Science & Engineering,0.65,0.78,0.65,0.66,0.9,0.56,0.55,0.77,0.65,0.58
+Conflict Transformation,Culture & Social Sciences,0.73,0.41,0.72,0.72,0.75,0.77,0.62,0.77,0.76,0.73
+Elven Ethics in Modern Governance,Culture & Social Sciences,0.56,0.27,0.74,0.56,0.73,0.77,0.47,0.84,0.65,0.68
+Education Studies,Health & Education,0.7,0.63,0.59,0.58,0.58,0.7,0.69,0.53,0.85,0.63
+Educational Mentorship,Health & Education,0.71,0.74,0.53,0.64,0.6,0.63,0.59,0.54,0.78,0.61
+Integrated Mind-Body,Health & Education,0.65,0.67,0.56,0.67,0.54,0.62,0.64,0.49,0.76,0.66
+Music,"Craft, Art & Architecture",0.7,0.58,0.48,0.66,0.42,0.72,0.48,0.47,0.77,0.68
+Sociology,Culture & Social Sciences,0.73,0.29,0.62,0.69,0.61,0.77,0.65,0.74,0.75,0.67
+Law,Business & Law School,0.61,0.31,0.68,0.52,0.82,0.66,0.6,0.89,0.59,0.58
+Artefact Restoration,"Craft, Art & Architecture",0.69,0.66,0.6,0.76,0.53,0.82,0.53,0.44,0.74,0.8
+Occupational Therapy,Health & Education,0.76,0.72,0.51,0.58,0.55,0.63,0.65,0.41,0.86,0.57
+Environmental Science,Science & Engineering,0.62,0.73,0.65,0.64,0.8,0.61,0.63,0.68,0.59,0.64
 Geography,Culture & Social Sciences,0.62,0.47,0.54,0.64,0.46,0.68,0.5,0.52,0.67,0.64
+Architecture,"Craft, Art & Architecture",0.65,0.59,0.7,0.71,0.67,0.82,0.57,0.65,0.65,0.77
+Mechanical Engineering,Science & Engineering,0.63,0.79,0.55,0.71,0.62,0.63,0.64,0.49,0.54,0.7
+Fashion Design,"Craft, Art & Architecture",0.68,0.57,0.49,0.77,0.54,0.82,0.44,0.54,0.72,0.87
+Media Studies,"Craft, Art & Architecture",0.67,0.56,0.6,0.72,0.6,0.84,0.54,0.52,0.72,0.83
+Fine Art,"Craft, Art & Architecture",0.63,0.63,0.6,0.73,0.53,0.81,0.59,0.53,0.71,0.75
+Midwifery,Health & Education,0.73,0.68,0.48,0.64,0.53,0.59,0.68,0.48,0.83,0.58
+Brewcraft and Fermentation Systems,"Craft, Art & Architecture",0.63,0.63,0.72,0.81,0.65,0.78,0.44,0.61,0.72,0.81
+Systems Engineering,Science & Engineering,0.67,0.69,0.49,0.75,0.61,0.66,0.62,0.56,0.67,0.69
+Ceremonies,Culture & Social Sciences,0.72,0.55,0.44,0.66,0.54,0.66,0.58,0.62,0.8,0.59
+Mathematics,Science & Engineering,0.34,0.82,0.65,0.59,0.85,0.56,0.48,0.67,0.39,0.6
+Languages and Literature,Culture & Social Sciences,0.61,0.4,0.56,0.63,0.64,0.74,0.48,0.74,0.71,0.66
+Narrative Governance and Institution Building,Culture & Social Sciences,0.7,0.41,0.46,0.58,0.43,0.74,0.58,0.67,0.8,0.66
+Entrepreneurship and Trade,Business & Law School,0.73,0.4,0.56,0.6,0.65,0.66,0.72,0.75,0.7,0.64
+Precision Smithing and Design,"Craft, Art & Architecture",0.65,0.7,0.31,0.69,0.28,0.84,0.46,0.36,0.67,0.78
+Politics and Relations,Culture & Social Sciences,0.71,0.26,0.6,0.64,0.67,0.74,0.61,0.82,0.74,0.69
+Psychology,Culture & Social Sciences,0.58,0.33,0.7,0.73,0.87,0.81,0.56,0.92,0.63,0.77
+Biomedical Science,Science & Engineering,0.57,0.78,0.5,0.64,0.5,0.64,0.56,0.39,0.57,0.64
+Social Work,Health & Education,0.74,0.67,0.4,0.63,0.46,0.68,0.59,0.42,0.87,0.62
+Graphic Design,"Craft, Art & Architecture",0.63,0.69,0.55,0.61,0.36,0.7,0.55,0.35,0.7,0.72
+Nursing and Care,Health & Education,0.71,0.73,0.48,0.68,0.57,0.68,0.56,0.53,0.76,0.66
+Accounting & Finance,Business & Law School,0.62,0.47,0.67,0.61,0.68,0.63,0.62,0.65,0.61,0.58
+Hospitality and Tourism Management,Business & Law School,0.71,0.39,0.55,0.65,0.55,0.68,0.69,0.75,0.66,0.67
+Physiotherapy,Health & Education,0.67,0.77,0.52,0.66,0.53,0.63,0.53,0.54,0.78,0.62
+Person Resource Management,Business & Law School,0.67,0.35,0.5,0.61,0.53,0.7,0.64,0.69,0.66,0.69
+Pharmacy,Health & Education,0.61,0.75,0.42,0.58,0.48,0.68,0.48,0.42,0.71,0.64
+Physics,Science & Engineering,0.45,0.74,0.6,0.68,0.63,0.58,0.47,0.51,0.39,0.61
