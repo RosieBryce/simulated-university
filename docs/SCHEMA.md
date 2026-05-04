@@ -192,14 +192,17 @@ This document describes all CSV output files and their column definitions.
 | `faculty` | string | Faculty number (first digit of programme_code) |
 | `degree_classification` | string | Weighted degree class: "First", "2:1", "2:2", "Third" (Y2 weight 1/3, Y3 weight 2/3) |
 | `degree_weighted_avg` | float | Weighted average mark used for classification |
-| `outcome_type` | string | "employed", "further_study", "unemployed", "unknown" |
-| `professional_level` | string | "professional" or "non_professional" (null if not employed) |
-| `employment_sector` | string | Faculty-mapped sector (null if unemployed/unknown; "further_study" if postgrad) |
-| `salary_band` | integer | 1–5 salary proxy (null if not employed) |
-| `time_to_outcome_months` | integer | Months from graduation to outcome (0–24) |
+| `survey_responded` | boolean | True if the graduate responded to the outcomes survey (~70% response rate) |
+| `outcome_type` | string or null | "employed", "further_study", "unemployed", "unknown"; null if not responded |
+| `professional_level` | string or null | "professional" or "non_professional"; null if not employed or not responded |
+| `employment_sector` | string or null | Faculty-mapped sector; null if not responded, unemployed, or unknown |
+| `salary_band` | integer or null | 1–5 salary proxy; null if not employed or not responded |
+| `time_to_outcome_months` | integer or null | Months from graduation to outcome (0–24); null if not responded |
 | `outcome_recorded_at` | string | ISO date of outcome survey (~15 months post-graduation) |
 
 **Notes**:
+- ~70% survey response rate (HESA Graduate Outcomes benchmark); non-respondents present with `survey_responded=False` and null employment fields
+- `degree_classification` and `degree_weighted_avg` always populated — the graduation fact is known regardless of survey response
 - Outcome gaps emerge from degree classification, SES, disability, and programme — no direct species/clan modifier
 - `degree_classification` uses UK standard weighting: Year 1 excluded, Year 2 = 1/3, Year 3 = 2/3
 - SES gradient on `professional_level` and `salary_band` is intentional (social capital effect)
@@ -247,17 +250,20 @@ This document describes all CSV output files and their column definitions.
 | `programme_code` | string | Programme code |
 | `programme_year` | integer | Always 3 (final year only) |
 | `is_repeat_year` | boolean | True if student is repeating Year 3 |
-| `teaching_quality` | integer | Score 1–5 |
-| `learning_opportunities` | integer | Score 1–5 |
-| `assessment_feedback` | integer | Score 1–5 (historically lowest theme) |
-| `academic_support` | integer | Score 1–5 |
-| `organisation_management` | integer | Score 1–5 |
-| `learning_resources` | integer | Score 1–5 |
-| `student_voice` | integer | Score 1–5 (typically low; students feel less heard) |
-| `overall_satisfaction` | integer | Score 1–5 (weighted blend, not simple average) |
+| `survey_responded` | boolean | True if the student completed the survey (~68% response rate, UK NSS benchmark) |
+| `teaching_quality` | integer or null | Score 1–5; null if not responded |
+| `learning_opportunities` | integer or null | Score 1–5; null if not responded |
+| `assessment_feedback` | integer or null | Score 1–5 (historically lowest theme); null if not responded |
+| `academic_support` | integer or null | Score 1–5; null if not responded |
+| `organisation_management` | integer or null | Score 1–5; null if not responded |
+| `learning_resources` | integer or null | Score 1–5; null if not responded |
+| `student_voice` | integer or null | Score 1–5 (typically low; students feel less heard); null if not responded |
+| `overall_satisfaction` | integer or null | Score 1–5 (weighted blend, not simple average); null if not responded |
 
 **Notes**:
-- `% positive` = proportion scoring 4 or 5 (standard NSS reporting convention)
+- ~68% response rate (UK NSS benchmark); all Yr3 students present — non-respondents have `survey_responded=False` and null score columns
+- Response probability nudged ±12pp by mean engagement (disengaged students less likely to respond)
+- `% positive` = proportion scoring 4 or 5 among respondents (standard NSS reporting convention)
 - Scores modelled from: base score + engagement signal + mark signal (A&F) + SES + disability + personality + correlated student bias + independent per-theme noise
 - `overall_satisfaction` is a weighted blend of theme raw scores, not their mean (mirrors real NSS Q27 behaviour)
 - Repeating Yr3 students included; `repeat_year_modifier` lowers overall_satisfaction and organisation_management slightly

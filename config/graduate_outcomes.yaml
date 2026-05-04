@@ -110,3 +110,8 @@ time_to_outcome_months:
 # Date: outcomes recorded this many months after the end of the graduation year
 # (UK Graduate Outcomes survey is ~15 months post-graduation)
 outcome_survey_months_after_graduation: 15
+
+# Response rate — ~70% matches HESA Graduate Outcomes benchmark
+# Non-respondents appear in fact_graduate_outcomes with survey_responded=False and
+# null employment fields (degree_classification + degree_weighted_avg always populated).
+survey_response_rate: 0.70

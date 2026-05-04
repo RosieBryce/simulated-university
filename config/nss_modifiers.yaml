@@ -106,6 +106,11 @@ repeat_year_modifier:
   organisation_management:  -0.15
   academic_support:         -0.10
 
+# Response rate — ~68% matches UK NSS benchmark
+# Engagement modulates ±12pp (disengaged students less likely to complete survey)
+base_response_rate: 0.68
+engagement_response_modifier: 0.12
+
 # Noise parameters
 student_bias_std:  0.28   # correlated noise: one value per student, applied to all themes
                            # models individual response style (systematic over/under-rater)
