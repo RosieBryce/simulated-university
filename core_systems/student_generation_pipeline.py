@@ -71,6 +71,17 @@ def sample_disabilities(clan):
         disabilities = ['no_known_disabilities']
     return disabilities
 
+def sample_first_gen(ses_rank: int, education: str) -> bool:
+    """First-generation university student (neither parent attended HE).
+    Probability declines steeply with SES rank: ~0.65 at rank 1 → ~0.01 at rank 8.
+    No-qualifications background adds a small boost (parental HE very unlikely).
+    """
+    base = 0.65 - (ses_rank - 1) * (0.64 / 7)   # linear taper 0.65 → 0.01
+    if education == 'no_qualifications':
+        base = min(base + 0.08, 0.95)
+    return bool(np.random.rand() < base)
+
+
 _CLAN_RECRUITMENT_WEIGHTS = {
     # Dwarf clans: more weight on lower-SES clans (Flint, Alabaster)
     'flint': 0.20, 'alabaster': 0.18, 'sandstone': 0.16, 'slate': 0.14,
@@ -114,6 +125,7 @@ def generate_students(n=500, seed=42):
         socio_economic_rank = sample_socio_economic_rank(clan)
         education = sample_education(clan)
         age = sample_age()
+        first_gen = sample_first_gen(socio_economic_rank, education)
         # Refine personality — clan passed so disability modifiers use clan-specific values
         characteristics = {
             'clan': clan,
@@ -137,6 +149,7 @@ def generate_students(n=500, seed=42):
             'education': education,
             'socio_economic_rank': socio_economic_rank,
             'disabilities': ",".join(disabilities),
+            'first_gen': first_gen,
             **{f'base_{k}': v for k, v in base_personality.items()},
             **{f'refined_{k}': v for k, v in refined_personality.items()},
             **{f'motivation_{k}': v for k, v in motivation['nudged'].items()}

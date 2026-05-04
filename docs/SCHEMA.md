@@ -1,7 +1,7 @@
 # Stonegrove University Data Schema
 
-**Last Updated**: 25 February 2026
-**Version**: 2.2 (Semester Structure + Two Assessment Components + Graduate Outcomes + NSS)
+**Last Updated**: 3 May 2026
+**Version**: 2.4 (+ first_gen flag + Enrolment Survey)
 
 This document describes all CSV output files and their column definitions.
 
@@ -27,6 +27,7 @@ This document describes all CSV output files and their column definitions.
 | `education` | string | Prior education (e.g., "academic", "vocational", "no_qualifications") |
 | `socio_economic_rank` | integer | Socio-economic rank (1-8, 1 = lowest) |
 | `disabilities` | string | Comma-separated disability list (CSV-formatted) |
+| `first_gen` | boolean | True if neither parent attended higher education (first-generation student) |
 | `base_openness` | float | Base personality trait (0.0-1.0) |
 | `base_conscientiousness` | float | Base personality trait (0.0-1.0) |
 | `base_extraversion` | float | Base personality trait (0.0-1.0) |
@@ -203,6 +204,35 @@ This document describes all CSV output files and their column definitions.
 - `degree_classification` uses UK standard weighting: Year 1 excluded, Year 2 = 1/3, Year 3 = 2/3
 - SES gradient on `professional_level` and `salary_band` is intentional (social capital effect)
 - `employment_sector` values are mapped from faculty: see `config/graduate_outcomes.yaml`
+
+---
+
+### `stonegrove_enrolment_survey.csv`
+
+**Purpose**: Annual survey of all enrolled students (all programme years). Captures career thinking, sense of belonging, academic self-efficacy, and support satisfaction. One row per student per academic year.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `student_id` | string | Persistent unique identifier |
+| `academic_year` | string | Academic year the survey was taken |
+| `programme_year` | integer | Programme year (1, 2, or 3) |
+| `survey_responded` | boolean | True if the student responded (overall ~82% response rate) |
+| `is_repeat_year` | boolean | True if student is repeating this programme year |
+| `career_clarity` | float or null | "I have a clear sense of the career I want" (1–5); null if not responded |
+| `career_confidence` | float or null | "I feel confident about my future employability" (1–5); null if not responded |
+| `belonging_peers` | float or null | "I feel like I belong at Stonegrove" (1–5); null if not responded |
+| `belonging_programme` | float or null | "I feel connected to my programme" (1–5); null if not responded |
+| `academic_self_efficacy` | float or null | "I believe I can succeed academically" (1–5); null if not responded |
+| `support_satisfaction` | float or null | "I feel well-supported by the university" (1–5); null if not responded |
+
+**Notes**:
+- Non-respondents appear in the table with `survey_responded=False` and null score columns — the count of eligible students is known, just not their answers
+- Response probability modulated by academic engagement (~±10pp from 82% base)
+- `career_clarity` / `career_confidence` increase from Y1 to Y3 (arc effect)
+- `belonging_peers` / `belonging_programme` follow a U-shape: slight dip in Y2, partial recovery in Y3
+- `academic_self_efficacy` is lower for `first_gen=True` students (first-generation penalty ~−0.30 on 1–5 scale)
+- `support_satisfaction` has no disability modifiers — it reflects perceived access to support, not quality of experience
+- Config: `config/enrolment_survey_config.yaml`
 
 ---
 

@@ -5,7 +5,7 @@ Build relational output tables from raw pipeline CSVs.
 Reads from data/ and config/, writes 10 clean tables to data/relational/:
   Dimensions: dim_students, dim_programmes, dim_modules, dim_academic_years
   Facts:       fact_enrollment, fact_assessment, fact_progression,
-               fact_graduate_outcomes, fact_nss_responses,
+               fact_graduate_outcomes, fact_nss_responses, fact_enrolment_survey,
                fact_weekly_engagement_YYYY-YY.csv (one file per academic year)
 
 Run from project root after run_longitudinal_pipeline.py.
@@ -170,6 +170,10 @@ def build_fact_nss_responses(nss_df: pd.DataFrame) -> pd.DataFrame:
     return nss_df.copy()
 
 
+def build_fact_enrolment_survey(survey_df: pd.DataFrame) -> pd.DataFrame:
+    return survey_df.copy()
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -183,8 +187,9 @@ def main():
     engagement_df    = load_weekly_engagement()
     assessment_df    = pd.read_csv(DATA_DIR / "stonegrove_assessment_events.csv")
     progression_df   = pd.read_csv(DATA_DIR / "stonegrove_progression_outcomes.csv")
-    grad_outcomes_df = pd.read_csv(DATA_DIR / "stonegrove_graduate_outcomes.csv")
-    nss_df           = pd.read_csv(DATA_DIR / "stonegrove_nss_responses.csv")
+    grad_outcomes_df  = pd.read_csv(DATA_DIR / "stonegrove_graduate_outcomes.csv")
+    nss_df            = pd.read_csv(DATA_DIR / "stonegrove_nss_responses.csv")
+    survey_df         = pd.read_csv(DATA_DIR / "stonegrove_enrolment_survey.csv")
 
     print("Loading config files...")
     prog_chars_df   = pd.read_csv(CONFIG_DIR / "programme_characteristics.csv")
@@ -200,6 +205,7 @@ def main():
         "fact_progression":       build_fact_progression(progression_df),
         "fact_graduate_outcomes": build_fact_graduate_outcomes(grad_outcomes_df),
         "fact_nss_responses":     build_fact_nss_responses(nss_df),
+        "fact_enrolment_survey":  build_fact_enrolment_survey(survey_df),
     }
 
     print(f"\nWriting to {OUT_DIR}/:")
