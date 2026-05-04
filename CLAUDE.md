@@ -42,7 +42,7 @@ python metaanalysis/validate_outputs.py
 ### Pipeline Flow (strictly sequential)
 
 1. **Student Generation** (`core_systems/student_generation_pipeline.py`) — 5,000 students/cohort with species, clan, Big Five personality, 8 motivation dimensions, disabilities, SES. Uses `PersonalityRefinementSystem`, `MotivationProfileSystem`, `ClanNameGenerator` from `supporting_systems/`.
-2. **Enrollment** (`core_systems/program_enrollment_system.py`) — Assigns students to 1 of 44 programmes across 4 faculties using clan-programme affinities + personality modifiers. Assigns Year 1/2/3 modules.
+2. **Enrollment** (`core_systems/program_enrollment_system.py`) — Assigns students to 1 of 55 programmes across 5 faculties using clan-programme affinities + personality modifiers. Assigns Year 1/2/3 modules.
 3. **Engagement** (`core_systems/engagement_system.py`) — Generates 12 weeks × modules of attendance, participation, academic/social engagement, stress. Personality traits drive metrics (e.g., conscientiousness→attendance r=0.856).
 4. **Assessment** (`core_systems/assessment_system.py`) — Two components per module (MIDTERM + FINAL). `combined_mark = 0.4×MIDTERM + 0.6×FINAL` on FINAL rows. UK-style mark distribution modified by difficulty and engagement.
 5. **Progression** (`core_systems/progression_system.py`) — Pass/fail/withdraw/repeat decisions via log-odds model with trait-based modifiers from `config/year_progression_rules.yaml`. Filters to `component_code == 'FINAL'`, uses `combined_mark`.
@@ -65,7 +65,7 @@ Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 
 ### Key Design Decisions
 
-- The canonical curriculum source is `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (44 programmes, 4 faculties, Year 1/2/3 modules).
+- The canonical curriculum source is `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (55 programmes, 5 faculties, Year 1/2/3 modules).
 - "Species" is used instead of "Race" throughout the codebase.
 - No direct clan/species mark modifier — the ~18pp good degree attainment gap (Elf vs Dwarf) emerges from SES, prior education, and disability distributions only.
 - Gender awarding gap is flat by design.
