@@ -10,11 +10,11 @@
       --text-navy:     #1a1a2e;
       --text-body:     #2e2e42;
       --text-muted:    #888880;
-      --elf-green:     #7a9e82;
-      --dwarf-gold:    #c9a84c;
-      --gap-coral:     #d98878;
-      --gold:          #c9a84c;
-      --border-gold:   #c9a84c;
+      --elf-green:     #7a9e82;  /* data viz: Elf good-degree rate bars */
+      --dwarf-gold:    #c9a84c;  /* data viz: Dwarf comparison series */
+      --gap-coral:     #d98878;  /* data viz: gap / disparity highlight */
+      --gold:          #c9a84c;  /* alias of --dwarf-gold; semantic role in UI chrome */
+      --border-gold:   #c9a84c;  /* same value, kept separate for possible future theming */
       --border-warm:   #e0d8c4;
       --font-heading:  'Playfair Display', Georgia, serif;
       --font-body:     'Source Sans 3', system-ui, sans-serif;
@@ -24,11 +24,11 @@
        RESET + BASE
     ========================================================= */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; } /* enables smooth anchor-link scrolling from nav */
     body {
       font-family: var(--font-body);
-      font-size: 18px;
-      line-height: 1.75;
+      font-size: 18px;    /* base for rem calculations; intentionally large for readability */
+      line-height: 1.75;  /* generous leading for long-form academic prose */
       color: var(--text-body);
       background: var(--parchment);
     }
@@ -39,12 +39,12 @@
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 100;  /* above all page content including positioned chart wrappers */
       background: var(--parchment);
-      border-top: 3px solid var(--gold);
+      border-top: 3px solid var(--gold);     /* gold stripe at very top of viewport — brand identity */
       border-bottom: 1px solid var(--border-warm);
       padding: 0 2.5rem;
-      height: 56px;
+      height: 56px;  /* compact; keeps content sections the visual focus */
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,9 +75,9 @@
     /* =========================================================
        SECTION LAYOUT
     ========================================================= */
-    section { padding: 90px 2rem; }
-    .container      { max-width: 780px;  margin: 0 auto; }
-    .container-wide { max-width: 1080px; margin: 0 auto; }
+    section { padding: 90px 2rem; }           /* generous vertical rhythm between sections */
+    .container      { max-width: 780px;  margin: 0 auto; }   /* prose width ~65 characters */
+    .container-wide { max-width: 1080px; margin: 0 auto; }   /* wider grids: cards, tables */
 
     /* =========================================================
        SECTION LABELS
@@ -92,7 +92,7 @@
       color: var(--text-muted);
       margin-bottom: 0.75rem;
     }
-    .section-label.on-navy { color: rgba(245,240,224,0.45); }
+    .section-label.on-navy { color: rgba(245,240,224,0.45); } /* parchment at 45% on navy bg */
 
     /* =========================================================
        HEADINGS
@@ -101,7 +101,7 @@
     h1 {
       font-family: var(--font-heading);
       font-weight: 700;
-      line-height: 1.12;
+      line-height: 1.12;  /* tight for display sizes; normal line-height is too loose at large */
       color: var(--text-navy);
       margin-bottom: 1.4rem;
     }
@@ -111,17 +111,17 @@
       line-height: 1.2;
       color: var(--text-navy);
       position: relative;
-      padding-bottom: 0.85rem;
+      padding-bottom: 0.85rem;  /* space below text for the ::after ornament */
       margin-bottom: 1.5rem;
     }
     h2::after {
-      content: "✦";
+      content: "✦";             /* gold diamond ornament under every h2 */
       display: block;
       position: absolute;
       bottom: 0;
       left: 0;
       color: var(--gold);
-      font-size: 0.85rem;
+      font-size: 0.85rem;       /* small enough to be decorative, not typographic */
     }
     h3 {
       font-family: var(--font-heading);
@@ -135,18 +135,18 @@
     #hero {
       background: linear-gradient(160deg, var(--parchment) 0%, var(--parchment-deep) 100%);
       border-bottom: 2px solid var(--gold);
-      padding: 7rem 2rem 6rem;
+      padding: 7rem 2rem 6rem;  /* extra top padding: nav is sticky so doesn't obscure hero */
       text-align: center;
       position: relative;
     }
     .hero-ornament {
       font-size: 2rem;
       color: var(--gold);
-      opacity: 0.4;
+      opacity: 0.4;  /* subtle — decorative, not focal */
       margin-bottom: 1.25rem;
     }
     #hero h1 {
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-size: clamp(3rem, 7vw, 5.5rem);  /* fluid: 3rem floor on mobile, 5.5rem ceiling on wide */
       font-weight: 900;
       color: var(--text-navy);
       margin-bottom: 0.5rem;
@@ -154,7 +154,7 @@
     .hero-tagline {
       font-family: var(--font-heading);
       font-style: italic;
-      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);  /* scales with viewport between the two sizes */
       color: #5a5a7a;
       margin-bottom: 0.5rem;
     }
@@ -176,9 +176,9 @@
       background: var(--bg-white);
       border: 2px solid var(--gold);
       padding: 1.25rem 2rem;
-      border-radius: 2px;
+      border-radius: 2px;   /* near-square aesthetic — consistent throughout the site */
       text-align: center;
-      min-width: 130px;
+      min-width: 130px;     /* prevents box collapsing before content clips on small screens */
     }
     .stat-number {
       display: block;
@@ -205,7 +205,7 @@
     .btn {
       display: inline-block;
       padding: 0.7rem 1.6rem;
-      border-radius: 2px;
+      border-radius: 2px;  /* near-square, matching card and box aesthetic */
       font-family: var(--font-body);
       font-size: 0.92rem;
       font-weight: 600;
@@ -217,7 +217,7 @@
       background: var(--gold);
       color: #fff;
     }
-    .btn-primary:hover { background: #a68b3a; transform: translateY(-2px); }
+    .btn-primary:hover { background: #a68b3a; transform: translateY(-2px); } /* slight lift on hover */
     .btn-outline {
       background: transparent;
       border: 1.5px solid var(--text-navy);
@@ -261,7 +261,7 @@
     .uni-card {
       background: var(--bg-white);
       border: 2px solid var(--border-warm);
-      border-left: 4px solid;
+      border-left: 4px solid;  /* left accent colour set per-card in HTML via inline style */
       border-radius: 2px;
       padding: 1.75rem;
       transition: box-shadow 0.2s;
@@ -281,8 +281,8 @@
       border-radius: 2px;
       margin-bottom: 0.9rem;
     }
-    .elf-pill   { background: rgba(122,158,130,0.15); color: #4a7a58; }
-    .dwarf-pill { background: rgba(201,168,76,0.15);  color: #8b6b20; }
+    .elf-pill   { background: rgba(122,158,130,0.15); color: #4a7a58; }  /* elf-green tint */
+    .dwarf-pill { background: rgba(201,168,76,0.15);  color: #8b6b20; }  /* dwarf-gold tint */
     .mixed-pill { background: rgba(26,26,46,0.08);    color: var(--text-navy); }
     .uni-card p {
       font-size: 0.95rem;
@@ -351,7 +351,7 @@
       padding: 1rem 1.6rem;
       margin: 1.75rem 0;
       background: var(--parchment);
-      border-radius: 0 2px 2px 0;
+      border-radius: 0 2px 2px 0;  /* square on left (flush with border), rounded on right */
     }
     .pullquote p {
       font-family: var(--font-heading);
@@ -372,7 +372,7 @@
       color: var(--text-body);
       margin-bottom: 1rem;
     }
-    .data-table-wrap { overflow-x: auto; margin: 2rem 0 0.75rem; }
+    .data-table-wrap { overflow-x: auto; margin: 2rem 0 0.75rem; }  /* horizontal scroll on small screens */
     .data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
     .data-table thead tr { border-bottom: 2px solid var(--gold); }
     .data-table th {
@@ -395,14 +395,14 @@
       background: var(--bg-white);
     }
     .data-table td:first-child {
-      font-family: 'Courier New', monospace;
+      font-family: 'Courier New', monospace;  /* monospace for filenames — visually distinct */
       font-size: 0.8rem;
-      color: #3a7a58;
+      color: #3a7a58;     /* muted green; filename column reads as code, not prose */
       white-space: nowrap;
     }
     .data-table td:last-child {
       color: var(--text-muted);
-      white-space: nowrap;
+      white-space: nowrap;  /* row counts / sizes shouldn't wrap mid-number */
     }
     .data-table tbody tr:hover td { background: var(--parchment); }
     .table-note {
@@ -416,6 +416,7 @@
 
     /* =========================================================
        SECTION 6 — GAP (white)
+       Double gold borders signal this is the analytical core of the site
     ========================================================= */
     #gap {
       background: var(--bg-white);
@@ -428,7 +429,7 @@
     .chart-wrapper {
       background: var(--parchment);
       border: 1px solid var(--border-warm);
-      border-top: 3px solid var(--gold);
+      border-top: 3px solid var(--gold);  /* gold top stripe mirrors the nav pattern */
       border-radius: 2px;
       padding: 1.75rem 1.75rem 1.25rem;
       margin: 2.25rem 0 0;
@@ -453,7 +454,7 @@
     .legend-dot {
       display: inline-block;
       width: 10px; height: 10px;
-      border-radius: 2px;
+      border-radius: 2px;   /* square dot — matches near-square aesthetic, not pill */
       margin-right: 0.35rem;
       vertical-align: middle;
     }
@@ -519,22 +520,22 @@
     .credits-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 5rem;  /* wider gap than card grids — two distinct columns of content */
     }
     #credits h1 {
       color: var(--parchment);
       font-size: 2.1rem;
     }
-    #credits h1::after { display: none; } /* suppress ornament on dark bg */
+    #credits h1::after { display: none; } /* suppress ✦ ornament — white on navy would disappear */
     #credits h2 {
       font-family: var(--font-heading);
       font-size: 1.4rem;
       color: var(--parchment);
       margin-bottom: 0.9rem;
     }
-    #credits h2::after { color: var(--gold); }
+    #credits h2::after { color: var(--gold); }  /* ✦ stays gold on dark bg — works fine */
     #credits p {
-      color: rgba(245,240,224,0.68);
+      color: rgba(245,240,224,0.68);  /* parchment at 68% — readable on navy without glare */
       font-size: 0.98rem;
       line-height: 1.75;
       margin-bottom: 1rem;
@@ -547,16 +548,16 @@
       font-weight: 600;
     }
     .credits-links a:hover { text-decoration: underline; }
-    .credits-links .sep { color: rgba(245,240,224,0.2); }
+    .credits-links .sep { color: rgba(245,240,224,0.2); }  /* faint separator between links */
     #credits ul { list-style: none; padding: 0; }
     #credits ul li {
-      color: rgba(245,240,224,0.65);
+      color: rgba(245,240,224,0.65);  /* slightly dimmer than body text — supporting detail */
       font-size: 0.92rem;
       line-height: 1.68;
-      padding: 0.3rem 0 0.3rem 1.1rem;
+      padding: 0.3rem 0 0.3rem 1.1rem;  /* left indent makes room for the – marker */
       position: relative;
     }
-    #credits ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
+    #credits ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); } /* en-dash; bullets feel too casual for academic credits */
     .stoneborn-heading {
       font-family: var(--font-heading);
       font-size: 1rem;
@@ -569,10 +570,10 @@
        FOOTER
     ========================================================= */
     footer {
-      background: #12121e;
+      background: #12121e;  /* slightly darker than --bg-navy for clear footer separation */
       padding: 1.5rem 2rem;
       text-align: center;
-      border-top: 1px solid rgba(201,168,76,0.25);
+      border-top: 1px solid rgba(201,168,76,0.25);  /* very faint gold; bolder would compete with credits border */
     }
     .footer-divider { color: var(--gold); letter-spacing: 0.5em; font-size: 1rem; margin-bottom: 0.75rem; }
     footer p { font-size: 0.78rem; color: rgba(245,240,224,0.3); }
@@ -583,6 +584,7 @@
        RESPONSIVE
     ========================================================= */
     @media (max-width: 920px) {
+      /* tablet: collapse multi-column grids to single column */
       .cards-row, .faculty-grid, .credits-grid { grid-template-columns: 1fr; }
       .build-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -590,6 +592,6 @@
       section { padding: 60px 1.25rem; }
       .build-grid { grid-template-columns: 1fr; }
       .stat-row { gap: 1rem; }
-      .nav-links { display: none; }
+      .nav-links { display: none; }  /* hide nav links on mobile — no hamburger, simplicity over completeness */
       h1 { font-size: 2rem; }
     }
