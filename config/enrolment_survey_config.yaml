@@ -16,11 +16,11 @@ career:
     1: -0.50
     2:  0.00
     3:  0.50
-  career_prospects_weight: 0.30   # from programme_characteristics.csv (0-1 normalised)
-  conscientiousness_weight: 0.25
-  motivation_career_development_weight: 0.25
-  ses_weight: 0.20                # higher SES -> higher career clarity/confidence
-  noise_std: 0.35
+  career_prospects_weight: 0.45   # from programme_characteristics.csv (0-1 normalised)
+  conscientiousness_weight: 0.40
+  motivation_career_development_weight: 0.40
+  ses_weight: 0.30                # higher SES -> higher career clarity/confidence
+  noise_std: 0.25
 
 # --- Belonging constructs ---
 # Driven by social_engagement, SES (inverted), extraversion, disability
@@ -30,41 +30,41 @@ belonging:
     1:  0.00
     2: -0.30
     3: -0.10
-  social_engagement_weight: 0.35
-  extraversion_weight: 0.20
-  ses_weight: 0.20                # lower SES -> lower belonging (real NSS pattern)
+  social_engagement_weight: 0.55
+  extraversion_weight: 0.30
+  ses_weight: 0.30                # lower SES -> lower belonging (real NSS pattern)
   disability_penalties:
-    mental_health_issues:  -0.40
-    social_anxiety:        -0.35
-    autism_spectrum:       -0.25
-  noise_std: 0.40
+    mental_health_issues:  -0.55
+    social_anxiety:        -0.50
+    autism_spectrum:       -0.35
+  noise_std: 0.28
 
 # --- Academic self-efficacy ---
 # Driven by prior_education, conscientiousness, resilience, marks (Y2+), first_gen
 academic_self_efficacy:
   prior_education_scores:
-    academic:          0.20
-    vocational:        0.05
-    no_qualifications: -0.15
-  conscientiousness_weight: 0.30
-  resilience_weight: 0.25
-  marks_weight: 0.20              # only applied in Y2 and Y3 (prior-year mean mark, normalised)
-  first_gen_penalty: -0.30        # first-generation students start lower
-  noise_std: 0.35
+    academic:          0.30
+    vocational:        0.10
+    no_qualifications: -0.25
+  conscientiousness_weight: 0.50
+  resilience_weight: 0.40
+  marks_weight: 0.30              # only applied in Y2 and Y3 (prior-year mean mark, normalised)
+  first_gen_penalty: -0.50        # first-generation students start lower
+  noise_std: 0.25
 
 # --- Support satisfaction ---
 # Driven by academic ability (prior_education + marks), extraversion, base engagement, SES
 # No disability modifiers here — support satisfaction is about access, not experience
 support_satisfaction:
   prior_education_scores:
-    academic:          0.15
-    vocational:        0.05
-    no_qualifications: -0.10
-  extraversion_weight: 0.15
-  academic_engagement_weight: 0.25
-  ses_weight: 0.15                # lower SES -> slightly less satisfied (access barriers)
-  marks_weight: 0.15              # higher-performing students feel more supported
-  noise_std: 0.45
+    academic:          0.25
+    vocational:        0.10
+    no_qualifications: -0.20
+  extraversion_weight: 0.25
+  academic_engagement_weight: 0.40
+  ses_weight: 0.25                # lower SES -> slightly less satisfied (access barriers)
+  marks_weight: 0.25              # higher-performing students feel more supported
+  noise_std: 0.30
 
 # Scale bounds: all items output as float in [1.0, 5.0]
 scale:

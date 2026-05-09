@@ -4,7 +4,7 @@ Enrolment Survey System — annual survey for all enrolled students.
 One response per student per academic year. ~82% base response rate, nudged by
 academic engagement (disengaged students slightly more likely to skip).
 
-Constructs (1–5 float scale):
+Constructs (1–5 integer Likert scale, higher = more of the construct):
   career_clarity, career_confidence          — career thinking
   belonging_peers, belonging_programme       — sense of belonging (U-shape Y1→Y3)
   academic_self_efficacy                     — belief in ability to succeed
@@ -307,12 +307,12 @@ class EnrolmentSurveySystem:
             ss1 = self._support_satisfaction_score(education, extraversion, avg_eng, ses_rank, prior_mark_norm)
 
             rec.update({
-                "career_clarity": round(cc1, 3),
-                "career_confidence": round(cc2, 3),
-                "belonging_peers": round(bp1, 3),
-                "belonging_programme": round(bp2, 3),
-                "academic_self_efficacy": round(se1, 3),
-                "support_satisfaction": round(ss1, 3),
+                "career_clarity":         int(np.clip(round(cc1), 1, 5)),
+                "career_confidence":      int(np.clip(round(cc2), 1, 5)),
+                "belonging_peers":        int(np.clip(round(bp1), 1, 5)),
+                "belonging_programme":    int(np.clip(round(bp2), 1, 5)),
+                "academic_self_efficacy": int(np.clip(round(se1), 1, 5)),
+                "support_satisfaction":   int(np.clip(round(ss1), 1, 5)),
             })
             records.append(rec)
 

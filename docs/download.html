@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Download the Stonegrove University synthetic dataset — 17 CSV files, ~306 MB uncompressed.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download the data · Stonegrove University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .download-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 2rem 120px;
+    }
+    .download-page .section-label {
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .download-page h1 {
+      margin-bottom: 1rem;
+    }
+    .download-page .lead {
+      font-size: 1.15rem;
+      color: var(--parchment-muted, rgba(240,230,200,0.75));
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* ---- size summary ---- */
+    .size-summary {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .size-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 1.2rem 1.8rem;
+      min-width: 180px;
+    }
+    .size-box .size-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+    .size-box .size-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(240,230,200,0.55);
+    }
+
+    /* ---- file table ---- */
+    .file-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 3rem;
+    }
+    .file-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .file-table th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+      padding: 0.6rem 1rem 0.6rem 0;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .file-table td {
+      padding: 0.65rem 1rem 0.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .file-table tr:last-child td { border-bottom: none; }
+    .file-table .fname {
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: var(--parchment, #f0e6c8);
+      white-space: nowrap;
+    }
+    .file-table .fdesc {
+      color: rgba(240,230,200,0.65);
+      max-width: 420px;
+    }
+    .file-table .fsize {
+      color: rgba(240,230,200,0.5);
+      text-align: right;
+      white-space: nowrap;
+      padding-right: 0;
+    }
+    .file-table .frows {
+      color: rgba(240,230,200,0.5);
+      text-align: right;
+      white-space: nowrap;
+      padding-right: 0;
+    }
+    .table-group-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.45);
+      padding-top: 1.5rem;
+    }
+
+    /* ---- CTA ---- */
+    .download-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .download-note {
+      font-size: 0.8rem;
+      color: rgba(240,230,200,0.4);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+<nav>
+  <a href="index.html" class="nav-wordmark">Stonegrove University</a>
+  <ul class="nav-links">
+    <li><a href="index.html#origins">Origins</a></li>
+    <li><a href="index.html#dataset">The data</a></li>
+    <li><a href="index.html#gap">The gap</a></li>
+    <li><a href="index.html#build">Build with this</a></li>
+    <li><a href="index.html#contribute">Contribute</a></li>
+    <li><a href="download.html" class="active">Download</a></li>
+    <li><a href="prospectus.html">Prospectus</a></li>
+    <li><a href="clans.html">Our Students</a></li>
+  </ul>
+</nav>
+
+
+<!-- =====================================================
+     DOWNLOAD PAGE
+===================================================== -->
+<div class="download-page">
+
+  <span class="section-label">STONEGROVE UNIVERSITY · DATASET DOWNLOAD</span>
+  <h1>Download the data</h1>
+  <p class="lead">The full Stonegrove University dataset is 17 CSV files organised as a relational schema — four dimension tables and 13 fact tables. Everything you need to start querying straight away.</p>
+
+  <div class="size-summary">
+    <div class="size-box">
+      <span class="size-number">17</span>
+      <span class="size-label">CSV files</span>
+    </div>
+    <div class="size-box">
+      <span class="size-number">~0.30 GB</span>
+      <span class="size-label">Uncompressed</span>
+    </div>
+    <div class="size-box">
+      <span class="size-number">~55 MB</span>
+      <span class="size-label">As .zip</span>
+    </div>
+  </div>
+
+  <div class="file-table-wrap">
+    <table class="file-table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Contents</th>
+          <th style="text-align:right">Approx. rows</th>
+          <th style="text-align:right; padding-right:0">Size</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr><td colspan="4" class="table-group-label">Dimensions</td></tr>
+
+        <tr>
+          <td class="fname">dim_students.csv</td>
+          <td class="fdesc">Species, clan, gender, age, education, socioeconomic rank, disability status, first-generation status. One row per student.</td>
+          <td class="frows">~35,000</td>
+          <td class="fsize">&lt; 5 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">dim_programmes.csv</td>
+          <td class="fdesc">Programme name, faculty, department, description. One row per programme.</td>
+          <td class="frows">55</td>
+          <td class="fsize">&lt; 1 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">dim_modules.csv</td>
+          <td class="fdesc">Module title, programme, year, semester, assessment type, description. One row per module.</td>
+          <td class="frows">333</td>
+          <td class="fsize">&lt; 1 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">dim_academic_years.csv</td>
+          <td class="fdesc">Academic year calendar with semester start dates, midterm and final assessment dates. One row per year.</td>
+          <td class="frows">7</td>
+          <td class="fsize">&lt; 1 MB</td>
+        </tr>
+
+        <tr><td colspan="4" class="table-group-label">Facts</td></tr>
+
+        <tr>
+          <td class="fname">fact_enrollment.csv</td>
+          <td class="fdesc">Programme, year of study, and enrolment status. One row per student per academic year.</td>
+          <td class="frows">~89,000</td>
+          <td class="fsize">3 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_assessment.csv</td>
+          <td class="fdesc">Module marks, UK grade classifications, assessment component and date. One row per assessment event.</td>
+          <td class="frows">~468,000</td>
+          <td class="fsize">19 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_progression.csv</td>
+          <td class="fdesc">Year outcome, modules passed, average mark, next-year status. One row per student per academic year.</td>
+          <td class="frows">~89,000</td>
+          <td class="fsize">3 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_enrolment_survey.csv</td>
+          <td class="fdesc">Annual survey of all enrolled students: career thinking, sense of belonging, academic self-efficacy, support satisfaction. Likert 1–5. ~82% response rate.</td>
+          <td class="frows">~89,000</td>
+          <td class="fsize">4 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_nss_responses.csv</td>
+          <td class="fdesc">NSS-style satisfaction scores across seven themes plus overall satisfaction. Likert 1–5. ~68% response rate (UK NSS benchmark).</td>
+          <td class="frows">~23,000</td>
+          <td class="fsize">1 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_graduate_outcomes.csv</td>
+          <td class="fdesc">Degree classification, employment sector, salary band, time to first professional outcome. ~70% response rate (HESA benchmark).</td>
+          <td class="frows">~19,500</td>
+          <td class="fsize">1 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1046-47.csv</td>
+          <td class="fdesc" rowspan="7">Weekly attendance, participation, academic and social engagement, stress levels, VLE activity. One row per student per module per week. Split into one file per academic year.</td>
+          <td class="frows">~280,000</td>
+          <td class="fsize">21 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1047-48.csv</td>
+          <td class="frows">~397,000</td>
+          <td class="fsize">32 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1048-49.csv</td>
+          <td class="frows">~504,000</td>
+          <td class="fsize">40 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1049-50.csv</td>
+          <td class="frows">~534,000</td>
+          <td class="fsize">42 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1050-51.csv</td>
+          <td class="frows">~541,000</td>
+          <td class="fsize">43 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1051-52.csv</td>
+          <td class="frows">~544,000</td>
+          <td class="fsize">43 MB</td>
+        </tr>
+        <tr>
+          <td class="fname">fact_weekly_engagement_1052-53.csv</td>
+          <td class="frows">~548,000</td>
+          <td class="fsize">44 MB</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="download-cta">
+    <a href="stonegrove-data.zip" class="btn btn-primary" download>Download full dataset (.zip, ~55 MB)</a>
+    <a href="https://github.com/RosieBryce/simulated-university" class="btn btn-ghost">View on GitHub ↗</a>
+  </div>
+  <p class="download-note">Uncompressed the dataset is approximately 0.30 GB. All files use UTF-8 encoding with a header row. Join on <code>student_id</code> + <code>academic_year</code>; see the <a href="https://github.com/RosieBryce/simulated-university/blob/master/docs/SCHEMA.md">schema docs</a> for column definitions.</p>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="footer-divider">✦ ◆ ✦</div>
+  <p>Stonegrove University &nbsp;·&nbsp; <a href="https://github.com/RosieBryce/simulated-university">GitHub</a> &nbsp;·&nbsp; Built with AI</p>
+</footer>
+
+</body>
+</html>

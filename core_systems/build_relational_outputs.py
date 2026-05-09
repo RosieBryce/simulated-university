@@ -12,6 +12,7 @@ Run from project root after run_longitudinal_pipeline.py.
 """
 
 from pathlib import Path
+import zipfile
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -59,46 +60,49 @@ def build_dim_academic_years() -> pd.DataFrame:
 
 
 def build_dim_students(students_df: pd.DataFrame) -> pd.DataFrame:
-    base_cols = [
-        "base_openness", "base_conscientiousness", "base_extraversion",
-        "base_agreeableness", "base_neuroticism",
+    # Include only fields an analyst would observe in a real student record system.
+    # Exclude all simulation config metrics: Big Five traits, motivation dimensions.
+    # These are internal model parameters, not observable student attributes.
+    keep_cols = [
+        "student_id", "cohort_year",
+        "species", "clan", "gender", "forename", "surname", "full_name",
+        "age", "education", "socio_economic_rank", "disabilities", "first_gen",
     ]
-    df = students_df.drop(columns=[c for c in base_cols if c in students_df.columns])
-    df = df.rename(columns={"academic_year": "cohort_year"})
-    other = [c for c in df.columns if c not in ("student_id", "cohort_year")]
-    return df[["student_id", "cohort_year"] + other].reset_index(drop=True)
+    df = students_df.rename(columns={"academic_year": "cohort_year"})
+    return df[[c for c in keep_cols if c in df.columns]].reset_index(drop=True)
 
 
 def build_dim_programmes(prog_chars_df: pd.DataFrame, enrollment_df: pd.DataFrame) -> pd.DataFrame:
+    # Include only fields an analyst would find in a real programme catalogue.
+    # Exclude all simulation config metrics: difficulty ratings, intensity scores,
+    # career_prospects weighting, creativity/research/innovation indices, etc.
     prog_lookup = (
         enrollment_df[["program_code", "program_name", "department"]]
         .drop_duplicates("program_code")
         .rename(columns={"program_code": "programme_code", "program_name": "programme_name"})
     )
-    merged = prog_lookup.merge(prog_chars_df, on="programme_name", how="left")
+    # Drop columns from prog_chars_df that clash on merge (programme_code, department)
+    # to avoid _x/_y suffixes — prog_lookup values take precedence.
+    drop_from_chars = [c for c in ["programme_code", "department", "department_code", "faculty_code"] if c in prog_chars_df.columns]
+    chars_for_merge = prog_chars_df.drop(columns=drop_from_chars)
+    merged = prog_lookup.merge(chars_for_merge, on="programme_name", how="left")
     if "faculty_x" in merged.columns:
-        merged = merged.rename(columns={"faculty_x": "faculty"}).drop(columns=["faculty_y"])
-    col_order = [
-        "programme_code", "programme_name", "faculty", "department", "description",
-        "social_intensity", "practical_theoretical_balance", "stress_level",
-        "career_prospects", "academic_difficulty", "creativity_requirement",
-        "leadership_opportunities", "research_intensity", "community_engagement",
-        "innovation_focus",
-    ]
+        merged = merged.rename(columns={"faculty_x": "faculty"}).drop(columns=["faculty_y"], errors="ignore")
+    col_order = ["programme_code", "programme_name", "faculty", "department", "description"]
     return merged[[c for c in col_order if c in merged.columns]].reset_index(drop=True)
 
 
 def build_dim_modules(assessment_df: pd.DataFrame, module_chars_df: pd.DataFrame) -> pd.DataFrame:
+    # Include only fields an analyst would find in a real module catalogue.
+    # Exclude all simulation config metrics: difficulty_level, social_requirements,
+    # creativity_requirements, practical_theoretical_balance, stress_level,
+    # group_work_intensity, independent_study_requirement.
     core = (
         assessment_df[["module_code", "module_title", "programme_code", "module_year", "assessment_type"]]
         .drop_duplicates("module_code")
         .copy()
     )
-    char_cols = [
-        "module_title", "semester", "difficulty_level", "social_requirements",
-        "creativity_requirements", "practical_theoretical_balance", "stress_level",
-        "group_work_intensity", "independent_study_requirement", "description",
-    ]
+    char_cols = ["module_title", "semester", "description"]
     chars = (
         module_chars_df[[c for c in char_cols if c in module_chars_df.columns]]
         .drop_duplicates("module_title")
@@ -106,9 +110,7 @@ def build_dim_modules(assessment_df: pd.DataFrame, module_chars_df: pd.DataFrame
     merged = core.merge(chars, on="module_title", how="left")
     col_order = [
         "module_code", "module_title", "programme_code", "module_year", "semester",
-        "assessment_type", "difficulty_level", "social_requirements", "creativity_requirements",
-        "practical_theoretical_balance", "stress_level", "group_work_intensity",
-        "independent_study_requirement", "description",
+        "assessment_type", "description",
     ]
     return merged[[c for c in col_order if c in merged.columns]].reset_index(drop=True)
 
@@ -221,6 +223,15 @@ def main():
         path = OUT_DIR / f"fact_weekly_engagement_{year}.csv"
         year_fact.to_csv(path, index=False)
         print(f"  fact_weekly_engagement_{year}.csv  — {len(year_fact):,} rows × {len(year_fact.columns)} cols")
+
+    zip_path = PROJECT_ROOT / "docs" / "stonegrove-data.zip"
+    print(f"\nBuilding {zip_path.name} ...")
+    csv_files = sorted(OUT_DIR.glob("*.csv"))
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+        for csv in csv_files:
+            zf.write(csv, arcname=csv.name)
+    zip_mb = zip_path.stat().st_size / 1_048_576
+    print(f"  {zip_path.name}  — {zip_mb:.1f} MB  ({len(csv_files)} files)")
 
     print("\nDone.")
 
