@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python run_longitudinal_pipeline.py
 ```
 
-This runs all 7 pipeline stages across 7 academic years and builds the full relational schema automatically. Runtime: ~10–15 minutes.
+This runs all 7 pipeline stages across 7 academic years and builds the full relational schema automatically. Runtime: ~30–45 minutes.
 
 To regenerate the summary CSVs used by the public site:
 
