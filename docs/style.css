@@ -49,6 +49,11 @@
       align-items: center;
       justify-content: space-between;
     }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
     .nav-wordmark {
       font-family: var(--font-heading);
       font-weight: 700;
@@ -56,6 +61,13 @@
       color: var(--text-navy);
       text-decoration: none;
       letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+    .nav-byline {
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      line-height: 1;
     }
     .nav-links {
       display: flex;
@@ -150,6 +162,14 @@
       font-weight: 900;
       color: var(--text-navy);
       margin-bottom: 0.5rem;
+    }
+    .hero-creator {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
     }
     .hero-tagline {
       font-family: var(--font-heading);

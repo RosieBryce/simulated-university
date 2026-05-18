@@ -12,6 +12,7 @@ Run from project root after run_longitudinal_pipeline.py.
 """
 
 from pathlib import Path
+import subprocess
 import zipfile
 import pandas as pd
 
@@ -143,11 +144,14 @@ def build_fact_weekly_engagement(
     if unmatched > 0:
         print(f"  WARNING: {unmatched:,} engagement rows could not be matched to a module_code")
 
+    # Include only fields observable in a real VLE/timetable export.
+    # attendance_rate and stress_level are internal simulation metrics; exclude them.
+    # total_sessions and attended_sessions are the analyst-facing attendance representation.
     keep = [
         "student_id", "academic_year", "week_number", "module_code", "semester",
-        "attendance_rate", "participation_score", "academic_engagement",
-        "social_engagement", "stress_level",
-        "vle_logins", "vle_resource_views", "vle_forum_posts", "vle_mean_login_hour",
+        "total_sessions", "attended_sessions",
+        "participation_score", "academic_engagement", "social_engagement",
+        "vle_logins", "vle_resource_views", "vle_forum_posts", "vle_mean_login_time",
     ]
     return df[[c for c in keep if c in df.columns]]
 
@@ -232,6 +236,12 @@ def main():
             zf.write(csv, arcname=csv.name)
     zip_mb = zip_path.stat().st_size / 1_048_576
     print(f"  {zip_path.name}  — {zip_mb:.1f} MB  ({len(csv_files)} files)")
+
+    # Regenerate site summary CSVs
+    print("\nRegenerating summary CSVs...")
+    scripts_dir = PROJECT_ROOT / "scripts"
+    subprocess.run(["python", str(scripts_dir / "aggregate_gap.py")], check=True)
+    subprocess.run(["python", str(scripts_dir / "aggregate_engagement.py")], check=True)
 
     print("\nDone.")
 
