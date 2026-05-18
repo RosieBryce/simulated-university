@@ -120,4 +120,4 @@ simulated-university/
 
 ## Licence
 
-Copyright (c) 2026 Rosie Bryce. All rights reserved. Source code and configuration files in this repository may not be reproduced, modified, or distributed without explicit written permission. See `LICENSE` for details.
+MIT — see `LICENSE`. You're free to clone, modify, and build on this for your own projects; just keep the copyright notice.
