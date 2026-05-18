@@ -24,7 +24,7 @@ python run_longitudinal_pipeline.py
 
 Runs the full longitudinal simulation: 7 academic years (1046-47 to 1052-53), 5,000 new students per year. Re-enrols continuing students each year based on prior-year progression outcomes. Automatically calls `build_relational_outputs.py` at the end.
 
-**Runtime: ~2 hours** (dominated by engagement and assessment generation across ~89,000 student-years).
+**Runtime: ~30–45 minutes** (dominated by engagement and assessment generation across ~89,000 student-years).
 
 After the pipeline, regenerate the site summary CSVs:
 
@@ -51,9 +51,9 @@ The pipeline writes raw outputs to `data/` and clean relational tables to `data/
 
 | File | Description | Rows |
 |------|-------------|------|
-| `dim_students.csv` | Species, clan, personality, motivation, SES, disabilities, `first_gen`. One row per student. | ~35,000 |
-| `dim_programmes.csv` | 55 programmes across 5 faculties: difficulty, career prospects, social intensity. | 55 |
-| `dim_modules.csv` | 333 modules: difficulty, assessment type, stress level, semester, programme linkage. | 333 |
+| `dim_students.csv` | Species, clan, gender, age, education, SES, disability status, `first_gen`. One row per student. | ~35,000 |
+| `dim_programmes.csv` | 55 programmes across 5 faculties: name, faculty, department. | 55 |
+| `dim_modules.csv` | 333 modules: title, programme, year, semester, assessment type. | 333 |
 | `dim_academic_years.csv` | Academic year calendar with semester and assessment dates. | 7 |
 
 ### Facts (one row per event)
@@ -61,7 +61,7 @@ The pipeline writes raw outputs to `data/` and clean relational tables to `data/
 | File | Description | Rows |
 |------|-------------|------|
 | `fact_enrollment.csv` | Programme, year of study, module allocation, enrolment status. | ~89,000 |
-| `fact_weekly_engagement_YYYY-YY.csv` | Attendance, participation, engagement, stress, VLE metrics. One per academic year. | ~400,000/yr |
+| `fact_weekly_engagement_YYYY-YY.csv` | Attendance, participation, academic/social engagement, VLE metrics. One file per academic year. | ~400,000/yr |
 | `fact_assessment.csv` | MIDTERM + FINAL marks per module per student. `combined_mark` on FINAL rows. | ~468,000 |
 | `fact_progression.csv` | Year outcome, modules passed, avg mark, next-year status. | ~58,000 |
 | `fact_enrolment_survey.csv` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response. | ~89,000 |

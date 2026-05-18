@@ -2,24 +2,25 @@
 
 A synthetic data generator for a fictional fantasy university, producing realistic UK-style student lifecycle data for use in data analysis teaching, education research, and awarding gap investigation.
 
-Stonegrove University is set at the meeting point of ancient forest and mountain. Its students are Dwarves and Elves, sorted into 14 clans, studying across 44 programmes in 4 faculties. The fantasy setting sidesteps privacy concerns entirely while preserving the structural patterns that make real higher education data interesting: awarding gaps, engagement arcs, progression risk, NSS variation, and graduate outcomes.
+Stonegrove University is set at the meeting point of ancient forest and mountain. Its students are Dwarves and Elves, sorted into 14 clans, studying across 55 programmes in 5 faculties. The fantasy setting sidesteps privacy concerns entirely while preserving the structural patterns that make real higher education data interesting: awarding gaps, engagement arcs, progression risk, NSS variation, and graduate outcomes.
 
 ## What's in the dataset
 
-A full relational schema across 10 tables — 4 dimension tables and 6 fact tables — covering 7 academic years with 5,000 new students enrolling each year.
+A full relational schema across 11 tables — 4 dimension tables and 7 fact tables — covering 7 academic years with 5,000 new students enrolling each year.
 
 | Table | Description | ~Rows |
 |---|---|---|
-| `dim_students` | Species, clan, Big Five personality, 8 motivation dimensions, disability, SES, prior qualifications | 35,000 |
-| `dim_programmes` | 44 programmes: difficulty, social intensity, career prospects, creativity, research intensity | 44 |
-| `dim_modules` | 353 modules: difficulty, assessment type, stress, group work, semester | 353 |
+| `dim_students` | Species, clan, gender, age, education, SES, disability status, first-generation status | 35,000 |
+| `dim_programmes` | 55 programmes across 5 faculties: name, faculty, department | 55 |
+| `dim_modules` | 333 modules: title, programme, year, semester, assessment type | 333 |
 | `dim_academic_years` | Academic year calendar with semester and assessment dates | 7 |
-| `fact_enrollment` | Programme, year of study, module allocation, enrolment status | 89,000 |
-| `fact_weekly_engagement` | Attendance, participation, academic/social engagement, stress — per student per module per week | 2,800,000 |
-| `fact_assessment` | Module marks, UK grade classifications (First, 2:1, 2:2, Third, Fail), component and date | 468,000 |
+| `fact_enrollment` | Programme, year of study, enrolment status | 89,000 |
+| `fact_weekly_engagement_YYYY-YY` | Attendance, participation, academic/social engagement, VLE metrics — per student per module per week. One file per academic year. | ~400,000/yr |
+| `fact_assessment` | MIDTERM + FINAL marks per module per student. UK grade classification. `combined_mark` on FINAL rows. | 468,000 |
 | `fact_progression` | Year outcome, modules passed, average mark, next-year status | 89,000 |
-| `fact_nss_responses` | Synthetic NSS scores across 7 themes + overall satisfaction | 23,000 |
-| `fact_graduate_outcomes` | Degree classification, employment sector, salary band, time to first professional outcome | 19,500 |
+| `fact_enrolment_survey` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response rate. | 89,000 |
+| `fact_nss_responses` | NSS-style satisfaction scores across 7 themes + overall satisfaction. ~68% response rate. | 23,000 |
+| `fact_graduate_outcomes` | Degree classification, employment sector, salary band, time to first professional outcome. ~70% response rate. | 19,500 |
 
 All tables join on `student_id` + `academic_year`. See `docs/SCHEMA.md` for full column definitions.
 
@@ -112,7 +113,7 @@ simulated-university/
 
 ## Documentation
 
-- `docs/SCHEMA.md` — column definitions for all 10 tables
+- `docs/SCHEMA.md` — column definitions for all 11 tables
 - `docs/DESIGN.md` — architecture and longitudinal flow
 - `docs/CALCULATIONS.md` — formulas, modifiers, and assumptions
 - `docs/PIPELINE_FLOW.md` — student_id assignment and join conventions
