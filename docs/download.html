@@ -24,7 +24,7 @@
     }
     .download-page .lead {
       font-size: 1.15rem;
-      color: var(--parchment-muted, rgba(240,230,200,0.75));
+      color: var(--text-body);
       max-width: 640px;
       margin-bottom: 2.5rem;
       line-height: 1.7;
@@ -56,7 +56,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(240,230,200,0.55);
+      color: var(--text-muted);
     }
 
     /* ---- file table ---- */
@@ -74,15 +74,15 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(201,168,76,0.7);
-      border-bottom: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold);
+      border-bottom: 1px solid var(--border-gold);
       padding: 0.6rem 1rem 0.6rem 0;
       text-align: left;
       white-space: nowrap;
     }
     .file-table td {
       padding: 0.65rem 1rem 0.65rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid var(--border-warm);
       vertical-align: top;
       line-height: 1.5;
     }
@@ -90,21 +90,21 @@
     .file-table .fname {
       font-family: monospace;
       font-size: 0.82rem;
-      color: var(--parchment, #f0e6c8);
+      color: var(--text-navy);
       white-space: nowrap;
     }
     .file-table .fdesc {
-      color: rgba(240,230,200,0.65);
+      color: var(--text-body);
       max-width: 420px;
     }
     .file-table .fsize {
-      color: rgba(240,230,200,0.5);
+      color: var(--text-muted);
       text-align: right;
       white-space: nowrap;
       padding-right: 0;
     }
     .file-table .frows {
-      color: rgba(240,230,200,0.5);
+      color: var(--text-muted);
       text-align: right;
       white-space: nowrap;
       padding-right: 0;
@@ -114,7 +114,7 @@
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(201,168,76,0.45);
+      color: var(--gold);
       padding-top: 1.5rem;
     }
 
@@ -128,7 +128,7 @@
     }
     .download-note {
       font-size: 0.8rem;
-      color: rgba(240,230,200,0.4);
+      color: var(--text-muted);
       margin-top: 1rem;
     }
   </style>
@@ -256,7 +256,7 @@
         </tr>
         <tr>
           <td class="fname">fact_weekly_engagement_1046-47.csv</td>
-          <td class="fdesc" rowspan="7">Weekly attendance, participation, academic and social engagement, stress levels, VLE activity. One row per student per module per week. Split into one file per academic year.</td>
+          <td class="fdesc" rowspan="7">Timetabled sessions and sessions attended per week, participation and academic/social engagement scores, VLE activity (logins, resource views, forum posts, mean login hour). One row per student per module per week. Split into one file per academic year.</td>
           <td class="frows">~280,000</td>
           <td class="fsize">21 MB</td>
         </tr>
