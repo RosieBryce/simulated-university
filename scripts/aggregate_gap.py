@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-outcomes = pd.read_csv(ROOT / "data/relational/fact_graduate_outcomes.csv")
+outcomes = pd.read_csv(ROOT / "data/relational/fact_good_honours.csv")
 students  = pd.read_csv(ROOT / "data/relational/dim_students.csv")
 
 df = outcomes.merge(students[["student_id", "species"]], on="student_id")
@@ -28,6 +28,7 @@ gap.columns = ["academic_year", "dwarf_good", "elf_good"]
 gap = gap[["academic_year", "elf_good", "dwarf_good"]]
 
 out = ROOT / "docs/data/gap-summary.csv"
+out.parent.mkdir(parents=True, exist_ok=True)
 gap.to_csv(out, index=False)
 print(f"Written: {out}")
 print(gap.to_string(index=False))

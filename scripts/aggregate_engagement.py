@@ -32,6 +32,7 @@ eng.columns = ["week", "dwarf_attendance", "elf_attendance"]
 eng = eng[["week", "elf_attendance", "dwarf_attendance"]]
 
 out = ROOT / "docs/data/engagement-summary.csv"
+out.parent.mkdir(parents=True, exist_ok=True)
 eng.to_csv(out, index=False)
 print(f"Written: {out}")
 print(eng.to_string(index=False))

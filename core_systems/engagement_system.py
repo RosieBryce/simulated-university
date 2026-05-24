@@ -88,6 +88,7 @@ class EngagementSystem:
                         'social_requirements': float(row.get('social_requirements', 0.5)),
                         'creativity_requirements': float(row.get('creativity_requirements', 0.5)),
                         'semester': int(row.get('semester', 1)),
+                        'practical_theoretical_balance': float(row.get('practical_theoretical_balance', 0.5)),
                     }
         elif mc_yaml.exists():
             with open(mc_yaml, 'r', encoding='utf-8') as f:
@@ -192,8 +193,23 @@ class EngagementSystem:
         return {
             'difficulty': np.clip(difficulty, 0.25, 0.9),
             'social_requirements': np.clip(social_requirements, 0.2, 0.9),
-            'creativity_requirements': np.clip(creativity_requirements, 0.2, 0.9)
+            'creativity_requirements': np.clip(creativity_requirements, 0.2, 0.9),
+            'practical_theoretical_balance': 0.5,
         }
+
+    def _sessions_per_week(self, module_title: str) -> int:
+        """Weekly timetabled session count derived from practical/theoretical balance.
+        Theoretical (< 0.40): 2 sessions — lecture + seminar.
+        Mixed (0.40–0.65):    3 sessions — lecture + seminar + workshop.
+        Practical (> 0.65):   4 sessions — lecture + 2 labs + seminar.
+        """
+        balance = self.get_module_characteristics(module_title).get('practical_theoretical_balance', 0.5)
+        if balance < 0.40:
+            return 2
+        elif balance < 0.65:
+            return 3
+        else:
+            return 4
 
     def get_programme_characteristics(self, programme_code: str) -> Dict[str, float]:
         """Get characteristics for a specific programme (by programme code)."""
@@ -215,7 +231,7 @@ class EngagementSystem:
                                   motivation: Dict[str, float]) -> Dict[str, float]:
         """Calculate base engagement levels from personality and motivation."""
         base_attendance = (
-            0.35 +
+            0.20 +
             personality.get('refined_conscientiousness', 0.5) * 0.4 +
             motivation.get('motivation_academic_drive', 0.5) * 0.3 +
             personality.get('refined_resilience', 0.5) * 0.2 +
@@ -543,12 +559,14 @@ class EngagementSystem:
         hr = cfg.get('mean_login_hour', {})
         stress_shift = stress_level * (1.0 - conscientiousness) * float(hr.get('stress_shift_max', 10.0))
         mean_hour    = (base_hour + stress_shift + np.random.normal(0, hour_std)) % 24.0
+        h = int(mean_hour)
+        m = int((mean_hour - h) * 60)
 
         return {
             'vle_logins':          vle_logins,
             'vle_resource_views':  vle_resource_views,
             'vle_forum_posts':     vle_forum_posts,
-            'vle_mean_login_hour': round(float(mean_hour), 2),
+            'vle_mean_login_time': f"{h:02d}:{m:02d}",
         }
 
     # ------------------------------------------------------------------
@@ -664,6 +682,14 @@ class EngagementSystem:
                             val = base_val + week_dev + t_mods.get(sk, 0.0)
                         val += np.random.normal(0, 0.05)  # small module-specific noise
                         rec[ok] = float(np.clip(val, 0.05, 0.95))
+
+                    # Convert attendance_rate to integer session counts.
+                    # attendance_rate stays in rec for VLE generation but is not output.
+                    total_sess = self._sessions_per_week(m)
+                    expected = rec['attendance_rate'] * total_sess
+                    floor_att = int(expected)
+                    rec['total_sessions']    = total_sess
+                    rec['attended_sessions'] = min(total_sess, floor_att + (1 if np.random.random() < (expected - floor_att) else 0))
 
                     # Analysis columns
                     module_chars = self.get_module_characteristics(m)

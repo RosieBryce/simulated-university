@@ -2,10 +2,11 @@
 """
 Build relational output tables from raw pipeline CSVs.
 
-Reads from data/ and config/, writes 10 clean tables to data/relational/:
+Reads from data/ and config/, writes 11 clean tables to data/relational/:
   Dimensions: dim_students, dim_programmes, dim_modules, dim_academic_years
   Facts:       fact_enrollment, fact_assessment, fact_progression,
-               fact_graduate_outcomes, fact_nss_responses, fact_enrolment_survey,
+               fact_good_honours, fact_graduate_outcomes,
+               fact_nss_responses, fact_enrolment_survey,
                fact_weekly_engagement_YYYY-YY.csv (one file per academic year)
 
 Run from project root after run_longitudinal_pipeline.py.
@@ -145,12 +146,12 @@ def build_fact_weekly_engagement(
         print(f"  WARNING: {unmatched:,} engagement rows could not be matched to a module_code")
 
     # Include only fields observable in a real VLE/timetable export.
-    # attendance_rate and stress_level are internal simulation metrics; exclude them.
+    # attendance_rate, stress_level, participation_score, academic_engagement,
+    # and social_engagement are internal simulation constructs; exclude them.
     # total_sessions and attended_sessions are the analyst-facing attendance representation.
     keep = [
         "student_id", "academic_year", "week_number", "module_code", "semester",
         "total_sessions", "attended_sessions",
-        "participation_score", "academic_engagement", "social_engagement",
         "vle_logins", "vle_resource_views", "vle_forum_posts", "vle_mean_login_time",
     ]
     return df[[c for c in keep if c in df.columns]]
@@ -159,17 +160,33 @@ def build_fact_weekly_engagement(
 def build_fact_assessment(assessment_df: pd.DataFrame) -> pd.DataFrame:
     keep = [
         "student_id", "academic_year", "module_code", "component_code",
-        "assessment_mark", "combined_mark", "grade", "assessment_date",
+        "assessment_mark", "assessment_date",
     ]
-    return assessment_df[[c for c in keep if c in assessment_df.columns]].copy()
+    df = assessment_df[[c for c in keep if c in assessment_df.columns]].copy()
+    df["assessment_weight"] = 0.5
+    return df
 
 
 def build_fact_progression(progression_df: pd.DataFrame) -> pd.DataFrame:
     return progression_df.copy()
 
 
+def build_fact_good_honours(graduate_outcomes_df: pd.DataFrame) -> pd.DataFrame:
+    keep = [
+        "student_id", "academic_year_graduated", "programme_code",
+        "degree_classification", "degree_weighted_avg",
+    ]
+    return graduate_outcomes_df[[c for c in keep if c in graduate_outcomes_df.columns]].copy()
+
+
 def build_fact_graduate_outcomes(graduate_outcomes_df: pd.DataFrame) -> pd.DataFrame:
-    return graduate_outcomes_df.copy()
+    keep = [
+        "student_id", "academic_year_graduated",
+        "survey_responded", "outcome_type", "professional_level",
+        "employment_sector", "salary_band",
+        "time_to_outcome_months", "outcome_recorded_at",
+    ]
+    return graduate_outcomes_df[[c for c in keep if c in graduate_outcomes_df.columns]].copy()
 
 
 def build_fact_nss_responses(nss_df: pd.DataFrame) -> pd.DataFrame:
@@ -209,6 +226,7 @@ def main():
         "fact_enrollment":        build_fact_enrollment(enrollment_df),
         "fact_assessment":        build_fact_assessment(assessment_df),
         "fact_progression":       build_fact_progression(progression_df),
+        "fact_good_honours":      build_fact_good_honours(grad_outcomes_df),
         "fact_graduate_outcomes": build_fact_graduate_outcomes(grad_outcomes_df),
         "fact_nss_responses":     build_fact_nss_responses(nss_df),
         "fact_enrolment_survey":  build_fact_enrolment_survey(survey_df),

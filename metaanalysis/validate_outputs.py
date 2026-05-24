@@ -58,8 +58,8 @@ def load():
         tables[name] = pd.read_csv(path)
 
     # Graduate outcomes (optional — skip section if absent)
-    grad_path = RELATIONAL / "fact_graduate_outcomes.csv"
-    tables["fact_graduate_outcomes"] = pd.read_csv(grad_path) if grad_path.exists() else None
+    honours_path = RELATIONAL / "fact_good_honours.csv"
+    tables["fact_graduate_outcomes"] = pd.read_csv(honours_path) if honours_path.exists() else None
 
     # Weekly engagement stored per academic year — load first available year for correlation checks
     eng_files = sorted(RELATIONAL.glob("fact_weekly_engagement_*.csv"))
@@ -167,12 +167,27 @@ def check_marks(t):
     print(flag(std,  lo, hi, "overall std mark"))
 
     print()
-    print("  Grade band breakdown:")
-    grades = assess["grade"].value_counts()
-    total  = len(assess)
-    for g in ["First", "2:1", "2:2", "Third", "Fail"]:
-        n = grades.get(g, 0)
-        print(f"    {g:<8}  {n:>6}  ({n/total*100:.1f}%)")
+    print("  Grade band breakdown (combined mark, 50/50 weight):")
+    pivoted = (
+        assess.pivot_table(index=["student_id", "academic_year", "module_code"],
+                           columns="component_code", values="assessment_mark")
+        .reset_index()
+    )
+    pivoted.columns.name = None
+    if "MIDTERM" in pivoted.columns and "FINAL" in pivoted.columns:
+        pivoted["combined"] = pivoted[["MIDTERM", "FINAL"]].mean(axis=1)
+        def _g(m):
+            if m >= 70: return "First"
+            if m >= 60: return "2:1"
+            if m >= 50: return "2:2"
+            if m >= 40: return "Third"
+            return "Fail"
+        pivoted["grade"] = pivoted["combined"].apply(_g)
+        grades = pivoted["grade"].value_counts()
+        total  = len(pivoted)
+        for g in ["First", "2:1", "2:2", "Third", "Fail"]:
+            n = grades.get(g, 0)
+            print(f"    {g:<8}  {n:>6}  ({n/total*100:.1f}%)")
 
     # By module_year
     mod_year = t["dim_modules"][["module_code", "module_year"]]

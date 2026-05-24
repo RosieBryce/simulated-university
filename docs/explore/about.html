@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Data — Stonegrove University</title>
+  <meta name="description" content="Who are Stonegrove's students? A guide to the dataset for researchers and students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --parchment:   #f5f0e0;
+      --parchment-d: #ede8dc;
+      --navy:        #1a1a2e;
+      --text-body:   #2e2e42;
+      --text-muted:  #888880;
+      --elf:         #7a9e82;
+      --dwarf:       #c9a84c;
+      --gap:         #d98878;
+      --gold:        #c9a84c;
+      --border:      #e0d8c4;
+      --h-font:      'Playfair Display', Georgia, serif;
+      --b-font:      'Source Sans 3', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--b-font);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-body);
+      background: var(--parchment);
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      border-top: 3px solid var(--gold);
+      padding: 2rem 2.5rem 1.75rem;
+    }
+    header .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      margin-bottom: 0.35rem;
+    }
+    header h1 { font-family: var(--h-font); font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 700; color: var(--parchment); margin-bottom: 0.5rem; }
+    header p { color: rgba(245,240,224,0.7); font-size: 0.95rem; max-width: 640px; }
+    .header-links { margin-top: 1rem; display: flex; gap: 1.5rem; }
+    .header-links a { font-size: 0.82rem; color: rgba(201,168,76,0.8); text-decoration: none; letter-spacing: 0.04em; }
+    .header-links a:hover { color: var(--gold); }
+
+    /* Page nav */
+    .page-nav {
+      background: var(--parchment-d);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2.5rem;
+      display: flex;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .page-nav a {
+      display: inline-block;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -1px;
+    }
+    .page-nav a:hover { color: var(--text-body); }
+
+    /* Content */
+    .content { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem 4rem; }
+
+    section { margin-bottom: 4rem; }
+    section + section { border-top: 1px solid var(--border); padding-top: 3rem; }
+
+    h2 {
+      font-family: var(--h-font);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+    h3 {
+      font-family: var(--h-font);
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 2rem 0 0.75rem;
+    }
+
+    /* Stat grid */
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+    @media (max-width: 700px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem 1.4rem;
+    }
+    .stat-label { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); font-weight: 600; margin-bottom: 0.3rem; }
+    .stat-value { font-family: var(--h-font); font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+    .stat-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    /* Two-col layout */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .data-table th {
+      background: var(--parchment-d);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.65rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 0.55rem 1rem;
+      border-bottom: 1px solid rgba(224,216,196,0.4);
+      vertical-align: middle;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(245,240,224,0.6); }
+
+    /* Species badge */
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-elf   { background: rgba(122,158,130,0.2); color: #4a7c59; }
+    .badge-dwarf { background: rgba(201,168,76,0.2);  color: #7a5c00; }
+
+    /* Bar chart (CSS only) */
+    .bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; font-size: 0.85rem; }
+    .bar-label { width: 160px; flex-shrink: 0; color: var(--text-body); }
+    .bar-label.narrow { width: 80px; }
+    .bar-track { flex: 1; height: 18px; background: var(--parchment-d); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+    .bar-pct { width: 42px; flex-shrink: 0; text-align: right; color: var(--text-muted); font-size: 0.8rem; }
+
+    /* Faculty cards */
+    .faculty-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    @media (max-width: 700px) { .faculty-grid { grid-template-columns: 1fr; } }
+    .faculty-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .faculty-card .fc-head {
+      background: var(--navy);
+      color: var(--parchment);
+      padding: 0.9rem 1.2rem;
+      font-family: var(--h-font);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .faculty-card .fc-count {
+      font-family: var(--b-font);
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: rgba(245,240,224,0.6);
+      margin-left: 0.5rem;
+    }
+    .faculty-card ul {
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+    .faculty-card ul li {
+      padding: 0.4rem 1.2rem;
+      font-size: 0.86rem;
+      border-bottom: 1px solid rgba(224,216,196,0.35);
+    }
+    .faculty-card ul li:last-child { border-bottom: none; }
+
+    /* Research questions */
+    .rq-list { list-style: none; padding: 0; }
+    .rq-list li {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.92rem;
+    }
+    .rq-list li strong { display: block; color: var(--navy); margin-bottom: 0.2rem; font-size: 0.95rem; }
+
+    /* Loading state */
+    #loading { text-align: center; padding: 4rem; color: var(--text-muted); font-style: italic; }
+
+    footer { text-align: center; padding: 2.5rem; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); }
+    footer a { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Stonegrove University</div>
+  <h1>About the Data</h1>
+  <p>A guide to who Stonegrove's students are, how the university is organised, and what research questions this dataset can help you explore.</p>
+  <div class="header-links">
+    <a href="index.html">← Data Explorer</a>
+    <a href="../index.html">← Stonegrove University</a>
+  </div>
+</header>
+
+<nav class="page-nav">
+  <a href="#glance">At a glance</a>
+  <a href="#students">Students</a>
+  <a href="#programmes">Programmes</a>
+  <a href="#questions">Research questions</a>
+</nav>
+
+<div id="loading">Loading data…</div>
+
+<div class="content" id="main-content" style="display:none">
+
+  <!-- AT A GLANCE -->
+  <section id="glance">
+    <h2>At a Glance</h2>
+    <p class="section-sub">Stonegrove University is a fictional institution set in a Middle-Earth-inspired world. The dataset covers seven academic years of simulated student lifecycle data — from enrolment to graduate outcomes.</p>
+
+    <div class="stat-grid" id="glance-stats"></div>
+
+    <h3>Enrolment over time</h3>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem">Active enrolments per academic year. Numbers grow as each new cohort enters while continuing students remain.</p>
+    <div id="enrolment-bars"></div>
+  </section>
+
+  <!-- STUDENTS -->
+  <section id="students">
+    <h2>Student Population</h2>
+    <p class="section-sub">35,000 unique students across seven cohorts. Two species — Elf and Dwarf — drawn from 14 clans, with a range of socioeconomic backgrounds, disabilities, and first-generation statuses.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>Species</h3>
+        <div id="species-bars"></div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:0.75rem">Note: the Dwarf–Elf split is approximately 60/40, not 50/50. This reflects intentional variation in clan sizes.</p>
+      </div>
+      <div>
+        <h3>Gender</h3>
+        <div id="gender-bars"></div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:0.75rem">"Neuter" appears for a subset of both Elf and Dwarf students, in keeping with the Middle-Earth lore setting.</p>
+      </div>
+    </div>
+
+    <h3>Clans</h3>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem">14 clans in total — 8 Dwarf, 6 Elf. Clan membership shapes personality profiles and, indirectly, attainment outcomes through socioeconomic and motivational pathways.</p>
+    <table class="data-table" id="clan-table">
+      <thead>
+        <tr><th>Clan</th><th>Species</th><th>Students</th><th>% of species</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="two-col" style="margin-top:2rem">
+      <div>
+        <h3>Socioeconomic rank</h3>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem">Ranked 1 (lowest) to 8 (highest). SES is a key driver of the attainment gap — it influences prior educational experience, disability likelihood, and first-generation status.</p>
+        <div id="ses-bars"></div>
+      </div>
+      <div>
+        <h3>Disabilities</h3>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem">Students may have multiple recorded disabilities. Percentages show the share of students with any mention of each category.</p>
+        <div id="disability-bars"></div>
+      </div>
+    </div>
+
+    <h3>First-generation students</h3>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:0.5rem" id="first-gen-text"></p>
+    <p style="font-size:0.82rem;color:var(--text-muted)">First-generation status is SES-weighted: students from lower SES backgrounds are more likely to be the first in their family to attend university. This variable is available in <code>dim_students</code> as a boolean.</p>
+  </section>
+
+  <!-- PROGRAMMES -->
+  <section id="programmes">
+    <h2>Programmes &amp; Faculties</h2>
+    <p class="section-sub">55 programmes across 5 faculties. Each programme runs across Years 1, 2, and 3, with different module sets per year. Programme codes use the format <code>faculty_level_programme</code> (e.g. <code>1_2_1</code>).</p>
+    <div class="faculty-grid" id="faculty-cards"></div>
+  </section>
+
+
+</div><!-- /content -->
+
+<footer>
+  Stonegrove University is a synthetic dataset. All data is fictional. &nbsp;|&nbsp;
+  <a href="../index.html">stonegrove.ac</a>
+</footer>
+
+<script>
+const ELF   = '#7a9e82';
+const DWARF = '#c9a84c';
+const MUTED = 'rgba(201,168,76,0.35)';
+
+async function init() {
+  let d;
+  try {
+    const r = await fetch('./data/overview.json');
+    if (!r.ok) throw new Error();
+    d = await r.json();
+  } catch {
+    document.getElementById('loading').textContent = 'Data not yet generated. Run: python scripts/aggregate_dashboard.py';
+    return;
+  }
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('main-content').style.display = 'block';
+  render(d);
+}
+
+function barRow(label, pct, color, narrow) {
+  return `<div class="bar-row">
+    <span class="bar-label${narrow ? ' narrow' : ''}">${label}</span>
+    <div class="bar-track"><div class="bar-fill" style="width:${Math.min(pct,100)}%;background:${color}"></div></div>
+    <span class="bar-pct">${pct}%</span>
+  </div>`;
+}
+
+function render(d) {
+  // At a glance stats
+  const maxEnrol = Math.max(...d.enrolment_by_year.map(r => r.n));
+  document.getElementById('glance-stats').innerHTML = `
+    <div class="stat-box"><div class="stat-label">Unique students</div><div class="stat-value">${d.total_students.toLocaleString()}</div><div class="stat-sub">across all cohorts</div></div>
+    <div class="stat-box"><div class="stat-label">Academic years</div><div class="stat-value">${d.academic_years.length}</div><div class="stat-sub">${d.academic_years[0]} – ${d.academic_years[d.academic_years.length-1]}</div></div>
+    <div class="stat-box"><div class="stat-label">Faculties</div><div class="stat-value">${d.faculties.length}</div><div class="stat-sub">across the university</div></div>
+    <div class="stat-box"><div class="stat-label">Programmes</div><div class="stat-value">${d.faculties.reduce((s, f) => s + f.programme_count, 0)}</div><div class="stat-sub">across all faculties</div></div>
+  `;
+
+  // Enrolment bars
+  const enrolHtml = d.enrolment_by_year.map(r =>
+    `<div class="bar-row">
+      <span class="bar-label narrow">${r.academic_year}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(r.n/maxEnrol*100)}%;background:var(--navy)"></div></div>
+      <span class="bar-pct">${r.n.toLocaleString()}</span>
+    </div>`
+  ).join('');
+  document.getElementById('enrolment-bars').innerHTML = enrolHtml;
+
+  // Species
+  document.getElementById('species-bars').innerHTML = d.species.map(s =>
+    barRow(s.species, s.pct, s.species === 'Elf' ? ELF : DWARF)
+  ).join('');
+
+  // Gender
+  const gColors = { male: '#7a9e82', female: '#c9a84c', neuter: '#b0a898' };
+  const gLabels = { male: 'Male', female: 'Female', neuter: 'Neuter' };
+  document.getElementById('gender-bars').innerHTML = d.gender.map(g =>
+    barRow(gLabels[g.gender] || g.gender, g.pct, gColors[g.gender] || '#aaa')
+  ).join('');
+
+  // Clans table
+  const tbody = document.querySelector('#clan-table tbody');
+  tbody.innerHTML = d.clans.map(c => `
+    <tr>
+      <td><strong>${c.clan.charAt(0).toUpperCase() + c.clan.slice(1)}</strong></td>
+      <td><span class="badge badge-${c.species.toLowerCase()}">${c.species}</span></td>
+      <td>${c.n.toLocaleString()}</td>
+      <td>${c.pct_of_species}%</td>
+    </tr>
+  `).join('');
+
+  // SES
+  const sesMax = Math.max(...d.ses.map(s => s.pct));
+  document.getElementById('ses-bars').innerHTML = d.ses.map(s =>
+    `<div class="bar-row">
+      <span class="bar-label narrow">Rank ${s.rank}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(s.pct/sesMax*100)}%;background:var(--navy)"></div></div>
+      <span class="bar-pct">${s.pct}%</span>
+    </div>`
+  ).join('');
+
+  // Disabilities (top 8 + no disability)
+  const disRows = d.disabilities.slice(0, 9);
+  const disMax  = Math.max(...disRows.map(x => x.pct));
+  document.getElementById('disability-bars').innerHTML = disRows.map(x =>
+    `<div class="bar-row">
+      <span class="bar-label" style="width:200px;font-size:0.82rem">${x.label}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.pct/disMax*100)}%;background:var(--dwarf)"></div></div>
+      <span class="bar-pct">${x.pct}%</span>
+    </div>`
+  ).join('');
+
+  // First gen
+  document.getElementById('first-gen-text').textContent =
+    `${d.first_gen_pct}% of students are the first in their family to attend university.`;
+
+  // Faculty cards
+  document.getElementById('faculty-cards').innerHTML = d.faculties.map(f => `
+    <div class="faculty-card">
+      <div class="fc-head">${f.name}<span class="fc-count">${f.programme_count} programmes</span></div>
+      <ul>
+        ${f.programmes.map(p => `<li>${p.name}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
+init();
+</script>
+</body>
+</html>

@@ -79,7 +79,7 @@ temporal_arc:
     academic_engagement: 0.03
     stress: -0.04
   midterm:                        # Weeks 6-8: assessment crunch
-    attendance: -0.03
+    attendance: -0.10
     stress: 0.12
   exam_base:                      # Weeks 10-12: exam period baseline
     stress: 0.18

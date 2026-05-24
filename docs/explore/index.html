@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonegrove Data Explorer</title>
+  <meta name="description" content="Explore student attainment, engagement, wellbeing, and graduate outcomes data from Stonegrove University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <style>
+    /* ── Variables ──────────────────────────────────────────── */
+    :root {
+      --parchment:    #f5f0e0;
+      --parchment-d:  #ede8dc;
+      --navy:         #1a1a2e;
+      --text-body:    #2e2e42;
+      --text-muted:   #888880;
+      --elf:          #7a9e82;
+      --elf-light:    rgba(122,158,130,0.15);
+      --dwarf:        #c9a84c;
+      --dwarf-light:  rgba(201,168,76,0.15);
+      --gap:          #d98878;
+      --gold:         #c9a84c;
+      --border:       #e0d8c4;
+      --heading-font: 'Playfair Display', Georgia, serif;
+      --body-font:    'Source Sans 3', system-ui, sans-serif;
+    }
+
+    /* ── Reset ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body-font);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-body);
+      background: var(--parchment);
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    header {
+      background: var(--navy);
+      border-top: 3px solid var(--gold);
+      padding: 2rem 2.5rem 1.75rem;
+    }
+    header .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      margin-bottom: 0.35rem;
+    }
+    header h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: rgba(245,240,224,0.7);
+      font-size: 0.95rem;
+      max-width: 680px;
+    }
+    header a.back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: rgba(201,168,76,0.8);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    header a.back-link:hover { color: var(--gold); }
+
+    /* ── Filter bar ─────────────────────────────────────────── */
+    .filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--parchment-d);
+      border-bottom: 1px solid var(--border);
+      padding: 0.7rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-bar label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 0.4rem;
+    }
+    .filter-bar select {
+      font-family: var(--body-font);
+      font-size: 0.88rem;
+      padding: 0.3rem 0.6rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--parchment);
+      color: var(--text-body);
+      cursor: pointer;
+    }
+    .filter-bar select:focus { outline: 2px solid var(--gold); }
+    .filter-bar .filter-note {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ── Tab nav ─────────────────────────────────────────────── */
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      background: var(--parchment);
+      padding: 0 2.5rem;
+    }
+    .tab-btn {
+      font-family: var(--body-font);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0.9rem 1.4rem;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin-bottom: -2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-btn:hover { color: var(--text-body); }
+    .tab-btn.active {
+      color: var(--navy);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── Loading / error ─────────────────────────────────────── */
+    #loading-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ── Tab panels ──────────────────────────────────────────── */
+    .tab-panel { display: none; padding: 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .tab-panel.active { display: block; }
+
+    .panel-intro {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .panel-intro h2 {
+      font-family: var(--heading-font);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .panel-intro p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      max-width: 680px;
+    }
+
+    /* ── Chart grid ──────────────────────────────────────────── */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .chart-grid.single { grid-template-columns: 1fr; }
+    @media (max-width: 860px) { .chart-grid { grid-template-columns: 1fr; } }
+
+    .chart-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+    }
+    .chart-card.wide { grid-column: 1 / -1; }
+
+    .chart-card h3 {
+      font-family: var(--heading-font);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+    .chart-card .chart-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      line-height: 1.5;
+    }
+    .chart-wrapper { position: relative; height: 300px; }
+    .chart-card.tall .chart-wrapper { height: 380px; }
+
+    /* ── Legend ──────────────────────────────────────────────── */
+    .species-legend {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.82rem;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+    .legend-swatch {
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── Key stats ───────────────────────────────────────────── */
+    .stat-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .stat-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.1rem 1.4rem;
+      min-width: 160px;
+      flex: 1;
+    }
+    .stat-box .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .stat-box .stat-value {
+      font-family: var(--heading-font);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .stat-box .stat-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .stat-box.gap-box .stat-value { color: var(--gap); }
+
+    /* ── Overview: two-col layout ───────────────────────────── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* ── Overview: CSS bar rows ──────────────────────────────── */
+    .bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.45rem; font-size: 0.85rem; }
+    .bar-label { flex-shrink: 0; color: var(--text-body); }
+    .bar-label.w120 { width: 120px; }
+    .bar-label.w80  { width: 80px; }
+    .bar-label.w200 { width: 200px; }
+    .bar-track { flex: 1; height: 16px; background: var(--parchment-d); border-radius: 3px; overflow: hidden; }
+    .bar-fill  { height: 100%; border-radius: 3px; }
+    .bar-pct   { width: 40px; flex-shrink: 0; text-align: right; color: var(--text-muted); font-size: 0.8rem; }
+
+    /* ── Overview: species badge ─────────────────────────────── */
+    .badge { display: inline-block; padding: 0.12rem 0.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .badge-elf   { background: rgba(122,158,130,0.2); color: #4a7c59; }
+    .badge-dwarf { background: rgba(201,168,76,0.2);  color: #7a5c00; }
+
+    /* ── Overview: data table ────────────────────────────────── */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .data-table th { background: var(--parchment-d); color: var(--text-muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.07em; padding: 0.65rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+    .data-table td { padding: 0.5rem 1rem; border-bottom: 1px solid rgba(224,216,196,0.4); vertical-align: middle; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(245,240,224,0.6); }
+
+    /* ── Overview: faculty cards ─────────────────────────────── */
+    .faculty-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    @media (max-width: 700px) { .faculty-grid { grid-template-columns: 1fr; } }
+    .faculty-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .faculty-card .fc-head { background: var(--navy); color: var(--parchment); padding: 0.8rem 1.1rem; font-family: var(--heading-font); font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: baseline; }
+    .faculty-card .fc-count { font-family: var(--body-font); font-size: 0.75rem; font-weight: 400; color: rgba(245,240,224,0.55); }
+    .faculty-card ul { list-style: none; padding: 0.4rem 0; }
+    .faculty-card ul li { padding: 0.35rem 1.1rem; font-size: 0.84rem; border-bottom: 1px solid rgba(224,216,196,0.3); }
+    .faculty-card ul li:last-child { border-bottom: none; }
+
+    /* ── Overview: research questions ────────────────────────── */
+    .rq-list { list-style: none; padding: 0; }
+    .rq-list li { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 0.9rem 1.1rem; margin-bottom: 0.65rem; font-size: 0.9rem; }
+    .rq-list li strong { display: block; color: var(--navy); margin-bottom: 0.15rem; }
+
+    /* ── Overview: section heading ───────────────────────────── */
+    .ov-section { margin-bottom: 2.5rem; }
+    .ov-section h3 { font-family: var(--heading-font); font-size: 1.1rem; color: var(--navy); margin-bottom: 0.4rem; }
+    .ov-section .ov-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.9rem; }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    footer a { color: var(--text-muted); }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="eyebrow">Stonegrove University</div>
+  <h1>Student Data Explorer</h1>
+  <p>Who are Stonegrove's students, and what patterns exist in their attainment, engagement, and outcomes? Start with the Overview tab, then use the filters to dig deeper.</p>
+  <a class="back-link" href="../index.html">← Back to Stonegrove University</a>
+</header>
+
+<!-- Filter bar -->
+<div class="filter-bar">
+  <div>
+    <label for="sel-faculty">Faculty</label>
+    <select id="sel-faculty">
+      <option value="All">All faculties</option>
+    </select>
+  </div>
+  <div>
+    <label for="sel-year">Academic year</label>
+    <select id="sel-year">
+      <option value="All">All years</option>
+    </select>
+  </div>
+  <div>
+    <label for="sel-prog-year">Year of study</label>
+    <select id="sel-prog-year">
+      <option value="All">All years</option>
+      <option value="1">Year 1</option>
+      <option value="2">Year 2</option>
+      <option value="3">Year 3</option>
+    </select>
+  </div>
+  <span class="filter-note">Filters apply to charts in the current tab</span>
+</div>
+
+<!-- Tab navigation -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="overview">Overview</button>
+  <button class="tab-btn" data-tab="attainment">Attainment</button>
+  <button class="tab-btn" data-tab="engagement">Engagement</button>
+  <button class="tab-btn" data-tab="wellbeing">Wellbeing</button>
+  <button class="tab-btn" data-tab="outcomes">Outcomes</button>
+</nav>
+
+<div id="loading-state">Loading data…</div>
+
+<!-- ── TAB: OVERVIEW ──────────────────────────────────────────── -->
+<section id="tab-overview" class="tab-panel active">
+  <div class="panel-intro">
+    <h2>Overview</h2>
+    <p>Who are Stonegrove's students? Seven cohorts across 7 academic years, two species, 14 clans, 55 programmes. This tab summarises the student population and university structure. Use it to orient yourself before exploring the data.</p>
+  </div>
+
+  <!-- At a glance -->
+  <div class="stat-row" id="ov-glance"></div>
+
+  <!-- Students -->
+  <div class="two-col">
+    <div class="ov-section">
+      <h3>Species</h3>
+      <p class="ov-note">The Dwarf–Elf split is approximately 60/40, not 50/50 — this reflects variation in clan sizes.</p>
+      <div id="ov-species"></div>
+    </div>
+    <div class="ov-section">
+      <h3>Gender</h3>
+      <p class="ov-note">"Neuter" appears for a subset of both Elf and Dwarf students, in keeping with the Middle-Earth lore setting.</p>
+      <div id="ov-gender"></div>
+    </div>
+  </div>
+
+  <div class="ov-section">
+    <h3>Enrolment by academic year</h3>
+    <p class="ov-note">Active enrolments grow each year as new cohorts enter while continuing students remain.</p>
+    <div id="ov-enrolment"></div>
+  </div>
+
+  <div class="ov-section">
+    <h3>Clans</h3>
+    <p class="ov-note">14 clans total — 8 Dwarf, 6 Elf. Clan membership shapes personality profiles and, indirectly, attainment outcomes through socioeconomic and motivational pathways.</p>
+    <table class="data-table">
+      <thead><tr><th>Clan</th><th>Species</th><th>Students</th><th>% of species</th></tr></thead>
+      <tbody id="ov-clan-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="ov-section">
+      <h3>Socioeconomic rank</h3>
+      <p class="ov-note">Ranked 1 (lowest) to 8 (highest). SES drives prior educational experience and is a key mediator of the attainment gap.</p>
+      <div id="ov-ses"></div>
+    </div>
+    <div class="ov-section">
+      <h3>Disabilities</h3>
+      <p class="ov-note">Students may have multiple recorded disabilities. Figures show % of students with any mention of each category.</p>
+      <div id="ov-disabilities"></div>
+    </div>
+  </div>
+
+  <div class="ov-section">
+    <p id="ov-firstgen" style="font-size:0.9rem;background:#fff;border:1px solid var(--border);border-radius:6px;padding:1rem 1.2rem;"></p>
+  </div>
+
+  <!-- Programmes -->
+  <div class="ov-section">
+    <h3>Programmes by faculty</h3>
+    <p class="ov-note">55 programmes across 5 faculties, each running Years 1–3.</p>
+    <div class="faculty-grid" id="ov-faculties"></div>
+  </div>
+
+</section>
+
+<!-- ── TAB: ATTAINMENT ─────────────────────────────────────────── -->
+<section id="tab-attainment" class="tab-panel">
+  <div class="panel-intro">
+    <h2>Attainment</h2>
+    <p>Module-level marks and grade distributions across species and faculties. A "good mark" means a First or 2:1 (combined mark ≥ 60). Year of study filter applies where relevant.</p>
+  </div>
+
+  <div class="stat-row" id="att-stats"></div>
+
+  <div class="chart-grid">
+    <div class="chart-card wide">
+      <h3>Good-Mark Rate Over Time</h3>
+      <p class="chart-desc">Percentage of module assessments graded First or 2:1, by academic year. Faculty filter applies — select a faculty to see its specific trend.</p>
+      <div class="species-legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--elf)"></span>Elf</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--dwarf)"></span>Dwarf</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--gap)"></span>Gap (Elf − Dwarf)</span>
+      </div>
+      <div class="chart-wrapper"><canvas id="chart-att-trend"></canvas></div>
+    </div>
+    <div class="chart-card tall">
+      <h3>Mean Mark by Faculty</h3>
+      <p class="chart-desc">Average combined mark per faculty. Year and year-of-study filters apply.</p>
+      <div class="chart-wrapper"><canvas id="chart-att-faculty"></canvas></div>
+    </div>
+    <div class="chart-card tall">
+      <h3>Grade Distribution</h3>
+      <p class="chart-desc">Breakdown of assessment grades for Elf and Dwarf students. All active filters apply.</p>
+      <div class="chart-wrapper"><canvas id="chart-att-grades"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TAB: ENGAGEMENT ─────────────────────────────────────────── -->
+<section id="tab-engagement" class="tab-panel">
+  <div class="panel-intro">
+    <h2>Engagement</h2>
+    <p>Weekly attendance across the 12-week semester, averaged across all modules a student takes. Academic year filter applies. Attendance does not vary meaningfully by faculty — the pattern is driven by species and individual factors.</p>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card wide">
+      <h3>Attendance Through the Year</h3>
+      <p class="chart-desc">Mean attendance rate (proportion of timetabled sessions attended) by week and species. Attendance is highest in the first two weeks and dips slightly around mid-semester, before stabilising through to the end of term.</p>
+      <div class="species-legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--elf)"></span>Elf</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--dwarf)"></span>Dwarf</span>
+      </div>
+      <div class="chart-wrapper"><canvas id="chart-eng-attendance"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TAB: WELLBEING ──────────────────────────────────────────── -->
+<section id="tab-wellbeing" class="tab-panel">
+  <div class="panel-intro">
+    <h2>Wellbeing</h2>
+    <p>Data from two surveys: the annual enrolment survey (all students, ~82% response rate) and the NSS satisfaction survey (Year 3 only, ~68% response rate). All filters apply.</p>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card wide">
+      <h3>Sense of Belonging by Year of Study</h3>
+      <p class="chart-desc">Mean belonging scores (1–5 scale) from the enrolment survey, broken down by year of study. Shows how students' connection to their programme changes as they progress. Faculty and academic year filters apply.</p>
+      <div class="species-legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--elf)"></span>Elf — belonging to programme</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--dwarf)"></span>Dwarf — belonging to programme</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--elf); opacity:0.45"></span>Elf — belonging to peers</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--dwarf); opacity:0.45"></span>Dwarf — belonging to peers</span>
+      </div>
+      <div class="chart-wrapper chart-wrapper--tall" style="height:320px"><canvas id="chart-wb-belonging"></canvas></div>
+    </div>
+    <div class="chart-card tall">
+      <h3>NSS Satisfaction Themes</h3>
+      <p class="chart-desc">Mean NSS scores by theme (1–5 scale, Year 3 respondents only). Faculty and academic year filters apply.</p>
+      <div class="chart-wrapper"><canvas id="chart-wb-nss"></canvas></div>
+    </div>
+    <div class="chart-card tall">
+      <h3>Self-Efficacy & Career Thinking</h3>
+      <p class="chart-desc">Mean academic self-efficacy and career clarity scores (1–5) from the enrolment survey. All active filters apply.</p>
+      <div class="chart-wrapper"><canvas id="chart-wb-efficacy"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TAB: OUTCOMES ───────────────────────────────────────────── -->
+<section id="tab-outcomes" class="tab-panel">
+  <div class="panel-intro">
+    <h2>Graduate Outcomes</h2>
+    <p>Degree classifications and post-graduation destinations from the graduate outcomes survey (~70% response rate, HESA benchmark). Degree classifications are available for all graduates regardless of survey response.</p>
+  </div>
+
+  <div class="stat-row" id="out-stats"></div>
+
+  <div class="chart-grid">
+    <div class="chart-card wide">
+      <h3>Good Degree Rate by Faculty</h3>
+      <p class="chart-desc">Percentage of graduates awarded a First or 2:1, by faculty and species. Faculty filter highlights one faculty; use "All faculties" to compare across the university. Aggregated across all graduation years.</p>
+      <div class="species-legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--elf)"></span>Elf</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:var(--dwarf)"></span>Dwarf</span>
+      </div>
+      <div class="chart-wrapper"><canvas id="chart-out-good-degree"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Post-Graduation Destinations</h3>
+      <p class="chart-desc">Employment, further study, and professional attainment rates by species. Faculty filter applies. Based on survey respondents (~70%).</p>
+      <div class="chart-wrapper"><canvas id="chart-out-destinations"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Salary Band Distribution</h3>
+      <p class="chart-desc">Distribution of salary bands among employed graduates (1 = lowest, 5 = highest). Faculty filter applies.</p>
+      <div class="chart-wrapper"><canvas id="chart-out-salary"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Stonegrove University is a synthetic dataset. All data is fictional. &nbsp;|&nbsp;
+  <a href="../index.html">stonegrove.ac</a> &nbsp;|&nbsp;
+  <a href="https://github.com/RosieBryce/simulated-university" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+// ── Constants ────────────────────────────────────────────────────
+const p1 = x => parseFloat(x).toFixed(1);
+
+const ELF      = '#7a9e82';
+const DWARF    = '#c9a84c';
+const GAP      = '#d98878';
+const ELF_L    = 'rgba(122,158,130,0.18)';
+const DWARF_L  = 'rgba(201,168,76,0.18)';
+const ELF_MED  = 'rgba(122,158,130,0.55)';
+const DWARF_MED= 'rgba(201,168,76,0.55)';
+const TEXT     = '#2e2e42';
+const MUTED    = '#888880';
+
+const NSS_LABELS = {
+  teaching_quality:       'Teaching quality',
+  learning_opportunities: 'Learning opportunities',
+  assessment_feedback:    'Assessment & feedback',
+  academic_support:       'Academic support',
+  organisation_management:'Organisation',
+  learning_resources:     'Learning resources',
+  student_voice:          'Student voice',
+  overall_satisfaction:   'Overall satisfaction',
+};
+
+const FACULTY_SHORT = {
+  'Science & Engineering':       'Sci & Eng',
+  'Craft, Art & Architecture':   'Craft & Art',
+  'Culture & Social Sciences':   'Culture & Soc Sci',
+  'Health & Education':          'Health & Ed',
+  'Business & Law School':       'Business & Law',
+};
+
+// ── State ────────────────────────────────────────────────────────
+let DATA = {};
+let CHARTS = {};
+let FILTERS = { faculty: 'All', year: 'All', progYear: 'All' };
+
+// ── Chart.js defaults ────────────────────────────────────────────
+Chart.defaults.font.family = "'Source Sans 3', system-ui, sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = MUTED;
+Chart.defaults.plugins.legend.display = false;
+
+// ── Data helpers ─────────────────────────────────────────────────
+function filterRows(arr, opts = {}) {
+  const { faculty = true, year = true, progYear = false } = opts;
+  return arr.filter(r => {
+    if (faculty  && FILTERS.faculty  !== 'All' && r.faculty       && r.faculty       !== FILTERS.faculty)                    return false;
+    if (year     && FILTERS.year     !== 'All' && r.academic_year && r.academic_year  !== FILTERS.year)                      return false;
+    if (progYear && FILTERS.progYear !== 'All' && r.programme_year != null && String(r.programme_year) !== FILTERS.progYear) return false;
+    return true;
+  });
+}
+
+function groupBy(arr, key) {
+  const out = {};
+  for (const r of arr) {
+    const k = r[key] ?? '__null__';
+    (out[k] = out[k] || []).push(r);
+  }
+  return out;
+}
+
+function weightedMean(rows, valKey, weightKey = 'n') {
+  const totalW = rows.reduce((s, r) => s + (r[weightKey] || 0), 0);
+  if (!totalW) return null;
+  return rows.reduce((s, r) => s + (r[valKey] ?? 0) * (r[weightKey] || 0), 0) / totalW;
+}
+
+function simpleMean(rows, key) {
+  const vals = rows.map(r => r[key]).filter(v => v != null);
+  if (!vals.length) return null;
+  return vals.reduce((a, b) => a + b, 0) / vals.length;
+}
+
+function round1(x) { return x == null ? null : Math.round(x * 10) / 10; }
+function round0(x) { return x == null ? null : Math.round(x); }
+
+// ── Chart helpers ────────────────────────────────────────────────
+function destroyChart(id) {
+  if (CHARTS[id]) { CHARTS[id].destroy(); delete CHARTS[id]; }
+}
+
+function makeChart(id, config) {
+  destroyChart(id);
+  const canvas = document.getElementById(id);
+  if (!canvas) return;
+  CHARTS[id] = new Chart(canvas, config);
+}
+
+const baseLineOpts = (yLabel, yMax) => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  scales: {
+    x: { grid: { color: 'rgba(0,0,0,0.05)' } },
+    y: {
+      beginAtZero: false,
+      max: yMax,
+      title: { display: !!yLabel, text: yLabel, color: MUTED, font: { size: 11 } },
+      grid: { color: 'rgba(0,0,0,0.05)' },
+    },
+  },
+  plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${round1(ctx.parsed.y)}` } } },
+});
+
+const baseBarOpts = (xLabel, yLabel) => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  indexAxis: 'x',
+  scales: {
+    x: { grid: { display: false }, title: { display: !!xLabel, text: xLabel, color: MUTED, font: { size: 11 } } },
+    y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, title: { display: !!yLabel, text: yLabel, color: MUTED, font: { size: 11 } } },
+  },
+  plugins: { legend: { display: false } },
+});
+
+// ── Render: ATTAINMENT ───────────────────────────────────────────
+function renderAttainment() {
+  const att = DATA.attainment;
+  if (!att) return;
+
+  // Key stats
+  const filtered = filterRows(att);
+  const elfRows   = filtered.filter(r => r.species === 'Elf');
+  const dwarfRows = filtered.filter(r => r.species === 'Dwarf');
+  const elfGood   = round1(weightedMean(elfRows,   'good_mark_pct'));
+  const dwarfGood = round1(weightedMean(dwarfRows, 'good_mark_pct'));
+  const gap       = elfGood != null && dwarfGood != null ? round1(elfGood - dwarfGood) : null;
+
+  document.getElementById('att-stats').innerHTML = `
+    <div class="stat-box"><div class="stat-label">Elf — good mark rate</div><div class="stat-value">${elfGood ?? '—'}%</div><div class="stat-sub">First or 2:1</div></div>
+    <div class="stat-box"><div class="stat-label">Dwarf — good mark rate</div><div class="stat-value">${dwarfGood ?? '—'}%</div><div class="stat-sub">First or 2:1</div></div>
+    <div class="stat-box gap-box"><div class="stat-label">Attainment gap</div><div class="stat-value">${gap != null ? gap + 'pp' : '—'}</div><div class="stat-sub">Elf minus Dwarf</div></div>
+  `;
+
+  // Chart 1: trend over academic years
+  const years = [...new Set(att.map(r => r.academic_year))].sort();
+  // Apply faculty filter but not year filter (year is the x-axis)
+  const trendRows = filterRows(att, { faculty: true, year: false, progYear: false });
+  const elfByYear   = years.map(y => round1(weightedMean(trendRows.filter(r => r.species === 'Elf'   && r.academic_year === y), 'good_mark_pct')));
+  const dwarfByYear = years.map(y => round1(weightedMean(trendRows.filter(r => r.species === 'Dwarf' && r.academic_year === y), 'good_mark_pct')));
+  const gapByYear   = years.map((_, i) => elfByYear[i] != null && dwarfByYear[i] != null ? round1(elfByYear[i] - dwarfByYear[i]) : null);
+
+  makeChart('chart-att-trend', {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [
+        { label: 'Elf',          data: elfByYear,   borderColor: ELF,   backgroundColor: ELF_L,   fill: false, tension: 0.3, pointRadius: 4, borderWidth: 2.5 },
+        { label: 'Dwarf',        data: dwarfByYear, borderColor: DWARF, backgroundColor: DWARF_L, fill: false, tension: 0.3, pointRadius: 4, borderWidth: 2.5 },
+        { label: 'Gap',          data: gapByYear,   borderColor: GAP,   backgroundColor: 'transparent', fill: false, tension: 0.3, pointRadius: 3, borderWidth: 1.5, borderDash: [5, 3] },
+      ],
+    },
+    options: {
+      ...baseLineOpts('Good mark %', 100),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 16, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } },
+      },
+    },
+  });
+
+  // Chart 2: mean mark by faculty (horizontal bars)
+  const faculties = [...new Set(att.map(r => r.faculty))].sort();
+  const facFiltered = filterRows(att, { faculty: false, year: true, progYear: true });
+  const elfByFac   = faculties.map(f => round1(weightedMean(facFiltered.filter(r => r.species === 'Elf'   && r.faculty === f), 'mean_mark')));
+  const dwarfByFac = faculties.map(f => round1(weightedMean(facFiltered.filter(r => r.species === 'Dwarf' && r.faculty === f), 'mean_mark')));
+
+  makeChart('chart-att-faculty', {
+    type: 'bar',
+    data: {
+      labels: faculties.map(f => FACULTY_SHORT[f] || f),
+      datasets: [
+        { label: 'Elf',   data: elfByFac,   backgroundColor: ELF,   borderRadius: 3 },
+        { label: 'Dwarf', data: dwarfByFac, backgroundColor: DWARF, borderRadius: 3 },
+      ],
+    },
+    options: {
+      ...baseBarOpts(null, 'Mean combined mark'),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 12, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}` } },
+      },
+      scales: { ...baseBarOpts().scales, y: { beginAtZero: false, min: 40, grid: { color: 'rgba(0,0,0,0.05)' }, title: { display: true, text: 'Mean combined mark', color: MUTED, font: { size: 11 } } } },
+    },
+  });
+
+  // Chart 3: grade distribution (stacked bar, Elf vs Dwarf)
+  const gradeFiltered = filterRows(att);
+  const elfGrades   = { First: 0, '2:1': 0, '2:2': 0, Third: 0, Fail: 0 };
+  const dwarfGrades = { First: 0, '2:1': 0, '2:2': 0, Third: 0, Fail: 0 };
+  let elfN = 0, dwarfN = 0;
+
+  for (const r of gradeFiltered) {
+    const target = r.species === 'Elf' ? elfGrades : dwarfGrades;
+    const n = r.n || 1;
+    if (r.species === 'Elf') elfN += n; else dwarfN += n;
+    for (const g of Object.keys(target)) {
+      target[g] += (r.grade_dist?.[g] ?? 0) * n;
+    }
+  }
+  const gradeColors = ['#4a7c59', ELF, '#b0c4b8', DWARF, GAP];
+  const grades = ['First', '2:1', '2:2', 'Third', 'Fail'];
+
+  makeChart('chart-att-grades', {
+    type: 'bar',
+    data: {
+      labels: ['Elf', 'Dwarf'],
+      datasets: grades.map((g, i) => ({
+        label: g,
+        data: [
+          elfN   ? round1(elfGrades[g]   / elfN)   : 0,
+          dwarfN ? round1(dwarfGrades[g] / dwarfN) : 0,
+        ],
+        backgroundColor: gradeColors[i],
+        borderRadius: i === 0 ? 3 : 0,
+        borderSkipped: false,
+      })),
+    },
+    options: {
+      ...baseBarOpts(null, 'Percentage of assessments'),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 10, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } },
+      },
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, max: 100, grid: { color: 'rgba(0,0,0,0.05)' }, title: { display: true, text: '% of assessments', color: MUTED, font: { size: 11 } } },
+      },
+    },
+  });
+}
+
+// ── Render: ENGAGEMENT ───────────────────────────────────────────
+function renderEngagement() {
+  const eng = DATA.engagement;
+  if (!eng) return;
+
+  // Apply faculty + year filters; week is the x-axis
+  const rows = filterRows(eng, { faculty: true, year: true, progYear: false });
+  const weeks = [...new Set(eng.map(r => r.week_number))].sort((a, b) => a - b);
+
+  function weekSeries(species, metric) {
+    return weeks.map(w => {
+      const wRows = rows.filter(r => r.species === species && r.week_number === w);
+      return wRows.length ? round1(simpleMean(wRows, metric)) : null;
+    });
+  }
+
+  // Attendance
+  const attCol = 'mean_attendance' in (rows[0] || {}) ? 'mean_attendance' : 'mean_attendance_rate';
+  makeChart('chart-eng-attendance', {
+    type: 'line',
+    data: {
+      labels: weeks.map(w => `Wk ${w}`),
+      datasets: [
+        { label: 'Elf',   data: weekSeries('Elf',   attCol), borderColor: ELF,   fill: true, backgroundColor: ELF_L,   tension: 0.4, pointRadius: 3, borderWidth: 2.5 },
+        { label: 'Dwarf', data: weekSeries('Dwarf', attCol), borderColor: DWARF, fill: true, backgroundColor: DWARF_L, tension: 0.4, pointRadius: 3, borderWidth: 2.5 },
+      ],
+    },
+    options: {
+      ...baseLineOpts('Attendance rate', 1),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 14, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${Math.round(ctx.parsed.y * 100)}%` } },
+      },
+      scales: {
+        x: { grid: { color: 'rgba(0,0,0,0.05)' } },
+        y: { grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: v => Math.round(v * 100) + '%' } },
+      },
+    },
+  });
+
+}
+
+// ── Render: WELLBEING ─────────────────────────────────────────────
+function renderWellbeing() {
+  const survey = DATA.survey;
+  const nss    = DATA.nss;
+
+  // Belonging by year of study
+  if (survey) {
+    const survRows = filterRows(survey, { faculty: true, year: true, progYear: false });
+    const progYears = [1, 2, 3];
+
+    function belongMean(species, py, col) {
+      const r = survRows.filter(s => s.species === species && s.programme_year === py);
+      return round1(simpleMean(r, col));
+    }
+
+    makeChart('chart-wb-belonging', {
+      type: 'bar',
+      data: {
+        labels: ['Year 1', 'Year 2', 'Year 3'],
+        datasets: [
+          { label: 'Elf — programme',  data: progYears.map(y => belongMean('Elf',   y, 'belonging_programme')), backgroundColor: ELF,      borderRadius: 3 },
+          { label: 'Dwarf — programme',data: progYears.map(y => belongMean('Dwarf', y, 'belonging_programme')), backgroundColor: DWARF,     borderRadius: 3 },
+          { label: 'Elf — peers',      data: progYears.map(y => belongMean('Elf',   y, 'belonging_peers')),     backgroundColor: ELF_MED,   borderRadius: 3 },
+          { label: 'Dwarf — peers',    data: progYears.map(y => belongMean('Dwarf', y, 'belonging_peers')),     backgroundColor: DWARF_MED, borderRadius: 3 },
+        ],
+      },
+      options: {
+        ...baseBarOpts(null, 'Mean score (1–5)'),
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 10, color: TEXT } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}` } },
+        },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: false, min: 1, max: 5, grid: { color: 'rgba(0,0,0,0.05)' } } },
+      },
+    });
+  }
+
+  // NSS themes
+  if (nss) {
+    const nssRows  = filterRows(nss, { faculty: true, year: true, progYear: false });
+    const elfNSS   = nssRows.filter(r => r.species === 'Elf');
+    const dwarfNSS = nssRows.filter(r => r.species === 'Dwarf');
+    const themes   = Object.keys(NSS_LABELS);
+
+    makeChart('chart-wb-nss', {
+      type: 'bar',
+      data: {
+        labels: themes.map(t => NSS_LABELS[t]),
+        datasets: [
+          { label: 'Elf',   data: themes.map(t => round1(simpleMean(elfNSS,   t))), backgroundColor: ELF,   borderRadius: 3 },
+          { label: 'Dwarf', data: themes.map(t => round1(simpleMean(dwarfNSS, t))), backgroundColor: DWARF, borderRadius: 3 },
+        ],
+      },
+      options: {
+        ...baseBarOpts(null, 'Mean score (1–5)'),
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 12, color: TEXT } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}` } },
+        },
+        scales: { x: { grid: { display: false }, ticks: { maxRotation: 40, font: { size: 10 } } }, y: { beginAtZero: false, min: 1, max: 5, grid: { color: 'rgba(0,0,0,0.05)' } } },
+      },
+    });
+  }
+
+  // Self-efficacy & career
+  if (survey) {
+    const survRows = filterRows(survey, { faculty: true, year: true, progYear: true });
+    const elfS     = survRows.filter(r => r.species === 'Elf');
+    const dwarfS   = survRows.filter(r => r.species === 'Dwarf');
+
+    makeChart('chart-wb-efficacy', {
+      type: 'bar',
+      data: {
+        labels: ['Academic\nself-efficacy', 'Career\nclarity', 'Career\nconfidence', 'Support\nsatisfaction'],
+        datasets: [
+          { label: 'Elf',   data: ['academic_self_efficacy','career_clarity','career_confidence','support_satisfaction'].map(c => round1(simpleMean(elfS,   c))), backgroundColor: ELF,   borderRadius: 3 },
+          { label: 'Dwarf', data: ['academic_self_efficacy','career_clarity','career_confidence','support_satisfaction'].map(c => round1(simpleMean(dwarfS, c))), backgroundColor: DWARF, borderRadius: 3 },
+        ],
+      },
+      options: {
+        ...baseBarOpts(null, 'Mean score (1–5)'),
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 12, color: TEXT } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}` } },
+        },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: false, min: 1, max: 5, grid: { color: 'rgba(0,0,0,0.05)' } } },
+      },
+    });
+  }
+}
+
+// ── Render: OUTCOMES ──────────────────────────────────────────────
+function renderOutcomes() {
+  const outcomes = DATA.outcomes;
+  if (!outcomes) return;
+
+  // Faculty filter only (outcomes are pooled across graduation years)
+  const rows = filterRows(outcomes, { faculty: false, year: false, progYear: false });
+  const facFiltered = FILTERS.faculty === 'All'
+    ? rows
+    : rows.filter(r => r.faculty === FILTERS.faculty);
+
+  // Key stats
+  const elfRows   = facFiltered.filter(r => r.species === 'Elf');
+  const dwarfRows = facFiltered.filter(r => r.species === 'Dwarf');
+  const elfGood   = round1(weightedMean(elfRows,   'good_degree_pct'));
+  const dwarfGood = round1(weightedMean(dwarfRows, 'good_degree_pct'));
+  const gap       = elfGood != null && dwarfGood != null ? round1(elfGood - dwarfGood) : null;
+
+  document.getElementById('out-stats').innerHTML = `
+    <div class="stat-box"><div class="stat-label">Elf — good degree rate</div><div class="stat-value">${elfGood ?? '—'}%</div><div class="stat-sub">First or 2:1</div></div>
+    <div class="stat-box"><div class="stat-label">Dwarf — good degree rate</div><div class="stat-value">${dwarfGood ?? '—'}%</div><div class="stat-sub">First or 2:1</div></div>
+    <div class="stat-box gap-box"><div class="stat-label">Degree gap</div><div class="stat-value">${gap != null ? gap + 'pp' : '—'}</div><div class="stat-sub">Elf minus Dwarf</div></div>
+  `;
+
+  // Chart 1: good degree by faculty (grouped bars)
+  const faculties = [...new Set(outcomes.map(r => r.faculty))].sort();
+  const allFacRows = rows; // no faculty filter for this chart — shows all faculties
+  const elfFacGood   = faculties.map(f => round1(weightedMean(allFacRows.filter(r => r.species === 'Elf'   && r.faculty === f), 'good_degree_pct')));
+  const dwarfFacGood = faculties.map(f => round1(weightedMean(allFacRows.filter(r => r.species === 'Dwarf' && r.faculty === f), 'good_degree_pct')));
+
+  makeChart('chart-out-good-degree', {
+    type: 'bar',
+    data: {
+      labels: faculties.map(f => FACULTY_SHORT[f] || f),
+      datasets: [
+        { label: 'Elf',   data: elfFacGood,   backgroundColor: ELF,   borderRadius: 3 },
+        { label: 'Dwarf', data: dwarfFacGood, backgroundColor: DWARF, borderRadius: 3 },
+      ],
+    },
+    options: {
+      ...baseBarOpts(null, 'Good degree %'),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 12, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } },
+      },
+      scales: { x: { grid: { display: false } }, y: { beginAtZero: false, min: 20, max: 100, grid: { color: 'rgba(0,0,0,0.05)' }, title: { display: true, text: 'Good degree %', color: MUTED, font: { size: 11 } } } },
+    },
+  });
+
+  // Chart 2: destinations (employment, further study, professional)
+  const destLabels = ['Employment rate', 'Further study', 'Professional role'];
+  const elfDest   = [weightedMean(elfRows, 'employment_pct'),    weightedMean(elfRows, 'further_study_pct'),   weightedMean(elfRows,   'professional_pct')].map(round1);
+  const dwarfDest = [weightedMean(dwarfRows, 'employment_pct'),  weightedMean(dwarfRows, 'further_study_pct'), weightedMean(dwarfRows, 'professional_pct')].map(round1);
+
+  makeChart('chart-out-destinations', {
+    type: 'bar',
+    data: {
+      labels: destLabels,
+      datasets: [
+        { label: 'Elf',   data: elfDest,   backgroundColor: ELF,   borderRadius: 3 },
+        { label: 'Dwarf', data: dwarfDest, backgroundColor: DWARF, borderRadius: 3 },
+      ],
+    },
+    options: {
+      ...baseBarOpts(null, '%'),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 12, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } },
+      },
+      scales: { x: { grid: { display: false } }, y: { beginAtZero: true, max: 100, grid: { color: 'rgba(0,0,0,0.05)' } } },
+    },
+  });
+
+  // Chart 3: salary distribution (stacked bar)
+  const salaryLabels = ['Band 1 (lowest)', 'Band 2', 'Band 3', 'Band 4', 'Band 5 (highest)'];
+  const salaryColors = [GAP, '#e0a882', DWARF, ELF, '#4a7c59'];
+
+  function salDist(rows, label) {
+    const all = rows.flatMap(r => Object.entries(r.salary_dist || {}));
+    const totals = {};
+    const counts = {};
+    for (const [k, v] of all) { totals[k] = (totals[k] || 0) + v; counts[k] = (counts[k] || 0) + 1; }
+    return salaryLabels.map(k => round1(counts[k] ? totals[k] / counts[k] : 0));
+  }
+
+  makeChart('chart-out-salary', {
+    type: 'bar',
+    data: {
+      labels: ['Elf', 'Dwarf'],
+      datasets: salaryLabels.map((label, i) => ({
+        label,
+        data: [salDist(elfRows, label)[i], salDist(dwarfRows, label)[i]],
+        backgroundColor: salaryColors[i],
+        borderRadius: i === 0 ? 3 : 0,
+        borderSkipped: false,
+      })),
+    },
+    options: {
+      ...baseBarOpts(null, '% of employed graduates'),
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, padding: 8, color: TEXT } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } },
+      },
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, max: 100, grid: { color: 'rgba(0,0,0,0.05)' } },
+      },
+    },
+  });
+}
+
+// ── Render: OVERVIEW ──────────────────────────────────────────────
+function renderOverview() {
+  const d = DATA.overview;
+  if (!d) return;
+
+  const totalProg = d.faculties.reduce((s, f) => s + f.programme_count, 0);
+
+  // Glance stats
+  document.getElementById('ov-glance').innerHTML = `
+    <div class="stat-box"><div class="stat-label">Unique students</div><div class="stat-value">${d.total_students.toLocaleString()}</div><div class="stat-sub">across all cohorts</div></div>
+    <div class="stat-box"><div class="stat-label">Academic years</div><div class="stat-value">${d.academic_years.length}</div><div class="stat-sub">${d.academic_years[0]} – ${d.academic_years[d.academic_years.length-1]}</div></div>
+    <div class="stat-box"><div class="stat-label">Faculties</div><div class="stat-value">${d.faculties.length}</div><div class="stat-sub">across the university</div></div>
+    <div class="stat-box"><div class="stat-label">Programmes</div><div class="stat-value">${totalProg}</div><div class="stat-sub">Years 1–3 each</div></div>
+  `;
+
+  function bars(rows, labelKey, pctKey, colorFn, labelClass) {
+    const maxPct = Math.max(...rows.map(r => r[pctKey]));
+    return rows.map(r => `
+      <div class="bar-row">
+        <span class="bar-label ${labelClass||'w120'}">${r[labelKey]}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.round(r[pctKey]/maxPct*100)}%;background:${colorFn(r)}"></div></div>
+        <span class="bar-pct">${p1(r[pctKey])}%</span>
+      </div>`).join('');
+  }
+
+  // Species
+  document.getElementById('ov-species').innerHTML = bars(
+    d.species, 'species', 'pct',
+    r => r.species === 'Elf' ? ELF : DWARF
+  );
+
+  // Gender
+  const gColors = { male: ELF, female: DWARF, neuter: '#b0a898' };
+  const gLabels = { male: 'Male', female: 'Female', neuter: 'Neuter' };
+  document.getElementById('ov-gender').innerHTML = bars(
+    d.gender.map(g => ({ ...g, label: gLabels[g.gender] || g.gender })),
+    'label', 'pct', r => gColors[d.gender.find(g => (gLabels[g.gender]||g.gender) === r.label)?.gender] || '#aaa'
+  );
+
+  // Enrolment
+  const maxEnrol = Math.max(...d.enrolment_by_year.map(r => r.n));
+  document.getElementById('ov-enrolment').innerHTML = d.enrolment_by_year.map(r => `
+    <div class="bar-row">
+      <span class="bar-label w80">${r.academic_year}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(r.n/maxEnrol*100)}%;background:var(--navy)"></div></div>
+      <span class="bar-pct">${r.n.toLocaleString()}</span>
+    </div>`).join('');
+
+  // Clans
+  document.getElementById('ov-clan-tbody').innerHTML = d.clans.map(c => `
+    <tr>
+      <td><strong>${c.clan.charAt(0).toUpperCase()+c.clan.slice(1)}</strong></td>
+      <td><span class="badge badge-${c.species.toLowerCase()}">${c.species}</span></td>
+      <td>${c.n.toLocaleString()}</td>
+      <td>${p1(c.pct_of_species)}%</td>
+    </tr>`).join('');
+
+  // SES
+  const sesMax = Math.max(...d.ses.map(s => s.pct));
+  document.getElementById('ov-ses').innerHTML = d.ses.map(s => `
+    <div class="bar-row">
+      <span class="bar-label w80">Rank ${s.rank}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(s.pct/sesMax*100)}%;background:var(--navy)"></div></div>
+      <span class="bar-pct">${p1(s.pct)}%</span>
+    </div>`).join('');
+
+  // Disabilities — use actual pct as bar width (already out of 100)
+  const disRows = d.disabilities.slice(0, 9);
+  document.getElementById('ov-disabilities').innerHTML = disRows.map(x => `
+    <div class="bar-row">
+      <span class="bar-label w200" style="font-size:0.8rem">${x.label}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${x.pct}%;background:${DWARF}"></div></div>
+      <span class="bar-pct">${p1(x.pct)}%</span>
+    </div>`).join('');
+
+  // First gen
+  document.getElementById('ov-firstgen').innerHTML =
+    `<strong>${p1(d.first_gen_pct)}%</strong> of students are the first in their family to attend university. First-generation status is SES-weighted and available in <code>dim_students</code> as a boolean.`;
+
+  // Faculty cards
+  document.getElementById('ov-faculties').innerHTML = d.faculties.map(f => `
+    <div class="faculty-card">
+      <div class="fc-head">${f.name}<span class="fc-count">${f.programme_count} programmes</span></div>
+      <ul>${f.programmes.map(p => `<li><span>${p.name}</span><span style="float:right;color:var(--text-muted);font-size:0.78rem">${p.n_students.toLocaleString()}</span></li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+// ── Tab switching ─────────────────────────────────────────────────
+function renderCurrentTab() {
+  const activeTab = document.querySelector('.tab-btn.active')?.dataset.tab;
+  if (activeTab === 'overview')   renderOverview();
+  if (activeTab === 'attainment') renderAttainment();
+  if (activeTab === 'engagement') renderEngagement();
+  if (activeTab === 'wellbeing')  renderWellbeing();
+  if (activeTab === 'outcomes')   renderOutcomes();
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`tab-${btn.dataset.tab}`).classList.add('active');
+    renderCurrentTab();
+  });
+});
+
+// ── Filters ───────────────────────────────────────────────────────
+function buildFilterOptions() {
+  const faculties = [...new Set(DATA.attainment.map(r => r.faculty))].sort();
+  const years     = [...new Set(DATA.attainment.map(r => r.academic_year))].sort();
+
+  const facSel = document.getElementById('sel-faculty');
+  faculties.forEach(f => {
+    const opt = document.createElement('option');
+    opt.value = f; opt.textContent = f;
+    facSel.appendChild(opt);
+  });
+
+  const yearSel = document.getElementById('sel-year');
+  years.forEach(y => {
+    const opt = document.createElement('option');
+    opt.value = y; opt.textContent = y;
+    yearSel.appendChild(opt);
+  });
+
+  facSel.addEventListener('change',  e => { FILTERS.faculty  = e.target.value; renderCurrentTab(); });
+  document.getElementById('sel-year').addEventListener('change',  e => { FILTERS.year = e.target.value; renderCurrentTab(); });
+  document.getElementById('sel-prog-year').addEventListener('change', e => { FILTERS.progYear = e.target.value; renderCurrentTab(); });
+}
+
+// ── Bootstrap ─────────────────────────────────────────────────────
+async function init() {
+  const files = ['overview', 'attainment', 'clans', 'engagement', 'progression', 'nss', 'survey', 'outcomes'];
+  try {
+    const results = await Promise.all(files.map(f => fetch(`./data/${f}.json`).then(r => {
+      if (!r.ok) throw new Error(`${f}.json not found`);
+      return r.json();
+    })));
+    files.forEach((name, i) => DATA[name] = results[i]);
+    document.getElementById('loading-state').style.display = 'none';
+    buildFilterOptions();
+    renderOverview();
+  } catch (e) {
+    document.getElementById('loading-state').textContent =
+      'Data not yet generated. Run: python scripts/aggregate_dashboard.py';
+  }
+}
+
+init();
+</script>
+</body>
+</html>
