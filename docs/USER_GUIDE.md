@@ -127,7 +127,7 @@ nss_respondents.groupby(nss_respondents["academic_year"])["overall_satisfaction"
 
 - **`student_id`** — persistent across all tables and all years
 - **`academic_year`** — e.g. `"1046-47"`; join key for time-varying facts
-- **`assessment_weight`** — always `0.5` in `fact_assessment`; both components carry equal weight
+- **`assessment_weight`** — `0.4` for MIDTERM, `0.6` for FINAL in `fact_assessment`; use to compute `combined_mark = sum(assessment_mark × assessment_weight)` per module
 - **`component_code`** — `"MIDTERM"` or `"FINAL"` in `fact_assessment`
 - **`survey_responded`** — boolean in NSS and graduate outcomes; filter to `True` before analysing scores
 - **`programme_year`** — 1, 2, or 3 within the degree

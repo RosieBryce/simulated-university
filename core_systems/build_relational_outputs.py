@@ -163,7 +163,7 @@ def build_fact_assessment(assessment_df: pd.DataFrame) -> pd.DataFrame:
         "assessment_mark", "assessment_date",
     ]
     df = assessment_df[[c for c in keep if c in assessment_df.columns]].copy()
-    df["assessment_weight"] = 0.5
+    df["assessment_weight"] = df["component_code"].map({"MIDTERM": 0.4, "FINAL": 0.6})
     return df
 
 

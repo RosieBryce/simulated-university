@@ -274,11 +274,11 @@ final_mark = clamp(round(final_mark, 1), 0, 100)
 
 ### Component Weighting
 
-Internally, the pipeline computes:
 ```
 combined_mark = 0.4 × MIDTERM + 0.6 × FINAL
 ```
-This combined mark is used by the progression system and degree classification algorithm. It is **not** exposed in the relational output — `fact_assessment` only contains the raw component marks with `assessment_weight = 0.5` for both, presenting a 50/50 weighting to analysts. Students are expected to compute their own module averages.
+
+This weighting is reflected in `fact_assessment` via the `assessment_weight` column (`MIDTERM = 0.4`, `FINAL = 0.6`). The combined mark is used internally by the progression system and degree classification algorithm but is not pre-computed in the relational output — analysts calculate it themselves from the component marks and weights.
 
 ### Grade Assignment
 
