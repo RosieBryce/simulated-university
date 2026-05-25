@@ -70,8 +70,14 @@
       font-size: 0.95rem;
       max-width: 680px;
     }
-    header a.back-btn {
+    header .header-btns {
       flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: stretch;
+    }
+    header a.back-btn {
       display: inline-block;
       padding: 0.45rem 1rem;
       font-family: var(--body-font);
@@ -339,7 +345,10 @@
     <h1>Student Data Explorer</h1>
     <p>Who are Stonegrove's students, and what patterns exist in their attainment, engagement, and outcomes? Start with the Overview tab, then use the filters to dig deeper.</p>
   </div>
-  <a class="back-btn" href="../index.html">← Stonegrove University</a>
+  <div class="header-btns">
+    <a class="back-btn" href="../index.html">← Stonegrove University</a>
+    <a class="back-btn" href="../download.html">Download data ↓</a>
+  </div>
 </header>
 
 <!-- Filter bar -->
