@@ -90,3 +90,27 @@ After any pipeline rerun, regenerate site data:
 python scripts/aggregate_gap.py
 python scripts/aggregate_engagement.py
 ```
+
+## Release & Maintenance Checklist
+
+Run through this whenever schema, calculations, or data generation changes:
+
+**Code changes**
+- [ ] Do internal docs need updating? (`docs/CALCULATIONS.md`, `docs/SCHEMA.md`, `docs/PIPELINE_FLOW.md`, `docs/USER_GUIDE.md`)
+- [ ] Does `CLAUDE.md` (this file) need updating?
+
+**After a pipeline rerun**
+- [ ] Run `python scripts/aggregate_dashboard.py` to rebuild dashboard JSON
+- [ ] Commit updated `data/relational/` CSVs and `docs/explore/data/` JSON files
+- [ ] Rebuild zip: handled automatically by `build_relational_outputs.py`
+
+**Website**
+- [ ] Do any table descriptions in `docs/index.html` need updating?
+- [ ] Does `docs/download.html` need updating (file list, row counts, file sizes)?
+- [ ] Does `docs/USER_GUIDE.md` need updating (code examples, column references)?
+- [ ] Does `README.md` need updating?
+
+**GitHub Release** (when publishing a new dataset version)
+- [ ] `gh release create vX.Y.Z docs/stonegrove-data.zip --title "..." --notes "..."`
+- [ ] Update the download button URL in `docs/download.html` to point to the new release tag
+- [ ] Push the updated `docs/download.html`
