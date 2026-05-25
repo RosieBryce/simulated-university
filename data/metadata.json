@@ -1,9 +1,9 @@
 {
   "model_version": "v2.0-longitudinal",
-  "git_commit": "36ec2fda791b",
+  "git_commit": "4ad4552a11a6",
   "random_seed": 42,
-  "generation_timestamp": "2026-05-24T19:18:13Z",
-  "pipeline_runtime_seconds": 3980.2,
+  "generation_timestamp": "2026-05-24T21:14:50Z",
+  "pipeline_runtime_seconds": 3207.2,
   "config_versions": {
     "progression_rules": "v1.0"
   },
