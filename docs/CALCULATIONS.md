@@ -1,7 +1,7 @@
 # Stonegrove University - Calculation Reference
 
-**Last Updated**: 3 May 2026
-**Version**: 2.4 (+ first_gen flag; Enrolment Survey system)
+**Last Updated**: 25 May 2026
+**Version**: 2.5 (attendance retuned; assessment_weight added; fact_good_honours split)
 
 This document describes all formulas, modifiers, and assumptions used in the simulation. For transparency and reproducibility.
 
@@ -98,13 +98,13 @@ probability = max(probability, 0.001)
 **Attendance**:
 ```
 base_attendance =
-    0.35 +
+    0.20 +
     conscientiousness * 0.4 +
     academic_drive * 0.3 +
     resilience * 0.2 +
     practical_skills_motivation * 0.1
 ```
-The `0.35` intercept anchors the average student (all traits 0.5) at 0.85, matching UK HE attendance benchmarks of 80–85%. Without it, the trait-weighted sum alone produces ~0.50 for an average student. With it, the plausible range runs from ~0.45 (low-trait, high-disability) to ~0.95 (clipped ceiling), giving realistic differentiation.
+The `0.20` intercept anchors the average student (all traits 0.5) at ~0.70. Without it, the trait-weighted sum alone produces ~0.50 for an average student. The plausible range runs from ~0.30 (low-trait, high-disability) to ~0.95 (clipped ceiling). The lower intercept (previously 0.35) was reduced to create more headroom for the temporal arc and disability/SES modifiers to produce visible variation at aggregate level.
 
 **Participation**:
 ```
@@ -178,7 +178,7 @@ From `config/engagement_modifiers.yaml`:
 
 Also from `config/engagement_modifiers.yaml`. Applied per-week as additive shifts to base values:
 - **Weeks 1–2 (early)**: attendance +0.04, academic_engagement +0.03, stress -0.04 (fresher enthusiasm)
-- **Weeks 6–8 (midterm)**: attendance -0.03, stress +0.12
+- **Weeks 6–8 (midterm)**: attendance -0.10, stress +0.12
 - **Weeks 10–12 (exam)**:
   - All students: stress +0.18
   - High conscientiousness (≥ 0.6): attendance +0.03, academic_engagement +0.05
@@ -272,6 +272,14 @@ final_mark += random_normal(0, 5)  # individual variation
 final_mark = clamp(round(final_mark, 1), 0, 100)
 ```
 
+### Component Weighting
+
+Internally, the pipeline computes:
+```
+combined_mark = 0.4 × MIDTERM + 0.6 × FINAL
+```
+This combined mark is used by the progression system and degree classification algorithm. It is **not** exposed in the relational output — `fact_assessment` only contains the raw component marks with `assessment_weight = 0.5` for both, presenting a 50/50 weighting to analysts. Students are expected to compute their own module averages.
+
 ### Grade Assignment
 
 ```
@@ -281,6 +289,7 @@ elif mark >= 50: grade = "2:2"
 elif mark >= 40: grade = "Third"
 else: grade = "Fail"
 ```
+Grades are not included in `fact_assessment`. Final degree classifications appear in `fact_good_honours`, derived from the Y2/Y3 weighted average (see Graduate Outcomes below).
 
 ---
 
@@ -452,8 +461,9 @@ No top-down species or clan mark modifiers. All group-level patterns are traceab
 - Mean module mark gap: ~5pp (Elf > Dwarf)
 
 ### Attendance
-- Mean attendance rate: ~80–85% (UK HE benchmark)
-- Disadvantaged students (low SES + high disability): realistically lower, ~64–74%
+- Mean attendance rate: ~68–75% (population mean; higher for Elves, lower for Dwarves and low-SES students)
+- Disadvantaged students (low SES + high disability): ~50–60%
+- Mid-semester dip (weeks 6–8): ~8–10pp below weeks 1–2 peak
 
 ### Progression
 - Year 1 -> Year 2: ~80-90%
