@@ -16,11 +16,12 @@ A full relational schema across 11 tables — 4 dimension tables and 7 fact tabl
 | `dim_academic_years` | Academic year calendar with semester and assessment dates | 7 |
 | `fact_enrollment` | Programme, year of study, enrolment status | 89,000 |
 | `fact_weekly_engagement_YYYY-YY` | Attendance, participation, academic/social engagement, VLE metrics — per student per module per week. One file per academic year. | ~400,000/yr |
-| `fact_assessment` | MIDTERM + FINAL marks per module per student. UK grade classification. `combined_mark` on FINAL rows. | 468,000 |
+| `fact_assessment` | MIDTERM and FINAL component marks per module per student, with equal 50/50 weight | 468,000 |
 | `fact_progression` | Year outcome, modules passed, average mark, next-year status | 89,000 |
 | `fact_enrolment_survey` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response rate. | 89,000 |
 | `fact_nss_responses` | NSS-style satisfaction scores across 7 themes + overall satisfaction. ~68% response rate. | 23,000 |
-| `fact_graduate_outcomes` | Degree classification, employment sector, salary band, time to first professional outcome. ~70% response rate. | 19,500 |
+| `fact_good_honours` | Final degree classification and weighted average mark for every graduate | 6,100 |
+| `fact_graduate_outcomes` | Post-graduation survey: employment, salary band, professional level. ~70% response rate. | 6,100 |
 
 All tables join on `student_id` + `academic_year`. See `docs/SCHEMA.md` for full column definitions.
 

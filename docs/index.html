@@ -452,11 +452,12 @@
           <tr><td>dim_academic_years.csv</td><td>Academic year calendar with semester start dates, midterm and final assessment dates. One row per academic year.</td><td>7</td></tr>
           <tr><td>fact_enrollment.csv</td><td>Programme, year of study, module allocation, and enrolment status. One row per student per academic year.</td><td>~89,000</td></tr>
           <tr><td>fact_weekly_engagement.csv</td><td>Attendance rates, participation scores, academic and social engagement, stress levels, and VLE activity (logins, resource views, forum posts, login hour). Split into per-year files. One row per student per module per week.</td><td>~2,800,000</td></tr>
-          <tr><td>fact_assessment.csv</td><td>Module marks, UK grade classifications (First, 2:1, 2:2, Third, Fail), assessment component and date. One row per assessment event.</td><td>~468,000</td></tr>
+          <tr><td>fact_assessment.csv</td><td>MIDTERM and FINAL component marks per module per student, with assessment date and weight (50/50). One row per assessment event.</td><td>~468,000</td></tr>
           <tr><td>fact_progression.csv</td><td>Year outcome, modules passed, average mark, and next-year status. One row per student per academic year.</td><td>~89,000</td></tr>
           <tr><td>fact_enrolment_survey.csv</td><td>Annual survey of all enrolled students: career thinking, sense of belonging, academic self-efficacy, and support satisfaction. ~82% response rate; non-respondents present with null scores.</td><td>~89,000</td></tr>
           <tr><td>fact_nss_responses.csv</td><td>NSS-style satisfaction scores: teaching quality, assessment feedback, academic support, learning resources, and overall satisfaction. ~68% response rate (UK NSS benchmark); non-respondents present with null scores.</td><td>~23,000</td></tr>
-          <tr><td>fact_graduate_outcomes.csv</td><td>Degree classification, employment sector, salary band, and time to first professional outcome. ~70% response rate (HESA Graduate Outcomes benchmark); degree classification always recorded.</td><td>~19,500</td></tr>
+          <tr><td>fact_good_honours.csv</td><td>Final degree classification (First, 2:1, 2:2, Third) and weighted average mark for every graduate. One row per graduate.</td><td>~6,100</td></tr>
+          <tr><td>fact_graduate_outcomes.csv</td><td>Post-graduation survey: employment sector, professional level, salary band, and time to first outcome. ~70% response rate (HESA Graduate Outcomes benchmark); non-respondents present with null scores.</td><td>~6,100</td></tr>
         </tbody>
       </table>
     </div>
