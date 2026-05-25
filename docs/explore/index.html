@@ -45,7 +45,12 @@
       background: var(--navy);
       border-top: 3px solid var(--gold);
       padding: 2rem 2.5rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
     }
+    header .header-text { flex: 1; }
     header .eyebrow {
       font-size: 0.78rem;
       letter-spacing: 0.1em;
@@ -65,15 +70,26 @@
       font-size: 0.95rem;
       max-width: 680px;
     }
-    header a.back-link {
+    header a.back-btn {
+      flex-shrink: 0;
       display: inline-block;
-      margin-top: 1rem;
-      font-size: 0.82rem;
-      color: rgba(201,168,76,0.8);
+      padding: 0.45rem 1rem;
+      font-family: var(--body-font);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.5);
+      border-radius: 4px;
       text-decoration: none;
-      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: background 0.15s, border-color 0.15s;
     }
-    header a.back-link:hover { color: var(--gold); }
+    header a.back-btn:hover {
+      background: rgba(201,168,76,0.12);
+      border-color: var(--gold);
+    }
 
     /* ── Filter bar ─────────────────────────────────────────── */
     .filter-bar {
@@ -318,10 +334,12 @@
 <body>
 
 <header>
-  <div class="eyebrow">Stonegrove University</div>
-  <h1>Student Data Explorer</h1>
-  <p>Who are Stonegrove's students, and what patterns exist in their attainment, engagement, and outcomes? Start with the Overview tab, then use the filters to dig deeper.</p>
-  <a class="back-link" href="../index.html">← Back to Stonegrove University</a>
+  <div class="header-text">
+    <div class="eyebrow">Stonegrove University</div>
+    <h1>Student Data Explorer</h1>
+    <p>Who are Stonegrove's students, and what patterns exist in their attainment, engagement, and outcomes? Start with the Overview tab, then use the filters to dig deeper.</p>
+  </div>
+  <a class="back-btn" href="../index.html">← Stonegrove University</a>
 </header>
 
 <!-- Filter bar -->
