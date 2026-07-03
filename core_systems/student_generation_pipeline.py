@@ -30,13 +30,6 @@ for _, row in _ses_df.iterrows():
         'edu_probs': [row['education_academic'], row['education_vocational'], row['education_no_qualifications']],
     }
 
-# Helper: weighted random choice from dict
-def weighted_choice(d):
-    keys = list(d.keys())
-    vals = np.array(list(d.values()), dtype=float)
-    vals = vals / vals.sum()
-    return np.random.choice(keys, p=vals)
-
 def sample_age():
     # 94% are 18, rest 19-25
     if np.random.rand() < 0.94:

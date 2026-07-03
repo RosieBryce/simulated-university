@@ -3,7 +3,7 @@
 Run the Stonegrove University longitudinal simulation (7 years, 5 graduating cohorts).
 
 Loops over academic years 1046-47 to 1052-53:
-- Year 1: New cohort (500) + progressing/repeating from previous year
+- Year 1: New cohort (COHORT_SIZE) + progressing/repeating from previous year
 - Runs: student gen (new only) → enrollment → engagement → assessment → progression
 - Appends outputs per year to CSVs
 
@@ -29,18 +29,11 @@ def _status_change_at(academic_year: str) -> str:
     return f"{y}-09-01"
 
 
-def _assessment_date(academic_year: str) -> str:
-    """End of year assessment date (May of second calendar year)."""
-    first_year = int(academic_year.split("-")[0])
-    return f"{first_year + 1}-05-15"
-
-
 def run_year(
     academic_year: str,
     year_index: int,
     new_students_df,
     continuing_students_df,
-    progression_outcomes_prev,
     seed: int,
     prior_progression_df=None,
 ):
@@ -69,7 +62,6 @@ def run_year(
     enrolment_survey_sys = EnrolmentSurveySystem(seed=seed)
 
     status_change = _status_change_at(academic_year)
-    assessment_date = _assessment_date(academic_year)
 
     # 1. Combine new + continuing students
     if continuing_students_df is not None and len(continuing_students_df) > 0:
@@ -89,10 +81,7 @@ def run_year(
         continuing_enrolled = pd.DataFrame()
 
     if new_students_df is not None and len(new_students_df) > 0:
-        # Assign student_ids for new cohort (offset by year)
-        new_students_df = new_students_df.copy()
-        offset = year_index * COHORT_SIZE
-        new_students_df["student_id"] = range(offset, offset + len(new_students_df))
+        # student_ids already assigned by main() when the cohort is generated
         new_enrolled = enrollment_sys.enroll_students_batch(
             new_students_df,
             academic_year=academic_year,
@@ -245,7 +234,7 @@ def main():
 
         # Run pipeline for this year
         enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df, nss_df, enrolment_survey_df = run_year(
-            acad_year, i, new_students, continuing_students, progression_prev, seed,
+            acad_year, i, new_students, continuing_students, seed,
             prior_progression_df=accumulated_progression,
         )
 
