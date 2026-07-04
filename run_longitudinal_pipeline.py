@@ -36,6 +36,7 @@ def run_year(
     continuing_students_df,
     seed: int,
     prior_progression_df=None,
+    prior_assessment_df=None,
 ):
     """Run pipeline for one academic year. Returns (enrolled_df, progression_df)."""
     import pandas as pd
@@ -117,12 +118,13 @@ def run_year(
         weekly_engagement_df=weekly_df,
     )
 
-    # 3b. Enrolment survey — all enrolled students; marks from this year used for Y2+ signal
+    # 3b. Enrolment survey — all enrolled students; marks from this year used for Y2+ signal.
+    # weekly_df supplies the per-student engagement aggregation (response rate + score terms).
     enrolment_survey_df = enrolment_survey_sys.generate_responses(
         enrolled_clean,
         academic_year=academic_year,
         all_assessment_df=assessment_df,
-        prior_progression_df=prior_progression_df,
+        weekly_engagement_df=weekly_df,
     )
 
     # 4. Progression (enrolled_clean already built above)
@@ -134,7 +136,7 @@ def run_year(
         prior_progression_df=prior_progression_df,
     )
 
-    # 5. Graduate outcomes — for students who graduated this year
+    # 5. Graduate outcomes — for students who graduated this year.
     graduates = enrolled_clean[
         enrolled_clean.get('status', pd.Series(dtype=str)).astype(str) == 'graduated'
     ] if 'status' in enrolled_clean.columns else pd.DataFrame()
@@ -142,8 +144,15 @@ def run_year(
         # Also check progression_df for graduated students, merge back to get traits
         grad_sids = progression_df[progression_df['status'] == 'graduated']['student_id'].astype(str).tolist()
         graduates = enrolled_clean[enrolled_clean['student_id'].astype(str).isin(grad_sids)]
+    # Degree classification weights Y2 (1/3) and Y3 (2/3), so it needs the full
+    # assessment history, not just this year's Y3 rows. Combine accumulated prior-year
+    # assessment with the current year before passing to graduate outcomes.
+    if prior_assessment_df is not None and len(prior_assessment_df) > 0:
+        assessment_history = pd.concat([prior_assessment_df, assessment_df], ignore_index=True)
+    else:
+        assessment_history = assessment_df
     graduate_outcomes_df = outcomes_sys.generate_outcomes(
-        graduates, academic_year=academic_year, all_assessment_df=assessment_df
+        graduates, academic_year=academic_year, all_assessment_df=assessment_history
     )
 
     # 6. NSS responses — all programme_year == 3 students (including repeating Yr3)
@@ -232,10 +241,14 @@ def main():
         else:
             continuing_students = None
 
+        # Prior-year assessment (years 0..i-1) — needed for Y2+Y3 degree classification.
+        prior_assessment = pd.concat(all_assessment, ignore_index=True) if all_assessment else None
+
         # Run pipeline for this year
         enrolled_df, progression_df, assessment_df, weekly_df, semester_df, graduate_outcomes_df, nss_df, enrolment_survey_df = run_year(
             acad_year, i, new_students, continuing_students, seed,
             prior_progression_df=accumulated_progression,
+            prior_assessment_df=prior_assessment,
         )
 
         if enrolled_df is None:

@@ -158,6 +158,31 @@ class EnrolmentSurveySystem:
         return self._clip(score)
 
     # ------------------------------------------------------------------
+    # Engagement aggregation
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _aggregate_engagement(weekly_df: pd.DataFrame | None, academic_year: str) -> dict:
+        """Return {student_id -> {metric: mean}} over this year's weekly engagement.
+
+        Mirrors the NSS system: the enrolled dataframe carries no engagement columns,
+        so the per-student aggregation must come from the weekly engagement frame.
+        """
+        if weekly_df is None or len(weekly_df) == 0:
+            return {}
+        df = weekly_df.copy()
+        df["student_id"] = df["student_id"].astype(str)
+        if "academic_year" in df.columns:
+            df = df[df["academic_year"] == academic_year]
+        eng_cols = [c for c in ["attendance_rate", "participation_score",
+                                 "academic_engagement", "social_engagement", "stress_level"]
+                    if c in df.columns]
+        if df.empty or not eng_cols:
+            return {}
+        agg = df.groupby("student_id")[eng_cols].mean()
+        return {sid: row.to_dict() for sid, row in agg.iterrows()}
+
+    # ------------------------------------------------------------------
     # Prior-mark helper
     # ------------------------------------------------------------------
 
@@ -210,7 +235,7 @@ class EnrolmentSurveySystem:
         enrolled_df: pd.DataFrame,
         academic_year: str,
         all_assessment_df: pd.DataFrame | None = None,
-        prior_progression_df: pd.DataFrame | None = None,
+        weekly_engagement_df: pd.DataFrame | None = None,
     ) -> pd.DataFrame:
         """Generate enrolment survey responses for all enrolled students this year.
 
@@ -222,28 +247,28 @@ class EnrolmentSurveySystem:
             e.g. '1047-48'
         all_assessment_df : DataFrame, optional
             Accumulated assessment events (used for prior-mark normalisation in Y2+).
-        prior_progression_df : DataFrame, optional
-            All prior progression records (used to flag is_repeat_year).
+        weekly_engagement_df : DataFrame, optional
+            This year's weekly engagement, aggregated per student to drive the response
+            rate and the engagement terms in the belonging/support scores.
         """
         if enrolled_df is None or len(enrolled_df) == 0:
             return pd.DataFrame()
 
         career_prospects_map = self._load_career_prospects()
-
-        # Repeating students from prior progression
-        repeat_ids: set = set()
-        if prior_progression_df is not None and len(prior_progression_df) > 0:
-            rep = prior_progression_df[prior_progression_df["status"] == "repeating"]
-            repeat_ids = set(rep["student_id"].astype(str).tolist())
+        eng_lookup = self._aggregate_engagement(weekly_engagement_df, academic_year)
 
         records = []
         for _, row in enrolled_df.iterrows():
             sid = str(row.get("student_id", ""))
             programme_year = int(row.get("programme_year", 1))
+            # is_repeat_year reflects the student's status THIS year (matches NSS),
+            # not whether they ever repeated in the past.
+            is_repeat = str(row.get("status", "")).lower() == "repeating"
 
-            # Engagement proxy (mean of available engagement columns, fallback 0.5)
+            # Per-student engagement (mean over the year's weekly records); fallback 0.5.
+            eng_row = eng_lookup.get(sid, {})
             eng_cols = ["academic_engagement", "participation_score", "attendance_rate"]
-            eng_vals = [row.get(c) for c in eng_cols if pd.notna(row.get(c))]
+            eng_vals = [eng_row[c] for c in eng_cols if c in eng_row and pd.notna(eng_row[c])]
             avg_eng = float(np.mean(eng_vals)) if eng_vals else 0.5
 
             # Response decision
@@ -254,7 +279,7 @@ class EnrolmentSurveySystem:
                 "academic_year": academic_year,
                 "programme_year": programme_year,
                 "survey_responded": responded,
-                "is_repeat_year": sid in repeat_ids,
+                "is_repeat_year": is_repeat,
                 "career_clarity": None,
                 "career_confidence": None,
                 "belonging_peers": None,
@@ -278,10 +303,10 @@ class EnrolmentSurveySystem:
             conscientiousness = trait("conscientiousness")
             extraversion = trait("extraversion")
             resilience = trait("resilience")
-            social_eng = float(row.get("social_engagement") or 0.5)
+            social_eng = float(eng_row.get("social_engagement", 0.5))
 
-            # Motivation
-            mot_career = float(row.get("motivation_career_development") or 0.5)
+            # Motivation (generated dimension is career_focus)
+            mot_career = float(row.get("motivation_career_focus") or 0.5)
 
             ses_rank = int(row.get("socio_economic_rank") or 4)
             education = str(row.get("education") or "academic")
@@ -290,7 +315,8 @@ class EnrolmentSurveySystem:
             disabilities_raw = str(row.get("disabilities") or "no_known_disabilities")
             disabilities = [d.strip() for d in disabilities_raw.split(",")]
 
-            programme_code = str(row.get("programme_code") or "")
+            # Enrolled dataframe uses program_code (single 'm'); config keys match.
+            programme_code = str(row.get("program_code") or row.get("programme_code") or "")
             career_prospects = career_prospects_map.get(programme_code, 0.5)
 
             prior_mark_norm = self._get_prior_mark_norm(sid, all_assessment_df)
