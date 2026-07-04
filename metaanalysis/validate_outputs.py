@@ -1,13 +1,14 @@
 """
 Stonegrove University — Output Validation Report
 
-Reads from data/relational/ and checks:
+Reads from data/relational/ (and config/ for module difficulty) and checks:
   1. Shape and completeness
   2. Progression rates (pass/fail/withdraw/graduate) by year level
   3. Mark distributions overall and by year level
   4. Awarding gaps: species, clan, SES, gender
-  5. Engagement–mark correlation
-  6. Module difficulty–mark correlation
+  5. Observable correlations against the published schema:
+       - attendance (attended/total sessions) → mark
+       - module difficulty (from config) → mark
 
 Run from project root: py metaanalysis/validate_outputs.py
 """
@@ -20,6 +21,7 @@ import pandas as pd
 import numpy as np
 
 RELATIONAL = Path("data/relational")
+CONFIG = Path("config")
 
 # Expected ranges for flagging
 TARGETS = {
@@ -275,40 +277,54 @@ def check_awarding_gaps(t):
 
 def check_correlations(t):
     section("5. ENGAGEMENT AND DIFFICULTY CORRELATIONS")
-
-    # Engagement -> mark
-    # Relational engagement file has module_code directly — join on student × module × year.
-    eng   = t["fact_weekly_engagement"]
+    # These checks run against the PUBLISHED observable schema — the latent
+    # constructs (attendance_rate, academic_engagement, difficulty_level) were
+    # stripped from data/relational/ by the output firewall. We validate that
+    # the observable data a downstream researcher receives still shows the
+    # expected relationships:
+    #   - attendance (attended_sessions / total_sessions) -> mark
+    #   - module difficulty (re-joined from config, a legitimate validation
+    #     input — not published student data) -> mark
+    # Only FINAL component rows are used, so each module contributes one mark.
     assess = t["fact_assessment"]
+    finals = assess[assess["component_code"] == "FINAL"] if "component_code" in assess.columns else assess
 
-    # Average engagement per student × module × year
-    eng_avg = (
-        eng.groupby(["student_id", "academic_year", "module_code"])
-        [["attendance_rate", "participation_score", "academic_engagement"]]
-        .mean()
-        .mean(axis=1)
-        .reset_index(name="avg_engagement")
+    # Engagement -> mark, using observable attendance from session counts.
+    eng = t["fact_weekly_engagement"]
+    grp = (
+        eng.groupby(["student_id", "academic_year", "module_code"])[["attended_sessions", "total_sessions"]]
+        .sum()
+        .reset_index()
     )
-    merged = assess.merge(eng_avg, on=["student_id", "academic_year", "module_code"], how="inner")
+    grp = grp[grp["total_sessions"] > 0]
+    grp["attendance"] = grp["attended_sessions"] / grp["total_sessions"]
+    merged = finals.merge(grp, on=["student_id", "academic_year", "module_code"], how="inner")
     if len(merged) > 100:
-        corr = merged["avg_engagement"].corr(merged["assessment_mark"])
+        corr = merged["attendance"].corr(merged["assessment_mark"])
         lo, hi = TARGETS["engagement_mark_corr"]
-        print(flag(corr, lo, hi, "engagement -> mark correlation (Pearson r)"))
-        print(f"  Matched rows: {len(merged)}")
+        print(flag(corr, lo, hi, "attendance -> mark correlation (Pearson r)"))
+        print(f"  Matched rows: {len(merged)}  (note: first engagement year only)")
     else:
-        print("  WARN  Not enough matched engagement–mark rows to compute correlation")
+        print("  WARN  Not enough matched attendance–mark rows to compute correlation")
 
-    # Difficulty -> mark
+    # Difficulty -> mark, difficulty re-joined from config by module_code.
     print()
-    mods = t["dim_modules"][["module_code", "difficulty_level"]].dropna()
-    assess_d = assess.merge(mods, on="module_code", how="inner")
-    if len(assess_d) > 100:
-        corr_d = assess_d["difficulty_level"].corr(assess_d["assessment_mark"])
-        lo, hi = TARGETS["difficulty_mark_corr"]
-        print(flag(corr_d, lo, hi, "difficulty -> mark correlation (Pearson r)"))
-        print(f"  Matched rows: {len(assess_d)}")
+    mc_path = CONFIG / "module_characteristics.csv"
+    if mc_path.exists():
+        mods = pd.read_csv(mc_path)[["module_code", "difficulty_level"]].dropna()
+        mods["module_code"] = mods["module_code"].astype(str)
+        assess_d = finals.copy()
+        assess_d["module_code"] = assess_d["module_code"].astype(str)
+        assess_d = assess_d.merge(mods, on="module_code", how="inner")
+        if len(assess_d) > 100:
+            corr_d = assess_d["difficulty_level"].corr(assess_d["assessment_mark"])
+            lo, hi = TARGETS["difficulty_mark_corr"]
+            print(flag(corr_d, lo, hi, "difficulty -> mark correlation (Pearson r)"))
+            print(f"  Matched rows: {len(assess_d)}")
+        else:
+            print("  WARN  Not enough matched difficulty–mark rows")
     else:
-        print("  WARN  Not enough matched difficulty–mark rows")
+        print(f"  WARN  {mc_path} not found — cannot check difficulty–mark correlation")
 
 
 # ---------------------------------------------------------------------------
