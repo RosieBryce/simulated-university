@@ -450,12 +450,12 @@
           <tr><td>dim_programmes.csv</td><td>Programme profiles across five faculties: difficulty, social intensity, career prospects, creativity requirement, research intensity. One row per programme.</td><td>55</td></tr>
           <tr><td>dim_modules.csv</td><td>Module characteristics: difficulty level, assessment type, stress level, group work and creativity requirements, semester and programme linkage. One row per module.</td><td>333</td></tr>
           <tr><td>dim_academic_years.csv</td><td>Academic year calendar with semester start dates, midterm and final assessment dates. One row per academic year.</td><td>7</td></tr>
-          <tr><td>fact_enrollment.csv</td><td>Programme, year of study, module allocation, and enrolment status. One row per student per academic year.</td><td>~89,000</td></tr>
-          <tr><td>fact_weekly_engagement.csv</td><td>Attendance rates, participation scores, academic and social engagement, stress levels, and VLE activity (logins, resource views, forum posts, login hour). Split into per-year files. One row per student per module per week.</td><td>~2,800,000</td></tr>
-          <tr><td>fact_assessment.csv</td><td>MIDTERM and FINAL component marks per module per student, with assessment date and weight (50/50). One row per assessment event.</td><td>~468,000</td></tr>
-          <tr><td>fact_progression.csv</td><td>Year outcome, modules passed, average mark, and next-year status. One row per student per academic year.</td><td>~89,000</td></tr>
-          <tr><td>fact_enrolment_survey.csv</td><td>Annual survey of all enrolled students: career thinking, sense of belonging, academic self-efficacy, and support satisfaction. ~82% response rate; non-respondents present with null scores.</td><td>~89,000</td></tr>
-          <tr><td>fact_nss_responses.csv</td><td>NSS-style satisfaction scores: teaching quality, assessment feedback, academic support, learning resources, and overall satisfaction. ~68% response rate (UK NSS benchmark); non-respondents present with null scores.</td><td>~23,000</td></tr>
+          <tr><td>fact_enrollment.csv</td><td>Programme, year of study, module allocation, and enrolment status. One row per student per academic year.</td><td>~75,000</td></tr>
+          <tr><td>fact_weekly_engagement.csv</td><td>Attendance rates, participation scores, academic and social engagement, stress levels, and VLE activity (logins, resource views, forum posts, login hour). Split into per-year files. One row per student per module per week.</td><td>~2,230,000</td></tr>
+          <tr><td>fact_assessment.csv</td><td>MIDTERM and FINAL component marks per module per student, with assessment date and weight (40/60). One row per assessment event.</td><td>~372,000</td></tr>
+          <tr><td>fact_progression.csv</td><td>Year outcome, modules passed, average mark, and next-year status. One row per student per academic year.</td><td>~58,000</td></tr>
+          <tr><td>fact_enrolment_survey.csv</td><td>Annual survey of all enrolled students: career thinking, sense of belonging, academic self-efficacy, and support satisfaction. ~82% response rate; non-respondents present with null scores.</td><td>~75,000</td></tr>
+          <tr><td>fact_nss_responses.csv</td><td>NSS-style satisfaction scores: teaching quality, assessment feedback, academic support, learning resources, and overall satisfaction. ~68% response rate (UK NSS benchmark); non-respondents present with null scores.</td><td>~9,600</td></tr>
           <tr><td>fact_good_honours.csv</td><td>Final degree classification (First, 2:1, 2:2, Third) and weighted average mark for every graduate. One row per graduate.</td><td>~6,100</td></tr>
           <tr><td>fact_graduate_outcomes.csv</td><td>Post-graduation survey: employment sector, professional level, salary band, and time to first outcome. ~70% response rate (HESA Graduate Outcomes benchmark); non-respondents present with null scores.</td><td>~6,100</td></tr>
         </tbody>
@@ -478,7 +478,7 @@
   <div class="container">
     <span class="section-label">SECTION 05 / THE GAP</span>
     <h1>What you will find in the data</h1>
-    <p>There is a gap in the data. Elven students outperform dwarven students by something like eighteen percentage points in good degree attainment — that is, in the proportion achieving a First or 2:1 — and this persists across cohorts, across programmes, and across all seven academic years. You will find it fairly quickly.</p>
+    <p>There is a gap in the data. Elven students outperform dwarven students by close to twenty percentage points in good degree attainment — that is, in the proportion achieving a First or 2:1 — and this persists across cohorts, across programmes, and across all seven academic years. You will find it fairly quickly.</p>
     <p>The gap is not there because there is a species modifier in the model that says elves score higher. It emerges because dwarven clans are more likely to enter university with a range of previous qualifications, more likely to have certain disabilities, more likely to come from lower socioeconomic backgrounds. Those factors compound through engagement patterns, through assessment performance, through progression rates, and what you observe at the top is a gap that looks like it is about species but is actually about structure.</p>
     <p>If you're interested in modelling the effects of policy interventions on differential outcomes, this codebase and dataset may go some way to supporting you to test ideas before trying them out in the real world. Disclaimer, of course – this is a fantasy universe, dwarves and elves are not humans, and my simulation does not capture more than the tiniest, most meagre sliver of the lives of real people.</p>
 
@@ -488,7 +488,7 @@
       <div class="chart-legend">
         <span><span class="legend-dot" style="background:var(--elf-green)"></span>Elves</span>
         <span><span class="legend-dot" style="background:var(--dwarf-gold)"></span>Dwarves</span>
-        <span style="margin-left:auto; color:var(--gap-coral); font-weight:600; font-style:italic">≈ 18pp gap</span>
+        <span style="margin-left:auto; color:var(--gap-coral); font-weight:600; font-style:italic">≈ 20pp gap</span>
       </div>
     </div>
     <div class="dataset-cta">
@@ -528,7 +528,7 @@
       <div class="build-card">
         <div class="card-label">Build idea 03</div>
         <h4>A gap decomposition tool</h4>
-        <p>The eighteen-point gap in good degree attainment is not one thing. Build an AI enabled tool that pulls that number apart and see how much of it comes from prior qualifications, how much from socioeconomic rank, how much from disability and could change when you change one factor in the config files.</p>
+        <p>The twenty-point gap in good degree attainment is not one thing. Build an AI enabled tool that pulls that number apart and see how much of it comes from prior qualifications, how much from socioeconomic rank, how much from disability and could change when you change one factor in the config files.</p>
       </div>
 
       <div class="build-card">

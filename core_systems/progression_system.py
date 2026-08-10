@@ -114,12 +114,15 @@ class ProgressionSystem:
         neur = float(student.get("refined_neuroticism", 0.5))
 
         significant_disability = self._has_significant_disability(student)
+        first_gen = bool(student.get("first_gen", False))
         if outcome_type == "progression":
             log_odds += mods.get("conscientiousness_progression", 0) * (consc - 0.5) * scale
             log_odds += mods.get("academic_drive_progression", 0) * (acad - 0.5) * scale
             log_odds += mods.get("performance_progression", 0) * max(0, avg_mark - 50)
             if significant_disability:
                 log_odds += mods.get("significant_disability_progression", 0)
+            if first_gen:
+                log_odds += mods.get("first_gen_progression", 0)
         elif outcome_type == "repeat":
             log_odds += mods.get("conscientiousness_repeat", 0) * (consc - 0.5) * scale
             log_odds += mods.get("academic_drive_repeat", 0) * (acad - 0.5) * scale
@@ -130,6 +133,8 @@ class ProgressionSystem:
             log_odds += mods.get("performance_withdrawal", 0) * max(0, avg_mark - 50)
             if significant_disability:
                 log_odds += mods.get("significant_disability_withdrawal", 0)
+            if first_gen:
+                log_odds += mods.get("first_gen_withdrawal", 0)
             # Investment effect: year-in-programme shifts withdrawal likelihood after fail
             if not passed:
                 yr_mods = self.config.get("year_withdrawal_after_fail", {})

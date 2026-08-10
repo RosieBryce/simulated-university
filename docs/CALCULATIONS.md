@@ -247,6 +247,23 @@ All modifiers are multiplicative and applied at the individual student level.
 {1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
 ```
 
+**First-Generation Modifier** (from `config/assessment_modifiers.yaml`, keyed by programme year):
+```
+{1: 0.96, 2: 0.99, 3: 1.00}    # ≈ −2.4 / −0.6 / 0 marks on a base-60 student
+```
+Applied only when `first_gen` is True. The effect fades across the three years, reflecting
+first-in-family students underperforming relative to their prior attainment in the transition
+year and closing that gap as they acclimatise. A programme year with no entry, or absent
+config, yields 1.0 (no effect).
+
+Note the Y1 penalty is the largest but does **not** affect degree classification, since Y1
+carries zero weight in the degree average — it acts through progression, Y1 pass/fail and the
+enrolment survey instead. Only the Y2 modifier moves the awarding gap (measured +0.24pp).
+
+Note this compounds with the SES gradient rather than being independent of it: `first_gen` is
+itself sampled from SES rank, so low-SES students are affected by both. That double-counting is
+intentional — see **Awarding Gap Design** below.
+
 **Module Difficulty Modifier**:
 - From `config/module_characteristics.csv` difficulty_level, or inferred from title
 - Converted via `_difficulty_to_mark_modifier()`: difficulty 0.5 -> 1.0, 0.9 -> 0.9
@@ -307,11 +324,12 @@ Uses log-odds model with trait-based modifiers (from `config/year_progression_ru
 
 **If Year Passed**: Roll between `enrolled` (progressed) and `withdrawn`.
 - Base progression probability ~0.90
-- Modified by conscientiousness, academic_drive, average mark, significant disability
+- Modified by conscientiousness, academic_drive, average mark, significant disability, first_gen
 
 **If Year Failed**: Roll between `repeating` and `withdrawn`.
 - Base repeat probability ~0.60
 - Modified by conscientiousness, academic_drive
+- Withdrawal side additionally modified by first_gen, year-in-programme, and prior repeat history
 
 **Year 3 Pass**: Automatically `graduated` (no roll).
 
@@ -323,6 +341,14 @@ adjusted_p = 1 / (1 + exp(-log_odds))
 ```
 `scale` is read from `config/year_progression_rules.yaml` → `trait_modifier_scale` (currently **4**).
 Maps trait range [0, 1] to ±(0.5 × scale) in log-odds space. Scale=10 was too aggressive (swamped base rates, giving ~2.6% withdrawal); scale=4 gives ~7% withdrawal, within UK HE target 5–8%.
+
+Flag-based modifiers are flat additions to log-odds rather than trait-scaled:
+```
+first_gen_progression: -0.20     # first-in-family → lower continuation
+first_gen_withdrawal:  +0.15
+```
+Net effect ≈ +1.4pp withdrawal among passing first-generation students, in the direction of the
+~3–5pp lower continuation seen in UK data.
 
 ---
 
@@ -439,6 +465,12 @@ The species awarding gap (~19pp good degree rate, Elf > Dwarf) emerges from **in
 3. **Weighted clan recruitment** — more students from lower-SES Dwarf clans, higher-SES Elf clans
 4. **Clan-specific disability prevalence** — per-clan rates in `health_tendencies` section of `clan_personality_specifications.yaml`
 5. **Steeper individual modifiers** — SES (0.80-1.20), education (0.85-1.10) create meaningful spread
+6. **First-generation status** — SES-sampled, so concentrated in disadvantaged clans (40.7% of Dwarves vs 24.4% of Elves); carries both a mark penalty and a continuation penalty
+
+Channels 5 and 6 deliberately overlap: `first_gen` is drawn from SES rank, so low-SES students take
+both modifiers. This is a modelling choice, not an oversight — in real data, first-in-family status
+carries explanatory power over and above SES alone, and the compounding is what produces a gap in
+the target range without any direct species term.
 
 No top-down species or clan mark modifiers. All group-level patterns are traceable to individual characteristics. See `project_tracker/DESIGN_DECISIONS.md`.
 
@@ -492,8 +524,12 @@ Expected prevalence: ~35–40% of the full cohort (concentrated in lower SES ran
 
 **Uses in this simulation:**
 - `academic_self_efficacy` in the Enrolment Survey (−0.30 penalty on 1–5 scale)
+- **Assessment marks** — year-tapered multiplicative modifier (see *Performance Modifiers*)
+- **Progression** — lower continuation and higher withdrawal log-odds (see *Progression Decision*)
 
-**Backlog**: Wire `first_gen` into progression log-odds model and assessment difficulty modifier. Currently only used by the Enrolment Survey.
+Because `first_gen` is sampled from SES rank, it is correlated with — not independent of — the SES
+mark gradient. Both apply. Measured prevalence is 34.2% overall, but 40.7% of Dwarves against
+24.4% of Elves, so the flag is a live contributor to the species awarding gap.
 
 ---
 

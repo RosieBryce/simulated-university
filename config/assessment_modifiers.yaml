@@ -20,3 +20,20 @@ socio_economic_modifiers:
   6: 1.05
   7: 1.07
   8: 1.09
+
+# First-generation modifier, keyed by programme year.
+# First-in-family students underperform relative to prior attainment in the transition
+# year and close that gap as they acclimatise, so the effect fades Y1 -> Y3.
+# On a base-60 student: -2.4 marks in Y1, -0.6 in Y2, none by Y3.
+#
+# Y1 carries zero weight in the degree average (Y1=0, Y2=1/3, Y3=2/3), so the Y1 penalty
+# acts on progression, Y1 pass/fail and the enrolment survey rather than on classification.
+# Only the Y2 value moves the awarding gap: measured at +0.24pp, landing ~19.3pp and
+# leaving headroom within the documented ~18-20pp band for the progression effect.
+#
+# NOTE: first_gen is sampled from SES rank, so this compounds with the SES gradient above
+# by design. See docs/CALCULATIONS.md "Awarding Gap Design".
+first_gen_modifiers:
+  1: 0.96
+  2: 0.99
+  3: 1.00

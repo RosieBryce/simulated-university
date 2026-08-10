@@ -147,10 +147,13 @@ class AssessmentSystem:
             self._education_modifiers = data.get('education_modifiers', {})
             raw_ses = data.get('socio_economic_modifiers', {})
             self._ses_modifiers = {int(k): float(v) for k, v in raw_ses.items()}
+            raw_fg = data.get('first_gen_modifiers', {})
+            self._first_gen_modifiers = {int(k): float(v) for k, v in raw_fg.items()}
         else:
             print("Warning: assessment_modifiers.yaml not found. Using hardcoded defaults.")
             self._education_modifiers = {'academic': 1.06, 'vocational': 0.96, 'no_qualifications': 0.92}
             self._ses_modifiers = {1: 0.91, 2: 0.93, 3: 0.95, 4: 0.97, 5: 1.03, 6: 1.05, 7: 1.07, 8: 1.09}
+            self._first_gen_modifiers = {}
 
     def _get_assessment_type(self, module_title: str) -> str:
         """Get assessment_type from module_characteristics, else infer from title."""
@@ -202,6 +205,18 @@ class AssessmentSystem:
         r = int(rank) if not pd.isna(rank) else 4
         return self._ses_modifiers.get(r, 1.0)
 
+    def _get_first_gen_modifier(self, first_gen, programme_year: int) -> float:
+        """First-generation modifier, keyed by programme year (config/assessment_modifiers.yaml).
+
+        First-in-family students underperform relative to their prior attainment
+        early on, with the gap narrowing as they acclimatise — so the modifier is
+        keyed by year rather than flat. Absent config means no effect (1.0).
+        """
+        if pd.isna(first_gen) or not bool(first_gen):
+            return 1.0
+        y = int(programme_year) if not pd.isna(programme_year) else 1
+        return self._first_gen_modifiers.get(y, 1.0)
+
     def _assessment_dates(self, academic_year: str, semester: int) -> Dict[str, str]:
         """Return MIDTERM and FINAL assessment dates for a given academic year and teaching semester.
 
@@ -228,7 +243,8 @@ class AssessmentSystem:
         """
         Generate a single module mark for a student.
         Base distribution 70% (60,8), 15% (75,6), 15% (45,10).
-        Modifiers: species, clan, disability, education, socio-economic, module difficulty, engagement.
+        Modifiers: species, clan, disability, education, socio-economic, first-generation,
+        module difficulty, engagement.
         """
         # Base distribution
         r = self.rng.random()
@@ -245,6 +261,8 @@ class AssessmentSystem:
         mod *= self._get_disability_modifier(student.get('disabilities', ''))
         mod *= self._get_education_modifier(student.get('education', ''))
         mod *= self._get_socio_economic_modifier(student.get('socio_economic_rank', 3))
+        mod *= self._get_first_gen_modifier(student.get('first_gen', False),
+                                            student.get('programme_year', 1))
         mod *= self._get_difficulty_modifier(module_title)
         if engagement_modifier is not None:
             mod *= engagement_modifier

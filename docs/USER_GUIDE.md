@@ -136,9 +136,9 @@ nss_respondents.groupby(nss_respondents["academic_year"])["overall_satisfaction"
 
 ## Key Design Decisions
 
-- **No direct species/clan modifier on marks.** The ~18pp Elf–Dwarf good degree gap emerges from SES, prior education, and disability distributions only.
+- **No direct species/clan modifier on marks.** The ~18pp Elf–Dwarf good degree gap emerges from SES, prior education, disability and first-generation distributions only.
 - **Gender gap is flat by design.**
-- **first_gen** — first-generation student flag (~32% of cohort); used in enrolment survey self-efficacy. Backlog: wire into progression and assessment.
+- **first_gen** — first-generation student flag (34.2% of cohort; 40.7% of Dwarves vs 24.4% of Elves). Drives enrolment survey self-efficacy, a mark penalty concentrated in the transition year (−2.4 marks in Y1, −0.6 in Y2, none by Y3), and lower continuation in the progression model. Sampled from SES rank, so it overlaps with the SES gradient by design.
 - **Assessment marks are not pre-combined.** `fact_assessment` gives you the raw MIDTERM and FINAL marks (equal weight); computing a module average is part of the analysis task.
 - **Degree classifications live in `fact_good_honours`**, not in `fact_assessment` — computed internally from Y2/Y3 marks on a 1/3:2/3 weighting.
 - **Survey non-respondents are present** in NSS and graduate outcomes with `survey_responded=False` and null score columns — the count of eligible students is known.

@@ -14,10 +14,15 @@ Output files (docs/explore/data/):
 
 import glob
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+# Windows consoles default to cp1252, which cannot encode the arrows/dashes in the
+# progress output. Without this the script dies mid-run, after some JSON is written.
+sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 REL  = ROOT / "data" / "relational"
