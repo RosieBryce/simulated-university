@@ -1,4 +1,4 @@
-
+![[Pasted image 20250803195429.png]]
 ![[Pasted image 20250803105015.png]]
 
 Here is the detailed fact sheet for the **Bismuth Dwarves**:
