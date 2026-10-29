@@ -1,0 +1,37 @@
+# [Presentation title in sentence case]
+
+[Presenter]. [Occasion]. [Date].
+
+---
+
+# [Section heading]
+
+- [One idea per slide]
+- [No more than five bullets]
+- [No more than twelve words a bullet]
+
+---
+
+# [A slide with a figure]
+
+- [State the figure]
+- [State its source and date]
+- [Say what it means in one line]
+
+---
+
+# [Closing slide]
+
+- [What you want the audience to do]
+- [Your name and extension]
+
+---
+
+# Template notes
+
+- Delete this slide before use
+- Parchment background, Navy text, Gold rule: set by the template
+- Playfair Display for titles, Source Sans 3 for body: set by the template
+- Logo bottom right on every slide: set by the template
+- Do not add shapes, shadows, gradients, clip art or a second typeface
+- Version 2.1, September 1052

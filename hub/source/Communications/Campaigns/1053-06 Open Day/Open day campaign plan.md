@@ -1,0 +1,41 @@
+---
+title: Open day campaign plan
+format: eml
+author: javin-brickrelay
+created: 1053-03-18
+modified: 1053-03-18
+label: Internal
+sensitive: false
+site: comms
+library: comms-campaigns
+path: 1053-06 Open Day
+storylines: [admissions, rebrand]
+skills: [3, 11]
+---
+
+From: javin-brickrelay
+To: rhialla-moondrift
+Cc: sorell-inkthread, mira-dealroot
+Date: 1053-03-18
+Subject: Open day 14 June: campaign plan (this email is the plan)
+
+Hi Rhialla
+
+Plan for the June open day, as discussed. Saving this email as the plan because it's quicker than the template, sorry Sorell.
+
+- Week of 24 Mar: save the date on socials (done 17 Mar actually)
+- Week of 7 Apr: flyer out (v1 with Sorell, she has notes)
+- Week of 14 Apr: banner artwork to print (Mira's request has the old name on it, Sorell's queried)
+- Weekly from 21 Apr: one post a week, alternating faculties, Forge Friday format (the one Sorell liked)
+- Week of 2 Jun: countdown posts daily
+- 14 Jun: live posts from the day, student takeover, Jaskel has asked to do a tree reveal (I said I'd ask) (I'm asking)
+- Week of 16 Jun: thank-yous and feedback link
+
+Assets needed: flyer v2, banner, 8 faculty posts, countdown cards (Sorell template), signage (on brand this time, Mira says)
+
+Can we get a quote from a student for the flyer? Going live with save-the-date reminders at 4.
+
+Cheers
+Javin
+
+Javin Brickrelay, Communications Officer, ext 2405, 07700 900245
