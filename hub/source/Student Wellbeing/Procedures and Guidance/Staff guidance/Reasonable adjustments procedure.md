@@ -1,0 +1,54 @@
+---
+title: Reasonable adjustments procedure
+format: docx
+author: anric-hearthbind
+created: 1050-09-01
+modified: 1052-09-01
+label: Internal
+sensitive: false
+site: wellbeing
+library: wb-procedures
+path: Staff guidance
+storylines: []
+skills: [10]
+---
+
+::: footer current
+
+# Reasonable adjustments: procedure for advisers
+
+Student Wellbeing. Version 2.2, September 1052. A. Hearthbind.
+
+## 1. Referral and first meeting
+
+Students reach us by self-referral, by referral from a tutor or the Programme Support Team with the student's agreement, or from Admissions where a health declaration indicates a need. The first meeting is within ten working days of referral. Its purpose is to listen, to explain what support exists, and to agree whether a support plan is wanted. Students decide. Nobody has a plan imposed on them.
+
+## 2. Evidence
+
+A support plan for a specific learning difference requires a diagnostic report. A plan for a health condition requires a letter from a treating clinician. A plan for a mental health condition requires either, or a referral from the University counselling service. Where a student has no evidence yet, interim adjustments may be agreed for one semester while evidence is obtained.
+
+## 3. The plan
+
+The plan follows the template. It records: background (in the student's words where possible); impact on study; adjustments for assessment, placement and teaching; what the student will do; the adviser's notes; consent for sharing; review date. Adjustments are specific and implementable. "Extra time" is not an adjustment; "25% additional time in timed written assessments" is.
+
+## 4. Consent
+
+The plan records, separately, the student's consent to (a) the Adjustments Summary being shared with named teaching and placement staff and (b) whether the diagnosis may be named in the summary. Most students consent to (a) and not (b). The summary describes needs functionally in that case.
+
+## 5. Sharing
+
+See the Sharing adjustments with teaching staff procedure. Plans are not shared. Summaries are shared with named individuals.
+
+## 6. Review
+
+Six-monthly, or sooner at the student's request or if adjustments are not being applied. The student is asked at every review whether the adjustments are happening. Where they are not, the adviser raises it with the module leader or Placements Coordinator that week.
+
+## 7. Record keeping
+
+Plans live in the Support Plans library, labelled Confidential, in the folder for the academic year and department. The library is the only location. Case notes of meetings live in the Case Notes library. Nothing about a student is kept in an adviser's personal area, a shared drive, or email beyond the working week.
+
+## 8. Placements
+
+For students on regulated programmes, placement adjustments are agreed with the Placements Coordinator before allocation where the adjustment constrains allocation (shift pattern, travel, setting). The Coordinator receives the summary, not the plan, and passes placement-relevant items to the mentor. Students are told that mentors will know what adjustments to make and not why.
+
+A.H.
