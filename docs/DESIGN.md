@@ -165,8 +165,8 @@ All outputs in `data/`:
 
 ### Active CSV configs (tabular, Excel-editable)
 
-- `config/module_characteristics.csv` — 353 modules: difficulty_level, assessment_type, mark_modifier
-- `config/programme_characteristics.csv` — 44 programmes: stress_level, social_intensity, creativity_requirements
+- `config/module_characteristics.csv` — 660 modules (55 programmes × 3 years × 4): difficulty_level, assessment_type, mark_modifier
+- `config/programme_characteristics.csv` — 55 programmes: stress_level, social_intensity, creativity_requirements
 - `config/clan_socioeconomic_distributions.csv` — per-clan SES rank and education distributions
 - `config/disability_assessment_modifiers.csv` — mark modifiers per disability type
 - `config/trait_programme_mapping.csv` — maps student traits to programme characteristics for enrollment fit scoring

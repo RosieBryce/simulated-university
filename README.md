@@ -56,6 +56,12 @@ To validate outputs against expected ranges:
 python metaanalysis/validate_outputs.py
 ```
 
+Before any run, check the curriculum spreadsheet and module config are consistent (every programme must have modules in Years 1 to 3; a mismatched programme code strands students with no modules):
+
+```bash
+python scripts/validate_curriculum.py
+```
+
 ## Project structure
 
 ```

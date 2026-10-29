@@ -39,6 +39,12 @@ Validate outputs:
 python metaanalysis/validate_outputs.py
 ```
 
+Before any run, check the curriculum spreadsheet and module config are consistent (every programme must have modules in Years 1 to 3; a mismatched programme code strands students with no modules):
+
+```bash
+python scripts/validate_curriculum.py
+```
+
 ---
 
 ## Output Files
@@ -163,4 +169,4 @@ Running with the same seed produces the same dataset. Metadata (seed, git commit
 - **New student trait**: add a `sample_*` function in `student_generation_pipeline.py` and add to the student dict. Wire into downstream systems as needed (see `docs/BACKLOG.md` for the `first_gen` example).
 - **New config**: YAML for hierarchical data (personality ranges, progression rules), CSV for tabular data (programme/module characteristics).
 - **New fact table**: create a new system class with a `generate_*` method, wire into `run_year()` in `run_longitudinal_pipeline.py`, add a `build_fact_*` function in `build_relational_outputs.py`.
-- **Curriculum changes**: edit `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (canonical source), regenerate `config/programme_characteristics.csv` and `config/module_characteristics.csv`, re-run the pipeline.
+- **Curriculum changes**: edit `curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx` (canonical source), regenerate `config/programme_characteristics.csv` and `config/module_characteristics.csv`, then run `python scripts/validate_curriculum.py` before re-running the pipeline. The `Programme code` column of the Modules sheet must match the programme named on each row; Excel's fill handle auto-increments codes like `4_1_1` and will silently break it (see `docs/BACKLOG.md`).
