@@ -1,0 +1,25 @@
+---
+title: Working notes March 1053
+format: txt
+author: ollir-greenquill
+created: 1053-03-03
+modified: 1053-04-08
+label: null
+sensitive: false
+site: quality
+library: q-working
+path: Ollir
+storylines: [revalidation]
+skills: [1, 4]
+---
+
+OG working notes, March/April 1053
+
+- OT panel 12/3: transcript in the panel folder. Open minutes drafted 19/3, to BC, circulated 26/3 (late, apologies sent). Reserved minutes: drafted from recording 14/3 (working draft in this folder, DELETE once approved version filed), approved version filed in Reserved folder 26/3, Confidential, three people only.
+- Transcript: BC says delete the reserved section on approval of minutes. Minutes approved when? Next Quality Committee 23 April. So: 23 April, delete 01:09 onwards from the vtt and the docx. Diary.
+- Panel report issued 26/3. Caerel's response due 30/4.
+- Caerel's EC guide draft: he's used a real student as the example, by name. C4.2 says don't. Told him? Not yet. Tell him before BC sees it.
+- Exam boards: Health boards 9 and 10 June. Marks tables from Erra (PI-1052-041) by 30 May. Agenda template needs the AI declaration box (Gudrik's change, Dec).
+- Programme closure procedure: approved 5 Feb. Publish.
+- Still have the Senate Dec transcript? No, Gudrik's. Not mine. Good.
+- Apologies for the delay (to everyone, about everything)

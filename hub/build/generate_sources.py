@@ -371,9 +371,55 @@ def gen_placement_workbook() -> int:
     return 1
 
 
+# =====================================================================
+# Examination board marks tables (student IDs only), from the assessment facts
+# =====================================================================
+
+def gen_examboards() -> int:
+    asm = pd.read_csv(REL / "fact_assessment.csv")
+    en = pd.read_csv(REL / "fact_enrollment.csv")
+    pr = pd.read_csv(REL / "dim_programmes.csv")
+    mods = pd.read_csv(REL / "dim_modules.csv")
+    hep = pr[(pr["faculty"] == "Health & Education") & (pr["department"] == "Health")]
+    e = en[(en["academic_year"] == "1052-53") & (en["programme_code"].isin(hep["programme_code"]))]
+    a = asm[(asm["academic_year"] == "1052-53")].merge(e[["student_id", "programme_code", "programme_year"]], on="student_id")
+    a = a.merge(mods[["module_code", "module_title"]], on="module_code", how="left").merge(hep[["programme_code", "programme_name"]], on="programme_code")
+    count = 0
+    for yr in (2, 3):
+        sub = a[a["programme_year"] == yr]
+        if sub.empty:
+            continue
+        piv = sub.pivot_table(index=["programme_name", "student_id"], columns="component_code", values="assessment_mark", aggfunc="mean").reset_index()
+        piv["student_id"] = piv["student_id"].map(lambda i: f"1052-HE-{int(i) % 100000:05d}")
+        sheets = []
+        for prog, g in piv.groupby("programme_name"):
+            rows = [["Student number", "MIDTERM", "FINAL", "Combined (0.4/0.6)", "Outcome"]]
+            for _, r in g.iterrows():
+                mid, fin = r.get("MIDTERM", float("nan")), r.get("FINAL", float("nan"))
+                comb = round(0.4 * mid + 0.6 * fin, 1) if pd.notna(mid) and pd.notna(fin) else ""
+                rows.append([r["student_id"], "" if pd.isna(mid) else round(mid, 1), "" if pd.isna(fin) else round(fin, 1), comb,
+                             "" if comb == "" else ("Pass" if comb >= 40 else "Refer")])
+            sheets.append((prog[:31], rows))
+        import csv as _csv, io as _io
+        def csv_rows(rows):
+            s = _io.StringIO(); w = _csv.writer(s)
+            for r in rows: w.writerow(r)
+            return s.getvalue().strip(chr(10))
+        nl = chr(10)
+        body = (nl + nl).join(f"```sheet:{n}{nl}{csv_rows(r)}{nl}```" for n, r in sheets)
+        meta = dict(title=f"EB-1053 marks tables Health Year {yr} DRAFT", format="xlsx", author="erra-measurine", modified_by="ollir-greenquill",
+                    created="1053-04-02", modified="1053-04-02", label="Confidential", sensitive=True, site="quality", library="q-examboards",
+                    path="Health 1052-53", storylines=[], skills=[2, 5],
+                    note="Student numbers only. Mean marks per component across the student's modules; draft cut for the June board.")
+        write(f"Quality/Examination Boards/Health 1052-53/EB-1053 marks tables Health Year {yr} DRAFT.md", meta, body)
+        count += 1
+    return count
+
+
 GENERATORS = {
     "providers": gen_providers,
     "placements": gen_placement_workbook,
+    "examboards": gen_examboards,
 }
 
 
