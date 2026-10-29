@@ -1,0 +1,44 @@
+---
+title: Academic Appeals Regulation
+format: docx
+author: brynja-cragshield
+created: 1050-07-01
+modified: 1052-08-15
+label: Public
+sensitive: false
+site: quality
+library: q-regulations
+path: 1052-53
+storylines: []
+skills: [10]
+---
+
+::: footer current
+
+# Academic Regulations, Part F: Academic Appeals
+
+Edition 1052-53.
+
+## F1. Scope
+
+F1.1 A student may appeal against a decision of an Examination Board, an Extenuating Circumstances Panel, an Academic Misconduct Panel or a Fitness to Practise Panel.
+
+F1.2 An appeal shall not be entertained against the academic judgement of examiners. Disagreement with a mark is not a ground of appeal.
+
+## F2. Grounds
+
+F2.1 The grounds of appeal are: (a) that there was a material irregularity in the conduct of the assessment or the procedure such that the decision might have been different; (b) that there were extenuating circumstances which the student was, for good reason, unable to disclose before the decision was made; (c) that there is evidence of bias or prejudice on the part of an examiner or panel member.
+
+## F3. Procedure
+
+F3.1 An appeal shall be submitted in writing on the prescribed form to the Head of Quality within ten working days of the publication of the decision appealed against, stating the ground or grounds and attaching evidence.
+
+F3.2 The Head of Quality shall determine within ten working days whether the appeal discloses a prima facie case under F2. Where it does not, the appeal shall be dismissed with reasons. Where it does, it shall be referred to an Appeals Panel.
+
+F3.3 The Appeals Panel shall comprise three members of academic staff from outside the Faculty, one of whom shall chair. The Panel shall consider the appeal on the papers unless it determines that a hearing is necessary.
+
+F3.4 The Panel may dismiss the appeal, or uphold it and refer the matter back to the original decision-making body with directions.
+
+## F4. Completion
+
+F4.1 The decision of the Appeals Panel is final within the University. The student shall be issued with a Completion of Procedures letter.

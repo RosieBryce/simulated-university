@@ -1,0 +1,27 @@
+---
+title: Things to remember
+format: txt
+author: elowen-fogwhisper
+created: 1052-09-01
+modified: 1053-04-11
+label: null
+sensitive: false
+site: faculty
+library: fac-deans
+path: Elowen stuff
+storylines: [awarding-gap, ai-policy, rebrand]
+skills: [4]
+---
+
+THINGS TO REMEMBER (Elowen)
+
+- Dean's space: Hrogar keeps parking in it, don't mention it, Brekka is dealing with it
+- FMG minutes: try Cloudi on the transcript (Elenna says fine if I CHECK IT) - done the draft 20 March, have not checked it yet, Brekka asked twice (sorry!)
+- Council paper: papers deadline 12 May, Gudrik WILL chase. Quorin has to see it first. Erra sending a paragraph and a table. REPLACE SECTION 1 with whatever she sends, don't edit it
+- Which awarding gap report is the right one: the 1051-52 one (Nov 1052). NOT the 1050-51 one. Brekka explained. I used the wrong one. Fix in v4
+- Dwarf / Elf the wrong way round in section 1 para 2 apparently. Check with Erra
+- Faculty strategy: the plain one is the real one. Jaskel's is "for the website" (it is not on the website, Rhialla said no)
+- Jaskel's tree: he has to ask Comms. He has not asked Comms.
+- My folder: Brekka says "Elowen stuff" is not a folder name. It is though. Everything is in it.
+- Naming convention: YYYY-MM-DD_Thing_v01. Start doing this. From Monday.
+- Dog's name is Rivet

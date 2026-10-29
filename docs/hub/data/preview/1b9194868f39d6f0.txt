@@ -1,0 +1,37 @@
+::: footer current
+
+# StoneShare migration: next steps
+
+Brekka Anvildancer, Faculty Operations Manager. For FMG, 19 March 1053 (first presented 10 December 1052; updated). Two pages.
+
+## What happened
+
+1. The Faculty's network drive (StoneShare) was full. In September 1052 I asked Digital Services to migrate it to the Hub.
+2. Digital Services offered lift and shift (everything copied as it is, no review) or a curated migration (teams review first, then copy). I chose lift and shift, because the curated option needed six weeks of team time we did not have. I was advised against this by the Information Governance Manager. (I know.)
+3. Over 8 and 9 November everything was copied into one library, Faculty of Health and Education / StoneShare Migration, and the drive was switched off.
+4. Nothing in that library is labelled. Everything in it is treated as Internal by default. Some of it is not Internal.
+
+## What is in it
+
+A first pass (mine, one afternoon) and Liora Lanternwake's index of the To sort folder (212 items, January) suggest:
+
+- Departmental and committee material going back to 1047, much of it superseded.
+- Templates, including old letterhead and the College of the Vale wordmark, still in use by some colleagues because they are where they always were.
+- Personal material: at least one CV, photographs from the 1051 away day, a cake rota.
+- At least one unlabelled Fitness to Practise file (Health / FtP) and a staff costs workbook with named salaries (Admin / Old). Both should not be there.
+- Hesta Gracestone's folder, which is the best organised thing in the library and contains working documents on placements that the Programme Support Team still uses.
+- Folders nested eight deep, empty folders, folders called New folder, Old, Misc and Archive - DO NOT DELETE.
+
+## What I am asking FMG to decide
+
+1. **Each team reviews its own folders** against the Records Retention Schedule and the Naming Convention by **31 May 1053**: delete what is past retention, move what is current to the right library with the right label, and leave nothing in the migration library at the end. Owners: Heads of Department for departmental material; Programme Leaders for programme material; me for Faculty Shared.
+2. **Nothing is moved out of the migration library into a teaching or shared folder** until it has been reviewed and labelled. The unlabelled FtP file and the staff costs workbook are removed this week (Nyssa and me respectively).
+3. **Liora's index is the model.** With Dagna's agreement, Liora spends a day with each team showing them how she did it.
+
+## What happens if we do not
+
+The library stays as it is, people keep using the old templates because they are there, and the next incident will come from it. Information Governance have logged it already (INC-0030).
+
+(I accept this is a problem I created by choosing lift and shift. It was the right call for September and the wrong call for everything after.)
+
+B.A.

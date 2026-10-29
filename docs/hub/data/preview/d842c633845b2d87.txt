@@ -1,0 +1,55 @@
+::: footer current
+
+# Academic Regulations, Part B: Assessment
+
+Edition 1052-53. Approved by Senate, 9 June 1052. Applies to all taught programmes.
+
+## B1. General
+
+B1.1 Assessment shall be conducted in accordance with the approved programme specification and module descriptor. No assessment shall be set, varied or waived except in accordance with these Regulations.
+
+B1.2 It is a requirement that every module shall have no fewer than one and no more than three summative assessment components, save where the professional, statutory or regulatory body requires otherwise and the Head of Quality has approved the variation in writing.
+
+B1.3 The weighting of components shall be stated in the module descriptor and shall not be varied after the first teaching week of the module without the approval of the Head of Quality.
+
+## B2. Submission
+
+B2.1 Coursework shall be submitted by the published deadline through the approved submission system. The time of submission recorded by the system shall be conclusive.
+
+B2.2 Work submitted after the deadline without an approved extension or accepted claim of extenuating circumstances shall be marked and the mark shall be capped at the pass mark where the work is submitted within five working days of the deadline, and shall receive a mark of zero thereafter.
+
+B2.3 An extension of up to five working days may be granted by the module leader on application before the deadline where the student has an adjustment to that effect under a support plan, or in exceptional circumstances at the module leader's discretion. Extensions beyond five working days require a claim under Part C (Extenuating Circumstances).
+
+## B3. Marking
+
+B3.1 All summative work shall be marked in accordance with the published marking criteria and the University's generic grade descriptors.
+
+B3.2 Where a module has more than one marker, the module leader shall ensure consistency by sample moderation of not less than ten per cent of submissions or ten submissions, whichever is greater, including all fails and all marks of seventy or above.
+
+B3.3 Feedback shall be returned to students within fifteen working days of the submission deadline. Where this is not practicable the module leader shall inform students in advance of the revised date and the reason.
+
+B3.4 Marks are provisional until confirmed by the Examination Board.
+
+## B4. Pass marks and compensation
+
+B4.1 The pass mark for a module at undergraduate level is forty per cent, save where the professional body requires a higher threshold for a component, which shall be stated in the module descriptor.
+
+B4.2 A student who fails a module with a mark of not less than thirty-five per cent may be compensated in not more than twenty credits per level, provided that the student's credit-weighted mean across the level is not less than forty-five per cent and the module is not designated non-compensatable in the programme specification. Placement and practice modules are non-compensatable.
+
+## B5. Reassessment
+
+B5.1 A student who fails a module shall be entitled to one reassessment in the failed component or components. The mark for a reassessed component shall be capped at the pass mark.
+
+B5.2 Reassessment shall normally take place in the reassessment period in August. A student who fails at reassessment may be permitted to repeat the module with attendance in the following year, once only, at the discretion of the Examination Board.
+
+## B6. Anonymity
+
+B6.1 Written examinations and coursework shall be marked anonymously where the form of assessment permits. Practical assessments, placement records, presentations and vivas are exempt.
+
+## B7. Reasonable adjustments
+
+B7.1 Adjustments to assessment arrangements recommended in a student's support plan shall be implemented by the module leader. Adjustments shall not alter the learning outcomes assessed.
+
+## B8. Use of artificial intelligence tools in assessment
+
+B8.1 Students' use of such tools is governed by the Academic Integrity Policy. Staff shall not use such tools to determine a mark or a classification. Staff may use an approved tool to assist in drafting feedback provided the marker reviews and takes responsibility for the feedback as issued.

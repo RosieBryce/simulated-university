@@ -1,0 +1,58 @@
+---
+title: EC guide for students DRAFT
+format: docx
+author: caerel-candletome
+created: 1053-03-28
+modified: 1053-04-04
+label: Public
+sensitive: true
+site: quality
+library: q-regulations
+path: Guidance
+storylines: [revalidation]
+skills: [5, 10]
+planted: P09
+---
+
+# Extenuating circumstances: a guide for students (DRAFT)
+
+Dr Caerel Candletome, for the Occupational Therapy revalidation response (condition 2). Draft 2, 4 April 1053. With apologies for the length; I wonder whether it is too much. For comment before it goes to Quality.
+
+## What this guide is for
+
+The revalidation panel asked for a guide that explains Part C of the Academic Regulations to students in plain terms. The Regulations use words like "unforeseeable" and "significant adverse effect" and students, reasonably, do not know what they mean in practice. I have tried to show rather than tell, using a real example from this year with the student's circumstances as they were, because I think a real case is more help than an invented one.
+
+## The idea
+
+Sometimes something happens that is not your fault, that you could not have planned for, and that means you could not do an assessment properly when it was due. The University does not want that to count against you. The extenuating circumstances process is how you tell us.
+
+## A worked example
+
+Enia Chalkhaven is a first-year student on Occupational Therapy. In the second week of January 1053 her grandmother, who had brought her up, died suddenly. Enia had an essay due on the 24th and a practical assessment on the 27th. She went home to Alabaster country for the funeral and did not come back until the 30th.
+
+Enia also has a support plan with Student Wellbeing for a specific learning difference, which gives her an automatic five-day extension on coursework. That extension is for her learning difference. It is not for bereavement. So she needed to make a claim.
+
+She made the claim on 2 February, nine days after the essay deadline, which is outside the five working days the Regulations allow. She explained why: she had been at the funeral and had not been thinking about forms. The Panel accepted that as good reason. She attached the order of service and a letter from her tutor confirming she had told him on the 15th. The Panel accepted the claim for both assessments and recommended that she submit the essay by a revised date without penalty and take the practical as if for the first time in the reassessment period.
+
+What Enia did right: she told her tutor straight away; she kept evidence; she said which assessments were affected; she explained the delay. What she could have done differently: made the claim before the deadline, which she could have done from home in ten minutes.
+
+## What counts
+
+Bereavement. Serious illness or injury, yours or someone you care for. Being a victim of crime. Something unexpected and serious at home. Not: a cold, a late bus, a broken laptop you did not back up, a job, a holiday, or a condition you already have a support plan for.
+
+## How to claim
+
+1. Do it before the deadline if you possibly can. Within five working days after if not.
+2. Use the form on the Quality pages. Say which assessments.
+3. Attach evidence. If you cannot get evidence, say why.
+4. The Faculty Panel meets monthly. They decide whether to accept the claim, not what mark you get.
+
+## What you might get
+
+A new deadline with no penalty. Another go at the assessment as if it were your first. Very occasionally, the assessment set aside.
+
+## Who to ask
+
+Your personal tutor. Quality, extension 2103. Student Wellbeing, extension 2300, if the thing that has happened is still happening.
+
+*Note to self: Brynja will want the regulation paragraph numbers in. Liora has offered to read it. Ollir to check the Panel dates. C.*
