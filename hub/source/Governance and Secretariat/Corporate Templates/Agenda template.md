@@ -1,0 +1,36 @@
+---
+title: Agenda template
+format: docx
+author: gudrik-bannerstone
+created: 1051-09-15
+modified: 1051-09-15
+label: Internal
+sensitive: false
+site: governance
+library: gov-templates
+path: ""
+storylines: []
+skills: [1]
+---
+
+::: footer current
+
+# [COMMITTEE NAME]
+
+## Agenda for the meeting to be held on [day month year] at [time] in [venue or online]
+
+| No. | Item | Purpose | Paper | Lead | Time |
+|---|---|---|---|---|---|
+| 1 | Welcome and apologies | | Oral | Chair | 2 min |
+| 2 | Declarations of interest | | Oral | Chair | 1 min |
+| 3 | Minutes of the meeting held on [date] | To approve | Attached | Chair | 3 min |
+| 4 | Matters arising and action log | To note | X/YYYY/NN | Secretary | 5 min |
+| 5 | [Item] | To approve / To note / To discuss | X/YYYY/NN | [Lead] | [n] min |
+| 6 | [Item] | | X/YYYY/NN | | |
+| 7 | Any other business | | Oral | Chair | 5 min |
+| 8 | Reserved business | | Separate circulation | Chair | [n] min |
+| 9 | Date of next meeting: [day month year] | | | | |
+
+Papers are circulated seven clear days before the meeting. Late papers are tabled only with the Chair's consent.
+
+Secretary: [name], extension [NNNN], [email]

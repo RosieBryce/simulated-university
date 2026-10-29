@@ -1,0 +1,43 @@
+---
+title: Data sources and definitions
+format: docx
+author: erra-measurine
+created: 1052-10-01
+modified: 1053-03-31
+label: Internal
+sensitive: false
+site: planning
+library: pi-extracts
+path: 1052-53
+storylines: [awarding-gap, nss-dip]
+skills: [2]
+generated: true
+---
+
+# Data sources and definitions
+
+Extracts in this folder are cut from the institutional student record for the Faculty of Health and Education. They are refreshed when the record is rebuilt. Do not edit them in place; ask Planning and Insight for a new cut.
+
+## Files
+
+| File | Grain | Notes |
+|---|---|---|
+| he_enrolments_1052-53.csv | programme, year of study, species | Headcount at census |
+| he_good_honours_by_programme_species_5yr.csv | graduating year, programme, species | Good honours = First or 2:1 |
+| he_graduates_individual_anonymised_5yr.csv | one row per graduate | Student ID only. Confidential if joined to names. |
+| he_nss_by_programme_theme_5yr.csv | NSS year, programme | Respondents only. Means on a 1 to 5 scale. |
+| he_progression_1052-53.csv | programme, year of study, outcome | Pass or fail at year end |
+| he_assessment_summary_1052-53.csv | programme, species | Mean final-component mark |
+| he_summary_tables_1052-53.xlsx | all of the above | One sheet per table |
+
+## Definitions
+
+- **Good honours**: First or Upper Second class degree.
+- **Awarding gap**: good honours rate for Elf graduates minus the rate for Dwarf graduates, in percentage points.
+- **NSS year**: the year the survey is published. NSS 1052 surveyed finalists in 1051-52.
+- **Finalists**: students in the final year of their programme. Two-year programmes have finalists in Year 2 but are not surveyed; the NSS covers three-year programmes only.
+- **Species** is recorded as declared at enrolment.
+
+## Caveats
+
+Programme-level figures with fewer than 20 graduates should not be reported externally. The full institutional dataset, for all faculties, is published for research use; see the University's open data page.

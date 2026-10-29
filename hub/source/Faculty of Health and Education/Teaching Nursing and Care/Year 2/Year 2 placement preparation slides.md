@@ -1,0 +1,82 @@
+---
+title: Year 2 placement preparation slides
+format: pptx
+author: halden-bridgeglen
+created: 1052-09-20
+modified: 1053-01-27
+label: Internal
+sensitive: false
+site: faculty
+library: fac-teaching-nc
+path: Year 2
+storylines: [placements]
+skills: [3]
+---
+
+# Year 2 placements: what you need to know
+
+Halden Bridgeglen, Placements Coordinator. Semester 2 briefing, January 1053.
+
+---
+
+# How allocation works
+
+- I have a spreadsheet
+- It has every provider, every place, every one of you
+- I match: your pathway, what you did in Year 1, where you live, what providers have said
+- You get an email from me with your placement, your mentor's name if I have it, and the start date
+- Two weeks before. I try. Sometimes it is ten days. Sorry
+
+---
+
+# What providers need from you before day one
+
+- Occupational health cleared (check the portal)
+- Mandatory training done (they check, I promise)
+- Some want a phone call the week before. The profile says which
+- Brinestep: travel bursary form in to Hesta by week 1
+- Cragburrow: underground safety briefing, book through me
+
+---
+
+# What to do if
+
+- You are ill: ring the placement area before your shift, then email Hesta
+- Your mentor is not there: ask for the nurse in charge, then email me
+- You see something wrong: tell your mentor. If it is your mentor, ring me. 07700 900415
+- You cannot get there: ring me. We will sort it
+
+---
+
+# Things that went wrong last year
+
+- Student turned up to the wrong site (two sites, same name). Check the profile
+- Student did not have clearance and was sent home. Check the portal
+- Student swapped with a friend. Both placements cancelled. Do not
+- Student photographed a drug chart to "study later". Fitness to practise referral. Do not
+
+---
+
+# Adjustments
+
+- If you have an adjustments summary, Student Wellbeing will have sent it to your module leader and I will have it for your mentor
+- If you think you should have one and do not, talk to Student Wellbeing now, not in week 3
+- Adjusted shifts are agreed through me and Wellbeing before you start, not with your mentor on the day
+
+---
+
+# Contacts
+
+- Me: halden.bridgeglen@stonegrove.ac.example, 4150, 07700 900415
+- Hesta Gracestone (admin, forms, everything): 4151
+- Dagna Chiselhand (module leader): 4120
+- Student Wellbeing: 2300
+
+---
+
+# One more thing
+
+- I am on leave from 19 May
+- Hesta and Liora will be covering
+- Everything will be written down by then
+- Probably

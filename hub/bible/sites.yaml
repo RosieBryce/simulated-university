@@ -401,7 +401,7 @@ sites:
         contents: >
           Erra's library. Every file named YYYY-MM-DD_Topic_vNN per the
           convention. Awarding gap annual report 1051-52; NSS 1052 institutional
-          summary; Education NSS deep dive (Oct 1052); student numbers return;
+          summary; Faculty NSS deep dive (Oct 1052); student numbers return;
           Quorin's "How to read our reports" note. Figures templated from
           values.yaml.
 
@@ -446,8 +446,8 @@ sites:
         contents: >
           Generated from data/relational at pipeline time. Health and
           Education enrolments 1052-53 (csv); assessment summary by programme;
-          good honours by programme and clan group, five years; NSS by
-          department; progression by year of study; a "Data sources and
+          good honours by programme and species, five years; NSS by
+          programme and theme, five years; progression by programme and year of study; a "Data sources and
           definitions" note pointing to the Stonegrove download page. Small:
           a few thousand rows each.
 
@@ -812,7 +812,7 @@ transcripts:
     site: governance
     library: gov-senate
     date: 1052-12-04
-    duration_min: 48
+    duration_min: 17
     attendees: [thalira-everjudged, gudrik-bannerstone, elenna-dewscroll, cyranor-goldmantle, hrogar-dourstone, brynja-cragshield, quorin-deepmirror, rhialla-moondrift]
     character: formal; papers referenced by number; Hrogar's dissent; Elenna patient
     paired_minutes: Gudrik's approved minutes (exemplar)

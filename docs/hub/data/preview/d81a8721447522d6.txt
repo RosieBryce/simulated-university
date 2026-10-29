@@ -1,0 +1,70 @@
+::: footer old
+
+# SENATE
+
+## Paper S/1052/41
+
+| | |
+|---|---|
+| **Title** | Draft Artificial Intelligence Acceptable Use Policy, version 0.3 |
+| **Author** | Elenna Dewscroll, Information Governance Manager and Data Protection Officer |
+| **Sponsor** | Thalira Everjudged, University Secretary |
+| **Purpose** | To approve |
+| **Classification** | Internal |
+| **Reserved business?** | No |
+
+### Summary
+
+Staff are already using generative artificial intelligence tools and the University has no policy governing that use. The attached draft policy (version 0.3) sets out permitted and prohibited uses by reference to the three labels of the Data Classification Scheme: Public material may go into any tool, Internal material into approved tools only, and Confidential material into no tool without a Data Protection Impact Assessment. It makes the member of staff accountable for every output and requires outputs to be checked against sources. It is drawn from a stricter Information Governance draft (0.1) and a shorter Digital Services draft (0.2). The approved tool it refers to, an institutional assistant, is being procured and is expected in early 1053.
+
+### Recommendation
+
+Senate is asked to APPROVE the Artificial Intelligence Acceptable Use Policy, version 0.3, for immediate effect.
+
+### 1. Background
+
+1.1 Digital Services' network logs show regular use of consumer generative tools from University devices since the spring of 1052. The Information Governance Manager has received three informal reports since October of Internal material, in one case containing a student's name, being entered into such tools.
+
+1.2 The Acceptable Use of Information Technology Policy (1047) predates these tools and does not address them.
+
+### 2. The issue
+
+2.1 Without a policy, staff have no guidance, the University has no basis for addressing misuse, and the Data Protection Officer has no framework for assessing risk.
+
+### 3. Options considered
+
+3.1 Prohibit use entirely (draft 0.1). Rejected: unenforceable, and would push use out of sight.
+
+3.2 Guidance only, no policy (draft 0.2). Rejected: insufficient for Confidential material and provides no basis for action.
+
+3.3 A policy keyed to the classification scheme (draft 0.3, attached). Recommended.
+
+### 4. Proposal
+
+4.1 Approve version 0.3. Publish on the Hub with the Data Classification Scheme. Review in twelve months.
+
+### 5. Risks and mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Policy approved before the approved tool exists | Short gap; Internal material cannot go into any tool in the interim, which is the current position de facto |
+| Staff do not read the policy | A one-page decision tree to accompany it; training |
+| Staff use non-approved tools regardless | Policy gives a basis for action; honest reporting treated as a learning matter |
+
+### 6. Resource implications
+
+6.1 Licence cost of the institutional tool is within the Digital Services budget. Training delivered within existing Information Governance provision.
+
+### 7. Equality considerations
+
+7.1 None adverse identified. Assistive uses of these tools by staff with disabilities are supported within the policy.
+
+### 8. Next steps and timetable
+
+8.1 Publication on approval. All-staff communication. Decision tree and training to follow in January 1053.
+
+### Appendices
+
+A. Draft Artificial Intelligence Acceptable Use Policy, version 0.3 (circulated separately)
+
+*Differences between version 0.3 and the version later approved as 1.0 (5 February 1053): no Technical Annex; no provision on marking and feedback; "aggregated" undefined; line managers rather than the Information Governance Manager as first contact; twelve-month review.*

@@ -1,0 +1,33 @@
+::: footer current
+
+# [COMMITTEE NAME]
+
+## Minutes of the meeting held on [day month year] at [time] in [venue or online]
+
+**Present:** [Chair's name] (Chair), [members in order of precedence]
+
+**In attendance:** [name, post], [name, post (Secretary)]
+
+**Apologies:** [names]
+
+| Minute | Item | Action |
+|---|---|---|
+| NN.1 | **Welcome and apologies.** The Chair welcomed members. Apologies were NOTED as above. | |
+| NN.2 | **Minutes of the previous meeting** ([date]). The minutes were APPROVED as an accurate record [subject to the following correction: ...]. | |
+| NN.3 | **Matters arising and action log.** [Each open action: status in one sentence.] The Committee NOTED the action log. | [Owner, date for any carried-forward action] |
+| NN.4 | **[Item title]** (Paper X/YYYY/NN). [Who presented.] [Two to four sentences summarising the discussion, unattributed.] The Committee [NOTED / APPROVED / RESOLVED / AGREED / REFERRED / DEFERRED] [what]. | [Owner: action, by date] |
+| NN.5 | **[Item title]** | |
+| NN.6 | **Any other business.** [None was raised / Item in one sentence.] | |
+| NN.7 | **Reserved business.** A reserved item concerning [general subject] was taken. Minutes are recorded separately. | |
+| NN.8 | **Date of next meeting.** [day month year, time]. | |
+
+**Action log**
+
+| Ref | Action | Owner | Due | Status |
+|---|---|---|---|---|
+| NN.4 | | | | Open |
+
+Secretary: [name]
+Draft to Chair: [date]. Circulated: [date]. Approved: [date of next meeting].
+
+*Notes for secretaries (delete before circulation): write in the past tense and third person; summarise discussion without attribution unless a member asks for their view to be recorded; every action has one named owner and a date; use the standard verbs in capitals; number minutes continuously through the year; reserved business is minuted on a separate sheet labelled Confidential. See the Committee Handbook.*

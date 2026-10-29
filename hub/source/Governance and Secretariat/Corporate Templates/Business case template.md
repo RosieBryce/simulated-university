@@ -1,0 +1,79 @@
+---
+title: Business case template
+format: docx
+author: fenn-gridforge
+created: 1049-11-01
+modified: 1050-08-20
+label: Internal
+sensitive: false
+site: governance
+library: gov-templates
+path: ""
+storylines: [placements, rebrand]
+skills: [3]
+off_brand: B04
+---
+
+::: footer old
+
+# Business Case
+
+| | |
+|---|---|
+| **Project title** | |
+| **Requesting team** | |
+| **Business owner** | [The person who will own the thing once built] |
+| **Date** | |
+| **Version** | |
+
+## 1. The problem
+
+[What is wrong now, in plain terms. Who is affected, how often, with what consequence. If you can quantify it (hours per week, errors per term, students affected), do.]
+
+## 2. What happens if we do nothing
+
+## 3. Options
+
+| Option | Description | Cost (one-off) | Cost (annual) | Benefits | Risks |
+|---|---|---|---|---|---|
+| A. Do nothing | | | | | |
+| B. Improve the current process without new technology | | | | | |
+| C. Configure an existing University system | | | | | |
+| D. Procure or build something new | | | | | |
+
+## 4. Recommended option and why
+
+## 5. Requirements
+
+[Numbered. "Must" and "should". Each requirement is one sentence and testable. Where a requirement comes from a stakeholder, say who.]
+
+1. The system must ...
+2. The system must ...
+3. The system should ...
+
+## 6. Data
+
+[What data the system will hold, its classification, who may see it, and the retention rule that applies. A system holding Confidential data needs a DPIA before build.]
+
+## 7. Process
+
+[How the work flows today and how it will flow afterwards. A diagram is fine. If nobody can describe the current process, the project is not ready.]
+
+## 8. Benefits and how we will know
+
+## 9. Costs and resources
+
+## 10. Timeline
+
+## 11. Risks
+
+## 12. Approvals
+
+| Role | Name | Date |
+|---|---|---|
+| Business owner | | |
+| Head of department or service | | |
+| Digital Services | | |
+| Finance (if cost above threshold) | | |
+
+*Digital Services note: requests without sections 1, 5 and 7 completed are returned.*

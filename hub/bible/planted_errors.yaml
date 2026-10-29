@@ -23,15 +23,15 @@ errors:
     author: teylin-leafchant
     created: 1052-10-20
     source_of_truth:
-      - "planning / Reports / 1052-53 / 1052-10-17_Education-NSS-Deep-Dive_v01.docx"
+      - "planning / Reports / 1052-53 / 1052-10-17_Faculty-NSS-Deep-Dive_v01.docx"
       - "planning / Data Extracts / 1052-53 / nss_by_department.csv"
     planted:
       - kind: figure
-        text: "Overall satisfaction in the Department of Education fell by {{ (education_nss_overall_1051 - education_nss_overall_1052) * 2 | round(1) }} points."
-        truth: "The fall is {{ education_nss_overall_1051 - education_nss_overall_1052 }}; the summary doubles it."
+        text: "Assessment and Feedback satisfaction across the Faculty fell by {{ (he_nss_assessment_feedback_1051 - he_nss_assessment_feedback_1052) * 2 | round(2) }} points."
+        truth: "The fall is {{ he_nss_assessment_feedback_1051 - he_nss_assessment_feedback_1052 }}; the summary doubles it."
       - kind: attribution
-        text: "The decline is driven principally by the Learning Resources theme."
-        truth: "The deep dive attributes it to Assessment and Feedback."
+        text: "The decline is concentrated in the Department of Education."
+        truth: "Education has no NSS results at all (two-year programmes, no finalists). The fall is in Occupational Therapy and Somatic Wellbeing Enquiry, both Health."
       - kind: invented_action
         text: "The Department has committed to weekly feedback clinics from January 1053."
         truth: "No such commitment appears in any source. The action plan says fortnightly feedback workshops from February."
@@ -40,7 +40,7 @@ errors:
         truth: "23 October 1052 (T6)."
       - kind: omission
         text: ""
-        truth: "The summary omits the deep dive's main caveat: Education's response rate was below the publication threshold for two modules."
+        truth: "The summary omits the deep dive's main caveat: the Department of Education has no NSS-eligible students, so its action plan responds to Faculty-level results."
 
   - id: E02
     storyline: awarding-gap
@@ -61,9 +61,9 @@ errors:
       - kind: stale_figure
         text: "The gap in good honours between Elf and Dwarf graduates in the Faculty stands at {{ he_good_degree_gap_1051 }} percentage points."
         truth: "That is the 1051 figure, from last year's report. The 1052 figure is {{ he_good_degree_gap_1052 }}."
-      - kind: wrong_denominator
-        text: "In the Department of Health, {{ faculty_good_degree_rate_dwarf_1052 }}% of Dwarf graduates achieved a good degree."
-        truth: "That is the Faculty figure, not the Department's ({{ health_good_degree_rate_dwarf_1052 }}%)."
+      - kind: swapped_species
+        text: "{{ he_good_degree_rate_elf_1052 }}% of Dwarf graduates in the Faculty achieved a good degree."
+        truth: "That is the Elf rate. The Dwarf rate is {{ he_good_degree_rate_dwarf_1052 }}%."
       - kind: unsupported_claim
         text: "The gap has narrowed over the past three years."
         truth: "Templated to say 'narrowed' regardless. Check against the five-year table; in the shipped seed it has not."

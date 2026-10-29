@@ -261,6 +261,11 @@ def main():
     subprocess.run(["python", str(scripts_dir / "aggregate_gap.py")], check=True)
     subprocess.run(["python", str(scripts_dir / "aggregate_engagement.py")], check=True)
 
+    # Stonegrove Hub: Planning and Insight extracts and the named-figure dictionary
+    print("
+Regenerating Stonegrove Hub extracts...")
+    subprocess.run(["python", str(scripts_dir / "make_hub_extracts.py")], check=True)
+
     print("\nDone.")
 
 

@@ -1,0 +1,39 @@
+---
+title: Senate agenda 5 February 1053
+format: docx
+author: gudrik-bannerstone
+created: 1053-01-28
+modified: 1053-01-28
+label: Internal
+sensitive: false
+site: governance
+library: gov-senate
+path: 1052-53/1053-02-05 Senate
+storylines: [ai-policy]
+skills: [1]
+---
+
+::: footer current
+
+# SENATE
+
+## Agenda for the meeting to be held on 5 February 1053 at 14:00 in the Council Chamber
+
+This meeting will be recorded and transcribed for the purpose of producing minutes. The transcript will be deleted on approval of the minutes.
+
+| No. | Item | Purpose | Paper | Lead | Time |
+|---|---|---|---|---|---|
+| 1 | Welcome and apologies | | Oral | Chair | 2 min |
+| 2 | Declarations of interest | | Oral | Chair | 1 min |
+| 3 | Minutes of the meeting held on 4 December 1052 | To approve | Attached | Chair | 3 min |
+| 4 | Matters arising and action log | To note | S/1053/01 | Secretary | 5 min |
+| 5 | Vice-Chancellor's report | To note | S/1053/02 | Vice-Chancellor | 10 min |
+| 6 | Artificial Intelligence Acceptable Use Policy, version 1.0, with Technical Annex | To approve | S/1053/03 | Information Governance Manager | 20 min |
+| 6a | Dissenting note from Dr Dourstone | To note | S/1053/04 | Dr Dourstone | 5 min |
+| 7 | Programme closure procedure | To approve | S/1052/39 | Head of Quality | 10 min |
+| 8 | Admissions report: 1053 entry cycle to date | To note | S/1053/05 | Head of Admissions | 10 min |
+| 9 | Report from the Quality Committee | To note | S/1053/06 | Head of Quality | 5 min |
+| 10 | Any other business | | Oral | Chair | 5 min |
+| 11 | Date of next meeting: 23 April 1053, 14:00 | | | | |
+
+Secretary: Gudrik Bannerstone, extension 2004, gudrik.bannerstone@stonegrove.ac.example

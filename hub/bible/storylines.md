@@ -33,7 +33,7 @@ Tags used in source front-matter: `awarding-gap`, `placements`, `revalidation`, 
 - planning / Reports / 1051-52: last year's awarding gap report (the source of the Dean's stale figures).
 - planning / Data Extracts: the generated tables a learner can do the analysis from.
 
-**Ground truth for the wrong numbers.** The Dean's draft uses `he_good_degree_gap_1051` where `he_good_degree_gap_1052` is meant (last year's figure), and `faculty_good_degree_rate_dwarf_1052` labelled as the Department of Health figure. A learner who does the analysis from the extracts should be able to catch both. Both keys come from `scripts/make_hub_extracts.py`, so a reseed keeps them wrong in the right way.
+**Ground truth for the wrong numbers.** The Dean's draft uses `he_good_degree_gap_1051` where `he_good_degree_gap_1052` is meant (last year's figure), and quotes `he_good_degree_rate_elf_1052` as the Dwarf rate (the species swapped). A learner who does the analysis from the extracts should be able to catch both. Note for authors: in the current dataset the Faculty's graduates all come from Somatic Wellbeing Enquiry, so programme-level comparisons are thin; keep in-world claims at Faculty level. Both keys come from `scripts/make_hub_extracts.py`, so a reseed keeps them wrong in the right way.
 
 **Skills.** 2 (do the analysis), 6 (write the short paper), 8 (check the Dean's draft).
 
@@ -182,12 +182,12 @@ Tags used in source front-matter: `awarding-gap`, `placements`, `revalidation`, 
 
 ---
 
-## 7. The Education NSS dip  (`nss-dip`)
+## 7. The NSS dip  (`nss-dip`)
 
-**Summary.** NSS 1052 results (published in-world August 1052) showed a drop in overall satisfaction for the Department of Education, driven by assessment and feedback. Saelith took it personally and produced an action plan at midnight, five times. The action group's transcript mangles every name. Teylin's auto-generated summary of the NSS pack has errors. A focus-group participant disclosed more than he meant to and the referral note exists in two places with different labels.
+**Summary.** NSS 1052 results (published in-world August 1052; academic year 1051-52 in the data) showed Assessment and Feedback slipping across the Faculty, with Occupational Therapy and Somatic Wellbeing Enquiry falling most. The Dean asked both departments for action plans. The Department of Education has no finalists (its programmes are two years) and therefore no NSS results of its own, which did not stop Saelith taking the Faculty figures personally and producing an action plan at midnight, five times. The action group's transcript mangles every name. Teylin's auto-generated summary of the NSS pack has errors. A focus-group participant disclosed more than he meant to and the referral note exists in two places with different labels.
 
 **Timeline.**
-- Aug 1052: results. Education overall satisfaction down (figure from `values.yaml`: `education_nss_overall_1052` and `_1051`).
+- Aug 1052: results. Faculty Assessment and Feedback down (`values.yaml`: `he_nss_assessment_feedback_1052` and `_1051`; `ot_nss_overall_1052` and `_1051`; `swe_nss_overall_1052` and `_1051`).
 - Oct 1052: Erra's deep dive (Reports). Action group (T6). Teylin's "Summary (auto-generated)" of the pack.
 - Oct to Dec 1052: action plan v1 to v5, unmarked.
 - Nov 1052: focus groups; Tivan Reefgrace's disclosure; referral to Wellbeing.
@@ -202,7 +202,7 @@ Tags used in source front-matter: `awarding-gap`, `placements`, `revalidation`, 
 - planning / Data Extracts: NSS by department.
 - wellbeing / Case Notes / Open: Tivan's referral, Confidential.
 
-**Skills.** 1 (T6), 2 (the NSS data), 8 (Teylin's summary), 9 (five action plans).
+**Skills.** 1 (T6), 2 (the NSS data: which programmes actually fell, and does Education have any results at all), 8 (Teylin's summary), 9 (five action plans).
 
 **Hint text.** "When Education's satisfaction scores dropped, the department wrote its action plan five times, and someone had a tool summarise the results pack without reading the output. The deep dive in Planning's Reports library is the version to trust."
 

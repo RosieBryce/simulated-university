@@ -1,0 +1,147 @@
+---
+title: AI Acceptable Use Policy
+format: docx
+author: elenna-dewscroll
+modified_by: gudrik-bannerstone
+created: 1052-09-20
+modified: 1053-02-07
+label: Public
+sensitive: false
+site: governance
+library: gov-policies
+path: Current/Digital
+storylines: [ai-policy]
+skills: [5, 8]
+lineage:
+  root: true
+  true_latest: true
+---
+
+# Artificial Intelligence Acceptable Use Policy
+
+| | |
+|---|---|
+| Policy owner | University Secretary |
+| Author | Information Governance Manager and Data Protection Officer |
+| Approved by | Senate, 5 February 1053 (Minute S/1053/07) |
+| Effective from | 12 February 1053 |
+| Review date | February 1054 |
+| Version | 1.0 |
+| Classification | Public |
+
+## 1. Purpose
+
+1.1 Generative artificial intelligence tools are now widely available and many colleagues are already using them in their work. This policy sets out how staff of Stonegrove University may use such tools, what they must not do, and who is accountable for the results.
+
+1.2 The policy exists to make safe use possible, not to prevent use. Where it says no, it is because the risk to students, applicants, colleagues or the University cannot be managed another way.
+
+## 2. Scope
+
+2.1 This policy applies to all staff, including honorary and visiting staff, contractors and student employees, when acting on behalf of the University.
+
+2.2 It applies to any tool that generates, summarises, translates, classifies or transforms text, images, audio, code or data using a model trained on large quantities of data, whether the tool is accessed through a browser, an installed application, an add-in to an existing product, or a feature embedded in a product the University already licenses.
+
+2.3 Use of AI by students in their studies is covered by the Academic Regulations and the Academic Integrity Policy, not by this document.
+
+## 3. Definitions
+
+3.1 **Approved tool**: a tool listed on the Approved Digital Tools List maintained by Digital Services. At the date of approval the institutional assistant, Cloudi, is the only approved generative tool.
+
+3.2 **Non-approved tool**: any tool not on that list, including free consumer services, personal subscriptions, and trial versions.
+
+3.3 **Classification labels** have the meanings given in the Data Classification Scheme: Public, Internal and Confidential.
+
+3.4 **Personal data** has the meaning given in the University's Data Protection Policy.
+
+## 4. Principles
+
+4.1 **A person is accountable for every output.** Anything produced with the help of an AI tool is the responsibility of the member of staff who uses it, exactly as if they had written it themselves. "The tool got it wrong" is not a defence.
+
+4.2 **Check before you rely.** Outputs must be checked against their sources before they are circulated, filed, or acted upon. Tools invent facts, dates, figures, names and quotations, and do so fluently.
+
+4.3 **Classification governs input.** What may be entered into a tool depends on the classification of the material, not on how useful the tool would be.
+
+4.4 **Be open about use.** Where AI has made a material contribution to a document that others will rely on, say so.
+
+4.5 **Do not use AI to make decisions about people.** Tools may inform a decision; they may not make it, and their output must not be the sole basis for a decision affecting a student, applicant or member of staff.
+
+## 5. Permitted uses
+
+5.1 With **Public** material, staff may use any tool for any lawful purpose.
+
+5.2 With **Internal** material, staff may use approved tools only. Typical permitted uses include:
+
+- drafting and redrafting correspondence, papers and web copy
+- summarising long documents and committee packs
+- producing first-draft minutes from a recording or transcript, provided a named person checks and finalises them
+- extracting structured information from unstructured documents
+- generating code, formulas and queries for analysis
+- translating between registers, for example from regulation to student-facing guidance
+
+5.3 Staff may use approved tools to analyse **aggregated** data in which no individual can be identified.
+
+## 6. Prohibited uses
+
+6.1 **Confidential** material must not be entered into any AI tool, approved or not, unless a Data Protection Impact Assessment for that specific use has been completed and signed off by the Data Protection Officer. In practice this means that support plans, case notes, fitness to practise files, applicant records, references, personal statements, staff personal data, reserved committee business and incident reports are out of scope for AI tools.
+
+6.2 Internal or Confidential material must not be entered into a non-approved tool under any circumstances. This includes pasting text into a free consumer service "just to check the grammar".
+
+6.3 AI tools must not be used to:
+
+- generate references, recommendations or assessments of named individuals
+- make or appear to make admissions, progression, award, disciplinary or employment decisions
+- produce material that imitates a named colleague or student
+- record or transcribe a meeting without the knowledge of those present
+- circumvent any other University policy
+
+6.4 Outputs must not be presented as the University's position without the normal approvals that would apply to a human-authored document.
+
+## 7. Transparency
+
+7.1 Documents in which AI has made a material contribution should carry a short note to that effect, for example: "First draft produced with Cloudi from the meeting transcript; checked and edited by [name]."
+
+7.2 Committee papers must state in the cover sheet whether AI tools were used in their preparation.
+
+7.3 Where a tool has been used to summarise a document, the summary must link or refer to the original.
+
+## 8. Data protection and records
+
+8.1 Approved tools are configured so that University data is not used to train models and is not retained by the supplier beyond the session. Non-approved tools make no such guarantee, which is why they are prohibited for anything other than Public material.
+
+8.2 Material entered into an approved tool remains subject to the Records Retention Schedule and to subject access requests.
+
+8.3 Suspected breaches of this policy involving personal data must be reported under the Data Breach Procedure within one working day.
+
+## 9. Roles and responsibilities
+
+| Role | Responsibility |
+|---|---|
+| All staff | Comply with this policy; check outputs; report breaches |
+| Line managers | Ensure staff know the policy; approve local use cases where in doubt |
+| Digital Services | Maintain the Approved Digital Tools List; configure approved tools; publish the Technical Annex |
+| Information Governance Manager and DPO | Advise on classification and data protection; own DPIAs; investigate breaches |
+| University Secretary | Policy owner; report annually to Senate |
+
+## 10. Breaches
+
+10.1 Breaches will be handled under the Staff Disciplinary Procedure in the normal way. The University's starting position is that an honest mistake reported promptly is a learning matter, not a disciplinary one.
+
+## 11. Related documents
+
+- Data Classification Scheme
+- Approved Digital Tools List
+- AI Acceptable Use Policy: Technical Annex
+- Can I use AI for this? (decision tree)
+- Data Protection Policy
+- Data Breach Procedure
+- Records Retention Schedule
+- Academic Integrity Policy
+
+## 12. Version history
+
+| Version | Date | Change |
+|---|---|---|
+| 0.1 | 30 September 1052 | First draft for consultation (Information Governance) |
+| 0.2 | 14 October 1052 | Redraft following Digital Services comments |
+| 0.3 | 20 November 1052 | For Senate, 4 December 1052. Referred back for a technical annex |
+| 1.0 | 5 February 1053 | Approved by Senate with Technical Annex |

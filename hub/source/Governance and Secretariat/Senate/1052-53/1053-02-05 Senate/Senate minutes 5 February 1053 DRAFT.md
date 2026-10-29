@@ -1,0 +1,44 @@
+---
+title: Senate minutes 5 February 1053 DRAFT
+format: docx
+author: gudrik-bannerstone
+created: 1053-02-10
+modified: 1053-02-14
+label: Internal
+sensitive: false
+site: governance
+library: gov-senate
+path: 1052-53/1053-02-05 Senate
+storylines: [ai-policy, admissions]
+skills: [1]
+---
+
+::: footer current
+
+# SENATE
+
+## DRAFT minutes of the meeting held on 5 February 1053 at 14:00 in the Council Chamber
+
+*Draft circulated to members 14 February 1053. Corrections of fact to the Secretary by 21 February. For approval at the meeting of 23 April 1053.*
+
+**Present:** Professor T. Illumenbark (Vice-Chancellor, Chair), Professor C. Goldmantle, Dr H. Dourstone, Dr S. Emberthorn, Dr B. Cragshield, Q. Deepmirror, R. Moondrift, M. Dealroot (Head of Admissions, for item 8), and twelve other members.
+
+**In attendance:** T. Everjudged (University Secretary), E. Dewscroll (Information Governance Manager), F. Gridforge (Head of Digital Services, for item 6), G. Bannerstone (Secretary).
+
+**Apologies:** Dr C. Candletome, and three members.
+
+| Minute | Item | Action |
+|---|---|---|
+| 25.1 | **Welcome and apologies.** NOTED as above. | |
+| 25.2 | **Declarations of interest.** None. | |
+| 25.3 | **Minutes of 4 December 1052.** APPROVED as an accurate record. | |
+| 25.4 | **Matters arising and action log** (S/1053/01). All actions under 24.7 were reported complete and are closed by the decisions at 25.6 below. Action 22.7 is closed by 25.7. | |
+| 25.5 | **Vice-Chancellor's report** (S/1053/02). NOTED. | |
+| 25.6 | **Artificial Intelligence Acceptable Use Policy, version 1.0** (S/1053/03). The Information Governance Manager presented the revised policy with the Technical Annex, noting the changes made in response to the December discussion: provisions on marking and feedback at 5.2 and 6.3; aggregated data defined by reference to the Planning and Insight threshold of twenty; the Information Governance Manager as first point of contact; a six-month review. The Head of Digital Services confirmed that the institutional assistant, Cloudi, would be available to all staff from 12 February and described the classification control in Annex A1.4, noting that it depended on labels being set and did not apply to pasted text. Senate NOTED the dissenting note from Dr Dourstone (S/1053/04) and his three requests. On the first, Senate AGREED that the Department of Health might adopt a stricter local position under the roles table, to be notified to the Information Governance Manager. On the second, Senate AGREED that the six-month review include a sample audit of outputs against sources. On the third, the Information Governance Manager confirmed that the training module already opened with such an exercise. Senate RESOLVED to APPROVE the Artificial Intelligence Acceptable Use Policy, version 1.0, with Technical Annex, with effect from 12 February 1053, Dr Dourstone's dissent being RECORDED. | IGM: publish policy, annex, decision tree and tools list, 12 Feb. Head of Communications: all-staff announcement, 12 Feb. IGM: six-month review with audit to Senate, Oct 1053. Head of Department of Health: notify local position, 28 Feb. |
+| 25.7 | **Programme closure procedure** (S/1052/39). APPROVED. | |
+| 25.8 | **Admissions report, 1053 entry** (S/1053/05). The Head of Admissions reported that applications and offers were ahead of the same point last year but that firm acceptances were behind. She outlined possible explanations including the date of the October open day and interview turnaround times in the Faculty of Health and Education. The Dean undertook to look at turnaround. The Head of Planning and Insight cautioned that it was early in the cycle to attribute cause. Senate NOTED the report. | Dean, H and E: report on interview turnaround to Head of Admissions, 5 Mar. |
+| 25.9 | **Report from the Quality Committee** (S/1053/06). NOTED. | |
+| 25.10 | **Any other business.** The Head of Communications reminded members that Communications should be consulted before any new University-wide tool or service was named. | |
+| 25.11 | **Date of next meeting.** 23 April 1053, 14:00. | |
+
+Secretary: G. Bannerstone

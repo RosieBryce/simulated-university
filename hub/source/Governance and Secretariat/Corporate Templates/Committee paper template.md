@@ -1,0 +1,59 @@
+---
+title: Committee paper template
+format: docx
+author: gudrik-bannerstone
+created: 1049-09-01
+modified: 1051-02-10
+label: Internal
+sensitive: false
+site: governance
+library: gov-templates
+path: ""
+storylines: [rebrand]
+skills: [6]
+off_brand: B04
+---
+
+::: footer old
+
+# [COMMITTEE NAME]
+
+## Paper X/YYYY/NN
+
+| | |
+|---|---|
+| **Title** | [Title] |
+| **Author** | [Name, post] |
+| **Sponsor** | [Name, post; the senior officer who stands behind the paper] |
+| **Purpose** | To approve / To note / To discuss |
+| **Classification** | Public / Internal / Confidential |
+| **Reserved business?** | No / Yes, section [n] |
+| **AI tools used in preparation?** | No / Yes: [tool, for what, checked by whom] |
+
+### Summary
+
+[No more than 150 words. If the Committee reads only this, what must it know?]
+
+### Recommendation
+
+[The Committee is asked to APPROVE / NOTE / AGREE ...]
+
+### 1. Background
+
+### 2. The issue
+
+### 3. Options considered
+
+### 4. Proposal
+
+### 5. Risks and mitigations
+
+### 6. Resource implications
+
+### 7. Equality considerations
+
+### 8. Next steps and timetable
+
+### Appendices
+
+*Guidance (delete before circulation): keep to four pages plus appendices; tables for figures, with sources and dates; every figure must be traceable to a named source; do not include personal data about identifiable individuals in an open paper.*

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stonegrove Hub: a simulated university intranet document estate for practising AI skills safely. Everything in it is synthetic.">
+  <title>Stonegrove Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="suite">
+    <button class="menu-btn" id="menu" aria-label="Sites menu">☰</button>
+    <a class="brand" href="#/">Stonegrove <span>Hub</span></a>
+    <div class="search"><input id="q" type="search" placeholder="Search file names and press Enter" aria-label="Search"></div>
+    <div class="spacer"></div>
+    <label class="toggle" title="Show what each team is wrestling with and what you might try"><input type="checkbox" id="hints"><span class="pill"></span><span>Hints</span></label>
+    <a class="suite-link hide-sm" href="guide.html">Learner Guide</a>
+    <a class="suite-link hide-sm" href="../index.html">Stonegrove University</a>
+  </header>
+
+  <div class="shell">
+    <nav class="nav" id="nav" aria-label="Sites"></nav>
+    <main class="main" id="main"><div class="empty">Loading the Hub…</div></main>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-label="File preview">
+    <header><h2 id="drawer-title"></h2><button class="close" id="drawer-close" aria-label="Close preview">×</button></header>
+    <dl class="meta" id="drawer-meta"></dl>
+    <div class="dl" id="drawer-dl"></div>
+    <div class="body" id="drawer-body"></div>
+  </aside>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="hub.js"></script>
+</body>
+</html>

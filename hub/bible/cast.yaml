@@ -589,6 +589,25 @@ staff:
 
   # ---------------------------------------------------------------- Off-stage (names appear; the people never do)
 
+  - id: thalion-illumenbark
+    name: Professor Thalion Illumenbark
+    title: Vice-Chancellor
+    site: offstage
+    species: Elf
+    clan: Holly
+    gender: male
+    pronouns: he/him
+    email: vice.chancellor@stonegrove.ac.example
+    ext: "1000"
+    voice: >
+      Chairs Senate and sits on Council. Appears only in committee: in
+      transcripts as the chair who moves things along, in minutes as "the
+      Chair". Courteous, brisk, fond of "shall we". Never writes a document
+      himself.
+    cares_about: Senate finishing on time. Consensus.
+    clashes_with: []
+    tells: ["shall we", "I think we have the sense of the meeting", "thank you, colleagues"]
+
   - id: fenn-gridforge
     name: Fenn Gridforge
     title: Head of Digital Services

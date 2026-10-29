@@ -1,0 +1,13 @@
+{
+ "estate": "stonegrove-hub.zip",
+ "sites": {
+  "governance": "stonegrove-hub-governance-and-secretariat.zip",
+  "faculty": "stonegrove-hub-faculty-of-health-and-education.zip",
+  "pst": "stonegrove-hub-programme-support-team-nursing-and-care.zip",
+  "planning": "stonegrove-hub-planning-and-insight.zip",
+  "quality": "stonegrove-hub-quality.zip",
+  "admissions": "stonegrove-hub-admissions.zip",
+  "wellbeing": "stonegrove-hub-student-wellbeing.zip",
+  "comms": "stonegrove-hub-communications.zip"
+ }
+}

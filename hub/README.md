@@ -2,7 +2,7 @@
 
 A simulated institutional SharePoint estate for Stonegrove University: a downloadable folder tree of realistic, messy institutional documents, browsed through a SharePoint-style explorer on the public site, for learners to practise using AI safely. The full brief is in [`docs/SHAREPOINT_BRIEF.md`](../docs/SHAREPOINT_BRIEF.md).
 
-**Status: phase 0 (bible) complete, awaiting review. Nothing in-world has been written yet.**
+**Status: phase 1 (vertical slice) built. Governance and Secretariat and the Teaching Nursing and Care library are authored; the build, linter, manifest, explorer and downloads work end to end. Other sites are empty skeletons until phase 2.**
 
 ## Layout
 
@@ -51,11 +51,12 @@ Keys the bible already depends on (phase 1 defines them properly):
 | Key | Meaning |
 |---|---|
 | `he_good_degree_gap_1052`, `_1051`, `_1050`, `_1049`, `_1048` | Faculty Elf minus Dwarf good honours rate, pp, by graduating year |
-| `faculty_good_degree_rate_dwarf_1052`, `_elf_1052` | Faculty good honours rate by species |
-| `health_good_degree_rate_dwarf_1052`, `_elf_1052` | Department of Health likewise |
-| `education_good_degree_rate_dwarf_1052`, `_elf_1052` | Department of Education likewise |
-| `education_nss_overall_1052`, `_1051` | Department of Education NSS overall satisfaction, mean 1 to 5 |
-| `health_nss_overall_1052`, `_1051` | Department of Health likewise |
+| `he_good_degree_rate_dwarf_1052`, `_elf_1052` | Faculty good honours rate by species, percent |
+| `he_graduates_1052` | Faculty graduates in 1052-53 |
+| `he_nss_overall_1052`, `_1051` | Faculty NSS overall satisfaction, mean 1 to 5 (in-world NSS year = academic year end) |
+| `he_nss_assessment_feedback_1052`, `_1051` | Faculty NSS Assessment and Feedback theme |
+| `ot_nss_overall_1052`, `_1051`, `swe_nss_overall_1052`, `_1051` | Occupational Therapy and Somatic Wellbeing Enquiry likewise |
+| `education_nss_overall_1052` | Deliberately null: Education has no finalists. Documents must not quote it. |
 | `nursing_enrolled_1052` | Nursing and Care enrolments 1052-53 |
 | `he_enrolled_1052` | Faculty enrolments 1052-53 |
 | `nursing_withdrawal_rate_1052` | Nursing and Care withdrawal rate |
@@ -117,13 +118,16 @@ Email `forename.surname@stonegrove.ac.example`. Landlines `01632 960000` to `960
 
 British English. UK HE register. "Species", never "race". No real people, institutions, products or places. No em dashes anywhere. No stock AI phrasing. Characters are allowed to be verbose, pompous or chaotic in a human way; see the voice notes in `cast.yaml` and keep the tells consistent. Sensitive material about fictional students is written with the right texture and lives only where `classification.yaml` says.
 
-## Commands (phase 1 onwards)
+## Commands
 
 ```bash
 python scripts/make_hub_extracts.py                 # also called by build_relational_outputs.py
-python hub/build/build_estate.py --seed 42          # render, mess, lint, manifest
+python hub/build/build_estate.py --seed 42          # render, mess (phase 3), lint, manifest, publish to docs/hub/estate
 python hub/build/make_zips.py                       # zips into docs/hub/downloads/
+python -m http.server 8765 --directory docs         # then open http://localhost:8765/hub/
 ```
+
+Use `python`, not the `py` launcher: the scripts' shebang makes `py` pick an interpreter without the project's packages.
 
 ## Adding a document (phase 1 onwards)
 
@@ -138,8 +142,8 @@ python hub/build/make_zips.py                       # zips into docs/hub/downloa
 
 | Phase | Deliverable | Status |
 |---|---|---|
-| 0 | Bible (this folder) | Done, awaiting review |
-| 1 | Vertical slice: Governance complete, one faculty library, T3, build + lint + manifest, explorer, whole-estate zip, Windows extraction test, extracts wired into pipeline | |
+| 0 | Bible (this folder) | Done, reviewed |
+| 1 | Vertical slice: Governance complete, one faculty library, T3, build + lint + manifest, explorer, whole-estate zip, Windows extraction test, extracts wired into pipeline | Done. Extraction tested into an 81-character Downloads path; `~$` and `~WRL` names round-trip through Windows zip. |
 | 2 | Breadth: all sites, all transcripts, storylines threaded, additional-skill seeds, Communications with placeholders, off-brand plantings | |
 | 3 | Mess and sensitivity pass; StoneShare library; planted items and errors recorded | |
 | 4 | Learner Guide, hints overlay, per-site and folder downloads, nav link, CLAUDE.md and README updates, slop pass, QA by attempting every skill | |

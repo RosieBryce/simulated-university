@@ -1,0 +1,56 @@
+---
+title: Acceptable Use of IT Policy 1047
+format: docx
+author: fenn-gridforge
+created: 1047-05-01
+modified: 1047-05-20
+label: Public
+sensitive: false
+site: governance
+library: gov-policies
+path: Superseded
+storylines: [ai-policy, rebrand]
+skills: [9]
+off_brand: B04
+---
+
+::: letterhead old
+
+# Acceptable Use of Information Technology Policy
+
+Stonegrove College of the Vale. Approved by the Academic Board, 20 May 1047. Superseded in part by the AI Acceptable Use Policy (February 1053); remains in force for matters not covered there pending review.
+
+## 1. Introduction
+
+The College provides information technology facilities to support its teaching, research and administration. Use of these facilities is a privilege extended to staff and students on the conditions set out in this policy.
+
+## 2. Permitted use
+
+2.1 Facilities may be used for College business and for reasonable personal use that does not interfere with College business, consume significant resources, or bring the College into disrepute.
+
+2.2 Users must keep their passwords confidential and must not share accounts.
+
+## 3. Prohibited use
+
+3.1 Users must not use College facilities to access, store or distribute material that is unlawful, offensive, or in breach of copyright.
+
+3.2 Users must not install software without the authorisation of Information Services.
+
+3.3 Users must not connect unauthorised devices to the College network.
+
+3.4 Users must not store College data on personal devices or on external services not approved by Information Services.
+
+## 4. Monitoring
+
+The College reserves the right to monitor use of its facilities in accordance with the law and the Staff Handbook.
+
+## 5. Breaches
+
+Breaches will be dealt with under the Staff Disciplinary Procedure or the Student Disciplinary Regulations as appropriate.
+
+## 6. Review
+
+This policy will be reviewed every three years.
+
+Information Services
+Stonegrove College of the Vale

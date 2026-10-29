@@ -1,0 +1,3702 @@
+{
+ "generated_at": "2026-10-29T13:24:16",
+ "seed": 42,
+ "snapshot_date": "1053-04-14",
+ "snapshot_display": "14 April 1053",
+ "institution": {
+  "name": "Stonegrove University",
+  "email_domain": "stonegrove.ac.example",
+  "switchboard": "01632 960000",
+  "postal_address": "Stonegrove University, The Cloisters, Greywater Vale",
+  "former_name": "Stonegrove College of the Vale",
+  "intranet_name": "Stonegrove Hub",
+  "legacy_drive_name": "StoneShare"
+ },
+ "sites": [
+  {
+   "id": "governance",
+   "name": "Governance and Secretariat",
+   "folder": "Governance and Secretariat",
+   "owner": "thalira-everjudged",
+   "owner_name": "Thalira Everjudged",
+   "owner_title": "University Secretary",
+   "description": "Council and Senate papers, University policies and procedures, information governance, and corporate templates.",
+   "hint": "The rules are kept here: the AI Acceptable Use Policy, the Data Classification Scheme and the naming convention among them. Most of the other exercises use these as the ruleset, so it is worth reading them first. You will then be able to see how much of the rest of the Hub ignores them.",
+   "skills": [
+    1,
+    5,
+    6,
+    8,
+    9
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "gov-policies",
+     "name": "Policies and Procedures",
+     "folder": "Policies and Procedures",
+     "default_label": "Public",
+     "hint": "",
+     "budget": {
+      "authored": 16,
+      "total": 20
+     }
+    },
+    {
+     "id": "gov-council",
+     "name": "Council",
+     "folder": "Council",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 22,
+      "total": 26
+     }
+    },
+    {
+     "id": "gov-senate",
+     "name": "Senate",
+     "folder": "Senate",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 20,
+      "total": 26
+     }
+    },
+    {
+     "id": "gov-ig",
+     "name": "Information Governance",
+     "folder": "Information Governance",
+     "default_label": "Confidential",
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 10
+     }
+    },
+    {
+     "id": "gov-templates",
+     "name": "Corporate Templates",
+     "folder": "Corporate Templates",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 4,
+      "total": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "faculty",
+   "name": "Faculty of Health and Education",
+   "folder": "Faculty of Health and Education",
+   "owner": "cyranor-goldmantle",
+   "owner_name": "Professor Cyranor Goldmantle",
+   "owner_title": "Dean, Faculty of Health & Education",
+   "description": "Faculty office, Departments of Health and Education, programme teaching materials, and the migrated StoneShare drive.",
+   "hint": "The biggest site and the untidiest. The Dean's Office is where briefings land and drafts go wrong. The StoneShare Migration library is the old network drive, dropped here in November 1052 and never sorted; it holds things that should not be in a shared library at all. It is the place to start for the folder- organisation and guardrails exercises.",
+   "skills": [
+    1,
+    4,
+    5,
+    6,
+    9,
+    11
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "fac-deans",
+     "name": "Deans Office",
+     "folder": "Deans Office",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 25,
+      "total": 35
+     }
+    },
+    {
+     "id": "fac-health",
+     "name": "Department of Health",
+     "folder": "Department of Health",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 20,
+      "total": 28
+     }
+    },
+    {
+     "id": "fac-education",
+     "name": "Department of Education",
+     "folder": "Department of Education",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 15,
+      "total": 22
+     }
+    },
+    {
+     "id": "fac-teaching-nc",
+     "name": "Teaching Nursing and Care",
+     "folder": "Teaching Nursing and Care",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 14,
+      "total": 20
+     }
+    },
+    {
+     "id": "fac-stoneshare",
+     "name": "StoneShare Migration",
+     "folder": "StoneShare Migration",
+     "default_label": null,
+     "hint": "",
+     "budget": {
+      "authored": 50,
+      "total": 200
+     }
+    }
+   ]
+  },
+  {
+   "id": "pst",
+   "name": "Programme Support Team Nursing and Care",
+   "folder": "Programme Support Team Nursing and Care",
+   "owner": "dagna-chiselhand",
+   "owner_name": "Dagna Chiselhand",
+   "owner_title": "Programme Leader, Nursing and Care",
+   "description": "Administrative team for the Nursing and Care programme: placements, provider liaison, student records and programme administration.",
+   "hint": "Placements for the largest programme in the Faculty are run from a spreadsheet with fourteen tabs by one person, who goes on leave in May. Everything you would need to scope a small system is here in pieces: the spreadsheet itself, the complaints about it, the provider letters, and the form Digital Services rejected two years ago. Use this site for project management and for pulling a table out of a pile of correspondence.",
+   "skills": [
+    1,
+    3,
+    7,
+    9
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "pst-placements",
+     "name": "Placements",
+     "folder": "Placements",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 12,
+      "total": 22
+     }
+    },
+    {
+     "id": "pst-providers",
+     "name": "Provider Correspondence",
+     "folder": "Provider Correspondence",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 32,
+      "total": 35
+     }
+    },
+    {
+     "id": "pst-admin",
+     "name": "Programme Administration",
+     "folder": "Programme Administration",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 10,
+      "total": 15
+     }
+    },
+    {
+     "id": "pst-email-attachments",
+     "name": "Email Attachments",
+     "folder": "Email Attachments",
+     "default_label": null,
+     "hint": "",
+     "budget": {
+      "authored": 6,
+      "total": 13
+     }
+    }
+   ]
+  },
+  {
+   "id": "planning",
+   "name": "Planning and Insight",
+   "folder": "Planning and Insight",
+   "owner": "quorin-deepmirror",
+   "owner_name": "Quorin Deepmirror",
+   "owner_title": "Head of Planning & Insight",
+   "description": "Institutional data, analysis and reporting. Student numbers, awarding gaps, NSS, surveys, data requests.",
+   "hint": "This team owns the numbers. Their Reports library is the one place in the Hub where the naming convention is followed, and it shows. The Data Extracts are small cuts of the full Stonegrove dataset, which you can download from the main site. In the Working folder there is a half-finished awarding gap analysis and two summaries that a tool generated and nobody checked.",
+   "skills": [
+    2,
+    6,
+    8
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "pi-reports",
+     "name": "Reports",
+     "folder": "Reports",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 13,
+      "total": 15
+     }
+    },
+    {
+     "id": "pi-requests",
+     "name": "Data Requests",
+     "folder": "Data Requests",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 8
+     }
+    },
+    {
+     "id": "pi-working",
+     "name": "Working",
+     "folder": "Working",
+     "default_label": null,
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 12
+     }
+    },
+    {
+     "id": "pi-extracts",
+     "name": "Data Extracts",
+     "folder": "Data Extracts",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 0,
+      "total": 10
+     }
+    }
+   ]
+  },
+  {
+   "id": "quality",
+   "name": "Quality",
+   "folder": "Quality",
+   "owner": "brynja-cragshield",
+   "owner_name": "Brynja Cragshield",
+   "owner_title": "Head of Quality",
+   "description": "Academic regulations, programme approval and revalidation, examination boards, external examining.",
+   "hint": "The formal register. Regulations here are written to be quoted rather than read, which makes them good practice for turning into plain guidance. The Occupational Therapy revalidation folder has a panel transcript, the minutes the clerk produced from it, and a reserved item that must stay out of the open minutes.",
+   "skills": [
+    1,
+    9,
+    10
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "q-regulations",
+     "name": "Academic Regulations",
+     "folder": "Academic Regulations",
+     "default_label": "Public",
+     "hint": "",
+     "budget": {
+      "authored": 10,
+      "total": 10
+     }
+    },
+    {
+     "id": "q-revalidation",
+     "name": "Programme Revalidation",
+     "folder": "Programme Revalidation",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 16,
+      "total": 22
+     }
+    },
+    {
+     "id": "q-examboards",
+     "name": "Examination Boards",
+     "folder": "Examination Boards",
+     "default_label": "Confidential",
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 12
+     }
+    },
+    {
+     "id": "q-externals",
+     "name": "External Examiners",
+     "folder": "External Examiners",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 6,
+      "total": 6
+     }
+    },
+    {
+     "id": "q-working",
+     "name": "Working",
+     "folder": "Working",
+     "default_label": null,
+     "hint": "",
+     "budget": {
+      "authored": 5,
+      "total": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "admissions",
+   "name": "Admissions",
+   "folder": "Admissions",
+   "owner": "mira-dealroot",
+   "owner_name": "Mira Dealroot",
+   "owner_title": "Head of Admissions",
+   "description": "Applicant processing, offer-making, conversion, open days and applicant communications for the 1053 entry cycle.",
+   "hint": "Offers are up and acceptances are down, and there are three explanations in three documents, each written for a different audience. The applicant tracker holds more personal data than it needs and is labelled Internal. Someone has also pasted an applicant's personal statement into a tool that is not on the approved list. A good site for the guardrails exercise and for drafting in the right voice.",
+   "skills": [
+    2,
+    5,
+    10
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "adm-cycle",
+     "name": "Cycle 1053 Entry",
+     "folder": "Cycle 1053 Entry",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 9,
+      "total": 12
+     }
+    },
+    {
+     "id": "adm-opendays",
+     "name": "Open Days",
+     "folder": "Open Days",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 9,
+      "total": 12
+     }
+    },
+    {
+     "id": "adm-comms",
+     "name": "Applicant Communications",
+     "folder": "Applicant Communications",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 10
+     }
+    },
+    {
+     "id": "adm-reports",
+     "name": "Reports",
+     "folder": "Reports",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 7,
+      "total": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "wellbeing",
+   "name": "Student Wellbeing",
+   "folder": "Student Wellbeing",
+   "owner": "velra-cinderwake",
+   "owner_name": "Velra Cinderwake",
+   "owner_title": "Head of Student Wellbeing",
+   "description": "Disability support, mental health and wellbeing advice, reasonable adjustments, and student casework.",
+   "hint": "Support plans and case notes are labelled correctly here. The trouble is the copies that have ended up elsewhere. Start in the Incident folder and trace the February incident to where the file actually went. Useful for the guardrails exercise and for drafting a difficult email.",
+   "skills": [
+    4,
+    5,
+    10
+   ],
+   "default_label": "Confidential",
+   "libraries": [
+    {
+     "id": "wb-plans",
+     "name": "Support Plans",
+     "folder": "Support Plans",
+     "default_label": "Confidential",
+     "hint": "",
+     "budget": {
+      "authored": 10,
+      "total": 12
+     }
+    },
+    {
+     "id": "wb-casenotes",
+     "name": "Case Notes",
+     "folder": "Case Notes",
+     "default_label": "Confidential",
+     "hint": "",
+     "budget": {
+      "authored": 7,
+      "total": 8
+     }
+    },
+    {
+     "id": "wb-procedures",
+     "name": "Procedures and Guidance",
+     "folder": "Procedures and Guidance",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 11,
+      "total": 12
+     }
+    },
+    {
+     "id": "wb-incident",
+     "name": "Incident February 1053",
+     "folder": "Incident February 1053",
+     "default_label": "Confidential",
+     "hint": "",
+     "budget": {
+      "authored": 6,
+      "total": 6
+     }
+    }
+   ]
+  },
+  {
+   "id": "comms",
+   "name": "Communications",
+   "folder": "Communications",
+   "owner": "rhialla-moondrift",
+   "owner_name": "Rhialla Moondrift",
+   "owner_title": "Head of Communications",
+   "description": "Brand, design, campaigns, internal and external communications, requests for communications support.",
+   "hint": "The brand guide is here, along with the Brand Compliance Log, a spreadsheet of every off-brand sighting since the 1051 rebrand. Give an AI the guide and ask for a set of materials, then point it at the off-brand files scattered across the other sites and see whether it keeps to the rules.",
+   "skills": [
+    10,
+    11
+   ],
+   "default_label": "Internal",
+   "libraries": [
+    {
+     "id": "comms-brand",
+     "name": "Brand",
+     "folder": "Brand",
+     "default_label": "Public",
+     "hint": "",
+     "budget": {
+      "authored": 12,
+      "total": 15
+     }
+    },
+    {
+     "id": "comms-campaigns",
+     "name": "Campaigns",
+     "folder": "Campaigns",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 16,
+      "total": 22
+     }
+    },
+    {
+     "id": "comms-requests",
+     "name": "Requests",
+     "folder": "Requests",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 12,
+      "total": 15
+     }
+    },
+    {
+     "id": "comms-archive",
+     "name": "Archive",
+     "folder": "Archive",
+     "default_label": "Internal",
+     "hint": "",
+     "budget": {
+      "authored": 8,
+      "total": 13
+     }
+    }
+   ]
+  }
+ ],
+ "folders": [
+  {
+   "path": "Admissions",
+   "name": "Admissions",
+   "site": "admissions",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Applicant Communications",
+   "name": "Applicant Communications",
+   "site": "admissions",
+   "library": "adm-comms",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Applicant Communications/Sent",
+   "name": "Sent",
+   "site": "admissions",
+   "library": "adm-comms",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Applicant Communications/Templates",
+   "name": "Templates",
+   "site": "admissions",
+   "library": "adm-comms",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Cycle 1053 Entry",
+   "name": "Cycle 1053 Entry",
+   "site": "admissions",
+   "library": "adm-cycle",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Cycle 1053 Entry/Conversion",
+   "name": "Conversion",
+   "site": "admissions",
+   "library": "adm-cycle",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Cycle 1053 Entry/Offer making",
+   "name": "Offer making",
+   "site": "admissions",
+   "library": "adm-cycle",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Cycle 1053 Entry/Tracker",
+   "name": "Tracker",
+   "site": "admissions",
+   "library": "adm-cycle",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Open Days",
+   "name": "Open Days",
+   "site": "admissions",
+   "library": "adm-opendays",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Open Days/1052-10 Open Day",
+   "name": "1052-10 Open Day",
+   "site": "admissions",
+   "library": "adm-opendays",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Open Days/1053-06 Open Day",
+   "name": "1053-06 Open Day",
+   "site": "admissions",
+   "library": "adm-opendays",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Admissions/Reports",
+   "name": "Reports",
+   "site": "admissions",
+   "library": "adm-reports",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications",
+   "name": "Communications",
+   "site": "comms",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Archive",
+   "name": "Archive",
+   "site": "comms",
+   "library": "comms-archive",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Archive/Pre-1051 brand",
+   "name": "Pre-1051 brand",
+   "site": "comms",
+   "library": "comms-archive",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Archive/Pre-1051 brand/College of the Vale logo",
+   "name": "College of the Vale logo",
+   "site": "comms",
+   "library": "comms-archive",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Archive/Rebrand project 1051",
+   "name": "Rebrand project 1051",
+   "site": "comms",
+   "library": "comms-archive",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Brand",
+   "name": "Brand",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Brand/Brand Guide",
+   "name": "Brand Guide",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Brand/Colour and Type",
+   "name": "Colour and Type",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Brand/Logo",
+   "name": "Logo",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Brand/Logo/Coat of arms",
+   "name": "Coat of arms",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Brand/Templates",
+   "name": "Templates",
+   "site": "comms",
+   "library": "comms-brand",
+   "label_default": "Public"
+  },
+  {
+   "path": "Communications/Campaigns",
+   "name": "Campaigns",
+   "site": "comms",
+   "library": "comms-campaigns",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Campaigns/1052-09 Midwifery launch",
+   "name": "1052-09 Midwifery launch",
+   "site": "comms",
+   "library": "comms-campaigns",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Campaigns/1053 Clearing",
+   "name": "1053 Clearing",
+   "site": "comms",
+   "library": "comms-campaigns",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Campaigns/1053-06 Open Day",
+   "name": "1053-06 Open Day",
+   "site": "comms",
+   "library": "comms-campaigns",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Campaigns/Socials",
+   "name": "Socials",
+   "site": "comms",
+   "library": "comms-campaigns",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Requests",
+   "name": "Requests",
+   "site": "comms",
+   "library": "comms-requests",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Requests/Declined",
+   "name": "Declined",
+   "site": "comms",
+   "library": "comms-requests",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Requests/Done",
+   "name": "Done",
+   "site": "comms",
+   "library": "comms-requests",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Communications/Requests/Open",
+   "name": "Open",
+   "site": "comms",
+   "library": "comms-requests",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education",
+   "name": "Faculty of Health and Education",
+   "site": "faculty",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office",
+   "name": "Deans Office",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Council and Senate",
+   "name": "Council and Senate",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Council and Senate/Awarding Gap Paper",
+   "name": "Awarding Gap Paper",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Elowen stuff",
+   "name": "Elowen stuff",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Elowen stuff/Deans thing",
+   "name": "Deans thing",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Elowen stuff/old",
+   "name": "old",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Faculty Management Group",
+   "name": "Faculty Management Group",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Faculty Management Group/1052-53",
+   "name": "1052-53",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Deans Office/Faculty Strategy",
+   "name": "Faculty Strategy",
+   "site": "faculty",
+   "library": "fac-deans",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education",
+   "name": "Department of Education",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education/Marketing",
+   "name": "Marketing",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education/Marketing/Jaskel",
+   "name": "Jaskel",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education/NSS Response",
+   "name": "NSS Response",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education/NSS Response/Action plan versions",
+   "name": "Action plan versions",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Education/NSS Response/Focus groups",
+   "name": "Focus groups",
+   "site": "faculty",
+   "library": "fac-education",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health",
+   "name": "Department of Health",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Department Meetings",
+   "name": "Department Meetings",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Fitness to Practise",
+   "name": "Fitness to Practise",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Fitness to Practise/Panel Papers",
+   "name": "Panel Papers",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Programme Documents",
+   "name": "Programme Documents",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Programme Documents/Midwifery",
+   "name": "Midwifery",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Programme Documents/Nursing and Care",
+   "name": "Nursing and Care",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Department of Health/Programme Documents/Occupational Therapy",
+   "name": "Occupational Therapy",
+   "site": "faculty",
+   "library": "fac-health",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration",
+   "name": "StoneShare Migration",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Education",
+   "name": "Education",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Education/Misc",
+   "name": "Misc",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared",
+   "name": "Faculty Shared",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin",
+   "name": "Admin",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old",
+   "name": "Old",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old/Older",
+   "name": "Older",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old/Older/2049",
+   "name": "2049",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE",
+   "name": "Archive - DO NOT DELETE",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc",
+   "name": "Misc",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc/Hrogar",
+   "name": "Hrogar",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Committees",
+   "name": "Committees",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Forms",
+   "name": "Forms",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Forms/New folder",
+   "name": "New folder",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Forms/New folder (2)",
+   "name": "New folder (2)",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Hesta stuff",
+   "name": "Hesta stuff",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Hesta stuff/Placements",
+   "name": "Placements",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Hesta stuff/Provider letters",
+   "name": "Provider letters",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Hesta stuff/Templates that work",
+   "name": "Templates that work",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos",
+   "name": "Photos",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/Away day 1051",
+   "name": "Away day 1051",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Faculty Shared/To sort",
+   "name": "To sort",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Health",
+   "name": "Health",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Health/FtP",
+   "name": "FtP",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Health/Healing Arts (old)",
+   "name": "Healing Arts (old)",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Personal",
+   "name": "Personal",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Personal/CV",
+   "name": "CV",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Templates",
+   "name": "Templates",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/StoneShare Migration/Templates/Old templates",
+   "name": "Old templates",
+   "site": "faculty",
+   "library": "fac-stoneshare",
+   "label_default": null
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care",
+   "name": "Teaching Nursing and Care",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Placements Info for Students",
+   "name": "Placements Info for Students",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 1",
+   "name": "Year 1",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2",
+   "name": "Year 2",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only",
+   "name": "Staff only",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 3",
+   "name": "Year 3",
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat",
+   "name": "Governance and Secretariat",
+   "site": "governance",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Corporate Templates",
+   "name": "Corporate Templates",
+   "site": "governance",
+   "library": "gov-templates",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council",
+   "name": "Council",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1051-52",
+   "name": "1051-52",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53",
+   "name": "1052-53",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1052-11-21 Council",
+   "name": "1052-11-21 Council",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-02-21 Council",
+   "name": "1053-02-21 Council",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-05-22 Council",
+   "name": "1053-05-22 Council",
+   "site": "governance",
+   "library": "gov-council",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance",
+   "name": "Information Governance",
+   "site": "governance",
+   "library": "gov-ig",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Advice Given",
+   "name": "Advice Given",
+   "site": "governance",
+   "library": "gov-ig",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log",
+   "name": "Incident Log",
+   "site": "governance",
+   "library": "gov-ig",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031",
+   "name": "1053-02 INC-0031",
+   "site": "governance",
+   "library": "gov-ig",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Training",
+   "name": "Training",
+   "site": "governance",
+   "library": "gov-ig",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures",
+   "name": "Policies and Procedures",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current",
+   "name": "Current",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Academic",
+   "name": "Academic",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Digital",
+   "name": "Digital",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "name": "Information Governance",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Superseded",
+   "name": "Superseded",
+   "site": "governance",
+   "library": "gov-policies",
+   "label_default": "Public"
+  },
+  {
+   "path": "Governance and Secretariat/Senate",
+   "name": "Senate",
+   "site": "governance",
+   "library": "gov-senate",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1051-52",
+   "name": "1051-52",
+   "site": "governance",
+   "library": "gov-senate",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53",
+   "name": "1052-53",
+   "site": "governance",
+   "library": "gov-senate",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "name": "1052-12-04 Senate",
+   "site": "governance",
+   "library": "gov-senate",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1053-02-05 Senate",
+   "name": "1053-02-05 Senate",
+   "site": "governance",
+   "library": "gov-senate",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight",
+   "name": "Planning and Insight",
+   "site": "planning",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Data Extracts",
+   "name": "Data Extracts",
+   "site": "planning",
+   "library": "pi-extracts",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53",
+   "name": "1052-53",
+   "site": "planning",
+   "library": "pi-extracts",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Data Requests",
+   "name": "Data Requests",
+   "site": "planning",
+   "library": "pi-requests",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Reports",
+   "name": "Reports",
+   "site": "planning",
+   "library": "pi-reports",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Reports/1050-51",
+   "name": "1050-51",
+   "site": "planning",
+   "library": "pi-reports",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Reports/1051-52",
+   "name": "1051-52",
+   "site": "planning",
+   "library": "pi-reports",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Reports/1052-53",
+   "name": "1052-53",
+   "site": "planning",
+   "library": "pi-reports",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Planning and Insight/Working",
+   "name": "Working",
+   "site": "planning",
+   "library": "pi-working",
+   "label_default": null
+  },
+  {
+   "path": "Planning and Insight/Working/Awarding gap",
+   "name": "Awarding gap",
+   "site": "planning",
+   "library": "pi-working",
+   "label_default": null
+  },
+  {
+   "path": "Planning and Insight/Working/NSS",
+   "name": "NSS",
+   "site": "planning",
+   "library": "pi-working",
+   "label_default": null
+  },
+  {
+   "path": "Planning and Insight/Working/Teylin",
+   "name": "Teylin",
+   "site": "planning",
+   "library": "pi-working",
+   "label_default": null
+  },
+  {
+   "path": "Programme Support Team Nursing and Care",
+   "name": "Programme Support Team Nursing and Care",
+   "site": "pst",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Email Attachments",
+   "name": "Email Attachments",
+   "site": "pst",
+   "library": "pst-email-attachments",
+   "label_default": null
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Placements",
+   "name": "Placements",
+   "site": "pst",
+   "library": "pst-placements",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Placements/Allocation",
+   "name": "Allocation",
+   "site": "pst",
+   "library": "pst-placements",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Placements/Allocation/Previous years",
+   "name": "Previous years",
+   "site": "pst",
+   "library": "pst-placements",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Placements/Digital Services request",
+   "name": "Digital Services request",
+   "site": "pst",
+   "library": "pst-placements",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Placements/Process",
+   "name": "Process",
+   "site": "pst",
+   "library": "pst-placements",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Programme Administration",
+   "name": "Programme Administration",
+   "site": "pst",
+   "library": "pst-admin",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Programme Administration/Forms",
+   "name": "Forms",
+   "site": "pst",
+   "library": "pst-admin",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Programme Administration/Handbooks",
+   "name": "Handbooks",
+   "site": "pst",
+   "library": "pst-admin",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Programme Administration/Meetings",
+   "name": "Meetings",
+   "site": "pst",
+   "library": "pst-admin",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Provider Correspondence",
+   "name": "Provider Correspondence",
+   "site": "pst",
+   "library": "pst-providers",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Provider Correspondence/1051-52",
+   "name": "1051-52",
+   "site": "pst",
+   "library": "pst-providers",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Programme Support Team Nursing and Care/Provider Correspondence/1052-53",
+   "name": "1052-53",
+   "site": "pst",
+   "library": "pst-providers",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality",
+   "name": "Quality",
+   "site": "quality",
+   "library": null,
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Academic Regulations",
+   "name": "Academic Regulations",
+   "site": "quality",
+   "library": "q-regulations",
+   "label_default": "Public"
+  },
+  {
+   "path": "Quality/Academic Regulations/1052-53",
+   "name": "1052-53",
+   "site": "quality",
+   "library": "q-regulations",
+   "label_default": "Public"
+  },
+  {
+   "path": "Quality/Academic Regulations/Guidance",
+   "name": "Guidance",
+   "site": "quality",
+   "library": "q-regulations",
+   "label_default": "Public"
+  },
+  {
+   "path": "Quality/Examination Boards",
+   "name": "Examination Boards",
+   "site": "quality",
+   "library": "q-examboards",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Quality/Examination Boards/Education 1052-53",
+   "name": "Education 1052-53",
+   "site": "quality",
+   "library": "q-examboards",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Quality/Examination Boards/Health 1052-53",
+   "name": "Health 1052-53",
+   "site": "quality",
+   "library": "q-examboards",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Quality/External Examiners",
+   "name": "External Examiners",
+   "site": "quality",
+   "library": "q-externals",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Programme Revalidation",
+   "name": "Programme Revalidation",
+   "site": "quality",
+   "library": "q-revalidation",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Programme Revalidation/Occupational Therapy 1053",
+   "name": "Occupational Therapy 1053",
+   "site": "quality",
+   "library": "q-revalidation",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Programme Revalidation/Occupational Therapy 1053/Panel 1053-03-12",
+   "name": "Panel 1053-03-12",
+   "site": "quality",
+   "library": "q-revalidation",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Programme Revalidation/Occupational Therapy 1053/Panel 1053-03-12/Reserved",
+   "name": "Reserved",
+   "site": "quality",
+   "library": "q-revalidation",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Programme Revalidation/Occupational Therapy 1053/SED",
+   "name": "SED",
+   "site": "quality",
+   "library": "q-revalidation",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Quality/Working",
+   "name": "Working",
+   "site": "quality",
+   "library": "q-working",
+   "label_default": null
+  },
+  {
+   "path": "Quality/Working/Ollir",
+   "name": "Ollir",
+   "site": "quality",
+   "library": "q-working",
+   "label_default": null
+  },
+  {
+   "path": "Student Wellbeing",
+   "name": "Student Wellbeing",
+   "site": "wellbeing",
+   "library": null,
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Case Notes",
+   "name": "Case Notes",
+   "site": "wellbeing",
+   "library": "wb-casenotes",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Case Notes/Closed",
+   "name": "Closed",
+   "site": "wellbeing",
+   "library": "wb-casenotes",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Case Notes/Open",
+   "name": "Open",
+   "site": "wellbeing",
+   "library": "wb-casenotes",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Incident February 1053",
+   "name": "Incident February 1053",
+   "site": "wellbeing",
+   "library": "wb-incident",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Procedures and Guidance",
+   "name": "Procedures and Guidance",
+   "site": "wellbeing",
+   "library": "wb-procedures",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Student Wellbeing/Procedures and Guidance/Staff guidance",
+   "name": "Staff guidance",
+   "site": "wellbeing",
+   "library": "wb-procedures",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Student Wellbeing/Procedures and Guidance/Student guidance",
+   "name": "Student guidance",
+   "site": "wellbeing",
+   "library": "wb-procedures",
+   "label_default": "Internal"
+  },
+  {
+   "path": "Student Wellbeing/Support Plans",
+   "name": "Support Plans",
+   "site": "wellbeing",
+   "library": "wb-plans",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Support Plans/1052-53",
+   "name": "1052-53",
+   "site": "wellbeing",
+   "library": "wb-plans",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Support Plans/1052-53/Education",
+   "name": "Education",
+   "site": "wellbeing",
+   "library": "wb-plans",
+   "label_default": "Confidential"
+  },
+  {
+   "path": "Student Wellbeing/Support Plans/1052-53/Health",
+   "name": "Health",
+   "site": "wellbeing",
+   "library": "wb-plans",
+   "label_default": "Confidential"
+  }
+ ],
+ "files": [
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Module team contacts 1052-53.xlsx",
+   "name": "Module team contacts 1052-53.xlsx",
+   "ext": "xlsx",
+   "size": 6817,
+   "title": "Module team contacts 1052-53",
+   "author_id": "hesta-gracestone",
+   "author": "Hesta Gracestone",
+   "modified": "1053-01-10",
+   "modified_display": "10 January 1053",
+   "created": "1052-09-05",
+   "modified_by": "Hesta Gracestone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care",
+   "storylines": [],
+   "skills": [
+    7
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Placements Info for Students/If something goes wrong on placement.pdf",
+   "name": "If something goes wrong on placement.pdf",
+   "ext": "pdf",
+   "size": 3396,
+   "title": "If something goes wrong on placement",
+   "author_id": "hesta-gracestone",
+   "author": "Hesta Gracestone",
+   "modified": "1052-09-18",
+   "modified_display": "18 September 1052",
+   "created": "1052-09-18",
+   "modified_by": "Hesta Gracestone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Placements Info for Students",
+   "storylines": [
+    "placements"
+   ],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/a8fadcae9cd32e9a.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Placements Info for Students/Placement handbook for students 1052-53.docx",
+   "name": "Placement handbook for students 1052-53.docx",
+   "ext": "docx",
+   "size": 39691,
+   "title": "Placement handbook for students 1052-53",
+   "author_id": "hesta-gracestone",
+   "author": "Hesta Gracestone",
+   "modified": "1052-09-18",
+   "modified_display": "18 September 1052",
+   "created": "1052-09-01",
+   "modified_by": "Hesta Gracestone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Placements Info for Students",
+   "storylines": [
+    "placements"
+   ],
+   "skills": [
+    3,
+    7,
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/7f7c3a53c4828237.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 1/NC101 Foundations of Nursing and Care module handbook 1052-53.docx",
+   "name": "NC101 Foundations of Nursing and Care module handbook 1052-53.docx",
+   "ext": "docx",
+   "size": 39168,
+   "title": "NC101 Foundations of Nursing and Care module handbook 1052-53",
+   "author_id": "dagna-chiselhand",
+   "author": "Dagna Chiselhand",
+   "modified": "1052-09-12",
+   "modified_display": "12 September 1052",
+   "created": "1052-08-28",
+   "modified_by": "Hesta Gracestone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 1",
+   "storylines": [],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/99708c777553c201.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 1/NC101 Professional values essay brief.docx",
+   "name": "NC101 Professional values essay brief.docx",
+   "ext": "docx",
+   "size": 38661,
+   "title": "NC101 Professional values essay brief",
+   "author_id": "dagna-chiselhand",
+   "author": "Dagna Chiselhand",
+   "modified": "1052-10-01",
+   "modified_display": "1 October 1052",
+   "created": "1052-10-01",
+   "modified_by": "Dagna Chiselhand",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 1",
+   "storylines": [],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/caef5adcd3335c7c.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/NC201 Placement Practice 2 module handbook 1052-53.docx",
+   "name": "NC201 Placement Practice 2 module handbook 1052-53.docx",
+   "ext": "docx",
+   "size": 40123,
+   "title": "NC201 Placement Practice 2 module handbook 1052-53",
+   "author_id": "dagna-chiselhand",
+   "author": "Dagna Chiselhand",
+   "modified": "1052-09-15",
+   "modified_display": "15 September 1052",
+   "created": "1052-08-28",
+   "modified_by": "Hesta Gracestone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2",
+   "storylines": [
+    "placements"
+   ],
+   "skills": [
+    10,
+    3
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/8203da199f82c285.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/NC202 Pharmacology for Practice assessment brief.docx",
+   "name": "NC202 Pharmacology for Practice assessment brief.docx",
+   "ext": "docx",
+   "size": 38980,
+   "title": "NC202 Pharmacology for Practice assessment brief",
+   "author_id": "nyssa-memoryvault",
+   "author": "Nyssa Memoryvault",
+   "modified": "1052-09-10",
+   "modified_display": "10 September 1052",
+   "created": "1052-09-10",
+   "modified_by": "Nyssa Memoryvault",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2",
+   "storylines": [],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/e91d972c2273d766.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only/Adjustments summary G Dustshard.docx",
+   "name": "Adjustments summary G Dustshard.docx",
+   "ext": "docx",
+   "size": 38840,
+   "title": "Adjustments summary G Dustshard",
+   "author_id": "anric-hearthbind",
+   "author": "Anric Hearthbind",
+   "modified": "1053-02-19",
+   "modified_display": "19 February 1053",
+   "created": "1052-10-03",
+   "modified_by": "Caelio Driftfeather",
+   "label": "Internal",
+   "sensitive": true,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/f4c1059b07c435f1.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only/FW adjustments Y2.eml",
+   "name": "FW adjustments Y2.eml",
+   "ext": "eml",
+   "size": 55474,
+   "title": "FW adjustments Y2",
+   "author_id": "caelio-driftfeather",
+   "author": "Caelio Driftfeather",
+   "modified": "1053-02-19",
+   "modified_display": "19 February 1053",
+   "created": "1053-02-19",
+   "modified_by": "Caelio Driftfeather",
+   "label": null,
+   "sensitive": true,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": "P02",
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/70bc78172a3c8bb2.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only/Grinna Dustshard support plan.docx",
+   "name": "Grinna Dustshard support plan.docx",
+   "ext": "docx",
+   "size": 40149,
+   "title": "Grinna Dustshard support plan",
+   "author_id": "anric-hearthbind",
+   "author": "Anric Hearthbind",
+   "modified": "1053-02-19",
+   "modified_display": "19 February 1053",
+   "created": "1052-10-03",
+   "modified_by": "Dagna Chiselhand",
+   "label": "Internal",
+   "sensitive": true,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Staff only",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": "P01",
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/e37274abaa677447.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 2/Year 2 placement preparation slides.pptx",
+   "name": "Year 2 placement preparation slides.pptx",
+   "ext": "pptx",
+   "size": 37120,
+   "title": "Year 2 placement preparation slides",
+   "author_id": "halden-bridgeglen",
+   "author": "Halden Bridgeglen",
+   "modified": "1053-01-27",
+   "modified_display": "27 January 1053",
+   "created": "1052-09-20",
+   "modified_by": "Halden Bridgeglen",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 2",
+   "storylines": [
+    "placements"
+   ],
+   "skills": [
+    3
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/0402f59751a34b87.txt"
+  },
+  {
+   "path": "Faculty of Health and Education/Teaching Nursing and Care/Year 3/NC301 Leading Care module outline 1052-53.docx",
+   "name": "NC301 Leading Care module outline 1052-53.docx",
+   "ext": "docx",
+   "size": 38529,
+   "title": "NC301 Leading Care module outline 1052-53",
+   "author_id": "dagna-chiselhand",
+   "author": "Dagna Chiselhand",
+   "modified": "1052-08-28",
+   "modified_display": "28 August 1052",
+   "created": "1052-08-28",
+   "modified_by": "Dagna Chiselhand",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "faculty",
+   "library": "fac-teaching-nc",
+   "folder": "Faculty of Health and Education/Teaching Nursing and Care/Year 3",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/d5e9c747d3972e17.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Corporate Templates/Agenda template.docx",
+   "name": "Agenda template.docx",
+   "ext": "docx",
+   "size": 38516,
+   "title": "Agenda template",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1051-09-15",
+   "modified_display": "15 September 1051",
+   "created": "1051-09-15",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-templates",
+   "folder": "Governance and Secretariat/Corporate Templates",
+   "storylines": [],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/9081f7a6385382c5.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Corporate Templates/Business case template.docx",
+   "name": "Business case template.docx",
+   "ext": "docx",
+   "size": 39042,
+   "title": "Business case template",
+   "author_id": "fenn-gridforge",
+   "author": "Fenn Gridforge",
+   "modified": "1050-08-20",
+   "modified_display": "20 August 1050",
+   "created": "1049-11-01",
+   "modified_by": "Fenn Gridforge",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-templates",
+   "folder": "Governance and Secretariat/Corporate Templates",
+   "storylines": [
+    "placements",
+    "rebrand"
+   ],
+   "skills": [
+    3
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": "B04",
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/480e468f58988596.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Corporate Templates/Committee paper template.docx",
+   "name": "Committee paper template.docx",
+   "ext": "docx",
+   "size": 38665,
+   "title": "Committee paper template",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1051-02-10",
+   "modified_display": "10 February 1051",
+   "created": "1049-09-01",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-templates",
+   "folder": "Governance and Secretariat/Corporate Templates",
+   "storylines": [
+    "rebrand"
+   ],
+   "skills": [
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": "B04",
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/0849519dc6a7673f.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Corporate Templates/Minutes template.docx",
+   "name": "Minutes template.docx",
+   "ext": "docx",
+   "size": 39053,
+   "title": "Minutes template",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1051-09-15",
+   "modified_display": "15 September 1051",
+   "created": "1051-09-15",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-templates",
+   "folder": "Governance and Secretariat/Corporate Templates",
+   "storylines": [],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/e9b78f6dba0709a7.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1052-11-21 Council/Council agenda 21 November 1052.docx",
+   "name": "Council agenda 21 November 1052.docx",
+   "ext": "docx",
+   "size": 38656,
+   "title": "Council agenda 21 November 1052",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1052-11-13",
+   "modified_display": "13 November 1052",
+   "created": "1052-11-13",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1052-11-21 Council",
+   "storylines": [
+    "awarding-gap"
+   ],
+   "skills": [
+    1,
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/de80d47acfcab6c9.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1052-11-21 Council/Council minutes 21 November 1052.docx",
+   "name": "Council minutes 21 November 1052.docx",
+   "ext": "docx",
+   "size": 39393,
+   "title": "Council minutes 21 November 1052",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-02-21",
+   "modified_display": "21 February 1053",
+   "created": "1052-11-27",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1052-11-21 Council",
+   "storylines": [
+    "awarding-gap",
+    "stoneshare"
+   ],
+   "skills": [
+    1,
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/cd5462020527ea55.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-02-21 Council/Council agenda 21 February 1053.docx",
+   "name": "Council agenda 21 February 1053.docx",
+   "ext": "docx",
+   "size": 38709,
+   "title": "Council agenda 21 February 1053",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-02-13",
+   "modified_display": "13 February 1053",
+   "created": "1053-02-13",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1053-02-21 Council",
+   "storylines": [
+    "awarding-gap"
+   ],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/2fa9f0cb6513447c.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-02-21 Council/Council minutes 21 February 1053 DRAFT.docx",
+   "name": "Council minutes 21 February 1053 DRAFT.docx",
+   "ext": "docx",
+   "size": 39672,
+   "title": "Council minutes 21 February 1053 DRAFT",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-03-03",
+   "modified_display": "3 March 1053",
+   "created": "1053-02-26",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1053-02-21 Council",
+   "storylines": [
+    "awarding-gap",
+    "incident",
+    "ai-policy"
+   ],
+   "skills": [
+    1,
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/603c8356e292fea0.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-02-21 Council/Note from the Chair re short papers.eml",
+   "name": "Note from the Chair re short papers.eml",
+   "ext": "eml",
+   "size": 1414,
+   "title": "Note from the Chair re short papers",
+   "author_id": "aerion-crownweaver",
+   "author": "Aerion Crownweaver",
+   "modified": "1053-02-22",
+   "modified_display": "22 February 1053",
+   "created": "1053-02-22",
+   "modified_by": "Aerion Crownweaver",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1053-02-21 Council",
+   "storylines": [
+    "awarding-gap"
+   ],
+   "skills": [
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/30831520f29628b1.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Council/1052-53/1053-05-22 Council/Council agenda 22 May 1053 DRAFT.docx",
+   "name": "Council agenda 22 May 1053 DRAFT.docx",
+   "ext": "docx",
+   "size": 38941,
+   "title": "Council agenda 22 May 1053 DRAFT",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-04-11",
+   "modified_display": "11 April 1053",
+   "created": "1053-04-07",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-council",
+   "folder": "Governance and Secretariat/Council/1052-53/1053-05-22 Council",
+   "storylines": [
+    "awarding-gap",
+    "incident"
+   ],
+   "skills": [
+    1,
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/cc31392611c1c830.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Advice Given/Advice given log.xlsx",
+   "name": "Advice given log.xlsx",
+   "ext": "xlsx",
+   "size": 7101,
+   "title": "Advice given log",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-04-02",
+   "modified_display": "2 April 1053",
+   "created": "1052-09-01",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Advice Given",
+   "storylines": [
+    "ai-policy",
+    "admissions",
+    "placements"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031/Email from Head of Student Wellbeing to Dean 20 Feb.eml",
+   "name": "Email from Head of Student Wellbeing to Dean 20 Feb.eml",
+   "ext": "eml",
+   "size": 2078,
+   "title": "Email from Head of Student Wellbeing to Dean 20 Feb",
+   "author_id": "velra-cinderwake",
+   "author": "Velra Cinderwake",
+   "modified": "1053-02-20",
+   "modified_display": "20 February 1053",
+   "created": "1053-02-20",
+   "modified_by": "Velra Cinderwake",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/8a56c46cf9bca412.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031/Email to recipients 19 Feb.eml",
+   "name": "Email to recipients 19 Feb.eml",
+   "ext": "eml",
+   "size": 2106,
+   "title": "Email to recipients 19 Feb",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-02-19",
+   "modified_display": "19 February 1053",
+   "created": "1053-02-19",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/70c109d530e05bb8.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031/INC-0031 Closure note.docx",
+   "name": "INC-0031 Closure note.docx",
+   "ext": "docx",
+   "size": 39130,
+   "title": "INC-0031 Closure note",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-03-07",
+   "modified_display": "7 March 1053",
+   "created": "1053-03-07",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/8211469065c6d120.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031/INC-0031 Data breach report form.docx",
+   "name": "INC-0031 Data breach report form.docx",
+   "ext": "docx",
+   "size": 39812,
+   "title": "INC-0031 Data breach report form",
+   "author_id": "caelio-driftfeather",
+   "author": "Caelio Driftfeather",
+   "modified": "1053-02-20",
+   "modified_display": "20 February 1053",
+   "created": "1053-02-19",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Incident Log/1053-02 INC-0031",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5,
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/715edab7e54d53d7.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Incident Log/Information governance incident log.xlsx",
+   "name": "Information governance incident log.xlsx",
+   "ext": "xlsx",
+   "size": 7905,
+   "title": "Information governance incident log",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-03-07",
+   "modified_display": "7 March 1053",
+   "created": "1050-07-01",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Confidential",
+   "sensitive": true,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Incident Log",
+   "storylines": [
+    "incident",
+    "ai-policy"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Governance and Secretariat/Information Governance/Training/Information governance essentials 1053.pptx",
+   "name": "Information governance essentials 1053.pptx",
+   "ext": "pptx",
+   "size": 40446,
+   "title": "Information governance essentials 1053",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-03-12",
+   "modified_display": "12 March 1053",
+   "created": "1053-02-20",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-ig",
+   "folder": "Governance and Secretariat/Information Governance/Training",
+   "storylines": [
+    "ai-policy",
+    "incident"
+   ],
+   "skills": [
+    5,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/f88aafd672512e9a.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Academic/Committee Handbook.docx",
+   "name": "Committee Handbook.docx",
+   "ext": "docx",
+   "size": 39707,
+   "title": "Committee Handbook",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1052-09-01",
+   "modified_display": "1 September 1052",
+   "created": "1049-09-01",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Academic",
+   "storylines": [],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/45493bfc943f2f56.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Digital/AI Acceptable Use Policy - Technical Annex.docx",
+   "name": "AI Acceptable Use Policy - Technical Annex.docx",
+   "ext": "docx",
+   "size": 39666,
+   "title": "AI Acceptable Use Policy - Technical Annex",
+   "author_id": "fenn-gridforge",
+   "author": "Fenn Gridforge",
+   "modified": "1053-02-05",
+   "modified_display": "5 February 1053",
+   "created": "1053-01-14",
+   "modified_by": "Fenn Gridforge",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Digital",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/245f84fccb474dea.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Digital/AI Acceptable Use Policy.docx",
+   "name": "AI Acceptable Use Policy.docx",
+   "ext": "docx",
+   "size": 41478,
+   "title": "AI Acceptable Use Policy",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-02-07",
+   "modified_display": "7 February 1053",
+   "created": "1052-09-20",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Digital",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    5,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/14b9b351a4e57071.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Digital/Approved Digital Tools List.docx",
+   "name": "Approved Digital Tools List.docx",
+   "ext": "docx",
+   "size": 39241,
+   "title": "Approved Digital Tools List",
+   "author_id": "fenn-gridforge",
+   "author": "Fenn Gridforge",
+   "modified": "1053-02-12",
+   "modified_display": "12 February 1053",
+   "created": "1050-03-01",
+   "modified_by": "Fenn Gridforge",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Digital",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/f896e68336fe5ad8.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Digital/Can I use AI for this.pdf",
+   "name": "Can I use AI for this.pdf",
+   "ext": "pdf",
+   "size": 5479,
+   "title": "Can I use AI for this",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-02-12",
+   "modified_display": "12 February 1053",
+   "created": "1053-02-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Digital",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/5883f4bd13a78abe.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Data Breach Procedure.docx",
+   "name": "Data Breach Procedure.docx",
+   "ext": "docx",
+   "size": 39892,
+   "title": "Data Breach Procedure",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-03-10",
+   "modified_display": "10 March 1053",
+   "created": "1050-06-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5,
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/fa569879c2bd68f0.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Data Classification Scheme.docx",
+   "name": "Data Classification Scheme.docx",
+   "ext": "docx",
+   "size": 40117,
+   "title": "Data Classification Scheme",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-02-12",
+   "modified_display": "12 February 1053",
+   "created": "1050-06-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "ai-policy",
+    "incident"
+   ],
+   "skills": [
+    5,
+    4
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/3b60cff6c06539ac.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Document Naming Convention.docx",
+   "name": "Document Naming Convention.docx",
+   "ext": "docx",
+   "size": 39632,
+   "title": "Document Naming Convention",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1051-03-22",
+   "modified_display": "22 March 1051",
+   "created": "1051-03-08",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "stoneshare"
+   ],
+   "skills": [
+    4,
+    9
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/ae7aba014db95259.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/DPIA Template.docx",
+   "name": "DPIA Template.docx",
+   "ext": "docx",
+   "size": 39324,
+   "title": "DPIA Template",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1053-02-12",
+   "modified_display": "12 February 1053",
+   "created": "1050-06-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/5bcd15c85c6f8bdc.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Freedom of Information Procedure.docx",
+   "name": "Freedom of Information Procedure.docx",
+   "ext": "docx",
+   "size": 38997,
+   "title": "Freedom of Information Procedure",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1051-09-01",
+   "modified_display": "1 September 1051",
+   "created": "1050-06-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [],
+   "skills": [
+    10
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/d93e8ee5294c4a13.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Records of Processing - Student Support.xlsx",
+   "name": "Records of Processing - Student Support.xlsx",
+   "ext": "xlsx",
+   "size": 7036,
+   "title": "Records of Processing - Student Support",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1052-11-30",
+   "modified_display": "30 November 1052",
+   "created": "1051-01-15",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "incident"
+   ],
+   "skills": [
+    5
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Current/Information Governance/Records Retention Schedule.xlsx",
+   "name": "Records Retention Schedule.xlsx",
+   "ext": "xlsx",
+   "size": 8018,
+   "title": "Records Retention Schedule",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1052-09-01",
+   "modified_display": "1 September 1052",
+   "created": "1050-06-10",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Current/Information Governance",
+   "storylines": [
+    "stoneshare"
+   ],
+   "skills": [
+    4
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Superseded/Acceptable Use of IT Policy 1047.docx",
+   "name": "Acceptable Use of IT Policy 1047.docx",
+   "ext": "docx",
+   "size": 38667,
+   "title": "Acceptable Use of IT Policy 1047",
+   "author_id": "fenn-gridforge",
+   "author": "Fenn Gridforge",
+   "modified": "1047-05-20",
+   "modified_display": "20 May 1047",
+   "created": "1047-05-01",
+   "modified_by": "Fenn Gridforge",
+   "label": "Public",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Superseded",
+   "storylines": [
+    "ai-policy",
+    "rebrand"
+   ],
+   "skills": [
+    9
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": "B04",
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/3373613ce2dabaa9.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Superseded/AI policy draft A.docx",
+   "name": "AI policy draft A.docx",
+   "ext": "docx",
+   "size": 38693,
+   "title": "AI policy draft A",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1052-09-30",
+   "modified_display": "30 September 1052",
+   "created": "1052-09-30",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Superseded",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    9
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/53d80591c87ca482.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Policies and Procedures/Superseded/AI policy draft B Digital.docx",
+   "name": "AI policy draft B Digital.docx",
+   "ext": "docx",
+   "size": 38544,
+   "title": "AI policy draft B Digital",
+   "author_id": "fenn-gridforge",
+   "author": "Fenn Gridforge",
+   "modified": "1052-10-14",
+   "modified_display": "14 October 1052",
+   "created": "1052-10-14",
+   "modified_by": "Fenn Gridforge",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-policies",
+   "folder": "Governance and Secretariat/Policies and Procedures/Superseded",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    9
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/5264f40e48901ea4.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Dissenting note Dr Dourstone AI policy.docx",
+   "name": "Dissenting note Dr Dourstone AI policy.docx",
+   "ext": "docx",
+   "size": 39241,
+   "title": "Dissenting note Dr Dourstone AI policy",
+   "author_id": "hrogar-dourstone",
+   "author": "Hrogar Dourstone",
+   "modified": "1053-01-18",
+   "modified_display": "18 January 1053",
+   "created": "1053-01-16",
+   "modified_by": "Hrogar Dourstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy",
+    "rebrand"
+   ],
+   "skills": [
+    1,
+    6
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": "B01",
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/8a5f53d4c2f59b0a.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/S-1052-41 Draft AI Acceptable Use Policy cover paper.docx",
+   "name": "S-1052-41 Draft AI Acceptable Use Policy cover paper.docx",
+   "ext": "docx",
+   "size": 39798,
+   "title": "S-1052-41 Draft AI Acceptable Use Policy cover paper",
+   "author_id": "elenna-dewscroll",
+   "author": "Elenna Dewscroll",
+   "modified": "1052-11-26",
+   "modified_display": "26 November 1052",
+   "created": "1052-11-20",
+   "modified_by": "Elenna Dewscroll",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1,
+    6,
+    9
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/d81a8721447522d6.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Senate 4 December 1052 item 7 transcript.docx",
+   "name": "Senate 4 December 1052 item 7 transcript.docx",
+   "ext": "docx",
+   "size": 42994,
+   "title": "Senate 4 December 1052 item 7 transcript (transcript)",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1052-12-04",
+   "modified_display": "4 December 1052",
+   "created": "1052-12-04",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Senate 4 December 1052 item 7 transcript.vtt",
+   "mess_rule": null,
+   "preview": "data/preview/c5183238b3fb15fa.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Senate 4 December 1052 item 7 transcript.vtt",
+   "name": "Senate 4 December 1052 item 7 transcript.vtt",
+   "ext": "vtt",
+   "size": 17404,
+   "title": "Senate 4 December 1052 item 7 transcript",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1052-12-04",
+   "modified_display": "4 December 1052",
+   "created": "1052-12-04",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/41831203f95774cd.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Senate agenda 4 December 1052.docx",
+   "name": "Senate agenda 4 December 1052.docx",
+   "ext": "docx",
+   "size": 38783,
+   "title": "Senate agenda 4 December 1052",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1052-11-26",
+   "modified_display": "26 November 1052",
+   "created": "1052-11-26",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/62eab431531673c6.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate/Senate minutes 4 December 1052.docx",
+   "name": "Senate minutes 4 December 1052.docx",
+   "ext": "docx",
+   "size": 40465,
+   "title": "Senate minutes 4 December 1052",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-02-05",
+   "modified_display": "5 February 1053",
+   "created": "1052-12-09",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1052-12-04 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1,
+    8
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/f1a3476345dc76d6.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1053-02-05 Senate/Senate agenda 5 February 1053.docx",
+   "name": "Senate agenda 5 February 1053.docx",
+   "ext": "docx",
+   "size": 38763,
+   "title": "Senate agenda 5 February 1053",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-01-28",
+   "modified_display": "28 January 1053",
+   "created": "1053-01-28",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1053-02-05 Senate",
+   "storylines": [
+    "ai-policy"
+   ],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/06f1096b987e8979.txt"
+  },
+  {
+   "path": "Governance and Secretariat/Senate/1052-53/1053-02-05 Senate/Senate minutes 5 February 1053 DRAFT.docx",
+   "name": "Senate minutes 5 February 1053 DRAFT.docx",
+   "ext": "docx",
+   "size": 39860,
+   "title": "Senate minutes 5 February 1053 DRAFT",
+   "author_id": "gudrik-bannerstone",
+   "author": "Gudrik Bannerstone",
+   "modified": "1053-02-14",
+   "modified_display": "14 February 1053",
+   "created": "1053-02-10",
+   "modified_by": "Gudrik Bannerstone",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "governance",
+   "library": "gov-senate",
+   "folder": "Governance and Secretariat/Senate/1052-53/1053-02-05 Senate",
+   "storylines": [
+    "ai-policy",
+    "admissions"
+   ],
+   "skills": [
+    1
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": false,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/d783489177a3c53e.txt"
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/Data sources and definitions.docx",
+   "name": "Data sources and definitions.docx",
+   "ext": "docx",
+   "size": 38916,
+   "title": "Data sources and definitions",
+   "author_id": "erra-measurine",
+   "author": "Erra Measurine",
+   "modified": "1053-03-31",
+   "modified_display": "31 March 1053",
+   "created": "1052-10-01",
+   "modified_by": "Erra Measurine",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [
+    "awarding-gap",
+    "nss-dip"
+   ],
+   "skills": [
+    2
+   ],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": "data/preview/87ceca5b1f16d51e.txt"
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_assessment_summary_1052-53.csv",
+   "name": "he_assessment_summary_1052-53.csv",
+   "ext": "csv",
+   "size": 1056,
+   "title": "he_assessment_summary_1052-53",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_enrolments_1052-53.csv",
+   "name": "he_enrolments_1052-53.csv",
+   "ext": "csv",
+   "size": 2225,
+   "title": "he_enrolments_1052-53",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_good_honours_by_programme_species_5yr.csv",
+   "name": "he_good_honours_by_programme_species_5yr.csv",
+   "ext": "csv",
+   "size": 680,
+   "title": "he_good_honours_by_programme_species_5yr",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_graduates_individual_anonymised_5yr.csv",
+   "name": "he_graduates_individual_anonymised_5yr.csv",
+   "ext": "csv",
+   "size": 53130,
+   "title": "he_graduates_individual_anonymised_5yr",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_nss_by_programme_theme_5yr.csv",
+   "name": "he_nss_by_programme_theme_5yr.csv",
+   "ext": "csv",
+   "size": 2201,
+   "title": "he_nss_by_programme_theme_5yr",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_progression_1052-53.csv",
+   "name": "he_progression_1052-53.csv",
+   "ext": "csv",
+   "size": 1405,
+   "title": "he_progression_1052-53",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  },
+  {
+   "path": "Planning and Insight/Data Extracts/1052-53/he_summary_tables_1052-53.xlsx",
+   "name": "he_summary_tables_1052-53.xlsx",
+   "ext": "xlsx",
+   "size": 12477,
+   "title": "he_summary_tables_1052-53",
+   "author_id": "quorin-deepmirror",
+   "author": "Quorin Deepmirror",
+   "modified": "1053-04-14",
+   "modified_display": "14 April 1053",
+   "created": "1053-04-14",
+   "modified_by": "Quorin Deepmirror",
+   "label": "Internal",
+   "sensitive": false,
+   "site": "planning",
+   "library": "pi-extracts",
+   "folder": "Planning and Insight/Data Extracts/1052-53",
+   "storylines": [],
+   "skills": [],
+   "planted": null,
+   "planted_error": null,
+   "off_brand": null,
+   "hand_supplied": false,
+   "placeholder": false,
+   "generated": true,
+   "derived_from": null,
+   "mess_rule": null,
+   "preview": null
+  }
+ ],
+ "counts": {
+  "files": 60,
+  "folders": 168,
+  "bytes": 1811476
+ }
+}
