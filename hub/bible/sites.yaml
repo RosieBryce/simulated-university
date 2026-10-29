@@ -49,6 +49,13 @@ sites:
       - id: gov-policies
         name: Policies and Procedures
         folder_name: Policies and Procedures
+        hint: >
+          Read the Data Classification Scheme, the AI Acceptable Use
+          Policy and Can I use AI for this before anything else; they
+          are the rules the other exercises are marked against. The
+          Superseded folder holds two drafts that were never in force
+          beside a policy from 1047: which of the three AI documents is
+          current, and how can you tell?
         default_label: Public
         mess_profile: tidy
         budget: {authored: 16, total: 20}
@@ -71,6 +78,10 @@ sites:
       - id: gov-council
         name: Council
         folder_name: Council
+        hint: >
+          Two meetings held, one pending. The Chair asked for a two-page
+          paper in February and the May agenda still says awaited. The
+          November pack is a good source for a one-page brief.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 22, total: 26}
@@ -89,6 +100,11 @@ sites:
       - id: gov-senate
         name: Senate
         folder_name: Senate
+        hint: >
+          The December folder has the transcript of the AI policy debate
+          and the minutes the Governance Officer wrote from it. Make
+          your own minutes first, then compare. Notice what he left out,
+          and why.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 20, total: 26}
@@ -106,6 +122,11 @@ sites:
       - id: gov-ig
         name: Information Governance
         folder_name: Information Governance
+        hint: >
+          The incident log and the INC-0031 file. The closure note says
+          the leaked file was removed. The checklist says the removal
+          was taken on someone's word. Follow it to the Faculty site to
+          see whether it is true.
         default_label: Confidential
         mess_profile: tidy
         budget: {authored: 8, total: 10}
@@ -125,6 +146,11 @@ sites:
       - id: gov-templates
         name: Corporate Templates
         folder_name: Corporate Templates
+        hint: >
+          Four corporate templates. Two carry the old institution name
+          in the footer; they have been copied hundreds of times. A
+          brand check that only looks at the Communications site will
+          miss them.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 4, total: 8}
@@ -158,6 +184,11 @@ sites:
       - id: fac-deans
         name: Deans Office
         folder_name: Deans Office
+        hint: >
+          The Dean's draft Council paper (v3 USE THIS) quotes figures
+          Planning will not sign off. The FMG folder holds a 90-minute
+          transcript and the AI-generated minutes nobody checked.
+          Elowen's folder is where everything actually is.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 25, total: 35}
@@ -180,6 +211,11 @@ sites:
       - id: fac-health
         name: Department of Health
         folder_name: Department of Health
+        hint: >
+          Hrogar's memoranda on old letterhead, the Fitness to Practise
+          folder with a correctly labelled case file, and a Panel Papers
+          subfolder where a copy of the same case sits labelled
+          Internal.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 20, total: 28}
@@ -202,6 +238,11 @@ sites:
       - id: fac-education
         name: Department of Education
         folder_name: Department of Education
+        hint: >
+          Five versions of an action plan with no version numbers, a
+          stand-up transcript in which the transcription has mangled
+          every name, a focus group folder with a referral note that
+          should not be there, and Jaskel's marketing.
         default_label: Internal
         mess_profile: chaotic
         budget: {authored: 15, total: 22}
@@ -221,6 +262,11 @@ sites:
       - id: fac-teaching-nc
         name: Teaching Nursing and Care
         folder_name: Teaching Nursing and Care
+        hint: >
+          Module handbooks and placement material. In Year 2 / Staff
+          only, a one-page adjustments summary sits beside a full
+          support plan with the same label. Only one of them should be
+          here.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 14, total: 20}
@@ -240,6 +286,12 @@ sites:
       - id: fac-stoneshare
         name: StoneShare Migration
         folder_name: StoneShare Migration
+        hint: >
+          The old network drive, dropped here in one go. Nothing is
+          labelled. Start with Liora's index in To sort, then the naming
+          convention and retention schedule in Governance. Three things
+          in here should not be on a shared drive at all; Hesta's folder
+          is the one thing worth keeping.
         default_label: null
         mess_profile: chaotic
         budget: {authored: 50, total: 200}
@@ -308,6 +360,11 @@ sites:
       - id: pst-placements
         name: Placements
         folder_name: Placements
+        hint: >
+          Seven versions of the allocation workbook, one of them newer
+          than the FINAL FINAL. Halden's process documents, Dagna's list
+          of what goes wrong, and the Digital Services request that was
+          declined for want of exactly the material now in this folder.
         default_label: Internal
         mess_profile: chaotic
         budget: {authored: 12, total: 22}
@@ -327,6 +384,12 @@ sites:
       - id: pst-providers
         name: Provider Correspondence
         folder_name: Provider Correspondence
+        hint: >
+          Thirty-three letters, emails and agreements from thirty
+          providers, each with contact, capacity and conditions buried
+          in prose. One provider counts its outpatients within the main
+          site's total. Make one table; check every row against its
+          letter.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 32, total: 35}
@@ -342,6 +405,10 @@ sites:
       - id: pst-admin
         name: Programme Administration
         folder_name: Programme Administration
+        hint: >
+          The 27 March handover meeting: transcript and Hesta's notes of
+          it. A short, clean pair for a first attempt at minutes. The
+          running team notes carry the year's story.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 10, total: 15}
@@ -357,6 +424,10 @@ sites:
       - id: pst-email-attachments
         name: Email Attachments
         folder_name: Email Attachments
+        hint: >
+          Attachments saved from email with no context: doc1, image001,
+          scan0001. Nothing labelled. Which provider does the signed
+          agreement belong to?
         default_label: null
         mess_profile: chaotic
         budget: {authored: 6, total: 13}
@@ -391,6 +462,10 @@ sites:
       - id: pi-reports
         name: Reports
         folder_name: Reports
+        hint: >
+          Planning's weekly dashboard export. The weeks-since-offer
+          sheet is the figure that settles the argument in the
+          Conversion folder.
         default_label: Internal
         mess_profile: island
         budget: {authored: 13, total: 15}
@@ -408,6 +483,10 @@ sites:
       - id: pi-requests
         name: Data Requests
         folder_name: Data Requests
+        hint: >
+          The request log and the email chain in which Planning decline
+          to sign off the Dean's paper, with reasons. Read Quorin's
+          replies as a model of how to disagree about numbers.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 8, total: 8}
@@ -421,6 +500,9 @@ sites:
       - id: pi-working
         name: Working
         folder_name: Working
+        hint: >
+          Ollir's drafts. One is the reserved minutes with no label on
+          it.
         default_label: null
         mess_profile: normal
         budget: {authored: 8, total: 12}
@@ -437,6 +519,11 @@ sites:
       - id: pi-extracts
         name: Data Extracts
         folder_name: Data Extracts
+        hint: >
+          Small cuts of the full dataset for this Faculty. Enough to
+          check the Dean's figures, trace the NSS movement by programme,
+          and notice which programmes have no graduates at all. The full
+          dataset is on the main site.
         default_label: Internal
         mess_profile: island
         budget: {authored: 0, total: 10}
@@ -474,6 +561,10 @@ sites:
       - id: q-regulations
         name: Academic Regulations
         folder_name: Academic Regulations
+        hint: >
+          Regulations written to be quoted. The Guidance folder has two
+          student guides and a draft of a third that uses a real
+          student's circumstances by name, in a Public folder.
         default_label: Public
         mess_profile: tidy
         budget: {authored: 10, total: 10}
@@ -489,6 +580,11 @@ sites:
       - id: q-revalidation
         name: Programme Revalidation
         folder_name: Programme Revalidation
+        hint: >
+          The self-evaluation document in three versions, the panel
+          transcript, the open minutes, the panel report, and a Reserved
+          folder. The transcript contains the reserved discussion and is
+          labelled Internal; the reserved minutes are Confidential.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 16, total: 22}
@@ -508,6 +604,10 @@ sites:
       - id: q-examboards
         name: Examination Boards
         folder_name: Examination Boards
+        hint: >
+          Correctly handled Confidential material: marks tables with
+          student numbers only. A useful control when you are checking
+          what an AI did or did not open.
         default_label: Confidential
         mess_profile: tidy
         budget: {authored: 8, total: 12}
@@ -521,6 +621,11 @@ sites:
       - id: q-externals
         name: External Examiners
         folder_name: External Examiners
+        hint: >
+          Three external examiner reports, three years, one
+          recommendation each time, and the programme's three identical
+          responses. A summary of these exists in Planning's Working
+          folder; it is wrong in four places.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 6, total: 6}
@@ -531,6 +636,9 @@ sites:
       - id: q-working
         name: Working
         folder_name: Working
+        hint: >
+          Ollir's drafts. One is the reserved minutes with no label on
+          it.
         default_label: null
         mess_profile: normal
         budget: {authored: 5, total: 8}
@@ -566,6 +674,12 @@ sites:
       - id: adm-cycle
         name: Cycle 1053 Entry
         folder_name: Cycle 1053 Entry
+        hint: >
+          The applicant tracker holds dates of birth, home addresses and
+          health declarations for 240 applicants and is labelled
+          Internal. Three conversion papers blame three different
+          things. The huddle transcript is where one person admits to
+          pasting a personal statement into a tool he should not have.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 9, total: 12}
@@ -584,6 +698,10 @@ sites:
       - id: adm-opendays
         name: Open Days
         folder_name: Open Days
+        hint: >
+          The June run sheet, the October feedback summary that
+          predicted the conversion dip five months early, and a 42-slide
+          deck with six typefaces.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 9, total: 12}
@@ -597,6 +715,11 @@ sites:
       - id: adm-comms
         name: Applicant Communications
         folder_name: Applicant Communications
+        hint: >
+          Applicant letter templates that open with the old institution
+          name and two exclamation marks, and a tone-of-voice note that
+          says why. The fitness to practise declaration letter is the
+          on-brand control.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 8, total: 10}
@@ -612,6 +735,10 @@ sites:
       - id: adm-reports
         name: Reports
         folder_name: Reports
+        hint: >
+          Planning's weekly dashboard export. The weeks-since-offer
+          sheet is the figure that settles the argument in the
+          Conversion folder.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 7, total: 8}
@@ -643,6 +770,11 @@ sites:
       - id: wb-plans
         name: Support Plans
         folder_name: Support Plans
+        hint: >
+          Support plans, correctly Confidential, except one DSA evidence
+          letter labelled Internal. The master copy of the plan that
+          leaked in February is here; the leaked copy is in the Faculty
+          site.
         default_label: Confidential
         mess_profile: tidy
         budget: {authored: 10, total: 12}
@@ -658,6 +790,10 @@ sites:
       - id: wb-casenotes
         name: Case Notes
         folder_name: Case Notes
+        hint: >
+          Case notes. Tivan Reefgrace's referral is Confidential here; a
+          copy with no label sits in the Department of Education's focus
+          group folder.
         default_label: Confidential
         mess_profile: tidy
         budget: {authored: 7, total: 8}
@@ -671,6 +807,10 @@ sites:
       - id: wb-procedures
         name: Procedures and Guidance
         folder_name: Procedures and Guidance
+        hint: >
+          The sharing procedure the incident broke (v1.1) and the
+          revised draft (v2) side by side, and the student-facing guide.
+          Good material for turning procedure into plain language.
         default_label: Internal
         mess_profile: tidy
         budget: {authored: 11, total: 12}
@@ -685,6 +825,10 @@ sites:
       - id: wb-incident
         name: Incident February 1053
         folder_name: Incident February 1053
+        hint: >
+          The review meeting transcript strays into the adviser's own
+          workload; decide what belongs in a note of the meeting and
+          what does not. The checklist ticks file removed.
         default_label: Confidential
         mess_profile: tidy
         budget: {authored: 6, total: 6}
@@ -718,6 +862,11 @@ sites:
       - id: comms-brand
         name: Brand
         folder_name: Brand
+        hint: >
+          The brand guide, the one-page version, the templates, and the
+          Brand Compliance Log listing 24 sightings. Give an AI the
+          guide and ask it to produce a set of materials; then point it
+          at the sightings.
         default_label: Public
         mess_profile: island
         budget: {authored: 12, total: 15}
@@ -737,6 +886,10 @@ sites:
       - id: comms-campaigns
         name: Campaigns
         folder_name: Campaigns
+        hint: >
+          Javin's socials schedule with Sorell's verdicts in the last
+          column, the graphics deck behind it, and an open day flyer in
+          an off-brand and an on-brand version.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 16, total: 22}
@@ -753,6 +906,11 @@ sites:
       - id: comms-requests
         name: Requests
         folder_name: Requests
+        hint: >
+          Requests from other teams, mostly bad: a department wanting
+          its retired name back, a lecturer wanting his tree made nice,
+          a banner request with the old name. Sorell's replies are the
+          brand guide applied.
         default_label: Internal
         mess_profile: chaotic
         budget: {authored: 12, total: 15}
@@ -770,6 +928,10 @@ sites:
       - id: comms-archive
         name: Archive
         folder_name: Archive
+        hint: >
+          The old brand guide, the rebrand launch email and a lessons-
+          learned document eighteen months on that explains why the
+          compliance log is 24 rows long.
         default_label: Internal
         mess_profile: normal
         budget: {authored: 8, total: 13}

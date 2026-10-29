@@ -2,7 +2,7 @@
 
 A simulated institutional SharePoint estate for Stonegrove University: a downloadable folder tree of realistic, messy institutional documents, browsed through a SharePoint-style explorer on the public site, for learners to practise using AI safely. The full brief is in [`docs/SHAREPOINT_BRIEF.md`](../docs/SHAREPOINT_BRIEF.md).
 
-**Status: phase 3 (mess) built. The estate is 491 files in 216 folders after `make_mess.py`: named version lineages, copies, junk folders, litter, misplaced files, missing labels, and the StoneShare Migration library with its planted items. Extraction tested into an 82-character Windows Downloads path. Phase 4 (Learner Guide, hints, nav link, QA) is next.**
+**Status: phase 4 built. The estate is 491 files in 216 folders; the explorer carries site and library hints; the Learner Guide has exercises for all eleven skills; the Hub is linked from the main site's navigation, explore cards and download page. Pending: the data revision pass once the curriculum fix is merged and the dataset regenerated (see CLAUDE.md checklist).**
 
 ## Layout
 
@@ -146,4 +146,4 @@ Use `python`, not the `py` launcher: the scripts' shebang makes `py` pick an int
 | 1 | Vertical slice: Governance complete, one faculty library, T3, build + lint + manifest, explorer, whole-estate zip, Windows extraction test, extracts wired into pipeline | Done. Extraction tested into an 81-character Downloads path; `~$` and `~WRL` names round-trip through Windows zip. |
 | 2 | Breadth: all sites, all transcripts, storylines threaded, additional-skill seeds, Communications with placeholders, off-brand plantings | Done. 244 files before mess; generators for provider letters, the placement workbook, the applicant tracker and exam board marks tables. |
 | 3 | Mess and sensitivity pass; StoneShare library; planted items and errors recorded | Done. 226 derived files from 265 authored or generated; every derived file carries `derived_from` and `mess_rule` in the manifest. Path limit tightened to 160 after Windows PowerShell failed at 177. |
-| 4 | Learner Guide, hints overlay, per-site and folder downloads, nav link, CLAUDE.md and README updates, slop pass, QA by attempting every skill | |
+| 4 | Learner Guide, hints overlay, per-site and folder downloads, nav link, CLAUDE.md and README updates, slop pass, QA by attempting every skill | Done. QA by checking every exercise's starting material exists and by scoring the guardrails scenario against the manifest (see `hub/build/qa_check.py`). |

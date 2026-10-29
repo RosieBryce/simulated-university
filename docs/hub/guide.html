@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learner Guide to the Stonegrove Hub: eleven AI skills to practise on a synthetic university intranet, with exercises, starting points and what good looks like.">
   <title>Learner Guide · Stonegrove Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="hub.css">
   <style>
-    .guide { max-width: 820px; margin: 0 auto; padding: 32px 20px 80px; }
+    .guide { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
     .guide h1 { font-family: var(--font-heading); color: var(--navy); font-size: 2rem; margin: 0 0 6px; }
-    .guide h2 { font-family: var(--font-heading); color: var(--navy); font-size: 1.35rem; margin: 32px 0 8px; }
-    .guide h3 { font-size: 1.05rem; margin: 18px 0 4px; color: var(--navy); }
+    .guide h2 { font-family: var(--font-heading); color: var(--navy); font-size: 1.4rem; margin: 40px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); }
+    .guide h3 { font-family: var(--font-heading); font-size: 1.15rem; margin: 0 0 6px; color: var(--navy); }
+    .guide h4 { font-size: 0.95rem; margin: 14px 0 4px; color: var(--navy); text-transform: uppercase; letter-spacing: .04em; }
     .guide .lead { font-size: 1.1rem; }
-    .guide .card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; margin: 12px 0; }
-    .guide .card .where { font-size: 13.5px; color: var(--muted); }
+    .guide .card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+    .guide .card .where { font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .guide .card .where a { color: var(--navy); }
     .guide .status { background: var(--hint); border: 1px solid var(--hint-border); border-left: 4px solid var(--gold); padding: 10px 14px; border-radius: 4px; font-size: 14.5px; }
+    .guide ol.ex { padding-left: 20px; margin: 6px 0; }
+    .guide ol.ex li { margin: 6px 0; }
+    .guide .lvl { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 1px 7px; border-radius: 8px; margin-right: 6px; vertical-align: middle; }
+    .guide .lvl.a { background: #e6efe8; color: #3f6b48; } .guide .lvl.b { background: #f6ecd0; color: #7a5e12; } .guide .lvl.c { background: #f9e3dd; color: #8a3a2a; }
+    .guide .toc { columns: 2; column-gap: 24px; font-size: 14.5px; }
+    .guide .toc a { color: var(--navy); text-decoration: none; display: block; padding: 2px 0; }
+    .guide .toc a:hover { text-decoration: underline; }
+    .guide table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 10px 0; }
+    .guide td, .guide th { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+    .guide th { background: #faf7ef; }
+    .guide .quiet { color: var(--muted); font-size: 14px; }
+    .guide a { color: var(--navy); }
+    @media (max-width: 640px) { .guide .toc { columns: 1; } }
   </style>
 </head>
 <body>
@@ -31,29 +47,225 @@
     <h1>Learner Guide</h1>
     <p class="lead">The Stonegrove Hub is the intranet of a university that does not exist. Every person, student, applicant, case, figure and document in it is synthetic. That is the point: you can practise using AI on realistic, messy institutional documents, including ones that look sensitive, with nothing real at risk.</p>
 
-    <div class="status"><strong>Work in progress.</strong> The estate is complete enough to use: eight sites, seven transcripts, the migrated StoneShare drive with everything that came across, and the usual duplicates, litter and mislabelled files. Still to come on this page: the full exercise set with worked expectations.</div>
+    <div class="status"><strong>How to use this.</strong> Browse the <a href="index.html">Hub</a> as a member of staff would. Turn <strong>Hints</strong> on in the top bar to see what each team is wrestling with. Download everything, one site, one library or one folder, and point whatever AI tool you use at the files. The exercises below tell you where to start and what good looks like. Nothing inside the downloads breaks the fourth wall; this page and the hints are the only places that do.</div>
 
-    <h2>How to use it</h2>
-    <p>Browse the Hub as a member of staff would. Turn <strong>Hints</strong> on in the top bar to see what each team is wrestling with and what you might try there; turn them off for the plain intranet. Download everything, a site, a library or a folder, and point your AI tool at the files. The rules the University has set itself are in Governance and Secretariat, Policies and Procedures: start with the <em>Data Classification Scheme</em>, the <em>AI Acceptable Use Policy</em> and <em>Can I use AI for this</em>.</p>
+    <h2>Contents</h2>
+    <div class="toc">
+      <a href="#setup">Before you start</a>
+      <a href="#rules">The rules of the house</a>
+      <a href="#skill-1">1. Transcripts into minutes</a>
+      <a href="#skill-2">2. Data analysis</a>
+      <a href="#skill-3">3. Project management</a>
+      <a href="#skill-4">4. Folder organisation</a>
+      <a href="#skill-5">5. AI guardrails</a>
+      <a href="#skill-6">6. Briefing a busy reader</a>
+      <a href="#skill-7">7. Extracting structure</a>
+      <a href="#skill-8">8. Checking the AI's work</a>
+      <a href="#skill-9">9. Reconciling versions</a>
+      <a href="#skill-10">10. Institutional voice</a>
+      <a href="#skill-11">11. Brand guidelines</a>
+      <a href="#people">The people</a>
+      <a href="#facilitators">For facilitators</a>
+    </div>
 
-    <h2>The skills</h2>
+    <h2 id="setup">Before you start</h2>
+    <p>You need an AI tool that can read documents: a chat assistant you can upload files to, an assistant built into your office suite, or a coding assistant that can read a folder. The Hub does not mind which. The in-world University has an approved tool called Cloudi; that is part of the fiction, and your tool stands in for it.</p>
+    <p>Download what you need from the Hub: the <strong>Download everything</strong> button on the home page (about 18 MB), or the download button on any site, library or folder. The zip unpacks to a folder called <code>stonegrove-hub</code> with one folder per site. Files are real Word, Excel, PowerPoint, PDF, text, transcript (.vtt) and email (.eml) files.</p>
+    <p>A word on what you will find. The estate is deliberately untidy: seven files called FINAL, folders called New folder, a drive that was migrated without anyone looking at it, lock files and temp files, and documents saved in the wrong place. Some documents are labelled Confidential; some should be and are not. That is the exercise, not a mistake in the exercise.</p>
 
-    <div class="card" id="skill-1"><h3>1. Meeting transcripts into minutes and actions</h3><p>Take an auto-transcript and produce minutes in the house style, with actions, owners and dates. Then compare with the minutes the clerk actually produced.</p><div class="where">Start: Governance and Secretariat, Senate, 4 December 1052. The Committee Handbook and the Minutes template are the house style.</div></div>
-    <div class="card" id="skill-2"><h3>2. Data analysis</h3><p>Use the Planning and Insight extracts to answer the questions the Dean has been asked, and check the figures already circulating.</p><div class="where">Start: Planning and Insight, Data Extracts. The full dataset is on the main Stonegrove site.</div></div>
-    <div class="card" id="skill-3"><h3>3. Project management, towards a bespoke app</h3><p>Scope a small system from requirements that exist only as complaints, letters and a rejected form.</p><div class="where">Start: Programme Support Team, Placements, then Provider Correspondence and the Digital Services request folder.</div></div>
-    <div class="card" id="skill-4"><h3>4. Folder organisation</h3><p>Work out what a chaotic library should look like, write the rules, de-duplicate, decide what is current.</p><div class="where">Start: Faculty of Health and Education, StoneShare Migration. Liora's index in To sort is the map. The Document Naming Convention and Records Retention Schedule in Governance are the rules.</div></div>
-    <div class="card" id="skill-5"><h3>5. AI guardrails</h3><p>Instruct an AI to work across a folder without touching Confidential material. Then check whether it did, using the labels and, separately, the content.</p><div class="where">Start: Faculty of Health and Education, Teaching Nursing and Care, Year 2. Read the Data Classification Scheme first.</div></div>
-    <div class="card" id="skill-6"><h3>6. Briefing a busy reader</h3><p>Turn a long pack into a short brief that keeps what matters and flags what is contested.</p><div class="where">Start: Governance and Secretariat, Council.</div></div>
-    <div class="card" id="skill-7"><h3>7. Extracting structure from unstructured documents</h3><p>Thirty letters into one clean table.</p><div class="where">Start: Programme Support Team, Provider Correspondence. Thirty-three letters, emails and agreements.</div></div>
-    <div class="card" id="skill-8"><h3>8. Checking the AI's work</h3><p>Find the errors in documents someone else generated with a tool and did not check.</p><div class="where">Start: Planning and Insight, Working (two files marked auto-generated) and the Deans Office FMG folder (AI draft minutes beside the transcript).</div></div>
-    <div class="card" id="skill-9"><h3>9. Reconciling versions</h3><p>Five files called FINAL. Which is current and what changed?</p><div class="where">Start: Governance and Secretariat, Policies and Procedures, Superseded, and the approved AI policy.</div></div>
-    <div class="card" id="skill-10"><h3>10. Translating institutional voice</h3><p>Dense regulation into plain guidance; a difficult email in the right register.</p><div class="where">Start: the Information Governance incident file; the Nursing and Care handbooks.</div></div>
-    <div class="card" id="skill-11"><h3>11. Following brand guidelines consistently</h3><p>Give an AI the brand guide and see whether it holds the line across a set of materials, then whether it can fix the off-brand ones.</p><div class="where">Start: Communications, Brand. Then the Brand Compliance Log, which tells you where to look.</div></div>
+    <h2 id="rules">The rules of the house</h2>
+    <p>Stonegrove has written down how it expects staff to work, and the exercises use those documents as the ruleset. They are in <a href="index.html#/governance/gov-policies">Governance and Secretariat, Policies and Procedures</a>:</p>
+    <table>
+      <tr><th>Document</th><th>What it gives you</th></tr>
+      <tr><td>Data Classification Scheme</td><td>Three labels: Public, Internal, Confidential, and what each permits. The one-line test: if it names a person and says something about them they would not want on a noticeboard, it is Confidential.</td></tr>
+      <tr><td>AI Acceptable Use Policy and Technical Annex</td><td>Public material may go into any tool; Internal into the approved tool only; Confidential into no tool without a DPIA. The person is accountable for the output. Check before you rely.</td></tr>
+      <tr><td>Can I use AI for this</td><td>The same rules as a one-page decision tree with a table of quick answers.</td></tr>
+      <tr><td>Document Naming Convention</td><td>YYYY-MM-DD_Topic-In-Title-Case_vNN. What not to do, with examples the estate then does.</td></tr>
+      <tr><td>Records Retention Schedule</td><td>How long each kind of record is kept and what happens then. Essential for the folder exercise.</td></tr>
+      <tr><td>Committee Handbook and Minutes template</td><td>The house style for minutes: standard verbs, one owner per action, reserved business minuted separately.</td></tr>
+      <tr><td>Brand Guide (in Communications)</td><td>Name, logo, colour, type, voice, and the five never-dos.</td></tr>
+    </table>
+
+    <h2 id="skill-1">1. Meeting transcripts into minutes and actions</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Take a long, messy auto-transcript and produce minutes in the house style, with an action list that has one named owner and a date for every action. Transcripts contain cross-talk, tangents, mis-transcribed names and decisions that are agreed and then re-agreed differently. The minutes should contain none of that and all of what was decided.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> The <a href="index.html#/pst/pst-admin/Meetings">placements handover meeting</a>, 27 March 1053. Short and clean. Produce minutes and an action table from the transcript, then compare with the notes Hesta wrote. What did she leave out, and was she right to?</li>
+        <li><span class="lvl b">Standard</span> <a href="index.html#/governance/gov-senate/1052-53/1052-12-04%20Senate">Senate, 4 December 1052, item 7</a>: the AI policy debate. Produce a minute of item 7 in the Committee Handbook style (standard verbs in capitals, contributions unattributed except where dissent is recorded). Compare with minute 24.7 in Gudrik's approved minutes. His version is one paragraph; yours probably is not.</li>
+        <li><span class="lvl c">Hard</span> The <a href="index.html#/faculty/fac-deans/Faculty%20Management%20Group/1052-53">Faculty Management Group, 19 March 1053</a>: 90 minutes on the agenda, three tangents, a dog, and a decision about the Council paper that nobody quite made. Produce minutes. Then read the file called AI minutes DRAFT in the same folder, which someone produced with a tool and did not check, and list everything it got wrong.</li>
+        <li><span class="lvl c">Hard</span> The <a href="index.html#/faculty/fac-education/NSS%20Response">Education NSS action group</a>. Every name is mangled by the transcription. Work out who is who from the module team contacts list and the context, and produce minutes with the right names.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Past tense, third person, numbered items, the decision stated with the house verbs, discussion summarised in two or three sentences, every action with an owner who is a named post-holder and a date that is a date. Reserved items minuted separately or not at all. Nothing in the minutes that is not in the transcript.</p>
+      <h4>Think about</h4>
+      <p class="quiet">The OT revalidation panel transcript contains a reserved item about a named member of staff. If you asked a tool to minute it, would you have told the tool which part to leave out? Would it have obeyed?</p>
+    </div>
+
+    <h2 id="skill-2">2. Data analysis</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Answer a question with data, and know what the data cannot answer. The Hub links to the Stonegrove dataset through <a href="index.html#/planning/pi-extracts">Planning and Insight, Data Extracts</a>: small cuts for this Faculty. The <a href="../download.html">full dataset</a> is on the main site if you want the whole University.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> From the good honours extract, produce the five-year table of the Elf to Dwarf gap for the Faculty. Check it against the Awarding Gap Annual Report 1051-52 in Planning's Reports library. They should agree; if they do not, work out why.</li>
+        <li><span class="lvl b">Standard</span> The Dean's draft Council paper in <a href="index.html#/faculty/fac-deans/Council%20and%20Senate/Awarding%20Gap%20Paper">Deans Office</a> quotes three figures. Check each against the extracts. Write the two-paragraph correction Quorin would send. Then read the one he did send, in Planning, Data Requests.</li>
+        <li><span class="lvl b">Standard</span> NSS 1052: which programmes actually fell on Assessment and Feedback? Does the Department of Education have NSS results at all? Compare your answer with the deep dive in Reports and the auto-generated summary in Working.</li>
+        <li><span class="lvl c">Hard</span> Admissions have three explanations for a conversion dip. Using the weekly dashboard export in Admissions, Reports, decide how much of the headline gap is timing. Write the one paragraph that settles the argument.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Every figure with its denominator and its source. The in-world year convention understood (graduating year 1052 means academic year 1051-52). Programme-level figures suppressed or caveated where numbers are small. A clear statement of what the data cannot tell you. Quorin's "How to read our reports" in Reports / 1050-51 is the standard.</p>
+      <h4>Think about</h4>
+      <p class="quiet">An AI will happily compute a gap for a programme with eleven graduates. Who is responsible when it is quoted?</p>
+    </div>
+
+    <h2 id="skill-3">3. Project management, towards a bespoke app</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Scope a small system from requirements that exist only as complaints, letters, a spreadsheet and a rejected form. Nobody in the <a href="index.html#/pst/pst-placements">Programme Support Team</a> has written a requirements document. Everything a requirements document needs is nonetheless in their folders.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> Read Dagna's "Things that go wrong with placements" and Halden's handover document. Turn them into a numbered list of testable requirements in the form the Digital Services request form asks for ("The system must ...").</li>
+        <li><span class="lvl b">Standard</span> Open the placement allocation workbook (the one that says use this one). Describe the current process as a numbered sequence of steps with an owner for each, as section 7 of the request form requires. Use the Issues tab and Hesta's 1050 process document (in StoneShare Migration / Hesta stuff) to find the steps nobody wrote down.</li>
+        <li><span class="lvl c">Hard</span> Complete the Digital Services project request form and the Governance business case template for a placements system, including the data section: what the system must hold, its classification, and what it must <em>not</em> hold (read the Advice Given log in Governance for Hesta's question about the OH column). Then read Fenn's 1051 decline and check your submission against each of his four reasons.</li>
+        <li><span class="lvl c">Stretch</span> Build a prototype. A spreadsheet with validation, a small database, a form and a lookup: whatever your tool can make. It must answer Halden's Friday-afternoon question (who is affected, who has space, who is cleared, who needs what) in under a minute.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Requirements that someone could test. A process that someone else could follow. A data section that holds less than the spreadsheet does now. Halden's requirement written in his words.</p>
+    </div>
+
+    <h2 id="skill-4">4. Folder organisation: imposing structure and rules</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Take a library that is chaos and work out what it should be: what to keep, what to delete, where things go, what they should be called. The <a href="index.html#/faculty/fac-stoneshare">StoneShare Migration</a> library is the old network drive, copied across in one go. The rules are the Naming Convention and the Retention Schedule in Governance. Liora's index in the To sort folder is a map made by someone who asked the same question.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> List every file in StoneShare Migration with: what it is, roughly when it is from, and which line of the Retention Schedule applies. Mark the ones that are past their retention date.</li>
+        <li><span class="lvl b">Standard</span> Propose a target structure: which library each surviving document moves to, with its new name under the convention. Write the rules you applied, so that someone else could apply them to the next drive.</li>
+        <li><span class="lvl b">Standard</span> The Placements / Allocation folder in the Programme Support Team has seven versions of one workbook. Decide which is current (the handover transcript and Hesta's notes are evidence), name it under the convention, and say what happens to the other six.</li>
+        <li><span class="lvl c">Hard</span> Find the three things in StoneShare Migration that should not be on a shared drive at all, say which rule each breaks, and write the short email to each owner. Then ask: would an AI that read only file names have found them?</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Rules first, then the application of the rules, then the exceptions with reasons. Nothing deleted that the schedule says keep; nothing kept that the schedule says destroy. Hesta's folder recognised for what it is.</p>
+    </div>
+
+    <h2 id="skill-5">5. AI guardrails</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Instruct an AI to work across a set of files without touching Confidential material, and then check whether it did. The Data Classification Scheme says Confidential material must not be entered into any tool. The estate contains Confidential material that is correctly labelled, Confidential material labelled Internal, and Confidential material with no label at all. A tool that trusts the labels will read things it should not. A tool that reads the content to decide may do better, and has by then read the content.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> Download <a href="index.html#/faculty/fac-teaching-nc">Teaching Nursing and Care</a>. Ask your tool to summarise every document in the library, skipping anything Confidential. Then look at what it summarised. Was anything in Year 2 / Staff only something a teaching team should not have had?</li>
+        <li><span class="lvl b">Standard</span> Write an instruction for your tool (a system prompt, a rule, a checklist) that would have stopped it. Test it on the same library. Then test it on <a href="index.html#/faculty/fac-stoneshare">StoneShare Migration</a>, where nothing has a label.</li>
+        <li><span class="lvl b">Standard</span> Before using any tool, list by hand every file in the Faculty and Quality sites that you believe is Confidential whatever its label says. Then compare your list with what your tool treated as Confidential.</li>
+        <li><span class="lvl c">Hard</span> The incident file in Governance (INC-0031) says a leaked support plan was removed from a teaching folder. Find out whether it was. Then write the email the Information Governance Manager should send, and the line the Data Breach Procedure needed.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>A written rule that distinguishes label from content and says what to do when they disagree. A check that was done, not assumed. An honest account of what the tool read before it decided not to.</p>
+      <h4>Think about</h4>
+      <p class="quiet">The one-page adjustments summary beside the leaked plan names the same student and is correctly labelled Internal by the University's own procedure. Would your rule have blocked it too? Should it?</p>
+    </div>
+
+    <h2 id="skill-6">6. Briefing a busy reader</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Turn a long pack into a short brief that keeps what matters and flags what is contested. The Chair of Council asked for two pages and got a 212-page pack. The Dean writes "can someone tell me what this actually says". The <a href="index.html#/governance/gov-council">Council</a> folders and the Quality revalidation folder are the material.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> One page for the Dean on the OT revalidation: outcome, conditions, deadlines, what he needs to do. Sources: the panel report, the minutes, and Caerel's response draft. Do not use the auto-generated summary in Planning's Working folder (or do, and then check it).</li>
+        <li><span class="lvl b">Standard</span> Write the two-page Council paper the Chair asked for: the figures (from Planning, not from the Dean's draft), what the Faculty will do, how it will know. Use the committee paper template. Keep the cover sheet to 150 words.</li>
+        <li><span class="lvl c">Hard</span> Brief a new Head of Communications in one page on where the brand stands eighteen months after launch, from the Compliance Log, the Requests folder and Rhialla's lessons learned. Say what you would do first.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>The reader can make the decision from your page alone. Contested points are marked as contested, with both sides in a sentence each. Every figure traceable. No adjectives about the quality of the work.</p>
+    </div>
+
+    <h2 id="skill-7">7. Extracting structure from unstructured documents</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Thirty-three letters, emails and agreements in <a href="index.html#/pst/pst-providers">Provider Correspondence</a>, each with a contact, a capacity, conditions and dates buried in prose, in four different formats. Produce one clean table.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> Table with columns: provider, contact, phone, email, places, pathway restrictions, pre-start requirements, year of letter. One row per letter.</li>
+        <li><span class="lvl b">Standard</span> Reconcile to one row per provider for 1052-53. Some providers wrote twice with different numbers; Greywater Vale Infirmary's Outpatients places count within the Infirmary's total of twelve. Say how you resolved each conflict.</li>
+        <li><span class="lvl c">Hard</span> Check every row against its source letter, not a sample. Record your error rate. Then compare your table with Hesta's 1050 provider register in StoneShare Migration / Hesta stuff: what did the shape of hers get right?</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>A table Liora could hand to Halden's cover. Conflicts resolved explicitly, not silently. The checking done and the error rate stated. Liora asked Elenna whether she was allowed to use a tool on these letters before she did; her answer is in the Advice Given log.</p>
+    </div>
+
+    <h2 id="skill-8">8. Checking the AI's work</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Several documents in the estate were produced with a tool and never checked. They read well. They are wrong in specific ways: a figure doubled, an action given to the wrong person, a date a month out, a quotation that appears in no source, a caveat dropped. Your job is verification, not generation.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> <a href="index.html#/planning/pi-working/NSS">NSS 1052 pack summary (auto-generated)</a> against the Faculty NSS deep dive in Reports. Find at least four errors.</li>
+        <li><span class="lvl b">Standard</span> <a href="index.html#/planning/pi-working/Teylin">External examiner reports OT summary (auto-generated)</a> against the three reports in Quality, External Examiners. Find the inversion, the wrong institution, the invented quotation and the wrong count.</li>
+        <li><span class="lvl c">Hard</span> FMG 19 March AI minutes DRAFT against the transcript in the same folder. One attendee was not there. One action is assigned to someone never named. One tangent became a decision. One twenty-minute item vanished. One date is invented. Find all five, then write Elowen the note she needs.</li>
+        <li><span class="lvl c">Hard</span> The Dean's draft Council paper was written by a person, not a tool, and has three errors a careful reader can catch from the extracts. Is checking human work any different?</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Each error stated as: what the document says, what the source says, where in the source. No error reported that you have not confirmed. A one-line verdict on whether the document can be fixed or must be redone.</p>
+    </div>
+
+    <h2 id="skill-9">9. Reconciling versions</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Several files with the same name and different suffixes. Which is current, what changed between them, and which changes were deliberate. File dates lie: some FINALs are older than their DRAFTs.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> Governance, Policies and Procedures, Superseded: two AI policy drafts and the approved policy in Current. Table the differences between A, B and 1.0. Which draft did Senate's debate move the policy towards?</li>
+        <li><span class="lvl b">Standard</span> The seven placement allocation workbooks. Which is the true latest? The transcript of 27 March tells you what the team believes; the files tell you what is true. Are they the same?</li>
+        <li><span class="lvl b">Standard</span> Five Education action plans with no version numbers. Order them by content, not by date. Which is final, and what does "final" say about the earlier versions?</li>
+        <li><span class="lvl c">Hard</span> The OT self-evaluation document in three versions and the procedure for sharing adjustments in two. For each, write the one-paragraph change log the author should have written.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>A verdict on the current version with the evidence for it. A list of what changed, in order. A recommendation for what to do with the rest (the Naming Convention has a view). Awareness of where the file dates mislead.</p>
+    </div>
+
+    <h2 id="skill-10">10. Translating institutional voice</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Rewrite dense regulation as plain guidance, or draft a difficult email in the right register, without changing what it means. The regulations in <a href="index.html#/quality/q-regulations">Quality</a> are written to be quoted. The incident file and the Requests folder in Communications are full of emails that had to be written carefully.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> Rewrite Part C (Extenuating Circumstances) as a one-page student guide. Read the two existing student guides in the Guidance folder for the register, and Caerel's draft EC guide for what not to do with a worked example.</li>
+        <li><span class="lvl b">Standard</span> Rewrite the Admissions offer letter template so that it is warm, on brand (Brand Guide section 6), and still makes Mira happy. Her tone-of-voice note tells you what she is afraid of losing.</li>
+        <li><span class="lvl b">Standard</span> Draft the email the Head of Student Wellbeing should send to the Programme Leader when she discovers the leaked file is still in the teaching folder six weeks after it was reported removed. Firm, not cruel, with the procedure cited.</li>
+        <li><span class="lvl c">Hard</span> Write Sorell's reply to Hrogar's second letterhead request from scratch, then compare with the reply in the Declined folder. What did the real reply offer that a refusal does not?</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Meaning preserved exactly; register changed completely. Regulation paragraph numbers kept where a reader might need them. Emails the recipient could act on and would not forward in anger.</p>
+    </div>
+
+    <h2 id="skill-11">11. Following brand guidelines consistently</h2>
+    <div class="card">
+      <h3>The skill</h3>
+      <p>Give an AI the <a href="index.html#/comms/comms-brand">Brand Guide</a> and ask it to produce or fix a run of material, then check whether it held the line across all of it: name, retired names, logo rules, palette, type, voice, exclamation marks, hashtag. The Brand Compliance Log lists 24 sightings of where people did not.</p>
+      <h4>Exercises</h4>
+      <ol class="ex">
+        <li><span class="lvl a">Warm-up</span> With the Brand Guide loaded, produce: an open day flyer, a programme leaflet for Education, a week of social posts, and an email signature. Then audit your own output against the guide's section 8. Count the breaches.</li>
+        <li><span class="lvl b">Standard</span> Take Javin's March socials schedule and rewrite every post Sorell marked N so that it passes. Keep what he was trying to say.</li>
+        <li><span class="lvl b">Standard</span> Take Jaskel's Education leaflet and his 42-slide deck. Produce on-brand versions that keep what the students like about them. Sorell's reply in the Requests folder says what she offered; was it enough?</li>
+        <li><span class="lvl c">Hard</span> Work through the Compliance Log. For each pending or declined sighting, find the file in the estate, say which rule it breaks, and produce the fix or the lock-up Sorell would. Then write the paragraph for Rhialla's lessons learned that she did not write: how a guide becomes a decision.</li>
+      </ol>
+      <h4>What good looks like</h4>
+      <p>Consistency across a set, not just within one piece. Retired names caught everywhere, including footers. One typeface pair. No gradient, no sub-logo, no second exclamation mark. The warmth Admissions wanted, kept.</p>
+    </div>
+
+    <h2 id="people">The people</h2>
+    <p>You will meet the same thirty-odd members of staff across every site. A few to know: <strong>Elenna Dewscroll</strong> (Information Governance, writes the kind emails and the unbending ones), <strong>Quorin Deepmirror</strong> and <strong>Erra Measurine</strong> (Planning and Insight, will not sign off a number they have not checked), <strong>Hesta Gracestone</strong> and <strong>Halden Bridgeglen</strong> (the Programme Support Team, one of whom goes on leave in May), <strong>Dagna Chiselhand</strong> (Programme Leader, Nursing and Care, three lines and a demand), <strong>Hrogar Dourstone</strong> (Head of Department of Health, still using the old letterhead), <strong>Elowen Fogwhisper</strong> (the Dean's office, has never named a file correctly), <strong>Sorell Inkthread</strong> (Brand and Design, keeps a spreadsheet of sins), and <strong>Liora Lanternwake</strong> (new, reads the policies, asks the good questions). Every one of them is invented, as is every student.</p>
+
+    <h2 id="facilitators">For facilitators</h2>
+    <p>The Hub is built from authored source documents and a declared set of mess rules, so the ground truth is always known. <code>data/manifest.json</code> behind the explorer records, for every file, its real classification (<code>sensitive</code>), whether it is a planted inconsistency, a planted error or an off-brand item, and, for every duplicate or stale version, which file it was derived from and by which rule. The project repository holds the bible that lists every planted item with what is wrong about it. Learners should not read it. You may.</p>
+    <p>The estate regenerates from the Stonegrove dataset, so figures change when the data does; the exercises are written against relationships (which report is current, which figure is stale) rather than specific numbers.</p>
 
     <h2>A note on the sensitive-looking material</h2>
-    <p>Some documents in the Hub read like real support plans, case notes and applicant records. They are fabricated, about fictional elves and dwarves, and written with realistic texture precisely so that the guardrails exercise means something. Treat them as you would the real thing while you practise, and remember that they are not.</p>
+    <p>Some documents read like real support plans, case notes, fitness to practise files and applicant records. They are fabricated, about fictional elves and dwarves, and written with realistic texture precisely so that the guardrails exercise means something. Treat them as you would the real thing while you practise, and remember that they are not.</p>
 
-    <p class="muted">Stonegrove University project. All rights reserved; see the project repository for the licence.</p>
+    <p class="quiet">Stonegrove University project. All rights reserved; see the project repository for the licence.</p>
   </main>
 </body>
 </html>
