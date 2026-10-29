@@ -37,6 +37,11 @@ Validation (reads from `data/relational/`):
 python metaanalysis/validate_outputs.py
 ```
 
+Check the curriculum before any run (catches programme codes that don't match their programme, which strands students with no modules — see `docs/BACKLOG.md`):
+```bash
+python scripts/validate_curriculum.py
+```
+
 ## Architecture
 
 ### Pipeline Flow (strictly sequential)

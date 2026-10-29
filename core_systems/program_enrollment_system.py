@@ -56,6 +56,25 @@ class ProgramEnrollmentSystem:
 
         print(f"Loaded {len(self.programs_df)} programs across {self.programs_df['Faculty'].nunique()} faculties")
         print(f"Loaded {len(self.year1_modules_df)} Year 1, {len(self.year2_modules_df)} Year 2, {len(self.year3_modules_df)} Year 3 modules")
+        self._check_curriculum_coverage()
+
+    def _check_curriculum_coverage(self):
+        """Warn loudly if any programme has no modules in a year.
+
+        Modules are looked up by (Programme code, Year). A programme with no modules in a
+        year enrols students with an empty module list, so they get no engagement, assessment
+        or progression rows and silently vanish from the simulation (see docs/BACKLOG.md,
+        "Mis-coded Modules sheet strands two thirds of students"). Run
+        scripts/validate_curriculum.py for the full report.
+        """
+        counts = (
+            self.modules_df.groupby(['Programme code', 'Year']).size().unstack(fill_value=0)
+            .reindex(index=self.programs_df['Programme code'], columns=[1, 2, 3], fill_value=0)
+        )
+        empty = counts[(counts == 0).any(axis=1)]
+        if len(empty):
+            print(f"WARNING: {len(empty)} programme(s) have no modules in at least one year; "
+                  f"students reaching that year will be stranded: {empty.index.tolist()}")
         
     def _load_clan_affinities(self):
         """Load clan program affinities and selection settings from YAML"""

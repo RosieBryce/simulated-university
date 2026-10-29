@@ -4,6 +4,40 @@ Items here are deferred because they require design decisions, interact with oth
 
 ---
 
+## BUG: Mis-coded Modules sheet strands two thirds of students before graduation
+
+**Added**: 2026-10-29
+**Status**: Source data and config fixed on branch `claude/stoic-dirac-b41913` (see below) — **awaiting a full pipeline re-run and re-validation; `data/relational/` still carries the broken output.**
+
+**What happens.** In the v2.6.0 dataset 27 of the 55 programmes never have a `programme_year` 3 enrolment, and `fact_good_honours` has rows for only 21 programmes. Science & Engineering has **zero** graduates; Health & Education has graduates from Somatic Wellbeing Enquiry only (538); Culture & Social Sciences from Geography and History only. Of 35,000 students, **16,873 simply vanish**: their last `fact_enrollment` row is status `enrolled` (14,885 at Year 2, 1,988 at Year 3) with no `fact_progression` row and nothing afterwards — not withdrawn, not graduated. 84% of the 6,039 graduates come from two faculties (Craft, Art & Architecture 3,648; Business & Law 1,451).
+
+| Faculty | Entrants | Graduates | Share |
+|---|---|---|---|
+| Business & Law School | 2,849 | 1,451 | 51% |
+| Craft, Art & Architecture | 7,459 | 3,648 | 49% |
+| Culture & Social Sciences | 9,533 | 402 | 4% |
+| Health & Education | 7,971 | 538 | 7% |
+| Science & Engineering | 7,188 | 0 | 0% |
+
+**Root cause — data, not code.** In the canonical curriculum `curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx`, Modules sheet, the `Programme code` column is wrong on **385 of 660 rows**: 312 of them carry codes that do not exist in the Programmes sheet (`4_2_23`, `3_6_26`, `5_3_22`…). The `Programme` name column and the `Module Code` column (which encodes faculty/department/programme, e.g. `441102` → `4_1_1`) are both correct; only the code column is off. The pattern is an Excel fill-handle series: within each affected programme the code increments by one per row (Education Studies' four Year 1 modules are coded `4_1_1`, `4_1_2`, `4_1_3`, `4_1_4`), the classic autofill behaviour on text ending in a digit. It came in with the v7 faculty rework (`a28ca4c`). The twenty programmes in Business & Law and Craft, plus Geography and History, happened to be unaffected, which is why the headline tables looked plausible. `config/module_characteristics.csv` was derived from the sheet and carries the same 385 errors.
+
+**How it propagates.** `ProgramEnrollmentSystem.get_modules_for_programme_year` (`core_systems/program_enrollment_system.py`) filters the Modules sheet on `Programme code` + `Year`, so 34 programmes get an empty module list for Year 2 and/or Year 3 (and a short list for Year 1 — Education Studies students take one module in their first year, not four). An empty list means no engagement rows, no assessment rows, and because `ProgressionSystem.compute_progression` aggregates *from* assessment rows, no progression row. `run_longitudinal_pipeline.main` builds next year's continuing cohort from the progression output, so the student is silently dropped. Graduate outcomes only ever sees students who passed a Year 3 with marks, so the programme never appears in `fact_good_honours` / `fact_graduate_outcomes`. NSS still surveys the stranded Year 3 students (it keys on `programme_year == 3` in the enrolment frame), which is why Physiotherapy, OT, Pharmacy and Social Work have NSS rows but no graduates.
+
+**Tables affected.** `fact_enrollment` (dead-end rows), `fact_progression` (no rows for 16,873 student-years), `fact_assessment` and `fact_weekly_engagement` (missing years; `modules_total` of 1–3 instead of 4 in Year 1 for affected programmes), `fact_good_honours` and `fact_graduate_outcomes` (21 programmes instead of 55, 6,039 graduates instead of an expected ~13,000 from the five graduating cohorts), `fact_nss_responses` (Year 3 respondents with no marks), `dim_modules` (333 rows — only the modules anyone actually sat — instead of 642 distinct module codes). **Headline figures:** the ≈20pp Elf–Dwarf good-degree gap in `docs/index.html`, `docs/data/gap-summary.csv` and `docs/explore/` is computed from `fact_good_honours` (`scripts/aggregate_gap.py`), i.e. from a graduate population drawn almost entirely from two faculties. Dwarves are 59.8% of entrants but 53.3% of graduates. The gap (Dwarf 44.5% vs Elf 64.3%) will move once all 55 programmes graduate and will need re-calibrating against the documented 18–20pp band.
+
+**Fix applied (this branch).**
+- `Programme code` rewritten from the programme name on all 385 bad rows of the Modules sheet (openpyxl, in place; every other cell verified identical) and the matching 385 rows of `config/module_characteristics.csv` (column replaced verbatim, all other columns byte-identical). Before: 34 programmes with an empty year; after: 0, every programme has 4 modules in each of Years 1–3, and `AssessmentSystem.module_code_lookup` resolves all 660 (programme, title) pairs.
+- New `scripts/validate_curriculum.py` — fails (exit 1) if any module row's code disagrees with its programme name, any code is unknown, any programme lacks modules in any year, or the CSV disagrees with the sheet. Run it before any pipeline run.
+- `ProgramEnrollmentSystem._load_curriculum_data` now prints a WARNING listing any programme with an empty year at load time.
+
+**Still to do (needs Rosie's go-ahead — changes the published dataset).**
+1. Full re-run (`python run_longitudinal_pipeline.py`, 30–45 min), then `scripts/aggregate_gap.py`, `aggregate_engagement.py`, `aggregate_dashboard.py`.
+2. Re-validate the awarding gap; expect it to shift and the graduate count to roughly double. `metaanalysis/validate_outputs.py::check_shapes` expects 333 `dim_modules` rows — update to 642.
+3. Update row counts and descriptions: `README.md`, `docs/download.html`, `docs/index.html`, `docs/SCHEMA.md`, `docs/DESIGN.md` (still says 353 modules), `docs/explore/data/`; then a new GitHub release.
+4. Anything downstream that profiled `data/relational/` while it was broken (e.g. the Stonegrove Hub faculty profile) should be re-profiled.
+
+---
+
 ## Wire `first_gen` into Other Calculations
 
 **Added**: 2026-05-03
