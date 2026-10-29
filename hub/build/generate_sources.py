@@ -416,10 +416,72 @@ def gen_examboards() -> int:
     return count
 
 
+# =====================================================================
+# Applicant tracker (P08): 240 fabricated applicants with columns nobody needs
+# =====================================================================
+
+def gen_applicant_tracker() -> int:
+    rng = random.Random(SEED + 23)
+    pools = yaml.safe_load((PROJECT / "config" / "clan_name_pools.yaml").read_text(encoding="utf-8"))["clans"]
+    cast = load_cast()
+    staff_surnames = {p["name"].split()[-1] for p in cast["staff"]}
+    programmes = ["Nursing and Care", "Nursing and Care", "Nursing and Care", "Midwifery", "Occupational Therapy", "Pharmacy", "Physiotherapy",
+                  "Social Work", "Somatic Wellbeing Enquiry", "Education Studies", "Educational Mentorship", "Intergenerational Learning", "Herbal Practice and Energy Work", "Integrated Mind-Body"]
+    statuses = ["Offer made", "Offer made", "Firm", "Firm", "Insurance", "Declined", "Interview booked", "Awaiting reference", "Rejected", "Offer made", "Firm"]
+    streets = ["Cloister Lane", "Vale Road", "Forge Street", "Quarry Row", "Harbour Walk", "Yew Avenue", "Rowan Close", "Slate Terrace", "Mill Lane", "Ferry Approach"]
+    towns = ["Greywater Vale", "Ashen Reach", "Palm Coast", "Cragburrow", "Lower Stonegrove", "Hollowpick", "Sandstone Ferry", "Obsidian Quarter", "Yewgrove", "Millbrook"]
+    health = ["", "", "", "", "None declared", "Asthma", "Dyslexia (report attached)", "Anxiety - medicated", "Type 1 diabetes", "", "Epilepsy - controlled", "Hearing impairment", "Previous back injury", ""]
+    notes = ["", "", "", "mature applicant", "contextual offer", "strong PS", "PS weak, interview good", "ring re DBS equiv", "sibling of current student", "", "chased ref twice", "asked about bursary", "lives v far", "", "nice", "knows Dagna?"]
+    rows = [["App ID", "Surname", "Forename", "Programme", "Species", "Clan", "DOB", "Home address", "Postcode", "Phone", "Email", "Status", "Offer date", "Interview", "Health declaration", "Contextual?", "First gen?", "Notes", "Last action", "Owner"]]
+    clans = list(pools.keys())
+    i = 0
+    planted_added = False
+    while len(rows) < 241:
+        clan = rng.choice(clans)
+        pool = pools[clan]
+        gender = rng.choice(["female", "male", "female", "male", "neuter"])
+        fn_pool = pool["forenames"].get(gender) or pool["forenames"]["female"]
+        fn = rng.choice([x["name"] if isinstance(x, dict) else x for x in fn_pool])
+        sn = rng.choice(pool["surnames"])
+        sn = sn["name"] if isinstance(sn, dict) else sn
+        if sn in staff_surnames:
+            continue
+        i += 1
+        if not planted_added and i == 57:
+            fn, sn, clan, gender = "Nelka", "Cobblecloak", "sandstone", "female"
+            planted_added = True
+        prog = rng.choice(programmes) if sn != "Cobblecloak" else "Nursing and Care"
+        status = rng.choice(statuses) if sn != "Cobblecloak" else "Offer made"
+        dob = f"{rng.choice([1034, 1035, 1035, 1035, 1033, 1028, 1021])}-{rng.randint(1, 12):02d}-{rng.randint(1, 28):02d}"
+        rows.append([f"A1053-{i:04d}", sn, fn, prog, pool["species"], clan.title(), dob,
+                     f"{rng.randint(1, 140)} {rng.choice(streets)}, {rng.choice(towns)}", f"SG{rng.randint(1, 9)} {rng.randint(1, 9)}{rng.choice('ABCDEFGH')}{rng.choice('ABCDEFGH')}",
+                     f"07700 900{rng.randint(100, 999)}", f"{fn.lower()}.{sn.lower()}@mail.example", status,
+                     f"1053-{rng.randint(1, 3):02d}-{rng.randint(1, 28):02d}" if "Offer" in status or status in ("Firm", "Insurance", "Declined") else "",
+                     f"1053-{rng.randint(1, 3):02d}-{rng.randint(1, 28):02d}" if rng.random() < 0.6 else "",
+                     rng.choice(health) if sn != "Cobblecloak" else "Anxiety - medicated (see PS, pasted into ChatGlimmer 19/3 to check grammar - BC)",
+                     rng.choice(["Y", "N", "N", "N"]), rng.choice(["Y", "N", "N"]), rng.choice(notes) if sn != "Cobblecloak" else "PS very good. Grammar checked.",
+                     f"1053-0{rng.randint(1, 4)}-{rng.randint(1, 28):02d}", rng.choice(["BC", "BC", "BC", "MD", "temp"])])
+    import csv as _csv, io as _io
+    s = _io.StringIO(); w = _csv.writer(s)
+    for r in rows: w.writerow(r)
+    nl = chr(10)
+    notes_rows = [["Note"], ["Columns G to K and O added by BC 1051 'so everything is in one place'. IG flagged at ROPA review (INC-0025). Not removed."],
+                  ["Status values are not controlled. Sort before counting."], ["v3 = after March interviews. v1 and v2 in same folder."]]
+    s2 = _io.StringIO(); w2 = _csv.writer(s2)
+    for r in notes_rows: w2.writerow(r)
+    body = f"```sheet:Tracker{nl}{s.getvalue().strip(nl)}{nl}```{nl}{nl}```sheet:Notes{nl}{s2.getvalue().strip(nl)}{nl}```"
+    meta = dict(title="Applicant tracker 1053 entry v3", format="xlsx", author="bruk-coaljaw", created="1052-10-01", modified="1053-03-28",
+                label="Internal", sensitive=True, site="admissions", library="adm-cycle", path="Tracker", storylines=["admissions", "ai-policy"],
+                skills=[5, 2], planted="P08", lineage={"root": True, "true_latest": True})
+    write("Admissions/Cycle 1053 Entry/Tracker/Applicant tracker 1053 entry v3.md", meta, body)
+    return 1
+
+
 GENERATORS = {
     "providers": gen_providers,
     "placements": gen_placement_workbook,
     "examboards": gen_examboards,
+    "applicants": gen_applicant_tracker,
 }
 
 

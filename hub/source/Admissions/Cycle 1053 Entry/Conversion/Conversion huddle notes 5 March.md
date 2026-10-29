@@ -1,0 +1,37 @@
+---
+title: Conversion huddle notes 5 March
+format: eml
+author: mira-dealroot
+created: 1053-03-05
+modified: 1053-03-05
+label: Internal
+sensitive: false
+site: admissions
+library: adm-cycle
+path: Conversion
+storylines: [admissions]
+skills: [1]
+---
+
+From: mira-dealroot
+To: bruk-coaljaw, quorin-deepmirror
+Cc: teylin-leafchant
+Date: 1053-03-05
+Subject: Quick update: conversion huddle actions!!
+
+Hi both
+
+Great huddle, thanks!! Actions:
+
+- Quorin: conversion by species by the 12th; weeks-since-offer when Teylin has pulled the offer dates (from the SYSTEM not the tracker, noted!)
+- Me: hold the three conversion papers until Quorin's numbers are in
+- Bruk: speak to Elenna today re the personal statement thing. Ask for advice, she's lovely
+- Bruk: no new columns on the tracker
+
+Headline for anyone asking: offers +9%, firms -6% at the same date. Three possible contributors: open day date, interview turnaround in Health, competitor bursaries. Data will settle it!!
+
+Let's get this over the line
+
+Mira
+
+Mira Dealroot, Head of Admissions, ext 2200

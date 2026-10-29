@@ -1,0 +1,39 @@
+---
+title: Conversion note for the team
+format: docx
+author: mira-dealroot
+created: 1053-03-11
+modified: 1053-03-11
+label: Internal
+sensitive: false
+site: admissions
+library: adm-cycle
+path: Conversion
+storylines: [admissions]
+skills: [2, 6, 8]
+---
+
+# Conversion: where we are and what we can fix
+
+For the Admissions team. Mira. 11 March 1053.
+
+Hi team!!
+
+You'll have heard that firms are down. Here's the honest picture and what we're doing.
+
+**Offers are up 9%. Firms are down 6%.** That's at the same date as last year.
+
+**What I think happened:** the October open day. We had to move it to the 18th because of the room clash and it landed on the same weekend as Elder Grove's. Footfall was down about a third. Fewer applicants saw the campus, met the staff, and got that feeling. Our conversion from open day attendees is always far higher than from applicants who have not visited, so a third fewer attendees shows up as fewer firms five months later. This is the bit that's ours, and the bit we can fix.
+
+**Other things people are saying:** Health interview turnaround (the Dean's hearing about that); Elder Grove's new bursaries (Senate's hearing about that). Both may be in the mix. Planning are doing the numbers.
+
+**What we're doing:**
+
+- 14 June open day: date locked in January, no clash, rooms confirmed. Comms are on the banner (I've sent the request).
+- Phone campaign: every applicant with an unfirmed offer gets a call from one of us by the end of March. Script attached. Warm, not pushy. Ask if they have questions, offer a campus visit.
+- Chase Health interview decisions daily.
+- Bruk: tracker tidy-up (and please, no more columns).
+
+We've got this!! Great team, great programmes, let's get them over the line.
+
+Mira
