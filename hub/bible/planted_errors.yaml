@@ -1,0 +1,123 @@
+# In-world AI-generated documents with planted errors. OUT OF WORLD. Never shipped.
+#
+# Skill 8: checking the AI's work. Each entry is a file that someone in the
+# cast produced with the institutional AI assistant ("Cloudi", on the
+# approved list) and did not check. Each carries the header
+# "Summary (auto-generated)" or similar in-world marker, and each error is
+# recorded here with the source document that contradicts it.
+#
+# Errors that involve figures are expressed as template operations on
+# values.yaml keys so they survive a reseed.
+
+tool_name_in_world: Cloudi          # the approved institutional assistant
+non_approved_tool_in_world: ChatGlimmer  # what Bruk used
+
+errors:
+
+  - id: E01
+    storyline: nss-dip
+    file: "NSS 1052 pack summary (auto-generated).docx"
+    site: planning
+    library: pi-working
+    path: NSS
+    author: teylin-leafchant
+    created: 1052-10-20
+    source_of_truth:
+      - "planning / Reports / 1052-53 / 1052-10-17_Education-NSS-Deep-Dive_v01.docx"
+      - "planning / Data Extracts / 1052-53 / nss_by_department.csv"
+    planted:
+      - kind: figure
+        text: "Overall satisfaction in the Department of Education fell by {{ (education_nss_overall_1051 - education_nss_overall_1052) * 2 | round(1) }} points."
+        truth: "The fall is {{ education_nss_overall_1051 - education_nss_overall_1052 }}; the summary doubles it."
+      - kind: attribution
+        text: "The decline is driven principally by the Learning Resources theme."
+        truth: "The deep dive attributes it to Assessment and Feedback."
+      - kind: invented_action
+        text: "The Department has committed to weekly feedback clinics from January 1053."
+        truth: "No such commitment appears in any source. The action plan says fortnightly feedback workshops from February."
+      - kind: date
+        text: "The action group met on 23 November 1052."
+        truth: "23 October 1052 (T6)."
+      - kind: omission
+        text: ""
+        truth: "The summary omits the deep dive's main caveat: Education's response rate was below the publication threshold for two modules."
+
+  - id: E02
+    storyline: awarding-gap
+    file: "Deans thing v3 USE THIS.docx"
+    site: faculty
+    library: fac-deans
+    path: Council and Senate/Awarding Gap Paper
+    author: cyranor-goldmantle
+    typed_by: elowen-fogwhisper
+    created: 1053-04-08
+    note: >
+      Not AI-generated in-world; human error. Included here because it is
+      checkable against the data and the hints treat it the same way.
+    source_of_truth:
+      - "planning / Data Extracts / 1052-53 / good_honours_by_programme_clan_group.csv"
+      - "planning / Reports / 1052-53 (none yet: the report does not exist, which is the point)"
+    planted:
+      - kind: stale_figure
+        text: "The gap in good honours between Elf and Dwarf graduates in the Faculty stands at {{ he_good_degree_gap_1051 }} percentage points."
+        truth: "That is the 1051 figure, from last year's report. The 1052 figure is {{ he_good_degree_gap_1052 }}."
+      - kind: wrong_denominator
+        text: "In the Department of Health, {{ faculty_good_degree_rate_dwarf_1052 }}% of Dwarf graduates achieved a good degree."
+        truth: "That is the Faculty figure, not the Department's ({{ health_good_degree_rate_dwarf_1052 }}%)."
+      - kind: unsupported_claim
+        text: "The gap has narrowed over the past three years."
+        truth: "Templated to say 'narrowed' regardless. Check against the five-year table; in the shipped seed it has not."
+
+  - id: E03
+    storyline: revalidation
+    file: "External examiner reports OT summary (auto-generated).docx"
+    site: planning
+    library: pi-working
+    path: Teylin
+    author: teylin-leafchant
+    created: 1053-02-10
+    source_of_truth:
+      - "quality / External Examiners / Marenel Boughwitness reports 1050, 1051, 1052"
+    planted:
+      - kind: inversion
+        text: "The external examiner commended the balanced assessment load in Year 2."
+        truth: "All three reports recommend reducing the Year 2 assessment load."
+      - kind: wrong_entity
+        text: "Dr Boughwitness (Stoneborn Institute)"
+        truth: "Elder Grove University."
+      - kind: invented_quote
+        text: "\"an exemplary programme in every respect\""
+        truth: "Appears in no report."
+      - kind: count
+        text: "across four years of reports"
+        truth: "Three."
+
+  - id: E04
+    storyline: awarding-gap
+    file: "FMG 19 March AI minutes DRAFT.docx"
+    site: faculty
+    library: fac-deans
+    path: Faculty Management Group/1052-53
+    author: elowen-fogwhisper
+    created: 1053-03-20
+    note: >
+      Elowen fed T2 into Cloudi to produce minutes and saved the result
+      with "DRAFT" in the name. Nobody has looked at it. Pairs with T2.
+    source_of_truth:
+      - "faculty / Deans Office / Faculty Management Group / 1052-53 / FMG transcript 19 March 1053.vtt"
+    planted:
+      - kind: invented_attendee
+        text: "Present: ... Quorin Deepmirror (Planning and Insight)"
+        truth: "Quorin was not at FMG; he was discussed."
+      - kind: misassigned_action
+        text: "ACTION: Dr Candletome to produce the Council paper on the awarding gap by 30 April."
+        truth: "The transcript has the Dean asking Elowen to 'get something down', and Brekka suggesting Planning do it. Nobody named Caerel."
+      - kind: tangent_as_decision
+        text: "The Group APPROVED the Department of Education's new logo for use on open day materials."
+        truth: "Jaskel showed the pencil tree; the Dean said 'fun'; Hrogar objected; no decision."
+      - kind: dropped_item
+        text: ""
+        truth: "The 20-minute discussion of the StoneShare migration (Brekka's paper) is absent from the AI minutes entirely."
+      - kind: hallucinated_date
+        text: "Date of next meeting: 16 April 1053"
+        truth: "Transcript says 'the usual Wednesday', which is 23 April."

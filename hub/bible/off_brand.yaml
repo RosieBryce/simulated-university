@@ -1,0 +1,177 @@
+# Brand rules and off-brand plantings. OUT OF WORLD. Never shipped.
+#
+# The in-world Brand Guide (comms / Brand / Brand Guide 1051 v2.1) is written
+# from `rules`. Each planted off-brand file breaks named rules, recorded so
+# skill 11 is checkable.
+
+rules:
+  naming:
+    - id: N1
+      rule: 'The institution is "Stonegrove University". Never "the University of Stonegrove", never "Stonegrove Uni", never "Stonegrove College of the Vale".'
+    - id: N2
+      rule: 'Departments and faculties use their official names as listed in Appendix A. "Department of Healing Arts", "School of Health and Pedagogy" and "Faculty of Pedagogy" were retired in September 1051.'
+    - id: N3
+      rule: 'Programmes use their validated titles. "Healing and Care" is "Nursing and Care".'
+    - id: N4
+      rule: 'Students are "students". Not "candidates", "learners" or "young people".'
+  logo:
+    - id: L1
+      rule: The logo is the coat of arms with the wordmark. Use the supplied files only. Never redraw, recolour, stretch, rotate or add effects.
+    - id: L2
+      rule: Clear space around the logo equals the height of the shield on all sides.
+    - id: L3
+      rule: Minimum width 30 mm in print, 120 px on screen.
+    - id: L4
+      rule: No department, programme, team or project may create its own logo, mark or sub-brand. Lock-ups are produced by Communications.
+    - id: L5
+      rule: Never place the logo on a gradient, a photograph without a solid panel, or any colour outside the palette.
+  colour:
+    - id: C1
+      rule: "Primary palette: Parchment #f5f0e0, Deep Parchment #ede8dc, Stonegrove Navy #1a1a2e, Stonegrove Gold #c9a84c."
+    - id: C2
+      rule: "Secondary: Grove Green #7a9e82. Accent: Ember Coral #d98878, for highlights only, never for text or backgrounds."
+    - id: C3
+      rule: No gradients. No drop shadows. No colours outside the palette.
+  type:
+    - id: T1
+      rule: Headings in Playfair Display. Body in Source Sans 3. Where unavailable, Georgia and Arial.
+    - id: T2
+      rule: Never more than two typefaces on a page. No display, script, rounded or novelty faces.
+  voice:
+    - id: V1
+      rule: Warm, plain, confident. Short sentences. British spelling.
+    - id: V2
+      rule: No exclamation marks in official communications. One is permitted in a social post.
+    - id: V3
+      rule: 'Do not use the retired hashtag #CollegeOfTheVale. The hashtag is #Stonegrove.'
+  templates:
+    - id: P1
+      rule: Use the current corporate templates (Communications / Brand / Templates). Templates dated before September 1051 are withdrawn.
+
+appendix_a_official_names:
+  - Faculty of Health and Education
+  - Department of Health
+  - Department of Education
+  - Programme Support Team, Nursing and Care
+  - Planning and Insight
+  - Quality
+  - Admissions
+  - Student Wellbeing
+  - Communications
+  - Governance and Secretariat
+  - Digital Services
+
+retired_names:
+  - {old: "Stonegrove College of the Vale", new: "Stonegrove University"}
+  - {old: "School of Health and Pedagogy", new: "Faculty of Health and Education"}
+  - {old: "Department of Healing Arts", new: "Department of Health"}
+  - {old: "Faculty of Pedagogy", new: "Department of Education"}
+  - {old: "Healing and Care", new: "Nursing and Care"}
+  - {old: "#CollegeOfTheVale", new: "#Stonegrove"}
+
+# ----------------------------------------------------------------------
+planted:
+
+  - id: B01
+    storyline: rebrand
+    what: Hrogar's memoranda and letterhead
+    files: ["MEMORANDUM re placement capacity 14.03.53.docx", "Dept Healing Arts letterhead.docx", "Department meeting minutes 02.12.52.docx"]
+    site: faculty
+    library: fac-health
+    path: Department Meetings
+    breaks: [N2, N4, L1, P1]
+    detail: '"Department of Healing Arts" in header and signature; old crest; "candidates"; pre-1051 template.'
+
+  - id: B02
+    storyline: rebrand
+    what: The pencil tree logo
+    files: ["pencil tree logo.png", "pencil tree logo small.png", "pencil tree logo FINAL.png"]
+    site: faculty
+    library: fac-education
+    path: Marketing/Jaskel
+    breaks: [L4, L5, C3]
+    detail: A department sub-logo, with a gradient, in colours outside the palette.
+    placeholder: generated simple PNG (a tree shape in two wrong greens with a gradient); Rosie may replace.
+
+  - id: B03
+    storyline: rebrand
+    what: Jaskel's Education leaflet and open day deck
+    files: ["Education leaflet 1053.pptx", "Open Day Education deck.pptx"]
+    site: faculty
+    library: fac-education
+    path: Marketing/Jaskel
+    also_in: {site: admissions, library: adm-opendays, path: "1053-06 Open Day"}
+    breaks: [T2, C3, L4, V2]
+    detail: Six typefaces including a rounded display face; drop shadows; pencil tree on every slide; exclamation marks throughout.
+
+  - id: B04
+    storyline: rebrand
+    what: Two corporate templates with the old footer
+    files: ["Committee paper template.docx", "Business case template.docx"]
+    site: governance
+    library: gov-templates
+    path: ""
+    breaks: [N1, P1]
+    detail: 'Footer reads "Stonegrove College of the Vale". Everything else is on brand, which is why nobody noticed.'
+    note: These are the templates people copy, so the old name propagates. Rendered as .docx (filename_rules allows no dotx); in-world they are "templates".
+
+  - id: B05
+    storyline: stoneshare
+    what: Old templates in the migration library still in daily use
+    files: ["Faculty letterhead.docx", "Faculty slide template.pptx", "Memo template.docx"]
+    site: faculty
+    library: fac-stoneshare
+    path: Templates/Old templates
+    breaks: [N1, N2, L1, P1]
+    detail: College of the Vale wordmark, old crest, School of Health and Pedagogy.
+
+  - id: B06
+    storyline: admissions
+    what: Admissions templates and tone-of-voice note
+    files: ["Offer letter template.docx", "Interview invitation template.docx", "Admissions tone of voice.docx"]
+    site: admissions
+    library: adm-comms
+    path: Templates
+    breaks: [N1, V1, V2]
+    detail: 'Two templates open "Welcome to Stonegrove College of the Vale!!"; the tone note says "be upbeat!! exclamation marks are friendly".'
+
+  - id: B07
+    storyline: rebrand
+    what: Social post schedule with off-brand posts
+    files: ["Socials schedule March 1053.xlsx", "post graphics March.pptx"]
+    site: comms
+    library: comms-campaigns
+    path: Socials
+    breaks: [C3, C2, V3, L5]
+    detail: Gradient backgrounds; coral used as background; #CollegeOfTheVale in four posts; logo on a photo with no panel.
+
+  - id: B08
+    storyline: rebrand
+    what: Faculty strategy, glossy version
+    files: ["Faculty Strategy 1052-55 glossy.pptx"]
+    site: faculty
+    library: fac-deans
+    path: Faculty Strategy
+    breaks: [T2, C3, L4]
+    detail: Jaskel "made it look nice". Pairs with the plain on-brand docx version in the same folder.
+
+  - id: B09
+    storyline: admissions
+    what: Open day banner request
+    files: ["Banner request June open day.docx"]
+    site: comms
+    library: comms-requests
+    path: Open
+    breaks: [N1]
+    detail: 'Requested copy: "Stonegrove College of the Vale Open Day". Mira copied it from last year''s banner.'
+
+# The Brand Compliance Log (comms / Brand / Brand Compliance Log.xlsx) lists
+# every planted item above as an in-world sighting, with Sorell's dry
+# outcome column ("Advised. Again."), plus ~50 further rows of minor
+# sightings that have no corresponding file. The log is itself on brand.
+
+on_brand_controls:
+  - "comms / Brand / everything"
+  - "governance / Policies and Procedures / Current / everything except footers noted in B04"
+  - "faculty / Deans Office / Faculty Strategy / Faculty Strategy 1052-55.docx (the plain version)"
+  - "comms / Campaigns / 1053-06 Open Day / Open Day flyer v2 (on brand).pptx, paired with v1 (not)"

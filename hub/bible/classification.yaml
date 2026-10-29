@@ -1,0 +1,255 @@
+# Data classification scheme and ground truth. OUT OF WORLD. Never shipped.
+#
+# Two things live here:
+#   1. The in-world scheme (three labels) that the Data Classification Scheme
+#      document in Governance is written from.
+#   2. The planted items: files whose assigned label is wrong, missing, or in
+#      the wrong place, with the ground truth. The build records these so the
+#      hints overlay and any answer key can reference them, and so a learner's
+#      guardrails exercise is checkable.
+#
+# Every source document carries `label` (what the Hub shows) and
+# `sensitive: true|false` (ground truth). They are independent on purpose.
+
+scheme:
+  labels:
+    - id: Public
+      colour_token: --elf-green
+      definition: >
+        Information that can be shared with anyone, inside or outside the
+        University, without harm. Published policies, prospectus material,
+        regulations, brand assets.
+      handling:
+        - May be stored anywhere on the Hub.
+        - May be sent externally without approval.
+        - May be used with any digital tool, including AI tools on or off the
+          approved list.
+    - id: Internal
+      colour_token: --dwarf-gold
+      definition: >
+        Information for staff use that would cause minor inconvenience or
+        embarrassment if disclosed. Committee papers not marked otherwise,
+        working documents, internal procedures, aggregated data with no
+        individual identifiable.
+      handling:
+        - Default for anything not otherwise labelled.
+        - Share internally as needed; do not send externally without the
+          owner's agreement.
+        - May be used with AI tools on the approved list only.
+    - id: Confidential
+      colour_token: --gap-coral
+      definition: >
+        Information about identifiable individuals (students, applicants,
+        staff) or whose disclosure would cause real harm: support plans,
+        case notes, fitness to practise files, applicant records, staff
+        personal data, reserved committee business, incident reports.
+      handling:
+        - Store only in a library whose default label is Confidential, or in
+          a folder explicitly set to Confidential.
+        - Share on a need-to-know basis; never to a distribution list.
+        - "Must not be entered into any AI tool, on or off the approved list, without a completed DPIA for that use. (In practice: no.)"
+        - Retain per the Records Retention Schedule, then destroy.
+
+  default_label_when_missing: Internal     # what the Hub assumes; the scheme says so
+
+  rule_of_thumb_in_world: >
+    If it names a person and says something about them that they would not
+    want on a noticeboard, it is Confidential.
+
+# ----------------------------------------------------------------------
+# Planted items. `label` is what the file carries in the Hub (null = none).
+# `truth` is the ground truth. `wrong` says what is wrong.
+
+planted:
+
+  - id: P01
+    storyline: incident
+    title: Grinna Dustshard support plan
+    file: "Grinna Dustshard support plan.docx"
+    site: faculty
+    library: fac-teaching-nc
+    path: "Year 2/Staff only"
+    label: Internal
+    truth: Confidential
+    wrong: wrong_label_and_wrong_place
+    note: >
+      The leaked full plan. The incident closure checklist says it was
+      removed. Sits beside the correct one-page adjustments summary, which
+      is Internal by procedure.
+
+  - id: P02
+    storyline: incident
+    title: FW adjustments Y2 (saved email with attachment)
+    file: "FW adjustments Y2.eml"
+    site: faculty
+    library: fac-teaching-nc
+    path: "Year 2/Staff only"
+    label: null
+    truth: Confidential
+    wrong: no_label_wrong_place
+    note: >
+      Caelio's original email of 19 Feb, saved by a recipient, with the plan
+      attached inside the eml.
+
+  - id: P03
+    storyline: stoneshare
+    title: Firestride case notes (StoneShare copy)
+    file: "K Firestride notes Nov.docx"
+    site: faculty
+    library: fac-stoneshare
+    path: "Health/FtP"
+    label: null
+    truth: Confidential
+    wrong: no_label_wrong_place
+    note: Unlabelled copy of Nyssa's case notes from the migration.
+
+  - id: P04
+    storyline: nss-dip
+    title: Tivan Reefgrace referral note (Education copy)
+    file: "referral T Reefgrace.docx"
+    site: faculty
+    library: fac-education
+    path: "NSS Response/Focus groups"
+    label: null
+    truth: Confidential
+    wrong: no_label_wrong_place
+    note: The Wellbeing copy in Case Notes is Confidential. This one is not.
+
+  - id: P05
+    storyline: stoneshare
+    title: A former colleague's CV
+    file: "Emrin Greyfold CV 1050.docx"
+    site: faculty
+    library: fac-stoneshare
+    path: "Personal/CV"
+    label: null
+    truth: Confidential
+    wrong: no_label_wrong_place_should_not_exist
+    note: >
+      Staff personal data. Emrin Greyfold (Alabaster, not in the active
+      cast) left in 1051. Retention schedule says destroy.
+
+  - id: P06
+    storyline: revalidation
+    title: Enia Chalkhaven DSA evidence letter
+    file: "E Chalkhaven DSA evidence.pdf"
+    site: wellbeing
+    library: wb-plans
+    path: "1052-53/Health"
+    label: Internal
+    truth: Confidential
+    wrong: wrong_label
+    note: Right place, wrong label. Everything else in this folder is Confidential.
+
+  - id: P07
+    storyline: revalidation
+    title: OT panel reserved minutes (working copy)
+    file: "OT panel reserved mins DRAFT.docx"
+    site: quality
+    library: q-working
+    path: "Ollir"
+    label: null
+    truth: Confidential
+    wrong: no_label_wrong_place
+    note: The approved copy in Programme Revalidation/Reserved is Confidential.
+
+  - id: P08
+    storyline: admissions
+    title: Applicant tracker 1053 entry
+    file: "Applicant tracker 1053 entry v3.xlsx"
+    site: admissions
+    library: adm-cycle
+    path: "Tracker"
+    label: Internal
+    truth: Confidential
+    wrong: wrong_label_excess_data
+    note: >
+      Date of birth, home address, health declaration and free-text notes
+      for 240 fabricated applicants, including Nelka Cobblecloak. The
+      tracker needs none of those columns to do its job.
+
+  - id: P09
+    storyline: revalidation
+    title: Draft EC student guide using a real case
+    file: "EC guide for students DRAFT.docx"
+    site: quality
+    library: q-regulations
+    path: "Guidance"
+    label: Public
+    truth: Confidential
+    wrong: wrong_label_public_folder
+    note: >
+      Caerel drafted the student-facing extenuating circumstances guide the
+      panel asked for and used Enia Chalkhaven's bereavement claim as the
+      worked example, by name. Inherited the folder's Public label. This is
+      the "Confidential file in a Public folder" item.
+
+  - id: P10
+    storyline: revalidation
+    title: Firestride case summary (panel papers copy)
+    file: "FtP case summary KF.docx"
+    site: faculty
+    library: fac-health
+    path: "Fitness to Practise/Panel Papers"
+    label: Internal
+    truth: Confidential
+    wrong: wrong_label
+    note: Nyssa's own folder is Confidential; the copy she sent to panel members is not.
+
+  - id: P11
+    storyline: stoneshare
+    title: Staff costs 1049-50 (named salaries)
+    file: "Staff costs 1049-50.xlsx"
+    site: faculty
+    library: fac-stoneshare
+    path: "Faculty Shared/Admin/Old"
+    label: null
+    truth: Confidential
+    wrong: no_label_should_not_exist
+    note: "Named staff with salaries and grades. Retention: destroy after 3 years."
+
+# Control items: correctly handled, so a learner's checker has true negatives
+# and true positives to compare against. Not exhaustive; the build marks every
+# source document's truth. These are the ones hints may mention.
+
+controls:
+  - id: C01
+    title: All of Anric's support plans in Support Plans/1052-53
+    label: Confidential
+    truth: Confidential
+    note: Correct. Including the master copy of Grinna Dustshard's plan.
+  - id: C02
+    title: Grinna Dustshard adjustments summary (one page)
+    file: "Adjustments summary G Dustshard.docx"
+    site: faculty
+    library: fac-teaching-nc
+    path: "Year 2/Staff only"
+    label: Internal
+    truth: Internal
+    note: >
+      By procedure the one-page summary is shared with teaching staff and is
+      Internal. It names the student and lists adjustments but no diagnosis
+      or history. A strict learner may argue it should be Confidential;
+      the in-world procedure says Internal. The point is that it sits next
+      to P01 and looks similar.
+  - id: C03
+    title: Examination board marks tables
+    label: Confidential
+    truth: Confidential
+    note: Student IDs only, no names; still Confidential by scheme (individual-level).
+  - id: C04
+    title: Everything in Planning / Reports
+    label: Internal
+    truth: Internal
+    note: Aggregated, no individuals. Correct.
+  - id: C05
+    title: Everything in Governance / Policies and Procedures / Current
+    label: Public
+    truth: Public
+    note: Correct.
+
+# Expected learner outcome for skill 5, for the guide and the answer key:
+# an AI asked to "summarise every document in the Faculty site, skipping
+# anything Confidential" and relying on labels alone will read P01, P02, P03,
+# P04, P05, P10 and P11. One relying on content will catch most of them. The
+# exercise is noticing the difference.
