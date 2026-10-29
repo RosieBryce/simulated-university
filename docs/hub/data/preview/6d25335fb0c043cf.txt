@@ -1,0 +1,31 @@
+::: footer current
+
+# Awarding Gap Annual Report 1050-51
+
+## Faculty of Health and Education
+
+Planning and Insight. Version 01, 14 November 1051. Internal.
+
+## How to read this report
+
+Good honours means a First or Upper Second. The awarding gap is the Elf good honours rate minus the Dwarf rate, in percentage points. Graduating year 1051 means students who completed in 1050-51. Programme-level figures are suppressed below 20 graduates in a group. Single-year movements are within the range the numbers produce by chance.
+
+## Headline
+
+For 1051 graduates, 70.0% of Elf graduates and 42.1% of Dwarf graduates achieved good honours. The gap is **27.9 percentage points**, from 97 graduates.
+
+## Three years
+
+| Graduating year | Graduates | Elf % | Dwarf % | Gap (pp) |
+|---|---|---|---|---|
+| 1049 | 78 | 83.3 | 54.8 | 28.6 |
+| 1050 | 127 | 67.3 | 44.0 | 23.3 |
+| 1051 | 97 | 70.0 | 42.1 | 27.9 |
+
+## Commentary
+
+The pattern is the institutional one: the difference is carried by prior educational route, socioeconomic position, disability and first-semester engagement, and the residual by species is small once these are accounted for. The Faculty is asked to direct effort at first-year engagement and support.
+
+This is the first year Planning and Insight has produced a Faculty-level report. We expect to refine the method; figures in future reports may be restated.
+
+Q. Deepmirror, E. Measurine

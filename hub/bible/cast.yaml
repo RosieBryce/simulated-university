@@ -779,4 +779,178 @@ providers:
     email: surgery@cragburrow.example
     phone: 01632 960505
     capacity_note: 3 places, shift pattern, students must have the underground safety briefing
-  # Phase 2 adds 20 to 25 more in the same shape, enough for 30 letters.
+  - id: oakhollow-practice
+    name: Oakhollow Village Practice
+    contact: Dr Lirien Ferntext
+    contact_clan: Holly
+    email: practice.manager@oakhollow.example
+    phone: 01632 960506
+    capacity_note: 2 places per semester, Year 2 only, Tuesdays and Thursdays closed to students
+  - id: stonebridge-care-home
+    name: Stonebridge Residential Care Home
+    contact: Matron Gilda Crestguard
+    contact_clan: Granite
+    email: matron@stonebridge-care.example
+    phone: 01632 960507
+    capacity_note: 5 places, no more than 2 students on any shift, uniform must be plain navy
+  - id: ashvale-community-nursing
+    name: Ashvale Community Nursing Team
+    contact: Vaela Kindlebloom
+    contact_clan: Ash
+    email: v.kindlebloom@ashvale-nursing.example
+    phone: 01632 960508
+    capacity_note: 4 places, students must have a bicycle or transport, home visits in pairs
+  - id: greywater-childrens-ward
+    name: Greywater Vale Infirmary, Children's Ward
+    contact: Sister Hilda Cliffmarch
+    contact_clan: Granite
+    email: childrens.ward@greywater-infirmary.example
+    phone: 01632 960509
+    capacity_note: 3 places, enhanced clearance required, Year 2 semester 2 only
+  - id: millbrook-mental-health
+    name: Millbrook Community Mental Health Team
+    contact: Caedros Pyrelatch
+    contact_clan: Ash
+    email: placements@millbrook-cmht.example
+    phone: 01632 960510
+    capacity_note: 3 places, interview required, students attend a half-day induction the week before
+  - id: riverside-rehabilitation
+    name: Riverside Rehabilitation Unit
+    contact: Elka Dustmantle
+    contact_clan: Flint
+    email: e.dustmantle@riverside-rehab.example
+    phone: 01632 960511
+    capacity_note: 4 places, shared with Physiotherapy and OT, students rota across disciplines
+  - id: deepmarrow-day-hospice
+    name: Deepmarrow Hospice Day Service
+    contact: Meluin Glossfeather
+    contact_clan: Holly
+    email: dayservice@deepmarrow-hospice.example
+    phone: 01632 960512
+    capacity_note: 2 places, Year 2 only, Wednesdays only, reflective debrief compulsory
+  - id: cragburrow-occupational-health
+    name: Cragburrow Mine Occupational Health Service
+    contact: Hask Deepgrit
+    contact_clan: Flint
+    email: och@cragburrow.example
+    phone: 01632 960513
+    capacity_note: 2 places, underground safety briefing and steel-capped boots required
+  - id: bismuth-quarter-surgery
+    name: Bismuth Quarter Surgery
+    contact: Dr Thessa Gemlace
+    contact_clan: Bismuth
+    email: hello@bismuthquarter-surgery.example
+    phone: 01632 960514
+    capacity_note: 1 place, flexible hours, students help with the art therapy group on Fridays
+  - id: palmstrand-maternity
+    name: Palmstrand Maternity Unit
+    contact: Mirani Horizonchant
+    contact_clan: Palm
+    email: maternity.education@palmstrand.example
+    phone: 01632 960515
+    capacity_note: 3 places, Midwifery priority, Nursing and Care places only if unfilled by week 3
+  - id: hollowpick-domiciliary
+    name: Hollowpick Domiciliary Care
+    contact: Calla Claymantle
+    contact_clan: Alabaster
+    email: office@hollowpick-domcare.example
+    phone: 01632 960516
+    capacity_note: 6 places, early starts (06:30), travel between clients on foot
+  - id: sandstone-ferry-clinic
+    name: Sandstone Ferry Walk-in Clinic
+    contact: Garril Bargestone
+    contact_clan: Sandstone
+    email: g.bargestone@ferryclinic.example
+    phone: 01632 960517
+    capacity_note: 3 places, weekend shifts expected, busy market days
+  - id: yewgrove-elder-care
+    name: Yewgrove Elder Care Centre
+    contact: Nethira Duskthorn
+    contact_clan: Yew
+    email: n.duskthorn@yewgrove-elders.example
+    phone: 01632 960518
+    capacity_note: 4 places, students must attend the memory care training day first
+  - id: obsidian-vault-infirmary
+    name: Obsidian Vault Infirmary
+    contact: Dr Morthen Glassenclave
+    contact_clan: Obsidian
+    email: education@obsidianvault-infirmary.example
+    phone: 01632 960519
+    capacity_note: 8 places, large teaching site, formal application form per student
+  - id: malachite-forge-first-aid
+    name: Malachite Forge First Aid Post
+    contact: Brimma Bellowsmoke
+    contact_clan: Malachite
+    email: firstaid@malachiteforge.example
+    phone: 01632 960520
+    capacity_note: 2 places, heat and noise, hearing protection issued, Year 2 only
+  - id: slate-district-nursing
+    name: Slate District Nursing Service
+    contact: Delra Linevault
+    contact_clan: Slate
+    email: rota@slate-districtnursing.example
+    phone: 01632 960521
+    capacity_note: 3 places, rota published 6 weeks ahead and not changed, punctuality expected
+  - id: rowanmere-hospice-at-home
+    name: Rowanmere Hospice at Home
+    contact: Feyra Blossomvow
+    contact_clan: Rowan
+    email: f.blossomvow@rowanmere.example
+    phone: 01632 960522
+    capacity_note: 2 places, students must have completed a bereavement awareness session
+  - id: flintrock-urgent-care
+    name: Flintrock Urgent Care Centre
+    contact: Dorrik Firechisel
+    contact_clan: Flint
+    email: ucc.education@flintrock.example
+    phone: 01632 960523
+    capacity_note: 4 places, 12-hour shifts, no first-semester Year 2 students
+  - id: baobab-heights-clinic
+    name: Baobab Heights Private Clinic
+    contact: Serenya Ivoryscroll
+    contact_clan: Baobab
+    email: s.ivoryscroll@baobabheights.example
+    phone: 01632 960524
+    capacity_note: 2 places, confidentiality agreement signed on arrival, smart dress
+  - id: greywater-outpatients
+    name: Greywater Vale Infirmary, Outpatients
+    contact: Agda Frostmantle
+    contact_clan: Granite
+    email: placements@greywater-infirmary.example
+    phone: 01632 960501
+    capacity_note: 6 places, counted within the Infirmary total of 12, Year 1 welcome
+  - id: ashen-reach-school-nursing
+    name: Ashen Reach School Nursing Service
+    contact: Noriel Coalwhisper
+    contact_clan: Ash
+    email: schoolnursing@ashenreach.example
+    phone: 01632 960525
+    capacity_note: 2 places, enhanced clearance, term time only
+  - id: hearthbind-hostel-health
+    name: Hearthbind Hostel Health Outreach
+    contact: Merra Hearthbind
+    contact_clan: Alabaster
+    email: outreach@hearthbind-hostel.example
+    phone: 01632 960526
+    capacity_note: 2 places, students in pairs, evening clinics Tuesday and Thursday
+  - id: palm-coast-ambulance
+    name: Palm Coast Ambulance Station
+    contact: Tivan Breakwave
+    contact_clan: Palm
+    email: station.officer@palmcoast-ambulance.example
+    phone: 01632 960527
+    capacity_note: 1 observer place per semester, Year 2 only, no clinical tasks
+  - id: granite-ridge-prison-healthcare
+    name: Granite Ridge Prison Healthcare
+    contact: Astri Garrisonveil
+    contact_clan: Granite
+    email: healthcare.education@graniteridge.example
+    phone: 01632 960528
+    capacity_note: 2 places, enhanced vetting takes 8 weeks, no phones on site
+  - id: vale-pharmacy-network
+    name: Vale Community Pharmacy Network
+    contact: Jostin Clayreach
+    contact_clan: Sandstone
+    email: training@valepharmacy.example
+    phone: 01632 960529
+    capacity_note: 3 places across 3 branches, Pharmacy priority, Nursing and Care observers only

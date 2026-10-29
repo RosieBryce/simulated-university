@@ -1,0 +1,34 @@
+---
+title: RE Conversion by clan request
+format: eml
+author: quorin-deepmirror
+created: 1053-03-12
+modified: 1053-03-12
+label: Internal
+sensitive: false
+site: planning
+library: pi-requests
+path: ""
+storylines: [admissions]
+skills: [2]
+---
+
+From: quorin-deepmirror
+To: mira-dealroot
+Cc: bruk-coaljaw, teylin-leafchant
+Date: 1053-03-12
+Subject: RE: Quick one!! conversion by clan for 1053 entry
+
+Dear Mira
+
+I have attached conversion by species for the Faculty of Health and Education at the same point in each of the last three cycles. I have not provided it by clan, and I want to explain why rather than just not do it.
+
+Fourteen clans, twelve programmes, a cycle one third complete: most cells would hold fewer than ten applicants, several fewer than five. At that size a single applicant changing their mind moves the rate by ten or twenty points. You would see a pattern, because people always do, and it would not be there.
+
+At species level the numbers are large enough to say something, and what they say is that conversion is down by a similar amount for both. That is consistent with the open day date and with turnaround (which affect everyone) and less consistent with competitor bursaries (which are aimed at particular clans). It does not prove either. Teylin has the interview turnaround request and will have it to you by the 26th; that will help more than the clan cut.
+
+I would be cautious about any of the three explanations being written up as the explanation before then.
+
+Happy to talk it through.
+
+Quorin
