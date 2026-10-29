@@ -1,0 +1,30 @@
+---
+title: Faculty Board minutes 1048-11
+format: docx
+author: brekka-anvildancer
+created: 1048-11-20
+modified: 1048-11-20
+label: null
+sensitive: false
+site: faculty
+library: fac-stoneshare
+path: Faculty Shared/Committees
+storylines: [stoneshare]
+skills: [4]
+---
+
+::: letterhead old
+
+# School of Health and Pedagogy
+
+## Board of the School: minutes, 14 November 1048
+
+Present: the Head of School (chair), heads of department, programme leaders, the School administrator (minutes).
+
+1. Minutes of October: agreed.
+2. Student numbers: up. Noted.
+3. Placements: the Infirmary has asked for names two weeks ahead. Agreed.
+4. New shared drive: the School's network drive (StoneShare) is now available to all staff. Teams are asked to move their material to it and to use sensible folder names. The School administrator will circulate guidance. (Guidance not circulated. B.A., 1052.)
+5. Car parking: raised by the Head of Healing Arts. Referred to Estates.
+6. Any other business: the Christmas lunch.
+7. Next meeting: December.

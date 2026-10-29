@@ -1,0 +1,47 @@
+---
+title: Placement confirmation to student
+format: docx
+author: hesta-gracestone
+created: 1050-09-10
+modified: 1052-01-15
+label: null
+sensitive: false
+site: faculty
+library: fac-stoneshare
+path: Faculty Shared/Hesta stuff/Templates that work
+storylines: [stoneshare, placements]
+skills: [10, 4]
+---
+
+Dear [Forename]
+
+**Your placement: [Provider], [Start date] to [End date]**
+
+Your [semester] placement has been confirmed as follows.
+
+| | |
+|---|---|
+| Provider | [Provider name] |
+| Site | [Address or site name; check if the provider has more than one] |
+| Mentor | [Name, or "to be confirmed on arrival"] |
+| Start | [Date], [time], report to [where] |
+| Shift pattern | [As known] |
+| Provider profile | [Link to the profile in Placements Info for Students] |
+
+Before day one you must have:
+
+1. Occupational health clearance showing "cleared" on the portal (not "pending").
+2. All four mandatory training modules complete.
+3. [Any provider-specific requirement: briefing, form, interview, boots, travel bursary form.]
+
+If any of these is not done, tell us now, not on the day. A student who arrives without clearance is sent home.
+
+If anything about this placement causes you a problem (travel, caring responsibilities, an adjustment that has not been taken into account), reply to this email this week and we will look at it. We cannot always change an allocation, but we can always talk.
+
+Kind regards
+
+[Name]
+Programme Support Team, Nursing and Care
+Extension 4151
+
+*Template. Fields in brackets. Hesta.*

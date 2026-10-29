@@ -18,7 +18,7 @@ forbidden_anywhere:
     "~$" prefix round-trips through zip, explorer URL and a Windows
     extraction. Until that flag is set, those rules must use safe names.
   exception_flag: allow_tilde_dollar_prefix
-  exception_default: false
+  exception_default: true   # proven in phase 1: ~$ and ~WRL names round-trip through Windows zip and extraction
 
 structure:
   no_leading_space: true
@@ -28,11 +28,12 @@ structure:
   no_consecutive_dots: true
   no_consecutive_spaces: true
   max_name_length: 100
-  max_path_length_in_zip: 180
+  max_path_length_in_zip: 160
   note_on_path_length: >
     Windows MAX_PATH is 260 including the drive and the extraction folder.
-    "C:/Users/<name>/Downloads/stonegrove-hub/" can be 50 characters before
-    the zip's own paths begin. 180 leaves room.
+    A OneDrive-redirected Downloads folder can be 80 characters before the
+    zip's own paths begin, and Windows PowerShell's Expand-Archive has no
+    long-path support. 160 keeps 80 + 160 under the limit; tested in phase 3.
 
 case:
   case_insensitive_uniqueness: true
@@ -41,7 +42,7 @@ case:
 extensions:
   exactly_one: true
   lowercase: true
-  allowed: [docx, xlsx, pptx, pdf, txt, csv, vtt, eml, md, png, jpg]
+  allowed: [docx, xlsx, pptx, pdf, txt, csv, vtt, eml, md, png, jpg, tmp]   # tmp only via the tmp_litter mess rule
   not_allowed_and_why:
     dotx: "Rendered as docx; in-world called a template anyway"
     potx: "Rendered as pptx"

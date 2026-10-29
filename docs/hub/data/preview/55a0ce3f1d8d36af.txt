@@ -1,0 +1,21 @@
+::: theme old
+
+# [Presentation title]
+
+School of Health and Pedagogy, Stonegrove College of the Vale
+
+---
+
+# [Section]
+
+- [Point]
+- [Point]
+- [Point]
+
+---
+
+# [Closing]
+
+- Stonegrove College of the Vale
+- School of Health and Pedagogy
+- [Motto]

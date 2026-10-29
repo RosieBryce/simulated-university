@@ -2,7 +2,7 @@
 
 A simulated institutional SharePoint estate for Stonegrove University: a downloadable folder tree of realistic, messy institutional documents, browsed through a SharePoint-style explorer on the public site, for learners to practise using AI safely. The full brief is in [`docs/SHAREPOINT_BRIEF.md`](../docs/SHAREPOINT_BRIEF.md).
 
-**Status: phase 2 (breadth) built. All eight sites have authored content, all seven transcripts exist, and the planted items, planted errors and off-brand files that live outside the StoneShare library are in place. The mess pass and the StoneShare Migration library are phase 3.**
+**Status: phase 3 (mess) built. The estate is 491 files in 216 folders after `make_mess.py`: named version lineages, copies, junk folders, litter, misplaced files, missing labels, and the StoneShare Migration library with its planted items. Extraction tested into an 82-character Windows Downloads path. Phase 4 (Learner Guide, hints, nav link, QA) is next.**
 
 ## Layout
 
@@ -37,7 +37,7 @@ docs/hub/                  the explorer and Learner Guide (phase 1 onwards)
 
 1. **Authored source.** Every document in the estate is a Markdown file with YAML front-matter in `hub/source/`, at the path it will occupy in the estate. Minutes, policies, transcripts and letters are written by hand so they read right. Routine volume (meeting series, forms, provider letters) uses templates.
 2. **Build.** `build_estate.py` reads every source file, renders it to its real format (docx, xlsx, pptx, pdf, txt, csv, vtt, eml), copies in hand-supplied files, and writes `manifest.json` describing every file: path, title, author, modified, label, size, ground truth, lineage, storyline tags, skills, and which mess rule (if any) produced it.
-3. **Mess.** `make_mess.py` applies `mess_rules.yaml` with the build seed: stale versions, copies, junk folders, litter, missing labels. Every derived file is recorded in the manifest with `derived_from` and `mess_rule`. The truth is always recoverable.
+3. **Mess.** `make_mess.py` applies `mess_rules.yaml` with the build seed: stale versions (named lineages such as the seven placement FINALs, plus random sprawl), copies, junk folders, litter (`~WRL` temp files and `~$` lock files, which the linter permits only under those rules), misplaced files, orphaned email attachments, missing labels. Every derived file is recorded in the manifest with `derived_from` and `mess_rule`; altered copies (a dropped paragraph, a broken formula, a missing sheet) carry a `mess_note`. The truth is always recoverable. `--no-mess` skips it. The `filename_dates` rule in the bible is not implemented; dates in names come from the authored files.
 4. **Lint.** `lint_filenames.py` fails the build on any name or path that breaks `filename_rules.yaml`.
 5. **Zip.** `make_zips.py` produces the whole-estate zip and one per site (and per library where the explorer needs it), each with a `README.txt` at the root saying what this is, that it is synthetic, and the licence.
 6. **Explorer.** `docs/hub/index.html` reads `manifest.json` and renders a SharePoint-style explorer with downloads at estate, site, library and folder level, and a hints overlay. `docs/hub/guide.html` is the Learner Guide.
@@ -145,5 +145,5 @@ Use `python`, not the `py` launcher: the scripts' shebang makes `py` pick an int
 | 0 | Bible (this folder) | Done, reviewed |
 | 1 | Vertical slice: Governance complete, one faculty library, T3, build + lint + manifest, explorer, whole-estate zip, Windows extraction test, extracts wired into pipeline | Done. Extraction tested into an 81-character Downloads path; `~$` and `~WRL` names round-trip through Windows zip. |
 | 2 | Breadth: all sites, all transcripts, storylines threaded, additional-skill seeds, Communications with placeholders, off-brand plantings | Done. 244 files before mess; generators for provider letters, the placement workbook, the applicant tracker and exam board marks tables. |
-| 3 | Mess and sensitivity pass; StoneShare library; planted items and errors recorded | |
+| 3 | Mess and sensitivity pass; StoneShare library; planted items and errors recorded | Done. 226 derived files from 265 authored or generated; every derived file carries `derived_from` and `mess_rule` in the manifest. Path limit tightened to 160 after Windows PowerShell failed at 177. |
 | 4 | Learner Guide, hints overlay, per-site and folder downloads, nav link, CLAUDE.md and README updates, slop pass, QA by attempting every skill | |

@@ -150,3 +150,5 @@ data/archive/
 !hub/build/
 !docs/hub/downloads/
 hub/output/
+!docs/hub/estate/**/*.tmp
+!docs/hub/estate/**/~$*

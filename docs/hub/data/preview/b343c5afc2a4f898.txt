@@ -1,0 +1,24 @@
+::: letterhead old
+
+[Date]
+
+[Provider contact name]
+[Provider]
+
+Dear [Name]
+
+**Occupational health clearance: [Student initials], [Programme], placement from [Date]**
+
+I am writing to confirm that the above student has been cleared by the University's Occupational Health Service for placement in a care setting, with effect from [Date of clearance]. The clearance is [without restriction / with the following restrictions, which have been communicated to the student and to the placement mentor through the adjustments process: ...].
+
+This letter is provided at your request in place of the University's online clearance indicator. It contains no health information about the student beyond the fact of clearance, and should be retained only for the duration of the placement.
+
+If you require anything further before the student starts, please contact me directly.
+
+Kind regards
+
+Hesta Gracestone
+Programme Administrator, Nursing and Care
+Extension 4151 | hesta.gracestone@stonegrove.ac.example
+
+*Hesta's note: Hollowpick want this instead of the portal flag. Send the day clearance shows. Never put the reason for a restriction in the letter. Fill in the fields and delete this line.*

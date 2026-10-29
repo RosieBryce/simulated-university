@@ -138,7 +138,7 @@ rules:
     applies_to: [fac-stoneshare]
     params:
       chain: "Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc/Hrogar"
-      leaf_file: "memo re car parking 1049.docx"
+      leaf_file: "parking memo.docx"
 
   - id: empty_folders
     description: Empty folders scattered.

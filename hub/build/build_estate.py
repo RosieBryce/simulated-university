@@ -168,7 +168,7 @@ class Builder:
 
         self.collect_folders()
         if self.do_lint:
-            rules = Rules()
+            rules = Rules(allow_tilde_dollar_prefix=self.apply_mess)
             problems = lint_tree(OUT, rules)
             if problems:
                 print(f"lint_filenames: {len(problems)} problem(s)")

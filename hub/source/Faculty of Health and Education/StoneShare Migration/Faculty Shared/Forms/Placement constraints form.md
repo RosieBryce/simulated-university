@@ -1,0 +1,35 @@
+---
+title: Placement constraints form
+format: docx
+author: hesta-gracestone
+created: 1050-08-01
+modified: 1051-08-01
+label: null
+sensitive: false
+site: faculty
+library: fac-stoneshare
+path: Faculty Shared/Forms
+storylines: [stoneshare, placements]
+skills: [3, 4]
+---
+
+::: letterhead old
+
+# Placement constraints form
+
+Nursing and Care. Return to the Programme Support Team by the end of week 2. We use this to allocate your placements. If you do not return it we will assume you have no constraints.
+
+| | |
+|---|---|
+| Name | |
+| Student ID | |
+| Year | |
+| Home area (town or district) | |
+| Do you have access to transport? | Yes / No |
+| Caring responsibilities that affect shift patterns? (You need not say what) | Yes / No. If yes, which days or times are difficult: |
+| Any provider where you have a conflict of interest (a relative works there, you have been a patient there)? | |
+| Anything else we should know when allocating? | |
+
+Health and disability information does not go on this form. If you have, or think you may need, adjustments, contact Student Wellbeing (extension 2300), who will agree a plan with you and tell us what we need to know.
+
+*Hesta's note: about a third of students return this. The ones who do get better placements, which is not fair and is why it should be a required field in whatever replaces the spreadsheet.*
