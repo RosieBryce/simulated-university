@@ -48,16 +48,11 @@ files:
     placeholder: Generated specimen of Playfair Display and Source Sans 3 (fonts already used by docs/).
 
   # ------------------------------------------------------------ the guide
-  - path: "Communications/Brand/Brand Guide/Brand Guide 1051 v2.1.pdf"
-    kind: document
-    placeholder: >
-      The build renders a full draft brand guide from off_brand.yaml rules
-      (sections: who we are, our name, our logo, colour, type, voice,
-      templates, never do this, appendix A official names). Authored
-      in-world by Sorell. Rosie may replace with her own.
   - path: "Communications/Brand/Brand Guide/Brand Guide 1051 v2.1.docx"
     kind: document
-    placeholder: Editable version of the same.
+    placeholder: >
+      Authored in-world by Sorell as a Markdown source (phase 2), rendered to
+      docx by the build. Rosie may replace the rendered file or edit the source.
   - path: "Communications/Brand/Brand Guide/Brand quick reference.pdf"
     kind: document
     placeholder: One page. Logo, palette, type, the five never-dos.

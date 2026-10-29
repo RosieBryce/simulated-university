@@ -2,7 +2,7 @@
 
 A simulated institutional SharePoint estate for Stonegrove University: a downloadable folder tree of realistic, messy institutional documents, browsed through a SharePoint-style explorer on the public site, for learners to practise using AI safely. The full brief is in [`docs/SHAREPOINT_BRIEF.md`](../docs/SHAREPOINT_BRIEF.md).
 
-**Status: phase 1 (vertical slice) built. Governance and Secretariat and the Teaching Nursing and Care library are authored; the build, linter, manifest, explorer and downloads work end to end. Other sites are empty skeletons until phase 2.**
+**Status: phase 2 (breadth) built. All eight sites have authored content, all seven transcripts exist, and the planted items, planted errors and off-brand files that live outside the StoneShare library are in place. The mess pass and the StoneShare Migration library are phase 3.**
 
 ## Layout
 
@@ -144,6 +144,6 @@ Use `python`, not the `py` launcher: the scripts' shebang makes `py` pick an int
 |---|---|---|
 | 0 | Bible (this folder) | Done, reviewed |
 | 1 | Vertical slice: Governance complete, one faculty library, T3, build + lint + manifest, explorer, whole-estate zip, Windows extraction test, extracts wired into pipeline | Done. Extraction tested into an 81-character Downloads path; `~$` and `~WRL` names round-trip through Windows zip. |
-| 2 | Breadth: all sites, all transcripts, storylines threaded, additional-skill seeds, Communications with placeholders, off-brand plantings | |
+| 2 | Breadth: all sites, all transcripts, storylines threaded, additional-skill seeds, Communications with placeholders, off-brand plantings | Done. 244 files before mess; generators for provider letters, the placement workbook, the applicant tracker and exam board marks tables. |
 | 3 | Mess and sensitivity pass; StoneShare library; planted items and errors recorded | |
 | 4 | Learner Guide, hints overlay, per-site and folder downloads, nav link, CLAUDE.md and README updates, slop pass, QA by attempting every skill | |
