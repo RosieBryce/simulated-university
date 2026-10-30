@@ -24,7 +24,7 @@ python run_longitudinal_pipeline.py
 
 Runs the full longitudinal simulation: 7 academic years (1046-47 to 1052-53), 5,000 new students per year. Re-enrols continuing students each year based on prior-year progression outcomes. Automatically calls `build_relational_outputs.py` at the end.
 
-**Runtime: ~30–45 minutes** (dominated by engagement and assessment generation across ~89,000 student-years).
+**Runtime: ~2.5 hours** (dominated by engagement and assessment generation across ~87,500 student-years).
 
 After the pipeline, regenerate the site summary CSVs:
 
@@ -33,10 +33,16 @@ python scripts/aggregate_gap.py
 python scripts/aggregate_engagement.py
 ```
 
-Validate outputs:
+Validate outputs (section 0 holds hard integrity checks and the script exits 1 if any fail, e.g. students enrolled with no assessment rows, or programmes with no Year 3 or no graduates; the range checks after it only warn). Pass a folder as the first argument to validate somewhere other than `data/relational/`:
 
 ```bash
 python metaanalysis/validate_outputs.py
+```
+
+Before any run, check the curriculum spreadsheet and module config are consistent (every programme must have modules in Years 1 to 3; a mismatched programme code strands students with no modules):
+
+```bash
+python scripts/validate_curriculum.py
 ```
 
 ---
@@ -53,21 +59,21 @@ The pipeline writes raw outputs to `data/` and clean relational tables to `data/
 |------|-------------|------|
 | `dim_students.csv` | Species, clan, gender, age, education, SES, disability status, `first_gen`. One row per student. | ~35,000 |
 | `dim_programmes.csv` | 55 programmes across 5 faculties: name, faculty, department. | 55 |
-| `dim_modules.csv` | 333 modules: title, programme, year, semester, assessment type. | 333 |
+| `dim_modules.csv` | 642 modules: title, programme, year, semester, assessment type. | 642 |
 | `dim_academic_years.csv` | Academic year calendar with semester and assessment dates. | 7 |
 
 ### Facts (one row per event)
 
 | File | Description | Rows |
 |------|-------------|------|
-| `fact_enrollment.csv` | Programme, year of study, module allocation, enrolment status. | ~89,000 |
-| `fact_weekly_engagement_YYYY-YY.csv` | Attendance, participation, academic/social engagement, VLE metrics. One file per academic year. | ~400,000/yr |
-| `fact_assessment.csv` | MIDTERM and FINAL component marks per module per student, with assessment date and weight (50/50). | ~468,000 |
-| `fact_progression.csv` | Year outcome, modules passed, avg mark, next-year status. | ~58,000 |
-| `fact_enrolment_survey.csv` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response. | ~89,000 |
-| `fact_good_honours.csv` | Final degree classification and weighted average mark for every graduate. | ~6,100 |
-| `fact_graduate_outcomes.csv` | Post-graduation survey: employment, salary band, professional level. ~70% response rate. | ~6,100 |
-| `fact_nss_responses.csv` | NSS-style satisfaction scores for all Yr3 students. ~68% response rate. | ~23,000 |
+| `fact_enrollment.csv` | Programme, year of study, module allocation, enrolment status. | ~87,500 |
+| `fact_weekly_engagement_YYYY-YY.csv` | Attendance, participation, academic/social engagement, VLE metrics. One file per academic year. | ~700,000/yr (240,000 in the first year) |
+| `fact_assessment.csv` | MIDTERM and FINAL component marks per module per student, with assessment date and weight (40/60). | ~700,000 |
+| `fact_progression.csv` | Year outcome, modules passed, avg mark, next-year status. | ~87,500 |
+| `fact_enrolment_survey.csv` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response. | ~87,500 |
+| `fact_good_honours.csv` | Final degree classification and weighted average mark for every graduate. | ~20,500 |
+| `fact_graduate_outcomes.csv` | Post-graduation survey: employment, salary band, professional level. ~70% response rate. | ~20,500 |
+| `fact_nss_responses.csv` | NSS-style satisfaction scores for all Yr3 students. ~68% response rate. | ~22,900 |
 
 Full column definitions: `docs/SCHEMA.md`
 
@@ -136,7 +142,7 @@ nss_respondents.groupby(nss_respondents["academic_year"])["overall_satisfaction"
 
 ## Key Design Decisions
 
-- **No direct species/clan modifier on marks.** The ~18pp Elf–Dwarf good degree gap emerges from SES, prior education, disability and first-generation distributions only.
+- **No direct species/clan modifier on marks.** The ~23pp Elf–Dwarf good degree gap emerges from SES, prior education, disability and first-generation distributions only.
 - **Gender gap is flat by design.**
 - **first_gen** — first-generation student flag (34.2% of cohort; 40.7% of Dwarves vs 24.4% of Elves). Drives enrolment survey self-efficacy, a mark penalty concentrated in the transition year (−2.4 marks in Y1, −0.6 in Y2, none by Y3), and lower continuation in the progression model. Sampled from SES rank, so it overlaps with the SES gradient by design.
 - **Assessment marks are not pre-combined.** `fact_assessment` gives you the raw MIDTERM and FINAL marks (equal weight); computing a module average is part of the analysis task.
@@ -163,4 +169,4 @@ Running with the same seed produces the same dataset. Metadata (seed, git commit
 - **New student trait**: add a `sample_*` function in `student_generation_pipeline.py` and add to the student dict. Wire into downstream systems as needed (see `docs/BACKLOG.md` for the `first_gen` example).
 - **New config**: YAML for hierarchical data (personality ranges, progression rules), CSV for tabular data (programme/module characteristics).
 - **New fact table**: create a new system class with a `generate_*` method, wire into `run_year()` in `run_longitudinal_pipeline.py`, add a `build_fact_*` function in `build_relational_outputs.py`.
-- **Curriculum changes**: edit `curriculum-and-lore/Stonegrove_University_Curriculum.xlsx` (canonical source), regenerate `config/programme_characteristics.csv` and `config/module_characteristics.csv`, re-run the pipeline.
+- **Curriculum changes**: edit `curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx` (canonical source), regenerate `config/programme_characteristics.csv` and `config/module_characteristics.csv`, then run `python scripts/validate_curriculum.py` before re-running the pipeline. The `Programme code` column of the Modules sheet must match the programme named on each row; Excel's fill handle auto-increments codes like `4_1_1` and will silently break it (see `docs/BACKLOG.md`).

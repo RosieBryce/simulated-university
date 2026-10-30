@@ -239,423 +239,423 @@ module_code,module_title,programme_code,programme_name,year,level,semester,final
 632202,Dissertation,3_2_2,History,3,6,1,1.0,Written coursework,0.88,0.8594,0.54,0.71,0.46,0.38,0.95,0.76
 632203,Public History,3_2_2,History,3,6,2,,Viva,0.76,0.9038,0.65,0.79,0.21,0.55,0.68,0.66
 632204,Global Historical Perspectives,3_2_2,History,3,6,2,,Written exam,0.63,0.9519,0.69,0.72,0.46,0.74,0.61,0.72
-533502,Writing Systems & Runes,3_3_10,Multispecies Linguistics,2,5,1,,Presentation,0.71,0.9223,0.78,0.68,0.63,0.75,0.65,0.66
-533304,Culture & Society,3_3_10,Languages and Literature,2,5,2,,Written exam,0.51,0.9963,0.58,0.76,0.21,0.45,0.57,0.48
-533503,Sociolinguistics of Mixed-Species Societies,3_3_11,Multispecies Linguistics,2,5,2,,Written exam,0.55,0.9815,0.69,0.82,0.18,0.62,0.53,0.51
-633301,Advanced Language Skills,3_3_11,Languages and Literature,3,6,1,,Professional artefact,0.75,0.9075,0.55,0.74,0.74,0.55,0.75,0.69
-533504,Field Methods in Multispecies Linguistics,3_3_12,Multispecies Linguistics,2,5,2,,Presentation,0.57,0.9741,0.91,0.7,0.65,0.53,0.49,0.51
-633302,Dissertation / Research Project,3_3_12,Languages and Literature,3,6,1,1.0,Written coursework,0.95,0.8335,0.79,0.63,0.54,0.38,0.95,0.76
-633501,Advanced Translation & Interpretation,3_3_13,Multispecies Linguistics,3,6,1,,Presentation,0.75,0.9075,0.8,0.72,0.46,0.8,0.68,0.76
-633303,Comparative Literature,3_3_13,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.73,0.78,0.2,0.73,0.79,0.75
-633502,Language Contact & Hybridisation,3_3_14,Multispecies Linguistics,3,6,1,,Presentation,0.68,0.9334,0.91,0.81,0.18,0.52,0.62,0.63
-633304,Contemporary Literature & Criticism,3_3_14,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.62,0.83,0.1,0.61,0.75,0.68
-633503,Endangered & Ancient Languages,3_3_15,Multispecies Linguistics,3,6,2,,Written coursework,0.66,0.9408,0.6,0.83,0.1,0.65,0.71,0.66
-633504,Dissertation / Field Research Project,3_3_16,Multispecies Linguistics,3,6,2,1.0,Written coursework,0.91,0.8483,0.76,0.73,0.45,0.38,0.95,0.75
+533502,Writing Systems & Runes,3_3_5,Multispecies Linguistics,2,5,1,,Presentation,0.71,0.9223,0.78,0.68,0.63,0.75,0.65,0.66
+533304,Culture & Society,3_3_3,Languages and Literature,2,5,2,,Written exam,0.51,0.9963,0.58,0.76,0.21,0.45,0.57,0.48
+533503,Sociolinguistics of Mixed-Species Societies,3_3_5,Multispecies Linguistics,2,5,2,,Written exam,0.55,0.9815,0.69,0.82,0.18,0.62,0.53,0.51
+633301,Advanced Language Skills,3_3_3,Languages and Literature,3,6,1,,Professional artefact,0.75,0.9075,0.55,0.74,0.74,0.55,0.75,0.69
+533504,Field Methods in Multispecies Linguistics,3_3_5,Multispecies Linguistics,2,5,2,,Presentation,0.57,0.9741,0.91,0.7,0.65,0.53,0.49,0.51
+633302,Dissertation / Research Project,3_3_3,Languages and Literature,3,6,1,1.0,Written coursework,0.95,0.8335,0.79,0.63,0.54,0.38,0.95,0.76
+633501,Advanced Translation & Interpretation,3_3_5,Multispecies Linguistics,3,6,1,,Presentation,0.75,0.9075,0.8,0.72,0.46,0.8,0.68,0.76
+633303,Comparative Literature,3_3_3,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.73,0.78,0.2,0.73,0.79,0.75
+633502,Language Contact & Hybridisation,3_3_5,Multispecies Linguistics,3,6,1,,Presentation,0.68,0.9334,0.91,0.81,0.18,0.52,0.62,0.63
+633304,Contemporary Literature & Criticism,3_3_3,Languages and Literature,3,6,2,,Viva,0.78,0.8964,0.62,0.83,0.1,0.61,0.75,0.68
+633503,Endangered & Ancient Languages,3_3_5,Multispecies Linguistics,3,6,2,,Written coursework,0.66,0.9408,0.6,0.83,0.1,0.65,0.71,0.66
+633504,Dissertation / Field Research Project,3_3_5,Multispecies Linguistics,3,6,2,1.0,Written coursework,0.91,0.8483,0.76,0.73,0.45,0.38,0.95,0.75
 433301,Language Skills I,3_3_3,Languages and Literature,1,4,1,,Written coursework,0.33,1.0255,0.74,0.66,0.63,0.51,0.23,0.24
-433302,Introduction to Literature,3_3_4,Languages and Literature,1,4,1,,Written exam,0.38,1.018,0.38,0.71,0.19,0.6,0.23,0.29
+433302,Introduction to Literature,3_3_3,Languages and Literature,1,4,1,,Written exam,0.38,1.018,0.38,0.71,0.19,0.6,0.23,0.29
 433501,Introduction to Multispecies Communication,3_3_5,Multispecies Linguistics,1,4,1,,Groupwork,0.4,1.015,1.0,0.7,0.55,0.86,0.21,0.44
-433303,Grammar & Linguistics,3_3_5,Languages and Literature,1,4,2,,Written exam,0.23,1.0405,0.38,0.72,0.32,0.7,0.24,0.25
-433502,Foundations of Linguistics,3_3_6,Multispecies Linguistics,1,4,1,,Multi-choice exam,0.45,1.0075,0.65,0.66,0.35,0.54,0.43,0.41
-433304,Cultural Studies,3_3_6,Languages and Literature,1,4,2,,Written exam,0.31,1.0285,0.57,0.76,0.26,0.53,0.29,0.27
-433503,Phonetics & Phonology Across Species,3_3_7,Multispecies Linguistics,1,4,2,,Written coursework,0.38,1.018,0.74,0.82,0.36,0.77,0.4,0.43
-533301,Language Skills II,3_3_7,Languages and Literature,2,5,1,,Practical exam,0.55,0.9815,0.7,0.67,0.81,0.55,0.54,0.48
-433504,"Language, Culture & Society",3_3_8,Multispecies Linguistics,1,4,2,,Written exam,0.25,1.0375,0.62,0.79,0.33,0.5,0.15,0.23
-533302,Literary Analysis,3_3_8,Languages and Literature,2,5,1,,Written exam,0.51,0.9963,0.61,0.72,0.1,0.63,0.48,0.46
-533501,"Comparative Grammar (Elvish, Dwarvish & Common Tongue)",3_3_9,Multispecies Linguistics,2,5,1,,Groupwork,0.56,0.9778,0.79,0.75,0.38,0.85,0.64,0.6
-533303,Translation Studies,3_3_9,Languages and Literature,2,5,2,,Written exam,0.42,1.012,0.56,0.82,0.18,0.54,0.42,0.34
-434704,Ethics in Everyday Life,3_4_10,Philosophy of Religion and Ethics,1,4,2,,Written coursework,0.44,1.009,0.7,0.73,0.24,0.66,0.41,0.39
-434803,Oral Traditions,3_4_10,Ritual and Recollection,1,4,2,,Written coursework,0.22,1.042,0.74,0.72,0.47,0.82,0.27,0.25
-534601,Courtly & Civic Ceremonies,3_4_10,Ceremonies,2,5,1,,Written coursework,0.6,0.963,0.7,0.71,0.47,0.64,0.55,0.52
-434804,Material Culture & Memory,3_4_11,Ritual and Recollection,1,4,2,,Written coursework,0.42,1.012,0.71,0.84,0.15,0.68,0.2,0.33
-534602,Funerary & Ancestral Rites,3_4_11,Ceremonies,2,5,1,,Groupwork,0.41,1.0135,0.88,0.73,0.45,0.88,0.44,0.4
-534701,Metaphysics of the Divine,3_4_11,Philosophy of Religion and Ethics,2,5,1,,Multi-choice exam,0.57,0.9741,0.73,0.63,0.5,0.84,0.45,0.61
-534702,Comparative Religious Thought,3_4_12,Philosophy of Religion and Ethics,2,5,1,,Written coursework,0.48,1.003,0.75,0.76,0.51,0.72,0.46,0.47
-534801,Collective Memory & Identity,3_4_12,Ritual and Recollection,2,5,1,,Written exam,0.53,0.9889,0.63,0.77,0.11,0.61,0.48,0.57
-534603,Performance & Procession Design,3_4_12,Ceremonies,2,5,2,,Written coursework,0.53,0.9889,0.77,0.58,0.59,0.82,0.64,0.53
-534802,"Archives, Artefacts & Ruins",3_4_13,Ritual and Recollection,2,5,1,,Written exam,0.54,0.9852,0.62,0.8,0.37,0.67,0.55,0.5
-534604,Intercultural Ceremonial Exchange,3_4_13,Ceremonies,2,5,2,,Presentation,0.57,0.9741,0.76,0.73,0.47,0.79,0.45,0.53
-534703,Applied Ethics,3_4_13,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.49,1.0015,0.62,0.85,0.14,0.69,0.42,0.46
-534704,Philosophy of Mind & Soul,3_4_14,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.56,0.9778,0.65,0.76,0.25,0.64,0.45,0.48
-534803,Commemoration & Memorialisation,3_4_14,Ritual and Recollection,2,5,2,,Groupwork,0.7,0.926,0.77,0.75,0.54,0.87,0.59,0.66
-634601,Grand Ceremony Design Project,3_4_14,Ceremonies,3,6,1,1.0,Professional artefact,0.95,0.8335,0.61,0.73,0.48,0.38,0.95,0.83
-534804,Ritual Performance,3_4_15,Ritual and Recollection,2,5,2,,Written exam,0.53,0.9889,0.48,0.76,0.28,0.53,0.35,0.49
-634602,Diplomacy & Protocol,3_4_15,Ceremonies,3,6,1,,Presentation,0.57,0.9741,0.76,0.72,0.65,0.75,0.61,0.64
-634701,Advanced Topics in Philosophy of Religion,3_4_15,Philosophy of Religion and Ethics,3,6,1,,Viva,0.78,0.8964,0.56,0.73,0.29,0.55,0.76,0.67
-634702,Political & Social Ethics,3_4_16,Philosophy of Religion and Ethics,3,6,1,,Viva,0.8,0.889,0.66,0.77,0.13,0.57,0.74,0.73
-634801,Advanced Studies in Memory & Ritual,3_4_16,Ritual and Recollection,3,6,1,,Written coursework,0.66,0.9408,0.57,0.72,0.31,0.68,0.62,0.68
-634603,"Crisis, Mourning & Renewal Rituals",3_4_16,Ceremonies,3,6,2,,Written coursework,0.72,0.9186,0.73,0.74,0.22,0.7,0.58,0.75
-634802,"Trauma, Loss & Remembrance",3_4_17,Ritual and Recollection,3,6,1,,Presentation,0.77,0.9001,0.8,0.73,0.53,0.77,0.71,0.71
-634604,Living Traditions & Reinvention,3_4_17,Ceremonies,3,6,2,,Groupwork,0.71,0.9223,0.78,0.75,0.52,0.88,0.72,0.82
-634703,Philosophy of Death & Afterlife,3_4_17,Philosophy of Religion and Ethics,3,6,2,,Written coursework,0.68,0.9334,0.53,0.84,0.15,0.58,0.84,0.66
-634704,Dissertation,3_4_18,Philosophy of Religion and Ethics,3,6,2,1.0,Written coursework,0.81,0.8853,0.57,0.71,0.43,0.38,0.82,0.67
-634803,Living Archives & Heritage,3_4_18,Ritual and Recollection,3,6,2,,Viva,0.78,0.8964,0.69,0.81,0.47,0.75,0.7,0.71
-634804,Major Project / Fieldwork,3_4_19,Ritual and Recollection,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.86,0.37,0.38,0.95,0.86
+433303,Grammar & Linguistics,3_3_3,Languages and Literature,1,4,2,,Written exam,0.23,1.0405,0.38,0.72,0.32,0.7,0.24,0.25
+433502,Foundations of Linguistics,3_3_5,Multispecies Linguistics,1,4,1,,Multi-choice exam,0.45,1.0075,0.65,0.66,0.35,0.54,0.43,0.41
+433304,Cultural Studies,3_3_3,Languages and Literature,1,4,2,,Written exam,0.31,1.0285,0.57,0.76,0.26,0.53,0.29,0.27
+433503,Phonetics & Phonology Across Species,3_3_5,Multispecies Linguistics,1,4,2,,Written coursework,0.38,1.018,0.74,0.82,0.36,0.77,0.4,0.43
+533301,Language Skills II,3_3_3,Languages and Literature,2,5,1,,Practical exam,0.55,0.9815,0.7,0.67,0.81,0.55,0.54,0.48
+433504,"Language, Culture & Society",3_3_5,Multispecies Linguistics,1,4,2,,Written exam,0.25,1.0375,0.62,0.79,0.33,0.5,0.15,0.23
+533302,Literary Analysis,3_3_3,Languages and Literature,2,5,1,,Written exam,0.51,0.9963,0.61,0.72,0.1,0.63,0.48,0.46
+533501,"Comparative Grammar (Elvish, Dwarvish & Common Tongue)",3_3_5,Multispecies Linguistics,2,5,1,,Groupwork,0.56,0.9778,0.79,0.75,0.38,0.85,0.64,0.6
+533303,Translation Studies,3_3_3,Languages and Literature,2,5,2,,Written exam,0.42,1.012,0.56,0.82,0.18,0.54,0.42,0.34
+434704,Ethics in Everyday Life,3_4_7,Philosophy of Religion and Ethics,1,4,2,,Written coursework,0.44,1.009,0.7,0.73,0.24,0.66,0.41,0.39
+434803,Oral Traditions,3_4_8,Ritual and Recollection,1,4,2,,Written coursework,0.22,1.042,0.74,0.72,0.47,0.82,0.27,0.25
+534601,Courtly & Civic Ceremonies,3_4_6,Ceremonies,2,5,1,,Written coursework,0.6,0.963,0.7,0.71,0.47,0.64,0.55,0.52
+434804,Material Culture & Memory,3_4_8,Ritual and Recollection,1,4,2,,Written coursework,0.42,1.012,0.71,0.84,0.15,0.68,0.2,0.33
+534602,Funerary & Ancestral Rites,3_4_6,Ceremonies,2,5,1,,Groupwork,0.41,1.0135,0.88,0.73,0.45,0.88,0.44,0.4
+534701,Metaphysics of the Divine,3_4_7,Philosophy of Religion and Ethics,2,5,1,,Multi-choice exam,0.57,0.9741,0.73,0.63,0.5,0.84,0.45,0.61
+534702,Comparative Religious Thought,3_4_7,Philosophy of Religion and Ethics,2,5,1,,Written coursework,0.48,1.003,0.75,0.76,0.51,0.72,0.46,0.47
+534801,Collective Memory & Identity,3_4_8,Ritual and Recollection,2,5,1,,Written exam,0.53,0.9889,0.63,0.77,0.11,0.61,0.48,0.57
+534603,Performance & Procession Design,3_4_6,Ceremonies,2,5,2,,Written coursework,0.53,0.9889,0.77,0.58,0.59,0.82,0.64,0.53
+534802,"Archives, Artefacts & Ruins",3_4_8,Ritual and Recollection,2,5,1,,Written exam,0.54,0.9852,0.62,0.8,0.37,0.67,0.55,0.5
+534604,Intercultural Ceremonial Exchange,3_4_6,Ceremonies,2,5,2,,Presentation,0.57,0.9741,0.76,0.73,0.47,0.79,0.45,0.53
+534703,Applied Ethics,3_4_7,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.49,1.0015,0.62,0.85,0.14,0.69,0.42,0.46
+534704,Philosophy of Mind & Soul,3_4_7,Philosophy of Religion and Ethics,2,5,2,,Written exam,0.56,0.9778,0.65,0.76,0.25,0.64,0.45,0.48
+534803,Commemoration & Memorialisation,3_4_8,Ritual and Recollection,2,5,2,,Groupwork,0.7,0.926,0.77,0.75,0.54,0.87,0.59,0.66
+634601,Grand Ceremony Design Project,3_4_6,Ceremonies,3,6,1,1.0,Professional artefact,0.95,0.8335,0.61,0.73,0.48,0.38,0.95,0.83
+534804,Ritual Performance,3_4_8,Ritual and Recollection,2,5,2,,Written exam,0.53,0.9889,0.48,0.76,0.28,0.53,0.35,0.49
+634602,Diplomacy & Protocol,3_4_6,Ceremonies,3,6,1,,Presentation,0.57,0.9741,0.76,0.72,0.65,0.75,0.61,0.64
+634701,Advanced Topics in Philosophy of Religion,3_4_7,Philosophy of Religion and Ethics,3,6,1,,Viva,0.78,0.8964,0.56,0.73,0.29,0.55,0.76,0.67
+634702,Political & Social Ethics,3_4_7,Philosophy of Religion and Ethics,3,6,1,,Viva,0.8,0.889,0.66,0.77,0.13,0.57,0.74,0.73
+634801,Advanced Studies in Memory & Ritual,3_4_8,Ritual and Recollection,3,6,1,,Written coursework,0.66,0.9408,0.57,0.72,0.31,0.68,0.62,0.68
+634603,"Crisis, Mourning & Renewal Rituals",3_4_6,Ceremonies,3,6,2,,Written coursework,0.72,0.9186,0.73,0.74,0.22,0.7,0.58,0.75
+634802,"Trauma, Loss & Remembrance",3_4_8,Ritual and Recollection,3,6,1,,Presentation,0.77,0.9001,0.8,0.73,0.53,0.77,0.71,0.71
+634604,Living Traditions & Reinvention,3_4_6,Ceremonies,3,6,2,,Groupwork,0.71,0.9223,0.78,0.75,0.52,0.88,0.72,0.82
+634703,Philosophy of Death & Afterlife,3_4_7,Philosophy of Religion and Ethics,3,6,2,,Written coursework,0.68,0.9334,0.53,0.84,0.15,0.58,0.84,0.66
+634704,Dissertation,3_4_7,Philosophy of Religion and Ethics,3,6,2,1.0,Written coursework,0.81,0.8853,0.57,0.71,0.43,0.38,0.82,0.67
+634803,Living Archives & Heritage,3_4_8,Ritual and Recollection,3,6,2,,Viva,0.78,0.8964,0.69,0.81,0.47,0.75,0.7,0.71
+634804,Major Project / Fieldwork,3_4_8,Ritual and Recollection,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.86,0.37,0.38,0.95,0.86
 434601,Introduction to Ceremonial Practice,3_4_6,Ceremonies,1,4,1,,Groupwork,0.36,1.021,0.97,0.69,0.64,0.93,0.3,0.43
-434602,"Symbols, Dress & Pageantry",3_4_7,Ceremonies,1,4,1,,Written coursework,0.17,1.0495,0.73,0.67,0.55,0.8,0.22,0.25
+434602,"Symbols, Dress & Pageantry",3_4_6,Ceremonies,1,4,1,,Written coursework,0.17,1.0495,0.73,0.67,0.55,0.8,0.22,0.25
 434701,Introduction to Philosophy of Religion,3_4_7,Philosophy of Religion and Ethics,1,4,1,,Written exam,0.23,1.0405,0.56,0.83,0.24,0.47,0.38,0.24
-434702,Moral Philosophy,3_4_8,Philosophy of Religion and Ethics,1,4,1,,Written coursework,0.44,1.009,0.7,0.72,0.23,0.6,0.4,0.31
+434702,Moral Philosophy,3_4_7,Philosophy of Religion and Ethics,1,4,1,,Written coursework,0.44,1.009,0.7,0.72,0.23,0.6,0.4,0.31
 434801,"Memory, Myth & Storytelling",3_4_8,Ritual and Recollection,1,4,1,,Written exam,0.42,1.012,0.63,0.75,0.19,0.61,0.45,0.38
-434603,"Calendars, Seasons & Festivals",3_4_8,Ceremonies,1,4,2,,Written coursework,0.23,1.0405,0.74,0.7,0.49,0.74,0.19,0.27
-434802,Introduction to Ritual Practice,3_4_9,Ritual and Recollection,1,4,1,,Written exam,0.33,1.0255,0.54,0.75,0.22,0.61,0.28,0.34
-434604,Ritual Spaces & Sacred Architecture,3_4_9,Ceremonies,1,4,2,,Written exam,0.47,1.0045,0.62,0.77,0.14,0.66,0.43,0.37
-434703,"Myth, Belief & Reason",3_4_9,Philosophy of Religion and Ethics,1,4,2,,Presentation,0.38,1.018,0.78,0.72,0.46,0.8,0.47,0.45
-435902,Communication & Mediation Skills,3_5_10,Conflict Transformation,1,4,1,,Professional artefact,0.43,1.0105,0.57,0.73,0.65,0.54,0.42,0.37
+434603,"Calendars, Seasons & Festivals",3_4_6,Ceremonies,1,4,2,,Written coursework,0.23,1.0405,0.74,0.7,0.49,0.74,0.19,0.27
+434802,Introduction to Ritual Practice,3_4_8,Ritual and Recollection,1,4,1,,Written exam,0.33,1.0255,0.54,0.75,0.22,0.61,0.28,0.34
+434604,Ritual Spaces & Sacred Architecture,3_4_6,Ceremonies,1,4,2,,Written exam,0.47,1.0045,0.62,0.77,0.14,0.66,0.43,0.37
+434703,"Myth, Belief & Reason",3_4_7,Philosophy of Religion and Ethics,1,4,2,,Presentation,0.38,1.018,0.78,0.72,0.46,0.8,0.47,0.45
+435902,Communication & Mediation Skills,3_5_9,Conflict Transformation,1,4,1,,Professional artefact,0.43,1.0105,0.57,0.73,0.65,0.54,0.42,0.37
 4351001,Principles of Economics,3_5_10,Economics,1,4,1,,Written exam,0.38,1.018,0.65,0.76,0.19,0.6,0.41,0.33
-4351002,"Markets, Trade & Resources",3_5_11,Economics,1,4,1,,Written coursework,0.33,1.0255,0.69,0.77,0.57,0.82,0.32,0.35
+4351002,"Markets, Trade & Resources",3_5_10,Economics,1,4,1,,Written coursework,0.33,1.0255,0.69,0.77,0.57,0.82,0.32,0.35
 4351101,Foundations of Elven Moral Thought,3_5_11,Elven Ethics in Modern Governance,1,4,1,,Written coursework,0.35,1.0225,0.61,0.65,0.61,0.76,0.4,0.48
-435903,"Power, Identity & Society",3_5_11,Conflict Transformation,1,4,2,,Written exam,0.35,1.0225,0.61,0.68,0.25,0.62,0.25,0.32
-4351102,Governance Traditions of the Forest Realms,3_5_12,Elven Ethics in Modern Governance,1,4,1,,Written exam,0.42,1.012,0.61,0.83,0.11,0.54,0.48,0.41
+435903,"Power, Identity & Society",3_5_9,Conflict Transformation,1,4,2,,Written exam,0.35,1.0225,0.61,0.68,0.25,0.62,0.25,0.32
+4351102,Governance Traditions of the Forest Realms,3_5_11,Elven Ethics in Modern Governance,1,4,1,,Written exam,0.42,1.012,0.61,0.83,0.11,0.54,0.48,0.41
 4351201,"Stories, Myths & Power",3_5_12,Narrative Governance and Institution Building,1,4,1,,Written coursework,0.21,1.0435,0.73,0.7,0.54,0.81,0.27,0.29
-435904,History of Conflicts,3_5_12,Conflict Transformation,1,4,2,,Written exam,0.38,1.018,0.69,0.74,0.19,0.64,0.38,0.38
-4351003,Economic History of Realms,3_5_12,Economics,1,4,2,,Written exam,0.49,1.0015,0.61,0.74,0.33,0.61,0.37,0.42
-4351202,Introduction to Institutions,3_5_13,Narrative Governance and Institution Building,1,4,1,,Written coursework,0.23,1.0405,0.73,0.7,0.46,0.81,0.28,0.34
+435904,History of Conflicts,3_5_9,Conflict Transformation,1,4,2,,Written exam,0.38,1.018,0.69,0.74,0.19,0.64,0.38,0.38
+4351003,Economic History of Realms,3_5_10,Economics,1,4,2,,Written exam,0.49,1.0015,0.61,0.74,0.33,0.61,0.37,0.42
+4351202,Introduction to Institutions,3_5_12,Narrative Governance and Institution Building,1,4,1,,Written coursework,0.23,1.0405,0.73,0.7,0.46,0.81,0.28,0.34
 4351301,Introduction to Politics,3_5_13,Politics and Relations,1,4,1,,Written coursework,0.37,1.0195,0.7,0.76,0.22,0.66,0.42,0.38
-4351004,Quantitative Methods,3_5_13,Economics,1,4,2,,Written coursework,0.3,1.03,0.7,0.7,0.42,0.89,0.33,0.39
-4351103,"Ethics, Law & Stewardship",3_5_13,Elven Ethics in Modern Governance,1,4,2,,Written exam,0.3,1.03,0.61,0.74,0.18,0.43,0.46,0.28
-535901,Negotiation & Diplomacy,3_5_13,Conflict Transformation,2,5,1,,Presentation,0.61,0.9593,0.76,0.75,0.55,0.82,0.56,0.63
-4351302,Political Ideas & Thinkers,3_5_14,Politics and Relations,1,4,1,,Groupwork,0.21,1.0435,0.83,0.77,0.48,0.89,0.28,0.24
-4351104,"Power, Duty & Longevity",3_5_14,Elven Ethics in Modern Governance,1,4,2,,Multi-choice exam,0.38,1.018,0.62,0.61,0.53,0.75,0.36,0.36
-4351203,Narrative & Identity,3_5_14,Narrative Governance and Institution Building,1,4,2,,Presentation,0.36,1.021,0.77,0.69,0.43,0.78,0.3,0.45
-535902,Peacebuilding & Reconciliation,3_5_14,Conflict Transformation,2,5,1,,Written coursework,0.55,0.9815,0.7,0.7,0.44,0.75,0.57,0.51
-5351001,Microeconomics (Guilds & Households),3_5_14,Economics,2,5,1,,Written exam,0.59,0.9667,0.61,0.72,0.13,0.52,0.6,0.56
-4351204,Foundations of Governance,3_5_15,Narrative Governance and Institution Building,1,4,2,,Written exam,0.2,1.045,0.67,0.73,0.13,0.57,0.24,0.16
-4351303,"Power, Authority & the State",3_5_15,Politics and Relations,1,4,2,,Presentation,0.38,1.018,0.83,0.74,0.48,0.78,0.24,0.34
-5351002,Macroeconomics (Kingdoms & Empires),3_5_15,Economics,2,5,1,,Written coursework,0.66,0.9408,0.6,0.76,0.24,0.67,0.62,0.54
-5351101,Applied Elven Ethics in Policy,3_5_15,Elven Ethics in Modern Governance,2,5,1,,Viva,0.71,0.9223,0.63,0.81,0.1,0.5,0.73,0.62
-535903,Justice Systems & Restorative Practice,3_5_15,Conflict Transformation,2,5,2,,Written coursework,0.62,0.9556,0.75,0.75,0.53,0.79,0.59,0.55
-4351304,Inter-Realm Relations,3_5_16,Politics and Relations,1,4,2,,Presentation,0.29,1.0315,0.76,0.71,0.54,0.82,0.42,0.35
-5351102,"Justice, Harmony & Collective Good",3_5_16,Elven Ethics in Modern Governance,2,5,1,,Presentation,0.54,0.9852,0.76,0.72,0.46,0.79,0.55,0.55
-5351201,Narrative Strategy in Governance,3_5_16,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.63,0.9519,0.5,0.84,0.16,0.57,0.64,0.53
-535904,Intercultural Dialogue,3_5_16,Conflict Transformation,2,5,2,,Groupwork,0.6,0.963,0.8,0.64,0.52,0.84,0.61,0.57
-5351003,"Trade, Coinage & Value Systems",3_5_16,Economics,2,5,2,,Written coursework,0.4,1.015,0.75,0.69,0.43,0.77,0.51,0.45
-5351202,Institutional Design & Legitimacy,3_5_17,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.3,1.03,0.72,0.77,0.49,0.75,0.39,0.35
-5351301,Comparative Politics,3_5_17,Politics and Relations,2,5,1,,Written exam,0.52,0.9926,0.64,0.69,0.16,0.58,0.43,0.54
-5351004,Econometrics,3_5_17,Economics,2,5,2,,Presentation,0.41,1.0135,0.8,0.72,0.51,0.72,0.38,0.43
-5351103,Comparative Ethics (Elven & Dwarven),3_5_17,Elven Ethics in Modern Governance,2,5,2,,Viva,0.7,0.926,0.61,0.79,0.1,0.75,0.65,0.68
-635901,Advanced Conflict Transformation,3_5_17,Conflict Transformation,3,6,1,,Presentation,0.63,0.9519,0.78,0.69,0.54,0.72,0.64,0.69
-5351302,International Relations (Kingdoms & Alliances),3_5_18,Politics and Relations,2,5,1,,Groupwork,0.62,0.9556,0.74,0.71,0.5,0.86,0.62,0.59
-5351104,Leadership & Responsibility,3_5_18,Elven Ethics in Modern Governance,2,5,2,,Written coursework,0.54,0.9852,0.86,0.69,0.59,0.83,0.51,0.55
-5351203,"Ritual, Symbol & Authority",3_5_18,Narrative Governance and Institution Building,2,5,2,,Presentation,0.56,0.9778,0.78,0.78,0.3,0.73,0.5,0.56
-635902,Post-Conflict Societies,3_5_18,Conflict Transformation,3,6,1,,Groupwork,0.75,0.9075,0.82,0.7,0.61,0.94,0.71,0.76
-6351001,Advanced Economic Theory,3_5_18,Economics,3,6,1,,Viva,0.76,0.9038,0.64,0.78,0.2,0.65,0.77,0.73
-5351204,Communication & Public Trust,3_5_19,Narrative Governance and Institution Building,2,5,2,,Written coursework,0.51,0.9963,0.73,0.73,0.53,0.7,0.45,0.54
-5351303,Political Economy,3_5_19,Politics and Relations,2,5,2,,Written coursework,0.57,0.9741,0.73,0.78,0.42,0.86,0.56,0.6
-6351002,Development & Inequality (Across Species),3_5_19,Economics,3,6,1,,Presentation,0.71,0.9223,0.85,0.79,0.57,0.78,0.63,0.74
-6351101,Ethics of Modern Governance,3_5_19,Elven Ethics in Modern Governance,3,6,1,,Written coursework,0.62,0.9556,0.69,0.76,0.14,0.67,0.69,0.65
-635903,Leadership in Crisis,3_5_19,Conflict Transformation,3,6,2,,Written coursework,0.62,0.9556,0.78,0.74,0.36,0.83,0.7,0.68
-5351304,Conflict & Cooperation,3_5_20,Politics and Relations,2,5,2,,Presentation,0.43,1.0105,0.8,0.75,0.45,0.82,0.38,0.5
-6351102,Environmental Stewardship & Future Generations,3_5_20,Elven Ethics in Modern Governance,3,6,1,,Presentation,0.71,0.9223,0.77,0.76,0.32,0.79,0.67,0.73
-6351201,Advanced Narrative Governance,3_5_20,Narrative Governance and Institution Building,3,6,1,,Viva,0.86,0.8668,0.68,0.81,0.12,0.63,0.81,0.84
-635904,Dissertation / Applied Project,3_5_20,Conflict Transformation,3,6,2,1.0,Written coursework,0.95,0.8335,0.7,0.73,0.35,0.38,0.95,0.78
-6351003,Political Economy of Realms,3_5_20,Economics,3,6,2,,Presentation,0.8,0.889,0.77,0.73,0.44,0.76,0.66,0.72
-6351202,"Crisis, Change & Institutional Renewal",3_5_21,Narrative Governance and Institution Building,3,6,1,,Groupwork,0.65,0.9445,0.82,0.69,0.52,0.87,0.66,0.66
-6351301,Advanced Political Theory,3_5_21,Politics and Relations,3,6,1,,Presentation,0.78,0.8964,0.77,0.7,0.29,0.7,0.75,0.73
-6351004,Dissertation,3_5_21,Economics,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.78,0.4,0.38,0.95,0.81
-6351103,Moral Dilemmas in Inter-Realm Politics,3_5_21,Elven Ethics in Modern Governance,3,6,2,,Viva,0.75,0.9075,0.55,0.77,0.17,0.55,0.76,0.69
-6351302,Global Governance & Diplomacy,3_5_22,Politics and Relations,3,6,1,,Viva,0.82,0.8816,0.53,0.77,0.15,0.59,0.76,0.76
-6351104,Dissertation,3_5_22,Elven Ethics in Modern Governance,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.71,0.41,0.38,0.95,0.82
-6351203,Worldbuilding & Policy Design,3_5_22,Narrative Governance and Institution Building,3,6,2,,Written coursework,0.67,0.9371,0.74,0.66,0.36,0.69,0.65,0.61
-6351204,Major Project,3_5_23,Narrative Governance and Institution Building,3,6,2,1.0,Written coursework,0.85,0.8705,0.61,0.73,0.5,0.38,0.95,0.75
-6351303,Security & Strategy,3_5_23,Politics and Relations,3,6,2,,Viva,0.88,0.8594,0.73,0.77,0.11,0.57,0.76,0.79
-6351304,Dissertation,3_5_24,Politics and Relations,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.71,0.42,0.38,0.95,0.75
+4351004,Quantitative Methods,3_5_10,Economics,1,4,2,,Written coursework,0.3,1.03,0.7,0.7,0.42,0.89,0.33,0.39
+4351103,"Ethics, Law & Stewardship",3_5_11,Elven Ethics in Modern Governance,1,4,2,,Written exam,0.3,1.03,0.61,0.74,0.18,0.43,0.46,0.28
+535901,Negotiation & Diplomacy,3_5_9,Conflict Transformation,2,5,1,,Presentation,0.61,0.9593,0.76,0.75,0.55,0.82,0.56,0.63
+4351302,Political Ideas & Thinkers,3_5_13,Politics and Relations,1,4,1,,Groupwork,0.21,1.0435,0.83,0.77,0.48,0.89,0.28,0.24
+4351104,"Power, Duty & Longevity",3_5_11,Elven Ethics in Modern Governance,1,4,2,,Multi-choice exam,0.38,1.018,0.62,0.61,0.53,0.75,0.36,0.36
+4351203,Narrative & Identity,3_5_12,Narrative Governance and Institution Building,1,4,2,,Presentation,0.36,1.021,0.77,0.69,0.43,0.78,0.3,0.45
+535902,Peacebuilding & Reconciliation,3_5_9,Conflict Transformation,2,5,1,,Written coursework,0.55,0.9815,0.7,0.7,0.44,0.75,0.57,0.51
+5351001,Microeconomics (Guilds & Households),3_5_10,Economics,2,5,1,,Written exam,0.59,0.9667,0.61,0.72,0.13,0.52,0.6,0.56
+4351204,Foundations of Governance,3_5_12,Narrative Governance and Institution Building,1,4,2,,Written exam,0.2,1.045,0.67,0.73,0.13,0.57,0.24,0.16
+4351303,"Power, Authority & the State",3_5_13,Politics and Relations,1,4,2,,Presentation,0.38,1.018,0.83,0.74,0.48,0.78,0.24,0.34
+5351002,Macroeconomics (Kingdoms & Empires),3_5_10,Economics,2,5,1,,Written coursework,0.66,0.9408,0.6,0.76,0.24,0.67,0.62,0.54
+5351101,Applied Elven Ethics in Policy,3_5_11,Elven Ethics in Modern Governance,2,5,1,,Viva,0.71,0.9223,0.63,0.81,0.1,0.5,0.73,0.62
+535903,Justice Systems & Restorative Practice,3_5_9,Conflict Transformation,2,5,2,,Written coursework,0.62,0.9556,0.75,0.75,0.53,0.79,0.59,0.55
+4351304,Inter-Realm Relations,3_5_13,Politics and Relations,1,4,2,,Presentation,0.29,1.0315,0.76,0.71,0.54,0.82,0.42,0.35
+5351102,"Justice, Harmony & Collective Good",3_5_11,Elven Ethics in Modern Governance,2,5,1,,Presentation,0.54,0.9852,0.76,0.72,0.46,0.79,0.55,0.55
+5351201,Narrative Strategy in Governance,3_5_12,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.63,0.9519,0.5,0.84,0.16,0.57,0.64,0.53
+535904,Intercultural Dialogue,3_5_9,Conflict Transformation,2,5,2,,Groupwork,0.6,0.963,0.8,0.64,0.52,0.84,0.61,0.57
+5351003,"Trade, Coinage & Value Systems",3_5_10,Economics,2,5,2,,Written coursework,0.4,1.015,0.75,0.69,0.43,0.77,0.51,0.45
+5351202,Institutional Design & Legitimacy,3_5_12,Narrative Governance and Institution Building,2,5,1,,Written coursework,0.3,1.03,0.72,0.77,0.49,0.75,0.39,0.35
+5351301,Comparative Politics,3_5_13,Politics and Relations,2,5,1,,Written exam,0.52,0.9926,0.64,0.69,0.16,0.58,0.43,0.54
+5351004,Econometrics,3_5_10,Economics,2,5,2,,Presentation,0.41,1.0135,0.8,0.72,0.51,0.72,0.38,0.43
+5351103,Comparative Ethics (Elven & Dwarven),3_5_11,Elven Ethics in Modern Governance,2,5,2,,Viva,0.7,0.926,0.61,0.79,0.1,0.75,0.65,0.68
+635901,Advanced Conflict Transformation,3_5_9,Conflict Transformation,3,6,1,,Presentation,0.63,0.9519,0.78,0.69,0.54,0.72,0.64,0.69
+5351302,International Relations (Kingdoms & Alliances),3_5_13,Politics and Relations,2,5,1,,Groupwork,0.62,0.9556,0.74,0.71,0.5,0.86,0.62,0.59
+5351104,Leadership & Responsibility,3_5_11,Elven Ethics in Modern Governance,2,5,2,,Written coursework,0.54,0.9852,0.86,0.69,0.59,0.83,0.51,0.55
+5351203,"Ritual, Symbol & Authority",3_5_12,Narrative Governance and Institution Building,2,5,2,,Presentation,0.56,0.9778,0.78,0.78,0.3,0.73,0.5,0.56
+635902,Post-Conflict Societies,3_5_9,Conflict Transformation,3,6,1,,Groupwork,0.75,0.9075,0.82,0.7,0.61,0.94,0.71,0.76
+6351001,Advanced Economic Theory,3_5_10,Economics,3,6,1,,Viva,0.76,0.9038,0.64,0.78,0.2,0.65,0.77,0.73
+5351204,Communication & Public Trust,3_5_12,Narrative Governance and Institution Building,2,5,2,,Written coursework,0.51,0.9963,0.73,0.73,0.53,0.7,0.45,0.54
+5351303,Political Economy,3_5_13,Politics and Relations,2,5,2,,Written coursework,0.57,0.9741,0.73,0.78,0.42,0.86,0.56,0.6
+6351002,Development & Inequality (Across Species),3_5_10,Economics,3,6,1,,Presentation,0.71,0.9223,0.85,0.79,0.57,0.78,0.63,0.74
+6351101,Ethics of Modern Governance,3_5_11,Elven Ethics in Modern Governance,3,6,1,,Written coursework,0.62,0.9556,0.69,0.76,0.14,0.67,0.69,0.65
+635903,Leadership in Crisis,3_5_9,Conflict Transformation,3,6,2,,Written coursework,0.62,0.9556,0.78,0.74,0.36,0.83,0.7,0.68
+5351304,Conflict & Cooperation,3_5_13,Politics and Relations,2,5,2,,Presentation,0.43,1.0105,0.8,0.75,0.45,0.82,0.38,0.5
+6351102,Environmental Stewardship & Future Generations,3_5_11,Elven Ethics in Modern Governance,3,6,1,,Presentation,0.71,0.9223,0.77,0.76,0.32,0.79,0.67,0.73
+6351201,Advanced Narrative Governance,3_5_12,Narrative Governance and Institution Building,3,6,1,,Viva,0.86,0.8668,0.68,0.81,0.12,0.63,0.81,0.84
+635904,Dissertation / Applied Project,3_5_9,Conflict Transformation,3,6,2,1.0,Written coursework,0.95,0.8335,0.7,0.73,0.35,0.38,0.95,0.78
+6351003,Political Economy of Realms,3_5_10,Economics,3,6,2,,Presentation,0.8,0.889,0.77,0.73,0.44,0.76,0.66,0.72
+6351202,"Crisis, Change & Institutional Renewal",3_5_12,Narrative Governance and Institution Building,3,6,1,,Groupwork,0.65,0.9445,0.82,0.69,0.52,0.87,0.66,0.66
+6351301,Advanced Political Theory,3_5_13,Politics and Relations,3,6,1,,Presentation,0.78,0.8964,0.77,0.7,0.29,0.7,0.75,0.73
+6351004,Dissertation,3_5_10,Economics,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.78,0.4,0.38,0.95,0.81
+6351103,Moral Dilemmas in Inter-Realm Politics,3_5_11,Elven Ethics in Modern Governance,3,6,2,,Viva,0.75,0.9075,0.55,0.77,0.17,0.55,0.76,0.69
+6351302,Global Governance & Diplomacy,3_5_13,Politics and Relations,3,6,1,,Viva,0.82,0.8816,0.53,0.77,0.15,0.59,0.76,0.76
+6351104,Dissertation,3_5_11,Elven Ethics in Modern Governance,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.71,0.41,0.38,0.95,0.82
+6351203,Worldbuilding & Policy Design,3_5_12,Narrative Governance and Institution Building,3,6,2,,Written coursework,0.67,0.9371,0.74,0.66,0.36,0.69,0.65,0.61
+6351204,Major Project,3_5_12,Narrative Governance and Institution Building,3,6,2,1.0,Written coursework,0.85,0.8705,0.61,0.73,0.5,0.38,0.95,0.75
+6351303,Security & Strategy,3_5_13,Politics and Relations,3,6,2,,Viva,0.88,0.8594,0.73,0.77,0.11,0.57,0.76,0.79
+6351304,Dissertation,3_5_13,Politics and Relations,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.71,0.42,0.38,0.95,0.75
 435901,Introduction to Conflict Studies,3_5_9,Conflict Transformation,1,4,1,,Written exam,0.46,1.006,0.57,0.8,0.21,0.48,0.33,0.41
 4361401,Introduction to Psychology,3_6_14,Psychology,1,4,1,,Written exam,0.41,1.0135,0.65,0.82,0.21,0.51,0.5,0.38
-4361402,Cognitive Psychology,3_6_15,Psychology,1,4,1,,Written exam,0.35,1.0225,0.56,0.71,0.26,0.57,0.37,0.3
+4361402,Cognitive Psychology,3_6_14,Psychology,1,4,1,,Written exam,0.35,1.0225,0.56,0.71,0.26,0.57,0.37,0.3
 4361501,Introduction to Sociology,3_6_15,Sociology,1,4,1,,Written exam,0.39,1.0165,0.67,0.78,0.23,0.59,0.42,0.32
-4361502,Culture & Society,3_6_16,Sociology,1,4,1,,Written exam,0.34,1.024,0.6,0.82,0.12,0.57,0.3,0.26
-4361403,Developmental Psychology,3_6_16,Psychology,1,4,2,,Written coursework,0.34,1.024,0.7,0.7,0.35,0.59,0.44,0.37
-4361404,Research Methods,3_6_17,Psychology,1,4,2,,Written coursework,0.43,1.0105,0.7,0.78,0.41,0.76,0.36,0.43
-4361503,Social Inequality,3_6_17,Sociology,1,4,2,,Presentation,0.19,1.0465,0.88,0.76,0.49,0.82,0.28,0.34
-4361504,Sociological Theory,3_6_18,Sociology,1,4,2,,Written exam,0.3,1.03,0.59,0.68,0.23,0.57,0.39,0.24
-5361401,Social Psychology,3_6_18,Psychology,2,5,1,,Written exam,0.55,0.9815,0.55,0.73,0.28,0.65,0.44,0.56
-5361402,Biological Psychology,3_6_19,Psychology,2,5,1,,Written coursework,0.66,0.9408,0.67,0.85,0.1,0.61,0.68,0.64
-5361501,Research Methods in Sociology,3_6_19,Sociology,2,5,1,,Written exam,0.57,0.9741,0.67,0.77,0.26,0.64,0.57,0.52
-5361502,Social Institutions,3_6_20,Sociology,2,5,1,,Presentation,0.44,1.009,0.79,0.75,0.38,0.79,0.53,0.56
-5361403,Personality & Individual Differences,3_6_20,Psychology,2,5,2,,Multi-choice exam,0.56,0.9778,0.7,0.67,0.43,0.78,0.54,0.6
-5361404,Psychological Research Methods,3_6_21,Psychology,2,5,2,,Presentation,0.59,0.9667,0.78,0.76,0.42,0.68,0.43,0.54
-5361503,Identity & Diversity,3_6_21,Sociology,2,5,2,,Groupwork,0.47,1.0045,0.81,0.73,0.54,0.85,0.62,0.55
-5361504,Globalisation & Society,3_6_22,Sociology,2,5,2,,Written exam,0.61,0.9593,0.55,0.7,0.28,0.45,0.58,0.49
-6361401,Advanced Topics in Psychology,3_6_22,Psychology,3,6,1,,Viva,0.73,0.9149,0.59,0.78,0.35,0.5,0.67,0.7
-6361402,Clinical & Health Psychology,3_6_23,Psychology,3,6,1,,Written coursework,0.73,0.9149,0.6,0.69,0.61,0.57,0.62,0.68
-6361501,Advanced Sociological Theory,3_6_23,Sociology,3,6,1,,Written coursework,0.68,0.9334,0.58,0.77,0.19,0.6,0.73,0.71
-6361502,Contemporary Social Issues,3_6_24,Sociology,3,6,1,,Groupwork,0.71,0.9223,0.81,0.74,0.52,0.85,0.69,0.69
-6361403,Applied Psychology,3_6_24,Psychology,3,6,2,,Viva,0.69,0.9297,0.65,0.79,0.14,0.62,0.68,0.7
-6361404,Dissertation,3_6_25,Psychology,3,6,2,1.0,Written coursework,0.95,0.8335,0.58,0.76,0.45,0.38,0.95,0.77
-6361503,Power & Social Change,3_6_25,Sociology,3,6,2,,Viva,0.83,0.8779,0.75,0.74,0.42,0.83,0.73,0.83
-6361504,Dissertation,3_6_26,Sociology,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.73,0.41,0.38,0.94,0.85
+4361502,Culture & Society,3_6_15,Sociology,1,4,1,,Written exam,0.34,1.024,0.6,0.82,0.12,0.57,0.3,0.26
+4361403,Developmental Psychology,3_6_14,Psychology,1,4,2,,Written coursework,0.34,1.024,0.7,0.7,0.35,0.59,0.44,0.37
+4361404,Research Methods,3_6_14,Psychology,1,4,2,,Written coursework,0.43,1.0105,0.7,0.78,0.41,0.76,0.36,0.43
+4361503,Social Inequality,3_6_15,Sociology,1,4,2,,Presentation,0.19,1.0465,0.88,0.76,0.49,0.82,0.28,0.34
+4361504,Sociological Theory,3_6_15,Sociology,1,4,2,,Written exam,0.3,1.03,0.59,0.68,0.23,0.57,0.39,0.24
+5361401,Social Psychology,3_6_14,Psychology,2,5,1,,Written exam,0.55,0.9815,0.55,0.73,0.28,0.65,0.44,0.56
+5361402,Biological Psychology,3_6_14,Psychology,2,5,1,,Written coursework,0.66,0.9408,0.67,0.85,0.1,0.61,0.68,0.64
+5361501,Research Methods in Sociology,3_6_15,Sociology,2,5,1,,Written exam,0.57,0.9741,0.67,0.77,0.26,0.64,0.57,0.52
+5361502,Social Institutions,3_6_15,Sociology,2,5,1,,Presentation,0.44,1.009,0.79,0.75,0.38,0.79,0.53,0.56
+5361403,Personality & Individual Differences,3_6_14,Psychology,2,5,2,,Multi-choice exam,0.56,0.9778,0.7,0.67,0.43,0.78,0.54,0.6
+5361404,Psychological Research Methods,3_6_14,Psychology,2,5,2,,Presentation,0.59,0.9667,0.78,0.76,0.42,0.68,0.43,0.54
+5361503,Identity & Diversity,3_6_15,Sociology,2,5,2,,Groupwork,0.47,1.0045,0.81,0.73,0.54,0.85,0.62,0.55
+5361504,Globalisation & Society,3_6_15,Sociology,2,5,2,,Written exam,0.61,0.9593,0.55,0.7,0.28,0.45,0.58,0.49
+6361401,Advanced Topics in Psychology,3_6_14,Psychology,3,6,1,,Viva,0.73,0.9149,0.59,0.78,0.35,0.5,0.67,0.7
+6361402,Clinical & Health Psychology,3_6_14,Psychology,3,6,1,,Written coursework,0.73,0.9149,0.6,0.69,0.61,0.57,0.62,0.68
+6361501,Advanced Sociological Theory,3_6_15,Sociology,3,6,1,,Written coursework,0.68,0.9334,0.58,0.77,0.19,0.6,0.73,0.71
+6361502,Contemporary Social Issues,3_6_15,Sociology,3,6,1,,Groupwork,0.71,0.9223,0.81,0.74,0.52,0.85,0.69,0.69
+6361403,Applied Psychology,3_6_14,Psychology,3,6,2,,Viva,0.69,0.9297,0.65,0.79,0.14,0.62,0.68,0.7
+6361404,Dissertation,3_6_14,Psychology,3,6,2,1.0,Written coursework,0.95,0.8335,0.58,0.76,0.45,0.38,0.95,0.77
+6361503,Power & Social Change,3_6_15,Sociology,3,6,2,,Viva,0.83,0.8779,0.75,0.74,0.42,0.83,0.73,0.83
+6361504,Dissertation,3_6_15,Sociology,3,6,2,1.0,Written coursework,0.95,0.8335,0.73,0.73,0.41,0.38,0.94,0.85
 441101,Foundations of Education,4_1_1,Education Studies,1,4,1,,Professional artefact,0.24,1.039,0.67,0.79,0.66,0.78,0.37,0.28
-541304,Community-Based Learning Design,4_1_10,Intergenerational Learning,2,5,2,,Professional artefact,0.59,0.9667,0.71,0.73,0.74,0.78,0.45,0.58
-641102,Global Education Systems,4_1_10,Education Studies,3,6,1,,Groupwork,0.68,0.9334,0.81,0.7,0.75,0.88,0.71,0.69
-641201,Strategic Mentorship in Institutions,4_1_10,Educational Mentorship,3,6,1,,Written coursework,0.71,0.9223,0.72,0.64,0.72,0.75,0.61,0.63
-641202,Crisis Support & Developmental Intervention,4_1_11,Educational Mentorship,3,6,1,,Groupwork,0.76,0.9038,0.82,0.71,0.7,0.87,0.71,0.82
-641301,Intergenerational Knowledge Systems,4_1_11,Intergenerational Learning,3,6,1,,Written coursework,0.56,0.9778,0.78,0.62,0.76,0.73,0.54,0.63
-641103,Educational Leadership & Change,4_1_11,Education Studies,3,6,2,,Groupwork,0.7,0.926,0.84,0.57,0.77,0.92,0.74,0.83
-641302,"Heritage, Continuity & Change",4_1_12,Intergenerational Learning,3,6,1,,Viva,0.8,0.889,0.7,0.69,0.56,0.77,0.7,0.78
-641104,Dissertation,4_1_12,Education Studies,3,6,2,1.0,Written coursework,0.95,0.8335,0.57,0.73,0.57,0.38,0.95,0.77
-641203,Mentorship Program Design,4_1_12,Educational Mentorship,3,6,2,,Presentation,0.78,0.8964,0.8,0.67,0.61,0.77,0.67,0.72
-641204,Practice-Based Project,4_1_13,Educational Mentorship,3,6,2,1.0,Written coursework,0.93,0.8409,0.56,0.66,0.65,0.38,0.95,0.82
-641303,Designing Multi-Age Learning Environments,4_1_13,Intergenerational Learning,3,6,2,,Written coursework,0.79,0.8927,0.79,0.65,0.77,0.82,0.9,0.83
-641304,Dissertation / Applied Project,4_1_14,Intergenerational Learning,3,6,2,1.0,Written coursework,0.95,0.8335,0.68,0.6,0.65,0.38,0.95,0.82
-441102,Learning Theories,4_1_2,Education Studies,1,4,1,,Practical exam,0.33,1.0255,0.69,0.66,0.75,0.73,0.34,0.26
+541304,Community-Based Learning Design,4_1_3,Intergenerational Learning,2,5,2,,Professional artefact,0.59,0.9667,0.71,0.73,0.74,0.78,0.45,0.58
+641102,Global Education Systems,4_1_1,Education Studies,3,6,1,,Groupwork,0.68,0.9334,0.81,0.7,0.75,0.88,0.71,0.69
+641201,Strategic Mentorship in Institutions,4_1_2,Educational Mentorship,3,6,1,,Written coursework,0.71,0.9223,0.72,0.64,0.72,0.75,0.61,0.63
+641202,Crisis Support & Developmental Intervention,4_1_2,Educational Mentorship,3,6,1,,Groupwork,0.76,0.9038,0.82,0.71,0.7,0.87,0.71,0.82
+641301,Intergenerational Knowledge Systems,4_1_3,Intergenerational Learning,3,6,1,,Written coursework,0.56,0.9778,0.78,0.62,0.76,0.73,0.54,0.63
+641103,Educational Leadership & Change,4_1_1,Education Studies,3,6,2,,Groupwork,0.7,0.926,0.84,0.57,0.77,0.92,0.74,0.83
+641302,"Heritage, Continuity & Change",4_1_3,Intergenerational Learning,3,6,1,,Viva,0.8,0.889,0.7,0.69,0.56,0.77,0.7,0.78
+641104,Dissertation,4_1_1,Education Studies,3,6,2,1.0,Written coursework,0.95,0.8335,0.57,0.73,0.57,0.38,0.95,0.77
+641203,Mentorship Program Design,4_1_2,Educational Mentorship,3,6,2,,Presentation,0.78,0.8964,0.8,0.67,0.61,0.77,0.67,0.72
+641204,Practice-Based Project,4_1_2,Educational Mentorship,3,6,2,1.0,Written coursework,0.93,0.8409,0.56,0.66,0.65,0.38,0.95,0.82
+641303,Designing Multi-Age Learning Environments,4_1_3,Intergenerational Learning,3,6,2,,Written coursework,0.79,0.8927,0.79,0.65,0.77,0.82,0.9,0.83
+641304,Dissertation / Applied Project,4_1_3,Intergenerational Learning,3,6,2,1.0,Written coursework,0.95,0.8335,0.68,0.6,0.65,0.38,0.95,0.82
+441102,Learning Theories,4_1_1,Education Studies,1,4,1,,Practical exam,0.33,1.0255,0.69,0.66,0.75,0.73,0.34,0.26
 441201,Principles of Mentorship,4_1_2,Educational Mentorship,1,4,1,,Written coursework,0.34,1.024,0.71,0.61,0.72,0.72,0.37,0.34
-441202,Communication & Coaching Skills,4_1_3,Educational Mentorship,1,4,1,,Written coursework,0.22,1.042,0.97,0.61,0.95,0.52,0.32,0.28
+441202,Communication & Coaching Skills,4_1_2,Educational Mentorship,1,4,1,,Written coursework,0.22,1.042,0.97,0.61,0.95,0.52,0.32,0.28
 441301,Foundations of Lifespan Learning,4_1_3,Intergenerational Learning,1,4,1,,Written coursework,0.44,1.009,0.81,0.57,0.82,0.79,0.36,0.36
-441103,Child & Adolescent Development,4_1_3,Education Studies,1,4,2,,Professional artefact,0.29,1.0315,0.63,0.74,0.73,0.73,0.36,0.26
-441302,"Memory, Story & Oral Tradition",4_1_4,Intergenerational Learning,1,4,1,,Written exam,0.49,1.0015,0.58,0.72,0.46,0.64,0.41,0.39
-441104,Education Systems & Policy,4_1_4,Education Studies,1,4,2,,Written exam,0.3,1.03,0.57,0.7,0.41,0.48,0.29,0.24
-441203,Development Across Lifespans,4_1_4,Educational Mentorship,1,4,2,,Practical exam,0.33,1.0255,0.69,0.68,0.76,0.69,0.26,0.34
-441204,Ethics of Guidance & Support,4_1_5,Educational Mentorship,1,4,2,,Written exam,0.32,1.027,0.62,0.67,0.4,0.66,0.34,0.34
-441303,Social Structures Across Ages,4_1_5,Intergenerational Learning,1,4,2,,Presentation,0.37,1.0195,0.77,0.72,0.78,0.65,0.47,0.39
-541101,Curriculum Design & Assessment,4_1_5,Education Studies,2,5,1,,Written coursework,0.58,0.9704,0.73,0.65,0.69,0.71,0.57,0.54
-441304,Learning in Community Contexts,4_1_6,Intergenerational Learning,1,4,2,,Written coursework,0.39,1.0165,0.69,0.71,0.65,0.8,0.39,0.4
-541102,Inclusive Education,4_1_6,Education Studies,2,5,1,,Professional artefact,0.39,1.0165,0.74,0.76,0.63,0.75,0.4,0.44
-541201,Advanced Mentoring Practice,4_1_6,Educational Mentorship,2,5,1,,Groupwork,0.6,0.963,0.83,0.69,0.7,0.84,0.67,0.64
-541202,Reflective Practice & Supervision,4_1_7,Educational Mentorship,2,5,1,,Groupwork,0.57,0.9741,0.77,0.71,0.67,0.87,0.65,0.61
-541301,Knowledge Transfer Systems,4_1_7,Intergenerational Learning,2,5,1,,Groupwork,0.53,0.9889,0.8,0.65,0.68,0.87,0.51,0.55
-541103,Classroom Practice & Pedagogy,4_1_7,Education Studies,2,5,2,,Written coursework,0.61,0.9593,0.78,0.61,0.64,0.64,0.54,0.55
-541302,Apprenticeship & Guild Learning Models,4_1_8,Intergenerational Learning,2,5,1,,Written coursework,0.56,0.9778,0.69,0.68,0.67,0.82,0.57,0.56
-541104,Research Methods in Education,4_1_8,Education Studies,2,5,2,,Practical exam,0.74,0.9112,0.65,0.63,0.77,0.68,0.51,0.65
-541203,Supporting Learning Pathways,4_1_8,Educational Mentorship,2,5,2,,Written coursework,0.57,0.9741,0.69,0.7,0.69,0.72,0.44,0.51
-541204,Group Facilitation Techniques,4_1_9,Educational Mentorship,2,5,2,,Practical exam,0.42,1.012,0.52,0.63,0.92,0.62,0.47,0.47
-541303,"Age, Identity & Social Roles",4_1_9,Intergenerational Learning,2,5,2,,Groupwork,0.7,0.926,0.77,0.77,0.57,0.86,0.49,0.73
-641101,Critical Perspectives in Education,4_1_9,Education Studies,3,6,1,,Groupwork,0.71,0.9223,0.81,0.6,0.66,0.84,0.75,0.8
-442902,Biology & Physiology,4_2_10,Pharmacy,1,4,1,,Practical exam,0.31,1.0285,0.53,0.65,0.73,0.88,0.33,0.43
+441103,Child & Adolescent Development,4_1_1,Education Studies,1,4,2,,Professional artefact,0.29,1.0315,0.63,0.74,0.73,0.73,0.36,0.26
+441302,"Memory, Story & Oral Tradition",4_1_3,Intergenerational Learning,1,4,1,,Written exam,0.49,1.0015,0.58,0.72,0.46,0.64,0.41,0.39
+441104,Education Systems & Policy,4_1_1,Education Studies,1,4,2,,Written exam,0.3,1.03,0.57,0.7,0.41,0.48,0.29,0.24
+441203,Development Across Lifespans,4_1_2,Educational Mentorship,1,4,2,,Practical exam,0.33,1.0255,0.69,0.68,0.76,0.69,0.26,0.34
+441204,Ethics of Guidance & Support,4_1_2,Educational Mentorship,1,4,2,,Written exam,0.32,1.027,0.62,0.67,0.4,0.66,0.34,0.34
+441303,Social Structures Across Ages,4_1_3,Intergenerational Learning,1,4,2,,Presentation,0.37,1.0195,0.77,0.72,0.78,0.65,0.47,0.39
+541101,Curriculum Design & Assessment,4_1_1,Education Studies,2,5,1,,Written coursework,0.58,0.9704,0.73,0.65,0.69,0.71,0.57,0.54
+441304,Learning in Community Contexts,4_1_3,Intergenerational Learning,1,4,2,,Written coursework,0.39,1.0165,0.69,0.71,0.65,0.8,0.39,0.4
+541102,Inclusive Education,4_1_1,Education Studies,2,5,1,,Professional artefact,0.39,1.0165,0.74,0.76,0.63,0.75,0.4,0.44
+541201,Advanced Mentoring Practice,4_1_2,Educational Mentorship,2,5,1,,Groupwork,0.6,0.963,0.83,0.69,0.7,0.84,0.67,0.64
+541202,Reflective Practice & Supervision,4_1_2,Educational Mentorship,2,5,1,,Groupwork,0.57,0.9741,0.77,0.71,0.67,0.87,0.65,0.61
+541301,Knowledge Transfer Systems,4_1_3,Intergenerational Learning,2,5,1,,Groupwork,0.53,0.9889,0.8,0.65,0.68,0.87,0.51,0.55
+541103,Classroom Practice & Pedagogy,4_1_1,Education Studies,2,5,2,,Written coursework,0.61,0.9593,0.78,0.61,0.64,0.64,0.54,0.55
+541302,Apprenticeship & Guild Learning Models,4_1_3,Intergenerational Learning,2,5,1,,Written coursework,0.56,0.9778,0.69,0.68,0.67,0.82,0.57,0.56
+541104,Research Methods in Education,4_1_1,Education Studies,2,5,2,,Practical exam,0.74,0.9112,0.65,0.63,0.77,0.68,0.51,0.65
+541203,Supporting Learning Pathways,4_1_2,Educational Mentorship,2,5,2,,Written coursework,0.57,0.9741,0.69,0.7,0.69,0.72,0.44,0.51
+541204,Group Facilitation Techniques,4_1_2,Educational Mentorship,2,5,2,,Practical exam,0.42,1.012,0.52,0.63,0.92,0.62,0.47,0.47
+541303,"Age, Identity & Social Roles",4_1_3,Intergenerational Learning,2,5,2,,Groupwork,0.7,0.926,0.77,0.77,0.57,0.86,0.49,0.73
+641101,Critical Perspectives in Education,4_1_1,Education Studies,3,6,1,,Groupwork,0.71,0.9223,0.81,0.6,0.66,0.84,0.75,0.8
+442902,Biology & Physiology,4_2_9,Pharmacy,1,4,1,,Practical exam,0.31,1.0285,0.53,0.65,0.73,0.88,0.33,0.43
 4421001,"Anatomy, Physiology & Movement",4_2_10,Physiotherapy,1,4,1,,Written coursework,0.35,1.0225,0.73,0.67,0.86,0.78,0.23,0.34
-442703,Professionalism & Ethics in Care,4_2_10,Nursing and Care,1,4,2,,Written coursework,0.48,1.003,0.69,0.7,0.6,0.6,0.39,0.42
-442802,Occupation & Daily Living,4_2_10,Occupational Therapy,1,4,2,,Written coursework,0.35,1.0225,0.82,0.64,0.75,0.83,0.38,0.33
-542502,"Movement, Breath & Awareness Practices",4_2_10,Integrated Mind-Body,2,5,1,,Written coursework,0.41,1.0135,0.72,0.66,0.65,0.75,0.55,0.48
-542601,Labour & Birth Management,4_2_10,Midwifery,2,5,1,,Practical exam,0.53,0.9889,0.53,0.58,0.95,0.63,0.52,0.51
-542403,Healing Traditions Across Realms,4_2_10,Herbal Practice and Energy Work,2,5,2,,Written coursework,0.61,0.9593,0.72,0.68,0.76,0.72,0.59,0.62
-4421002,Foundations of Physiotherapy,4_2_11,Physiotherapy,1,4,1,,Practical exam,0.32,1.027,0.71,0.57,0.81,0.78,0.39,0.32
+442703,Professionalism & Ethics in Care,4_2_7,Nursing and Care,1,4,2,,Written coursework,0.48,1.003,0.69,0.7,0.6,0.6,0.39,0.42
+442802,Occupation & Daily Living,4_2_8,Occupational Therapy,1,4,2,,Written coursework,0.35,1.0225,0.82,0.64,0.75,0.83,0.38,0.33
+542502,"Movement, Breath & Awareness Practices",4_2_5,Integrated Mind-Body,2,5,1,,Written coursework,0.41,1.0135,0.72,0.66,0.65,0.75,0.55,0.48
+542601,Labour & Birth Management,4_2_6,Midwifery,2,5,1,,Practical exam,0.53,0.9889,0.53,0.58,0.95,0.63,0.52,0.51
+542403,Healing Traditions Across Realms,4_2_4,Herbal Practice and Energy Work,2,5,2,,Written coursework,0.61,0.9593,0.72,0.68,0.76,0.72,0.59,0.62
+4421002,Foundations of Physiotherapy,4_2_10,Physiotherapy,1,4,1,,Practical exam,0.32,1.027,0.71,0.57,0.81,0.78,0.39,0.32
 4421101,Introduction to Social Work,4_2_11,Social Work,1,4,1,,Practical exam,0.29,1.0315,0.71,0.61,0.83,0.74,0.22,0.21
-442604,Professional Practice & Ethics,4_2_11,Occupational Therapy,1,4,2,,Written exam,0.35,1.0225,0.65,0.67,0.51,0.61,0.33,0.32
-442903,Pharmaceutical Chemistry,4_2_11,Pharmacy,1,4,2,,Practical exam,0.27,1.0345,0.53,0.65,0.75,0.79,0.27,0.31
-542602,Postnatal Care & Neonatal Health,4_2_11,Midwifery,2,5,1,,Written coursework,0.6,0.963,0.73,0.56,0.79,0.78,0.56,0.56
-542701,"Adult, Child & Mental Health Nursing",4_2_11,Nursing and Care,2,5,1,,Presentation,0.58,0.9704,0.77,0.73,0.59,0.73,0.6,0.55
-542404,Field Practice & Observation,4_2_11,Herbal Practice and Energy Work,2,5,2,,Groupwork,0.41,1.0135,0.77,0.65,0.67,0.85,0.57,0.5
-542503,"Pain, Recovery & Adaptation",4_2_11,Integrated Mind-Body,2,5,2,,Presentation,0.67,0.9371,0.79,0.7,0.68,0.81,0.58,0.68
-4421102,Development & Lifespan,4_2_12,Social Work,1,4,1,,Written coursework,0.36,1.021,0.76,0.64,0.77,0.77,0.3,0.39
+442604,Professional Practice & Ethics,4_2_8,Occupational Therapy,1,4,2,,Written exam,0.35,1.0225,0.65,0.67,0.51,0.61,0.33,0.32
+442903,Pharmaceutical Chemistry,4_2_9,Pharmacy,1,4,2,,Practical exam,0.27,1.0345,0.53,0.65,0.75,0.79,0.27,0.31
+542602,Postnatal Care & Neonatal Health,4_2_6,Midwifery,2,5,1,,Written coursework,0.6,0.963,0.73,0.56,0.79,0.78,0.56,0.56
+542701,"Adult, Child & Mental Health Nursing",4_2_7,Nursing and Care,2,5,1,,Presentation,0.58,0.9704,0.77,0.73,0.59,0.73,0.6,0.55
+542404,Field Practice & Observation,4_2_4,Herbal Practice and Energy Work,2,5,2,,Groupwork,0.41,1.0135,0.77,0.65,0.67,0.85,0.57,0.5
+542503,"Pain, Recovery & Adaptation",4_2_5,Integrated Mind-Body,2,5,2,,Presentation,0.67,0.9371,0.79,0.7,0.68,0.81,0.58,0.68
+4421102,Development & Lifespan,4_2_11,Social Work,1,4,1,,Written coursework,0.36,1.021,0.76,0.64,0.77,0.77,0.3,0.39
 4421201,Foundations of Somatic Awareness,4_2_12,Somatic Wellbeing Enquiry,1,4,1,,Practical exam,0.25,1.0375,0.69,0.6,0.93,0.65,0.34,0.24
-442904,Introduction to Pharmacy Practice,4_2_12,Pharmacy,1,4,2,,Practical exam,0.4,1.015,0.53,0.61,0.87,0.61,0.21,0.34
-4421003,Physiology & Pathophysiology,4_2_12,Physiotherapy,1,4,2,,Groupwork,0.32,1.027,0.83,0.68,0.77,0.85,0.3,0.33
-542702,Pharmacology & Medication Management,4_2_12,Nursing and Care,2,5,1,,Written coursework,0.67,0.9371,0.67,0.64,0.64,0.43,0.52,0.55
-542801,Therapeutic Interventions & Techniques,4_2_12,Occupational Therapy,2,5,1,,Written coursework,0.31,1.0285,0.77,0.58,0.95,0.53,0.33,0.34
-542504,Therapeutic Communication,4_2_12,Integrated Mind-Body,2,5,2,,Written coursework,0.61,0.9593,0.72,0.64,0.63,0.74,0.48,0.54
-542603,Complications in Pregnancy & Birth,4_2_12,Midwifery,2,5,2,,Written coursework,0.5,1.0,0.8,0.62,0.73,0.8,0.5,0.54
-642401,Advanced Herbal Practice,4_2_12,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.67,0.9371,0.82,0.64,0.74,0.75,0.74,0.69
-4421202,Body Systems & Embodied Experience,4_2_13,Somatic Wellbeing Enquiry,1,4,1,,Groupwork,0.37,1.0195,0.98,0.73,0.59,0.95,0.31,0.42
-4421004,Professional Practice & Communication,4_2_13,Physiotherapy,1,4,2,,Written coursework,0.35,1.0225,0.9,0.55,0.83,0.83,0.28,0.33
-4421103,"Law, Policy & Welfare Systems",4_2_13,Social Work,1,4,2,,Written exam,0.33,1.0255,0.62,0.73,0.46,0.47,0.3,0.31
-542802,Mental Health & Physical Rehabilitation,4_2_13,Occupational Therapy,2,5,1,,Written coursework,0.51,0.9963,0.75,0.71,0.72,0.74,0.38,0.47
-542901,Pharmacokinetics & Pharmacodynamics,4_2_13,Pharmacy,2,5,1,,Written coursework,0.5,1.0,0.53,0.7,0.66,0.83,0.47,0.46
-542604,Clinical Practice Placement,4_2_13,Midwifery,2,5,2,,Practical exam,0.49,1.0015,0.6,0.62,0.88,0.58,0.44,0.45
-5421004,Clinical Skills & Assessment,4_2_13,Nursing and Care,2,5,2,,Practical exam,0.45,1.0075,0.66,0.67,0.86,0.59,0.49,0.45
-642402,Integrative Healing Systems,4_2_13,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.6,0.963,0.8,0.64,0.81,0.79,0.75,0.63
-642501,Advanced Integrated Care Models,4_2_13,Integrated Mind-Body,3,6,1,,Presentation,0.68,0.9334,0.82,0.69,0.63,0.77,0.78,0.68
-4421104,Communication & Safeguarding,4_2_14,Social Work,1,4,2,,Groupwork,0.3,1.03,0.82,0.66,0.76,0.86,0.29,0.34
-4421203,"Movement, Breath & Attention",4_2_14,Somatic Wellbeing Enquiry,1,4,2,,Written coursework,0.28,1.033,0.71,0.66,0.72,0.77,0.47,0.4
-542902,Microbiology & Infectious Disease,4_2_14,Pharmacy,2,5,1,,Written coursework,0.51,0.9963,0.53,0.63,0.71,0.71,0.4,0.49
-5421001,Musculoskeletal Physiotherapy,4_2_14,Physiotherapy,2,5,1,,Written coursework,0.53,0.9889,0.74,0.61,0.76,0.74,0.46,0.52
-542803,Assistive Technology & Adaptation,4_2_14,Occupational Therapy,2,5,2,,Written coursework,0.52,0.9926,0.77,0.6,0.64,0.82,0.51,0.57
-5421104,Practice Placement,4_2_14,Nursing and Care,2,5,2,,Practical exam,0.33,1.0255,0.52,0.58,0.95,0.39,0.33,0.31
-642502,Complex Case Integration,4_2_14,Integrated Mind-Body,3,6,1,,Written coursework,0.79,0.8927,0.73,0.69,0.77,0.85,0.72,0.8
-642601,Advanced Midwifery Practice,4_2_14,Midwifery,3,6,1,,Written coursework,0.66,0.9408,0.78,0.68,0.72,0.83,0.64,0.71
-642403,Ethical Practice in Healing Arts,4_2_14,Herbal Practice and Energy Work,3,6,2,,Presentation,0.74,0.9112,0.78,0.78,0.55,0.81,0.63,0.75
-4421204,Introduction to Contemplative Practice,4_2_15,Somatic Wellbeing Enquiry,1,4,2,,Groupwork,0.36,1.021,0.87,0.6,0.76,0.85,0.37,0.36
-5421002,Neurological Rehabilitation,4_2_15,Physiotherapy,2,5,1,,Written coursework,0.46,1.006,0.72,0.69,0.72,0.78,0.35,0.43
-5421101,Social Work Practice Methods,4_2_15,Social Work,2,5,1,,Written coursework,0.35,1.0225,0.86,0.63,0.75,0.77,0.46,0.42
-542903,Drug Development & Formulation,4_2_15,Pharmacy,2,5,2,,Written coursework,0.47,1.0045,0.73,0.65,0.84,0.71,0.47,0.43
-5421104,Practice Placement,4_2_15,Occupational Therapy,2,5,2,,Practical exam,0.58,0.9704,0.62,0.67,0.86,0.62,0.45,0.55
-642602,Complex Birth & Risk Management,4_2_15,Midwifery,3,6,1,,Viva,0.8,0.889,0.65,0.71,0.39,0.56,0.68,0.75
-642701,Advanced Clinical Practice,4_2_15,Nursing and Care,3,6,1,,Practical exam,0.75,0.9075,0.53,0.6,0.95,0.54,0.74,0.71
-642404,Major Practical Project / Portfolio,4_2_15,Herbal Practice and Energy Work,3,6,2,1.0,Professional artefact,0.95,0.8335,0.65,0.65,0.77,0.38,0.95,0.87
-642503,Holistic Assessment & Intervention,4_2_15,Integrated Mind-Body,3,6,2,,Written coursework,0.82,0.8816,0.76,0.6,0.69,0.77,0.71,0.8
-5421102,Mental Health & Vulnerability,4_2_16,Social Work,2,5,1,,Groupwork,0.58,0.9704,0.78,0.78,0.54,0.87,0.54,0.61
-5421201,"Trauma, Regulation & Embodiment",4_2_16,Somatic Wellbeing Enquiry,2,5,1,,Written coursework,0.53,0.9889,0.68,0.62,0.68,0.65,0.47,0.47
-542904,Clinical Pharmacy Practice,4_2_16,Pharmacy,2,5,2,,Practical exam,0.45,1.0075,0.48,0.66,0.92,0.54,0.36,0.42
-5421003,Cardiopulmonary Physiotherapy,4_2_16,Physiotherapy,2,5,2,,Written coursework,0.58,0.9704,0.71,0.68,0.72,0.75,0.67,0.55
-642702,Complex Care & Decision-Making,4_2_16,Nursing and Care,3,6,1,,Presentation,0.7,0.926,0.78,0.68,0.63,0.76,0.62,0.7
-642801,Advanced Occupational Therapy Practice,4_2_16,Occupational Therapy,3,6,1,,Professional artefact,0.86,0.8668,0.85,0.73,0.65,0.8,0.8,0.73
-642504,Dissertation / Practice Portfolio,4_2_16,Integrated Mind-Body,3,6,2,1.0,Written coursework,0.87,0.8631,0.78,0.72,0.54,0.38,0.95,0.79
-642603,Leadership in Maternity Care,4_2_16,Midwifery,3,6,2,,Professional artefact,0.79,0.8927,0.81,0.74,0.63,0.69,0.69,0.75
-5421202,Somatic Research Methods,4_2_17,Somatic Wellbeing Enquiry,2,5,1,,Professional artefact,0.6,0.963,0.77,0.73,0.74,0.77,0.52,0.56
-5421004,Clinical Skills & Assessment,4_2_17,Physiotherapy,2,5,2,,Practical exam,0.42,1.012,0.62,0.67,0.9,0.54,0.37,0.38
-5421103,"Ethics, Power & Inequality",4_2_17,Social Work,2,5,2,,Multi-choice exam,0.59,0.9667,0.6,0.67,0.47,0.64,0.51,0.53
-642901,Dissertation / Research Project,4_2_17,Pharmacy,3,6,1,1.0,Written coursework,0.94,0.8372,0.66,0.76,0.65,0.38,0.95,0.81
-6421002,Complex Case Management,4_2_17,Occupational Therapy,3,6,1,,Written coursework,0.61,0.9593,0.65,0.63,0.48,0.55,0.78,0.63
-642604,Dissertation / Practice Portfolio,4_2_17,Midwifery,3,6,2,1.0,Written coursework,0.95,0.8335,0.81,0.7,0.65,0.38,0.95,0.8
-642703,Leadership in Healthcare Settings,4_2_17,Nursing and Care,3,6,2,,Groupwork,0.59,0.9667,0.94,0.71,0.74,0.95,0.57,0.64
-5421104,Practice Placement,4_2_18,Social Work,2,5,2,,Practical exam,0.49,1.0015,0.66,0.62,0.95,0.65,0.53,0.49
-5421203,Integrative Wellbeing Practices,4_2_18,Somatic Wellbeing Enquiry,2,5,2,,Groupwork,0.49,1.0015,0.83,0.65,0.73,0.84,0.59,0.56
-642902,Patient Care & Clinical Decision-Making,4_2_18,Pharmacy,3,6,1,,Practical exam,0.65,0.9445,0.52,0.7,0.9,0.54,0.64,0.63
-6421001,Advanced Rehabilitation Practice,4_2_18,Physiotherapy,3,6,1,,Written coursework,0.68,0.9334,0.73,0.69,0.66,0.73,0.71,0.69
-642704,Dissertation / Practice Portfolio,4_2_18,Nursing and Care,3,6,2,1.0,Written coursework,0.78,0.8964,0.72,0.72,0.56,0.38,0.91,0.69
-642802,Community & Social Inclusion,4_2_18,Occupational Therapy,3,6,2,,Written coursework,0.75,0.9075,0.72,0.67,0.83,0.74,0.69,0.74
-5421204,Relational & Group Dynamics,4_2_19,Somatic Wellbeing Enquiry,2,5,2,,Written coursework,0.51,0.9963,0.73,0.68,0.66,0.72,0.69,0.54
-6421002,Complex Case Management,4_2_19,Physiotherapy,3,6,1,,Viva,0.72,0.9186,0.64,0.67,0.42,0.57,0.87,0.69
-6421101,Advanced Social Work Practice,4_2_19,Social Work,3,6,1,,Professional artefact,0.65,0.9445,0.81,0.74,0.67,0.8,0.7,0.63
-642803,Dissertation / Practice Portfolio,4_2_19,Occupational Therapy,3,6,2,1.0,Written coursework,0.7,0.926,0.67,0.72,0.6,0.38,0.94,0.64
-642903,Medicines Management & Public Health,4_2_19,Pharmacy,3,6,2,,Written coursework,0.61,0.9593,0.79,0.65,0.44,0.73,0.63,0.68
-6421102,"Risk, Protection & Complex Cases",4_2_20,Social Work,3,6,1,,Written coursework,0.65,0.9445,0.74,0.7,0.68,0.8,0.56,0.68
-6421201,Advanced Somatic Enquiry,4_2_20,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.72,0.9186,0.84,0.73,0.65,0.95,0.79,0.7
-642904,Professional Practice & Ethics,4_2_20,Pharmacy,3,6,2,,Written coursework,0.71,0.9223,0.7,0.7,0.48,0.57,0.62,0.65
-6421003,Leadership in Clinical Practice,4_2_20,Physiotherapy,3,6,2,,Practical exam,0.7,0.926,0.44,0.63,0.92,0.52,0.56,0.63
-6421202,Applied Embodied Interventions,4_2_21,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.77,0.9001,0.77,0.61,0.69,0.86,0.78,0.76
-6421004,Dissertation / Clinical Portfolio,4_2_21,Physiotherapy,3,6,2,1.0,Written coursework,0.95,0.8335,0.64,0.64,0.58,0.38,0.95,0.81
-6421103,Leadership & Professional Responsibility,4_2_21,Social Work,3,6,2,,Written coursework,0.55,0.9815,0.7,0.63,0.68,0.81,0.75,0.65
-6421104,Dissertation / Practice Portfolio,4_2_22,Social Work,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.7,0.54,0.38,0.95,0.81
-6421203,Ethics of Care & Presence,4_2_22,Somatic Wellbeing Enquiry,3,6,2,,Viva,0.81,0.8853,0.58,0.6,0.51,0.49,0.79,0.73
-6421204,Dissertation / Practice-Based Enquiry,4_2_23,Somatic Wellbeing Enquiry,3,6,2,1.0,Written coursework,0.95,0.8335,0.55,0.66,0.75,0.38,0.95,0.76
+442904,Introduction to Pharmacy Practice,4_2_9,Pharmacy,1,4,2,,Practical exam,0.4,1.015,0.53,0.61,0.87,0.61,0.21,0.34
+4421003,Physiology & Pathophysiology,4_2_10,Physiotherapy,1,4,2,,Groupwork,0.32,1.027,0.83,0.68,0.77,0.85,0.3,0.33
+542702,Pharmacology & Medication Management,4_2_7,Nursing and Care,2,5,1,,Written coursework,0.67,0.9371,0.67,0.64,0.64,0.43,0.52,0.55
+542801,Therapeutic Interventions & Techniques,4_2_8,Occupational Therapy,2,5,1,,Written coursework,0.31,1.0285,0.77,0.58,0.95,0.53,0.33,0.34
+542504,Therapeutic Communication,4_2_5,Integrated Mind-Body,2,5,2,,Written coursework,0.61,0.9593,0.72,0.64,0.63,0.74,0.48,0.54
+542603,Complications in Pregnancy & Birth,4_2_6,Midwifery,2,5,2,,Written coursework,0.5,1.0,0.8,0.62,0.73,0.8,0.5,0.54
+642401,Advanced Herbal Practice,4_2_4,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.67,0.9371,0.82,0.64,0.74,0.75,0.74,0.69
+4421202,Body Systems & Embodied Experience,4_2_12,Somatic Wellbeing Enquiry,1,4,1,,Groupwork,0.37,1.0195,0.98,0.73,0.59,0.95,0.31,0.42
+4421004,Professional Practice & Communication,4_2_10,Physiotherapy,1,4,2,,Written coursework,0.35,1.0225,0.9,0.55,0.83,0.83,0.28,0.33
+4421103,"Law, Policy & Welfare Systems",4_2_11,Social Work,1,4,2,,Written exam,0.33,1.0255,0.62,0.73,0.46,0.47,0.3,0.31
+542802,Mental Health & Physical Rehabilitation,4_2_8,Occupational Therapy,2,5,1,,Written coursework,0.51,0.9963,0.75,0.71,0.72,0.74,0.38,0.47
+542901,Pharmacokinetics & Pharmacodynamics,4_2_9,Pharmacy,2,5,1,,Written coursework,0.5,1.0,0.53,0.7,0.66,0.83,0.47,0.46
+542604,Clinical Practice Placement,4_2_6,Midwifery,2,5,2,,Practical exam,0.49,1.0015,0.6,0.62,0.88,0.58,0.44,0.45
+5421004,Clinical Skills & Assessment,4_2_7,Nursing and Care,2,5,2,,Practical exam,0.45,1.0075,0.66,0.67,0.86,0.59,0.49,0.45
+642402,Integrative Healing Systems,4_2_4,Herbal Practice and Energy Work,3,6,1,,Written coursework,0.6,0.963,0.8,0.64,0.81,0.79,0.75,0.63
+642501,Advanced Integrated Care Models,4_2_5,Integrated Mind-Body,3,6,1,,Presentation,0.68,0.9334,0.82,0.69,0.63,0.77,0.78,0.68
+4421104,Communication & Safeguarding,4_2_11,Social Work,1,4,2,,Groupwork,0.3,1.03,0.82,0.66,0.76,0.86,0.29,0.34
+4421203,"Movement, Breath & Attention",4_2_12,Somatic Wellbeing Enquiry,1,4,2,,Written coursework,0.28,1.033,0.71,0.66,0.72,0.77,0.47,0.4
+542902,Microbiology & Infectious Disease,4_2_9,Pharmacy,2,5,1,,Written coursework,0.51,0.9963,0.53,0.63,0.71,0.71,0.4,0.49
+5421001,Musculoskeletal Physiotherapy,4_2_10,Physiotherapy,2,5,1,,Written coursework,0.53,0.9889,0.74,0.61,0.76,0.74,0.46,0.52
+542803,Assistive Technology & Adaptation,4_2_8,Occupational Therapy,2,5,2,,Written coursework,0.52,0.9926,0.77,0.6,0.64,0.82,0.51,0.57
+5421104,Practice Placement,4_2_7,Nursing and Care,2,5,2,,Practical exam,0.33,1.0255,0.52,0.58,0.95,0.39,0.33,0.31
+642502,Complex Case Integration,4_2_5,Integrated Mind-Body,3,6,1,,Written coursework,0.79,0.8927,0.73,0.69,0.77,0.85,0.72,0.8
+642601,Advanced Midwifery Practice,4_2_6,Midwifery,3,6,1,,Written coursework,0.66,0.9408,0.78,0.68,0.72,0.83,0.64,0.71
+642403,Ethical Practice in Healing Arts,4_2_4,Herbal Practice and Energy Work,3,6,2,,Presentation,0.74,0.9112,0.78,0.78,0.55,0.81,0.63,0.75
+4421204,Introduction to Contemplative Practice,4_2_12,Somatic Wellbeing Enquiry,1,4,2,,Groupwork,0.36,1.021,0.87,0.6,0.76,0.85,0.37,0.36
+5421002,Neurological Rehabilitation,4_2_10,Physiotherapy,2,5,1,,Written coursework,0.46,1.006,0.72,0.69,0.72,0.78,0.35,0.43
+5421101,Social Work Practice Methods,4_2_11,Social Work,2,5,1,,Written coursework,0.35,1.0225,0.86,0.63,0.75,0.77,0.46,0.42
+542903,Drug Development & Formulation,4_2_9,Pharmacy,2,5,2,,Written coursework,0.47,1.0045,0.73,0.65,0.84,0.71,0.47,0.43
+5421104,Practice Placement,4_2_8,Occupational Therapy,2,5,2,,Practical exam,0.58,0.9704,0.62,0.67,0.86,0.62,0.45,0.55
+642602,Complex Birth & Risk Management,4_2_6,Midwifery,3,6,1,,Viva,0.8,0.889,0.65,0.71,0.39,0.56,0.68,0.75
+642701,Advanced Clinical Practice,4_2_7,Nursing and Care,3,6,1,,Practical exam,0.75,0.9075,0.53,0.6,0.95,0.54,0.74,0.71
+642404,Major Practical Project / Portfolio,4_2_4,Herbal Practice and Energy Work,3,6,2,1.0,Professional artefact,0.95,0.8335,0.65,0.65,0.77,0.38,0.95,0.87
+642503,Holistic Assessment & Intervention,4_2_5,Integrated Mind-Body,3,6,2,,Written coursework,0.82,0.8816,0.76,0.6,0.69,0.77,0.71,0.8
+5421102,Mental Health & Vulnerability,4_2_11,Social Work,2,5,1,,Groupwork,0.58,0.9704,0.78,0.78,0.54,0.87,0.54,0.61
+5421201,"Trauma, Regulation & Embodiment",4_2_12,Somatic Wellbeing Enquiry,2,5,1,,Written coursework,0.53,0.9889,0.68,0.62,0.68,0.65,0.47,0.47
+542904,Clinical Pharmacy Practice,4_2_9,Pharmacy,2,5,2,,Practical exam,0.45,1.0075,0.48,0.66,0.92,0.54,0.36,0.42
+5421003,Cardiopulmonary Physiotherapy,4_2_10,Physiotherapy,2,5,2,,Written coursework,0.58,0.9704,0.71,0.68,0.72,0.75,0.67,0.55
+642702,Complex Care & Decision-Making,4_2_7,Nursing and Care,3,6,1,,Presentation,0.7,0.926,0.78,0.68,0.63,0.76,0.62,0.7
+642801,Advanced Occupational Therapy Practice,4_2_8,Occupational Therapy,3,6,1,,Professional artefact,0.86,0.8668,0.85,0.73,0.65,0.8,0.8,0.73
+642504,Dissertation / Practice Portfolio,4_2_5,Integrated Mind-Body,3,6,2,1.0,Written coursework,0.87,0.8631,0.78,0.72,0.54,0.38,0.95,0.79
+642603,Leadership in Maternity Care,4_2_6,Midwifery,3,6,2,,Professional artefact,0.79,0.8927,0.81,0.74,0.63,0.69,0.69,0.75
+5421202,Somatic Research Methods,4_2_12,Somatic Wellbeing Enquiry,2,5,1,,Professional artefact,0.6,0.963,0.77,0.73,0.74,0.77,0.52,0.56
+5421004,Clinical Skills & Assessment,4_2_10,Physiotherapy,2,5,2,,Practical exam,0.42,1.012,0.62,0.67,0.9,0.54,0.37,0.38
+5421103,"Ethics, Power & Inequality",4_2_11,Social Work,2,5,2,,Multi-choice exam,0.59,0.9667,0.6,0.67,0.47,0.64,0.51,0.53
+642901,Dissertation / Research Project,4_2_9,Pharmacy,3,6,1,1.0,Written coursework,0.94,0.8372,0.66,0.76,0.65,0.38,0.95,0.81
+6421002,Complex Case Management,4_2_8,Occupational Therapy,3,6,1,,Written coursework,0.61,0.9593,0.65,0.63,0.48,0.55,0.78,0.63
+642604,Dissertation / Practice Portfolio,4_2_6,Midwifery,3,6,2,1.0,Written coursework,0.95,0.8335,0.81,0.7,0.65,0.38,0.95,0.8
+642703,Leadership in Healthcare Settings,4_2_7,Nursing and Care,3,6,2,,Groupwork,0.59,0.9667,0.94,0.71,0.74,0.95,0.57,0.64
+5421104,Practice Placement,4_2_11,Social Work,2,5,2,,Practical exam,0.49,1.0015,0.66,0.62,0.95,0.65,0.53,0.49
+5421203,Integrative Wellbeing Practices,4_2_12,Somatic Wellbeing Enquiry,2,5,2,,Groupwork,0.49,1.0015,0.83,0.65,0.73,0.84,0.59,0.56
+642902,Patient Care & Clinical Decision-Making,4_2_9,Pharmacy,3,6,1,,Practical exam,0.65,0.9445,0.52,0.7,0.9,0.54,0.64,0.63
+6421001,Advanced Rehabilitation Practice,4_2_10,Physiotherapy,3,6,1,,Written coursework,0.68,0.9334,0.73,0.69,0.66,0.73,0.71,0.69
+642704,Dissertation / Practice Portfolio,4_2_7,Nursing and Care,3,6,2,1.0,Written coursework,0.78,0.8964,0.72,0.72,0.56,0.38,0.91,0.69
+642802,Community & Social Inclusion,4_2_8,Occupational Therapy,3,6,2,,Written coursework,0.75,0.9075,0.72,0.67,0.83,0.74,0.69,0.74
+5421204,Relational & Group Dynamics,4_2_12,Somatic Wellbeing Enquiry,2,5,2,,Written coursework,0.51,0.9963,0.73,0.68,0.66,0.72,0.69,0.54
+6421002,Complex Case Management,4_2_10,Physiotherapy,3,6,1,,Viva,0.72,0.9186,0.64,0.67,0.42,0.57,0.87,0.69
+6421101,Advanced Social Work Practice,4_2_11,Social Work,3,6,1,,Professional artefact,0.65,0.9445,0.81,0.74,0.67,0.8,0.7,0.63
+642803,Dissertation / Practice Portfolio,4_2_8,Occupational Therapy,3,6,2,1.0,Written coursework,0.7,0.926,0.67,0.72,0.6,0.38,0.94,0.64
+642903,Medicines Management & Public Health,4_2_9,Pharmacy,3,6,2,,Written coursework,0.61,0.9593,0.79,0.65,0.44,0.73,0.63,0.68
+6421102,"Risk, Protection & Complex Cases",4_2_11,Social Work,3,6,1,,Written coursework,0.65,0.9445,0.74,0.7,0.68,0.8,0.56,0.68
+6421201,Advanced Somatic Enquiry,4_2_12,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.72,0.9186,0.84,0.73,0.65,0.95,0.79,0.7
+642904,Professional Practice & Ethics,4_2_9,Pharmacy,3,6,2,,Written coursework,0.71,0.9223,0.7,0.7,0.48,0.57,0.62,0.65
+6421003,Leadership in Clinical Practice,4_2_10,Physiotherapy,3,6,2,,Practical exam,0.7,0.926,0.44,0.63,0.92,0.52,0.56,0.63
+6421202,Applied Embodied Interventions,4_2_12,Somatic Wellbeing Enquiry,3,6,1,,Groupwork,0.77,0.9001,0.77,0.61,0.69,0.86,0.78,0.76
+6421004,Dissertation / Clinical Portfolio,4_2_10,Physiotherapy,3,6,2,1.0,Written coursework,0.95,0.8335,0.64,0.64,0.58,0.38,0.95,0.81
+6421103,Leadership & Professional Responsibility,4_2_11,Social Work,3,6,2,,Written coursework,0.55,0.9815,0.7,0.63,0.68,0.81,0.75,0.65
+6421104,Dissertation / Practice Portfolio,4_2_11,Social Work,3,6,2,1.0,Written coursework,0.95,0.8335,0.65,0.7,0.54,0.38,0.95,0.81
+6421203,Ethics of Care & Presence,4_2_12,Somatic Wellbeing Enquiry,3,6,2,,Viva,0.81,0.8853,0.58,0.6,0.51,0.49,0.79,0.73
+6421204,Dissertation / Practice-Based Enquiry,4_2_12,Somatic Wellbeing Enquiry,3,6,2,1.0,Written coursework,0.95,0.8335,0.55,0.66,0.75,0.38,0.95,0.76
 442401,Introduction to Herbal Lore,4_2_4,Herbal Practice and Energy Work,1,4,1,,Groupwork,0.18,1.048,0.82,0.7,0.76,0.84,0.41,0.28
-442402,Plant Identification & Ecology,4_2_5,Herbal Practice and Energy Work,1,4,1,,Groupwork,0.34,1.024,0.81,0.68,0.8,0.84,0.32,0.37
+442402,Plant Identification & Ecology,4_2_4,Herbal Practice and Energy Work,1,4,1,,Groupwork,0.34,1.024,0.81,0.68,0.8,0.84,0.32,0.37
 442501,Foundations of Mind-Body Systems,4_2_5,Integrated Mind-Body,1,4,1,,Written coursework,0.29,1.0315,0.69,0.68,0.69,0.8,0.3,0.34
-442502,Anatomy & Physiology,4_2_6,Integrated Mind-Body,1,4,1,,Written coursework,0.38,1.018,0.75,0.63,0.76,0.82,0.48,0.41
+442502,Anatomy & Physiology,4_2_5,Integrated Mind-Body,1,4,1,,Written coursework,0.38,1.018,0.75,0.63,0.76,0.82,0.48,0.41
 442601,Foundations of Midwifery Care,4_2_6,Midwifery,1,4,1,,Written coursework,0.24,1.039,0.72,0.66,0.82,0.81,0.28,0.31
-442403,Foundations of Vital Energies,4_2_6,Herbal Practice and Energy Work,1,4,2,,Professional artefact,0.45,1.0075,0.74,0.76,0.68,0.77,0.34,0.44
-442602,Anatomy & Physiology of Birth,4_2_7,Midwifery,1,4,1,,Written coursework,0.27,1.0345,0.89,0.64,0.74,0.78,0.31,0.31
+442403,Foundations of Vital Energies,4_2_4,Herbal Practice and Energy Work,1,4,2,,Professional artefact,0.45,1.0075,0.74,0.76,0.68,0.77,0.34,0.44
+442602,Anatomy & Physiology of Birth,4_2_6,Midwifery,1,4,1,,Written coursework,0.27,1.0345,0.89,0.64,0.74,0.78,0.31,0.31
 442701,Foundations of Nursing Practice,4_2_7,Nursing and Care,1,4,1,,Presentation,0.33,1.0255,0.79,0.67,0.79,0.65,0.35,0.33
-442404,Preparation & Safety in Herbal Practice,4_2_7,Herbal Practice and Energy Work,1,4,2,,Groupwork,0.43,1.0105,0.84,0.67,0.76,0.85,0.47,0.49
-442503,Introduction to Somatic Practice,4_2_7,Integrated Mind-Body,1,4,2,,Written coursework,0.26,1.036,0.75,0.55,0.88,0.71,0.19,0.37
-442502,Anatomy & Physiology,4_2_8,Nursing and Care,1,4,1,,Written coursework,0.4,1.015,0.83,0.54,0.85,0.78,0.35,0.38
+442404,Preparation & Safety in Herbal Practice,4_2_4,Herbal Practice and Energy Work,1,4,2,,Groupwork,0.43,1.0105,0.84,0.67,0.76,0.85,0.47,0.49
+442503,Introduction to Somatic Practice,4_2_5,Integrated Mind-Body,1,4,2,,Written coursework,0.26,1.036,0.75,0.55,0.88,0.71,0.19,0.37
+442502,Anatomy & Physiology,4_2_7,Nursing and Care,1,4,1,,Written coursework,0.4,1.015,0.83,0.54,0.85,0.78,0.35,0.38
 442801,Introduction to Occupational Therapy,4_2_8,Occupational Therapy,1,4,1,,Practical exam,0.43,1.0105,0.7,0.58,0.77,0.69,0.37,0.4
-442504,"Health, Stress & Regulation",4_2_8,Integrated Mind-Body,1,4,2,,Practical exam,0.26,1.036,0.68,0.64,0.82,0.78,0.23,0.29
-442603,Pregnancy & Prenatal Development,4_2_8,Midwifery,1,4,2,,Written coursework,0.35,1.0225,0.83,0.64,0.85,0.82,0.31,0.29
-542401,Applied Herbal Formulations,4_2_8,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.78,0.69,0.73,0.81,0.48,0.5
+442504,"Health, Stress & Regulation",4_2_5,Integrated Mind-Body,1,4,2,,Practical exam,0.26,1.036,0.68,0.64,0.82,0.78,0.23,0.29
+442603,Pregnancy & Prenatal Development,4_2_6,Midwifery,1,4,2,,Written coursework,0.35,1.0225,0.83,0.64,0.85,0.82,0.31,0.29
+542401,Applied Herbal Formulations,4_2_4,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.78,0.69,0.73,0.81,0.48,0.5
 442901,Foundations of Pharmacology,4_2_9,Pharmacy,1,4,1,,Practical exam,0.36,1.021,0.53,0.63,0.74,0.86,0.39,0.45
-4421001,"Anatomy, Physiology & Movement",4_2_9,Occupational Therapy,1,4,1,,Written coursework,0.41,1.0135,0.77,0.65,0.81,0.81,0.34,0.4
-442604,Professional Practice & Ethics,4_2_9,Midwifery,1,4,2,,Written coursework,0.33,1.0255,0.6,0.66,0.55,0.57,0.43,0.33
-442702,Fundamentals of Patient Care,4_2_9,Nursing and Care,1,4,2,,Presentation,0.35,1.0225,0.76,0.73,0.59,0.8,0.39,0.41
-542402,Energy Systems & Balance,4_2_9,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.77,0.72,0.74,0.67,0.4,0.53
-542501,Psychosomatic Health,4_2_9,Integrated Mind-Body,2,5,1,,Practical exam,0.58,0.9704,0.7,0.66,0.75,0.72,0.51,0.5
-551304,Interfacing Mechanical and Magical Systems,5_1_10,Systems Engineering,2,5,2,,Written coursework,0.5,1.0,0.66,0.65,0.72,0.76,0.49,0.53
-651201,Advanced Mechanical Systems,5_1_10,Mechanical Engineering,3,6,1,,Presentation,0.69,0.9297,0.87,0.71,0.73,0.78,0.65,0.65
-651202,Power Transmission & Energy Systems,5_1_11,Mechanical Engineering,3,6,1,,Written coursework,0.77,0.9001,0.82,0.61,0.76,0.8,0.69,0.77
-651301,Advanced Systems Architecture,5_1_11,Systems Engineering,3,6,1,,Written coursework,0.72,0.9186,0.73,0.59,0.67,0.93,0.81,0.74
-651302,Large-Scale Infrastructure Design,5_1_12,Systems Engineering,3,6,1,,Written coursework,0.58,0.9704,0.73,0.65,0.71,0.8,0.65,0.64
-651203,Dissertation / Practice-Based Enquiry,5_1_12,Mechanical Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.77,0.62,0.65,0.38,0.95,0.82
-651204,Professional Engineering Practice,5_1_13,Mechanical Engineering,3,6,2,,Written coursework,0.73,0.9149,0.82,0.68,0.64,0.83,0.73,0.77
-651303,Failure Analysis & System Resilience,5_1_13,Systems Engineering,3,6,2,,Written coursework,0.59,0.9667,0.6,0.59,0.52,0.58,0.66,0.62
-651304,Capstone Systems Integration Project,5_1_14,Systems Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.62,0.7,0.64,0.38,0.95,0.76
+4421001,"Anatomy, Physiology & Movement",4_2_8,Occupational Therapy,1,4,1,,Written coursework,0.41,1.0135,0.77,0.65,0.81,0.81,0.34,0.4
+442604,Professional Practice & Ethics,4_2_6,Midwifery,1,4,2,,Written coursework,0.33,1.0255,0.6,0.66,0.55,0.57,0.43,0.33
+442702,Fundamentals of Patient Care,4_2_7,Nursing and Care,1,4,2,,Presentation,0.35,1.0225,0.76,0.73,0.59,0.8,0.39,0.41
+542402,Energy Systems & Balance,4_2_4,Herbal Practice and Energy Work,2,5,1,,Presentation,0.5,1.0,0.77,0.72,0.74,0.67,0.4,0.53
+542501,Psychosomatic Health,4_2_5,Integrated Mind-Body,2,5,1,,Practical exam,0.58,0.9704,0.7,0.66,0.75,0.72,0.51,0.5
+551304,Interfacing Mechanical and Magical Systems,5_1_3,Systems Engineering,2,5,2,,Written coursework,0.5,1.0,0.66,0.65,0.72,0.76,0.49,0.53
+651201,Advanced Mechanical Systems,5_1_2,Mechanical Engineering,3,6,1,,Presentation,0.69,0.9297,0.87,0.71,0.73,0.78,0.65,0.65
+651202,Power Transmission & Energy Systems,5_1_2,Mechanical Engineering,3,6,1,,Written coursework,0.77,0.9001,0.82,0.61,0.76,0.8,0.69,0.77
+651301,Advanced Systems Architecture,5_1_3,Systems Engineering,3,6,1,,Written coursework,0.72,0.9186,0.73,0.59,0.67,0.93,0.81,0.74
+651302,Large-Scale Infrastructure Design,5_1_3,Systems Engineering,3,6,1,,Written coursework,0.58,0.9704,0.73,0.65,0.71,0.8,0.65,0.64
+651203,Dissertation / Practice-Based Enquiry,5_1_2,Mechanical Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.77,0.62,0.65,0.38,0.95,0.82
+651204,Professional Engineering Practice,5_1_2,Mechanical Engineering,3,6,2,,Written coursework,0.73,0.9149,0.82,0.68,0.64,0.83,0.73,0.77
+651303,Failure Analysis & System Resilience,5_1_3,Systems Engineering,3,6,2,,Written coursework,0.59,0.9667,0.6,0.59,0.52,0.58,0.66,0.62
+651304,Capstone Systems Integration Project,5_1_3,Systems Engineering,3,6,2,1.0,Written coursework,0.95,0.8335,0.62,0.7,0.64,0.38,0.95,0.76
 451201,Foundations of Mechanics,5_1_2,Mechanical Engineering,1,4,1,,Written coursework,0.25,1.0375,0.79,0.57,0.91,0.75,0.3,0.28
-451202,Materials & Craft of Metals and Stone,5_1_3,Mechanical Engineering,1,4,1,,Practical exam,0.31,1.0285,0.54,0.61,0.82,0.75,0.5,0.35
+451202,Materials & Craft of Metals and Stone,5_1_2,Mechanical Engineering,1,4,1,,Practical exam,0.31,1.0285,0.54,0.61,0.82,0.75,0.5,0.35
 451301,Introduction to Systems Thinking,5_1_3,Systems Engineering,1,4,1,,Written coursework,0.34,1.024,0.73,0.61,0.73,0.71,0.31,0.35
-451302,Basic Engineering Principles,5_1_4,Systems Engineering,1,4,1,,Groupwork,0.44,1.009,0.76,0.66,0.67,0.87,0.42,0.41
-451203,Thermodynamics of Engines,5_1_4,Mechanical Engineering,1,4,2,,Practical exam,0.24,1.039,0.44,0.59,0.88,0.85,0.36,0.33
-451204,Technical Drawing & Workshop Practice,5_1_5,Mechanical Engineering,1,4,2,,Practical exam,0.2,1.045,0.3,0.64,0.88,0.57,0.24,0.28
-451303,"Signals, Flows & Feedback Loops",5_1_5,Systems Engineering,1,4,2,,Practical exam,0.32,1.027,0.66,0.61,0.91,0.78,0.37,0.37
-451304,Tools of Measurement & Analysis,5_1_6,Systems Engineering,1,4,2,,Written exam,0.28,1.033,0.54,0.63,0.53,0.52,0.35,0.24
-551201,Dynamics of Machines,5_1_6,Mechanical Engineering,2,5,1,,Practical exam,0.5,1.0,0.44,0.58,0.81,0.89,0.51,0.5
-551202,Fluid Systems & Hydraulic Power,5_1_7,Mechanical Engineering,2,5,1,,Practical exam,0.58,0.9704,0.44,0.66,0.76,0.88,0.65,0.57
-551301,Integrated System Design,5_1_7,Systems Engineering,2,5,1,,Written coursework,0.47,1.0045,0.73,0.61,0.81,0.76,0.52,0.47
-551302,Control Systems & Automation,5_1_8,Systems Engineering,2,5,1,,Practical exam,0.48,1.003,0.69,0.68,0.75,0.67,0.45,0.42
-551203,Structural Mechanics,5_1_8,Mechanical Engineering,2,5,2,,Written coursework,0.56,0.9778,0.74,0.69,0.71,0.73,0.41,0.6
-551204,Mechanical Design & Fabrication,5_1_9,Mechanical Engineering,2,5,2,,Practical exam,0.5,1.0,0.59,0.58,0.95,0.44,0.42,0.44
-551303,Reliability & Risk in Complex Systems,5_1_9,Systems Engineering,2,5,2,,Practical exam,0.56,0.9778,0.66,0.69,0.74,0.79,0.54,0.56
-552502,Complex Networked Mechanisms,5_2_10,Multi-system Technology,2,5,1,,Written coursework,0.63,0.9519,0.89,0.6,0.65,0.83,0.7,0.64
-552601,Applied Mycelial Engineering,5_2_10,Mycelial Cultivation and Biotech,2,5,1,,Written coursework,0.44,1.009,0.74,0.61,0.67,0.73,0.57,0.5
-552403,Autonomous Devices & Constructs,5_2_10,Modern Technologies,2,5,2,,Written coursework,0.58,0.9704,0.75,0.66,0.66,0.74,0.48,0.48
-552602,Bio-Systems Integration & Growth Environments,5_2_11,Mycelial Cultivation and Biotech,2,5,1,,Groupwork,0.67,0.9371,0.79,0.6,0.78,0.84,0.67,0.65
-552404,Technology Ethics & Society,5_2_11,Modern Technologies,2,5,2,,Written exam,0.58,0.9704,0.66,0.61,0.49,0.61,0.59,0.55
-552503,Adaptive Control Systems,5_2_11,Multi-system Technology,2,5,2,,Written coursework,0.58,0.9704,0.73,0.64,0.7,0.8,0.51,0.62
-552504,Field Testing & Diagnostics,5_2_12,Multi-system Technology,2,5,2,,Practical exam,0.41,1.0135,0.47,0.55,0.95,0.47,0.69,0.45
-552603,Genetic Modification of Organisms,5_2_12,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.45,1.0075,0.69,0.74,0.6,0.76,0.49,0.48
-652401,Advanced Technological Applications,5_2_12,Modern Technologies,3,6,1,,Written coursework,0.88,0.8594,0.72,0.63,0.75,0.78,0.8,0.88
-552604,Symbiotic Systems & Ecological Roles,5_2_13,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.48,1.003,0.68,0.58,0.71,0.83,0.42,0.54
-652402,Future Systems Design,5_2_13,Modern Technologies,3,6,1,,Written coursework,0.73,0.9149,0.8,0.62,0.75,0.83,0.83,0.71
-652501,Advanced Multi-System Engineering,5_2_13,Multi-system Technology,3,6,1,,Written coursework,0.76,0.9038,0.79,0.6,0.75,0.72,0.89,0.79
-652502,Self-Regulating Infrastructure,5_2_14,Multi-system Technology,3,6,1,,Written coursework,0.58,0.9704,0.69,0.66,0.65,0.81,0.59,0.68
-652601,Advanced Biotechnological Design,5_2_14,Mycelial Cultivation and Biotech,3,6,1,,Groupwork,0.66,0.9408,0.88,0.7,0.7,0.91,0.69,0.73
-652403,Cross-Realm Tech Integration,5_2_14,Modern Technologies,3,6,2,,Written coursework,0.87,0.8631,0.8,0.4,0.95,0.8,0.72,0.77
-652602,Living Infrastructure & Material Production,5_2_15,Mycelial Cultivation and Biotech,3,6,1,,Written coursework,0.82,0.8816,0.72,0.62,0.83,0.8,0.66,0.77
-652404,Innovation Capstone Project,5_2_15,Modern Technologies,3,6,2,1.0,Written coursework,0.91,0.8483,0.56,0.69,0.69,0.38,0.95,0.76
-652503,System Harmony & Stability Design,5_2_15,Multi-system Technology,3,6,2,,Written coursework,0.81,0.8853,0.84,0.55,0.74,0.73,0.77,0.81
-652504,Major Integration Project,5_2_16,Multi-system Technology,3,6,2,1.0,Professional artefact,0.95,0.8335,0.62,0.62,0.58,0.38,0.95,0.8
-652603,Ethical Practice in Bio-Engineering,5_2_16,Mycelial Cultivation and Biotech,3,6,2,,Practical exam,0.84,0.8742,0.68,0.69,0.78,0.76,0.78,0.78
-652604,Major Research / Cultivation Project,5_2_17,Mycelial Cultivation and Biotech,3,6,2,1.0,Professional artefact,0.95,0.8335,0.63,0.6,0.83,0.38,0.95,0.84
+451302,Basic Engineering Principles,5_1_3,Systems Engineering,1,4,1,,Groupwork,0.44,1.009,0.76,0.66,0.67,0.87,0.42,0.41
+451203,Thermodynamics of Engines,5_1_2,Mechanical Engineering,1,4,2,,Practical exam,0.24,1.039,0.44,0.59,0.88,0.85,0.36,0.33
+451204,Technical Drawing & Workshop Practice,5_1_2,Mechanical Engineering,1,4,2,,Practical exam,0.2,1.045,0.3,0.64,0.88,0.57,0.24,0.28
+451303,"Signals, Flows & Feedback Loops",5_1_3,Systems Engineering,1,4,2,,Practical exam,0.32,1.027,0.66,0.61,0.91,0.78,0.37,0.37
+451304,Tools of Measurement & Analysis,5_1_3,Systems Engineering,1,4,2,,Written exam,0.28,1.033,0.54,0.63,0.53,0.52,0.35,0.24
+551201,Dynamics of Machines,5_1_2,Mechanical Engineering,2,5,1,,Practical exam,0.5,1.0,0.44,0.58,0.81,0.89,0.51,0.5
+551202,Fluid Systems & Hydraulic Power,5_1_2,Mechanical Engineering,2,5,1,,Practical exam,0.58,0.9704,0.44,0.66,0.76,0.88,0.65,0.57
+551301,Integrated System Design,5_1_3,Systems Engineering,2,5,1,,Written coursework,0.47,1.0045,0.73,0.61,0.81,0.76,0.52,0.47
+551302,Control Systems & Automation,5_1_3,Systems Engineering,2,5,1,,Practical exam,0.48,1.003,0.69,0.68,0.75,0.67,0.45,0.42
+551203,Structural Mechanics,5_1_2,Mechanical Engineering,2,5,2,,Written coursework,0.56,0.9778,0.74,0.69,0.71,0.73,0.41,0.6
+551204,Mechanical Design & Fabrication,5_1_2,Mechanical Engineering,2,5,2,,Practical exam,0.5,1.0,0.59,0.58,0.95,0.44,0.42,0.44
+551303,Reliability & Risk in Complex Systems,5_1_3,Systems Engineering,2,5,2,,Practical exam,0.56,0.9778,0.66,0.69,0.74,0.79,0.54,0.56
+552502,Complex Networked Mechanisms,5_2_5,Multi-system Technology,2,5,1,,Written coursework,0.63,0.9519,0.89,0.6,0.65,0.83,0.7,0.64
+552601,Applied Mycelial Engineering,5_2_6,Mycelial Cultivation and Biotech,2,5,1,,Written coursework,0.44,1.009,0.74,0.61,0.67,0.73,0.57,0.5
+552403,Autonomous Devices & Constructs,5_2_4,Modern Technologies,2,5,2,,Written coursework,0.58,0.9704,0.75,0.66,0.66,0.74,0.48,0.48
+552602,Bio-Systems Integration & Growth Environments,5_2_6,Mycelial Cultivation and Biotech,2,5,1,,Groupwork,0.67,0.9371,0.79,0.6,0.78,0.84,0.67,0.65
+552404,Technology Ethics & Society,5_2_4,Modern Technologies,2,5,2,,Written exam,0.58,0.9704,0.66,0.61,0.49,0.61,0.59,0.55
+552503,Adaptive Control Systems,5_2_5,Multi-system Technology,2,5,2,,Written coursework,0.58,0.9704,0.73,0.64,0.7,0.8,0.51,0.62
+552504,Field Testing & Diagnostics,5_2_5,Multi-system Technology,2,5,2,,Practical exam,0.41,1.0135,0.47,0.55,0.95,0.47,0.69,0.45
+552603,Genetic Modification of Organisms,5_2_6,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.45,1.0075,0.69,0.74,0.6,0.76,0.49,0.48
+652401,Advanced Technological Applications,5_2_4,Modern Technologies,3,6,1,,Written coursework,0.88,0.8594,0.72,0.63,0.75,0.78,0.8,0.88
+552604,Symbiotic Systems & Ecological Roles,5_2_6,Mycelial Cultivation and Biotech,2,5,2,,Written coursework,0.48,1.003,0.68,0.58,0.71,0.83,0.42,0.54
+652402,Future Systems Design,5_2_4,Modern Technologies,3,6,1,,Written coursework,0.73,0.9149,0.8,0.62,0.75,0.83,0.83,0.71
+652501,Advanced Multi-System Engineering,5_2_5,Multi-system Technology,3,6,1,,Written coursework,0.76,0.9038,0.79,0.6,0.75,0.72,0.89,0.79
+652502,Self-Regulating Infrastructure,5_2_5,Multi-system Technology,3,6,1,,Written coursework,0.58,0.9704,0.69,0.66,0.65,0.81,0.59,0.68
+652601,Advanced Biotechnological Design,5_2_6,Mycelial Cultivation and Biotech,3,6,1,,Groupwork,0.66,0.9408,0.88,0.7,0.7,0.91,0.69,0.73
+652403,Cross-Realm Tech Integration,5_2_4,Modern Technologies,3,6,2,,Written coursework,0.87,0.8631,0.8,0.4,0.95,0.8,0.72,0.77
+652602,Living Infrastructure & Material Production,5_2_6,Mycelial Cultivation and Biotech,3,6,1,,Written coursework,0.82,0.8816,0.72,0.62,0.83,0.8,0.66,0.77
+652404,Innovation Capstone Project,5_2_4,Modern Technologies,3,6,2,1.0,Written coursework,0.91,0.8483,0.56,0.69,0.69,0.38,0.95,0.76
+652503,System Harmony & Stability Design,5_2_5,Multi-system Technology,3,6,2,,Written coursework,0.81,0.8853,0.84,0.55,0.74,0.73,0.77,0.81
+652504,Major Integration Project,5_2_5,Multi-system Technology,3,6,2,1.0,Professional artefact,0.95,0.8335,0.62,0.62,0.58,0.38,0.95,0.8
+652603,Ethical Practice in Bio-Engineering,5_2_6,Mycelial Cultivation and Biotech,3,6,2,,Practical exam,0.84,0.8742,0.68,0.69,0.78,0.76,0.78,0.78
+652604,Major Research / Cultivation Project,5_2_6,Mycelial Cultivation and Biotech,3,6,2,1.0,Professional artefact,0.95,0.8335,0.63,0.6,0.83,0.38,0.95,0.84
 452401,Introduction to Contemporary Arcane-Technics,5_2_4,Modern Technologies,1,4,1,,Practical exam,0.4,1.015,0.69,0.62,0.75,0.8,0.41,0.42
-452402,Materials of the Modern Age,5_2_5,Modern Technologies,1,4,1,,Practical exam,0.31,1.0285,0.62,0.5,0.83,0.75,0.3,0.34
+452402,Materials of the Modern Age,5_2_4,Modern Technologies,1,4,1,,Practical exam,0.31,1.0285,0.62,0.5,0.83,0.75,0.3,0.34
 452501,Foundations of Multi-System Design,5_2_5,Multi-system Technology,1,4,1,,Written coursework,0.58,0.9704,0.74,0.57,0.72,0.76,0.41,0.51
-452502,Interoperability of Magical & Mechanical Systems,5_2_6,Multi-system Technology,1,4,1,,Written coursework,0.28,1.033,0.72,0.59,0.79,0.66,0.38,0.27
+452502,Interoperability of Magical & Mechanical Systems,5_2_5,Multi-system Technology,1,4,1,,Written coursework,0.28,1.033,0.72,0.59,0.79,0.66,0.38,0.27
 452601,Introduction to Mycology & Mycelial Systems,5_2_6,Mycelial Cultivation and Biotech,1,4,1,,Written coursework,0.5,1.0,0.75,0.69,0.71,0.74,0.57,0.53
-452403,"Energy, Power & Light Systems",5_2_6,Modern Technologies,1,4,2,,Written coursework,0.35,1.0225,0.63,0.66,0.71,0.87,0.26,0.44
-452602,Cellular Biology of Fungal Networks,5_2_7,Mycelial Cultivation and Biotech,1,4,1,,Practical exam,0.43,1.0105,0.6,0.62,0.8,0.9,0.46,0.47
-452404,Digital-Magical Interfaces,5_2_7,Modern Technologies,1,4,2,,Written coursework,0.36,1.021,0.76,0.63,0.67,0.79,0.33,0.38
-452503,Energy Routing & Distribution,5_2_7,Multi-system Technology,1,4,2,,Groupwork,0.36,1.021,0.81,0.6,0.76,0.84,0.36,0.39
-452504,Basic System Architecture,5_2_8,Multi-system Technology,1,4,2,,Written coursework,0.31,1.0285,0.72,0.63,0.8,0.69,0.28,0.29
-452603,Laboratory Skills & Safe Cultivation,5_2_8,Mycelial Cultivation and Biotech,1,4,2,,Practical exam,0.21,1.0435,0.61,0.52,0.95,0.55,0.25,0.19
-552401,Emerging Technologies & Innovations,5_2_8,Modern Technologies,2,5,1,,Written coursework,0.67,0.9371,0.75,0.56,0.78,0.83,0.53,0.67
-452604,Principles of Biotechnical Design,5_2_9,Mycelial Cultivation and Biotech,1,4,2,,Written coursework,0.4,1.015,0.73,0.62,0.74,0.85,0.45,0.43
-552402,Enchanted Systems,5_2_9,Modern Technologies,2,5,1,,Practical exam,0.57,0.9741,0.63,0.59,0.75,0.86,0.61,0.6
-552501,Hybrid Systems Integration,5_2_9,Multi-system Technology,2,5,1,,Written coursework,0.6,0.963,0.65,0.68,0.68,0.83,0.44,0.54
-453902,Organic Chemistry Fundamentals,5_3_10,Chemistry,1,4,1,,Practical exam,0.33,1.0255,0.61,0.5,0.9,0.76,0.23,0.28
+452403,"Energy, Power & Light Systems",5_2_4,Modern Technologies,1,4,2,,Written coursework,0.35,1.0225,0.63,0.66,0.71,0.87,0.26,0.44
+452602,Cellular Biology of Fungal Networks,5_2_6,Mycelial Cultivation and Biotech,1,4,1,,Practical exam,0.43,1.0105,0.6,0.62,0.8,0.9,0.46,0.47
+452404,Digital-Magical Interfaces,5_2_4,Modern Technologies,1,4,2,,Written coursework,0.36,1.021,0.76,0.63,0.67,0.79,0.33,0.38
+452503,Energy Routing & Distribution,5_2_5,Multi-system Technology,1,4,2,,Groupwork,0.36,1.021,0.81,0.6,0.76,0.84,0.36,0.39
+452504,Basic System Architecture,5_2_5,Multi-system Technology,1,4,2,,Written coursework,0.31,1.0285,0.72,0.63,0.8,0.69,0.28,0.29
+452603,Laboratory Skills & Safe Cultivation,5_2_6,Mycelial Cultivation and Biotech,1,4,2,,Practical exam,0.21,1.0435,0.61,0.52,0.95,0.55,0.25,0.19
+552401,Emerging Technologies & Innovations,5_2_4,Modern Technologies,2,5,1,,Written coursework,0.67,0.9371,0.75,0.56,0.78,0.83,0.53,0.67
+452604,Principles of Biotechnical Design,5_2_6,Mycelial Cultivation and Biotech,1,4,2,,Written coursework,0.4,1.015,0.73,0.62,0.74,0.85,0.45,0.43
+552402,Enchanted Systems,5_2_4,Modern Technologies,2,5,1,,Practical exam,0.57,0.9741,0.63,0.59,0.75,0.86,0.61,0.6
+552501,Hybrid Systems Integration,5_2_5,Multi-system Technology,2,5,1,,Written coursework,0.6,0.963,0.65,0.68,0.68,0.83,0.44,0.54
+453902,Organic Chemistry Fundamentals,5_3_9,Chemistry,1,4,1,,Practical exam,0.33,1.0255,0.61,0.5,0.9,0.76,0.23,0.28
 4531001,Earth Systems & Environments,5_3_10,Environmental Science,1,4,1,,Practical exam,0.39,1.0165,0.6,0.58,0.89,0.81,0.46,0.4
-453704,Evolutionary Biology,5_3_10,Biology,1,4,2,,Written coursework,0.43,1.0105,0.8,0.61,0.77,0.81,0.4,0.39
-453803,Biochemistry for Life Sciences,5_3_10,Biomedical Science,1,4,2,,Practical exam,0.24,1.039,0.55,0.58,0.75,0.73,0.36,0.31
-4531002,Ecology & Biodiversity,5_3_11,Environmental Science,1,4,1,,Written coursework,0.35,1.0225,0.81,0.61,0.67,0.73,0.28,0.38
+453704,Evolutionary Biology,5_3_7,Biology,1,4,2,,Written coursework,0.43,1.0105,0.8,0.61,0.77,0.81,0.4,0.39
+453803,Biochemistry for Life Sciences,5_3_8,Biomedical Science,1,4,2,,Practical exam,0.24,1.039,0.55,0.58,0.75,0.73,0.36,0.31
+4531002,Ecology & Biodiversity,5_3_10,Environmental Science,1,4,1,,Written coursework,0.35,1.0225,0.81,0.61,0.67,0.73,0.28,0.38
 4531101,Calculus & Algebra,5_3_11,Mathematics,1,4,1,,Practical exam,0.48,1.003,0.38,0.56,0.82,0.85,0.38,0.48
-453804,Laboratory Skills & Diagnostics,5_3_11,Biomedical Science,1,4,2,,Practical exam,0.41,1.0135,0.5,0.6,0.95,0.5,0.34,0.33
-453903,Inorganic Chemistry,5_3_11,Chemistry,1,4,2,,Practical exam,0.45,1.0075,0.61,0.57,0.74,0.8,0.41,0.41
-553701,Microbiology & Immunity,5_3_11,Biology,2,5,1,,Practical exam,0.61,0.9593,0.67,0.66,0.74,0.73,0.44,0.59
-4531102,Discrete Mathematics,5_3_12,Mathematics,1,4,1,,Practical exam,0.47,1.0045,0.38,0.64,0.76,0.67,0.37,0.43
+453804,Laboratory Skills & Diagnostics,5_3_8,Biomedical Science,1,4,2,,Practical exam,0.41,1.0135,0.5,0.6,0.95,0.5,0.34,0.33
+453903,Inorganic Chemistry,5_3_9,Chemistry,1,4,2,,Practical exam,0.45,1.0075,0.61,0.57,0.74,0.8,0.41,0.41
+553701,Microbiology & Immunity,5_3_7,Biology,2,5,1,,Practical exam,0.61,0.9593,0.67,0.66,0.74,0.73,0.44,0.59
+4531102,Discrete Mathematics,5_3_11,Mathematics,1,4,1,,Practical exam,0.47,1.0045,0.38,0.64,0.76,0.67,0.37,0.43
 4531201,Classical Mechanics,5_3_12,Physics,1,4,1,,Written coursework,0.28,1.033,0.49,0.61,0.7,0.81,0.42,0.3
-453904,Practical Laboratory Techniques,5_3_12,Chemistry,1,4,2,,Practical exam,0.23,1.0405,0.61,0.55,0.95,0.52,0.25,0.21
-4531003,Environmental Chemistry,5_3_12,Environmental Science,1,4,2,,Written coursework,0.32,1.027,0.72,0.66,0.71,0.81,0.26,0.36
-553702,Physiology of Organisms,5_3_12,Biology,2,5,1,,Practical exam,0.53,0.9889,0.64,0.65,0.74,0.67,0.55,0.54
-553801,Disease Mechanisms,5_3_12,Biomedical Science,2,5,1,,Practical exam,0.71,0.9223,0.55,0.59,0.79,0.87,0.55,0.71
-4531202,Waves & Oscillations,5_3_13,Physics,1,4,1,,Practical exam,0.37,1.0195,0.49,0.65,0.85,0.79,0.38,0.34
-4531004,Field Methods,5_3_13,Environmental Science,1,4,2,,Practical exam,0.23,1.0405,0.53,0.65,0.92,0.56,0.5,0.24
-4531103,Introduction to Mathematical Thinking,5_3_13,Mathematics,1,4,2,,Practical exam,0.26,1.036,0.2,0.53,0.82,0.88,0.24,0.32
-553802,Medical Microbiology,5_3_13,Biomedical Science,2,5,1,,Practical exam,0.47,1.0045,0.55,0.56,0.81,0.76,0.61,0.51
-553901,Physical Chemistry,5_3_13,Chemistry,2,5,1,,Practical exam,0.52,0.9926,0.61,0.48,0.91,0.89,0.51,0.55
-553703,Molecular Biology,5_3_13,Biology,2,5,2,,Practical exam,0.35,1.0225,0.55,0.57,0.95,0.89,0.26,0.47
-4531104,Probability & Statistics,5_3_14,Mathematics,1,4,2,,Practical exam,0.25,1.0375,0.2,0.54,0.79,0.92,0.32,0.39
-4531203,Electricity & Magnetism,5_3_14,Physics,1,4,2,,Practical exam,0.47,1.0045,0.2,0.61,0.75,0.76,0.44,0.48
-553902,Analytical Chemistry,5_3_14,Chemistry,2,5,1,,Multi-choice exam,0.52,0.9926,0.61,0.62,0.56,0.83,0.52,0.55
-5531001,Climate Systems & Change,5_3_14,Environmental Science,2,5,1,,Written coursework,0.7,0.926,0.73,0.57,0.74,0.86,0.48,0.66
-553704,Field & Laboratory Techniques,5_3_14,Biology,2,5,2,,Practical exam,0.42,1.012,0.55,0.62,0.93,0.48,0.4,0.42
-553803,Haematology & Immunology,5_3_14,Biomedical Science,2,5,2,,Written coursework,0.46,1.006,0.55,0.65,0.61,0.89,0.53,0.54
-4531204,Mathematical Methods for Physics,5_3_15,Physics,1,4,2,,Practical exam,0.25,1.0375,0.3,0.56,0.83,0.64,0.29,0.31
-5531002,Resource Management,5_3_15,Environmental Science,2,5,1,,Multi-choice exam,0.6,0.963,0.49,0.65,0.48,0.48,0.5,0.51
-5531101,Linear Algebra,5_3_15,Mathematics,2,5,1,,Written coursework,0.55,0.9815,0.24,0.6,0.66,0.76,0.5,0.56
-553804,Clinical Laboratory Practice,5_3_15,Biomedical Science,2,5,2,,Practical exam,0.39,1.0165,0.45,0.53,0.95,0.64,0.46,0.36
-553903,Reaction Mechanisms,5_3_15,Chemistry,2,5,2,,Groupwork,0.58,0.9704,0.76,0.62,0.81,0.85,0.5,0.59
-653701,Advanced Biology Topics,5_3_15,Biology,3,6,1,,Groupwork,0.61,0.9593,0.92,0.62,0.79,0.84,0.67,0.72
-5531102,Differential Equations,5_3_16,Mathematics,2,5,1,,Practical exam,0.65,0.9445,0.38,0.61,0.83,0.79,0.59,0.6
-5531201,Quantum Physics,5_3_16,Physics,2,5,1,,Written coursework,0.71,0.9223,0.49,0.63,0.69,0.85,0.61,0.67
-553904,Spectroscopy & Structure Analysis,5_3_16,Chemistry,2,5,2,,Multi-choice exam,0.6,0.963,0.6,0.67,0.41,0.62,0.54,0.54
-5531003,Environmental Monitoring & Data,5_3_16,Environmental Science,2,5,2,,Practical exam,0.6,0.963,0.61,0.6,0.75,0.74,0.54,0.6
-653702,Conservation & Biodiversity,5_3_16,Biology,3,6,1,,Groupwork,0.74,0.9112,0.84,0.59,0.66,0.84,0.71,0.72
-653801,Advanced Biomedical Diagnostics,5_3_16,Biomedical Science,3,6,1,,Practical exam,0.53,0.9889,0.45,0.62,0.95,0.54,0.56,0.53
-5531202,Thermodynamics,5_3_17,Physics,2,5,1,,Practical exam,0.5,1.0,0.49,0.56,0.75,0.67,0.6,0.46
-5531004,Conservation Science,5_3_17,Environmental Science,2,5,2,,Practical exam,0.63,0.9519,0.61,0.59,0.75,0.86,0.59,0.59
-5531103,Mathematical Methods,5_3_17,Mathematics,2,5,2,,Practical exam,0.57,0.9741,0.24,0.56,0.83,0.84,0.53,0.6
-653802,Translational Medicine,5_3_17,Biomedical Science,3,6,1,,Practical exam,0.66,0.9408,0.45,0.58,0.8,0.87,0.67,0.69
-653901,Advanced Organic Synthesis,5_3_17,Chemistry,3,6,1,,Practical exam,0.76,0.9038,0.71,0.58,0.78,0.87,0.76,0.77
-653703,Systems & Integrative Biology,5_3_17,Biology,3,6,2,,Practical exam,0.74,0.9112,0.55,0.6,0.73,0.69,0.7,0.74
-5531104,Statistical Modelling,5_3_18,Mathematics,2,5,2,,Practical exam,0.49,1.0015,0.24,0.67,0.79,0.85,0.57,0.54
-5531203,Optics & Light Systems,5_3_18,Physics,2,5,2,,Written exam,0.48,1.003,0.49,0.7,0.49,0.77,0.51,0.51
-653902,Materials Chemistry,5_3_18,Chemistry,3,6,1,,Written coursework,0.73,0.9149,0.8,0.59,0.77,0.83,0.67,0.74
-6531001,Advanced Environmental Analysis,5_3_18,Environmental Science,3,6,1,,Written coursework,0.64,0.9482,0.75,0.63,0.52,0.61,0.63,0.65
-653704,Dissertation,5_3_18,Biology,3,6,2,1.0,Written coursework,0.87,0.8631,0.54,0.71,0.59,0.38,0.9,0.73
-653803,Research Methods in Biomedicine,5_3_18,Biomedical Science,3,6,2,,Professional artefact,0.65,0.9445,0.8,0.75,0.67,0.8,0.78,0.73
-5531204,Experimental Physics,5_3_19,Physics,2,5,2,,Written coursework,0.48,1.003,0.49,0.6,0.71,0.79,0.52,0.48
-6531002,Sustainability & Policy,5_3_19,Environmental Science,3,6,1,,Viva,0.83,0.8779,0.48,0.58,0.56,0.55,0.69,0.69
-6531101,Advanced Pure Mathematics,5_3_19,Mathematics,3,6,1,,Practical exam,0.75,0.9075,0.36,0.62,0.76,0.88,0.72,0.74
-653804,Dissertation,5_3_19,Biomedical Science,3,6,2,1.0,Written coursework,0.93,0.8409,0.45,0.6,0.69,0.38,0.95,0.73
-653903,Chemical Research Methods,5_3_19,Chemistry,3,6,2,,Presentation,0.78,0.8964,0.77,0.67,0.65,0.8,0.81,0.81
-6531102,Applied Mathematics,5_3_20,Mathematics,3,6,1,,Practical exam,0.77,0.9001,0.36,0.64,0.73,0.8,0.75,0.76
-6531201,Advanced Theoretical Physics,5_3_20,Physics,3,6,1,,Written coursework,0.62,0.9556,0.49,0.57,0.69,0.91,0.67,0.78
-653904,Dissertation,5_3_20,Chemistry,3,6,2,1.0,Written coursework,0.95,0.8335,0.63,0.6,0.67,0.38,0.95,0.79
-6531003,Ecosystem Management,5_3_20,Environmental Science,3,6,2,,Written coursework,0.68,0.9334,0.63,0.64,0.49,0.58,0.67,0.72
-6531202,Astrophysics & Cosmology,5_3_21,Physics,3,6,1,,Practical exam,0.73,0.9149,0.49,0.54,0.73,0.81,0.59,0.7
-6531004,Dissertation / Field Project,5_3_21,Environmental Science,3,6,2,1.0,Written coursework,0.94,0.8372,0.72,0.67,0.69,0.38,0.95,0.75
-6531103,Mathematical Modelling,5_3_21,Mathematics,3,6,2,,Practical exam,0.83,0.8779,0.36,0.63,0.91,0.84,0.8,0.84
-6531104,Dissertation / Research Project,5_3_22,Mathematics,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.6,0.74,0.38,0.95,0.87
-6531203,Particle & Field Physics,5_3_22,Physics,3,6,2,,Written coursework,0.57,0.9741,0.49,0.64,0.68,0.84,0.62,0.61
-6531204,Dissertation / Research Project,5_3_23,Physics,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.62,0.7,0.38,0.95,0.82
+453904,Practical Laboratory Techniques,5_3_9,Chemistry,1,4,2,,Practical exam,0.23,1.0405,0.61,0.55,0.95,0.52,0.25,0.21
+4531003,Environmental Chemistry,5_3_10,Environmental Science,1,4,2,,Written coursework,0.32,1.027,0.72,0.66,0.71,0.81,0.26,0.36
+553702,Physiology of Organisms,5_3_7,Biology,2,5,1,,Practical exam,0.53,0.9889,0.64,0.65,0.74,0.67,0.55,0.54
+553801,Disease Mechanisms,5_3_8,Biomedical Science,2,5,1,,Practical exam,0.71,0.9223,0.55,0.59,0.79,0.87,0.55,0.71
+4531202,Waves & Oscillations,5_3_12,Physics,1,4,1,,Practical exam,0.37,1.0195,0.49,0.65,0.85,0.79,0.38,0.34
+4531004,Field Methods,5_3_10,Environmental Science,1,4,2,,Practical exam,0.23,1.0405,0.53,0.65,0.92,0.56,0.5,0.24
+4531103,Introduction to Mathematical Thinking,5_3_11,Mathematics,1,4,2,,Practical exam,0.26,1.036,0.2,0.53,0.82,0.88,0.24,0.32
+553802,Medical Microbiology,5_3_8,Biomedical Science,2,5,1,,Practical exam,0.47,1.0045,0.55,0.56,0.81,0.76,0.61,0.51
+553901,Physical Chemistry,5_3_9,Chemistry,2,5,1,,Practical exam,0.52,0.9926,0.61,0.48,0.91,0.89,0.51,0.55
+553703,Molecular Biology,5_3_7,Biology,2,5,2,,Practical exam,0.35,1.0225,0.55,0.57,0.95,0.89,0.26,0.47
+4531104,Probability & Statistics,5_3_11,Mathematics,1,4,2,,Practical exam,0.25,1.0375,0.2,0.54,0.79,0.92,0.32,0.39
+4531203,Electricity & Magnetism,5_3_12,Physics,1,4,2,,Practical exam,0.47,1.0045,0.2,0.61,0.75,0.76,0.44,0.48
+553902,Analytical Chemistry,5_3_9,Chemistry,2,5,1,,Multi-choice exam,0.52,0.9926,0.61,0.62,0.56,0.83,0.52,0.55
+5531001,Climate Systems & Change,5_3_10,Environmental Science,2,5,1,,Written coursework,0.7,0.926,0.73,0.57,0.74,0.86,0.48,0.66
+553704,Field & Laboratory Techniques,5_3_7,Biology,2,5,2,,Practical exam,0.42,1.012,0.55,0.62,0.93,0.48,0.4,0.42
+553803,Haematology & Immunology,5_3_8,Biomedical Science,2,5,2,,Written coursework,0.46,1.006,0.55,0.65,0.61,0.89,0.53,0.54
+4531204,Mathematical Methods for Physics,5_3_12,Physics,1,4,2,,Practical exam,0.25,1.0375,0.3,0.56,0.83,0.64,0.29,0.31
+5531002,Resource Management,5_3_10,Environmental Science,2,5,1,,Multi-choice exam,0.6,0.963,0.49,0.65,0.48,0.48,0.5,0.51
+5531101,Linear Algebra,5_3_11,Mathematics,2,5,1,,Written coursework,0.55,0.9815,0.24,0.6,0.66,0.76,0.5,0.56
+553804,Clinical Laboratory Practice,5_3_8,Biomedical Science,2,5,2,,Practical exam,0.39,1.0165,0.45,0.53,0.95,0.64,0.46,0.36
+553903,Reaction Mechanisms,5_3_9,Chemistry,2,5,2,,Groupwork,0.58,0.9704,0.76,0.62,0.81,0.85,0.5,0.59
+653701,Advanced Biology Topics,5_3_7,Biology,3,6,1,,Groupwork,0.61,0.9593,0.92,0.62,0.79,0.84,0.67,0.72
+5531102,Differential Equations,5_3_11,Mathematics,2,5,1,,Practical exam,0.65,0.9445,0.38,0.61,0.83,0.79,0.59,0.6
+5531201,Quantum Physics,5_3_12,Physics,2,5,1,,Written coursework,0.71,0.9223,0.49,0.63,0.69,0.85,0.61,0.67
+553904,Spectroscopy & Structure Analysis,5_3_9,Chemistry,2,5,2,,Multi-choice exam,0.6,0.963,0.6,0.67,0.41,0.62,0.54,0.54
+5531003,Environmental Monitoring & Data,5_3_10,Environmental Science,2,5,2,,Practical exam,0.6,0.963,0.61,0.6,0.75,0.74,0.54,0.6
+653702,Conservation & Biodiversity,5_3_7,Biology,3,6,1,,Groupwork,0.74,0.9112,0.84,0.59,0.66,0.84,0.71,0.72
+653801,Advanced Biomedical Diagnostics,5_3_8,Biomedical Science,3,6,1,,Practical exam,0.53,0.9889,0.45,0.62,0.95,0.54,0.56,0.53
+5531202,Thermodynamics,5_3_12,Physics,2,5,1,,Practical exam,0.5,1.0,0.49,0.56,0.75,0.67,0.6,0.46
+5531004,Conservation Science,5_3_10,Environmental Science,2,5,2,,Practical exam,0.63,0.9519,0.61,0.59,0.75,0.86,0.59,0.59
+5531103,Mathematical Methods,5_3_11,Mathematics,2,5,2,,Practical exam,0.57,0.9741,0.24,0.56,0.83,0.84,0.53,0.6
+653802,Translational Medicine,5_3_8,Biomedical Science,3,6,1,,Practical exam,0.66,0.9408,0.45,0.58,0.8,0.87,0.67,0.69
+653901,Advanced Organic Synthesis,5_3_9,Chemistry,3,6,1,,Practical exam,0.76,0.9038,0.71,0.58,0.78,0.87,0.76,0.77
+653703,Systems & Integrative Biology,5_3_7,Biology,3,6,2,,Practical exam,0.74,0.9112,0.55,0.6,0.73,0.69,0.7,0.74
+5531104,Statistical Modelling,5_3_11,Mathematics,2,5,2,,Practical exam,0.49,1.0015,0.24,0.67,0.79,0.85,0.57,0.54
+5531203,Optics & Light Systems,5_3_12,Physics,2,5,2,,Written exam,0.48,1.003,0.49,0.7,0.49,0.77,0.51,0.51
+653902,Materials Chemistry,5_3_9,Chemistry,3,6,1,,Written coursework,0.73,0.9149,0.8,0.59,0.77,0.83,0.67,0.74
+6531001,Advanced Environmental Analysis,5_3_10,Environmental Science,3,6,1,,Written coursework,0.64,0.9482,0.75,0.63,0.52,0.61,0.63,0.65
+653704,Dissertation,5_3_7,Biology,3,6,2,1.0,Written coursework,0.87,0.8631,0.54,0.71,0.59,0.38,0.9,0.73
+653803,Research Methods in Biomedicine,5_3_8,Biomedical Science,3,6,2,,Professional artefact,0.65,0.9445,0.8,0.75,0.67,0.8,0.78,0.73
+5531204,Experimental Physics,5_3_12,Physics,2,5,2,,Written coursework,0.48,1.003,0.49,0.6,0.71,0.79,0.52,0.48
+6531002,Sustainability & Policy,5_3_10,Environmental Science,3,6,1,,Viva,0.83,0.8779,0.48,0.58,0.56,0.55,0.69,0.69
+6531101,Advanced Pure Mathematics,5_3_11,Mathematics,3,6,1,,Practical exam,0.75,0.9075,0.36,0.62,0.76,0.88,0.72,0.74
+653804,Dissertation,5_3_8,Biomedical Science,3,6,2,1.0,Written coursework,0.93,0.8409,0.45,0.6,0.69,0.38,0.95,0.73
+653903,Chemical Research Methods,5_3_9,Chemistry,3,6,2,,Presentation,0.78,0.8964,0.77,0.67,0.65,0.8,0.81,0.81
+6531102,Applied Mathematics,5_3_11,Mathematics,3,6,1,,Practical exam,0.77,0.9001,0.36,0.64,0.73,0.8,0.75,0.76
+6531201,Advanced Theoretical Physics,5_3_12,Physics,3,6,1,,Written coursework,0.62,0.9556,0.49,0.57,0.69,0.91,0.67,0.78
+653904,Dissertation,5_3_9,Chemistry,3,6,2,1.0,Written coursework,0.95,0.8335,0.63,0.6,0.67,0.38,0.95,0.79
+6531003,Ecosystem Management,5_3_10,Environmental Science,3,6,2,,Written coursework,0.68,0.9334,0.63,0.64,0.49,0.58,0.67,0.72
+6531202,Astrophysics & Cosmology,5_3_12,Physics,3,6,1,,Practical exam,0.73,0.9149,0.49,0.54,0.73,0.81,0.59,0.7
+6531004,Dissertation / Field Project,5_3_10,Environmental Science,3,6,2,1.0,Written coursework,0.94,0.8372,0.72,0.67,0.69,0.38,0.95,0.75
+6531103,Mathematical Modelling,5_3_11,Mathematics,3,6,2,,Practical exam,0.83,0.8779,0.36,0.63,0.91,0.84,0.8,0.84
+6531104,Dissertation / Research Project,5_3_11,Mathematics,3,6,2,1.0,Written coursework,0.95,0.8335,0.53,0.6,0.74,0.38,0.95,0.87
+6531203,Particle & Field Physics,5_3_12,Physics,3,6,2,,Written coursework,0.57,0.9741,0.49,0.64,0.68,0.84,0.62,0.61
+6531204,Dissertation / Research Project,5_3_12,Physics,3,6,2,1.0,Written coursework,0.95,0.8335,0.6,0.62,0.7,0.38,0.95,0.82
 453701,Cell Biology & Life Processes,5_3_7,Biology,1,4,1,,Practical exam,0.38,1.018,0.55,0.71,0.73,0.83,0.38,0.47
-453702,Genetics & Inheritance,5_3_8,Biology,1,4,1,,Written coursework,0.46,1.006,0.75,0.69,0.75,0.81,0.44,0.39
+453702,Genetics & Inheritance,5_3_7,Biology,1,4,1,,Written coursework,0.46,1.006,0.75,0.69,0.75,0.81,0.44,0.39
 453801,Anatomy & Physiology,5_3_8,Biomedical Science,1,4,1,,Practical exam,0.34,1.024,0.63,0.54,0.83,0.61,0.38,0.38
-453802,Cellular Pathology,5_3_9,Biomedical Science,1,4,1,,Practical exam,0.26,1.036,0.55,0.53,0.87,0.8,0.25,0.31
+453802,Cellular Pathology,5_3_8,Biomedical Science,1,4,1,,Practical exam,0.26,1.036,0.55,0.53,0.87,0.8,0.25,0.31
 453901,General Chemistry Principles,5_3_9,Chemistry,1,4,1,,Practical exam,0.5,1.0,0.61,0.63,0.81,0.81,0.41,0.47
-453703,Ecology & Ecosystems,5_3_9,Biology,1,4,2,,Groupwork,0.31,1.0285,0.84,0.56,0.89,0.86,0.34,0.34
+453703,Ecology & Ecosystems,5_3_7,Biology,1,4,2,,Groupwork,0.31,1.0285,0.84,0.56,0.89,0.86,0.34,0.34

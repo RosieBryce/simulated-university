@@ -1,8 +1,19 @@
 # Year progression rules for Stonegrove University
 # Base probabilities + individual modifiers. All progression modelled at student level.
 
-# Pass threshold: all modules must be >= this mark to pass the year
+# Module pass mark
 pass_threshold: 40
+
+# Condonement (UK-style). A year is passed if every module is >= pass_threshold, or if the
+# shortfall is condoned: no module under `floor`, and at most `max_modules` modules in
+# [floor, pass_threshold). Condoned modules are credited (modules_passed == modules_total).
+# Without this, one module at 39 fails the whole year, which gave 18% year failure overall
+# (23% in Year 3), and pushed first-year non-continuation and cohort completion outside the
+# HESA/OfS benchmarks. Marks are unchanged; only who continues changes.
+condonement:
+  enabled: true
+  floor: 30
+  max_modules: 1
 
 # Base probabilities (before modifiers)
 # Applied when student passes the year

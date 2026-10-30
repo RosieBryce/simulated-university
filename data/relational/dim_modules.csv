@@ -1,33 +1,48 @@
 module_code,module_title,programme_code,module_year,semester,assessment_type
 452401,Introduction to Contemporary Arcane-Technics,5_2_4,1,1,Practical exam
+452404,Digital-Magical Interfaces,5_2_4,1,2,Written coursework
+452402,Materials of the Modern Age,5_2_4,1,1,Practical exam
+452403,"Energy, Power & Light Systems",5_2_4,1,2,Written coursework
 452601,Introduction to Mycology & Mycelial Systems,5_2_6,1,1,Written coursework
-452502,Interoperability of Magical & Mechanical Systems,5_2_6,1,1,Written coursework
-452403,"Energy, Power & Light Systems",5_2_6,1,2,Written coursework
+452602,Cellular Biology of Fungal Networks,5_2_6,1,1,Practical exam
+452604,Principles of Biotechnical Design,5_2_6,1,2,Written coursework
+452603,Laboratory Skills & Safe Cultivation,5_2_6,1,2,Practical exam
 422403,Visual Communication,2_2_4,1,2,Professional artefact
 422404,Digital Skills for Illustrators,2_2_4,1,2,Professional artefact
 422401,Introduction to Illustration,2_2_4,1,1,Written coursework
 422402,Drawing & Image-Making,2_2_4,1,1,Professional artefact
+453702,Genetics & Inheritance,5_3_7,1,1,Written coursework
+453704,Evolutionary Biology,5_3_7,1,2,Written coursework
 453701,Cell Biology & Life Processes,5_3_7,1,1,Practical exam
+453703,Ecology & Ecosystems,5_3_7,1,2,Groupwork
 434801,"Memory, Myth & Storytelling",3_4_8,1,1,Written exam
-434702,Moral Philosophy,3_4_8,1,1,Written coursework
-434603,"Calendars, Seasons & Festivals",3_4_8,1,2,Written coursework
+434802,Introduction to Ritual Practice,3_4_8,1,1,Written exam
+434803,Oral Traditions,3_4_8,1,2,Written coursework
+434804,Material Culture & Memory,3_4_8,1,2,Written coursework
 422201,Introduction to Printmaking Techniques,2_2_2,1,1,Professional artefact
 422204,Art History & Visual Culture,2_2_2,1,2,Written exam
 422202,Cyanotype Processes,2_2_2,1,1,Presentation
 422203,Drawing & Image Development,2_2_2,1,2,Professional artefact
 452501,Foundations of Multi-System Design,5_2_5,1,1,Written coursework
-452402,Materials of the Modern Age,5_2_5,1,1,Practical exam
-441103,Child & Adolescent Development,4_1_3,1,2,Professional artefact
+452502,Interoperability of Magical & Mechanical Systems,5_2_5,1,1,Written coursework
+452503,Energy Routing & Distribution,5_2_5,1,2,Groupwork
+452504,Basic System Architecture,5_2_5,1,2,Written coursework
+441303,Social Structures Across Ages,4_1_3,1,2,Presentation
+441302,"Memory, Story & Oral Tradition",4_1_3,1,1,Written exam
+441304,Learning in Community Contexts,4_1_3,1,2,Written coursework
 441301,Foundations of Lifespan Learning,4_1_3,1,1,Written coursework
-441202,Communication & Coaching Skills,4_1_3,1,1,Written coursework
-435902,Communication & Mediation Skills,3_5_10,1,1,Professional artefact
 4351001,Principles of Economics,3_5_10,1,1,Written exam
+4351003,Economic History of Realms,3_5_10,1,2,Written exam
+4351004,Quantitative Methods,3_5_10,1,2,Written coursework
+4351002,"Markets, Trade & Resources",3_5_10,1,1,Written coursework
+434703,"Myth, Belief & Reason",3_4_7,1,2,Presentation
+434704,Ethics in Everyday Life,3_4_7,1,2,Written coursework
+434702,Moral Philosophy,3_4_7,1,1,Written coursework
 434701,Introduction to Philosophy of Religion,3_4_7,1,1,Written exam
-434602,"Symbols, Dress & Pageantry",3_4_7,1,1,Written coursework
+4421203,"Movement, Breath & Attention",4_2_12,1,2,Written coursework
+4421204,Introduction to Contemplative Practice,4_2_12,1,2,Groupwork
 4421201,Foundations of Somatic Awareness,4_2_12,1,1,Practical exam
-4421102,Development & Lifespan,4_2_12,1,1,Written coursework
-4421003,Physiology & Pathophysiology,4_2_12,1,2,Groupwork
-442904,Introduction to Pharmacy Practice,4_2_12,1,2,Practical exam
+4421202,Body Systems & Embodied Experience,4_2_12,1,1,Groupwork
 411103,Business Economics,1_1_2,1,2,Written exam
 411201,Principles of Management,1_1_2,1,1,Written exam
 411202,Introduction to Marketing,1_1_2,1,1,Written coursework
@@ -36,31 +51,50 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 432204,Themes in World History,3_2_2,1,2,Written exam
 432202,Modern World History,3_2_2,1,1,Written coursework
 432203,Historical Methods,3_2_2,1,2,Groupwork
-433303,Grammar & Linguistics,3_3_5,1,2,Written exam
+433502,Foundations of Linguistics,3_3_5,1,1,Multi-choice exam
+433503,Phonetics & Phonology Across Species,3_3_5,1,2,Written coursework
 433501,Introduction to Multispecies Communication,3_3_5,1,1,Groupwork
+433504,"Language, Culture & Society",3_3_5,1,2,Written exam
 4241202,Drawing & Spatial Visualisation,2_4_12,1,1,Practical exam
 4241204,History of Interiors,2_4_12,1,2,Written exam
 4241201,Introduction to Interior Design,2_4_12,1,1,Professional artefact
 4241203,Materials & Finishes,2_4_12,1,2,Professional artefact
+442404,Preparation & Safety in Herbal Practice,4_2_4,1,2,Groupwork
 442401,Introduction to Herbal Lore,4_2_4,1,1,Groupwork
+442403,Foundations of Vital Energies,4_2_4,1,2,Professional artefact
+442402,Plant Identification & Ecology,4_2_4,1,1,Groupwork
+453903,Inorganic Chemistry,5_3_9,1,2,Practical exam
 453901,General Chemistry Principles,5_3_9,1,1,Practical exam
-453703,Ecology & Ecosystems,5_3_9,1,2,Groupwork
-453802,Cellular Pathology,5_3_9,1,1,Practical exam
+453904,Practical Laboratory Techniques,5_3_9,1,2,Practical exam
+453902,Organic Chemistry Fundamentals,5_3_9,1,1,Practical exam
+435902,Communication & Mediation Skills,3_5_9,1,1,Professional artefact
+435904,History of Conflicts,3_5_9,1,2,Written exam
 435901,Introduction to Conflict Studies,3_5_9,1,1,Written exam
+435903,"Power, Identity & Society",3_5_9,1,2,Written exam
+4351102,Governance Traditions of the Forest Realms,3_5_11,1,1,Written exam
+4351103,"Ethics, Law & Stewardship",3_5_11,1,2,Written exam
 4351101,Foundations of Elven Moral Thought,3_5_11,1,1,Written coursework
-4351002,"Markets, Trade & Resources",3_5_11,1,1,Written coursework
-435903,"Power, Identity & Society",3_5_11,1,2,Written exam
+4351104,"Power, Duty & Longevity",3_5_11,1,2,Multi-choice exam
 441101,Foundations of Education,4_1_1,1,1,Professional artefact
+441103,Child & Adolescent Development,4_1_1,1,2,Professional artefact
+441102,Learning Theories,4_1_1,1,1,Practical exam
+441104,Education Systems & Policy,4_1_1,1,2,Written exam
 441201,Principles of Mentorship,4_1_2,1,1,Written coursework
-441102,Learning Theories,4_1_2,1,1,Practical exam
-442402,Plant Identification & Ecology,4_2_5,1,1,Groupwork
+441204,Ethics of Guidance & Support,4_1_2,1,2,Written exam
+441202,Communication & Coaching Skills,4_1_2,1,1,Written coursework
+441203,Development Across Lifespans,4_1_2,1,2,Practical exam
+442502,Anatomy & Physiology,4_2_5,1,1,Practical exam
 442501,Foundations of Mind-Body Systems,4_2_5,1,1,Written coursework
+442504,"Health, Stress & Regulation",4_2_5,1,2,Practical exam
+442503,Introduction to Somatic Practice,4_2_5,1,2,Written coursework
 422604,Composition I,2_2_6,1,2,Professional artefact
 422603,Music History,2_2_6,1,2,Written exam
 422602,Performance I,2_2_6,1,1,Professional artefact
 422601,Music Theory & Harmony,2_2_6,1,1,Written exam
 4361501,Introduction to Sociology,3_6_15,1,1,Written exam
-4361402,Cognitive Psychology,3_6_15,1,1,Written exam
+4361504,Sociological Theory,3_6_15,1,2,Written exam
+4361502,Culture & Society,3_6_15,1,2,Written exam
+4361503,Social Inequality,3_6_15,1,2,Presentation
 412101,Contract Law,1_2_1,1,1,Written exam
 412102,Criminal Law,1_2_1,1,1,Written exam
 412103,Public Law,1_2_1,1,2,Written exam
@@ -69,14 +103,14 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 423703,"Techniques for Metal, Wood, and Mixed Materials",2_3_7,1,2,Practical exam
 423702,Principles of Conservation and Ethical Restoration,2_3_7,1,1,Groupwork
 423704,World Prehistory,2_3_7,1,2,Written exam
+442802,Occupation & Daily Living,4_2_8,1,2,Written coursework
 442801,Introduction to Occupational Therapy,4_2_8,1,1,Practical exam
-442502,Anatomy & Physiology,4_2_8,1,1,Practical exam
-442603,Pregnancy & Prenatal Development,4_2_8,1,2,Written coursework
-442504,"Health, Stress & Regulation",4_2_8,1,2,Practical exam
+4421001,"Anatomy, Physiology & Movement",4_2_8,1,1,Written coursework
+442604,Professional Practice & Ethics,4_2_8,1,2,Written coursework
+4531004,Field Methods,5_3_10,1,2,Practical exam
 4531001,Earth Systems & Environments,5_3_10,1,1,Practical exam
-453704,Evolutionary Biology,5_3_10,1,2,Written coursework
-453803,Biochemistry for Life Sciences,5_3_10,1,2,Practical exam
-453902,Organic Chemistry Fundamentals,5_3_10,1,1,Practical exam
+4531002,Ecology & Biodiversity,5_3_10,1,1,Written coursework
+4531003,Environmental Chemistry,5_3_10,1,2,Written coursework
 431104,Earth Systems,3_1_1,1,2,Written exam
 431103,Geographical Skills,3_1_1,1,2,Practical exam
 431101,Physical Geography,3_1_1,1,1,Groupwork
@@ -85,7 +119,10 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 421102,Architectural History & Theory I,2_1_1,1,1,Written exam
 421103,Building Construction & Materials,2_1_1,1,2,Professional artefact
 421101,Design Studio I,2_1_1,1,1,Written coursework
+451202,Materials & Craft of Metals and Stone,5_1_2,1,1,Practical exam
+451203,Thermodynamics of Engines,5_1_2,1,2,Practical exam
 451201,Foundations of Mechanics,5_1_2,1,1,Written coursework
+451204,Technical Drawing & Workshop Practice,5_1_2,1,2,Practical exam
 4241004,Fashion History & Context,2_4_10,1,2,Written exam
 4241001,Introduction to Fashion Design,2_4_10,1,1,Professional artefact
 4241003,Pattern Cutting & Garment Construction,2_4_10,1,2,Written coursework
@@ -98,76 +135,129 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 422303,Art History & Context,2_2_3,1,2,Written exam
 422301,Studio Practice I,2_2_3,1,1,Professional artefact
 422302,Drawing & Visual Language,2_2_3,1,1,Professional artefact
-442403,Foundations of Vital Energies,4_2_6,1,2,Professional artefact
+442602,Anatomy & Physiology of Birth,4_2_6,1,1,Written coursework
+442603,Pregnancy & Prenatal Development,4_2_6,1,2,Written coursework
 442601,Foundations of Midwifery Care,4_2_6,1,1,Written coursework
 423802,"Yeasts, Bacteria, and Microbial Worlds",2_3_8,1,1,Written coursework
 423803,Brewing Traditions and Cultural Practice,2_3_8,1,2,Professional artefact
 423801,The Alchemy of Fermentation,2_3_8,1,1,Professional artefact
 423804,Chemistry of Beer & Fermentation,2_3_8,1,2,Professional artefact
-451202,Materials & Craft of Metals and Stone,5_1_3,1,1,Practical exam
+451302,Basic Engineering Principles,5_1_3,1,1,Groupwork
+451303,"Signals, Flows & Feedback Loops",5_1_3,1,2,Practical exam
+451304,Tools of Measurement & Analysis,5_1_3,1,2,Written exam
 451301,Introduction to Systems Thinking,5_1_3,1,1,Written coursework
+434604,Ritual Spaces & Sacred Architecture,3_4_6,1,2,Written exam
 434601,Introduction to Ceremonial Practice,3_4_6,1,1,Groupwork
-453903,Inorganic Chemistry,5_3_11,1,2,Practical exam
+434602,"Symbols, Dress & Pageantry",3_4_6,1,1,Written coursework
+434603,"Calendars, Seasons & Festivals",3_4_6,1,2,Written coursework
 4531101,Calculus & Algebra,5_3_11,1,1,Practical exam
-453804,Laboratory Skills & Diagnostics,5_3_11,1,2,Practical exam
-4531002,Ecology & Biodiversity,5_3_11,1,1,Written coursework
+4531102,Discrete Mathematics,5_3_11,1,1,Practical exam
+4531104,Probability & Statistics,5_3_11,1,2,Practical exam
+4531103,Introduction to Mathematical Thinking,5_3_11,1,2,Practical exam
+433304,Cultural Studies,3_3_3,1,2,Written exam
+433303,Grammar & Linguistics,3_3_3,1,2,Written exam
 433301,Language Skills I,3_3_3,1,1,Written coursework
-4351102,Governance Traditions of the Forest Realms,3_5_12,1,1,Written exam
-435904,History of Conflicts,3_5_12,1,2,Written exam
-4351003,Economic History of Realms,3_5_12,1,2,Written exam
+433302,Introduction to Literature,3_3_3,1,1,Written exam
+4351203,Narrative & Identity,3_5_12,1,2,Presentation
+4351202,Introduction to Institutions,3_5_12,1,1,Written coursework
 4351201,"Stories, Myths & Power",3_5_12,1,1,Written coursework
+4351204,Foundations of Governance,3_5_12,1,2,Written exam
 411302,Marketing Fundamentals,1_1_3,1,1,Written coursework
 411301,Introduction to Entrepreneurship,1_1_3,1,1,Presentation
 423901,Introduction to Metalworking,2_3_9,1,1,Professional artefact
 423902,Materials & Metallurgy,2_3_9,1,1,Written coursework
 423904,Technical Drawing & Design,2_3_9,1,2,Practical exam
 423903,Workshop Practice & Safety,2_3_9,1,2,Professional artefact
-4351103,"Ethics, Law & Stewardship",3_5_13,1,2,Written exam
 4351301,Introduction to Politics,3_5_13,1,1,Written coursework
-4351004,Quantitative Methods,3_5_13,1,2,Written coursework
-4351202,Introduction to Institutions,3_5_13,1,1,Written coursework
+4351304,Inter-Realm Relations,3_5_13,1,2,Presentation
+4351302,Political Ideas & Thinkers,3_5_13,1,1,Groupwork
+4351303,"Power, Authority & the State",3_5_13,1,2,Presentation
 4361401,Introduction to Psychology,3_6_14,1,1,Written exam
-453702,Genetics & Inheritance,5_3_8,1,1,Written coursework
+4361403,Developmental Psychology,3_6_14,1,2,Written coursework
+4361402,Cognitive Psychology,3_6_14,1,1,Written exam
+4361404,Research Methods,3_6_14,1,2,Written coursework
 453801,Anatomy & Physiology,5_3_8,1,1,Practical exam
-4421002,Foundations of Physiotherapy,4_2_11,1,1,Practical exam
-442604,Professional Practice & Ethics,4_2_11,1,2,Written coursework
-442903,Pharmaceutical Chemistry,4_2_11,1,2,Practical exam
+453803,Biochemistry for Life Sciences,5_3_8,1,2,Practical exam
+453804,Laboratory Skills & Diagnostics,5_3_8,1,2,Practical exam
+453802,Cellular Pathology,5_3_8,1,1,Practical exam
+4421103,"Law, Policy & Welfare Systems",4_2_11,1,2,Written exam
+4421102,Development & Lifespan,4_2_11,1,1,Written coursework
+4421104,Communication & Safeguarding,4_2_11,1,2,Groupwork
 4421101,Introduction to Social Work,4_2_11,1,1,Practical exam
 4241101,Introduction to Graphic Design,2_4_11,1,1,Professional artefact
 4241102,Typography & Runography,2_4_11,1,1,Professional artefact
 4241103,Digital Design Skills,2_4_11,1,2,Practical exam
-442404,Preparation & Safety in Herbal Practice,4_2_7,1,2,Groupwork
+442703,Professionalism & Ethics in Care,4_2_7,1,2,Written coursework
+442702,Fundamentals of Patient Care,4_2_7,1,2,Presentation
 442701,Foundations of Nursing Practice,4_2_7,1,1,Presentation
-442602,Anatomy & Physiology of Birth,4_2_7,1,1,Written coursework
-442503,Introduction to Somatic Practice,4_2_7,1,2,Written coursework
 411102,Management Accounting,1_1_1,1,1,Multi-choice exam
 411101,Financial Accounting,1_1_1,1,1,Written exam
 411104,Quantitative Methods for Business,1_1_1,1,2,Multi-choice exam
 411402,Customer Experience Management,1_1_4,1,1,Multi-choice exam
 411401,Introduction to Hospitality & Tourism,1_1_4,1,1,Written coursework
 411403,Business Operations,1_1_4,1,1,Groupwork
-442703,Professionalism & Ethics in Care,4_2_10,1,2,Written coursework
-442802,Occupation & Daily Living,4_2_10,1,2,Written coursework
-442902,Biology & Physiology,4_2_10,1,1,Practical exam
-4421001,"Anatomy, Physiology & Movement",4_2_10,1,1,Written coursework
+4421002,Foundations of Physiotherapy,4_2_10,1,1,Practical exam
+4421003,Physiology & Pathophysiology,4_2_10,1,2,Groupwork
+4421004,Professional Practice & Communication,4_2_10,1,2,Written coursework
 411501,Introduction to Person Resource Management,1_1_5,1,1,Written exam
 411502,Business Management Fundamentals,1_1_5,1,2,Written exam
 411503,Employment Relations,1_1_5,1,2,Groupwork
-442702,Fundamentals of Patient Care,4_2_9,1,2,Presentation
 442901,Foundations of Pharmacology,4_2_9,1,1,Practical exam
+442902,Biology & Physiology,4_2_9,1,1,Practical exam
+442903,Pharmaceutical Chemistry,4_2_9,1,2,Practical exam
+442904,Introduction to Pharmacy Practice,4_2_9,1,2,Practical exam
+4531203,Electricity & Magnetism,5_3_12,1,2,Practical exam
 4531201,Classical Mechanics,5_3_12,1,1,Written coursework
-4531102,Discrete Mathematics,5_3_12,1,1,Practical exam
-4531003,Environmental Chemistry,5_3_12,1,2,Written coursework
-453904,Practical Laboratory Techniques,5_3_12,1,2,Practical exam
+4531202,Waves & Oscillations,5_3_12,1,1,Practical exam
+4531204,Mathematical Methods for Physics,5_3_12,1,2,Practical exam
+552402,Enchanted Systems,5_2_4,2,1,Practical exam
+552404,Technology Ethics & Society,5_2_4,2,2,Written exam
+552401,Emerging Technologies & Innovations,5_2_4,2,1,Written coursework
+552403,Autonomous Devices & Constructs,5_2_4,2,2,Written coursework
+552602,Bio-Systems Integration & Growth Environments,5_2_6,2,1,Groupwork
+552601,Applied Mycelial Engineering,5_2_6,2,1,Written coursework
+552603,Genetic Modification of Organisms,5_2_6,2,2,Written coursework
+552604,Symbiotic Systems & Ecological Roles,5_2_6,2,2,Written coursework
+541302,Apprenticeship & Guild Learning Models,4_1_3,2,1,Written coursework
+541301,Knowledge Transfer Systems,4_1_3,2,1,Groupwork
+541303,"Age, Identity & Social Roles",4_1_3,2,2,Groupwork
+541304,Community-Based Learning Design,4_1_3,2,2,Professional artefact
+535904,Intercultural Dialogue,3_5_9,2,2,Groupwork
+535903,Justice Systems & Restorative Practice,3_5_9,2,2,Written coursework
+535902,Peacebuilding & Reconciliation,3_5_9,2,1,Written coursework
+535901,Negotiation & Diplomacy,3_5_9,2,1,Presentation
+553904,Spectroscopy & Structure Analysis,5_3_9,2,2,Multi-choice exam
+553902,Analytical Chemistry,5_3_9,2,1,Multi-choice exam
+553901,Physical Chemistry,5_3_9,2,1,Practical exam
+553903,Reaction Mechanisms,5_3_9,2,2,Groupwork
 512102,Land Law,1_2_1,2,1,Written exam
 512101,Tort Law,1_2_1,2,1,Multi-choice exam
 512104,Equity & Trusts,1_2_1,2,2,Groupwork
 512103,EU Law,1_2_1,2,2,Written exam
-542702,Pharmacology & Medication Management,4_2_12,2,1,Written coursework
-542603,Complications in Pregnancy & Birth,4_2_12,2,2,Written coursework
-542504,Therapeutic Communication,4_2_12,2,2,Written coursework
-542801,Therapeutic Interventions & Techniques,4_2_12,2,1,Written coursework
-535901,Negotiation & Diplomacy,3_5_13,2,1,Presentation
+534803,Commemoration & Memorialisation,3_4_8,2,2,Groupwork
+534802,"Archives, Artefacts & Ruins",3_4_8,2,1,Written exam
+534801,Collective Memory & Identity,3_4_8,2,1,Written exam
+534804,Ritual Performance,3_4_8,2,2,Written exam
+5351201,Narrative Strategy in Governance,3_5_12,2,1,Written coursework
+5351203,"Ritual, Symbol & Authority",3_5_12,2,2,Presentation
+5351204,Communication & Public Trust,3_5_12,2,2,Written coursework
+5351202,Institutional Design & Legitimacy,3_5_12,2,1,Written coursework
+5421204,Relational & Group Dynamics,4_2_12,2,2,Written coursework
+5421203,Integrative Wellbeing Practices,4_2_12,2,2,Groupwork
+5421202,Somatic Research Methods,4_2_12,2,1,Professional artefact
+5421201,"Trauma, Regulation & Embodiment",4_2_12,2,1,Written coursework
+533502,Writing Systems & Runes,3_3_5,2,1,Presentation
+533501,"Comparative Grammar (Elvish, Dwarvish & Common Tongue)",3_3_5,2,1,Groupwork
+533503,Sociolinguistics of Mixed-Species Societies,3_3_5,2,2,Written exam
+533504,Field Methods in Multispecies Linguistics,3_3_5,2,2,Presentation
+5361402,Biological Psychology,3_6_14,2,1,Written coursework
+5361403,Personality & Individual Differences,3_6_14,2,2,Multi-choice exam
+5361401,Social Psychology,3_6_14,2,1,Written exam
+5361404,Psychological Research Methods,3_6_14,2,2,Presentation
+5351302,International Relations (Kingdoms & Alliances),3_5_13,2,1,Groupwork
+5351303,Political Economy,3_5_13,2,2,Written coursework
+5351301,Comparative Politics,3_5_13,2,1,Written exam
+5351304,Conflict & Cooperation,3_5_13,2,2,Presentation
 521102,Architectural History & Theory II,2_1_1,2,1,Viva
 521101,Design Studio II,2_1_1,2,1,Professional artefact
 521103,Structures & Structural Design,2_1_1,2,2,Presentation
@@ -176,14 +266,42 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 5241203,Modelling,2_4_12,2,2,Professional artefact
 5241103,Person-Centred Design,2_4_12,2,2,Professional artefact
 5241201,Interior Design Studio,2_4_12,2,1,Professional artefact
+542403,Healing Traditions Across Realms,4_2_4,2,2,Written coursework
+542404,Field Practice & Observation,4_2_4,2,2,Groupwork
+542401,Applied Herbal Formulations,4_2_4,2,1,Presentation
+542402,Energy Systems & Balance,4_2_4,2,1,Presentation
 522403,Character & Concept Design,2_2_4,2,2,Professional artefact
 522402,Editorial & Publishing Illustration,2_2_4,2,1,Professional artefact
 522401,Narrative Illustration,2_2_4,2,1,Groupwork
 522404,Professional Practice,2_2_4,2,2,Professional artefact
+5351002,Macroeconomics (Kingdoms & Empires),3_5_10,2,1,Written coursework
+5351001,Microeconomics (Guilds & Households),3_5_10,2,1,Written exam
+5351003,"Trade, Coinage & Value Systems",3_5_10,2,2,Written coursework
+5351004,Econometrics,3_5_10,2,2,Presentation
+553702,Physiology of Organisms,5_3_7,2,1,Practical exam
+553701,Microbiology & Immunity,5_3_7,2,1,Practical exam
+553704,Field & Laboratory Techniques,5_3_7,2,2,Practical exam
+553703,Molecular Biology,5_3_7,2,2,Practical exam
+551303,Reliability & Risk in Complex Systems,5_1_3,2,2,Practical exam
+551301,Integrated System Design,5_1_3,2,1,Written coursework
+551304,Interfacing Mechanical and Magical Systems,5_1_3,2,2,Written coursework
+551302,Control Systems & Automation,5_1_3,2,1,Practical exam
+533304,Culture & Society,3_3_3,2,2,Written exam
+533301,Language Skills II,3_3_3,2,1,Practical exam
+533302,Literary Analysis,3_3_3,2,1,Written exam
+533303,Translation Studies,3_3_3,2,2,Written exam
+5351101,Applied Elven Ethics in Policy,3_5_11,2,1,Viva
+5351103,Comparative Ethics (Elven & Dwarven),3_5_11,2,2,Viva
+5351102,"Justice, Harmony & Collective Good",3_5_11,2,1,Presentation
+5351104,Leadership & Responsibility,3_5_11,2,2,Written coursework
 511303,Supply Chain Management,1_1_3,2,2,Written coursework
 511304,Entrepreneurial Finance,1_1_3,2,2,Written coursework
 511301,New Venture Creation,1_1_3,2,1,Written exam
 511302,Global Trade & Investment,1_1_3,2,1,Multi-choice exam
+552502,Complex Networked Mechanisms,5_2_5,2,1,Written coursework
+552504,Field Testing & Diagnostics,5_2_5,2,2,Practical exam
+552503,Adaptive Control Systems,5_2_5,2,2,Written coursework
+552501,Hybrid Systems Integration,5_2_5,2,1,Written coursework
 511504,Person Analytics,1_1_5,2,2,Written coursework
 511502,Learning & Development,1_1_5,2,1,Written coursework
 511501,Talent Management & Resourcing,1_1_5,2,1,Written exam
@@ -192,6 +310,10 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 522601,Advanced Music Theory,2_2_6,2,1,Written exam
 522604,Music Technology,2_2_6,2,2,Professional artefact
 522602,Performance II,2_2_6,2,1,Professional artefact
+534702,Comparative Religious Thought,3_4_7,2,1,Written coursework
+534704,Philosophy of Mind & Soul,3_4_7,2,2,Written exam
+534701,Metaphysics of the Divine,3_4_7,2,1,Multi-choice exam
+534703,Applied Ethics,3_4_7,2,2,Written exam
 523804,Capstone: Create a Heritage-Inspired Brew Line,2_3_8,2,2,Written coursework
 523803,"Designing Flavour: Herbs, Temperature, and Time",2_3_8,2,2,Professional artefact
 523802,Chemistry and Safety in Ferment Labs,2_3_8,2,1,Practical exam
@@ -200,13 +322,18 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 522202,Experimental Photographic Processes,2_2_2,2,1,Professional artefact
 522201,Advanced Printmaking,2_2_2,2,1,Professional artefact
 522204,Professional Skills for Artists,2_2_2,2,2,Professional artefact
-553702,Physiology of Organisms,5_3_12,2,1,Practical exam
-553801,Disease Mechanisms,5_3_12,2,1,Practical exam
 511401,Hospitality Operations Management,1_1_4,2,1,Written exam
 511402,Tourism Planning & Development,1_1_4,2,1,Written coursework
 511403,Revenue & Yield Management,1_1_4,2,2,Written exam
 511404,Events Management,1_1_4,2,2,Multi-choice exam
-553701,Microbiology & Immunity,5_3_11,2,1,Practical exam
+5531102,Differential Equations,5_3_11,2,1,Practical exam
+5531104,Statistical Modelling,5_3_11,2,2,Practical exam
+5531103,Mathematical Methods,5_3_11,2,2,Practical exam
+5531101,Linear Algebra,5_3_11,2,1,Written coursework
+5361503,Identity & Diversity,3_6_15,2,2,Groupwork
+5361504,Globalisation & Society,3_6_15,2,2,Written exam
+5361501,Research Methods in Sociology,3_6_15,2,1,Written exam
+5361502,Social Institutions,3_6_15,2,1,Presentation
 522304,Professional Development,2_2_3,2,2,Professional artefact
 522303,Interdisciplinary Practice,2_2_3,2,2,Professional artefact
 522301,Studio Practice II,2_2_3,2,1,Professional artefact
@@ -223,6 +350,14 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 523702,Fieldwork: Documenting and Mapping,2_3_7,2,1,Professional artefact
 523703,Cultural Entanglements in Artefact Recovery,2_3_7,2,2,Professional artefact
 523704,Material Culture Studies,2_3_7,2,2,Written exam
+542602,Postnatal Care & Neonatal Health,4_2_6,2,1,Written coursework
+542601,Labour & Birth Management,4_2_6,2,1,Practical exam
+542603,Complications in Pregnancy & Birth,4_2_6,2,2,Written coursework
+542604,Clinical Practice Placement,4_2_6,2,2,Practical exam
+541101,Curriculum Design & Assessment,4_1_1,2,1,Written coursework
+541103,Classroom Practice & Pedagogy,4_1_1,2,2,Written coursework
+541104,Research Methods in Education,4_1_1,2,2,Practical exam
+541102,Inclusive Education,4_1_1,2,1,Professional artefact
 511203,Business Analytics,1_1_2,2,2,Written coursework
 511202,People Resource Management,1_1_2,2,1,Written exam
 511201,Business Operations,1_1_2,2,1,Groupwork
@@ -230,52 +365,150 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 523904,Form and Function: Design Studio I,2_3_9,2,2,Groupwork
 523902,Alloy Theory and Practical Metallurgy,2_3_9,2,1,Professional artefact
 523903,"Forging for Fit: Joints, Hinges, and Mechanisms",2_3_9,2,2,Professional artefact
-542403,Healing Traditions Across Realms,4_2_10,2,2,Written coursework
-542502,"Movement, Breath & Awareness Practices",4_2_10,2,1,Written coursework
-542601,Labour & Birth Management,4_2_10,2,1,Practical exam
+5421003,Cardiopulmonary Physiotherapy,4_2_10,2,2,Written coursework
+5421001,Musculoskeletal Physiotherapy,4_2_10,2,1,Written coursework
+5421004,Clinical Skills & Assessment,4_2_10,2,2,Practical exam
+5421002,Neurological Rehabilitation,4_2_10,2,1,Written coursework
 522502,Media Analysis,2_2_5,2,1,Viva
 522504,Research Methods in Media,2_2_5,2,2,Written coursework
 522501,Media Theory,2_2_5,2,1,Written exam
 522503,Social Media Cultures,2_2_5,2,2,Written exam
+5531004,Conservation Science,5_3_10,2,2,Practical exam
+5531003,Environmental Monitoring & Data,5_3_10,2,2,Practical exam
+5531002,Resource Management,5_3_10,2,1,Multi-choice exam
+5531001,Climate Systems & Change,5_3_10,2,1,Written coursework
 5241003,Draping & Advanced Construction,2_4_10,2,2,Professional artefact
 5241004,Fashion Marketing & Branding,2_4_10,2,2,Written exam
 5241002,Textiles & Fabric Innovation,2_4_10,2,1,Presentation
 5241001,Fashion Design Development,2_4_10,2,1,Professional artefact
-542401,Applied Herbal Formulations,4_2_8,2,1,Presentation
+534603,Performance & Procession Design,3_4_6,2,2,Written coursework
+534601,Courtly & Civic Ceremonies,3_4_6,2,1,Written coursework
+534604,Intercultural Ceremonial Exchange,3_4_6,2,2,Presentation
+534602,Funerary & Ancestral Rites,3_4_6,2,1,Groupwork
+542803,Assistive Technology & Adaptation,4_2_8,2,2,Written coursework
+5421104,Practice Placement,4_2_8,2,2,Practical exam
+542802,Mental Health & Physical Rehabilitation,4_2_8,2,1,Written coursework
+542801,Therapeutic Interventions & Techniques,4_2_8,2,1,Written coursework
+553802,Medical Microbiology,5_3_8,2,1,Practical exam
+553801,Disease Mechanisms,5_3_8,2,1,Practical exam
+553803,Haematology & Immunology,5_3_8,2,2,Written coursework
+553804,Clinical Laboratory Practice,5_3_8,2,2,Practical exam
+551202,Fluid Systems & Hydraulic Power,5_1_2,2,1,Practical exam
+551201,Dynamics of Machines,5_1_2,2,1,Practical exam
+551204,Mechanical Design & Fabrication,5_1_2,2,2,Practical exam
+551203,Structural Mechanics,5_1_2,2,2,Written coursework
 532203,Historiography,3_2_2,2,2,Presentation
 532201,Social & Cultural History,3_2_2,2,1,Written exam
 532204,Archival Research Methods,3_2_2,2,2,Written coursework
 532202,Political History,3_2_2,2,1,Written exam
-542701,"Adult, Child & Mental Health Nursing",4_2_11,2,1,Presentation
-542503,"Pain, Recovery & Adaptation",4_2_11,2,2,Presentation
-542404,Field Practice & Observation,4_2_11,2,2,Groupwork
-542602,Postnatal Care & Neonatal Health,4_2_11,2,1,Written coursework
+541201,Advanced Mentoring Practice,4_1_2,2,1,Groupwork
+541202,Reflective Practice & Supervision,4_1_2,2,1,Groupwork
+541204,Group Facilitation Techniques,4_1_2,2,2,Practical exam
+541203,Supporting Learning Pathways,4_1_2,2,2,Written coursework
+5531201,Quantum Physics,5_3_12,2,1,Written coursework
+5531202,Thermodynamics,5_3_12,2,1,Practical exam
+5531204,Experimental Physics,5_3_12,2,2,Written coursework
+5531203,Optics & Light Systems,5_3_12,2,2,Written exam
+542503,"Pain, Recovery & Adaptation",4_2_5,2,2,Presentation
+542502,"Movement, Breath & Awareness Practices",4_2_5,2,1,Written coursework
+542501,Psychosomatic Health,4_2_5,2,1,Practical exam
+542504,Therapeutic Communication,4_2_5,2,2,Written coursework
+5421102,Mental Health & Vulnerability,4_2_11,2,1,Groupwork
+5421103,"Ethics, Power & Inequality",4_2_11,2,2,Multi-choice exam
+5421101,Social Work Practice Methods,4_2_11,2,1,Written coursework
 5241104,Design History & Theory,2_4_11,2,2,Written coursework
 5241102,Editorial & Publication Design,2_4_11,2,1,Professional artefact
 5241101,Branding & Identity Design,2_4_11,2,1,Professional artefact
-542501,Psychosomatic Health,4_2_9,2,1,Practical exam
-542402,Energy Systems & Balance,4_2_9,2,1,Presentation
+542701,"Adult, Child & Mental Health Nursing",4_2_7,2,1,Presentation
+542702,Pharmacology & Medication Management,4_2_7,2,1,Written coursework
+542903,Drug Development & Formulation,4_2_9,2,2,Written coursework
+542901,Pharmacokinetics & Pharmacodynamics,4_2_9,2,1,Written coursework
+542902,Microbiology & Infectious Disease,4_2_9,2,1,Written coursework
+542904,Clinical Pharmacy Practice,4_2_9,2,2,Practical exam
+652404,Innovation Capstone Project,5_2_4,3,2,Written coursework
+652402,Future Systems Design,5_2_4,3,1,Written coursework
+652401,Advanced Technological Applications,5_2_4,3,1,Written coursework
+652403,Cross-Realm Tech Integration,5_2_4,3,2,Written coursework
+652604,Major Research / Cultivation Project,5_2_6,3,2,Professional artefact
+652603,Ethical Practice in Bio-Engineering,5_2_6,3,2,Practical exam
+652601,Advanced Biotechnological Design,5_2_6,3,1,Groupwork
+652602,Living Infrastructure & Material Production,5_2_6,3,1,Written coursework
+635904,Dissertation / Applied Project,3_5_9,3,2,Written coursework
+635902,Post-Conflict Societies,3_5_9,3,1,Groupwork
+635903,Leadership in Crisis,3_5_9,3,2,Written coursework
+635901,Advanced Conflict Transformation,3_5_9,3,1,Presentation
+653904,Dissertation,5_3_9,3,1,Written coursework
+653903,Chemical Research Methods,5_3_9,3,2,Presentation
+653901,Advanced Organic Synthesis,5_3_9,3,1,Practical exam
+653902,Materials Chemistry,5_3_9,3,1,Written coursework
 612102,Dissertation / Research Project,1_2_1,3,2,Written coursework
 612103,International Law,1_2_1,3,2,Viva
 612101,Company Law,1_2_1,3,1,Viva
 612104,Jurisprudence,1_2_1,3,2,Viva
-642401,Advanced Herbal Practice,4_2_12,3,1,Written coursework
+634804,Major Project / Fieldwork,3_4_8,3,2,Written coursework
+634802,"Trauma, Loss & Remembrance",3_4_8,3,1,Presentation
+634803,Living Archives & Heritage,3_4_8,3,2,Viva
+634801,Advanced Studies in Memory & Ritual,3_4_8,3,1,Written coursework
+641304,Dissertation / Applied Project,4_1_3,3,2,Written coursework
+641303,Designing Multi-Age Learning Environments,4_1_3,3,2,Written coursework
+641302,"Heritage, Continuity & Change",4_1_3,3,1,Viva
+641301,Intergenerational Knowledge Systems,4_1_3,3,1,Written coursework
+6351204,Major Project,3_5_12,3,2,Written coursework
+6351201,Advanced Narrative Governance,3_5_12,3,1,Viva
+6351202,"Crisis, Change & Institutional Renewal",3_5_12,3,1,Groupwork
+6351203,Worldbuilding & Policy Design,3_5_12,3,2,Written coursework
+6421204,Dissertation / Practice-Based Enquiry,4_2_12,3,2,Written coursework
+6421203,Ethics of Care & Presence,4_2_12,3,2,Viva
+6421201,Advanced Somatic Enquiry,4_2_12,3,1,Groupwork
+6421202,Applied Embodied Interventions,4_2_12,3,1,Groupwork
+633504,Dissertation / Field Research Project,3_3_5,3,1,Written coursework
+633503,Endangered & Ancient Languages,3_3_5,3,2,Written coursework
+633501,Advanced Translation & Interpretation,3_3_5,3,1,Presentation
+633502,Language Contact & Hybridisation,3_3_5,3,1,Presentation
+6361404,Dissertation,3_6_14,3,1,Written coursework
+6361403,Applied Psychology,3_6_14,3,2,Viva
+6361401,Advanced Topics in Psychology,3_6_14,3,1,Viva
+6361402,Clinical & Health Psychology,3_6_14,3,1,Written coursework
+6351304,Dissertation,3_5_13,3,1,Written coursework
+6351303,Security & Strategy,3_5_13,3,2,Viva
+6351302,Global Governance & Diplomacy,3_5_13,3,1,Viva
+6351301,Advanced Political Theory,3_5_13,3,1,Presentation
 621101,Major Project / Dissertation,2_1_1,3,1,Written coursework
 621102,Professional Practice & Management,2_1_1,3,1,Viva
 621104,Advanced Architectural Technology,2_1_1,3,2,Professional artefact
 621103,Urban Design & Planning,2_1_1,3,2,Written coursework
-6241201,Final Interior Design Project,2_4_12,3,1,Professional artefact
-6241102,Professional Practice,2_4_12,3,2,Professional artefact
-6241202,Sustainable Interior Design,2_4_12,3,2,Viva
-6241203,Advanced Spatial Design,2_4_12,3,2,Professional artefact
 622401,Advanced Illustration Project,2_2_4,3,1,Professional artefact
 622404,Contemporary Illustration Contexts,2_2_4,3,2,Professional artefact
 622403,Self-Promotion & Freelancing,2_2_4,3,2,Professional artefact
 622402,Portfolio Development,2_2_4,3,1,Professional artefact
+6351004,Dissertation,3_5_10,3,1,Written coursework
+6351001,Advanced Economic Theory,3_5_10,3,1,Viva
+6351003,Political Economy of Realms,3_5_10,3,2,Presentation
+6351002,Development & Inequality (Across Species),3_5_10,3,1,Presentation
+653704,Dissertation,5_3_7,3,1,Written coursework
+653702,Conservation & Biodiversity,5_3_7,3,1,Groupwork
+653703,Systems & Integrative Biology,5_3_7,3,2,Practical exam
+653701,Advanced Biology Topics,5_3_7,3,1,Groupwork
+651304,Capstone Systems Integration Project,5_1_3,3,2,Written coursework
+651301,Advanced Systems Architecture,5_1_3,3,1,Written coursework
+651303,Failure Analysis & System Resilience,5_1_3,3,2,Written coursework
+651302,Large-Scale Infrastructure Design,5_1_3,3,1,Written coursework
+633302,Dissertation / Research Project,3_3_3,3,2,Written coursework
+633303,Comparative Literature,3_3_3,3,2,Viva
+633301,Advanced Language Skills,3_3_3,3,1,Professional artefact
+633304,Contemporary Literature & Criticism,3_3_3,3,2,Viva
+6351104,Dissertation,3_5_11,3,1,Written coursework
+6351103,Moral Dilemmas in Inter-Realm Politics,3_5_11,3,2,Viva
+6351101,Ethics of Modern Governance,3_5_11,3,1,Written coursework
+6351102,Environmental Stewardship & Future Generations,3_5_11,3,1,Presentation
 611302,Dissertation / Research Project,1_1_3,3,2,Written coursework
 611304,Emerging Markets & Trade Policy,1_1_3,3,2,Viva
 611301,Strategic Entrepreneurship,1_1_3,3,1,Written coursework
 611303,Innovation Management,1_1_3,3,2,Written coursework
+652504,Major Integration Project,5_2_5,3,2,Professional artefact
+652501,Advanced Multi-System Engineering,5_2_5,3,1,Written coursework
+652503,System Harmony & Stability Design,5_2_5,3,2,Written coursework
+652502,Self-Regulating Infrastructure,5_2_5,3,1,Written coursework
 611501,Dissertation / Research Project,1_1_5,3,2,Written coursework
 611502,Employment Law,1_1_5,3,1,Written exam
 611503,Leadership & Change Management,1_1_5,3,2,Multi-choice exam
@@ -284,13 +517,30 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 622603,Musicology,2_2_6,3,2,Groupwork
 622602,Composition II,2_2_6,3,1,Groupwork
 622604,Professional Practice in Music,2_2_6,3,2,Presentation
+634703,Philosophy of Death & Afterlife,3_4_7,3,2,Written coursework
+634704,Dissertation,3_4_7,3,1,Written coursework
+634701,Advanced Topics in Philosophy of Religion,3_4_7,3,1,Viva
+634702,Political & Social Ethics,3_4_7,3,1,Viva
 622201,Major Studio Project,2_2_2,3,1,Professional artefact
 622202,Advanced Cyanotype & Alternative Photography,2_2_2,3,1,Professional artefact
 622203,Exhibition & Portfolio Development,2_2_2,3,2,Written coursework
 622204,Critical Studies in Contemporary Art,2_2_2,3,2,Written exam
+611403,Dissertation / Research Project,1_1_4,3,2,Written coursework
+611402,Sustainable Tourism,1_1_4,3,1,Viva
+611401,Strategic Hospitality Management,1_1_4,3,1,Viva
+611404,Hospitality Entrepreneurship,1_1_4,3,2,Groupwork
+6531104,Dissertation / Research Project,5_3_11,3,2,Written coursework
+6531103,Mathematical Modelling,5_3_11,3,2,Practical exam
+6531102,Applied Mathematics,5_3_11,3,1,Practical exam
+6531101,Advanced Pure Mathematics,5_3_11,3,1,Practical exam
 623804,Dissertation / Research Project,2_3_8,3,2,Written coursework
 623803,Distillation & Alternative Fermentations,2_3_8,3,2,Groupwork
 623801,"Fermentation Futures: Probiotics, Policy, and Place",2_3_8,3,1,Written coursework
+623802,Quality Control & Sensory Analysis,2_3_8,3,1,Viva
+6361504,Dissertation,3_6_15,3,1,Written coursework
+6361501,Advanced Sociological Theory,3_6_15,3,1,Written coursework
+6361503,Power & Social Change,3_6_15,3,2,Viva
+6361502,Contemporary Social Issues,3_6_15,3,1,Groupwork
 622302,Major Project / Dissertation,2_2_3,3,1,Written coursework
 622303,Exhibition Practice,2_2_3,3,2,Professional artefact
 622301,Studio Practice III,2_2_3,3,1,Viva
@@ -299,14 +549,26 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 611102,Audit & Assurance,1_1_1,3,1,Viva
 611101,Advanced Financial Reporting,1_1_1,3,1,Viva
 611104,Strategic Financial Management,1_1_1,3,2,Viva
-611403,Dissertation / Research Project,1_1_4,3,2,Written coursework
-611402,Sustainable Tourism,1_1_4,3,1,Viva
-611401,Strategic Hospitality Management,1_1_4,3,1,Viva
-611404,Hospitality Entrepreneurship,1_1_4,3,2,Groupwork
+631102,Dissertation / Field Research Project,3_1_1,3,1,Written coursework
+631101,Advanced Topics in Geography,3_1_1,3,1,Viva
+631104,Global Development,3_1_1,3,2,Written coursework
+631103,Ecosystems & Sustainability,3_1_1,3,2,Groupwork
 623701,Dissertation / Research Project,2_3_7,3,2,Written coursework
 623703,Ancient Civilisations,2_3_7,3,2,Professional artefact
 623702,Speculative Restoration: Imagining Futures from Fragments,2_3_7,3,1,Groupwork
 623704,Public Heritage,2_3_7,3,2,Professional artefact
+642604,Dissertation / Practice Portfolio,4_2_6,3,2,Written coursework
+642603,Leadership in Maternity Care,4_2_6,3,2,Professional artefact
+642602,Complex Birth & Risk Management,4_2_6,3,1,Viva
+642601,Advanced Midwifery Practice,4_2_6,3,1,Written coursework
+641104,Dissertation,4_1_1,3,1,Written coursework
+641101,Critical Perspectives in Education,4_1_1,3,1,Groupwork
+641103,Educational Leadership & Change,4_1_1,3,2,Groupwork
+641102,Global Education Systems,4_1_1,3,1,Groupwork
+642404,Major Practical Project / Portfolio,4_2_4,3,2,Professional artefact
+642402,Integrative Healing Systems,4_2_4,3,1,Written coursework
+642401,Advanced Herbal Practice,4_2_4,3,1,Written coursework
+642403,Ethical Practice in Healing Arts,4_2_4,3,2,Presentation
 611202,Dissertation / Research Project,1_1_2,3,2,Written coursework
 611201,Strategic Management,1_1_2,3,1,Viva
 611204,Business Ethics & Corporate Governance,1_1_2,3,2,Written coursework
@@ -315,20 +577,67 @@ module_code,module_title,programme_code,module_year,semester,assessment_type
 623903,"Ethics in Craft, Ownership, and Replication",2_3_9,3,2,Written coursework
 623904,Professional Practice & Entrepreneurship,2_3_9,3,2,Written coursework
 623901,Design Studio II: Commissions and Constraints,2_3_9,3,1,Professional artefact
-631102,Dissertation / Field Research Project,3_1_1,3,1,Written coursework
-631101,Advanced Topics in Geography,3_1_1,3,1,Viva
-631104,Global Development,3_1_1,3,2,Written coursework
-631103,Ecosystems & Sustainability,3_1_1,3,2,Groupwork
+6421004,Dissertation / Clinical Portfolio,4_2_10,3,2,Written coursework
+6421002,Complex Case Management,4_2_10,3,1,Viva
+6421001,Advanced Rehabilitation Practice,4_2_10,3,1,Written coursework
+6421003,Leadership in Clinical Practice,4_2_10,3,2,Practical exam
 622503,Media Project / Dissertation,2_2_5,3,2,Written coursework
 622501,Advanced Media Theory,2_2_5,3,1,Viva
 622504,Political Economy of Media,2_2_5,3,2,Presentation
 622502,Global Media & Communication,2_2_5,3,1,Presentation
+6531004,Dissertation / Field Project,5_3_10,3,2,Written coursework
+6531002,Sustainability & Policy,5_3_10,3,1,Viva
+6531003,Ecosystem Management,5_3_10,3,2,Written coursework
+6531001,Advanced Environmental Analysis,5_3_10,3,1,Written coursework
 6241001,Final Collection / Major Project,2_4_10,3,1,Written coursework
 6241002,Professional Practice in Fashion,2_4_10,3,2,Professional artefact
 6241003,Sustainable Fashion Design,2_4_10,3,2,Written coursework
+634601,Grand Ceremony Design Project,3_4_6,3,1,Professional artefact
+634604,Living Traditions & Reinvention,3_4_6,3,2,Groupwork
+634602,Diplomacy & Protocol,3_4_6,3,1,Presentation
+634603,"Crisis, Mourning & Renewal Rituals",3_4_6,3,2,Written coursework
+642803,Dissertation / Practice Portfolio,4_2_8,3,2,Written coursework
+642801,Advanced Occupational Therapy Practice,4_2_8,3,1,Professional artefact
+642802,Community & Social Inclusion,4_2_8,3,2,Written coursework
+653804,Dissertation,5_3_8,3,1,Written coursework
+653803,Research Methods in Biomedicine,5_3_8,3,2,Professional artefact
+653802,Translational Medicine,5_3_8,3,1,Practical exam
+653801,Advanced Biomedical Diagnostics,5_3_8,3,1,Practical exam
+651203,Dissertation / Practice-Based Enquiry,5_1_2,3,2,Written coursework
+651204,Professional Engineering Practice,5_1_2,3,2,Written coursework
+651202,Power Transmission & Energy Systems,5_1_2,3,1,Written coursework
+651201,Advanced Mechanical Systems,5_1_2,3,1,Presentation
 632202,Dissertation,3_2_2,3,1,Written coursework
 632201,Special Subject in History,3_2_2,3,1,Viva
 632203,Public History,3_2_2,3,2,Viva
 632204,Global Historical Perspectives,3_2_2,3,2,Written exam
+641204,Practice-Based Project,4_1_2,3,2,Written coursework
+641202,Crisis Support & Developmental Intervention,4_1_2,3,1,Groupwork
+641203,Mentorship Program Design,4_1_2,3,2,Presentation
+641201,Strategic Mentorship in Institutions,4_1_2,3,1,Written coursework
+6531204,Dissertation / Research Project,5_3_12,3,2,Written coursework
+6531201,Advanced Theoretical Physics,5_3_12,3,1,Written coursework
+6531203,Particle & Field Physics,5_3_12,3,2,Written coursework
+6531202,Astrophysics & Cosmology,5_3_12,3,1,Practical exam
+642504,Dissertation / Practice Portfolio,4_2_5,3,2,Written coursework
+642501,Advanced Integrated Care Models,4_2_5,3,1,Presentation
+642502,Complex Case Integration,4_2_5,3,1,Written coursework
+642503,Holistic Assessment & Intervention,4_2_5,3,2,Written coursework
+6421104,Dissertation / Practice Portfolio,4_2_11,3,2,Written coursework
+6421103,Leadership & Professional Responsibility,4_2_11,3,2,Written coursework
+6421101,Advanced Social Work Practice,4_2_11,3,1,Professional artefact
+6421102,"Risk, Protection & Complex Cases",4_2_11,3,1,Written coursework
+6241201,Final Interior Design Project,2_4_12,3,1,Professional artefact
+6241102,Professional Practice,2_4_12,3,2,Professional artefact
+6241202,Sustainable Interior Design,2_4_12,3,2,Viva
+6241203,Advanced Spatial Design,2_4_12,3,2,Professional artefact
 6241101,Major Design Project,2_4_11,3,1,Professional artefact
 6241103,Contemporary Design Issues,2_4_11,3,2,Presentation
+642704,Dissertation / Practice Portfolio,4_2_7,3,2,Written coursework
+642701,Advanced Clinical Practice,4_2_7,3,1,Practical exam
+642702,Complex Care & Decision-Making,4_2_7,3,1,Presentation
+642703,Leadership in Healthcare Settings,4_2_7,3,2,Groupwork
+642901,Dissertation / Research Project,4_2_9,3,2,Written coursework
+642902,Patient Care & Clinical Decision-Making,4_2_9,3,1,Practical exam
+642903,Medicines Management & Public Health,4_2_9,3,2,Written coursework
+642904,Professional Practice & Ethics,4_2_9,3,2,Written coursework

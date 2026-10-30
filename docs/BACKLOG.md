@@ -4,6 +4,42 @@ Items here are deferred because they require design decisions, interact with oth
 
 ---
 
+## BUG: Mis-coded Modules sheet strands two thirds of students before graduation
+
+**Added**: 2026-10-29
+**Status**: Fixed and re-run on branch `claude/stoic-dirac-b41913` (2026-10-30, 138 min). `data/relational/` is regenerated and passes the Section 0 integrity checks; docs and site counts updated. **Released as v2.7.0** (Hub re-profile still to do, see below).
+
+**What happens.** In the v2.6.0 dataset 27 of the 55 programmes never have a `programme_year` 3 enrolment, and `fact_good_honours` has rows for only 21 programmes. Science & Engineering has **zero** graduates; Health & Education has graduates from Somatic Wellbeing Enquiry only (538); Culture & Social Sciences from Geography and History only. Of 35,000 students, **16,873 simply vanish**: their last `fact_enrollment` row is status `enrolled` (14,885 at Year 2, 1,988 at Year 3) with no `fact_progression` row and nothing afterwards — not withdrawn, not graduated. 84% of the 6,039 graduates come from two faculties (Craft, Art & Architecture 3,648; Business & Law 1,451).
+
+| Faculty | Entrants | Graduates | Share |
+|---|---|---|---|
+| Business & Law School | 2,849 | 1,451 | 51% |
+| Craft, Art & Architecture | 7,459 | 3,648 | 49% |
+| Culture & Social Sciences | 9,533 | 402 | 4% |
+| Health & Education | 7,971 | 538 | 7% |
+| Science & Engineering | 7,188 | 0 | 0% |
+
+**Root cause — data, not code.** In the canonical curriculum `curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx`, Modules sheet, the `Programme code` column is wrong on **385 of 660 rows**: 312 of them carry codes that do not exist in the Programmes sheet (`4_2_23`, `3_6_26`, `5_3_22`…). The `Programme` name column and the `Module Code` column (which encodes faculty/department/programme, e.g. `441102` → `4_1_1`) are both correct; only the code column is off. The pattern is an Excel fill-handle series: within each affected programme the code increments by one per row (Education Studies' four Year 1 modules are coded `4_1_1`, `4_1_2`, `4_1_3`, `4_1_4`), the classic autofill behaviour on text ending in a digit. It came in with the v7 faculty rework (`a28ca4c`). The twenty programmes in Business & Law and Craft, plus Geography and History, happened to be unaffected, which is why the headline tables looked plausible. `config/module_characteristics.csv` was derived from the sheet and carries the same 385 errors.
+
+**How it propagates.** `ProgramEnrollmentSystem.get_modules_for_programme_year` (`core_systems/program_enrollment_system.py`) filters the Modules sheet on `Programme code` + `Year`, so 34 programmes get an empty module list for Year 2 and/or Year 3 (and a short list for Year 1 — Education Studies students take one module in their first year, not four). An empty list means no engagement rows, no assessment rows, and because `ProgressionSystem.compute_progression` aggregates *from* assessment rows, no progression row. `run_longitudinal_pipeline.main` builds next year's continuing cohort from the progression output, so the student is silently dropped. Graduate outcomes only ever sees students who passed a Year 3 with marks, so the programme never appears in `fact_good_honours` / `fact_graduate_outcomes`. NSS still surveys the stranded Year 3 students (it keys on `programme_year == 3` in the enrolment frame), which is why Physiotherapy, OT, Pharmacy and Social Work have NSS rows but no graduates.
+
+**Tables affected.** `fact_enrollment` (dead-end rows), `fact_progression` (no rows for 16,873 student-years), `fact_assessment` and `fact_weekly_engagement` (missing years; `modules_total` of 1–3 instead of 4 in Year 1 for affected programmes), `fact_good_honours` and `fact_graduate_outcomes` (21 programmes instead of 55, 6,039 graduates instead of an expected ~13,000 from the five graduating cohorts), `fact_nss_responses` (Year 3 respondents with no marks), `dim_modules` (333 rows — only the modules anyone actually sat — instead of 642 distinct module codes). **Headline figures:** the ≈20pp Elf–Dwarf good-degree gap in `docs/index.html`, `docs/data/gap-summary.csv` and `docs/explore/` is computed from `fact_good_honours` (`scripts/aggregate_gap.py`), i.e. from a graduate population drawn almost entirely from two faculties. Dwarves are 59.8% of entrants but 53.3% of graduates. The gap (Dwarf 44.5% vs Elf 64.3%) will move once all 55 programmes graduate and will need re-calibrating against the documented 18–20pp band.
+
+**Fix applied (this branch).**
+- `Programme code` rewritten from the programme name on all 385 bad rows of the Modules sheet (openpyxl, in place; every other cell verified identical) and the matching 385 rows of `config/module_characteristics.csv` (column replaced verbatim, all other columns byte-identical). Before: 34 programmes with an empty year; after: 0, every programme has 4 modules in each of Years 1–3, and `AssessmentSystem.module_code_lookup` resolves all 660 (programme, title) pairs.
+- New `scripts/validate_curriculum.py` — fails (exit 1) if any module row's code disagrees with its programme name, any code is unknown, any programme lacks modules in any year, or the CSV disagrees with the sheet. Run it before any pipeline run.
+- `ProgramEnrollmentSystem._load_curriculum_data` now prints a WARNING listing any programme with an empty year at load time.
+
+**Re-run result (2026-10-30).** Bundled with UK-style condonement (no module under 30, at most one in 30-39) and a (programme, year, title) module-code lookup that fixes Brewcraft. 35,000 students, 87,467 student-years, 20,492 graduates from all 55 programmes, `dim_modules` 642 rows. Year fail 5.8 / 5.3 / 10.5% (Y1 / Y2 / Y3; without condonement 17.5 / 15.5 / 23%), first-year non-continuation 6.3% (HESA roughly 5-6%), completion 83% for the four earliest cohorts (OfS B3 threshold 75%). Elf-Dwarf good-degree gap **22.9pp** (Elf 58.0%, Dwarf 35.1%), above the 18-20pp band; accepted by Rosie rather than recalibrated. Overall good-degree rate fell from 53.6% to about 45% because condoned weaker students now graduate. Year 3 fail rate is 1.8x Year 1 (validator warns).
+
+**Still to do.**
+1. Re-profile the Stonegrove Hub. The Hub lives on `feat/hub-phase0`, which does not have this branch's fix, so merge this branch into it first, then run `make_hub_extracts.py`, `generate_sources.py`, `build_estate.py`, `make_zips.py` and check `hub/source/values.yaml` for new null keys. Its storylines and in-world documents quote programme structure that has now changed (all 55 programmes graduate).
+2. ~~Cut a new GitHub release~~ Done: v2.7.0, download button updated.
+3. Module characteristics are keyed by module title alone: 23 titles shared across programmes differ in difficulty and collapse to one row, so `dim_modules.assessment_type` for 523801 shows the Year 3 value. Key them by (programme, year, title).
+4. Resits are not modelled; Year 3 fails run at 1.8x Year 1.
+
+---
+
 ## Wire `first_gen` into Other Calculations
 
 **Added**: 2026-05-03

@@ -111,7 +111,7 @@ Every domain table includes:
 
 2. **Year 1 End → Year 2 Decision**
    - Calculate pass/fail per module
-   - Determine overall year outcome (pass if all modules ≥ 40)
+   - Determine overall year outcome (pass if all modules ≥ 40, or the shortfall is condoned: none under 30 and at most one in 30-39)
    - **If pass**: Student may progress OR withdraw (probability + traits)
    - **If fail**: Student may repeat OR withdraw (probability + traits)
    - **If withdraw**: Status = "withdrawn", no more records
@@ -165,8 +165,8 @@ All outputs in `data/`:
 
 ### Active CSV configs (tabular, Excel-editable)
 
-- `config/module_characteristics.csv` — 353 modules: difficulty_level, assessment_type, mark_modifier
-- `config/programme_characteristics.csv` — 44 programmes: stress_level, social_intensity, creativity_requirements
+- `config/module_characteristics.csv` — 660 modules (55 programmes × 3 years × 4): difficulty_level, assessment_type, mark_modifier
+- `config/programme_characteristics.csv` — 55 programmes: stress_level, social_intensity, creativity_requirements
 - `config/clan_socioeconomic_distributions.csv` — per-clan SES rank and education distributions
 - `config/disability_assessment_modifiers.csv` — mark modifiers per disability type
 - `config/trait_programme_mapping.csv` — maps student traits to programme characteristics for enrollment fit scoring
