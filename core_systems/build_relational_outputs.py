@@ -134,12 +134,24 @@ def build_fact_weekly_engagement(
     engagement_df: pd.DataFrame,
     assessment_df: pd.DataFrame,
 ) -> pd.DataFrame:
-    lookup = (
+    df = engagement_df.rename(columns={"program_code": "programme_code"}).copy()
+    # A programme can reuse a title across years (Brewcraft's Quality Control & Sensory Analysis),
+    # so take the code from the student's own assessment rows for that year, which already
+    # resolved it by programme, year and title. Fall back to (programme, title) for anything
+    # that has no assessment row.
+    own = (
+        assessment_df[["student_id", "academic_year", "module_title", "module_code"]]
+        .drop_duplicates(["student_id", "academic_year", "module_title"])
+    )
+    df = df.merge(own, on=["student_id", "academic_year", "module_title"], how="left")
+    fallback = (
         assessment_df[["programme_code", "module_title", "module_code"]]
         .drop_duplicates(["programme_code", "module_title"])
+        .rename(columns={"module_code": "module_code_fallback"})
     )
-    df = engagement_df.rename(columns={"program_code": "programme_code"}).copy()
-    df = df.merge(lookup, on=["programme_code", "module_title"], how="left")
+    df = df.merge(fallback, on=["programme_code", "module_title"], how="left")
+    df["module_code"] = df["module_code"].fillna(df["module_code_fallback"])
+    df = df.drop(columns="module_code_fallback")
 
     unmatched = df["module_code"].isna().sum()
     if unmatched > 0:

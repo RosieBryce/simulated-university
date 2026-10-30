@@ -164,7 +164,7 @@ This document describes all CSV output files and their column definitions.
 |--------|------|-------------|
 | `student_id` | string | Persistent unique identifier |
 | `academic_year` | string | Calendar academic year |
-| `year_outcome` | string | "pass" or "fail" (all modules >= 40 to pass) |
+| `year_outcome` | string | "pass" or "fail" (all modules >= 40, or one module in 30-39 condoned; see CALCULATIONS.md) |
 | `status` | string | Next-year status: "enrolled", "repeating", "withdrawn", "graduated" |
 | `status_change_at` | string | Date when new status takes effect (ISO date) |
 | `programme_year_next` | integer/null | Programme year for next academic year (null if withdrawn/graduated) |
@@ -173,7 +173,7 @@ This document describes all CSV output files and their column definitions.
 | `modules_total` | integer | Count of distinct modules taken |
 
 **Notes**:
-- `status = "graduated"` when Year 3 student passes all modules
+- `status = "graduated"` when Year 3 student passes the year (including condonement)
 - `modules_passed` counts distinct modules (by module_code) where `combined_mark ≥ 40` (FINAL rows only)
 - Progression uses `combined_mark` from FINAL rows; falls back to `assessment_mark` for legacy data
 - Progression decision uses trait-based log-odds model (see CALCULATIONS.md)

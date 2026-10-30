@@ -74,18 +74,32 @@ class ProgressionSystem:
         parts = [p.strip() for p in raw.split(",") if p.strip() and "no_known" not in p]
         return len(parts) >= 2
 
+    def _year_passed(self, min_mark: float, modules_below_pass: int) -> bool:
+        """
+        Year pass rule. Without condonement every module must reach pass_threshold.
+        With it (UK-style), a module in [condonement.floor, pass_threshold) is condoned, so the
+        year is passed if no module is under the floor and at most condonement.max_modules
+        modules are under pass_threshold.
+        """
+        if modules_below_pass == 0:
+            return True
+        cond = self.config.get("condonement") or {}
+        if not cond.get("enabled", False):
+            return False
+        return (min_mark >= float(cond.get("floor", 30))
+                and modules_below_pass <= int(cond.get("max_modules", 1)))
+
     def _compute_year_outcome(self, student_marks: pd.Series) -> Tuple[bool, float]:
         """
-        Determine pass/fail for the year.
-        Pass = all modules >= pass_threshold.
+        Determine pass/fail for the year (see _year_passed for the rule).
         Returns (passed: bool, avg_mark: float).
         """
         marks = student_marks.dropna()
         if marks.empty:
             return False, 0.0
-        all_pass = (marks >= self.pass_threshold).all()
+        passed = self._year_passed(float(marks.min()), int((marks < self.pass_threshold).sum()))
         avg = float(marks.mean())
-        return all_pass, avg
+        return passed, avg
 
     def _apply_modifiers(
         self,
@@ -239,12 +253,19 @@ class ProgressionSystem:
             )
             .reset_index()
         )
-        agg["year_outcome"] = agg["min_mark"].apply(
-            lambda m: "pass" if m >= self.pass_threshold else "fail"
-        )
+        below = finals[finals["mark_for_progression"] < self.pass_threshold]
+        n_below = below.groupby("student_id")["module_code"].nunique()
+        agg["modules_below_pass"] = agg["student_id"].map(n_below).fillna(0).astype(int)
+        agg["year_outcome"] = [
+            "pass" if self._year_passed(mn, nb) else "fail"
+            for mn, nb in zip(agg["min_mark"], agg["modules_below_pass"])
+        ]
         passed_modules = finals[finals["mark_for_progression"] >= self.pass_threshold]
         modules_passed = passed_modules.groupby("student_id")["module_code"].nunique()
         agg["modules_passed"] = agg["student_id"].map(modules_passed).fillna(0).astype(int)
+        # Condoned modules are credited when the year is passed.
+        condoned = (agg["year_outcome"] == "pass") & (agg["modules_below_pass"] > 0)
+        agg.loc[condoned, "modules_passed"] = agg.loc[condoned, "modules_total"]
 
         # Build student lookup for traits (enrolled has student_id as index or column)
         enrolled_df = enrolled_df.copy()

@@ -1,11 +1,11 @@
 {
   "model_version": "v2.0-longitudinal",
-  "git_commit": "9fba2a0f2d5c",
+  "git_commit": "10ecbb8e4421",
   "random_seed": 42,
-  "generation_timestamp": "2026-08-08T12:17:54Z",
-  "pipeline_runtime_seconds": 3469.8,
+  "generation_timestamp": "2026-10-30T10:05:30Z",
+  "pipeline_runtime_seconds": 8016.8,
   "config_versions": {
-    "progression_rules": "v1.0"
+    "progression_rules": "v1.1"
   },
   "cohort_size": 5000,
   "years_generated": 7,

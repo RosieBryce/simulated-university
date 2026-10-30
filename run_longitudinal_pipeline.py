@@ -327,7 +327,7 @@ def main():
         "random_seed": BASE_SEED,
         "generation_timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "pipeline_runtime_seconds": round(time.time() - pipeline_start, 1),
-        "config_versions": {"progression_rules": "v1.0"},
+        "config_versions": {"progression_rules": "v1.1"},
         "cohort_size": COHORT_SIZE,
         "years_generated": len(ACADEMIC_YEARS),
         "academic_years": ACADEMIC_YEARS,

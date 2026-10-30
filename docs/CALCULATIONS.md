@@ -240,7 +240,7 @@ All modifiers are multiplicative and applied at the individual student level.
 - Academic: x1.10
 - Vocational: x0.93
 - No qualifications: x0.85
-- Spread widened from earlier values (was 1.06/0.96/0.92) to achieve Elf–Dwarf good degree rate gap of ~19pp. Combined with disability path and SES gradient, the gap emerges from the composition of individual factors without any direct clan modifier. Calibrated to match the UK ethnicity awarding gap (~18–20pp, OfS data).
+- Spread widened from earlier values (was 1.06/0.96/0.92) to achieve Elf–Dwarf good degree rate gap of ~19pp (v2.6.0; ~23pp on the corrected curriculum with condonement). Combined with disability path and SES gradient, the gap emerges from the composition of individual factors without any direct clan modifier. Calibrated to match the UK ethnicity awarding gap (~18–20pp, OfS data).
 
 **Socio-Economic Modifier** (ranks 1–8, from `config/assessment_modifiers.yaml`):
 ```
@@ -316,7 +316,9 @@ Grades are not included in `fact_assessment`. Final degree classifications appea
 
 **Per Module**: `assessment_mark >= 40` (configurable via `pass_threshold` in YAML).
 
-**Year Outcome**: Pass if all modules pass; fail otherwise.
+**Year Outcome** (`condonement` block in the YAML, UK-style): the year is passed if every module is at or above the pass mark, or if the shortfall is condoned: no module below `floor` (30) and at most `max_modules` (1) modules in the 30-39 band. Otherwise it is failed. Condoned modules are credited (`modules_passed == modules_total`); their marks are unchanged, so degree classification is unaffected.
+
+Why: failing the year for any single module under 40 gave ~18% year failure overall (23% in Year 3) with four modules per year, which pushed first-year non-continuation to ~9% and cohort completion to ~72%, outside the benchmarks below. The UK publishes non-continuation and completion rather than year-fail rates, so those are what the validator checks. With the rule the regenerated data gives year fail of 5.8% / 5.3% / 10.5% (Years 1 / 2 / 3), first-year non-continuation of 6.3% (HESA full-time first degree, roughly 5-6%) and completion of 83-84% for the earliest cohorts (OfS B3 threshold 75%). Set `condonement.enabled: false` to restore the strict rule. Resits are not modelled (see `docs/BACKLOG.md`).
 
 ### Progression Decision
 
@@ -458,7 +460,7 @@ The denominator simplifies to 1.0 because the active weights sum to 1.
 
 ## Awarding Gap Design
 
-The species awarding gap (~19pp good degree rate, Elf > Dwarf) emerges from **individual-level factors only**. This is consistent with the UK ethnicity awarding gap (~18–20pp white vs Black students as measured by OfS), making it realistic rather than artificially narrowed:
+The species awarding gap (~23pp good degree rate, Elf > Dwarf; it was ~19-20pp before condonement and the full 55-programme curriculum, and is accepted at ~23pp, a little above the UK ethnicity gap) emerges from **individual-level factors only**. This is consistent with the UK ethnicity awarding gap (~18–20pp white vs Black students as measured by OfS), making it realistic rather than artificially narrowed:
 
 1. **Clan-specific SES distributions** — disadvantaged clans concentrated at low SES ranks
 2. **Clan-specific education distributions** — disadvantaged clans have fewer academic backgrounds
@@ -498,6 +500,7 @@ No top-down species or clan mark modifiers. All group-level patterns are traceab
 - Mid-semester dip (weeks 6–8): ~8–10pp below weeks 1–2 peak
 
 ### Progression
+- Year pass rate (after condonement): ~88-97% in every programme year; Year 3 fail rate no more than 1.25x Year 1
 - Year 1 -> Year 2: ~80-90%
 - Withdrawal rate: ~5-15% per year
 - Repeat rate: ~5-10% per year

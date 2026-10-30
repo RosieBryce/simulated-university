@@ -32,9 +32,14 @@ python scripts/aggregate_gap.py
 python scripts/aggregate_engagement.py
 ```
 
-Validation (reads from `data/relational/`):
+Validation (reads from `data/relational/`, or a path given as the first argument). Section 0 is a set of hard integrity checks (every enrolment-year has progression, assessment and engagement rows; every programme has Year 1-3 enrolments and graduates; `dim_modules` covers the curriculum; NSS rows have marks) and the script exits 1 if any fail. The range checks after it only warn:
 ```bash
 python metaanalysis/validate_outputs.py
+```
+
+Check the curriculum before any run (catches programme codes that don't match their programme, which strands students with no modules, plus module code collisions and unknown programme codes in config — see `docs/BACKLOG.md`):
+```bash
+python scripts/validate_curriculum.py
 ```
 
 ## Architecture
@@ -68,7 +73,7 @@ Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 
 - The canonical curriculum source is `curriculum-and-lore/Stonegrove_University_Curriculum_v7.xlsx` (55 programmes, 5 faculties, Year 1/2/3 modules).
 - "Species" is used instead of "Race" throughout the codebase.
-- No direct clan/species mark modifier — the ~18pp good degree attainment gap (Elf vs Dwarf) emerges from SES, prior education, and disability distributions only.
+- No direct clan/species mark modifier — the ~23pp good degree attainment gap (Elf vs Dwarf) emerges from SES, prior education, and disability distributions only.
 - Gender awarding gap is flat by design.
 - Tabular configs are CSV (editable in Excel); hierarchical configs are YAML.
 
