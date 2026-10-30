@@ -1,0 +1,6 @@
+# GitHub Pages builds docs/ with Jekyll. Jekyll silently drops files whose
+# names start with "~", which removes the deliberate ~$ lock files and ~WRL
+# temp files from the Stonegrove Hub estate. Include them explicitly.
+# Everything else uses Jekyll's defaults.
+include:
+  - "~*"
