@@ -95,10 +95,14 @@ class AssessmentSystem:
         self._load_assessment_modifiers()
 
     def _load_curriculum(self):
-        """Load Modules sheet and build (programme_code, module_title) -> module_code lookup."""
+        """Load Modules sheet and build (programme_code, year, module_title) -> module_code lookup.
+
+        Year is part of the key because a programme can reuse a title across years
+        (Brewcraft's 'Quality Control & Sensory Analysis' is a Year 2 and a Year 3 module).
+        """
         self.modules_df = pd.read_excel(self.curriculum_file, sheet_name='Modules')
         self.module_code_lookup = {
-            (str(row['Programme code']).strip(), str(row['Module Title']).strip()): str(row['Module Code']).strip()
+            (str(row['Programme code']).strip(), int(row['Year']), str(row['Module Title']).strip()): str(row['Module Code']).strip()
             for _, row in self.modules_df.iterrows()
         }
 
@@ -369,7 +373,7 @@ class AssessmentSystem:
                     continue
                 module_title = module_title.strip()
                 module_code = self.module_code_lookup.get(
-                    (program_code, module_title),
+                    (program_code, prog_year, module_title),
                     f"{program_code}.??"  # should not occur if curriculum is complete
                 )
                 mod_chars = self.module_chars.get(module_title, {})

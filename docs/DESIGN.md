@@ -111,7 +111,7 @@ Every domain table includes:
 
 2. **Year 1 End → Year 2 Decision**
    - Calculate pass/fail per module
-   - Determine overall year outcome (pass if all modules ≥ 40)
+   - Determine overall year outcome (pass if all modules ≥ 40, or the shortfall is condoned: none under 30 and at most one in 30-39)
    - **If pass**: Student may progress OR withdraw (probability + traits)
    - **If fail**: Student may repeat OR withdraw (probability + traits)
    - **If withdraw**: Status = "withdrawn", no more records

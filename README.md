@@ -12,13 +12,13 @@ A full relational schema across 11 tables — 4 dimension tables and 7 fact tabl
 |---|---|---|
 | `dim_students` | Species, clan, gender, age, education, SES, disability status, first-generation status | 35,000 |
 | `dim_programmes` | 55 programmes across 5 faculties: name, faculty, department | 55 |
-| `dim_modules` | 333 modules: title, programme, year, semester, assessment type | 333 |
+| `dim_modules` | 642 modules: title, programme, year, semester, assessment type | 642 |
 | `dim_academic_years` | Academic year calendar with semester and assessment dates | 7 |
-| `fact_enrollment` | Programme, year of study, enrolment status | 75,000 |
-| `fact_weekly_engagement_YYYY-YY` | Attendance, participation, academic/social engagement, VLE metrics — per student per module per week. One file per academic year. | ~320,000/yr |
-| `fact_assessment` | MIDTERM and FINAL component marks per module per student, weighted 40/60 | 372,000 |
-| `fact_progression` | Year outcome, modules passed, average mark, next-year status | 58,000 |
-| `fact_enrolment_survey` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response rate. | 75,000 |
+| `fact_enrollment` | Programme, year of study, enrolment status | 87,500 |
+| `fact_weekly_engagement_YYYY-YY` | Attendance, participation, academic/social engagement, VLE metrics — per student per module per week. One file per academic year. | ~600,000/yr (240,000 in the first year) |
+| `fact_assessment` | MIDTERM and FINAL component marks per module per student, weighted 40/60 | 700,000 |
+| `fact_progression` | Year outcome, modules passed, average mark, next-year status | 87,500 |
+| `fact_enrolment_survey` | Annual survey: career thinking, belonging, self-efficacy, support satisfaction. ~82% response rate. | 87,500 |
 | `fact_nss_responses` | NSS-style satisfaction scores across 7 themes + overall satisfaction. ~68% response rate. | 9,600 |
 | `fact_good_honours` | Final degree classification and weighted average mark for every graduate | 6,000 |
 | `fact_graduate_outcomes` | Post-graduation survey: employment, salary band, professional level. ~70% response rate. | 6,000 |
@@ -30,7 +30,7 @@ The dataset is committed directly to this repository under `data/relational/`. W
 ## Key features
 
 - **Individual-level** — all outcomes emerge from student characteristics, not top-down group effects
-- **Emergent awarding gaps** — a ~20pp good degree attainment gap between Elves and Dwarves arises from SES, prior education, disability and first-generation distributions, with no direct species modifier on marks
+- **Emergent awarding gaps** — a ~23pp good degree attainment gap between Elves and Dwarves arises from SES, prior education, disability and first-generation distributions, with no direct species modifier on marks
 - **Longitudinal** — 7 cohorts across 7 academic years with progression, repetition, withdrawal, and graduation
 - **Config-driven** — all parameters in YAML/CSV, no hardcoded values; reproducible via seed
 
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 python run_longitudinal_pipeline.py
 ```
 
-This runs all 7 pipeline stages across 7 academic years and builds the full relational schema automatically. Runtime: ~30–45 minutes.
+This runs all 7 pipeline stages across 7 academic years and builds the full relational schema automatically. Runtime: ~2.5 hours.
 
 To regenerate the summary CSVs used by the public site:
 

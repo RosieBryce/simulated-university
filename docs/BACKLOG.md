@@ -7,7 +7,7 @@ Items here are deferred because they require design decisions, interact with oth
 ## BUG: Mis-coded Modules sheet strands two thirds of students before graduation
 
 **Added**: 2026-10-29
-**Status**: Source data and config fixed on branch `claude/stoic-dirac-b41913` (see below) — **awaiting a full pipeline re-run and re-validation; `data/relational/` still carries the broken output.**
+**Status**: Fixed and re-run on branch `claude/stoic-dirac-b41913` (2026-10-30, 138 min). `data/relational/` is regenerated and passes the Section 0 integrity checks; docs and site counts updated. **Release not yet cut** (see "Still to do").
 
 **What happens.** In the v2.6.0 dataset 27 of the 55 programmes never have a `programme_year` 3 enrolment, and `fact_good_honours` has rows for only 21 programmes. Science & Engineering has **zero** graduates; Health & Education has graduates from Somatic Wellbeing Enquiry only (538); Culture & Social Sciences from Geography and History only. Of 35,000 students, **16,873 simply vanish**: their last `fact_enrollment` row is status `enrolled` (14,885 at Year 2, 1,988 at Year 3) with no `fact_progression` row and nothing afterwards — not withdrawn, not graduated. 84% of the 6,039 graduates come from two faculties (Craft, Art & Architecture 3,648; Business & Law 1,451).
 
@@ -30,11 +30,13 @@ Items here are deferred because they require design decisions, interact with oth
 - New `scripts/validate_curriculum.py` — fails (exit 1) if any module row's code disagrees with its programme name, any code is unknown, any programme lacks modules in any year, or the CSV disagrees with the sheet. Run it before any pipeline run.
 - `ProgramEnrollmentSystem._load_curriculum_data` now prints a WARNING listing any programme with an empty year at load time.
 
-**Still to do (needs Rosie's go-ahead — changes the published dataset).**
-1. Full re-run (`python run_longitudinal_pipeline.py`, 30–45 min), then `scripts/aggregate_gap.py`, `aggregate_engagement.py`, `aggregate_dashboard.py`.
-2. Re-validate the awarding gap; expect it to shift and the graduate count to roughly double. `metaanalysis/validate_outputs.py::check_shapes` expects 333 `dim_modules` rows — update to 642.
-3. Update row counts and descriptions: `README.md`, `docs/download.html`, `docs/index.html`, `docs/SCHEMA.md`, `docs/DESIGN.md` (still says 353 modules), `docs/explore/data/`; then a new GitHub release.
-4. Anything downstream that profiled `data/relational/` while it was broken (e.g. the Stonegrove Hub faculty profile) should be re-profiled.
+**Re-run result (2026-10-30).** Bundled with UK-style condonement (no module under 30, at most one in 30-39) and a (programme, year, title) module-code lookup that fixes Brewcraft. 35,000 students, 87,467 student-years, 20,492 graduates from all 55 programmes, `dim_modules` 642 rows. Year fail 5.8 / 5.3 / 10.5% (Y1 / Y2 / Y3; without condonement 17.5 / 15.5 / 23%), first-year non-continuation 6.3% (HESA roughly 5-6%), completion 83% for the four earliest cohorts (OfS B3 threshold 75%). Elf-Dwarf good-degree gap **22.9pp** (Elf 58.0%, Dwarf 35.1%), above the 18-20pp band; accepted by Rosie rather than recalibrated. Overall good-degree rate fell from 53.6% to about 45% because condoned weaker students now graduate. Year 3 fail rate is 1.8x Year 1 (validator warns).
+
+**Still to do.**
+1. Re-profile the Stonegrove Hub. The Hub lives on `feat/hub-phase0`, which does not have this branch's fix, so merge this branch into it first, then run `make_hub_extracts.py`, `generate_sources.py`, `build_estate.py`, `make_zips.py` and check `hub/source/values.yaml` for new null keys. Its storylines and in-world documents quote programme structure that has now changed (all 55 programmes graduate).
+2. Cut a new GitHub release and point the download button in `docs/download.html` at it (it still names v2.6.0).
+3. Module characteristics are keyed by module title alone: 23 titles shared across programmes differ in difficulty and collapse to one row, so `dim_modules.assessment_type` for 523801 shows the Year 3 value. Key them by (programme, year, title).
+4. Resits are not modelled; Year 3 fails run at 1.8x Year 1.
 
 ---
 
