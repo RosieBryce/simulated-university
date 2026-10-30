@@ -1,0 +1,36 @@
+::: footer current
+
+# The 1051 rebrand: lessons learned, eighteen months on
+
+Rhialla Moondrift, Head of Communications. April 1053. For the Communications team and whoever does this next. Filed in the project archive because I am not sure anyone else will read it.
+
+## What we set out to do
+
+Turn a College with five schools, each with its own letterhead, into a University with one voice. New name, one logo, one palette, two typefaces, one guide. Launch on 1 September 1051 with everything changed at once.
+
+## What worked
+
+The guide is good. Sorell wrote it and it is short, clear and right. The logo is good. The website changed on the day. Governance and Secretariat, Planning and Insight and Quality adopted the templates within a month and have never looked back. The prospectus looked like one institution for the first time.
+
+## What did not
+
+Eighteen months on, Sorell's compliance log has twenty-four entries, six of them declined, eleven pending. The same five sections are breached by the same handful of people. A department still calls itself by its old name on its own letterhead. A lecturer has a logo he made himself and his students love it. Two corporate templates still carry the old footer and have been copied hundreds of times. Admissions writes to applicants in a voice the guide specifically rules out, and believes, sincerely, that the guide is wrong for applicants. The old templates survived a drive migration and are back in circulation.
+
+## Why
+
+1. **We consulted the people who agreed with us.** The project board had no one from the Department of Health. Hrogar found out his department had been renamed when the signage changed. His memoranda are not really about letterhead.
+2. **We launched everything and enforced nothing.** The guide has no teeth and Communications has no authority. Sorell's log is a record of advice given and declined. "Advised. Again." is not a process.
+3. **We did not withdraw the old things.** The old templates stayed where people had always found them. Of course they used them.
+4. **We assumed the templates would propagate.** Governance adopted them; Governance's own paper template was not updated and now carries the old name into every committee paper in the University.
+5. **We did not give people what they wanted instead.** Jaskel wanted his stand to be findable. Admissions want applicants to feel wanted. Hrogar wants his department's history acknowledged. The guide said no to all three and offered a lock-up. A lock-up is not what any of them were asking for.
+6. **I was quietly losing the argument and did not say so.** Each sighting was small. Together they are the brand.
+
+## What I would do differently
+
+Fix the two templates (one afternoon). Withdraw the old templates from the migrated drive (one email to Brekka, which Sorell has sent). Give the Department of Health the historical footer line Sorell offered, and offer it to everyone, so that history is permitted and the retired name is not. Make Jaskel a lock-up so good he prefers it. Sit with Mira and rewrite the admissions templates together, warm and on brand, which is possible. Ask Senate for the guide to be a policy, with an owner who can say no and be backed.
+
+## Would I do it again
+
+Yes. The brand is right. We just launched it as if a guide were a decision.
+
+R.M.

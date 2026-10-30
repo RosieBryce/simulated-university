@@ -1,0 +1,66 @@
+---
+title: FtP case notes K Firestride
+format: docx
+author: nyssa-memoryvault
+created: 1052-11-16
+modified: 1053-02-03
+label: Confidential
+sensitive: true
+site: faculty
+library: fac-health
+path: Fitness to Practise
+storylines: [placements, stoneshare]
+skills: [5]
+---
+
+::: letterhead current
+
+# Fitness to Practise: case notes
+
+**STRICTLY CONFIDENTIAL. Held by the Fitness to Practise Lead. Not to be copied. Panel members receive the case summary only and destroy it after the panel.**
+
+| | |
+|---|---|
+| Case reference | FtP/1052/04 |
+| Candidate | Kaelen Firestride |
+| Student ID | 1052-NC-0288 |
+| Programme | Nursing and Care, Year 2 (second placement) |
+| Referred by | Placement mentor, Obsidian Vault Infirmary, via Placements Coordinator |
+| Date of referral | 14 November 1052 |
+| Lead | Dr Nyssa Memoryvault |
+
+## 1. The referral
+
+On 12 November 1052, during a supervised medication round, the candidate recorded on the drug chart that a dose had been administered to a patient when it had not. The mentor identified the discrepancy within the hour on checking the stock count. The dose was then administered under supervision; no harm to the patient resulted. The candidate, when asked, said that he had "got ahead of himself" and had signed the chart in anticipation of giving the dose, intending to give it immediately afterwards, and had then been called away.
+
+The mentor reported the matter to the ward manager and to the Placements Coordinator the same day. The Placements Coordinator informed me and the Programme Leader on 14 November. The candidate was withdrawn from placement pending consideration under the Fitness to Practise Procedure.
+
+## 2. Initial assessment
+
+In my assessment the referral is properly made. Recording an administration that has not occurred is a documentation error of the kind the profession treats as serious, because the record is what the next person relies on. It is not, on the account given, dishonest: the candidate did not conceal the error and gave a consistent account to the mentor, the ward manager and to me.
+
+## 3. Meeting with the candidate, 21 November 1052
+
+Present: the candidate; Dr Memoryvault; Mrs Gracestone (notes); the candidate's chosen companion (a fellow student).
+
+The candidate was visibly distressed and had been since the incident. He repeated the account above without variation. He said he understood why it mattered. He said that the ward had been short-staffed that shift and that he had been trying to be useful, and that he now understood that being useful was not the point. He asked whether he would be removed from the programme. I explained the procedure and the possible outcomes and that no decision had been made.
+
+I have reflected on the candidate's circumstances. He is in his second placement, on a demanding ward, and his first placement report was good. Nothing in his record suggests a pattern. The incident has, on his account and the mentor's, affected him considerably.
+
+## 4. Mentor's statement
+
+Received 25 November. Consistent with the above. The mentor describes the candidate as "keen, a bit quick, honest when it mattered". She recommends additional supervised medication practice before any return to placement and does not recommend removal.
+
+## 5. Recommendation to panel
+
+That the panel consider a finding of a documentation error without dishonesty, and an outcome of: a formal warning recorded on the candidate's file; a requirement to complete a supervised medication administration package before return to placement; and a reflective account to the Fitness to Practise Lead within four weeks of return. I do not recommend removal.
+
+## 6. Panel
+
+Convened 17 January 1053. Outcome as recommended at 5. Candidate informed in writing 20 January. Return to placement agreed for semester 2 (17 February) subject to completion of the package, which he completed on 10 February.
+
+## 7. Note on copies
+
+Case summary circulated to three panel members on 10 January 1053 with the instruction to destroy after the panel. I have since found a copy in the Panel Papers folder labelled Internal, and the Faculty Operations Manager has reported an unlabelled copy of these notes in the migrated StoneShare library (Health / FtP). I did not place either there. Both to be removed and their origin established.
+
+N. Memoryvault

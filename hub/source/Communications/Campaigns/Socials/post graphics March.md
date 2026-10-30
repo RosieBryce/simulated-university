@@ -1,0 +1,78 @@
+---
+title: post graphics March
+format: pptx
+author: javin-brickrelay
+created: 1053-02-26
+modified: 1053-03-04
+label: Internal
+sensitive: false
+site: comms
+library: comms-campaigns
+path: Socials
+storylines: [rebrand]
+skills: [11]
+off_brand: B07
+---
+
+::: theme jaskel
+
+# gradient_lawn_01
+
+- Spring on the Cloister Lawn!!
+- (gradient: green to gold, logo top left on the gradient)
+
+---
+
+# photo_nursing_lab
+
+- Meet Grinna's year
+- (photo, logo bottom right directly on photo, no panel)
+
+---
+
+# coral_bg_offer
+
+- Offer Holder Day 22 March
+- (solid coral background, navy text)
+
+---
+
+# photo_forge_panel
+
+- Forge Friday
+- (photo, navy panel bottom with logo: APPROVED)
+
+---
+
+# gradient_ot
+
+- Revalidation season!
+- (gradient: coral to parchment)
+
+---
+
+# photo_pencil_tree
+
+- Pencil tree on the Lawn
+- (photo of Jaskel's tree sign)
+
+---
+
+# plain_navy_card
+
+- Open Day 14 June. Save the date.
+- (navy card, gold rule, white text: APPROVED)
+
+---
+
+# coral_bg_text
+
+- Our awarding gap work
+- (coral background, three paragraphs of text)
+
+---
+
+# gradient_april
+
+- April's coming
+- (gradient: navy to green, old hashtag baked into the image)

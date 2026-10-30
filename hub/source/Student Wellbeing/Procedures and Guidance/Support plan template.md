@@ -1,0 +1,59 @@
+---
+title: Support plan template
+format: docx
+author: anric-hearthbind
+created: 1050-09-01
+modified: 1052-09-01
+label: Internal
+sensitive: false
+site: wellbeing
+library: wb-procedures
+path: ""
+storylines: []
+skills: [5]
+---
+
+::: letterhead current
+
+# Student Support Plan
+
+**CONFIDENTIAL. This plan is held by Student Wellbeing and shared with the student. Teaching and placement staff receive the one-page Adjustments Summary only. Please do not forward.**
+
+| | |
+|---|---|
+| Student | [Full name] |
+| Student ID | [ID] |
+| Programme | [Programme, year] |
+| Adviser | [Name, post] |
+| Plan agreed | [Date] |
+| Review | [Date, six months] |
+| Consent | The student consents / does not consent to the Adjustments Summary being shared with named module leaders and placement staff. The student consents / does not consent to the diagnosis being named in the summary. |
+
+## 1. Background
+
+[In the student's words where possible. Diagnosis and evidence. History relevant to study.]
+
+## 2. Impact on study
+
+[Specific. What is harder, when, and why.]
+
+## 3. Adjustments agreed
+
+### Assessment
+
+1. [Specific, implementable]
+
+### Placement
+
+[Where applicable]
+
+### General
+
+## 4. What the student will do
+
+## 5. Adviser's notes
+
+[Including anything the student has asked not to be shared, and how the summary describes needs.]
+
+[Adviser name and post]
+[Date]

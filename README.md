@@ -27,6 +27,10 @@ All tables join on `student_id` + `academic_year`. See `docs/SCHEMA.md` for full
 
 The dataset is committed directly to this repository under `data/relational/`. Weekly engagement is split into per-year files (`fact_weekly_engagement_YYYY-YY.csv`) due to file size.
 
+## The Stonegrove Hub
+
+`hub/` builds a second output from the same universe: a simulated SharePoint-style intranet for the Faculty of Health and Education, around 490 documents across eight sites, downloadable as a whole or in parts and browsable at `docs/hub/`. It is a sandbox for practising AI skills (minutes from transcripts, data analysis, project scoping, folder organisation, guardrails around sensitive material, briefing, extraction, checking AI output, reconciling versions, institutional voice, brand consistency) on realistic, messy institutional documents with nothing real at risk. Figures quoted in-world are generated from `data/relational/`, so a reseed updates them. See `hub/README.md` for how it is built and `docs/SHAREPOINT_BRIEF.md` for the brief.
+
 ## Key features
 
 - **Individual-level** — all outcomes emerge from student characteristics, not top-down group effects

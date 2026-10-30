@@ -77,6 +77,18 @@ Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 - Gender awarding gap is flat by design.
 - Tabular configs are CSV (editable in Excel); hierarchical configs are YAML.
 
+## Stonegrove Hub (simulated SharePoint estate)
+
+`hub/` holds the authored source and build for the Stonegrove Hub, a downloadable simulated intranet document estate browsed at `docs/hub/`. Brief: `docs/SHAREPOINT_BRIEF.md`. Design note, source schema and rules: `hub/README.md`. The out-of-world bible (cast, sites, storylines, planted items, mess rules) is in `hub/bible/` and is never shipped.
+
+```bash
+python scripts/make_hub_extracts.py          # Planning and Insight extracts + values.yaml from data/relational (also run by build_relational_outputs.py)
+python hub/build/build_estate.py --seed 42   # render source -> %TEMP%/stonegrove-hub-build/estate (outside Drive; override with HUB_BUILD_DIR), lint names, write docs/hub/data/manifest.json, publish to docs/hub/estate
+python hub/build/make_zips.py                # docs/hub/downloads/*.zip
+```
+
+Filenames in the estate must pass `hub/bible/filename_rules.yaml` (Windows-safe, ASCII, under 160 characters in the zip); the build fails otherwise. In-world documents quote dataset figures as `{{ key }}` from `hub/source/values.yaml`, never as literals. No em dashes in anything the Hub ships.
+
 ## Documentation
 
 - `docs/DESIGN.md` — Architecture and longitudinal flow
@@ -108,8 +120,11 @@ Run through this whenever schema, calculations, or data generation changes:
 - [ ] Run `python scripts/aggregate_dashboard.py` to rebuild dashboard JSON
 - [ ] Commit updated `data/relational/` CSVs and `docs/explore/data/` JSON files
 - [ ] Rebuild zip: handled automatically by `build_relational_outputs.py`
+- [ ] Stonegrove Hub: `make_hub_extracts.py` has already run (called by `build_relational_outputs.py`); then `python hub/build/generate_sources.py`, `python hub/build/build_estate.py`, `python hub/build/make_zips.py`; check `hub/source/values.yaml` for new null keys and that no in-world document quotes one; commit `hub/source/`, `docs/hub/data/`, `docs/hub/estate/` and `docs/hub/downloads/`
+- [ ] Stonegrove Hub: if the data's programme structure changed (which programmes have Year 3, graduates, NSS), review the in-world documents and `hub/bible/storylines.md` that describe it
 
 **Website**
+- [ ] Does `docs/download.html` still describe the Hub zip correctly (file count, size)? Does `docs/hub/guide.html` still point at the right starting folders?
 - [ ] Do any table descriptions in `docs/index.html` need updating?
 - [ ] Does `docs/download.html` need updating (file list, row counts, file sizes)?
 - [ ] Does `docs/USER_GUIDE.md` need updating (code examples, column references)?

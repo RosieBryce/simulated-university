@@ -1,0 +1,46 @@
+---
+title: Education at Stonegrove course copy
+format: docx
+author: saelith-emberthorn
+created: 1052-09-20
+modified: 1053-01-30
+label: Internal
+sensitive: false
+site: faculty
+library: fac-education
+path: Marketing
+storylines: [rebrand]
+skills: [10, 11]
+---
+
+# education at stonegrove: course copy for the prospectus and web
+
+saelith emberthorn. jan 1053. for communications to tidy (sorry, i know the style guide says sentence case and no exclamation marks, i have removed jaskel's)
+
+## department of education
+
+we educate the people who help others learn: in schools, in communities, across generations. our three programmes share a first year and a belief that learning is something people do together
+
+## education studies
+
+three years. the study of how people learn, how schools and other institutions shape that, and how it could be better. placements in a school or community setting in every year, and a dissertation in year 3. graduates go on to teacher training, to work in schools in non-teaching roles, to community education and to further study
+
+## educational mentorship
+
+three years. for people who want to support learners one to one or in small groups: mentors, learning support staff, youth workers. a strong practical thread with a supervised mentoring placement in year 2
+
+## intergenerational learning
+
+three years. the only programme of its kind in the vale. how older and younger people learn from each other, and how to design settings where they do. placements in elder care, in schools and in the community projects that bring them together
+
+## how we teach
+
+small groups. workshops not lectures where we can. feedback that tells you what to do next, returned within fifteen working days (this is a commitment from semester 2 1052-53 and we will be measured on it). staff who know your name
+
+## entry
+
+standard university requirements. we make contextual offers. we interview for mentorship. we welcome applicants who are the first in their family to come to university; many of our students and some of our staff were
+
+thoughts welcome
+
+s

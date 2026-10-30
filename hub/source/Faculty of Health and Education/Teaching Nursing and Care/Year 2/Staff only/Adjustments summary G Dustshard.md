@@ -1,0 +1,50 @@
+---
+title: Adjustments summary G Dustshard
+format: docx
+author: anric-hearthbind
+modified_by: caelio-driftfeather
+created: 1052-10-03
+modified: 1053-02-19
+label: Internal
+sensitive: true
+site: faculty
+library: fac-teaching-nc
+path: Year 2/Staff only
+storylines: [incident]
+skills: [5]
+---
+
+::: letterhead current
+
+# Adjustments Summary
+
+For module leaders and placement mentors. Internal. This summary is issued by Student Wellbeing with the student's consent. It does not include diagnostic information. Questions to the adviser named below, not to the student.
+
+| | |
+|---|---|
+| Student | Grinna Dustshard, 1052-NC-0417 |
+| Programme | Nursing and Care, Year 2 |
+| Adviser | Anric Hearthbind, extension 2304 |
+| Valid | 3 October 1052 to 3 April 1053 |
+
+The student has a specific learning difference affecting reading, processing and written expression, and a condition affecting concentration and confidence in new settings.
+
+## Assessment
+
+- 25% additional time in timed written assessments
+- Computer with spell-check in written examinations
+- Mark for content; do not penalise spelling or grammar except where clinical meaning is affected, and then give feedback rather than penalty
+- Coursework extensions of up to five working days on request, without an EC claim
+
+## Placement
+
+- Identify the placement mentor before the placement starts; mentor to meet the student in week one
+- Provide handover templates and drug chart formats in advance where available
+- No night shifts in the first two weeks of a placement
+- Tell the student in advance how, when and by whom they will be observed
+- Student's named contact in the Programme Support Team: Hesta Gracestone
+
+## Teaching
+
+- Materials 48 hours in advance where possible
+- Recording of teaching sessions for personal use is permitted

@@ -1,0 +1,6 @@
+[Forename Surname]
+[Job title]
+Stonegrove University
+Extension [NNNN] | [forename.surname]@stonegrove.ac.example
+
+(Text only. No images, logos, quotations, pronoun flags, colours or links to anything other than the University website. Four lines. This is the whole signature.)

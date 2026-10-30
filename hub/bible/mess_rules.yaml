@@ -1,0 +1,247 @@
+# Deliberate mess. OUT OF WORLD. Never shipped.
+#
+# make_mess.py applies these deterministically from the build seed. Every
+# derived file (copy, stale version, junk) is recorded in manifest.json with
+# `derived_from` and `mess_rule`, so the truth is always recoverable.
+#
+# applies_to: library ids from sites.yaml, or a mess_profile name to apply to
+# every library with that profile. Rules never apply to profile `island`.
+#
+# Derived files must still pass filename_rules.yaml. The mess is in the names
+# and the structure, never in the character set.
+
+seed_note: make_mess.py takes --seed; default 42; same as the pipeline.
+
+rules:
+
+  # ------------------------------------------------------------ versions
+  - id: version_sprawl
+    description: >
+      For a document marked as a lineage root, generate sibling versions
+      with the suffix patterns below. Content: the true latest is the
+      source; earlier versions drop or alter one paragraph each, recorded in
+      the manifest. Modified dates are assigned so that at least one "FINAL"
+      is older than a "DRAFT".
+    applies_to: [normal, chaotic]
+    params:
+      suffixes:
+        - " FINAL"
+        - " FINAL v2"
+        - " FINAL FINAL (use this one)"
+        - " v2"
+        - " v3"
+        - " v3 USE THIS"
+        - " DRAFT"
+        - " DRAFT DO NOT CIRCULATE"
+        - "_old"
+        - " latest"
+        - " amended"
+      siblings_per_root: {normal: [1, 3], chaotic: [3, 6]}
+      stale_final_probability: 0.6
+      byte_identical_probability: 0.3
+    named_lineages:
+      placements:
+        root: "Placement Allocation 1052-53.xlsx"
+        library: pst-placements
+        path: Allocation
+        siblings:
+          - {name: "Placement Allocation 1052-53 FINAL.xlsx", modified: 1052-09-12, content: "missing tab 14"}
+          - {name: "Placement Allocation 1052-53 FINAL v2.xlsx", modified: 1052-11-03, content: "tab 9 formulas broken"}
+          - {name: "Placement Allocation 1052-53 FINAL FINAL (use this one).xlsx", modified: 1053-01-20, content: "TRUE LATEST", true_latest: true}
+          - {name: "Copy of Placement Allocation 1052-53.xlsx", modified: 1053-02-02, content: "byte-identical to FINAL v2"}
+          - {name: "Placement Allocation 1052-53 (1).xlsx", modified: 1053-02-02, content: "byte-identical to FINAL FINAL"}
+          - {name: "Placement Allocation_old.xlsx", modified: 1051-08-30, content: "1051-52 allocation, 11 tabs"}
+          - {name: "Placement Allocation 1052-53 DRAFT DO NOT CIRCULATE.xlsx", modified: 1053-03-30, content: "Hesta's consolidation attempt, newer than FINAL FINAL but incomplete"}
+      deans_paper:
+        root: "Awarding gap paper for Council.docx"
+        library: fac-deans
+        path: Council and Senate/Awarding Gap Paper
+        siblings:
+          - {name: "Deans thing.docx", modified: 1053-04-02}
+          - {name: "Deans thing v2.docx", modified: 1053-04-03}
+          - {name: "Deans thing v3 USE THIS.docx", modified: 1053-04-08, true_latest: true}
+      education_action_plan:
+        root: "Education NSS action plan.docx"
+        library: fac-education
+        path: NSS Response/Action plan versions
+        siblings:
+          - {name: "action plan.docx", modified: 1052-10-24}
+          - {name: "action plan (1).docx", modified: 1052-10-24}
+          - {name: "action plan new.docx", modified: 1052-11-02}
+          - {name: "action plan new new.docx", modified: 1052-11-15}
+          - {name: "action plan final.docx", modified: 1052-12-09, true_latest: true}
+      ot_sed:
+        root: "OT Self Evaluation Document.docx"
+        library: q-revalidation
+        path: Occupational Therapy 1053/SED
+        siblings:
+          - {name: "OT SED v1.docx", modified: 1052-12-15}
+          - {name: "OT SED v2 BC comments.docx", modified: 1053-01-22}
+          - {name: "OT SED v3 FINAL.docx", modified: 1053-02-19, true_latest: true}
+      ai_policy_drafts:
+        root: "AI Acceptable Use Policy.docx"
+        library: gov-policies
+        path: Superseded
+        siblings:
+          - {name: "AI policy draft A.docx", modified: 1052-09-30, content: "Elenna's first draft, stricter"}
+          - {name: "AI policy draft B Digital.docx", modified: 1052-10-14, content: "Fenn's redraft, looser"}
+        note: The approved version lives in Current/Digital and is the true latest; these two should not be in Superseded at all, they were never in force.
+
+  - id: copy_of
+    description: Prefix "Copy of " on a random file; byte-identical.
+    applies_to: [normal, chaotic]
+    params: {per_library: {normal: [0, 2], chaotic: [3, 8]}}
+
+  - id: numbered_dup
+    description: Suffix " (1)", " (2)" on a random file; byte-identical or one paragraph changed.
+    applies_to: [normal, chaotic]
+    params: {per_library: {normal: [0, 2], chaotic: [3, 8]}, changed_probability: 0.4}
+
+  # ------------------------------------------------------------ dates
+  - id: filename_dates
+    description: >
+      Where a source file has `date_in_name: true`, render the date in one
+      of several formats, chosen per author (each person has a habit; see
+      cast tells) and occasionally broken.
+    applies_to: [tidy, normal, chaotic]
+    params:
+      formats:
+        - "YYYY-MM-DD"        # the convention; Erra, Gudrik
+        - "DD.MM.YY"          # Hrogar
+        - "DDMMYYYY"          # Bruk
+        - "Month YYYY"        # Elowen, Rhialla
+        - "DD Month"          # Javin (no year)
+        - "YYYY-YY"           # academic year, Brekka
+      wrong_year_probability: 0.05
+
+  - id: metadata_drift
+    description: >
+      Modified date in metadata disagrees with the date in the filename;
+      Modified By is someone other than the author (whoever last touched it);
+      some files have no Modified By at all (migrated).
+    applies_to: [normal, chaotic]
+    params:
+      disagree_probability: {normal: 0.2, chaotic: 0.5}
+      no_modified_by_probability: {normal: 0.0, chaotic: 0.6}
+
+  # ------------------------------------------------------------ structure
+  - id: junk_folders
+    description: Create the named empty or near-empty folders.
+    applies_to: [chaotic]
+    params:
+      names: ["New folder", "New folder (2)", "Old", "Misc", "To sort", "Archive - DO NOT DELETE", "temp", "zzz old", "Backup"]
+      per_library: [3, 7]
+      empty_probability: 0.5
+
+  - id: deep_nest
+    description: One chain at least eight folders deep ending in a single file.
+    applies_to: [fac-stoneshare]
+    params:
+      chain: "Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc/Hrogar"
+      leaf_file: "parking memo.docx"
+
+  - id: empty_folders
+    description: Empty folders scattered.
+    applies_to: [normal, chaotic]
+    params: {per_library: {normal: [0, 1], chaotic: [2, 5]}}
+
+  # ------------------------------------------------------------ litter
+  - id: wrong_site
+    description: >
+      Copy a file from one site into another where it does not belong.
+      Named instances below; plus random Internal, non-sensitive ones.
+    applies_to: [chaotic]
+    named:
+      - {file: "Open Day June 1053 run sheet.docx", from: adm-opendays, to: fac-stoneshare, path: "Faculty Shared/To sort"}
+      - {file: "Brand Guide 1051 v2.1.pdf", from: comms-brand, to: fac-education, path: "Marketing"}
+      - {file: "Minutes template.docx", from: gov-templates, to: pst-admin, path: "Forms"}
+    params: {random_per_library: [1, 3]}
+
+  - id: personal_files
+    description: Personal material that should not be on a shared drive.
+    applies_to: [fac-stoneshare]
+    named:
+      - {file: "Emrin Greyfold CV 1050.docx", path: "Personal/CV", planted: P05}
+      - {file: "away day 1.jpg", path: "Faculty Shared/Photos/Away day 1051", source: "placeholder photo, small"}
+      - {file: "away day 2.jpg", path: "Faculty Shared/Photos/Away day 1051"}
+      - {file: "away day 3.jpg", path: "Faculty Shared/Photos/Away day 1051"}
+      - {file: "IMG_2231.jpg", path: "Faculty Shared/Photos"}
+      - {file: "IMG_2232.jpg", path: "Faculty Shared/Photos"}
+      - {file: "cake rota.xlsx", path: "Faculty Shared/Admin"}
+      - {file: "Hrogar retirement do ideas.docx", path: "Faculty Shared/Admin/Old"}
+
+  - id: zero_byte
+    description: Empty files with plausible names.
+    applies_to: [chaotic]
+    params: {per_library: [2, 5], names: ["Document1.docx", "Book1.xlsx", "Untitled.docx", "New Text Document.txt", "Presentation1.pptx"]}
+
+  - id: tmp_litter
+    description: "Temporary .tmp files with hex names."
+    applies_to: [chaotic]
+    params: {per_library: [1, 3], pattern: "~WRL####.tmp"}
+    note: >
+      The pattern starts with a tilde. filename_rules.yaml allows "~" only
+      under this rule and lock_files, and only if phase 1 proves it
+      round-trips. If not, change pattern to "WRL####.tmp".
+
+  - id: lock_files
+    description: Office lock files beside a real file.
+    applies_to: [chaotic]
+    params: {per_library: [0, 2], pattern: "~$<name>.docx"}
+    conditional: true
+    note: >
+      Allowed only if phase 1 proves "~$" survives zip, explorer URL and a
+      Windows extraction into Downloads. Otherwise disable this rule.
+
+  - id: email_dump
+    description: >
+      An "Email attachments" style set: orphaned attachments with generic
+      names and no context, plus saved .eml files.
+    applies_to: [pst-email-attachments, fac-stoneshare]
+    params:
+      generic_names: ["image001.png", "image002.png", "doc1.docx", "Document.docx", "scan0001.pdf", "Screenshot 1053-02-11 104412.png", "whiteboard.jpg", "ATT00001.txt"]
+      eml_count: [2, 4]
+
+  # ------------------------------------------------------------ labels
+  - id: label_inconsistency
+    description: >
+      Labels missing or wrong. Planted sensitive items are in
+      classification.yaml and are applied exactly. In addition, random
+      non-sensitive Internal files lose their label in chaotic libraries,
+      and all files in fac-stoneshare and pst-email-attachments have no
+      label at all (migrated and saved, respectively).
+    applies_to: [normal, chaotic]
+    params:
+      missing_label_probability: {normal: 0.1, chaotic: 0.4}
+      planted_from: classification.yaml
+
+  # ------------------------------------------------------------ the island
+  - id: convention_island
+    description: >
+      Libraries with profile `island` are untouched by every rule above and
+      every filename follows the Document Naming Convention exactly:
+      YYYY-MM-DD_Topic-In-Title-Case_vNN.ext, with Modified By equal to
+      author and the right label on every file.
+    applies_to: [island]
+    libraries: [pi-reports, pi-extracts, comms-brand]
+
+# ------------------------------------------------------------ author habits
+# Per-person tendencies that make_mess.py uses when choosing which rules hit
+# a given author's files. 0 = never, 1 = always.
+author_habits:
+  elowen-fogwhisper:   {version_sprawl: 1.0, bad_names: 1.0, date_format: "Month YYYY"}
+  saelith-emberthorn:  {version_sprawl: 1.0, bad_names: 0.8, date_format: null}
+  halden-bridgeglen:   {version_sprawl: 0.9, bad_names: 0.6, date_format: "DD Month"}
+  jaskel-doodlehook:   {version_sprawl: 0.5, bad_names: 0.9, date_format: null}
+  javin-brickrelay:    {version_sprawl: 0.6, bad_names: 0.7, date_format: "DD Month"}
+  bruk-coaljaw:        {version_sprawl: 0.5, bad_names: 0.5, date_format: "DDMMYYYY"}
+  hrogar-dourstone:    {version_sprawl: 0.3, bad_names: 0.2, date_format: "DD.MM.YY"}
+  cyranor-goldmantle:  {version_sprawl: 0.0, bad_names: 0.0, note: "never saves anything himself"}
+  brekka-anvildancer:  {version_sprawl: 0.2, bad_names: 0.1, date_format: "YYYY-YY"}
+  hesta-gracestone:    {version_sprawl: 0.1, bad_names: 0.0, date_format: "YYYY-MM-DD"}
+  liora-lanternwake:   {version_sprawl: 0.1, bad_names: 0.1, date_format: "YYYY-MM-DD"}
+  erra-measurine:      {version_sprawl: 0.0, bad_names: 0.0, date_format: "YYYY-MM-DD"}
+  gudrik-bannerstone:  {version_sprawl: 0.0, bad_names: 0.0, date_format: "YYYY-MM-DD"}
+  ollir-greenquill:    {version_sprawl: 0.4, bad_names: 0.2, date_format: "YYYY-MM-DD"}
+  sorell-inkthread:    {version_sprawl: 0.0, bad_names: 0.0, date_format: "YYYY-MM-DD"}
+  default:             {version_sprawl: 0.3, bad_names: 0.3, date_format: "YYYY-MM-DD"}

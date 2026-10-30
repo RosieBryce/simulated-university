@@ -1,0 +1,213 @@
+---
+title: OT SED v3 FINAL
+format: docx
+author: caerel-candletome
+modified_by: brynja-cragshield
+created: 1052-12-15
+modified: 1053-02-19
+label: Internal
+sensitive: false
+site: quality
+library: q-revalidation
+path: Occupational Therapy 1053/SED
+storylines: [revalidation, nss-dip]
+skills: [6, 9]
+lineage:
+  root: true
+  true_latest: true
+---
+
+::: footer current
+
+# Self-Evaluation Document
+
+## BSc (Hons) Occupational Therapy
+
+### Periodic revalidation, panel 12 March 1053
+
+Dr Caerel Candletome, Programme Leader, for the programme team. Version 3 (final), 19 February 1053. With apologies for the length: the panel asked for a full account and I have tried to give one. A two-page summary is at section 1 for colleagues who cannot read the whole.
+
+## Contents
+
+1. Summary
+2. The programme and its context
+3. Students: recruitment, profile, progression, outcomes
+4. Curriculum and learning outcomes
+5. Learning, teaching and placement
+6. Assessment and feedback
+7. External examiner reports and the programme's responses
+8. Student voice
+9. Staffing and resources
+10. Quality management and annual monitoring
+11. Proposed changes for 1053-54
+12. Reflection: what the team has learned
+Appendix A: Module map and assessment schedule
+Appendix B: Student numbers and outcomes
+Appendix C: Placement providers
+Appendix D: Staff
+Appendix E: External examiner recommendations and responses, 1050 to 1052
+Appendix F: Proposed Year 2 assessment pattern
+
+## 1. Summary
+
+The Occupational Therapy programme has run since 1047 and was last revalidated in that year. It recruits well, its students progress and achieve at rates comparable with the Faculty's other health programmes, its external examiner confirms standards every year, and its graduates are employed in the profession. The programme team is proud of it.
+
+The programme also has a problem it has not solved. Year 2 carries twelve summative assessment points across six modules. The external examiner has recommended a reduction in each of the last three reports. Students' NSS responses on Assessment and Feedback fell in 1052 and their free text says what the external says. The programme's annual monitoring has recorded the matter as "under review" three times. The team accepts that this is not good enough and that the honest reason is not disagreement with the recommendation but the difficulty of changing six module descriptors outside a revalidation. This revalidation is the opportunity, and section 11 and Appendix F set out a Year 2 pattern with seven assessment points rather than twelve.
+
+A second matter, concerning the calibration of one marker, has been raised by the external examiner twice and is addressed in a reserved paper to the panel.
+
+The team asks the panel to revalidate the programme for a further five years with the changes proposed in section 11.
+
+## 2. The programme and its context
+
+2.1 Occupational Therapy is a three-year honours programme in the Department of Health, Faculty of Health and Education. It leads to eligibility for professional registration. It is one of the Faculty's twelve three-year honours programmes and the only one in which the central concept, occupation, is as much a philosophy as a clinical practice.
+
+2.2 The programme was designed in 1046 and 1047 at the time of the Faculty's reorganisation and has been taught with minor modification since. It sits alongside Physiotherapy, with which it shares two modules and a placement provider (Riverside Rehabilitation Unit), and alongside Nursing and Care, with which it shares NC204 Mental Health and Wellbeing in Care.
+
+2.3 The programme's distinctiveness, as the team sees it, lies in three things: an unusually strong emphasis on the person's own goals as the measure of success; a placement sequence that moves from acute to community settings deliberately; and the dissertation, which the external examiner has consistently singled out.
+
+## 3. Students
+
+3.1 **Recruitment.** The programme recruits a cohort of around forty each year, with applications running at roughly three per place. Entry is by standard University requirements, health declaration, enhanced vetting and interview. Contextual offers are made. The programme attracts a higher proportion of Dwarf applicants than the Faculty average, which the team attributes to the practical and craft-adjacent character of the discipline, and welcomes.
+
+3.2 **Profile.** Current enrolment is {{ ot_enrolled_1052 }} across the three years. The cohort is roughly balanced by species. A significant minority of students have a support plan with Student Wellbeing, most commonly for a specific learning difference.
+
+3.3 **Progression.** Progression from Year 1 to Year 2 and from Year 2 to Year 3 is in line with the Faculty. Withdrawal is low and clusters in the first semester of Year 1, where it is usually about the student discovering the profession is not for them rather than about the programme.
+
+3.4 **Outcomes.** Good honours rates and the awarding gap for the programme are reported by Planning and Insight in the Faculty annual report. The team notes Planning and Insight's advice that programme-level figures be read with care given cohort size, and does not reproduce them here. The team's own view is that the programme's awarding gap is shaped by the same factors as the Faculty's, chiefly prior educational route and first-year engagement, and that the Year 1 personal tutoring and early-feedback changes described at 11.4 are the right response.
+
+3.5 **Destinations.** Graduates are employed in the profession at high rates within six months. Several return as placement educators.
+
+## 4. Curriculum and learning outcomes
+
+4.1 The programme learning outcomes are set out in the programme specification and are mapped to the professional body's standards in Appendix A. The team has reviewed the mapping for this revalidation and found it sound, with one gap: the professional body's revised standard on digital practice (1051) is not explicitly addressed. Section 11.2 proposes an amendment to the Year 3 advanced practice module.
+
+4.2 The curriculum follows a spiral: occupation is introduced in Year 1 as a concept, applied in Year 2 in specific settings and populations, and synthesised in Year 3 through the dissertation and advanced practice. The team believes the structure is right and does not propose to change it.
+
+## 5. Learning, teaching and placement
+
+5.1 Teaching is in small groups wherever the room allocation permits. Practical skills are taught in the therapy suite and in simulation. The team makes extensive use of case-based learning, with fictional cases written by staff; the team is aware of the University's guidance that real cases are not used as teaching examples and has reviewed its case bank for this revalidation.
+
+5.2 Placements total twenty-eight weeks across the three years: four in Year 1, fourteen in Year 2 (eight and six), ten in Year 3. Providers are listed in Appendix C. The programme shares the Faculty's placement capacity problems and benefits, like every programme in the Department, from the Programme Support Team's relationships with providers. The team notes that the placement allocation process in the Department depends on one member of staff and supports the Faculty's intention to put it on a more systematic footing.
+
+5.3 Placement educators are supported by a half-day preparation session and a handbook. Feedback from educators is gathered at the end of each placement; it is positive about students' preparation and less positive about the volume of University paperwork.
+
+## 6. Assessment and feedback
+
+6.1 This is the section the panel will wish to read most carefully. The team has tried to be candid.
+
+6.2 **Pattern.** Year 1 has nine summative assessment points across six modules; Year 2 has twelve; Year 3 has seven, including the dissertation. The Year 2 figure arises from each of six modules carrying two components, typically a midterm and a final, as was the Faculty's default pattern at validation in 1047. Appendix A gives the schedule.
+
+6.3 **The external examiner's recommendation.** Dr Boughwitness has recommended a reduction in Year 2 assessment load in her 1050, 1051 and 1052 reports. The programme's responses are reproduced in Appendix E. Each stated that the matter was under review. The team wishes to be honest with the panel about why the review did not conclude: changing the assessment pattern means changing six module descriptors, which under the University's modification procedure requires approval for each through the Faculty and Quality, and the team judged, in 1050 and again in 1051, that it would be more efficient to make all the changes at revalidation. In retrospect the team should have made at least some of the changes earlier, and should have said so to the external rather than repeating "under review".
+
+6.4 **Student experience.** NSS 1052 Assessment and Feedback for the programme was {{ ot_nss_assessment_feedback_1052 }}, from {{ ot_nss_assessment_feedback_1051 }} the year before. Overall satisfaction was {{ ot_nss_overall_1052 }}, from {{ ot_nss_overall_1051 }}. Free text comments cluster on volume of assessment in Year 2, the time taken to return feedback, and feedback that reports the mark without saying what to do. The team recognises all three. Feedback turnaround in Year 2 semester 2 averaged nineteen working days in 1051-52 against the Faculty standard of fifteen; the cause is the coincidence of marking with placement visits, which the proposed pattern addresses by moving one assessment point out of that window.
+
+6.5 **Marking.** Marking is anonymous where the form permits and moderated by sample. The external confirms accuracy at programme level. The external has twice raised the calibration of one marker on a Year 2 module. The team has addressed this through moderation and acknowledges the external's point that moderation treats the symptom. The matter is addressed in a reserved paper to the panel and the team asks that it not be discussed in open session.
+
+## 7. External examiner reports and responses
+
+7.1 Three reports have been received since the external's appointment in 1050. All confirm standards. All raise the Year 2 assessment load. The 1051 and 1052 reports raise marking calibration. Appendix E sets out the recommendations and responses side by side. The team has reflected on the pattern they show and discusses it in section 12.
+
+## 8. Student voice
+
+8.1 Student representatives attend the programme committee, which meets each semester. Representatives have raised assessment load in Year 2 at every meeting since 1050. The committee's minutes record the matter as referred to the programme team. The team recognises that this is the same loop as the external examiner's and has drawn the same conclusion.
+
+8.2 Students are positive about placements, about staff accessibility, about the dissertation supervision, and about the therapy suite. They are negative about Year 2 workload, room bookings, and the time taken to return feedback.
+
+## 9. Staffing and resources
+
+9.1 The programme is taught by a team of nine academic staff, seven of whom are registered occupational therapists, with contributions from Physiotherapy and Nursing and Care staff on shared modules. Appendix D lists the team. Two members of staff are on fractional contracts; one is on long-term leave and covered by a sessional colleague.
+
+9.2 Resources are adequate. The therapy suite is shared with Physiotherapy and is heavily booked in semester 1.
+
+## 10. Quality management and annual monitoring
+
+10.1 The programme follows the University's annual monitoring process. The team acknowledges that the process has not, in this programme's case, converted a repeated recommendation into action, and that the Head of Quality has asked the panel to consider whether annual monitoring is functioning as intended. The team's view is that the process functions as a record and not as a lever: it records that a matter is under review and has no mechanism to require that the review conclude. The team would welcome a change that set a time limit on "under review".
+
+## 11. Proposed changes for 1053-54
+
+11.1 **Year 2 assessment pattern.** From twelve summative points to seven: four modules move to a single integrated assessment; two retain two components where the professional body requires a practical and a written element. Appendix F sets out the new pattern. The team believes the same learning outcomes are assessed and that the reduction in marking will allow feedback within the fifteen-day standard in both semesters.
+
+11.2 **Digital practice.** An amended learning outcome and content in the Year 3 advanced practice module to address the professional body's 1051 standard.
+
+11.3 **Feedback.** Adoption of the Department of Education's "three things done well, three things to do next" template, with feedback due dates published in every module handbook.
+
+11.4 **Year 1.** A structured personal tutoring programme in the first semester with a formative assessment in week four, in response to the Faculty's awarding gap analysis.
+
+11.5 **Placement paperwork.** Reduction of the placement educator's documentation from four forms to two.
+
+## 12. Reflection
+
+12.1 Preparing this document has been uncomfortable in a useful way. The team has produced a programme that works, that its students and its external value, and that has carried a known problem for three years because the mechanism for fixing it was heavier than the problem seemed to be in any one year. The lesson the team draws is that "under review" is a decision to do nothing, and should be recorded as such.
+
+12.2 The team is grateful to the external examiner for her persistence, to the student representatives for theirs, and to Quality for its candour. It asks the panel to revalidate the programme with the changes at section 11, and it undertakes to report to the Head of Quality on the implementation of 11.1 by the end of 1053-54.
+
+Dr Caerel Candletome, Programme Leader
+
+---
+
+## Appendix A: Module map and assessment schedule
+
+| Year | Module | Credits | Semester | Assessment components (current) |
+|---|---|---|---|---|
+| 1 | OT101 Foundations of Occupation | 20 | 1 | Essay; presentation |
+| 1 | OT102 Anatomy and Physiology for Therapy | 20 | 1 | Practical examination |
+| 1 | OT103 Psychology for Therapy | 20 | 2 | Examination; case report |
+| 1 | OT104 Introduction to Practice (placement) | 20 | 2 | Placement record (pass/fail); reflection |
+| 1 | OT105 Professional Studies | 20 | 1 and 2 | Portfolio |
+| 1 | OT106 Research Methods 1 | 20 | 2 | Examination |
+| 2 | OT201 Occupation in Acute Settings | 20 | 1 | Case study; examination |
+| 2 | OT202 Occupation in Community Settings | 20 | 2 | Case study; presentation |
+| 2 | OT203 Mental Health and Occupation (shared NC204) | 20 | 1 | Essay; examination |
+| 2 | OT204 Assessment and Intervention | 20 | 1 and 2 | Practical examination; written report |
+| 2 | OT205 Practice Placement 2 | 20 | 1 and 2 | Placement record (pass/fail); portfolio |
+| 2 | OT206 Research Methods 2 | 20 | 2 | Proposal; examination |
+| 3 | OT301 Dissertation | 40 | 1 and 2 | Dissertation |
+| 3 | OT302 Advanced Practice | 40 | 1 and 2 | Viva; portfolio |
+| 3 | OT303 Option | 20 | 1 | Essay |
+| 3 | OT304 Option | 20 | 2 | Presentation |
+| 3 | OT305 Final Placement | 20 | 2 | Placement record (pass/fail) |
+
+Year 2 summative points: 12. Year 1: 9. Year 3: 7.
+
+## Appendix B: Student numbers and outcomes
+
+| Measure | Value | Source |
+|---|---|---|
+| Enrolled 1052-53, all years | {{ ot_enrolled_1052 }} | Planning and Insight, Data Extracts |
+| NSS 1052 overall satisfaction | {{ ot_nss_overall_1052 }} | Planning and Insight |
+| NSS 1051 overall satisfaction | {{ ot_nss_overall_1051 }} | Planning and Insight |
+| NSS 1052 Assessment and Feedback | {{ ot_nss_assessment_feedback_1052 }} | Planning and Insight |
+| NSS 1051 Assessment and Feedback | {{ ot_nss_assessment_feedback_1051 }} | Planning and Insight |
+| Faculty good honours gap, 1052 graduates (pp) | {{ he_good_degree_gap_1052 }} | Awarding Gap Annual Report 1051-52 |
+
+Programme-level good honours figures are not reproduced on Planning and Insight's advice regarding cohort size.
+
+## Appendix C: Placement providers
+
+Greywater Vale Infirmary (acute and outpatients); Riverside Rehabilitation Unit (shared with Physiotherapy); Millbrook Community Mental Health Team; Yewgrove Elder Care Centre; Stonebridge Residential Care Home; Hollowpick Community Care; Oakhollow Village Practice; Deepmarrow Hospice Day Service; Obsidian Vault Infirmary; Ashvale Community Nursing Team (community placements, OT students in pairs with nursing students). Full requirements held by the Programme Support Team.
+
+## Appendix D: Staff
+
+Dr Caerel Candletome (Programme Leader, registered OT); Dr Nyssa Memoryvault (shared, pharmacology and fitness to practise lead); Dr Hrogar Dourstone (Head of Department, contributes to OT203); six further academic staff, five registered OTs, two fractional; one sessional colleague covering long-term leave. Placement educators: approximately thirty across providers.
+
+## Appendix E: External examiner recommendations and responses
+
+| Year | Recommendation | Response | Outcome |
+|---|---|---|---|
+| 1050 | Consider reducing Year 2 assessment load (12 points) | "Noted and under review" | None |
+| 1051 | Reduce Year 2 assessment load (second time); note marking consistency on one Year 2 module | "Under review; proposals at revalidation"; "addressed through moderation" | None; moderation |
+| 1052 | Reduce Year 2 assessment load (third time); address marking calibration directly, may be reserved | "Will be addressed in the SED"; "to be discussed with the colleague; agree reserved" | This document; reserved paper |
+
+## Appendix F: Proposed Year 2 assessment pattern
+
+| Module | Current | Proposed | Rationale |
+|---|---|---|---|
+| OT201 | Case study; examination | Integrated case study with oral defence | One piece assesses both reasoning and knowledge |
+| OT202 | Case study; presentation | Community project report | Presentation folded into placement debrief (formative) |
+| OT203 | Essay; examination | Essay; examination (retained) | Shared module; professional body requires written examination |
+| OT204 | Practical examination; written report | Practical examination; written report (retained) | Professional body requires both elements |
+| OT205 | Placement record; portfolio | Placement record; portfolio (portfolio reduced from four reflections to two) | Record is pass/fail and required |
+| OT206 | Proposal; examination | Research proposal (expanded) | Proposal demonstrates methods knowledge; examination removed |
+
+Proposed Year 2 summative points: 7 (from 12). Marking in Year 2 semester 2 reduced by an estimated forty per cent, moving the heaviest marking out of the placement visit window.

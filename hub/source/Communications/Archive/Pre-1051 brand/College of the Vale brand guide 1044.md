@@ -1,0 +1,48 @@
+---
+title: College of the Vale brand guide 1044
+format: docx
+author: rhialla-moondrift
+created: 1044-03-01
+modified: 1051-09-01
+label: Internal
+sensitive: false
+site: comms
+library: comms-archive
+path: Pre-1051 brand
+storylines: [rebrand]
+skills: [11, 9]
+---
+
+::: letterhead old
+
+# Stonegrove College of the Vale
+
+## Visual Identity Guidelines
+
+March 1044. **WITHDRAWN September 1051. Archived for reference. Not for use.**
+
+### The crest
+
+The College crest, a shield bearing the oak and the anvil beneath the mountain, may be used on all College communications. It should appear in the College maroon (Pantone equivalent 7421) or in black. It may be reproduced at any size.
+
+### The wordmark
+
+"Stonegrove College of the Vale" set in Times New Roman, maroon. "of the Vale" may be set in italic.
+
+### Colours
+
+College maroon; stone grey; forest green; cream.
+
+### Typefaces
+
+Times New Roman for all printed material. Arial is acceptable for internal memoranda.
+
+### Departments
+
+Departments may add their own name beneath the College wordmark and may adopt a departmental device subject to the approval of the Principal.
+
+### Correspondence
+
+All letters to close "Yours faithfully" and to bear the College motto beneath the signature block.
+
+*Archive note (R.M., Sept 1051): everything in this document was replaced by the Stonegrove University brand guide v2.0 on 1 September 1051. The crest survives as the coat of arms in the new logo; the maroon, Times New Roman, the motto and departmental devices do not. Kept so that people can see what the old things looked like when they turn up, which they will. R.*

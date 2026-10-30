@@ -1,0 +1,84 @@
+# Data Classification Scheme
+
+| | |
+|---|---|
+| Owner | Information Governance Manager and Data Protection Officer |
+| Approved | Information Governance Group, 10 June 1050; amended 12 February 1053 |
+| Version | 1.1 |
+| Classification | Public |
+
+## Why we classify
+
+Not everything the University holds needs the same care. Classifying a document tells colleagues, at a glance, how it may be stored, shared and used. Three labels are enough. If you are spending more than a minute deciding, pick the higher one.
+
+## The three labels
+
+### Public
+
+Information that can be shared with anyone, inside or outside the University, without harm.
+
+*Examples:* published policies, the prospectus, programme specifications, regulations, brand assets, press releases, open data.
+
+*Handling:*
+
+- May be stored anywhere on the Hub.
+- May be sent externally without approval.
+- May be used with any digital tool, including AI tools whether or not they are on the approved list.
+
+### Internal
+
+Information for staff use whose disclosure would cause minor inconvenience or embarrassment but no real harm.
+
+*Examples:* committee papers not otherwise marked, working drafts, internal procedures, meeting notes, aggregated data in which no individual can be identified, most day-to-day correspondence.
+
+*Handling:*
+
+- This is the default. Anything without a label is treated as Internal.
+- Share within the University as needed. Do not send outside the University without the owner's agreement.
+- May be used with AI tools on the Approved Digital Tools List only.
+
+### Confidential
+
+Information about identifiable individuals, or information whose disclosure would cause real harm to a person or to the University.
+
+*Examples:* student support plans and disability evidence, wellbeing case notes, fitness to practise files, applicant records including personal statements and references, staff personal data including pay, reserved committee business, incident reports, anything subject to a duty of confidence.
+
+*Handling:*
+
+- Store only in a library whose default label is Confidential, or in a folder explicitly set to Confidential. Do not keep copies elsewhere.
+- Share only with named individuals who need it. Never send to a distribution list.
+- Must not be entered into any AI tool, approved or not, without a completed Data Protection Impact Assessment for that use. (Added February 1053 to align with the AI Acceptable Use Policy.)
+- Retain for the period in the Records Retention Schedule, then destroy.
+
+## A rule of thumb
+
+If a document names a person and says something about them that they would not want pinned to a noticeboard, it is Confidential.
+
+## Applying labels on the Hub
+
+Every library has a default label. A document inherits the default of the library or folder it is saved in unless someone sets a different label. This means:
+
+- Saving a Confidential document into an Internal folder does not make it Internal. It makes it a Confidential document with the wrong label, in the wrong place.
+- A folder label is only a default. Check the document.
+- Labels on migrated material (for example the StoneShare drive) have not been applied and must be reviewed by the owning team.
+
+## Common mistakes
+
+| Mistake | Why it matters | What to do instead |
+|---|---|---|
+| Emailing a full support plan to a teaching team | Confidential document to a distribution list | Send the one-page adjustments summary, which is designed for this |
+| Keeping a copy of a case file in a personal or team folder | Confidential material outside its library | Link to the master copy |
+| Putting date of birth or home address in a tracking spreadsheet | Turns an Internal tool into a Confidential record | Record only what the process needs |
+| Using a real student's case as the example in guidance | Confidential material in a Public document | Write a fictional example |
+| Pasting anything Internal into a free AI tool | Prohibited under the AI Acceptable Use Policy | Use the approved tool, or do not |
+
+## Related documents
+
+Data Protection Policy; Records Retention Schedule; Document Naming Convention; AI Acceptable Use Policy; Data Breach Procedure.
+
+## Version history
+
+| Version | Date | Change |
+|---|---|---|
+| 1.0 | 10 June 1050 | Approved |
+| 1.1 | 12 February 1053 | AI tool handling added to Internal and Confidential; "Common mistakes" table added following incident INC-0031 |

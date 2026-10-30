@@ -1,0 +1,1021 @@
+# Stonegrove Hub site map. OUT OF WORLD. Never shipped.
+#
+# One entry per SharePoint-style site; each site has document libraries; each
+# library has a folder skeleton and a budget. `folder_name` is the on-disk
+# name and must pass bible/filename_rules.yaml (so no ampersands). `name` is
+# what the explorer displays.
+#
+# Budgets:  authored = distinct source documents someone writes
+#           total    = files in the shipped tree after mess rules are applied
+# Per-site totals are the ceiling. The StoneShare migration library is the
+# elastic one; everything else should land within 10% of its figure.
+#
+# mess_profile:  island   convention followed, nothing out of place (one library only)
+#                tidy     light version drift, no junk
+#                normal   version sprawl, a few junk folders, metadata drift
+#                chaotic  everything in mess_rules.yaml applies
+#
+# `hint` is the fourth-wall text the explorer shows when hints are on.
+# Nothing in `hint` ever appears inside the downloadable tree.
+
+snapshot_date: 1053-04-14
+totals:
+  authored: 443
+  total: 728
+  ceiling: 900
+
+sites:
+
+  # ===================================================================
+  - id: governance
+    name: Governance and Secretariat
+    folder_name: Governance and Secretariat
+    owner: thalira-everjudged
+    default_label: Internal
+    mess_profile: tidy
+    budget: {authored: 70, total: 90}
+    description_in_world: >
+      Council and Senate papers, University policies and procedures,
+      information governance, and corporate templates.
+    hint: >
+      The rules are kept here: the AI Acceptable Use Policy, the Data
+      Classification Scheme and the naming convention among them. Most
+      of the other exercises use these as the ruleset, so it is worth
+      reading them first. You will then be able to see how much of the
+      rest of the Hub ignores them.
+    skills: [1, 5, 6, 8, 9]
+    libraries:
+
+      - id: gov-policies
+        name: Policies and Procedures
+        folder_name: Policies and Procedures
+        hint: >
+          Read the Data Classification Scheme, the AI Acceptable Use
+          Policy and Can I use AI for this before anything else; they
+          are the rules the other exercises are marked against. The
+          Superseded folder holds two drafts that were never in force
+          beside a policy from 1047: which of the three AI documents is
+          current, and how can you tell?
+        default_label: Public
+        mess_profile: tidy
+        budget: {authored: 16, total: 20}
+        folders:
+          - Current
+          - Current/Information Governance
+          - Current/Digital
+          - Current/Academic
+          - Superseded
+        contents: >
+          AI Acceptable Use Policy (approved 5 Feb 1053) with technical annex;
+          Data Classification Scheme; Can I Use AI For This (decision tree);
+          Approved Digital Tools List; Records Retention Schedule; Document
+          Naming Convention; Records of Processing (stub); DPIA template; Data
+          Breach Procedure; Freedom of Information Procedure; Academic
+          Regulations (extract); Committee Handbook. Superseded holds the
+          pre-1053 Acceptable Use of IT Policy and two drafts of the AI policy
+          that should not be here (skill 9).
+
+      - id: gov-council
+        name: Council
+        folder_name: Council
+        hint: >
+          Two meetings held, one pending. The Chair asked for a two-page
+          paper in February and the May agenda still says awaited. The
+          November pack is a good source for a one-page brief.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 22, total: 26}
+        folders:
+          - 1052-53
+          - 1052-53/1052-11-21 Council
+          - 1052-53/1053-02-21 Council
+          - 1052-53/1053-05-22 Council
+          - 1051-52
+        contents: >
+          Agenda, minutes and papers for two held meetings and the forward
+          papers folder for May 1053 (where the awarding gap paper is due and
+          is not). Gudrik's minutes are the house style exemplar. Chair's note
+          asking for "a short paper" lives in the Feb folder.
+
+      - id: gov-senate
+        name: Senate
+        folder_name: Senate
+        hint: >
+          The December folder has the transcript of the AI policy debate
+          and the minutes the Governance Officer wrote from it. Make
+          your own minutes first, then compare. Notice what he left out,
+          and why.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 20, total: 26}
+        folders:
+          - 1052-53
+          - 1052-53/1052-12-04 Senate
+          - 1052-53/1053-02-05 Senate
+          - 1051-52
+        contents: >
+          4 Dec 1052 Senate: the AI policy debate. Full transcript (T3),
+          Gudrik's approved minutes, the policy paper as presented, and a
+          dissenting note from Hrogar. 5 Feb 1053 Senate: approval. Learners
+          compare transcript with minutes (skills 1 and 8).
+
+      - id: gov-ig
+        name: Information Governance
+        folder_name: Information Governance
+        hint: >
+          The incident log and the INC-0031 file. The closure note says
+          the leaked file was removed. The checklist says the removal
+          was taken on someone's word. Follow it to the Faculty site to
+          see whether it is true.
+        default_label: Confidential
+        mess_profile: tidy
+        budget: {authored: 8, total: 10}
+        folders:
+          - Incident Log
+          - Incident Log/1053-02 INC-0031
+          - Training
+          - Advice Given
+        contents: >
+          Elenna's incident log workbook (all incidents since 1050, the
+          February one is INC-0031); the INC-0031 file: report form, Elenna's
+          email to Caelio, Velra's email to the Dean, the closure note that
+          says the file was removed (it was not). Training slides. An "Advice
+          Given" log where Bruk asked whether pasting a personal statement
+          into an AI tool was all right, after he had done it.
+
+      - id: gov-templates
+        name: Corporate Templates
+        folder_name: Corporate Templates
+        hint: >
+          Four corporate templates. Two carry the old institution name
+          in the footer; they have been copied hundreds of times. A
+          brand check that only looks at the Communications site will
+          miss them.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 4, total: 8}
+        folders: []
+        contents: >
+          Minutes template, agenda template, committee paper template (with
+          cover sheet and classification box), business case template. Two
+          of them still carry the pre-1051 name in the footer (skill 11).
+
+  # ===================================================================
+  - id: faculty
+    name: Faculty of Health and Education
+    folder_name: Faculty of Health and Education
+    owner: cyranor-goldmantle
+    default_label: Internal
+    mess_profile: chaotic
+    budget: {authored: 124, total: 305}
+    description_in_world: >
+      Faculty office, Departments of Health and Education, programme teaching
+      materials, and the migrated StoneShare drive.
+    hint: >
+      The biggest site and the untidiest. The Dean's Office is where
+      briefings land and drafts go wrong. The StoneShare Migration
+      library is the old network drive, dropped here in November 1052
+      and never sorted; it holds things that should not be in a shared
+      library at all. It is the place to start for the folder-
+      organisation and guardrails exercises.
+    skills: [1, 4, 5, 6, 9, 11]
+    libraries:
+
+      - id: fac-deans
+        name: Deans Office
+        folder_name: Deans Office
+        hint: >
+          The Dean's draft Council paper (v3 USE THIS) quotes figures
+          Planning will not sign off. The FMG folder holds a 90-minute
+          transcript and the AI-generated minutes nobody checked.
+          Elowen's folder is where everything actually is.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 25, total: 35}
+        folders:
+          - Council and Senate
+          - Council and Senate/Awarding Gap Paper
+          - Faculty Management Group
+          - Faculty Management Group/1052-53
+          - Faculty Strategy
+          - Elowen stuff
+          - Elowen stuff/Deans thing
+          - Elowen stuff/old
+        contents: >
+          The Dean's draft awarding gap paper (three versions, Elowen's
+          names, the wrong figures); Quorin's email declining to sign it off;
+          the Chair's covering note; FMG agendas, the 90-minute FMG transcript
+          (T2) with no minutes; Faculty strategy 1052-55 in a glossy version
+          (Jaskel's typefaces) and a plain one; Elowen's folder of everything.
+
+      - id: fac-health
+        name: Department of Health
+        folder_name: Department of Health
+        hint: >
+          Hrogar's memoranda on old letterhead, the Fitness to Practise
+          folder with a correctly labelled case file, and a Panel Papers
+          subfolder where a copy of the same case sits labelled
+          Internal.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 20, total: 28}
+        folders:
+          - Department Meetings
+          - Fitness to Practise
+          - Fitness to Practise/Panel Papers
+          - Programme Documents
+          - Programme Documents/Nursing and Care
+          - Programme Documents/Occupational Therapy
+          - Programme Documents/Midwifery
+        contents: >
+          Hrogar's memoranda on "Department of Healing Arts" letterhead;
+          department meeting minutes in his own format; Nyssa's Fitness to
+          Practise folder (properly labelled Confidential) and a Panel Papers
+          subfolder where a copy of the Firestride case summary sits labelled
+          Internal; programme specifications; Caerel's 71-page OT
+          self-evaluation document and its appendices.
+
+      - id: fac-education
+        name: Department of Education
+        folder_name: Department of Education
+        hint: >
+          Five versions of an action plan with no version numbers, a
+          stand-up transcript in which the transcription has mangled
+          every name, a focus group folder with a referral note that
+          should not be there, and Jaskel's marketing.
+        default_label: Internal
+        mess_profile: chaotic
+        budget: {authored: 15, total: 22}
+        folders:
+          - NSS Response
+          - NSS Response/Action plan versions
+          - NSS Response/Focus groups
+          - Marketing
+          - Marketing/Jaskel
+        contents: >
+          Saelith's action plan in five unmarked versions; the NSS action
+          group transcript (T6) with mangled names; focus group notes
+          including the one where Tivan Reefgrace said too much (label
+          missing); Jaskel's pencil-tree logo in three sizes, his leaflet in
+          Bubblegum Rounded, and his 42-slide open day deck.
+
+      - id: fac-teaching-nc
+        name: Teaching Nursing and Care
+        folder_name: Teaching Nursing and Care
+        hint: >
+          Module handbooks and placement material. In Year 2 / Staff
+          only, a one-page adjustments summary sits beside a full
+          support plan with the same label. Only one of them should be
+          here.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 14, total: 20}
+        folders:
+          - Year 1
+          - Year 2
+          - Year 2/Staff only
+          - Year 3
+          - Placements Info for Students
+        contents: >
+          Module handbooks, assessment briefs, placement preparation slides.
+          In Year 2/Staff only: the one-page adjustments summary for Grinna
+          Dustshard (correct, Internal) and beside it the full support plan
+          Caelio attached by mistake, label Internal, which the incident
+          closure note says was removed. Ground truth: Confidential.
+
+      - id: fac-stoneshare
+        name: StoneShare Migration
+        folder_name: StoneShare Migration
+        hint: >
+          The old network drive, dropped here in one go. Nothing is
+          labelled. Start with Liora's index in To sort, then the naming
+          convention and retention schedule in Governance. Three things
+          in here should not be on a shared drive at all; Hesta's folder
+          is the one thing worth keeping.
+        default_label: null
+        mess_profile: chaotic
+        budget: {authored: 50, total: 200}
+        folders:
+          - Faculty Shared
+          - Faculty Shared/Admin
+          - Faculty Shared/Admin/Old
+          - Faculty Shared/Admin/Old/Older
+          - Faculty Shared/Admin/Old/Older/2049
+          - Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE
+          - Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc
+          - Faculty Shared/Admin/Old/Older/2049/Archive - DO NOT DELETE/Misc/Hrogar
+          - Faculty Shared/Committees
+          - Faculty Shared/Forms
+          - Faculty Shared/Forms/New folder
+          - Faculty Shared/Forms/New folder (2)
+          - Faculty Shared/Hesta stuff
+          - Faculty Shared/Hesta stuff/Placements
+          - Faculty Shared/Hesta stuff/Provider letters
+          - Faculty Shared/Hesta stuff/Templates that work
+          - Faculty Shared/Photos
+          - Faculty Shared/Photos/Away day 1051
+          - Faculty Shared/To sort
+          - Health
+          - Health/Healing Arts (old)
+          - Health/FtP
+          - Education
+          - Education/Misc
+          - Personal
+          - Personal/CV
+          - Templates
+          - Templates/Old templates
+        contents: >
+          The old network drive. Nothing labelled. Every rule in
+          mess_rules.yaml applies. Hesta's folder is the gem: the only
+          well-organised thing in it, and the best material in the Faculty on
+          how placements actually run. Health/FtP holds an unlabelled copy of
+          the Firestride case notes. Personal/CV is someone's CV. Photos has
+          six small away-day photos. To sort is Liora's and has her
+          colour-coded index of what is in the library, which is the best
+          starting point for the folder exercise and is itself in the wrong
+          place.
+
+  # ===================================================================
+  - id: pst
+    name: Programme Support Team Nursing and Care
+    folder_name: Programme Support Team Nursing and Care
+    owner: dagna-chiselhand
+    default_label: Internal
+    mess_profile: normal
+    budget: {authored: 60, total: 85}
+    description_in_world: >
+      Administrative team for the Nursing and Care programme: placements,
+      provider liaison, student records and programme administration.
+    hint: >
+      Placements for the largest programme in the Faculty are run from a
+      spreadsheet with fourteen tabs by one person, who goes on leave in
+      May. Everything you would need to scope a small system is here in
+      pieces: the spreadsheet itself, the complaints about it, the
+      provider letters, and the form Digital Services rejected two years
+      ago. Use this site for project management and for pulling a table
+      out of a pile of correspondence.
+    skills: [1, 3, 7, 9]
+    libraries:
+
+      - id: pst-placements
+        name: Placements
+        folder_name: Placements
+        hint: >
+          Seven versions of the allocation workbook, one of them newer
+          than the FINAL FINAL. Halden's process documents, Dagna's list
+          of what goes wrong, and the Digital Services request that was
+          declined for want of exactly the material now in this folder.
+        default_label: Internal
+        mess_profile: chaotic
+        budget: {authored: 12, total: 22}
+        folders:
+          - Allocation
+          - Allocation/Previous years
+          - Process
+          - Digital Services request
+        contents: >
+          The 14-tab allocation workbook and its FINAL lineage (seven files,
+          mess_rules.version_sprawl.placements); Halden's three attempts at
+          "how placements work" (a two-page note, a flowchart, an unfinished
+          handover doc); Dagna's "list of things that go wrong"; the 1051
+          Digital Services project request, Fenn's decline, and the blank
+          request form; a business case template copied from Governance.
+
+      - id: pst-providers
+        name: Provider Correspondence
+        folder_name: Provider Correspondence
+        hint: >
+          Thirty-three letters, emails and agreements from thirty
+          providers, each with contact, capacity and conditions buried
+          in prose. One provider counts its outpatients within the main
+          site's total. Make one table; check every row against its
+          letter.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 32, total: 35}
+        folders:
+          - 1052-53
+          - 1051-52
+        contents: >
+          Thirty letters and saved emails from placement providers, each with
+          contact, capacity, conditions and dates buried in prose. Letters as
+          docx and pdf, emails as eml. Skill 7: produce one clean table. A
+          few providers appear twice with changed capacity.
+
+      - id: pst-admin
+        name: Programme Administration
+        folder_name: Programme Administration
+        hint: >
+          The 27 March handover meeting: transcript and Hesta's notes of
+          it. A short, clean pair for a first attempt at minutes. The
+          running team notes carry the year's story.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 10, total: 15}
+        folders:
+          - Meetings
+          - Handbooks
+          - Forms
+        contents: >
+          Hesta's domain. The placements handover planning transcript (T1,
+          short and clean) and her minutes; team meeting notes; forms. Tidy,
+          follows the convention loosely.
+
+      - id: pst-email-attachments
+        name: Email Attachments
+        folder_name: Email Attachments
+        hint: >
+          Attachments saved from email with no context: doc1, image001,
+          scan0001. Nothing labelled. Which provider does the signed
+          agreement belong to?
+        default_label: null
+        mess_profile: chaotic
+        budget: {authored: 6, total: 13}
+        folders: []
+        contents: >
+          Orphaned attachments saved from email with no context: image001.png,
+          a signed provider agreement, "doc1.docx", a screenshot of a
+          spreadsheet, a photo of a whiteboard, two copies of the same
+          placement letter. Nothing labelled.
+
+  # ===================================================================
+  - id: planning
+    name: Planning and Insight
+    folder_name: Planning and Insight
+    owner: quorin-deepmirror
+    default_label: Internal
+    mess_profile: tidy
+    budget: {authored: 29, total: 45}
+    description_in_world: >
+      Institutional data, analysis and reporting. Student numbers, awarding
+      gaps, NSS, surveys, data requests.
+    hint: >
+      This team owns the numbers. Their Reports library is the one place
+      in the Hub where the naming convention is followed, and it shows.
+      The Data Extracts are small cuts of the full Stonegrove dataset,
+      which you can download from the main site. In the Working folder
+      there is a half-finished awarding gap analysis and two summaries
+      that a tool generated and nobody checked.
+    skills: [2, 6, 8]
+    libraries:
+
+      - id: pi-reports
+        name: Reports
+        folder_name: Reports
+        hint: >
+          Planning's weekly dashboard export. The weeks-since-offer
+          sheet is the figure that settles the argument in the
+          Conversion folder.
+        default_label: Internal
+        mess_profile: island
+        budget: {authored: 13, total: 15}
+        folders:
+          - 1052-53
+          - 1051-52
+          - 1050-51
+        contents: >
+          Erra's library. Every file named YYYY-MM-DD_Topic_vNN per the
+          convention. Awarding gap annual report 1051-52; NSS 1052 institutional
+          summary; Faculty NSS deep dive (Oct 1052); student numbers return;
+          Quorin's "How to read our reports" note. Figures templated from
+          values.yaml.
+
+      - id: pi-requests
+        name: Data Requests
+        folder_name: Data Requests
+        hint: >
+          The request log and the email chain in which Planning decline
+          to sign off the Dean's paper, with reasons. Read Quorin's
+          replies as a model of how to disagree about numbers.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 8, total: 8}
+        folders: []
+        contents: >
+          Request log workbook; the Dean's request for the Council paper
+          (two lines, from his mobile); Mira's request for conversion data by
+          clan; Saelith's request for NSS free text; Quorin's reply to the
+          Dean with the caveats he wants in.
+
+      - id: pi-working
+        name: Working
+        folder_name: Working
+        hint: >
+          Ollir's drafts. One is the reserved minutes with no label on
+          it.
+        default_label: null
+        mess_profile: normal
+        budget: {authored: 8, total: 12}
+        folders:
+          - Awarding gap
+          - NSS
+          - Teylin
+        contents: >
+          The half-finished awarding gap extract (Erra, Oct 1052, "Not yet
+          QA'd"); Teylin's narrative draft; two files headed "Summary
+          (auto-generated)" with planted errors (planted_errors.yaml); the
+          external review summary likewise. Labels missing.
+
+      - id: pi-extracts
+        name: Data Extracts
+        folder_name: Data Extracts
+        hint: >
+          Small cuts of the full dataset for this Faculty. Enough to
+          check the Dean's figures, trace the NSS movement by programme,
+          and notice how quickly a by-programme table runs into small numbers. The full
+          dataset is on the main site.
+        default_label: Internal
+        mess_profile: island
+        budget: {authored: 0, total: 10}
+        folders:
+          - 1052-53
+        generated_by: scripts/make_hub_extracts.py
+        contents: >
+          Generated from data/relational at pipeline time. Health and
+          Education enrolments 1052-53 (csv); assessment summary by programme;
+          good honours by programme and species, five years; NSS by
+          programme and theme, five years; progression by programme and year of study; a "Data sources and
+          definitions" note pointing to the Stonegrove download page. Small:
+          a few thousand rows each.
+
+  # ===================================================================
+  - id: quality
+    name: Quality
+    folder_name: Quality
+    owner: brynja-cragshield
+    default_label: Internal
+    mess_profile: tidy
+    budget: {authored: 45, total: 58}
+    description_in_world: >
+      Academic regulations, programme approval and revalidation, examination
+      boards, external examining.
+    hint: >
+      The formal register. Regulations here are written to be quoted
+      rather than read, which makes them good practice for turning into
+      plain guidance. The Occupational Therapy revalidation folder has a
+      panel transcript, the minutes the clerk produced from it, and a
+      reserved item that must stay out of the open minutes.
+    skills: [1, 9, 10]
+    libraries:
+
+      - id: q-regulations
+        name: Academic Regulations
+        folder_name: Academic Regulations
+        hint: >
+          Regulations written to be quoted. The Guidance folder has two
+          student guides and a draft of a third that uses a real
+          student's circumstances by name, in a Public folder.
+        default_label: Public
+        mess_profile: tidy
+        budget: {authored: 10, total: 10}
+        folders:
+          - 1052-53
+          - Guidance
+        contents: >
+          Regulations on assessment, progression, extenuating circumstances,
+          academic misconduct, fitness to practise, appeals. Dense. A
+          "student-facing guidance" folder with two guides and a gap where
+          the EC guide should be (skill 10).
+
+      - id: q-revalidation
+        name: Programme Revalidation
+        folder_name: Programme Revalidation
+        hint: >
+          The self-evaluation document in three versions, the panel
+          transcript, the open minutes, the panel report, and a Reserved
+          folder. The transcript contains the reserved discussion and is
+          labelled Internal; the reserved minutes are Confidential.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 16, total: 22}
+        folders:
+          - Occupational Therapy 1053
+          - Occupational Therapy 1053/Panel 1053-03-12
+          - Occupational Therapy 1053/Panel 1053-03-12/Reserved
+          - Occupational Therapy 1053/SED
+        contents: >
+          Panel transcript (T4), Ollir's minutes (open and reserved), the
+          panel report, conditions and recommendations, Caerel's SED in three
+          versions and its appendices, external examiner reports for three
+          years with the same unactioned recommendation. Reserved folder
+          labelled Confidential; transcript, which includes the reserved
+          discussion, labelled Internal (classification.yaml).
+
+      - id: q-examboards
+        name: Examination Boards
+        folder_name: Examination Boards
+        hint: >
+          Correctly handled Confidential material: marks tables with
+          student numbers only. A useful control when you are checking
+          what an AI did or did not open.
+        default_label: Confidential
+        mess_profile: tidy
+        budget: {authored: 8, total: 12}
+        folders:
+          - Health 1052-53
+          - Education 1052-53
+        contents: >
+          Agendas, minutes, chair's reports. Marks tables generated from the
+          extracts with student IDs only (no names). Properly labelled.
+
+      - id: q-externals
+        name: External Examiners
+        folder_name: External Examiners
+        hint: >
+          Three external examiner reports, three years, one
+          recommendation each time, and the programme's three identical
+          responses. A summary of these exists in Planning's Working
+          folder; it is wrong in four places.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 6, total: 6}
+        folders: []
+        contents: >
+          Reports and programme responses. Marenel's three OT reports.
+
+      - id: q-working
+        name: Working
+        folder_name: Working
+        hint: >
+          Ollir's drafts. One is the reserved minutes with no label on
+          it.
+        default_label: null
+        mess_profile: normal
+        budget: {authored: 5, total: 8}
+        folders:
+          - Ollir
+        contents: >
+          Ollir's drafts, including draft minutes with tracked changes and
+          the transcript he worked from. A copy of the reserved minutes with
+          no label.
+
+  # ===================================================================
+  - id: admissions
+    name: Admissions
+    folder_name: Admissions
+    owner: mira-dealroot
+    default_label: Internal
+    mess_profile: normal
+    budget: {authored: 33, total: 42}
+    description_in_world: >
+      Applicant processing, offer-making, conversion, open days and applicant
+      communications for the 1053 entry cycle.
+    hint: >
+      Offers are up and acceptances are down, and there are three
+      explanations in three documents, each written for a different
+      audience. The applicant tracker holds more personal data than it
+      needs and is labelled Internal. Someone has also pasted an
+      applicant's personal statement into a tool that is not on the
+      approved list. A good site for the guardrails exercise and for
+      drafting in the right voice.
+    skills: [2, 5, 10]
+    libraries:
+
+      - id: adm-cycle
+        name: Cycle 1053 Entry
+        folder_name: Cycle 1053 Entry
+        hint: >
+          The applicant tracker holds dates of birth, home addresses and
+          health declarations for 240 applicants and is labelled
+          Internal. Three conversion papers blame three different
+          things. The huddle transcript is where one person admits to
+          pasting a personal statement into a tool he should not have.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 9, total: 12}
+        folders:
+          - Tracker
+          - Offer making
+          - Conversion
+        contents: >
+          Applicant tracker workbook (fabricated applicants, too many
+          columns: date of birth, home address, health declaration, notes)
+          with three versions; offer-making group minutes; Mira's three
+          conversion papers (for the Dean, for Planning, for her own team),
+          each blaming something different; the Admissions huddle transcript
+          (T7).
+
+      - id: adm-opendays
+        name: Open Days
+        folder_name: Open Days
+        hint: >
+          The June run sheet, the October feedback summary that
+          predicted the conversion dip five months early, and a 42-slide
+          deck with six typefaces.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 9, total: 12}
+        folders:
+          - 1053-06 Open Day
+          - 1052-10 Open Day
+        contents: >
+          Plans, run sheets, room bookings, Jaskel's deck (off-brand),
+          Javin's social posts, feedback forms summary.
+
+      - id: adm-comms
+        name: Applicant Communications
+        folder_name: Applicant Communications
+        hint: >
+          Applicant letter templates that open with the old institution
+          name and two exclamation marks, and a tone-of-voice note that
+          says why. The fitness to practise declaration letter is the
+          on-brand control.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 8, total: 10}
+        folders:
+          - Templates
+          - Sent
+        contents: >
+          Offer letter, rejection letter, interview invitation, fitness to
+          practise declaration request, contextual offer explanation. Two
+          templates use the pre-1051 name. Mira's "tone of voice" note that
+          contradicts the brand guide.
+
+      - id: adm-reports
+        name: Reports
+        folder_name: Reports
+        hint: >
+          Planning's weekly dashboard export. The weeks-since-offer
+          sheet is the figure that settles the argument in the
+          Conversion folder.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 7, total: 8}
+        folders: []
+        contents: >
+          Weekly conversion dashboard exports (xlsx), a request to Planning
+          for applicant data by clan and Quorin's careful reply.
+
+  # ===================================================================
+  - id: wellbeing
+    name: Student Wellbeing
+    folder_name: Student Wellbeing
+    owner: velra-cinderwake
+    default_label: Confidential
+    mess_profile: tidy
+    budget: {authored: 34, total: 38}
+    description_in_world: >
+      Disability support, mental health and wellbeing advice, reasonable
+      adjustments, and student casework.
+    hint: >
+      Support plans and case notes are labelled correctly here. The
+      trouble is the copies that have ended up elsewhere. Start in the
+      Incident folder and trace the February incident to where the file
+      actually went. Useful for the guardrails exercise and for drafting
+      a difficult email.
+    skills: [4, 5, 10]
+    libraries:
+
+      - id: wb-plans
+        name: Support Plans
+        folder_name: Support Plans
+        hint: >
+          Support plans, correctly Confidential, except one DSA evidence
+          letter labelled Internal. The master copy of the plan that
+          leaked in February is here; the leaked copy is in the Faculty
+          site.
+        default_label: Confidential
+        mess_profile: tidy
+        budget: {authored: 10, total: 12}
+        folders:
+          - 1052-53
+          - 1052-53/Health
+          - 1052-53/Education
+        contents: >
+          Anric's support plans, all on template, all Confidential. Grinna
+          Dustshard's is here, correctly. Enia Chalkhaven's DSA evidence
+          letter is here labelled Internal (wrong).
+
+      - id: wb-casenotes
+        name: Case Notes
+        folder_name: Case Notes
+        hint: >
+          Case notes. Tivan Reefgrace's referral is Confidential here; a
+          copy with no label sits in the Department of Education's focus
+          group folder.
+        default_label: Confidential
+        mess_profile: tidy
+        budget: {authored: 7, total: 8}
+        folders:
+          - Open
+          - Closed
+        contents: >
+          Short case notes in the team's format. Tivan Reefgrace's referral
+          note (Confidential here; the copy in Education has no label).
+
+      - id: wb-procedures
+        name: Procedures and Guidance
+        folder_name: Procedures and Guidance
+        hint: >
+          The sharing procedure the incident broke (v1.1) and the
+          revised draft (v2) side by side, and the student-facing guide.
+          Good material for turning procedure into plain language.
+        default_label: Internal
+        mess_profile: tidy
+        budget: {authored: 11, total: 12}
+        folders:
+          - Staff guidance
+          - Student guidance
+        contents: >
+          Reasonable adjustments procedure, disclosure and consent, sharing
+          adjustments with teaching staff (the one-page summary rule that the
+          incident broke), referral pathway, the support plan template.
+
+      - id: wb-incident
+        name: Incident February 1053
+        folder_name: Incident February 1053
+        hint: >
+          The review meeting transcript strays into the adviser's own
+          workload; decide what belongs in a note of the meeting and
+          what does not. The checklist ticks file removed.
+        default_label: Confidential
+        mess_profile: tidy
+        budget: {authored: 6, total: 6}
+        folders: []
+        contents: >
+          Caelio's self-report; Velra's email to the Dean; the review
+          meeting transcript (T5) and Velra's note of it; the revised
+          procedure draft; a checklist with "remove file from teaching
+          folder" ticked.
+
+  # ===================================================================
+  - id: comms
+    name: Communications
+    folder_name: Communications
+    owner: rhialla-moondrift
+    default_label: Internal
+    mess_profile: normal
+    budget: {authored: 48, total: 65}
+    description_in_world: >
+      Brand, design, campaigns, internal and external communications,
+      requests for communications support.
+    hint: >
+      The brand guide is here, along with the Brand Compliance Log, a
+      spreadsheet of every off-brand sighting since the 1051 rebrand.
+      Give an AI the guide and ask for a set of materials, then point it
+      at the off-brand files scattered across the other sites and see
+      whether it keeps to the rules.
+    skills: [10, 11]
+    libraries:
+
+      - id: comms-brand
+        name: Brand
+        folder_name: Brand
+        hint: >
+          The brand guide, the one-page version, the templates, and the
+          Brand Compliance Log listing 24 sightings. Give an AI the
+          guide and ask it to produce a set of materials; then point it
+          at the sightings.
+        default_label: Public
+        mess_profile: island
+        budget: {authored: 12, total: 15}
+        hand_supplied: true
+        folders:
+          - Brand Guide
+          - Logo
+          - Logo/Coat of arms
+          - Colour and Type
+          - Templates
+        contents: >
+          Brand Guide 1051 (v2.1, Sorell); logo files; colour swatches; type
+          specimens; document, slide and email signature templates; the
+          Brand Compliance Log. Placeholder assets per hand_supplied.yaml;
+          Rosie replaces by hand.
+
+      - id: comms-campaigns
+        name: Campaigns
+        folder_name: Campaigns
+        hint: >
+          Javin's socials schedule with Sorell's verdicts in the last
+          column, the graphics deck behind it, and an open day flyer in
+          an off-brand and an on-brand version.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 16, total: 22}
+        folders:
+          - 1053-06 Open Day
+          - 1053 Clearing
+          - 1052-09 Midwifery launch
+          - Socials
+        contents: >
+          Campaign plans (Javin's, saved as emails), copy decks, social post
+          schedules with the off-brand posts, a flyer in two versions (one
+          on brand, one not), press release drafts.
+
+      - id: comms-requests
+        name: Requests
+        folder_name: Requests
+        hint: >
+          Requests from other teams, mostly bad: a department wanting
+          its retired name back, a lecturer wanting his tree made nice,
+          a banner request with the old name. Sorell's replies are the
+          brand guide applied.
+        default_label: Internal
+        mess_profile: chaotic
+        budget: {authored: 12, total: 15}
+        folders:
+          - Open
+          - Done
+          - Declined
+        contents: >
+          Briefs from other teams, mostly bad: Jaskel's "can you make this
+          look nice" with the pencil tree attached; Hrogar's memo requesting
+          letterhead for the Department of Healing Arts (declined, twice);
+          Mira's open day banner request with the old name; Dagna's one-line
+          request for "a poster about placements".
+
+      - id: comms-archive
+        name: Archive
+        folder_name: Archive
+        hint: >
+          The old brand guide, the rebrand launch email and a lessons-
+          learned document eighteen months on that explains why the
+          compliance log is 24 rows long.
+        default_label: Internal
+        mess_profile: normal
+        budget: {authored: 8, total: 13}
+        folders:
+          - Pre-1051 brand
+          - Pre-1051 brand/College of the Vale logo
+          - Rebrand project 1051
+        contents: >
+          The old brand guide, the old logo, the rebrand project plan, the
+          launch comms, and Rhialla's "lessons learned" that nobody read.
+          Several old templates here are still in daily use elsewhere.
+
+# -------------------------------------------------------------------
+# Transcripts. The single most important content type. Each is paired with
+# the minutes template; some with the minutes someone actually produced.
+
+transcripts:
+  - id: T1
+    title: Placements handover planning
+    site: pst
+    library: pst-admin
+    date: 1053-03-27
+    duration_min: 25
+    attendees: [dagna-chiselhand, halden-bridgeglen, hesta-gracestone, liora-lanternwake]
+    character: short and clean; one tangent about a provider's new car park
+    paired_minutes: Hesta's, accurate, terse
+    skills: [1, 3]
+  - id: T2
+    title: Faculty Management Group
+    site: faculty
+    library: fac-deans
+    date: 1053-03-19
+    duration_min: 92
+    attendees: [cyranor-goldmantle, elowen-fogwhisper, hrogar-dourstone, saelith-emberthorn, brekka-anvildancer, dagna-chiselhand, caerel-candletome]
+    character: sprawling; three tangents (parking, the pencil tree, Brekka's dog in the background); Elowen "minuting" and losing the thread; the awarding gap paper discussed and decisions left unclear
+    paired_minutes: none exist
+    skills: [1, 6]
+  - id: T3
+    title: Senate, item 7, AI Acceptable Use Policy
+    site: governance
+    library: gov-senate
+    date: 1052-12-04
+    duration_min: 17
+    attendees: [thalira-everjudged, gudrik-bannerstone, elenna-dewscroll, cyranor-goldmantle, hrogar-dourstone, brynja-cragshield, quorin-deepmirror, rhialla-moondrift]
+    character: formal; papers referenced by number; Hrogar's dissent; Elenna patient
+    paired_minutes: Gudrik's approved minutes (exemplar)
+    skills: [1, 8]
+  - id: T4
+    title: Occupational Therapy revalidation panel
+    site: quality
+    library: q-revalidation
+    date: 1053-03-12
+    duration_min: 110
+    attendees: [brynja-cragshield, ollir-greenquill, caerel-candletome, marenel-boughwitness, hrogar-dourstone, anric-hearthbind]
+    character: formal with papers; includes a reserved item (external examiner's concern about a named member of staff) that must not appear in the open minutes
+    paired_minutes: Ollir's open minutes and reserved minutes
+    skills: [1, 5]
+  - id: T5
+    title: Incident review meeting
+    site: wellbeing
+    library: wb-incident
+    date: 1053-02-26
+    duration_min: 38
+    attendees: [velra-cinderwake, caelio-driftfeather, elenna-dewscroll]
+    character: one-to-one plus DPO; strays into Caelio's own workload and health; the learner must decide what belongs in a note of the meeting
+    paired_minutes: Velra's short note
+    skills: [1, 5, 10]
+  - id: T6
+    title: Education NSS action group
+    site: faculty
+    library: fac-education
+    date: 1052-10-23
+    duration_min: 55
+    attendees: [saelith-emberthorn, jaskel-doodlehook, teylin-leafchant, erra-measurine]
+    character: stand-up pace; transcription mangles every name (Sailor Thembathorn, Jackal Doodle Hook, Tailing Leaf Chant, Error Measuring); actions agreed and then re-agreed differently
+    paired_minutes: none; Saelith's action plan v1 is the nearest thing
+    skills: [1]
+  - id: T7
+    title: Admissions conversion huddle
+    site: admissions
+    library: adm-cycle
+    date: 1053-03-05
+    duration_min: 30
+    attendees: [mira-dealroot, bruk-coaljaw, quorin-deepmirror]
+    character: three explanations argued; Quorin asks for definitions; Bruk mentions the personal statement thing in passing
+    paired_minutes: Mira's bullet-point email
+    skills: [1, 2, 5]

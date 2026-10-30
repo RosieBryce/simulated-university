@@ -1,0 +1,69 @@
+# Data Breach Report Form
+
+**Reference (IG use):** INC-0031
+**Received by Information Governance:** 19 February 1053, 10:34
+
+## Part 1: Reporter
+
+| | |
+|---|---|
+| Name | Caelio Driftfeather |
+| Post | Wellbeing Adviser, Student Wellbeing |
+| Extension | 2306 |
+| Line manager | Velra Cinderwake, Head of Student Wellbeing |
+
+## Part 2: What happened
+
+**Date and time of the incident:** 19 February 1053, approximately 09:41
+
+**Date and time you became aware:** 19 February 1053, approximately 10:20, when a recipient replied to ask whether the attachment was meant for them.
+
+**Describe what happened.**
+
+I was sending the Year 2 Nursing and Care teaching team the one-page adjustments summary for a student on the programme, as the sharing procedure requires at the start of placement preparation. The two documents have similar names and sit in the same folder in my working area. I attached the student's full support plan instead of the summary. I did not check the attachment before sending. The email went to the distribution list NC-Y2-Teaching, which has 14 members.
+
+**What personal data was involved?**
+
+The student's full name, student ID, programme and year; the diagnoses recorded in the plan (two conditions, one of them a mental health condition); the history section, which includes information about the student's circumstances at school; the adjustments agreed; the student's own words from the planning meeting; the adviser's notes.
+
+**How many people's data?** One student.
+
+**Who received it?** 14 members of staff on the NC-Y2-Teaching list, all University employees. Two of them are the student's module leaders and are entitled to the adjustments summary. None is entitled to the full plan.
+
+**Has anyone outside the University received it?** Not to my knowledge.
+
+## Part 3: What you have done so far
+
+I tried to recall the message at 10:22. The recall failed for 11 of 14 recipients. I telephoned the Information Governance Manager at 10:30 and completed this form at her request. I have not yet contacted the recipients; I understand Information Governance will do that.
+
+## Part 4: Anything else
+
+I am very sorry. I knew the rule and I was going too fast. I had sent nine of these summaries that morning.
+
+C. Driftfeather, 19 February 1053
+
+---
+
+## Part 5: Information Governance assessment (IG use only)
+
+**Assessed by:** E. Dewscroll, 20 February 1053
+
+**Data:** Special category (health). Confidential.
+
+**Likelihood of harm:** Possible. Recipients are staff bound by confidentiality; however, the material includes mental health information and personal history the student did not consent to share with teaching staff.
+
+**Severity:** Significant for the individual.
+
+**Regulator notification required?** No. Disclosure was internal, to staff under a duty of confidence, contained within hours, with deletion confirmed. Recorded as a near miss to external disclosure.
+
+**Individual to be informed?** Yes. By the Head of Student Wellbeing, in person, with an offer of a meeting. Done 20 February.
+
+**Containment actions:**
+
+1. Email to all 14 recipients requesting deletion and confirmation; no forwarding. Sent 19 February, 14:02. Confirmations: 12 by 21 February; 14 by 24 February.
+2. Confirm that the attachment was not saved anywhere else by recipients. Two recipients said they had saved it to the Year 2 teaching folder on the Hub "for the module file". Action: remove.
+3. Review meeting with reporter, line manager and IGM: 26 February.
+4. Revise the sharing procedure so that the adjustments summary is generated from the plan as a separate file in a separate folder, with a distinct name pattern.
+5. Brief all advisers.
+
+**Closure criteria:** all five actions complete and verified.

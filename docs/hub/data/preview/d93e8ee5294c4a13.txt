@@ -1,0 +1,35 @@
+# Freedom of Information Procedure
+
+Owner: Information Governance Manager. Version 1.1, 1 September 1051. Classification: Public.
+
+## 1. The duty
+
+The University must respond to written requests for recorded information within 20 working days. A request does not need to mention freedom of information; any written request for information that the University holds is a request under this procedure.
+
+## 2. Recognising a request
+
+If you receive a written request for information that is not already published and is not about the requester's own personal data, send it to the Information Governance Manager on the day you receive it. Do not answer it yourself unless it is routine business information you would give anyone.
+
+## 3. What happens
+
+| Step | Who | By when |
+|---|---|---|
+| Log and acknowledge | Information Governance | Day 1 |
+| Identify where the information is held and ask the owning team to locate it | Information Governance | Day 2 |
+| Locate and supply the information, flagging anything you believe should be withheld and why | Owning team | Day 10 |
+| Consider exemptions, redactions and the public interest | Information Governance with the University Secretary where needed | Day 15 |
+| Respond | Information Governance | Day 20 |
+
+## 4. What this means for how we keep records
+
+Any document on the Hub could be requested. Write everything as though it may be read by the person it is about and by a journalist. Keep documents where they can be found. A document the University holds but cannot find is still held.
+
+Personal remarks about colleagues or students in working documents are the single most common cause of embarrassment on disclosure.
+
+## 5. Exemptions
+
+Common exemptions include personal data of third parties, information provided in confidence, commercial interests, and information intended for future publication. Exemptions are applied by Information Governance, not by the owning team.
+
+## 6. Publication scheme
+
+Routinely requested information is published proactively on the University website: policies, minutes of Council and Senate (open business), senior pay bands, and institutional statistics.

@@ -1,0 +1,35 @@
+::: footer current
+
+# Programme Support Team, Nursing and Care
+
+## Placements handover planning: notes of the meeting on 27 March 1053
+
+Present: Dagna Chiselhand (Programme Leader, chair), Halden Bridgeglen (Placements Coordinator), Hesta Gracestone (Programme Administrator, notes), Liora Lanternwake (Programme Support Assistant).
+
+Purpose: to agree what must be in place before Halden's leave begins on 19 May 1053.
+
+### Discussion
+
+1. Halden has begun the placements process document three times. The current version covers tabs 1 to 6 of the allocation workbook. The issues log (tab 10) is the record of what actually goes wrong and should be written up as part of the document.
+2. Hesta set out the minimum content of a handover: how allocation is actually done; what each provider requires before a student starts and when; whom to contact at each provider; and standard responses to the situations that recur every year (Brinestep closing for storms, a student without clearance, students swapping).
+3. Liora proposed a single table of provider requirements drawn from the correspondence folder. Agreed. She may use the approved AI tool on the letters (Internal) provided every row is checked against its letter. The Greywater Vale Infirmary figures must be read with care: Outpatients places count within the Infirmary's total of twelve.
+4. There are seven versions of the allocation workbook in the Allocation folder, two of them duplicates. Halden works from "FINAL FINAL (use this one)". Hesta's "DRAFT DO NOT CIRCULATE" is newer and has the occupational health column corrected but is incomplete. Agreed: one file, one name, superseded versions moved to a Superseded folder.
+5. The 1051 request to Digital Services for a placements system was declined for want of a business case and process documentation. The request and the reply are in the Digital Services request folder. Dagna's view: the material now being produced for the handover is the business case. Agreed to resubmit before Halden's leave so that he can confirm its accuracy.
+6. Halden's requirement for any future system: when a provider withdraws at short notice, the user must be able to see within minutes which students are affected, which providers have space, who is cleared, where students live and who has adjustments. To be recorded as a requirement in those words.
+7. Hesta raised the Email attachments folder (signed agreements with generic names) and the Infirmary's new car park arrangement (students to be told). Liora noted that the To sort folder on the migrated drive contains a 1050 provider requirements document in Hesta's folder.
+
+### Actions
+
+| Action | Owner | Due |
+|---|---|---|
+| Complete the placements process document covering all 14 tabs, including the issues log written up as "what goes wrong and what we do" | Halden | 30 April |
+| Consolidate the allocation workbook to one current file; move superseded versions to Superseded; no new versions saved without Hesta's knowledge | Hesta | 30 April |
+| Provider requirements table from the correspondence folder, every row checked against its letter | Liora | 10 April |
+| Draft business case for a placements system using the Governance template, including data classification (cleared / not cleared only) | Liora (draft), Hesta (review), Dagna (sign) | Submit to Digital Services by 12 May |
+| Read the business case and confirm it is accurate before leave | Halden | 16 May |
+| Sort the Email attachments folder and match agreements to providers | Hesta | 30 April |
+| Car park arrangement in the placement briefing | Halden | Done |
+
+Next meeting: 10 April 1053, 10:00.
+
+Kind regards, Hesta

@@ -1,0 +1,36 @@
+---
+title: Note from the Chair re short papers
+format: eml
+author: aerion-crownweaver
+created: 1053-02-22
+modified: 1053-02-22
+label: Internal
+sensitive: false
+site: governance
+library: gov-council
+path: 1052-53/1053-02-21 Council
+storylines: [awarding-gap]
+skills: [6]
+---
+
+From: aerion-crownweaver
+To: thalira-everjudged
+Cc: thalion-illumenbark
+Date: 1053-02-22
+Subject: Yesterday, and papers for May
+
+Thalira
+
+Thank you for yesterday. A good meeting, if long.
+
+Two things.
+
+First, the Dean. I was not unkind, I hope, but I did not hear an answer and I do not think the other members did either. Could you make sure he understands that what I asked for is a short paper. Two pages. The figures by programme, what they intend to do, and how they will know whether it has worked. Not a strategy. Not a vision. If Planning and Insight need to help him with the figures, so much the better; I would rather have their numbers than his.
+
+Second, more generally. The pack for yesterday was 212 pages. I read it. I am not confident everyone did. Could the Secretariat look at whether we can ask authors for a one-page summary at the front of anything over ten pages, and whether the cover sheet word limit is being enforced. I know you will tell me it is. I am asking whether it is working.
+
+Papers deadline for May is the 12th, I think. Please hold the Dean to it.
+
+With thanks
+
+Aerion

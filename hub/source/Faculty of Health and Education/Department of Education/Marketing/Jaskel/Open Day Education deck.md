@@ -1,0 +1,359 @@
+---
+title: Open Day Education deck
+format: pptx
+author: jaskel-doodlehook
+created: 1053-03-01
+modified: 1053-04-09
+label: Internal
+sensitive: false
+site: faculty
+library: fac-education
+path: Marketing/Jaskel
+storylines: [rebrand, admissions]
+skills: [11]
+off_brand: B03
+---
+
+::: theme jaskel
+
+# Welcome to EDUCATION at Stonegrove!!
+
+Open Day, Saturday 14 June 1053. Jaskel Doodlehook, Senior Lecturer. Look for the pencil tree!
+
+---
+
+# Who we are
+
+- Three programmes, one department, one tree
+- Staff who know your name
+- Students who smile (ask them!)
+
+---
+
+# Education Studies
+
+- Three years
+- How people learn, how schools shape that
+- Placements every year!
+
+---
+
+# Educational Mentorship
+
+- Three years
+- One to one and small group support
+- Supervised mentoring placement in Year 2!
+
+---
+
+# Intergenerational Learning
+
+- Three years
+- Older and younger people learning together
+- The only one of its kind in the Vale!!
+
+---
+
+# A typical week
+
+- Two workshops
+- One seminar
+- One placement day
+- Zero boring lectures (almost)
+
+---
+
+# Our placements
+
+- Schools!
+- Community projects!
+- Elder care centres!
+- Real settings, real learners
+
+---
+
+# Assessment
+
+- Essays, portfolios, presentations
+- Feedback within 15 working days (we promise, it is measured now!)
+- Three things done well, three things to do next
+
+---
+
+# Feedback workshops
+
+- Fortnightly from February
+- Bring your marked work
+- Leave knowing what to do next!!
+
+---
+
+# Our staff
+
+- Dr Saelith Emberthorn, Head of Department (passionate!)
+- Jaskel Doodlehook (me!)
+- Fourteen others, all lovely
+
+---
+
+# Where you will be
+
+- The Cloister Block, first floor
+- The Oration Chamber for big sessions
+- The outdoor classroom when it is not raining
+
+---
+
+# What students say 1
+
+- 'The staff actually know my name'
+- 'I came for the course and stayed for the pencil tree'
+
+---
+
+# What students say 2
+
+- 'Jaskel's workshops are the best thing about Tuesdays'
+- 'Feedback used to be slow. It is getting better.' (honest!)
+
+---
+
+# Entry requirements
+
+- Standard University requirements
+- Contextual offers
+- Interview for Mentorship
+- First in your family? Many of us were!!
+
+---
+
+# Support
+
+- Personal tutor
+- Student Wellbeing (extension 2300)
+- Programme Support Team
+- Us!
+
+---
+
+# After graduation
+
+- Teacher training
+- Schools (non-teaching roles)
+- Community education
+- Youth work
+- Further study
+
+---
+
+# The pencil tree
+
+- Our friendly tree!
+- Made of pencils!
+- Find it on the Cloister Lawn today
+- (Communications are aware)
+
+---
+
+# Our values
+
+- Learning is something people do together
+- Everyone can learn
+- Nobody learns when they are frightened
+
+---
+
+# Year 1 modules
+
+- Foundations of Learning
+- Child and Adolescent Development
+- Education and Society
+- Placement 1
+
+---
+
+# Years 2 and 3
+
+- Pedagogy in Practice, Inclusion and Difference
+- Research for Educators
+- Placements 2 and 3
+- Dissertation in Year 3 (you choose the topic!)
+
+---
+
+# Mentorship specialism
+
+- Mentoring Theory
+- The Mentoring Relationship
+- Supervised Practice
+
+---
+
+# Intergenerational specialism
+
+- Ageing and Learning
+- Designing Shared Settings
+- Community Project
+
+---
+
+# A day on placement
+
+- Arrive 08:30
+- Shadow, support, observe
+- Reflect (we make you, it works)
+- Home by 16:00!
+
+---
+
+# Student stories: Ilyen
+
+- Rowan elf, first generation
+- Education Studies
+- Now a teaching assistant in Ashen Reach!
+
+---
+
+# Student stories: Brann
+
+- Flint dwarf, mature student
+- Mentorship
+- Now mentoring apprentices at the Forge!
+
+---
+
+# Fees and funding
+
+- See the main University stand
+- Bursaries for first generation students
+- Travel bursaries for distant placements
+
+---
+
+# Accommodation
+
+- See the main University stand
+- (I do not know about accommodation, sorry!)
+
+---
+
+# Open day today
+
+- 10:00 Welcome (this!)
+- 11:00 Taster workshop: how do you learn?
+- 12:00 Meet the students
+- 14:00 Campus tour
+
+---
+
+# Taster workshop
+
+- Room C1.04
+- 45 minutes
+- Bring a pencil (there is a theme)
+
+---
+
+# Meet the students
+
+- Cloister Lawn, by the tree
+- Ask them anything
+- Especially about feedback
+
+---
+
+# Questions we always get 1
+
+- Can I work part time? Yes, most do
+- Is there an exam? Some, not many
+- Do I need to drive? No
+
+---
+
+# Questions we always get 2
+
+- What is the difference between the programmes? Come to the workshop!
+- Will I get a job? Our graduates do
+- Is Jaskel always like this? Yes
+
+---
+
+# How to apply
+
+- Through the usual route
+- Deadline January
+- Interviews for Mentorship in February and March
+
+---
+
+# What we are working on
+
+- Faster feedback (measured!)
+- Protected marking weeks
+- A feedback template
+- More trees (joke) (mostly)
+
+---
+
+# Our promise
+
+- You will be known
+- You will know what to do next
+- You will not be frightened
+
+---
+
+# Contact
+
+- education@stonegrove.ac.example
+- Extension 4200 (Saelith) or 4215 (me!)
+- Stonegrove University (proper logo on the next slide, Rhialla)
+
+---
+
+# Stonegrove University
+
+- Set at the meeting of forest and mountain
+- Elves and Dwarves learning together
+- One University (and one small tree)
+
+---
+
+# Thank you!!
+
+- Enjoy the day
+- Find the tree
+- Smile at a student
+- Jaskel x
+
+---
+
+# Bonus slide
+
+- I had space
+- Here is a pencil fact: the average pencil can draw a line 35 miles long
+- Probably
+
+---
+
+# Another bonus slide
+
+- The tree has 14 pencils
+- One for each clan!!
+- (Communications are still aware)
+
+---
+
+# Really the last one
+
+- Thank you
+- Yes, really
+- Jaskel
+
+---
+
+# Appendix: the tree, explained
+
+- Trunk: the department
+- Pencils: the programmes and the clans
+- Leaves: you!!

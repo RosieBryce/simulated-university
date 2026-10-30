@@ -1,0 +1,83 @@
+---
+title: Grinna Dustshard support plan
+format: docx
+author: anric-hearthbind
+modified_by: dagna-chiselhand
+created: 1052-10-03
+modified: 1053-02-19
+label: Internal
+sensitive: true
+site: faculty
+library: fac-teaching-nc
+path: Year 2/Staff only
+storylines: [incident]
+skills: [5]
+planted: P01
+---
+
+::: letterhead current
+
+# Student Support Plan
+
+**CONFIDENTIAL. This plan is held by Student Wellbeing. It is shared with the student. Teaching and placement staff receive the one-page Adjustments Summary only. Please do not forward.**
+
+| | |
+|---|---|
+| Student | Grinna Dustshard |
+| Student ID | 1052-NC-0417 |
+| Programme | Nursing and Care, Year 2 |
+| Adviser | Anric Hearthbind, Senior Disability Adviser |
+| Plan agreed | 3 October 1052 |
+| Review | 3 April 1053 |
+| Consent | The student consents to the Adjustments Summary being shared with named module leaders and her placement mentor. She does not consent to the sharing of this full plan or of the diagnoses below with teaching or placement staff. |
+
+## 1. Background
+
+Grinna disclosed at enrolment that she had a diagnosis of dyslexia (educational psychologist's report, 1049) and that she had been treated for anxiety during her final year of school. She did not seek support in Year 1 because, in her words, "I thought nursing would be mostly doing, not writing." Year 1 went well in practice and less well in written assessment; she passed all modules, two of them narrowly.
+
+Referral to Student Wellbeing in September 1052 followed a conversation with her personal tutor after Grinna became distressed about the volume of written placement documentation in Year 2. At our first meeting she described difficulty sleeping before placement days, avoiding the placement office, and a fear that mentors would think she was "slow".
+
+Grinna's GP confirmed in October 1052 that she has a diagnosis of generalised anxiety disorder and is prescribed medication. She has agreed to a referral to the University counselling service and has attended two sessions.
+
+## 2. Impact on study
+
+- Reading and processing written information takes Grinna longer than her peers. Dense handover notes and drug charts are particularly difficult under time pressure.
+- Written work takes significantly longer. Spelling in free text is inconsistent, particularly for drug names; her clinical knowledge is not in question.
+- Anxiety is heightened by unfamiliar settings and by being observed. The first days of a placement are the hardest. Night shifts disrupt sleep and medication routine.
+- Grinna is reluctant to ask for help in front of others.
+
+## 3. Adjustments agreed
+
+### Assessment
+
+1. Additional time of 25% in all timed written assessments.
+2. Use of a computer with spell-check for written examinations.
+3. Marking for content; spelling and grammar not penalised except where they affect clinical meaning (for example drug names), in which case feedback rather than penalty.
+4. Extensions of up to five working days on written coursework without a separate extenuating circumstances claim, on request to the module leader.
+
+### Placement
+
+5. Placement mentor to be identified before the placement begins and to meet Grinna in the first week.
+6. Written handover templates and drug chart formats to be provided in advance of the placement where the provider has them.
+7. No night shifts in the first two weeks of any placement.
+8. Grinna to be told how and when she will be observed, and by whom, in advance.
+9. A named contact in the Programme Support Team (Hesta Gracestone) whom Grinna can email rather than visit the office.
+
+### General
+
+10. Lecture materials available 48 hours in advance where possible.
+11. Permission to record teaching sessions for personal use.
+
+## 4. What the student will do
+
+Grinna will tell her adviser if adjustments are not being applied, attend counselling, and let the Programme Support Team know at least two weeks before a placement if there is anything she needs.
+
+## 5. Adviser's notes
+
+Grinna is articulate about what she needs and reluctant to ask for it. She was clear that she does not want teaching staff to know about the anxiety diagnosis, and I have respected that in the Adjustments Summary, which refers to "a condition affecting concentration and confidence in new settings". She asked whether disclosure would affect her fitness to practise and I explained that having a diagnosis does not; managing it, as she is, is what the professional body looks for. She was relieved.
+
+I have flagged to the Programme Support Team that the two-week notice period for placements (item 4 above) depends on students knowing their placement more than two weeks ahead, which in Nursing and Care is not always the case.
+
+A. Hearthbind
+Senior Disability Adviser
+3 October 1052

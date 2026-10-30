@@ -1,0 +1,239 @@
+WEBVTT
+NOTE Placements handover planning 27 March 1053 transcript
+NOTE Recorded 27 March 1053. Auto-generated transcript.
+
+1
+00:00:04.000 --> 00:00:19.000
+<v Dagna Chiselhand>Right. We're recording, Hesta's got the thing on. Short version. Halden's off on the nineteenth of May and I want everything that lives in his head to live somewhere else by then. That's the meeting. Halden, where are we.
+
+2
+00:00:19.000 --> 00:00:34.000
+<v Halden Bridgeglen>So. Good news is I've started the process document. Bad news is I've started it three times. There's the two-pager from last year, there's the flowchart, and there's the new one which is the proper one, which gets as far as tab six.
+
+3
+00:00:34.000 --> 00:00:35.000
+<v Dagna Chiselhand>Of fourteen.
+
+4
+00:00:35.000 --> 00:00:43.000
+<v Halden Bridgeglen>Of fourteen, yes. But tabs seven to fourteen are mostly lookups and the legend and the issues log, so it's not as bad as it sounds.
+
+5
+00:00:43.000 --> 00:00:51.000
+<v Hesta Gracestone>The issues log is the one I'd most want written up, if I'm honest. It's the only place where what actually goes wrong is recorded.
+
+6
+00:00:51.000 --> 00:00:52.000
+<v Halden Bridgeglen>Fair.
+
+7
+00:00:52.000 --> 00:00:57.000
+<v Dagna Chiselhand>What does the handover doc need to have in it, minimum. Hesta.
+
+8
+00:00:57.000 --> 00:01:25.000
+<v Hesta Gracestone>Minimum. How allocation is actually done, not how the spreadsheet says it's done. Which providers need what before a student starts, because that's different for every one of them and at the moment it's in Halden's memory and in thirty letters. Who to ring when something goes wrong, by provider. And what to do in the specific situations that happen every year, which is Brinestep closing, somebody turning up without clearance, and somebody swapping.
+
+9
+00:01:25.000 --> 00:01:28.000
+<v Halden Bridgeglen>That's basically the issues log plus the provider letters.
+
+10
+00:01:28.000 --> 00:01:31.000
+<v Hesta Gracestone>Yes. Which is why I want the issues log written up.
+
+11
+00:01:31.000 --> 00:01:33.000
+<v Liora Lanternwake>Can I ask a question?
+
+12
+00:01:33.000 --> 00:01:34.000
+<v Dagna Chiselhand>Go on.
+
+13
+00:01:34.000 --> 00:01:52.000
+<v Liora Lanternwake>Is there a reason the provider requirements aren't in one table? Like, provider, contact, how many places, what they need from us, when they need it. I was reading the letters in the correspondence folder and every single one has that information in it but it's all in paragraphs.
+
+14
+00:01:52.000 --> 00:01:56.000
+<v Halden Bridgeglen>There sort of is. The Providers tab has the capacity note column.
+
+15
+00:01:56.000 --> 00:02:00.000
+<v Liora Lanternwake>It has a note. It's not the same thing. Some of them say "see email".
+
+16
+00:02:00.000 --> 00:02:02.000
+<v Halden Bridgeglen>Some of them do say see email.
+
+17
+00:02:02.000 --> 00:02:14.000
+<v Dagna Chiselhand>Liora, that's an action. You make the table. Thirty providers, what they need, when. From the letters. If it's not in a letter, ask Halden, and Halden, you answer the same day because you've got seven weeks.
+
+18
+00:02:14.000 --> 00:02:22.000
+<v Liora Lanternwake>I was going to ask whether I can use the new tool to pull it out of the letters. Elenna said the letters are Internal so it's allowed with the approved one.
+
+19
+00:02:22.000 --> 00:02:24.000
+<v Dagna Chiselhand>Yes, fine, if you check it.
+
+20
+00:02:24.000 --> 00:02:31.000
+<v Hesta Gracestone>Check every row against the letter. Not a sample. The Greywater one has two different numbers in it depending on which letter you read.
+
+21
+00:02:31.000 --> 00:02:34.000
+<v Liora Lanternwake>Because the Infirmary and the Outpatients count within the same twelve.
+
+22
+00:02:34.000 --> 00:02:36.000
+<v Halden Bridgeglen>See, she knows that already.
+
+23
+00:02:36.000 --> 00:02:41.000
+<v Dagna Chiselhand>Good. Next. The spreadsheet. There are, how many versions.
+
+24
+00:02:41.000 --> 00:02:59.000
+<v Hesta Gracestone>In the Allocation folder, seven. Two of them are identical to two of the others. The one called FINAL FINAL use this one is the one Halden uses. The one I made last week, which is the draft do not circulate one, is newer and has the OH column fixed but it's not complete, so it's not the one to use either.
+
+25
+00:02:59.000 --> 00:03:00.000
+<v Halden Bridgeglen>Sorry.
+
+26
+00:03:00.000 --> 00:03:08.000
+<v Hesta Gracestone>It's not a criticism, it's a description. I'd like, before you go, one file, in one place, with one name, and the others in Superseded.
+
+27
+00:03:08.000 --> 00:03:14.000
+<v Dagna Chiselhand>Agreed. Hesta owns that. Halden, you don't save a new version of anything without Hesta knowing. Date?
+
+28
+00:03:14.000 --> 00:03:17.000
+<v Hesta Gracestone>End of April. I need the semester two allocations settled first.
+
+29
+00:03:17.000 --> 00:03:24.000
+<v Dagna Chiselhand>End of April. Now. The thing I actually want to talk about. We asked Digital for a system two years ago.
+
+30
+00:03:24.000 --> 00:03:25.000
+<v Halden Bridgeglen>We did.
+
+31
+00:03:25.000 --> 00:03:26.000
+<v Dagna Chiselhand>And they said no.
+
+32
+00:03:26.000 --> 00:03:33.000
+<v Halden Bridgeglen>They said insufficient business case and no process documentation and resubmit via the intake process. Which, to be fair.
+
+33
+00:03:33.000 --> 00:03:39.000
+<v Dagna Chiselhand>To be fair nothing. We had no process documentation because the process was you. That's the problem we were asking them to solve.
+
+34
+00:03:39.000 --> 00:03:52.000
+<v Hesta Gracestone>In fairness to Fenn, the form does say what they need, and we didn't give it to them. Section one, the problem, we wrote two lines. Section five, requirements, we wrote "a database". Section seven, the process, we left blank.
+
+35
+00:03:52.000 --> 00:03:54.000
+<v Halden Bridgeglen>Stone and ash, Hesta, did you keep it.
+
+36
+00:03:54.000 --> 00:03:57.000
+<v Hesta Gracestone>It's in the Digital Services request folder. With the reply.
+
+37
+00:03:57.000 --> 00:04:17.000
+<v Dagna Chiselhand>Stone and ash is my line. Right. Here's what I think. By the time Halden goes, we will have, because we've just said so, a process document, an issues log written up, a table of what every provider needs, and one spreadsheet. That is a business case. That is section one, five and seven. Somebody writes it up and we resubmit.
+
+38
+00:04:17.000 --> 00:04:19.000
+<v Liora Lanternwake>I can draft it. I've read the form.
+
+39
+00:04:19.000 --> 00:04:20.000
+<v Dagna Chiselhand>You've read the form.
+
+40
+00:04:20.000 --> 00:04:30.000
+<v Liora Lanternwake>I've read most of the forms. There's a business case template in Governance as well, it's got a section on data classification which I think matters because of the OH column thing Hesta raised with Elenna.
+
+41
+00:04:30.000 --> 00:04:36.000
+<v Hesta Gracestone>It does matter. Whatever we build shouldn't hold what the spreadsheet currently holds. Cleared or not cleared. Not the detail.
+
+42
+00:04:36.000 --> 00:04:48.000
+<v Dagna Chiselhand>Fine. Liora drafts the business case, Hesta reviews it, I sign it, it goes in before Halden goes so Halden can check it's true. Halden, that's the one thing I need you to do after the process doc. Read the business case and tell us if it's true.
+
+43
+00:04:48.000 --> 00:04:51.000
+<v Halden Bridgeglen>Happily. Can I say one thing about the system.
+
+44
+00:04:51.000 --> 00:04:52.000
+<v Dagna Chiselhand>Quickly.
+
+45
+00:04:52.000 --> 00:05:12.000
+<v Halden Bridgeglen>Whatever it is, it needs to work when Brinestep rings at four on a Friday to say they're shut for a fortnight. Six students, three days, and I need to know who's got space, who's cleared, who lives where, and who's got adjustments, in about ten minutes. The spreadsheet does that because I know where everything is. A system that makes me click through six screens doesn't.
+
+46
+00:05:12.000 --> 00:05:15.000
+<v Hesta Gracestone>That should be in the requirements. Written like that.
+
+47
+00:05:15.000 --> 00:05:16.000
+<v Liora Lanternwake>Writing it down.
+
+48
+00:05:16.000 --> 00:05:19.000
+<v Dagna Chiselhand>Good. Anything else. Hesta.
+
+49
+00:05:19.000 --> 00:05:34.000
+<v Hesta Gracestone>Two small things. First, the Email attachments folder. There are documents in there that are signed agreements and nobody knows which provider they're for because they're called doc1. I'll go through it. Second, the correspondence from the Infirmary about the new car park. Someone needs to tell the students.
+
+50
+00:05:34.000 --> 00:05:39.000
+<v Halden Bridgeglen>Oh, the car park. Yes. It's a fifteen-minute walk from the overflow. I'll put it in the briefing.
+
+51
+00:05:39.000 --> 00:05:42.000
+<v Dagna Chiselhand>It's in the slides already, I saw it. Fine. Liora.
+
+52
+00:05:42.000 --> 00:05:56.000
+<v Liora Lanternwake>Only that I made a list of what's in the To sort folder on the old drive and some of it is placement stuff from before Halden. Hesta's stuff folder has a provider requirements document from 1050. It's out of date but it's the shape of the thing I'm going to make.
+
+53
+00:05:56.000 --> 00:05:58.000
+<v Hesta Gracestone>I'd forgotten that existed.
+
+54
+00:05:58.000 --> 00:06:00.000
+<v Halden Bridgeglen>I didn't know it existed.
+
+55
+00:06:00.000 --> 00:06:28.000
+<v Dagna Chiselhand>Right. Actions. Halden, process document, all fourteen tabs, plus the issues log written up as "what goes wrong and what we do", by the end of April. Hesta, one spreadsheet, end of April. Liora, provider requirements table, from the letters, checked against the letters, two weeks. Liora, business case draft, Hesta reviews, me to sign, in to Digital by the twelfth of May. Halden reads it before he goes. Hesta, email attachments folder. Halden, car park in the briefing, done. Next meeting, same time, two weeks.
+
+56
+00:06:28.000 --> 00:06:29.000
+<v Halden Bridgeglen>No worries.
+
+57
+00:06:29.000 --> 00:06:31.000
+<v Dagna Chiselhand>That's twenty-six minutes, Hesta, is that a record.
+
+58
+00:06:31.000 --> 00:06:34.000
+<v Hesta Gracestone>It's six and a half minutes, Dagna. The recording started late.
+
+59
+00:06:34.000 --> 00:06:40.000
+<v Dagna Chiselhand>Then it's definitely a record.

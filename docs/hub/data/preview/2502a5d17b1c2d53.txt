@@ -1,0 +1,203 @@
+WEBVTT
+NOTE NSS action group 23 October 1052 transcript
+NOTE Recorded 23 October 1052. Auto-generated transcript.
+
+1
+00:00:02.000 --> 00:00:11.000
+<v Sailor Thembathorn>ok we're on. this is the nss action group, twenty-third of october, me, jaskel, teylin from planning, erra from planning. erra thank you for coming i know you've got the deep dive.
+
+2
+00:00:11.000 --> 00:00:15.000
+<v Error Measuring>Deep dive went out on the seventeenth. It's in Reports. I assume everyone's read it.
+
+3
+00:00:15.000 --> 00:00:17.000
+<v Jackal Doodle Hook>I've read the summary!
+
+4
+00:00:17.000 --> 00:00:19.000
+<v Error Measuring>There is no summary. There's the report.
+
+5
+00:00:19.000 --> 00:00:25.000
+<v Tailing Leaf Chant>There's the auto-summary I did on Monday, I sent it round. Cloudi did it from Erra's report and the institutional pack.
+
+6
+00:00:25.000 --> 00:00:26.000
+<v Error Measuring>Did you check it.
+
+7
+00:00:26.000 --> 00:00:27.000
+<v Tailing Leaf Chant>Mostly.
+
+8
+00:00:27.000 --> 00:00:28.000
+<v Error Measuring>Teylin.
+
+9
+00:00:28.000 --> 00:00:38.000
+<v Sailor Thembathorn>ok let's not. the point is the scores dropped and the dean wants an action plan from each department by the end of november and i'd rather ours was good. so. what are we doing.
+
+10
+00:00:38.000 --> 00:00:55.000
+<v Error Measuring>Saelith, before we get to actions. The thing I need to say, and I've said it in the report, is that Education's NSS results didn't fall. Assessment and feedback went up on all three of your programmes. The Faculty drop is Health: OT, Somatic Wellbeing, Pharmacy and the two holistic programmes.
+
+11
+00:00:55.000 --> 00:01:02.000
+<v Sailor Thembathorn>i know that erra. i know. but the dean read the faculty number and asked every department for a plan. so we're writing a plan.
+
+12
+00:01:02.000 --> 00:01:05.000
+<v Error Measuring>A plan for what, though. Your line went up.
+
+13
+00:01:05.000 --> 00:01:10.000
+<v Jackal Doodle Hook>We can make it go up more! Assessment and feedback! Our students still say it's slow!
+
+14
+00:01:10.000 --> 00:01:19.000
+<v Error Measuring>You can. I'd just want the plan to say that's what it's doing, rather than imply you're responding to a fall in your own scores, because you'll be asked for the before and after and the before is fine.
+
+15
+00:01:19.000 --> 00:01:27.000
+<v Tailing Leaf Chant>The enrolment survey's got support satisfaction and belonging for all years, not just finalists. It's flat, but it's there. You could use that alongside your own NSS line.
+
+16
+00:01:27.000 --> 00:01:30.000
+<v Error Measuring>That's what the report says. Section what does this not say.
+
+17
+00:01:30.000 --> 00:01:36.000
+<v Sailor Thembathorn>fine. ok. baseline is our own nss line plus the enrolment survey. put that in. actions. what are we actually going to do. jaskel.
+
+18
+00:01:36.000 --> 00:01:41.000
+<v Jackal Doodle Hook>Feedback clinics! Weekly! Students come, we go through their marked work, they leave happy!
+
+19
+00:01:41.000 --> 00:01:43.000
+<v Sailor Thembathorn>weekly is a lot. who's staffing weekly.
+
+20
+00:01:43.000 --> 00:01:45.000
+<v Jackal Doodle Hook>Me? Mostly?
+
+21
+00:01:45.000 --> 00:01:49.000
+<v Sailor Thembathorn>fortnightly. feedback workshops. fortnightly from february. you and one other.
+
+22
+00:01:49.000 --> 00:01:51.000
+<v Jackal Doodle Hook>Fine! Fortnightly!
+
+23
+00:01:51.000 --> 00:01:56.000
+<v Tailing Leaf Chant>So that's fortnightly feedback workshops from February, not weekly clinics from January. I'll change the summary.
+
+24
+00:01:56.000 --> 00:01:57.000
+<v Error Measuring>What did the summary say.
+
+25
+00:01:57.000 --> 00:02:01.000
+<v Tailing Leaf Chant>Weekly from January. I think Cloudi got it from Jaskel's email.
+
+26
+00:02:01.000 --> 00:02:03.000
+<v Error Measuring>Jaskel's email was a suggestion, not a decision.
+
+27
+00:02:03.000 --> 00:02:05.000
+<v Tailing Leaf Chant>Yes. I'll change it.
+
+28
+00:02:05.000 --> 00:02:09.000
+<v Sailor Thembathorn>next. turnaround. fifteen working days is the faculty standard. are we meeting it.
+
+29
+00:02:09.000 --> 00:02:15.000
+<v Jackal Doodle Hook>Mostly? Education Studies year two was twenty-two days in semester two last year because of the placement visits.
+
+30
+00:02:15.000 --> 00:02:19.000
+<v Sailor Thembathorn>then that's an action. fifteen days, measured, every module. erra can we measure it.
+
+31
+00:02:19.000 --> 00:02:25.000
+<v Error Measuring>If someone records the return dates. Nobody does at the moment. That's the action: record the dates. Then I can measure it.
+
+32
+00:02:25.000 --> 00:02:31.000
+<v Sailor Thembathorn>ok. action: module leaders record feedback return dates. then erra measures. next. the focus groups.
+
+33
+00:02:31.000 --> 00:02:38.000
+<v Tailing Leaf Chant>Two groups, Education Studies and Mentorship, second years, November. I'll facilitate. Saelith you said you wanted to sit in.
+
+34
+00:02:38.000 --> 00:02:40.000
+<v Sailor Thembathorn>i do. i want to hear it.
+
+35
+00:02:40.000 --> 00:02:44.000
+<v Error Measuring>If a head of department sits in, students will say less. I'd advise against.
+
+36
+00:02:44.000 --> 00:02:46.000
+<v Sailor Thembathorn>noted. i'm still sitting in.
+
+37
+00:02:46.000 --> 00:02:53.000
+<v Error Measuring>Then please don't take notes with names in them. INC-0029 was a focus group note with a student's name in it going into a tool it shouldn't have.
+
+38
+00:02:53.000 --> 00:02:55.000
+<v Tailing Leaf Chant>That was a colleague, not me.
+
+39
+00:02:55.000 --> 00:02:57.000
+<v Error Measuring>I know. I'm saying it to the room.
+
+40
+00:02:57.000 --> 00:03:00.000
+<v Sailor Thembathorn>ok. no names in notes. jaskel, the leaflet thing. not now.
+
+41
+00:03:00.000 --> 00:03:02.000
+<v Jackal Doodle Hook>I wasn't going to!
+
+42
+00:03:02.000 --> 00:03:24.000
+<v Sailor Thembathorn>you were. right. so actions. fortnightly feedback workshops from february, jaskel plus one. module leaders record return dates from now, erra measures termly. focus groups in november, teylin facilitates, no names in notes, i'm sitting in. baseline is our own nss line and the enrolment survey, not the faculty figure. and the plan says clearly that it's about our assessment and feedback practice, not a response to a fall we didn't have.
+
+43
+00:03:24.000 --> 00:03:27.000
+<v Error Measuring>And it goes to the Dean with the deep dive attached, so he reads the caveat.
+
+44
+00:03:27.000 --> 00:03:28.000
+<v Sailor Thembathorn>he won't read it.
+
+45
+00:03:28.000 --> 00:03:30.000
+<v Error Measuring>Then put the caveat on page one.
+
+46
+00:03:30.000 --> 00:03:34.000
+<v Sailor Thembathorn>fine. page one. teylin, fix the summary before anyone else reads it.
+
+47
+00:03:34.000 --> 00:03:36.000
+<v Tailing Leaf Chant>Doing it today.
+
+48
+00:03:36.000 --> 00:03:40.000
+<v Sailor Thembathorn>ok. i'll do the plan tonight. version one. it will not be the last version.
+
+49
+00:03:40.000 --> 00:03:41.000
+<v Jackal Doodle Hook>It never is!
+
+50
+00:03:41.000 --> 00:03:47.000
+<v Sailor Thembathorn>thank you jaskel. done.

@@ -1,0 +1,74 @@
+---
+title: OT revalidation panel 12 March 1053 transcript
+format: vtt
+also_docx: true
+docx_name: OT revalidation panel 12 March 1053 transcript.docx
+author: ollir-greenquill
+created: 1053-03-12
+modified: 1053-03-12
+label: Internal
+sensitive: true
+site: quality
+library: q-revalidation
+path: Occupational Therapy 1053/Panel 1053-03-12
+storylines: [revalidation]
+skills: [1, 5]
+transcript_id: T4
+note: >
+  sensitive: true because the transcript includes the reserved item
+  (01:12 onwards) naming a member of staff. Label is Internal, which is
+  the planted inconsistency: the reserved minutes are Confidential, the
+  transcript that contains the same discussion is not.
+---
+
+[00:00:05] brynja-cragshield: Good morning. This is the periodic revalidation panel for the BSc Honours Occupational Therapy, convened in accordance with the Programme Approval and Review Procedure, paragraph 14. I am Brynja Cragshield, Head of Quality, chairing. The meeting is recorded for the purposes of the minutes and the recording will be destroyed on their approval, per the Committee Handbook at 2.3. Panel members, if you would introduce yourselves.
+[00:00:28] marenel-boughwitness: Marenel Boughwitness, Elder Grove University, external examiner to the programme since 1050 and external member of this panel.
+[00:00:35] anric-hearthbind: Anric Hearthbind, Senior Disability Adviser, Student Wellbeing, internal member for the student support perspective.
+[00:00:41] hrogar-dourstone: Hrogar Dourstone, Head of the Department of Healing Arts, attending as Head of Department. I note for the record that I am not a member of the panel and will withdraw for its deliberations.
+[00:00:50] brynja-cragshield: Noted. Also present, Dr Caerel Candletome, Programme Leader, and the Quality Officer, Mr Greenquill, as secretary. The programme team will join for items three and four. The panel has before it the self-evaluation document, version three, the programme specification, module descriptors, the three external examiner reports and the programme's responses, the student representatives' written submission, and a reserved paper concerning a member of staff, which will be taken at item seven with the programme leader only. Dr Candletome, would you introduce the document.
+[00:01:20] caerel-candletome: Thank you, Chair. I wonder whether I might start with an apology for the length. The panel asked for a full account and I have perhaps interpreted that generously. The summary at section one is, I hope, honest. The programme works. It has a problem it has not fixed. This revalidation is how we fix it.
+[00:01:38] caerel-candletome: The problem is Year 2 assessment. Twelve summative points across six modules. Dr Boughwitness has told us three times. Our students have told us at every programme committee since 1050. We have said "under review" three times, and I have set out in section six why, which is that the modification procedure made it heavier to change six descriptors piecemeal than to wait for today. In retrospect we should not have waited, and we should certainly not have kept saying "under review" as if it meant something was happening. Section eleven and Appendix F propose seven points instead of twelve. I would be grateful for the panel's view on whether that is enough and whether it is right.
+[00:02:14] brynja-cragshield: Thank you. Dr Boughwitness.
+[00:02:17] marenel-boughwitness: I have read the document in full and I would like to say first that it is a candid document and that candour in a self-evaluation is rarer than it should be. I note once again, because I must, that the recommendation on Year 2 was made in 1050. I accept the explanation in six point three. I do not entirely accept it as a reason, because at least two of the six modules could have been modified in 1051 without waiting, and the team chose not to. But I accept it as an honest account, which is what I asked for in July.
+[00:02:48] marenel-boughwitness: On the proposal itself. Seven points is comparable with the programme at Elder Grove and with the sector. I would ask two things. First, that OT206 retain some assessed element of methods knowledge beyond the proposal, because students who have not been examined on methods tend to arrive at the dissertation less prepared than those who have. A short in-class test would do. Second, that the team commit to a date for the new pattern being in the descriptors, not a date for deciding.
+[00:03:12] caerel-candletome: Both accepted. On OT206 I had wondered the same and talked myself out of it on workload grounds, which is the wrong ground.
+[00:03:19] brynja-cragshield: Mr Hearthbind.
+[00:03:21] anric-hearthbind: Two points from the student support side. First, the document is good on what students say and silent on which students. A support plan student in Year 2 of this programme currently faces twelve assessment points, each with adjustments to be applied, and twelve chances for an adjustment to be missed. Reducing to seven helps those students more than it helps anyone, and the document could say so. Second, section 11.4, the Year 1 tutoring and formative assessment in week four. I would ask that the formative assessment be designed so that it also serves to identify students who may need a support plan and have not sought one. The Faculty's gap analysis says that is where the gap starts.
+[00:03:58] caerel-candletome: Yes to both. I had not thought of the first point in those terms and I should have.
+[00:04:03] brynja-cragshield: Dr Dourstone, as Head of Department.
+[00:04:06] hrogar-dourstone: The Department supports the programme's proposals. I would observe that the programme team's candour, which the external has rightly commended, extends to a criticism of the University's modification procedure at section ten, which I share. A procedure under which it is easier to leave a known defect for three years than to fix it is not a quality procedure. I would ask the panel to say so in its report.
+[00:04:28] brynja-cragshield: The panel will consider that. It is a requirement that the report address the programme, but the Head of Quality may make observations on the procedure separately, and I am minded to.
+[00:04:38] brynja-cragshield: I will now ask the panel's questions on sections two to five, then we will take section six and the external's reports together, then student voice, then the proposals. Item three. The programme team may join us.
+[00:04:50] brynja-cragshield: On recruitment. The document says the programme attracts a higher proportion of Dwarf applicants than the Faculty average and welcomes it. Does the team know whether those applicants are admitted and progress at the same rate as others.
+[00:05:02] caerel-candletome: Admitted, yes, we interview everyone and the offer rate does not differ by species. Progress, I believe so, but I would want Planning and Insight to confirm rather than say so from impression. Our cohort is forty; Quorin would tell me that is too small to say anything.
+[00:05:16] marenel-boughwitness: He would be right. But the question of whether contextual-offer students on this programme have a support plan by the end of semester one is one you can answer by counting, and I would.
+[00:05:26] caerel-candletome: Noted.
+[00:05:28] brynja-cragshield: On placements. Section 5.2 refers to the Department's placement allocation depending on one member of staff. Is that a risk to the programme.
+[00:05:36] caerel-candletome: It is a risk to every programme in the Department. Our placements are allocated through the same process as Nursing and Care. If that process fails, we have forty students with nowhere to go. The Faculty is aware and I understand a business case is being prepared.
+[00:05:50] hrogar-dourstone: The Department has managed placements for forty years.
+[00:05:53] caerel-candletome: It has, Head of Department, and for most of that time it has managed them through one person at a time, which is my point.
+[00:05:59] brynja-cragshield: The panel will note the risk and the Faculty's intention. Item four, assessment, section six, and the external's reports. Dr Boughwitness, I would ask you to begin.
+[00:06:10] marenel-boughwitness: I have said what I need to say about the Year 2 load. I will add only that the students' written submission, which the panel has, says it more plainly than I did. "We are assessed so often that we do not have time to learn from any of it." I would like the panel's report to quote that.
+[00:06:26] brynja-cragshield: Agreed. On turnaround. Nineteen days in semester two against fifteen.
+[00:06:31] caerel-candletome: The marking lands in the same three weeks as the placement visits. Appendix F moves the heaviest point out of that window. I am confident of fifteen with the new pattern. I am not confident of fifteen with the old one, which is a further reason to change it.
+[00:06:45] anric-hearthbind: Could I ask about feedback content rather than timing. The students say feedback tells them the mark and not what to do. The proposal is to adopt the Education template, three and three. Has the team trialled it.
+[00:06:56] caerel-candletome: One module, this semester. The students like it. Two of my colleagues find it constraining. I think the constraint is the point.
+[00:07:03] brynja-cragshield: Item five, student voice. The panel met the student representatives before this meeting. They were clear, constructive and, on Year 2, exasperated. They were positive about staff, placements and the dissertation. They asked that whatever is agreed today is told to them directly and not through the programme committee minutes, which they described as "where things go to be noted". The panel undertakes to do so. Dr Candletome.
+[00:07:28] caerel-candletome: I will write to them myself.
+[00:07:30] brynja-cragshield: Item six, the proposals, section eleven and Appendix F. The panel has indicated its view. I will summarise what I take to be the conditions and recommendations and the panel will confirm them in deliberation. Condition one. The Year 2 assessment pattern to be reduced from twelve to not more than seven summative points, with the amended module descriptors approved through Quality by 30 June 1053 for delivery from September 1053, and OT206 to retain an assessed element of research methods knowledge in addition to the proposal. Condition two. A student-facing guide to extenuating circumstances to be produced by the programme, approved by Quality, and published before September 1053. The panel notes that this is in part a response to the student representatives, who said they did not understand the process, and in part a Faculty need. Recommendation one. The Year 1 formative assessment at 11.4 to be designed so that it identifies students who may benefit from a support plan. Recommendation two. The team to count, each year, how many contextual-offer students have a support plan by the end of semester one, and report it to the programme committee. Recommendation three. Placement educator documentation to be reduced as proposed. Is that the panel's view.
+[00:08:38] marenel-boughwitness: It is.
+[00:08:39] anric-hearthbind: Yes.
+[00:08:40] brynja-cragshield: Dr Candletome, do you wish to say anything on the conditions.
+[00:08:43] caerel-candletome: Only that I accept them and that I am grateful. Thirty June is tight. We will meet it.
+[00:08:49] brynja-cragshield: Then we will move to item seven, which is reserved. Dr Dourstone, Mr Hearthbind, thank you; the panel for the reserved item is the Chair, the external member and the Programme Leader, with the secretary. Mr Greenquill, please note the time and that the reserved item is minuted separately.
+[00:09:05] ollir-greenquill: Noted, Chair. Nine oh five. Reserved minutes begin.
+[00:09:09] brynja-cragshield: Dr Boughwitness, you raised in your 1051 and 1052 reports the calibration of one marker on a Year 2 module, and in 1052 asked that it be addressed directly rather than through moderation. The programme's reserved paper names the colleague and sets out the position. Would you summarise your concern.
+[00:09:27] marenel-boughwitness: The colleague's marks on OT203 have sat below the moderated marks in each of the last two years, by a widening margin. In 1052 moderation adjusted eleven of fourteen. I have no concern about the colleague's judgement of the work, which is careful. My concern is that the colleague is marking to a standard that is not the programme's, and that moderation each year conceals rather than resolves it. I would also observe, with some care, that the module is shared with Nursing and Care and that the colleague concerned is the Head of Department, which I suspect is why the matter has been handled through moderation rather than conversation.
+[00:10:05] caerel-candletome: That is correct, and I should have said so in the paper more plainly than I did. The colleague is Dr Dourstone. I have raised it with him once, informally, in 1051. He regards his standard as the correct one and the programme's as lenient. I did not raise it again. I am not proud of that.
+[00:10:24] brynja-cragshield: The panel is not here to adjudicate on the standard. It is here to ensure the programme's marking is consistent with its own criteria. I would propose that the report's reserved section record the following. That the panel notes the external's concern and the programme leader's account. That the programme leader and the Head of Quality meet the colleague concerned before the end of April to agree a calibration exercise on OT203 for 1053-54, in which the colleague marks a sample alongside two other markers against the published criteria, with the results reviewed by the external. That the outcome be reported to the Head of Quality and the external by December 1053. And that if calibration is not achieved, the Head of Quality consider whether the colleague should continue to mark on the module. Dr Candletome.
+[00:11:08] caerel-candletome: I accept that. I would ask that the meeting be chaired by you, Chair, rather than by me, for reasons the panel will understand.
+[00:11:15] brynja-cragshield: Agreed. Dr Boughwitness.
+[00:11:17] marenel-boughwitness: Agreed. I would add, for the reserved minute, that I regard this as a matter of calibration and not of competence, and I would not want it read otherwise if the minute were ever seen by anyone who should not see it.
+[00:11:30] brynja-cragshield: That is why the minute is reserved. Mr Greenquill, please ensure the reserved minutes are labelled Confidential and circulated to the three of us only, and that this section of the transcript is deleted when the minutes are approved.
+[00:11:42] ollir-greenquill: Yes, Chair.
+[00:11:44] brynja-cragshield: Then the panel will deliberate in private and the report will follow within ten working days. Thank you all.

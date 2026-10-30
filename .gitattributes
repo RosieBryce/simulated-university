@@ -1,0 +1,9 @@
+# Stonegrove Hub: published estate files must keep their exact bytes
+docs/hub/estate/** -text
+docs/hub/downloads/*.zip binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.pdf binary
+*.eml -text
+*.vtt -text

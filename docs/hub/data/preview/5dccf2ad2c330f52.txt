@@ -1,0 +1,53 @@
+::: footer current
+
+# Sharing adjustments with teaching and placement staff
+
+Student Wellbeing procedure. **Version 2.0, DRAFT, 5 March 1053. For Information Governance Group approval. Revised following incident INC-0031.** Changes from 1.1 are marked in bold.
+
+## 1. Principle
+
+A student's support plan is Confidential and belongs to the student. Teaching and placement staff need to know what adjustments to make. They do not need to know why. The Adjustments Summary exists so that they can be told the first thing without the second. The full support plan is never shared with teaching or placement staff.
+
+## 2. What is shared
+
+The Adjustments Summary only, as before.
+
+## 3. How the summary is produced and stored
+
+**3.1 The summary is generated from the plan as a separate document using the Summary template, and saved in the Adjustments Summaries library, not in the student's case folder and not alongside the plan.**
+
+**3.2 Summaries are named "SUMMARY [student initials] [programme] [year]" and plans are named "PLAN [student full name] [date]". The two never share a prefix.**
+
+**3.3 Advisers do not keep working copies of plans or summaries in personal working areas. The master in the library is the only copy.**
+
+## 4. Who it is shared with
+
+Named module leaders and, for placements, the Placements Coordinator. **Never a distribution list, a programme team, or "all staff teaching Year N". An email addressed to a list will be returned by the Head of Student Wellbeing unsent.**
+
+## 5. When and how
+
+**5.1 One student, one email, one named recipient. Summaries are not sent in batches.** Each email attaches one summary and names the student in the subject line by initials.
+
+**5.2 Before sending, the adviser opens the attachment from the sent-items preview and confirms it is a summary. This takes ten seconds.**
+
+## 6. Requests from faculties
+
+**6.1 Requests for summaries come to the Head of Student Wellbeing, not to advisers. Faculties may ask for confirmation that summaries have been issued for a cohort. Requests for summaries to be sent in bulk, to a list, or to a deadline shorter than ten working days are declined, and the Head of Student Wellbeing will say why.**
+
+## 7. Caseload
+
+**7.1 Where an adviser's open caseload exceeds the guidance figure of 25, the Head of Student Wellbeing reviews the adviser's non-urgent administrative deadlines, including summary issue dates, before accepting any new Faculty request.**
+
+## 8. Record
+
+As before.
+
+## 9. Change log
+
+| Version | Date | Change |
+|---|---|---|
+| 1.0 | Sept 1050 | First issue |
+| 1.1 | Sept 1051 | Placement summaries via Placements Coordinator |
+| 2.0 draft | Mar 1053 | Separate storage and naming; no batches; no lists; Faculty requests via Head of Service; caseload check. INC-0031 |
+
+V. Cinderwake. Reviewed E. Dewscroll 5 March.

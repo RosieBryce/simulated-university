@@ -1,0 +1,25 @@
+department,programme_name,species,assessments,mean_mark
+Education,Education Studies,Dwarf,716,56.0
+Education,Education Studies,Elf,544,63.0
+Education,Educational Mentorship,Dwarf,668,54.7
+Education,Educational Mentorship,Elf,416,63.9
+Education,Intergenerational Learning,Dwarf,880,54.7
+Education,Intergenerational Learning,Elf,376,62.8
+Health,Herbal Practice and Energy Work,Dwarf,828,56.0
+Health,Herbal Practice and Energy Work,Elf,428,65.0
+Health,Integrated Mind-Body,Dwarf,536,56.5
+Health,Integrated Mind-Body,Elf,368,64.5
+Health,Midwifery,Dwarf,644,57.2
+Health,Midwifery,Elf,384,65.1
+Health,Nursing and Care,Dwarf,724,55.9
+Health,Nursing and Care,Elf,428,62.3
+Health,Occupational Therapy,Dwarf,680,56.2
+Health,Occupational Therapy,Elf,380,63.8
+Health,Pharmacy,Dwarf,496,56.6
+Health,Pharmacy,Elf,168,63.2
+Health,Physiotherapy,Dwarf,688,56.7
+Health,Physiotherapy,Elf,400,64.0
+Health,Social Work,Dwarf,588,57.6
+Health,Social Work,Elf,312,65.3
+Health,Somatic Wellbeing Enquiry,Dwarf,1096,55.3
+Health,Somatic Wellbeing Enquiry,Elf,716,61.7

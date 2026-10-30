@@ -1,0 +1,71 @@
+---
+title: Digital Services project request form BLANK
+format: docx
+author: fenn-gridforge
+created: 1052-09-01
+modified: 1052-09-01
+label: Internal
+sensitive: false
+site: pst
+library: pst-placements
+path: Digital Services request
+storylines: [placements]
+skills: [3]
+---
+
+::: footer current
+
+# Digital Services Project Request
+
+Form DS-01. Version 1052-53. Submit through the Digital Services intake process on the Hub. Requests without sections 1, 5 and 7 completed are returned.
+
+| | |
+|---|---|
+| **Project title** | |
+| **Requesting team** | |
+| **Requester** | |
+| **Business owner** | [The person who will own the system once built; not the requester unless they are the same] |
+| **Date** | |
+
+## 1. The problem
+
+[Who is affected, how often, with what consequence. Numbers where you have them: hours a week, errors a term, students affected.]
+
+## 2. What happens if we do nothing
+
+## 3. Options considered
+
+[Include: do nothing; improve the process without technology; configure a system the University already has; procure or build something new.]
+
+## 4. Recommended option and why
+
+## 5. Requirements
+
+[Numbered. Each one sentence, testable. "Must" or "should". Say whose requirement it is.]
+
+## 6. Data
+
+[What data the system needs to hold (not what is held now), its classification under the Data Classification Scheme, who may see it, and the retention rule. A system holding Confidential data needs a DPIA before Digital Services will assess the request.]
+
+## 7. Current process
+
+[How the work flows today, step by step, and who does each step. A diagram is welcome. If the process cannot be described, the request is not ready.]
+
+## 8. Benefits and how you will measure them
+
+## 9. Resources the team can commit
+
+[Time from the business owner and users for specification and testing. Projects fail here more than anywhere.]
+
+## 10. Timeline and constraints
+
+## 11. Risks
+
+## 12. Approvals
+
+| Role | Name | Date |
+|---|---|---|
+| Business owner | | |
+| Head of department or service | | |
+| Information Governance (if section 6 includes personal data) | | |
+| Digital Services (on receipt) | | |

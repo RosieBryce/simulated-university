@@ -1,0 +1,956 @@
+# Stonegrove Hub cast bible. OUT OF WORLD. Never shipped.
+#
+# Every named person in the estate is here. Documents reference people by `id`.
+# Names are drawn from config/clan_name_pools.yaml (forename pool for the clan
+# and gender, surname pool for the clan). Do not invent names outside the pools.
+#
+# Pronouns are assigned here as part of authoring the character; use them
+# consistently in every document.
+#
+# Contact details are always safe pretend values:
+#   email    forename.surname@stonegrove.ac.example   (.example is a reserved TLD)
+#   landline 01632 960000 to 01632 960999             (Ofcom drama range)
+#   mobile   07700 900000 to 07700 900999             (Ofcom drama range)
+#   ext      four digits
+# The build lints for any other domain or any UK-looking number.
+
+snapshot_date: 1053-04-14
+institution:
+  name: Stonegrove University
+  email_domain: stonegrove.ac.example
+  switchboard: 01632 960000
+  postal_address: "Stonegrove University, The Cloisters, Greywater Vale"
+  former_name: Stonegrove College of the Vale   # retired at the 1051 rebrand; still turns up
+  intranet_name: Stonegrove Hub
+  legacy_drive_name: StoneShare                 # the old network drive, migrated November 1052
+
+# Voice notes are for whoever writes the documents. "Tells" are the small
+# habits that make a person recognisable across files.
+
+staff:
+
+  # ---------------------------------------------------------------- Governance & Secretariat
+
+  - id: thalira-everjudged
+    name: Thalira Everjudged
+    title: University Secretary
+    site: governance
+    species: Elf
+    clan: Yew
+    gender: female
+    pronouns: she/her
+    email: thalira.everjudged@stonegrove.ac.example
+    ext: "2001"
+    landline: 01632 960201
+    voice: >
+      Stern, political, long memory. Short declarative paragraphs. Never an
+      exclamation mark. Quotes the Charter and Statutes from memory. Signs
+      internal notes "T.E." and never uses a greeting.
+    cares_about: Council being properly served; nothing reaching Council that has not been through her.
+    clashes_with: [cyranor-goldmantle, rhialla-moondrift]
+    tells: ["T.E.", "I would remind colleagues", "for the avoidance of doubt"]
+
+  - id: gudrik-bannerstone
+    name: Gudrik Bannerstone
+    title: Governance Officer
+    site: governance
+    species: Dwarf
+    clan: Granite
+    gender: male
+    pronouns: he/him
+    email: gudrik.bannerstone@stonegrove.ac.example
+    ext: "2004"
+    voice: >
+      Procedural to the bone. Clerks Senate and Council. His minutes are the
+      house style exemplar: numbered items, action column, present and
+      apologies in order of precedence. Files everything by committee, date,
+      paper number. Distrusts the AI policy and says so in minutes, politely.
+    cares_about: The record being right. Paper numbers. The template.
+    clashes_with: [javin-brickrelay]
+    tells: ["It was NOTED that", "The Committee RESOLVED", "Paper reference"]
+
+  - id: elenna-dewscroll
+    name: Elenna Dewscroll
+    title: Information Governance Manager and Data Protection Officer
+    site: governance
+    species: Elf
+    clan: Holly
+    gender: female
+    pronouns: she/her
+    email: elenna.dewscroll@stonegrove.ac.example
+    ext: "2010"
+    landline: 01632 960210
+    voice: >
+      Careful, warm, relentless. Author of the Data Classification Scheme and
+      the retention schedule. Writes the incident emails: kind to the person,
+      unbending on the process. Uses headed sections even in short emails.
+      Always includes the policy reference and a link.
+    cares_about: Nobody being blamed and nothing happening twice.
+    clashes_with: [bruk-coaljaw]
+    tells: ["What happened", "What we need to do now", "Policy reference:", "With thanks for your help"]
+
+  # ---------------------------------------------------------------- Faculty of Health & Education
+
+  - id: cyranor-goldmantle
+    name: Professor Cyranor Goldmantle
+    title: Dean, Faculty of Health & Education
+    site: faculty
+    species: Elf
+    clan: Baobab
+    gender: male
+    pronouns: he/him
+    email: cyranor.goldmantle@stonegrove.ac.example
+    ext: "4000"
+    landline: 01632 960400
+    voice: >
+      Grand, generous, delegates everything. One-line emails, often sent from
+      his mobile with no greeting and no sign-off. "Can someone tell me what
+      this actually says." Dictates documents that someone else has to tidy.
+      Wants the Council paper on the awarding gap to make the Faculty look
+      serious, and has not read the numbers.
+    cares_about: The Faculty's standing. Council. Not being surprised.
+    clashes_with: [thalira-everjudged, quorin-deepmirror]
+    tells: ["Thoughts?", "Can someone", "Sent from my slate", "Let us be bold about this"]
+
+  - id: elowen-fogwhisper
+    name: Elowen Fogwhisper
+    title: Executive Officer to the Dean
+    site: faculty
+    species: Elf
+    clan: Rowan
+    gender: female
+    pronouns: she/her
+    email: elowen.fogwhisper@stonegrove.ac.example
+    ext: "4001"
+    voice: >
+      Expressive, kind, chaotic. Has never once named a file correctly.
+      "Deans thing v3 USE THIS.docx". Keeps everything in a folder called
+      "Elowen stuff" and knows where all of it is. Emails are warm, long, and
+      bury the question in paragraph four. Loves a parenthesis (and a
+      digression).
+    cares_about: The Dean not being embarrassed. Everyone being all right.
+    clashes_with: []
+    tells: ["(sorry!)", "lovely", "I think?", "v3 USE THIS", "FINAL FINAL"]
+
+  - id: hrogar-dourstone
+    name: Dr Hrogar Dourstone
+    title: Head of Department of Health
+    site: faculty
+    species: Dwarf
+    clan: Granite
+    gender: male
+    pronouns: he/him
+    email: hrogar.dourstone@stonegrove.ac.example
+    ext: "4100"
+    voice: >
+      Hierarchical, formal, tradition-bound. Still calls his department the
+      "Department of Healing Arts", its pre-rebrand name, in every document.
+      Memos not emails. Copies in everyone senior. Refers to students as
+      "candidates". Letterhead is the old one and he knows it.
+    cares_about: Standards. Precedence. The old name.
+    clashes_with: [rhialla-moondrift, sorell-inkthread]
+    tells: ["Department of Healing Arts", "I am minded to", "MEMORANDUM", "candidates"]
+
+  - id: saelith-emberthorn
+    name: Dr Saelith Emberthorn
+    title: Head of Department of Education
+    site: faculty
+    species: Elf
+    clan: Ash
+    gender: female
+    pronouns: she/her
+    email: saelith.emberthorn@stonegrove.ac.example
+    ext: "4200"
+    voice: >
+      Passionate, fast, all lower-case emails with no punctuation at the ends
+      of lines. Took the Faculty NSS dip personally, although her own department's scores went up. Produces action plans
+      at midnight and revises them at six. Three versions of everything,
+      none of them marked.
+    cares_about: Her students. Being seen to act. Not being blamed for the dip.
+    clashes_with: [erra-measurine]
+    tells: ["ok so", "thoughts welcome", "action plan v", "we need to move on this"]
+
+  - id: brekka-anvildancer
+    name: Brekka Anvildancer
+    title: Faculty Operations Manager
+    site: faculty
+    species: Dwarf
+    clan: Malachite
+    gender: female
+    pronouns: she/her
+    email: brekka.anvildancer@stonegrove.ac.example
+    ext: "4010"
+    landline: 01632 960410
+    voice: >
+      Industrious, holds the Faculty together, numbered lists for everything.
+      Requested the StoneShare migration because the old drive was full, and
+      now owns the mess that came across. Writes the Faculty naming
+      convention nobody follows. Dry humour in brackets.
+    cares_about: Things working. The migration library getting sorted before anyone senior looks at it.
+    clashes_with: []
+    tells: ["1.", "2.", "3.", "(I know)", "as per my email of", "Action owners in bold"]
+
+  - id: dagna-chiselhand
+    name: Dagna Chiselhand
+    title: Programme Leader, Nursing and Care
+    site: faculty
+    species: Dwarf
+    clan: Flint
+    gender: female
+    pronouns: she/her
+    email: dagna.chiselhand@stonegrove.ac.example
+    ext: "4120"
+    mobile: 07700 900412
+    voice: >
+      Blunt, terse, practical. Swears mildly in transcripts ("stone and
+      ash"). Emails are three lines and a demand. Wants the placements
+      process fixed before Halden goes on leave and has said so in every
+      meeting since January.
+    cares_about: Students getting placements. Not losing Halden's knowledge.
+    clashes_with: [fenn-gridforge]
+    tells: ["stone and ash", "Just fix it", "Short version:", "D"]
+
+  - id: caerel-candletome
+    name: Dr Caerel Candletome
+    title: Programme Leader, Occupational Therapy
+    site: faculty
+    species: Elf
+    clan: Holly
+    gender: male
+    pronouns: he/him
+    email: caerel.candletome@stonegrove.ac.example
+    ext: "4130"
+    voice: >
+      Scholarly, over-prepares, footnotes in emails. Leading the OT
+      revalidation and has produced a 71-page self-evaluation document
+      nobody has read in full. Gentle, anxious, grateful for any help.
+    cares_about: The revalidation going through. Getting it right.
+    clashes_with: []
+    tells: ["I wonder whether", "see appendix", "with apologies for the length", "SED"]
+
+  - id: jaskel-doodlehook
+    name: Jaskel Doodlehook
+    title: Senior Lecturer in Education
+    site: faculty
+    species: Dwarf
+    clan: Bismuth
+    gender: male
+    pronouns: he/him
+    email: jaskel.doodlehook@stonegrove.ac.example
+    ext: "4215"
+    voice: >
+      Eccentric, creative, energetic. Designed his own Department of
+      Education logo (a tree made of pencils) and uses it on everything.
+      Slide decks with six typefaces. Leaflets in a rounded display font.
+      Means well, is loved by students, is Communications' biggest problem.
+    cares_about: Students enjoying things. Colour.
+    clashes_with: [sorell-inkthread]
+    tells: ["!!", "pencil tree", "I made a thing", "pls see attached (it is quite big)"]
+
+  - id: nyssa-memoryvault
+    name: Dr Nyssa Memoryvault
+    title: Fitness to Practise Lead, Department of Health
+    site: faculty
+    species: Dwarf
+    clan: Obsidian
+    gender: female
+    pronouns: she/her
+    email: nyssa.memoryvault@stonegrove.ac.example
+    ext: "4140"
+    voice: >
+      Philosophical, discreet, writes case notes in careful formal prose.
+      Holds the Fitness to Practise files. Labels them properly in her own
+      folder; copies she has sent to panel members have ended up elsewhere
+      with the wrong label or none.
+    cares_about: Due process. The candidate's dignity. Confidentiality.
+    clashes_with: []
+    tells: ["In my assessment", "the candidate", "strictly confidential", "I have reflected on"]
+
+  # ---------------------------------------------------------------- Programme Support Team: Nursing and Care
+
+  - id: halden-bridgeglen
+    name: Halden Bridgeglen
+    title: Placements Coordinator, Nursing and Care
+    site: pst
+    species: Dwarf
+    clan: Sandstone
+    gender: male
+    pronouns: he/him
+    email: halden.bridgeglen@stonegrove.ac.example
+    ext: "4150"
+    mobile: 07700 900415
+    voice: >
+      Upbeat, knows every placement provider by first name, the 14-tab
+      spreadsheet lives in his head. "No worries!" Replies within minutes.
+      Going on extended parental leave from 19 May 1053 and has been asked
+      to "write it all down", which he keeps starting.
+    cares_about: Providers staying sweet. Students placed. Not letting anyone down.
+    clashes_with: []
+    tells: ["No worries!", "I'll sort it", "quick one", "see tab 9", "cheers H"]
+
+  - id: hesta-gracestone
+    name: Hesta Gracestone
+    title: Programme Administrator, Nursing and Care
+    site: pst
+    species: Dwarf
+    clan: Alabaster
+    gender: female
+    pronouns: she/her
+    email: hesta.gracestone@stonegrove.ac.example
+    ext: "4151"
+    voice: >
+      Dignified, precise, quietly exhausted. Does the actual work. Her
+      "Hesta stuff" folder in the migration library is the most useful
+      folder in the Faculty and nobody knows it. Emails are short, exact,
+      and end "Kind regards, Hesta" without fail.
+    cares_about: The work being done properly. Being asked, not told.
+    clashes_with: []
+    tells: ["Kind regards, Hesta", "As previously advised", "for completeness", "I have attached"]
+
+  - id: liora-lanternwake
+    name: Liora Lanternwake
+    title: Programme Support Assistant (Apprentice), Nursing and Care
+    site: pst
+    species: Elf
+    clan: Palm
+    gender: female
+    pronouns: she/her
+    email: liora.lanternwake@stonegrove.ac.example
+    ext: "4152"
+    voice: >
+      Joyful, new (started January 1053), asks the good questions nobody
+      else does. Created the "To sort" folder and a colour-coded spreadsheet
+      of what is in it. Emails with a smiley in the sign-off. Reads the
+      policies, which makes her unusual.
+    cares_about: Understanding how things work. Doing it right.
+    clashes_with: []
+    tells: [":)", "Quick question", "is there a process for", "I made a list"]
+
+  # ---------------------------------------------------------------- Planning & Insight
+
+  - id: quorin-deepmirror
+    name: Quorin Deepmirror
+    title: Head of Planning & Insight
+    site: planning
+    species: Dwarf
+    clan: Obsidian
+    gender: male
+    pronouns: he/him
+    email: quorin.deepmirror@stonegrove.ac.example
+    ext: "3000"
+    landline: 01632 960300
+    voice: >
+      Philosophical about data, long caveats, allergic to being quoted
+      without them. Every report has a "How to read this" page. Will not
+      sign off the Council paper until the definitions are right, which is
+      why the Dean has written his own.
+    cares_about: Definitions. Denominators. Not being misquoted.
+    clashes_with: [cyranor-goldmantle]
+    tells: ["How to read this", "subject to the caveats", "the denominator here is", "I would be cautious"]
+
+  - id: erra-measurine
+    name: Erra Measurine
+    title: Senior Insight Analyst
+    site: planning
+    species: Dwarf
+    clan: Slate
+    gender: female
+    pronouns: she/her
+    email: erra.measurine@stonegrove.ac.example
+    ext: "3002"
+    voice: >
+      Files everything perfectly. Her library is the one place the naming
+      convention is followed to the letter. Terse. Replies in bullet points.
+      Her awarding gap extract is half finished because she was pulled onto
+      the Faculty NSS deep dive in October and never got back to it.
+    cares_about: Reproducibility. Version control. The convention.
+    clashes_with: [saelith-emberthorn, teylin-leafchant]
+    tells: ["See attached.", "v01", "YYYY-MM-DD", "Not yet QA'd.", "Source:"]
+
+  - id: teylin-leafchant
+    name: Teylin Leafchant
+    title: Insight Analyst
+    site: planning
+    species: Elf
+    clan: Rowan
+    gender: neuter
+    pronouns: they/them
+    email: teylin.leafchant@stonegrove.ac.example
+    ext: "3003"
+    voice: >
+      Good at the story, loose with the numbers. Writes narrative reports
+      people actually read. Used the institutional AI assistant to
+      summarise the external review and the NSS pack and did not check the
+      output. The planted errors in the auto-generated summaries are theirs.
+    cares_about: The report landing. People understanding.
+    clashes_with: [erra-measurine]
+    tells: ["In short", "the headline is", "Summary (auto-generated)", "happy to talk this through"]
+
+  # ---------------------------------------------------------------- Quality
+
+  - id: brynja-cragshield
+    name: Brynja Cragshield
+    title: Head of Quality
+    site: quality
+    species: Dwarf
+    clan: Granite
+    gender: female
+    pronouns: she/her
+    email: brynja.cragshield@stonegrove.ac.example
+    ext: "2100"
+    landline: 01632 960220
+    voice: >
+      Formal, regulation-quoting, nothing happens without the template.
+      Chairs the OT revalidation panel. Writes in the passive voice on
+      principle. Refers to the Academic Regulations by paragraph number.
+    cares_about: Process. The regulations being followed. Panels being quorate.
+    clashes_with: []
+    tells: ["in accordance with Regulation", "the Panel was satisfied that", "it is a requirement that", "para."]
+
+  - id: ollir-greenquill
+    name: Ollir Greenquill
+    title: Quality Officer
+    site: quality
+    species: Elf
+    clan: Holly
+    gender: male
+    pronouns: he/him
+    email: ollir.greenquill@stonegrove.ac.example
+    ext: "2103"
+    voice: >
+      Competent, overworked, clerks exam boards and revalidation panels.
+      Produced the real minutes that pair with two of the transcripts.
+      Gentle apologies for delay in every email. Keeps a tidy folder and a
+      "Working" folder that is not.
+    cares_about: Getting the minutes out within five working days. Mostly fails.
+    clashes_with: []
+    tells: ["Apologies for the delay", "draft minutes attached", "please let me know of any corrections", "OG"]
+
+  # ---------------------------------------------------------------- Admissions
+
+  - id: mira-dealroot
+    name: Mira Dealroot
+    title: Head of Admissions
+    site: admissions
+    species: Dwarf
+    clan: Sandstone
+    gender: female
+    pronouns: she/her
+    email: mira.dealroot@stonegrove.ac.example
+    ext: "2200"
+    landline: 01632 960230
+    voice: >
+      Upbeat, sales-y, double exclamation marks. Has three explanations for
+      the conversion dip and has written each one up separately for a
+      different audience. Loves a dashboard. Open day planning is her joy.
+    cares_about: Numbers going up. Open days. The Faculty answering her emails.
+    clashes_with: [quorin-deepmirror]
+    tells: ["!!", "great news", "quick update", "conversion", "let's get this over the line"]
+
+  - id: bruk-coaljaw
+    name: Bruk Coaljaw
+    title: Admissions Officer
+    site: admissions
+    species: Dwarf
+    clan: Flint
+    gender: male
+    pronouns: he/him
+    email: bruk.coaljaw@stonegrove.ac.example
+    ext: "2204"
+    voice: >
+      Blunt, gets it done, keeps the applicant tracker spreadsheet with far
+      more personal data in it than it needs. Thinks the AI policy is for
+      other people and pasted an applicant's personal statement into a
+      non-approved tool to "check the grammar". Does not see the problem.
+    cares_about: Clearing the queue. Not being told how to do his job.
+    clashes_with: [elenna-dewscroll]
+    tells: ["done", "see tracker", "what's the issue", "it's just a spreadsheet"]
+
+  # ---------------------------------------------------------------- Student Wellbeing
+
+  - id: velra-cinderwake
+    name: Velra Cinderwake
+    title: Head of Student Wellbeing
+    site: wellbeing
+    species: Elf
+    clan: Ash
+    gender: female
+    pronouns: she/her
+    email: velra.cinderwake@stonegrove.ac.example
+    ext: "2300"
+    landline: 01632 960240
+    voice: >
+      Resilient, fierce advocate, protective of case data to the point of
+      hoarding. Furious about the February incident and more furious that
+      the file is still where it should not be. Writes in long, controlled
+      sentences that get shorter as she gets angrier.
+    cares_about: Students. Confidentiality. Being resourced.
+    clashes_with: [cyranor-goldmantle]
+    tells: ["I want to be clear", "this is not acceptable", "our students", "Velra"]
+
+  - id: anric-hearthbind
+    name: Anric Hearthbind
+    title: Senior Disability Adviser
+    site: wellbeing
+    species: Dwarf
+    clan: Alabaster
+    gender: male
+    pronouns: he/him
+    email: anric.hearthbind@stonegrove.ac.example
+    ext: "2304"
+    voice: >
+      Meticulous, community-minded, writes the support plans. Every plan
+      follows the template exactly; every one is labelled Confidential in
+      his folder. Warm towards students, formal towards staff.
+    cares_about: Students getting what they are entitled to. Plans being followed.
+    clashes_with: []
+    tells: ["Reasonable adjustments", "the student has consented to", "Please do not forward", "AH"]
+
+  - id: caelio-driftfeather
+    name: Caelio Driftfeather
+    title: Wellbeing Adviser
+    site: wellbeing
+    species: Elf
+    clan: Palm
+    gender: male
+    pronouns: he/him
+    email: caelio.driftfeather@stonegrove.ac.example
+    ext: "2306"
+    voice: >
+      Warm, overstretched, sympathetic. On 19 February 1053 he attached the
+      wrong file to an email to the whole Nursing and Care Year 2 teaching
+      team: a student's full support plan instead of the one-page
+      adjustments summary. Reported it himself within the hour. Emails
+      since then are careful and a little sad.
+    cares_about: The student. Making it right.
+    clashes_with: []
+    tells: ["I am so sorry", "just to check", "the student's wellbeing", "C"]
+
+  # ---------------------------------------------------------------- Communications
+
+  - id: rhialla-moondrift
+    name: Rhialla Moondrift
+    title: Head of Communications
+    site: comms
+    species: Elf
+    clan: Rowan
+    gender: female
+    pronouns: she/her
+    email: rhialla.moondrift@stonegrove.ac.example
+    ext: "2400"
+    landline: 01632 960250
+    voice: >
+      Expressive, persuasive, writes beautifully. Led the September 1051
+      rebrand from "Stonegrove College of the Vale" to "Stonegrove
+      University" and is quietly losing the argument with the Faculty about
+      using it. Emails are elegant and slightly wounded.
+    cares_about: The brand being one thing. Being taken seriously.
+    clashes_with: [thalira-everjudged, hrogar-dourstone]
+    tells: ["one voice", "gentle reminder", "I would love it if", "as agreed at launch"]
+
+  - id: sorell-inkthread
+    name: Sorell Inkthread
+    title: Brand and Design Officer
+    site: comms
+    species: Dwarf
+    clan: Obsidian
+    gender: neuter
+    pronouns: they/them
+    email: sorell.inkthread@stonegrove.ac.example
+    ext: "2403"
+    voice: >
+      Elegant, exacting, author of the brand guide. Keeps a Brand
+      Compliance Log (a spreadsheet of sightings: who, what, which rule,
+      date, outcome). Short emails with a screenshot. Never raises their
+      voice in writing, which is somehow worse.
+    cares_about: Clear space around the logo. The retired names staying retired.
+    clashes_with: [jaskel-doodlehook, hrogar-dourstone]
+    tells: ["Brand guide section", "clear space", "for reference", "SI"]
+
+  - id: javin-brickrelay
+    name: Javin Brickrelay
+    title: Communications Officer
+    site: comms
+    species: Dwarf
+    clan: Sandstone
+    gender: male
+    pronouns: he/him
+    email: javin.brickrelay@stonegrove.ac.example
+    ext: "2405"
+    mobile: 07700 900245
+    voice: >
+      Fast, cheerful, posts first and checks later. The social posts that
+      break brand (wrong colour, old name, a gradient) are his. Writes
+      campaign plans as bullet lists in the body of an email and saves the
+      email as the plan.
+    cares_about: Engagement. Getting it out today.
+    clashes_with: [gudrik-bannerstone]
+    tells: ["going live at 4", "can we get a quote", "socials", "banger"]
+
+  # ---------------------------------------------------------------- Off-stage (names appear; the people never do)
+
+  - id: thalion-illumenbark
+    name: Professor Thalion Illumenbark
+    title: Vice-Chancellor
+    site: offstage
+    species: Elf
+    clan: Holly
+    gender: male
+    pronouns: he/him
+    email: vice.chancellor@stonegrove.ac.example
+    ext: "1000"
+    voice: >
+      Chairs Senate and sits on Council. Appears only in committee: in
+      transcripts as the chair who moves things along, in minutes as "the
+      Chair". Courteous, brisk, fond of "shall we". Never writes a document
+      himself.
+    cares_about: Senate finishing on time. Consensus.
+    clashes_with: []
+    tells: ["shall we", "I think we have the sense of the meeting", "thank you, colleagues"]
+
+  - id: fenn-gridforge
+    name: Fenn Gridforge
+    title: Head of Digital Services
+    site: offstage
+    species: Dwarf
+    clan: Slate
+    gender: male
+    pronouns: he/him
+    email: fenn.gridforge@stonegrove.ac.example
+    ext: "5000"
+    voice: >
+      Appears only as a signature: on the declined 1051 project request,
+      the technical annex to the AI policy, and the approved tools list.
+      Writes like a form. Never in a transcript.
+    cares_about: Scope. Business cases. Not building bespoke things.
+    clashes_with: [dagna-chiselhand]
+    tells: ["Decision: not approved", "insufficient business case", "please resubmit via"]
+
+  - id: marenel-boughwitness
+    name: Dr Marenel Boughwitness
+    title: External Examiner, Occupational Therapy (Elder Grove University)
+    site: offstage
+    species: Elf
+    clan: Yew
+    gender: female
+    pronouns: she/her
+    email: marenel.boughwitness@eldergrove.ac.example
+    voice: >
+      External examiner reports only. Measured, thorough, one pointed
+      recommendation per report that nobody has actioned for three years.
+    cares_about: Standards. Being listened to.
+    clashes_with: []
+    tells: ["I note once again", "the programme team may wish to consider", "comparable with"]
+
+  - id: aerion-crownweaver
+    name: Aerion Crownweaver
+    title: Chair of Council
+    site: offstage
+    species: Elf
+    clan: Baobab
+    gender: male
+    pronouns: he/him
+    email: council.chair@stonegrove.ac.example
+    voice: >
+      Appears only in Council minutes and one covering note. Asks for
+      papers to be "shorter and clearer". The reason the awarding gap
+      paper exists.
+    cares_about: Council time. Clarity.
+    clashes_with: []
+    tells: ["the Chair asked that", "a short paper", "for the next meeting"]
+
+# ----------------------------------------------------------------- Students
+# Recurring case subjects. Entirely fabricated. These names appear ONLY in
+# material whose ground truth is sensitive: true (support plans, case notes,
+# FtP files, applicant records, incident reports). Never in a public document.
+# Student names must not collide with staff names or surnames.
+
+students:
+
+  - id: student-grinna-dustshard
+    name: Grinna Dustshard
+    species: Dwarf
+    clan: Flint
+    gender: female
+    pronouns: she/her
+    programme: Nursing and Care
+    year: 2
+    role_in_estate: >
+      Subject of the support plan that Caelio emailed to the Year 2 teaching
+      team on 19 February 1053. Dyslexia and anxiety; reasonable adjustments
+      for placements and exams. Her full plan is the file still sitting in
+      the Nursing and Care teaching folder.
+    storylines: [incident]
+
+  - id: student-kaelen-firestride
+    name: Kaelen Firestride
+    species: Elf
+    clan: Ash
+    gender: male
+    pronouns: he/him
+    programme: Nursing and Care
+    year: 3
+    role_in_estate: >
+      Subject of a Fitness to Practise referral following a placement
+      incident (medication documentation error, November 1052). Case notes
+      and panel papers held by Nyssa; a copy with no label in the migration
+      library.
+    storylines: [stoneshare, placements]
+
+  - id: student-enia-chalkhaven
+    name: Enia Chalkhaven
+    species: Dwarf
+    clan: Alabaster
+    gender: female
+    pronouns: she/her
+    programme: Occupational Therapy
+    year: 1
+    role_in_estate: >
+      Disability support evidence and an extenuating circumstances claim
+      (bereavement, January 1053). Her DSA evidence letter is labelled
+      Internal when it should be Confidential.
+    storylines: [revalidation]
+
+  - id: student-tivan-reefgrace
+    name: Tivan Reefgrace
+    species: Elf
+    clan: Palm
+    gender: male
+    pronouns: he/him
+    programme: Education Studies
+    year: 2
+    role_in_estate: >
+      Wellbeing referral arising from the Education NSS response work (a
+      focus group where he disclosed more than he meant to). Referral note
+      exists in two places with different labels.
+    storylines: [nss-dip]
+
+  - id: student-nelka-cobblecloak
+    name: Nelka Cobblecloak
+    species: Dwarf
+    clan: Sandstone
+    gender: female
+    pronouns: she/her
+    programme: Applicant, Nursing and Care (1053 entry)
+    year: 0
+    role_in_estate: >
+      Applicant whose personal statement Bruk pasted into a non-approved AI
+      tool. Her row in the applicant tracker carries her date of birth,
+      home address and a health declaration none of which should be there.
+    storylines: [admissions, ai-policy]
+
+# ----------------------------------------------------------------- Placement providers
+# Named organisations for the provider correspondence pile (skill 7).
+# Fictional; each has a contact drawn from the name pools.
+
+providers:
+  - id: greywater-infirmary
+    name: Greywater Vale Infirmary
+    contact: Sister Agda Frostmantle
+    contact_clan: Granite
+    email: placements@greywater-infirmary.example
+    phone: 01632 960501
+    capacity_note: 12 Nursing and Care placements per semester, no Year 1 in winter
+  - id: hollowpick-care
+    name: Hollowpick Community Care
+    contact: Brenik Ashbarrow
+    contact_clan: Alabaster
+    email: brenik@hollowpick-care.example
+    phone: 01632 960502
+    capacity_note: 4 places, requires an occupational health letter before start
+  - id: deepmarrow-hospice
+    name: Deepmarrow Hospice
+    contact: Lirien Boughchant
+    contact_clan: Holly
+    email: volunteers@deepmarrow-hospice.example
+    phone: 01632 960503
+    capacity_note: 2 places, Year 3 only, interview required
+  - id: brinestep-clinic
+    name: Brinestep Coastal Clinic
+    contact: Marra Foamveil
+    contact_clan: Palm
+    email: m.foamveil@brinestep-clinic.example
+    phone: 01632 960504
+    capacity_note: 6 places, travel bursary needed, closed for storms in January and February
+  - id: cragburrow-surgery
+    name: Cragburrow Mine Surgery
+    contact: Durgan Brimspade
+    contact_clan: Flint
+    email: surgery@cragburrow.example
+    phone: 01632 960505
+    capacity_note: 3 places, shift pattern, students must have the underground safety briefing
+  - id: oakhollow-practice
+    name: Oakhollow Village Practice
+    contact: Dr Lirien Ferntext
+    contact_clan: Holly
+    email: practice.manager@oakhollow.example
+    phone: 01632 960506
+    capacity_note: 2 places per semester, Year 2 only, Tuesdays and Thursdays closed to students
+  - id: stonebridge-care-home
+    name: Stonebridge Residential Care Home
+    contact: Matron Gilda Crestguard
+    contact_clan: Granite
+    email: matron@stonebridge-care.example
+    phone: 01632 960507
+    capacity_note: 5 places, no more than 2 students on any shift, uniform must be plain navy
+  - id: ashvale-community-nursing
+    name: Ashvale Community Nursing Team
+    contact: Vaela Kindlebloom
+    contact_clan: Ash
+    email: v.kindlebloom@ashvale-nursing.example
+    phone: 01632 960508
+    capacity_note: 4 places, students must have a bicycle or transport, home visits in pairs
+  - id: greywater-childrens-ward
+    name: Greywater Vale Infirmary, Children's Ward
+    contact: Sister Hilda Cliffmarch
+    contact_clan: Granite
+    email: childrens.ward@greywater-infirmary.example
+    phone: 01632 960509
+    capacity_note: 3 places, enhanced clearance required, Year 2 semester 2 only
+  - id: millbrook-mental-health
+    name: Millbrook Community Mental Health Team
+    contact: Caedros Pyrelatch
+    contact_clan: Ash
+    email: placements@millbrook-cmht.example
+    phone: 01632 960510
+    capacity_note: 3 places, interview required, students attend a half-day induction the week before
+  - id: riverside-rehabilitation
+    name: Riverside Rehabilitation Unit
+    contact: Elka Dustmantle
+    contact_clan: Flint
+    email: e.dustmantle@riverside-rehab.example
+    phone: 01632 960511
+    capacity_note: 4 places, shared with Physiotherapy and OT, students rota across disciplines
+  - id: deepmarrow-day-hospice
+    name: Deepmarrow Hospice Day Service
+    contact: Meluin Glossfeather
+    contact_clan: Holly
+    email: dayservice@deepmarrow-hospice.example
+    phone: 01632 960512
+    capacity_note: 2 places, Year 2 only, Wednesdays only, reflective debrief compulsory
+  - id: cragburrow-occupational-health
+    name: Cragburrow Mine Occupational Health Service
+    contact: Hask Deepgrit
+    contact_clan: Flint
+    email: och@cragburrow.example
+    phone: 01632 960513
+    capacity_note: 2 places, underground safety briefing and steel-capped boots required
+  - id: bismuth-quarter-surgery
+    name: Bismuth Quarter Surgery
+    contact: Dr Thessa Gemlace
+    contact_clan: Bismuth
+    email: hello@bismuthquarter-surgery.example
+    phone: 01632 960514
+    capacity_note: 1 place, flexible hours, students help with the art therapy group on Fridays
+  - id: palmstrand-maternity
+    name: Palmstrand Maternity Unit
+    contact: Mirani Horizonchant
+    contact_clan: Palm
+    email: maternity.education@palmstrand.example
+    phone: 01632 960515
+    capacity_note: 3 places, Midwifery priority, Nursing and Care places only if unfilled by week 3
+  - id: hollowpick-domiciliary
+    name: Hollowpick Domiciliary Care
+    contact: Calla Claymantle
+    contact_clan: Alabaster
+    email: office@hollowpick-domcare.example
+    phone: 01632 960516
+    capacity_note: 6 places, early starts (06:30), travel between clients on foot
+  - id: sandstone-ferry-clinic
+    name: Sandstone Ferry Walk-in Clinic
+    contact: Garril Bargestone
+    contact_clan: Sandstone
+    email: g.bargestone@ferryclinic.example
+    phone: 01632 960517
+    capacity_note: 3 places, weekend shifts expected, busy market days
+  - id: yewgrove-elder-care
+    name: Yewgrove Elder Care Centre
+    contact: Nethira Duskthorn
+    contact_clan: Yew
+    email: n.duskthorn@yewgrove-elders.example
+    phone: 01632 960518
+    capacity_note: 4 places, students must attend the memory care training day first
+  - id: obsidian-vault-infirmary
+    name: Obsidian Vault Infirmary
+    contact: Dr Morthen Glassenclave
+    contact_clan: Obsidian
+    email: education@obsidianvault-infirmary.example
+    phone: 01632 960519
+    capacity_note: 8 places, large teaching site, formal application form per student
+  - id: malachite-forge-first-aid
+    name: Malachite Forge First Aid Post
+    contact: Brimma Bellowsmoke
+    contact_clan: Malachite
+    email: firstaid@malachiteforge.example
+    phone: 01632 960520
+    capacity_note: 2 places, heat and noise, hearing protection issued, Year 2 only
+  - id: slate-district-nursing
+    name: Slate District Nursing Service
+    contact: Delra Linevault
+    contact_clan: Slate
+    email: rota@slate-districtnursing.example
+    phone: 01632 960521
+    capacity_note: 3 places, rota published 6 weeks ahead and not changed, punctuality expected
+  - id: rowanmere-hospice-at-home
+    name: Rowanmere Hospice at Home
+    contact: Feyra Blossomvow
+    contact_clan: Rowan
+    email: f.blossomvow@rowanmere.example
+    phone: 01632 960522
+    capacity_note: 2 places, students must have completed a bereavement awareness session
+  - id: flintrock-urgent-care
+    name: Flintrock Urgent Care Centre
+    contact: Dorrik Firechisel
+    contact_clan: Flint
+    email: ucc.education@flintrock.example
+    phone: 01632 960523
+    capacity_note: 4 places, 12-hour shifts, no first-semester Year 2 students
+  - id: baobab-heights-clinic
+    name: Baobab Heights Private Clinic
+    contact: Serenya Ivoryscroll
+    contact_clan: Baobab
+    email: s.ivoryscroll@baobabheights.example
+    phone: 01632 960524
+    capacity_note: 2 places, confidentiality agreement signed on arrival, smart dress
+  - id: greywater-outpatients
+    name: Greywater Vale Infirmary, Outpatients
+    contact: Agda Frostmantle
+    contact_clan: Granite
+    email: placements@greywater-infirmary.example
+    phone: 01632 960501
+    capacity_note: 6 places, counted within the Infirmary total of 12, Year 1 welcome
+  - id: ashen-reach-school-nursing
+    name: Ashen Reach School Nursing Service
+    contact: Noriel Coalwhisper
+    contact_clan: Ash
+    email: schoolnursing@ashenreach.example
+    phone: 01632 960525
+    capacity_note: 2 places, enhanced clearance, term time only
+  - id: hearthbind-hostel-health
+    name: Hearthbind Hostel Health Outreach
+    contact: Merra Hearthbind
+    contact_clan: Alabaster
+    email: outreach@hearthbind-hostel.example
+    phone: 01632 960526
+    capacity_note: 2 places, students in pairs, evening clinics Tuesday and Thursday
+  - id: palm-coast-ambulance
+    name: Palm Coast Ambulance Station
+    contact: Tivan Breakwave
+    contact_clan: Palm
+    email: station.officer@palmcoast-ambulance.example
+    phone: 01632 960527
+    capacity_note: 1 observer place per semester, Year 2 only, no clinical tasks
+  - id: granite-ridge-prison-healthcare
+    name: Granite Ridge Prison Healthcare
+    contact: Astri Garrisonveil
+    contact_clan: Granite
+    email: healthcare.education@graniteridge.example
+    phone: 01632 960528
+    capacity_note: 2 places, enhanced vetting takes 8 weeks, no phones on site
+  - id: vale-pharmacy-network
+    name: Vale Community Pharmacy Network
+    contact: Jostin Clayreach
+    contact_clan: Sandstone
+    email: training@valepharmacy.example
+    phone: 01632 960529
+    capacity_note: 3 places across 3 branches, Pharmacy priority, Nursing and Care observers only

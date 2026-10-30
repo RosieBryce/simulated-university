@@ -1,0 +1,46 @@
+---
+title: Palmstrand Maternity Unit placement agreement 1052-53
+format: pdf
+author: halden-bridgeglen
+created: '1052-07-08'
+modified: '1052-07-10'
+label: Internal
+sensitive: false
+site: pst
+library: pst-providers
+path: 1052-53
+storylines: [placements]
+skills: [7]
+provider: palmstrand-maternity
+generated: true
+---
+
+# Palmstrand Maternity Unit
+
+## Placement agreement: Stonegrove University, Nursing and Care, 1052-53
+
+Date: 8 July 1052
+
+| | |
+|---|---|
+| Provider | Palmstrand Maternity Unit |
+| Provider contact | Mirani Horizonchant, Education Lead |
+| Telephone | 01632 960515 |
+| Email | maternity.education@palmstrand.example |
+| University contact | Halden Bridgeglen, Placements Coordinator |
+
+### Places offered
+
+3 places.
+
+### Conditions
+
+Midwifery priority, Nursing and Care places only if unfilled by week 3.
+
+### Other
+
+We can take an additional student at short notice if another provider withdraws, provided we have a week's notice.
+
+Signed for the provider: Mirani Horizonchant
+
+Signed for the University: ____________________

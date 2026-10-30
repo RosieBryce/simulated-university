@@ -1,0 +1,38 @@
+---
+title: Council agenda 22 May 1053 DRAFT
+format: docx
+author: gudrik-bannerstone
+created: 1053-04-07
+modified: 1053-04-11
+label: Internal
+sensitive: false
+site: governance
+library: gov-council
+path: 1052-53/1053-05-22 Council
+storylines: [awarding-gap, incident]
+skills: [1, 6]
+---
+
+::: footer current
+
+# COUNCIL
+
+## DRAFT agenda for the meeting to be held on 22 May 1053 at 10:00 in the Council Chamber
+
+*Working draft. Papers deadline: 12 May 1053. Papers marked "awaited" have not yet been received by the Secretariat.*
+
+| No. | Item | Purpose | Paper | Lead | Status |
+|---|---|---|---|---|---|
+| 1 | Welcome, apologies and declarations of interest | | Oral | Chair | |
+| 2 | Minutes of the meeting held on 21 February 1053 | To approve | Attached | Chair | Draft circulated |
+| 3 | Matters arising and action log | To note | C/1053/06 | Secretary | In preparation |
+| 4 | Vice-Chancellor's report | To note | C/1053/07 | Vice-Chancellor | Awaited |
+| 5 | **Faculty of Health and Education: awarding gap by programme, actions and measures** | To discuss | C/1053/08 | Dean | **Awaited. Chair has asked for two pages. Dean's office says a draft exists. Planning and Insight say they have not seen it.** |
+| 6 | Information governance: closure of incident INC-0031 and annual report | To note | C/1053/09 | Information Governance Manager | Awaited |
+| 7 | Budget 1053-54 | To approve | C/1053/10 | Director of Finance | Awaited |
+| 8 | Admissions: 1053 entry cycle | To note | C/1053/11 | Head of Admissions | Awaited |
+| 9 | Any other business | | Oral | Chair | |
+| 10 | Reserved business | | Separate circulation | Chair | |
+| 11 | Date of next meeting: 10 July 1053 | | | | |
+
+Clerk's note, 11 April: chased the Dean's office for item 5. Reply from E. Fogwhisper: "it's nearly there (sorry!), the Dean wants to add a bit about being bold". Have reminded her of the two-page limit and the 12 May deadline. GB.

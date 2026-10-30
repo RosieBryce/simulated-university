@@ -1,0 +1,73 @@
+department,programme_name,programme_year,species,students
+Education,Education Studies,1,Dwarf,64
+Education,Education Studies,1,Elf,47
+Education,Education Studies,2,Dwarf,60
+Education,Education Studies,2,Elf,51
+Education,Education Studies,3,Dwarf,55
+Education,Education Studies,3,Elf,38
+Education,Educational Mentorship,1,Dwarf,53
+Education,Educational Mentorship,1,Elf,37
+Education,Educational Mentorship,2,Dwarf,61
+Education,Educational Mentorship,2,Elf,32
+Education,Educational Mentorship,3,Dwarf,53
+Education,Educational Mentorship,3,Elf,35
+Education,Intergenerational Learning,1,Dwarf,83
+Education,Intergenerational Learning,1,Elf,43
+Education,Intergenerational Learning,2,Dwarf,74
+Education,Intergenerational Learning,2,Elf,24
+Education,Intergenerational Learning,3,Dwarf,63
+Education,Intergenerational Learning,3,Elf,27
+Health,Herbal Practice and Energy Work,1,Dwarf,68
+Health,Herbal Practice and Energy Work,1,Elf,50
+Health,Herbal Practice and Energy Work,2,Dwarf,64
+Health,Herbal Practice and Energy Work,2,Elf,27
+Health,Herbal Practice and Energy Work,3,Dwarf,75
+Health,Herbal Practice and Energy Work,3,Elf,30
+Health,Integrated Mind-Body,1,Dwarf,52
+Health,Integrated Mind-Body,1,Elf,39
+Health,Integrated Mind-Body,2,Dwarf,51
+Health,Integrated Mind-Body,2,Elf,28
+Health,Integrated Mind-Body,3,Dwarf,31
+Health,Integrated Mind-Body,3,Elf,25
+Health,Midwifery,1,Dwarf,53
+Health,Midwifery,1,Elf,40
+Health,Midwifery,2,Dwarf,52
+Health,Midwifery,2,Elf,28
+Health,Midwifery,3,Dwarf,56
+Health,Midwifery,3,Elf,28
+Health,Nursing and Care,1,Dwarf,63
+Health,Nursing and Care,1,Elf,45
+Health,Nursing and Care,2,Dwarf,59
+Health,Nursing and Care,2,Elf,30
+Health,Nursing and Care,3,Dwarf,59
+Health,Nursing and Care,3,Elf,32
+Health,Occupational Therapy,1,Dwarf,48
+Health,Occupational Therapy,1,Elf,37
+Health,Occupational Therapy,2,Dwarf,51
+Health,Occupational Therapy,2,Elf,31
+Health,Occupational Therapy,3,Dwarf,71
+Health,Occupational Therapy,3,Elf,27
+Health,Pharmacy,1,Dwarf,43
+Health,Pharmacy,1,Elf,13
+Health,Pharmacy,2,Dwarf,44
+Health,Pharmacy,2,Elf,15
+Health,Pharmacy,3,Dwarf,37
+Health,Pharmacy,3,Elf,14
+Health,Physiotherapy,1,Dwarf,68
+Health,Physiotherapy,1,Elf,25
+Health,Physiotherapy,2,Dwarf,53
+Health,Physiotherapy,2,Elf,35
+Health,Physiotherapy,3,Dwarf,51
+Health,Physiotherapy,3,Elf,40
+Health,Social Work,1,Dwarf,50
+Health,Social Work,1,Elf,22
+Health,Social Work,2,Dwarf,50
+Health,Social Work,2,Elf,30
+Health,Social Work,3,Dwarf,47
+Health,Social Work,3,Elf,26
+Health,Somatic Wellbeing Enquiry,1,Dwarf,90
+Health,Somatic Wellbeing Enquiry,1,Elf,61
+Health,Somatic Wellbeing Enquiry,2,Dwarf,102
+Health,Somatic Wellbeing Enquiry,2,Elf,53
+Health,Somatic Wellbeing Enquiry,3,Dwarf,82
+Health,Somatic Wellbeing Enquiry,3,Elf,65

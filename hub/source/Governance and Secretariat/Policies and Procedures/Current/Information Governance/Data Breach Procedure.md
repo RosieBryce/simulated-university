@@ -1,0 +1,70 @@
+---
+title: Data Breach Procedure
+format: docx
+author: elenna-dewscroll
+created: 1050-06-10
+modified: 1053-03-10
+label: Public
+sensitive: false
+site: governance
+library: gov-policies
+path: Current/Information Governance
+storylines: [incident]
+skills: [5, 10]
+---
+
+# Data Breach Procedure
+
+Owner: Information Governance Manager and Data Protection Officer. Version 1.2, 10 March 1053. Classification: Public.
+
+## 1. What counts as a breach
+
+A personal data breach is any event that leads to personal data being lost, destroyed, altered, disclosed to someone who should not have it, or made unavailable. It includes:
+
+- sending an email or attachment to the wrong person or to a distribution list
+- saving a Confidential document in a folder other people can open
+- losing a device or paper record
+- a system fault or attack that exposes data
+- entering personal data into a tool that is not approved for it
+
+A near miss, where the data could have been exposed but, as far as we know, was not, is reported in the same way.
+
+## 2. Report within one working day
+
+Report the breach to the Information Governance Manager as soon as you realise, and in any case within one working day. Use the Data Breach Report Form on the Hub or telephone extension 2010 and follow up with the form.
+
+Do not wait until you are sure it was a breach. Do not wait until you have fixed it. Do not investigate on your own first.
+
+Reporting a breach you caused is treated as the right thing to do. The University's position, set out in the AI Acceptable Use Policy and the Staff Disciplinary Procedure, is that an honest mistake reported promptly is a learning matter.
+
+## 3. What happens next
+
+| Step | Who | When |
+|---|---|---|
+| Containment: stop the data going further (recall, delete, revoke access, ask recipients to delete and confirm) | Reporter with the Information Governance Manager | Immediately |
+| Assessment: what data, how many people, how sensitive, who received it, likelihood and severity of harm | Information Governance Manager | Within 2 working days |
+| Decision: whether the regulator must be notified (within 72 hours of the University becoming aware) and whether the individuals affected must be told | Data Protection Officer with the University Secretary | Within 72 hours |
+| Notification of affected individuals, where required | Owning team, with wording agreed by the DPO | As soon as practicable |
+| Review meeting: what went wrong and what changes | Information Governance Manager, the reporter, their line manager | Within 10 working days |
+| Closure: actions recorded and **verified as complete** | Information Governance Manager | When actions are done |
+| Incident log updated | Information Governance Manager | Throughout |
+
+## 4. Containment checklist for a misdirected email
+
+1. Recall the message if the system allows. Assume recall will fail.
+2. Email every recipient: ask them to delete the message and any attachment, not to forward it, and to reply confirming they have done so. Use the template in the Information Governance library.
+3. Record who has confirmed. Chase the rest after two working days.
+4. If the attachment was also saved anywhere else as a result (a team folder, a teaching library), **remove it and confirm that it has gone**. Do not rely on the recipient having done so.
+5. Tell the individual whose data it was, if the DPO decides this is required. Usually, for Confidential student material sent to staff who should not have had it, it is.
+
+## 5. Learning from incidents
+
+Every closed incident has a one-paragraph lesson added to the Information Governance training deck and, where a procedure was at fault, the procedure is revised. Incident references take the form INC-NNNN and are cited in any revised document.
+
+## 6. Version history
+
+| Version | Date | Change |
+|---|---|---|
+| 1.0 | 10 June 1050 | Approved |
+| 1.1 | 1 September 1052 | Near misses brought into scope |
+| 1.2 | 10 March 1053 | Step 4 of the misdirected email checklist strengthened following INC-0031: removal of copies must be verified, not assumed |

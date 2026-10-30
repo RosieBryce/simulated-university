@@ -1,0 +1,39 @@
+::: footer current
+
+# How to read our reports
+
+Quorin Deepmirror, Head of Planning and Insight. Version 03, January 1051. Every report we issue begins with a shorter version of this page. This is the long version, for people who want to argue with us.
+
+## 1. Every number has a denominator
+
+A rate is a count divided by a population. When a figure in one of our reports surprises you, the first question is "out of how many?" A good honours rate of 70% from ten graduates and one of 70% from a thousand are not the same fact. We print the denominator next to the rate. If a document quotes our figure without its denominator, it is not quoting us.
+
+## 2. Small numbers move
+
+Programme-level figures in this University are built from dozens of students, not thousands. A movement of several percentage points in a good honours rate, or of 0.1 in a survey mean, is what those numbers do on their own. We suppress figures below 20 in a group and we ask colleagues to read five-year tables rather than single points. A single year is a weather report. Five years is a climate.
+
+## 3. A gap is a difference between two rates
+
+The awarding gap is the Elf good honours rate minus the Dwarf rate, in percentage points. It is not a percentage of anything. It can move because either rate moved. "The gap narrowed" can mean Dwarf graduates did better, or Elf graduates did worse, and those are different stories.
+
+## 4. Year labels
+
+Graduating year 1052 means students who completed in academic year 1051-52. NSS 1052 means the survey of finalists in 1051-52, published in August 1052. We use the year the result became known. Documents elsewhere in the University use the academic year. Check which.
+
+## 5. Who is in the population
+
+Only graduates have an honours classification and only finalists answer the NSS. A Year 1 student's experience appears in neither; for that, use the enrolment survey. And a Faculty figure is an average of departments: an action plan written for one department on the basis of the Faculty figure may be responding to other people's students.
+
+## 6. Correlation, cause and what to do
+
+Our analyses find that the species gap is carried by prior education, socioeconomic position, disability and early engagement. That is a statement about where the difference sits, not a statement that species does not matter: those circumstances are not distributed evenly between the two species, and that is itself the thing to think about. It does tell you where action is likely to have an effect: the first year, engagement, support.
+
+## 7. What to do with our caveats
+
+Keep them. A figure quoted without its caveat is a figure we will have to correct later, in public, which embarrasses the person who quoted it more than it embarrasses us.
+
+## 8. What we will not do
+
+We will not produce a figure to a deadline that is shorter than the time it takes to check it. We will not sign off a paper that quotes our numbers in a way we would not. We will, always, sit down with you and go through it.
+
+Q.D.

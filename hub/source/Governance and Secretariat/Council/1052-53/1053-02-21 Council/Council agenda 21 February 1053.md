@@ -1,0 +1,36 @@
+---
+title: Council agenda 21 February 1053
+format: docx
+author: gudrik-bannerstone
+created: 1053-02-13
+modified: 1053-02-13
+label: Internal
+sensitive: false
+site: governance
+library: gov-council
+path: 1052-53/1053-02-21 Council
+storylines: [awarding-gap]
+skills: [1]
+---
+
+::: footer current
+
+# COUNCIL
+
+## Agenda for the meeting to be held on 21 February 1053 at 10:00 in the Council Chamber
+
+| No. | Item | Purpose | Paper | Lead | Time |
+|---|---|---|---|---|---|
+| 1 | Welcome, apologies and declarations of interest | | Oral | Chair | 5 min |
+| 2 | Minutes of the meeting held on 21 November 1052 | To approve | Attached | Chair | 5 min |
+| 3 | Matters arising and action log | To note | C/1053/01 | Secretary | 5 min |
+| 4 | Vice-Chancellor's report | To note | C/1053/02 | Vice-Chancellor | 15 min |
+| 5 | Faculty of Health and Education: response to the student outcomes report | To discuss | Oral | Dean | 20 min |
+| 6 | Artificial Intelligence Acceptable Use Policy: report of approval by Senate | To note | C/1053/03 | University Secretary | 5 min |
+| 7 | Mid-year financial report | To note | C/1053/04 | Director of Finance | 15 min |
+| 8 | Information governance annual report, including incidents | To note | C/1053/05 | Information Governance Manager | 10 min |
+| 9 | Any other business | | Oral | Chair | 5 min |
+| 10 | Reserved business | | Separate circulation | Chair | 15 min |
+| 11 | Date of next meeting: 22 May 1053, 10:00 | | | | |
+
+Secretary to Council: Thalira Everjudged, University Secretary. Clerk: Gudrik Bannerstone, extension 2004.

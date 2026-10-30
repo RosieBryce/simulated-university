@@ -146,3 +146,9 @@ data/archive/
 # Configuration files with sensitive data (if any)
 # config/secrets.yaml
 # .env.local 
+# Stonegrove Hub: the global build/ and downloads/ patterns above must not swallow these
+!hub/build/
+!docs/hub/downloads/
+hub/output/
+!docs/hub/estate/**/*.tmp
+!docs/hub/estate/**/~$*

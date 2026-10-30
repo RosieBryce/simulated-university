@@ -1,0 +1,103 @@
+# Files the build copies in but never generates or overwrites. OUT OF WORLD.
+#
+# Each entry names a path inside hub/source/ (and therefore the estate). If
+# the file exists there, build_estate.py copies it as-is. If it does not,
+# the build creates the placeholder described and marks it `placeholder: true`
+# in the manifest. Rosie replaces placeholders by hand at any time; a rebuild
+# will not touch a file that is present.
+#
+# Everything here is in the Communications / Brand library unless noted.
+
+policy:
+  never_overwrite: true
+  manifest_flag: hand_supplied
+  placeholder_flag: placeholder
+
+files:
+
+  # ------------------------------------------------------------ logo
+  - path: "Communications/Brand/Logo/Stonegrove University logo.png"
+    kind: image
+    placeholder: >
+      Copy of curriculum-and-lore/World-building/assets/Stonegrove/
+      stongegrove-coat-of-arms-transparent-bg.png with the wordmark
+      "Stonegrove University" set in Playfair Display beneath, navy on
+      transparent, rendered by the build with Pillow.
+  - path: "Communications/Brand/Logo/Stonegrove University logo reversed.png"
+    kind: image
+    placeholder: Same, parchment on navy panel.
+  - path: "Communications/Brand/Logo/Coat of arms/Coat of arms.png"
+    kind: image
+    placeholder: Copy of stongegrove-coat-of-arms.png.
+  - path: "Communications/Brand/Logo/Coat of arms/Coat of arms transparent.png"
+    kind: image
+    placeholder: Copy of stongegrove-coat-of-arms-transparent-bg.png.
+  - path: "Communications/Brand/Logo/Logo clear space diagram.png"
+    kind: image
+    placeholder: Generated diagram showing the shield-height clear space rule.
+
+  # ------------------------------------------------------------ colour and type
+  - path: "Communications/Brand/Colour and Type/Colour palette.png"
+    kind: image
+    placeholder: Generated swatch sheet of the six palette colours with hex codes and names.
+  - path: "Communications/Brand/Colour and Type/Colour palette.pdf"
+    kind: document
+    placeholder: Same as PDF.
+  - path: "Communications/Brand/Colour and Type/Type specimen.pdf"
+    kind: document
+    placeholder: Generated specimen of Playfair Display and Source Sans 3 (fonts already used by docs/).
+
+  # ------------------------------------------------------------ the guide
+  - path: "Communications/Brand/Brand Guide/Brand Guide 1051 v2.1.docx"
+    kind: document
+    placeholder: >
+      Authored in-world by Sorell as a Markdown source (phase 2), rendered to
+      docx by the build. Rosie may replace the rendered file or edit the source.
+  - path: "Communications/Brand/Brand Guide/Brand quick reference.pdf"
+    kind: document
+    placeholder: One page. Logo, palette, type, the five never-dos.
+
+  # ------------------------------------------------------------ templates
+  - path: "Communications/Brand/Templates/Document template.docx"
+    kind: document
+    placeholder: Generated with python-docx, on brand, current footer.
+  - path: "Communications/Brand/Templates/Slide template.pptx"
+    kind: document
+    placeholder: Generated with python-pptx, on brand, two typefaces.
+  - path: "Communications/Brand/Templates/Email signature.txt"
+    kind: text
+    placeholder: Name, title, Stonegrove University, ext, email, one line. No quotes, no images.
+  - path: "Communications/Brand/Templates/Letterhead.docx"
+    kind: document
+    placeholder: Generated, on brand.
+
+  # ------------------------------------------------------------ photos (the mess uses a few)
+  - path: "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/Away day 1051/away day 1.jpg"
+    kind: image
+    placeholder: Small (under 200 KB) copy of a campus image from World-building/assets/Stonegrove, downscaled.
+  - path: "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/Away day 1051/away day 2.jpg"
+    kind: image
+    placeholder: As above, different image.
+  - path: "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/Away day 1051/away day 3.jpg"
+    kind: image
+    placeholder: As above.
+  - path: "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/IMG_2231.jpg"
+    kind: image
+    placeholder: As above.
+  - path: "Faculty of Health and Education/StoneShare Migration/Faculty Shared/Photos/IMG_2232.jpg"
+    kind: image
+    placeholder: As above.
+
+  # ------------------------------------------------------------ off-brand images (planted)
+  - path: "Faculty of Health and Education/Department of Education/Marketing/Jaskel/pencil tree logo.png"
+    kind: image
+    placeholder: Generated tree-of-pencils shape, gradient, two wrong greens. See off_brand B02.
+  - path: "Faculty of Health and Education/Department of Education/Marketing/Jaskel/pencil tree logo small.png"
+    kind: image
+    placeholder: Same, 120 px.
+  - path: "Faculty of Health and Education/Department of Education/Marketing/Jaskel/pencil tree logo FINAL.png"
+    kind: image
+    placeholder: Same, with a drop shadow.
+  - path: "Communications/Archive/Pre-1051 brand/College of the Vale logo/College of the Vale logo.png"
+    kind: image
+    placeholder: Generated old wordmark in a serif, maroon, with the crest. Deliberately dated.
