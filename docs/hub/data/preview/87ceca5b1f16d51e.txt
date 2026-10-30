@@ -19,7 +19,7 @@ Extracts in this folder are cut from the institutional student record for the Fa
 - **Good honours**: First or Upper Second class degree.
 - **Awarding gap**: good honours rate for Elf graduates minus the rate for Dwarf graduates, in percentage points.
 - **NSS year**: the year the survey is published. NSS 1052 surveyed finalists in 1051-52.
-- **Finalists**: students in the final year of their programme. Two-year programmes have finalists in Year 2 but are not surveyed; the NSS covers three-year programmes only.
+- **Finalists**: students in Year 3. All twelve of the Faculty's programmes are three-year honours programmes, so every programme has finalists in the NSS and graduates with a classification.
 - **Species** is recorded as declared at enrolment.
 
 ## Caveats

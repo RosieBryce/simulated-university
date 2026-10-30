@@ -46,7 +46,7 @@ transcript_id: T2
 [00:02:54] cyranor-goldmantle: It doesn't matter. The point of the paper isn't the numbers. The point is that Council sees the Faculty taking this seriously. Being bold about it.
 [00:03:02] saelith-emberthorn: with respect cyranor the point of the paper is partly the numbers because aerion specifically asked for figures by programme
 [00:03:08] cyranor-goldmantle: And we'll have them. Quorin can give us the table.
-[00:03:11] dagna-chiselhand: Quorin says the table's mostly blank because half our programmes are two years and don't have a gap. He said that in his email. Short version: you can't have it by programme because there isn't one.
+[00:03:11] dagna-chiselhand: Quorin says once you split each programme by species some of the cells are under twenty and he has to suppress them. He said that in his email. Short version: you can have it by programme, but not all of it, and not the way the Dean's draft does it.
 [00:03:20] cyranor-goldmantle: Then we say that. Boldly.
 [00:03:22] caerel-candletome: I wonder whether, forgive me, I wonder whether what Council actually wants is less a paper and more an answer to Aerion's three questions, which were, as I recall, what are the figures, what will you do, how will you know. And whether the figures part should simply be Planning's paragraph and table, verbatim, and the rest should be ours.
 [00:03:40] brekka-anvildancer: That's what Quorin suggested as well.
@@ -60,7 +60,7 @@ transcript_id: T2
 [00:04:15] caerel-candletome: Oh, I'd rather you didn't, I have the revalidation response due on the thirtieth.
 [00:04:18] elowen-fogwhisper: Oh no of course. Sorry. Not Caerel.
 [00:04:20] cyranor-goldmantle: Item four. NSS. Saelith.
-[00:04:23] saelith-emberthorn: ok so. the action plan is at version five, which i know, and it's with the department. we've done the focus groups, we've got the feedback workshops starting fortnightly from february which they have, mostly. the thing i'd flag is that erra's deep dive says education doesn't have nss results because we're two year programmes which i understand but it reads as if we shouldn't be doing anything, and we are doing things, and i'd like that recognised
+[00:04:23] saelith-emberthorn: ok so. the action plan is at version five, which i know, and it's with the department. we've done the focus groups, we've got the feedback workshops starting fortnightly from february which they have, mostly. the thing i'd flag is that erra's deep dive says education's scores actually went up and the fall is in health, which i understand, but it reads as if we shouldn't be doing anything, and we are doing things, and i'd like that recognised
 [00:04:45] brekka-anvildancer: I don't think Erra said you shouldn't do anything. She said the Faculty figures aren't about your students.
 [00:04:50] saelith-emberthorn: it's the same thing when you're the one with the action plan
 [00:04:52] cyranor-goldmantle: We recognise it. Minute that we recognise it. Caerel, OT.

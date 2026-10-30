@@ -522,7 +522,7 @@ sites:
         hint: >
           Small cuts of the full dataset for this Faculty. Enough to
           check the Dean's figures, trace the NSS movement by programme,
-          and notice which programmes have no graduates at all. The full
+          and notice how quickly a by-programme table runs into small numbers. The full
           dataset is on the main site.
         default_label: Internal
         mess_profile: island

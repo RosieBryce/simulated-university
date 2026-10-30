@@ -16,7 +16,7 @@ skills: [2]
 ```sheet:Requests
 Ref,Received,Requester,Team,Request,Classification of output,Assigned,Due,Status,Delivered,Notes
 PI-1052-031,1052-08-20,Dean H and E,Faculty,NSS 1052 Faculty deep dive,Internal,Erra,1052-10-17,Done,1052-10-17,Report in Reports library
-PI-1052-034,1052-09-03,Head of Education,Dept of Education,NSS free text comments for Education,Internal,Erra,1052-09-10,Done (declined),1052-09-05,Education has no NSS finalists. Pointed to enrolment survey instead. Requester not pleased.
+PI-1052-034,1052-09-03,Head of Education,Dept of Education,NSS free text comments for Education,Internal,Erra,1052-09-10,Done,1052-09-05,Supplied. Noted that Education's A and F went up; the Faculty fall is Health. Requester still worried.
 PI-1052-036,1052-09-15,Head of Admissions,Admissions,Weekly conversion dashboard export,Internal,Teylin,Weekly,Ongoing,,Automated from 1052-10
 PI-1052-039,1052-10-01,Head of P and I,Planning,Faculty awarding gap extract by programme for Council report,Internal,Erra,1052-10-31,Open,,Started 1052-10-03. Paused for NSS deep dive. Not yet QA'd.
 PI-1052-041,1052-10-20,Quality,Quality,Exam board marks tables Health programmes,Confidential,Erra,1053-05-30,Scheduled,,Student IDs only

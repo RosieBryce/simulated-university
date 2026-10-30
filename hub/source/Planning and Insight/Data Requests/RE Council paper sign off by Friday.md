@@ -27,7 +27,7 @@ First, the headline figure. The draft gives the Faculty gap as {{ he_good_degree
 
 Second, on the second page the draft says that "{{ he_good_degree_rate_elf_1052 }}% of Dwarf graduates in the Faculty achieved a good degree". That is the Elf rate. The Dwarf rate is {{ he_good_degree_rate_dwarf_1052 }}%. The two have been transposed. Council will notice, because the sentence as written says there is no gap.
 
-Third, "the gap has narrowed over the past three years". It has moved up and down. Please use the five-year table from the annual report rather than a sentence about direction.
+Third, "the gap has narrowed steadily, year on year". It has not. It has moved up and down. Please use the five-year table from the annual report rather than a sentence about direction.
 
 I know the Dean wants to add a section on being bold. I have no view on boldness. I do have a view on the numbers, which is that they should be ours and they should be right, and then the Dean can be as bold as he likes about what the Faculty will do.
 

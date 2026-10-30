@@ -60,7 +60,7 @@ When these are taken into account the residual difference by species is small. T
 
 ## Programme level
 
-Programme-level figures are available for programmes with 20 or more graduates in a group. For 1052 graduates in this Faculty only Somatic Wellbeing Enquiry meets the threshold in both groups; the remaining programmes are either two-year programmes without honours classification or have too few graduates to report. The Faculty should be cautious about any programme-level claim.
+Programme-level figures are available in the extract for programmes with 20 or more graduates in a group. Every programme in the Faculty graduates enough students to report overall; split by species, a few fall below the threshold in one group and are suppressed. Programmes with smaller cohorts move by several points from year to year on their own. The Faculty should be cautious about any programme-level claim, and should not set programme-level targets.
 
 ## Recommendations
 

@@ -27,7 +27,7 @@ hub/
     make_mess.py           applies mess_rules.yaml deterministically
     lint_filenames.py      enforces filename_rules.yaml
     make_zips.py           estate, per-site and per-library zips, each with README.txt
-  output/                  generated; gitignored except what ships
+  (build output goes to %TEMP%/stonegrove-hub-build, outside the Drive-synced repo; set HUB_BUILD_DIR to override)
 scripts/
   make_hub_extracts.py     dataset -> Planning and Insight extracts + values.yaml (phase 1)
 docs/hub/                  the explorer and Learner Guide (phase 1 onwards)

@@ -24,7 +24,7 @@ Planning and Insight, 2 September 1052. For Senate and Faculties.
 - Finalists surveyed in 1051-52; published August 1052
 - Means on a 1 to 5 scale; respondents only
 - Programme-level movements of 0.1 are noise
-- Two-year programmes have no finalists in the NSS
+- A Faculty average can hide departments moving in opposite directions
 
 ---
 
@@ -33,8 +33,8 @@ Planning and Insight, 2 September 1052. For Senate and Faculties.
 - Overall satisfaction: {{ he_nss_overall_1051 }} to {{ he_nss_overall_1052 }}
 - Assessment and Feedback: {{ he_nss_assessment_feedback_1051 }} to {{ he_nss_assessment_feedback_1052 }}
 - Respondents: {{ he_nss_respondents_1052 }}
-- Movement concentrated in Occupational Therapy and Somatic Wellbeing Enquiry
-- Department of Education: no finalists, no results
+- Department of Health, Assessment and Feedback: {{ health_nss_assessment_feedback_1051 }} to {{ health_nss_assessment_feedback_1052 }}
+- Department of Education, Assessment and Feedback: {{ education_nss_assessment_feedback_1051 }} to {{ education_nss_assessment_feedback_1052 }}
 
 ---
 

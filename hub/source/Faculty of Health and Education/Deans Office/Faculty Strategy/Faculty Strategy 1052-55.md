@@ -30,7 +30,7 @@ We educate the people who care for, teach and support others: nurses, midwives, 
 
 The Faculty has {{ he_enrolled_1052 }} students across twelve programmes in two departments. Demand for our regulated programmes is strong. Our placement network of around thirty providers is the Faculty's most valuable asset and its most fragile.
 
-We know three things about ourselves that we do not like. Our Dwarf graduates are awarded good honours less often than our Elf graduates, by {{ he_good_degree_gap_1052 }} percentage points for 1052 graduates, for reasons that sit in the circumstances students arrive with and in what we do in the first year. Our students on three-year programmes tell us that assessment and feedback in the second year is too heavy and too slow. And our administration runs on individuals rather than systems.
+We know three things about ourselves that we do not like. Our Dwarf graduates are awarded good honours less often than our Elf graduates, by {{ he_good_degree_gap_1052 }} percentage points for 1052 graduates, for reasons that sit in the circumstances students arrive with and in what we do in the first year. Our students tell us, in the NSS and in the enrolment survey, that assessment and feedback in the second year is too heavy and too slow. And our administration runs on individuals rather than systems.
 
 ## Four aims
 

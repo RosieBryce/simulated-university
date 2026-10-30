@@ -31,7 +31,7 @@ Appendix F: Proposed Year 2 assessment pattern
 
 ## 1. Summary
 
-The Occupational Therapy programme has run since 1047 and was last revalidated in that year. It recruits well, its students progress and achieve at rates comparable with the University's other three-year health programmes, its external examiner confirms standards every year, and its graduates are employed in the profession. The programme team is proud of it.
+The Occupational Therapy programme has run since 1047 and was last revalidated in that year. It recruits well, its students progress and achieve at rates comparable with the Faculty's other health programmes, its external examiner confirms standards every year, and its graduates are employed in the profession. The programme team is proud of it.
 
 The programme also has a problem it has not solved. Year 2 carries twelve summative assessment points across six modules. The external examiner has recommended a reduction in each of the last three reports. Students' NSS responses on Assessment and Feedback fell in 1052 and their free text says what the external says. The programme's annual monitoring has recorded the matter as "under review" three times. The team accepts that this is not good enough and that the honest reason is not disagreement with the recommendation but the difficulty of changing six module descriptors outside a revalidation. This revalidation is the opportunity, and section 11 and Appendix F set out a Year 2 pattern with seven assessment points rather than twelve.
 
@@ -41,7 +41,7 @@ The team asks the panel to revalidate the programme for a further five years wit
 
 ## 2. The programme and its context
 
-2.1 Occupational Therapy is a three-year honours programme in the Department of Health, Faculty of Health and Education. It leads to eligibility for professional registration. It is one of five three-year programmes in the Faculty and the only one in which the central concept, occupation, is as much a philosophy as a clinical practice.
+2.1 Occupational Therapy is a three-year honours programme in the Department of Health, Faculty of Health and Education. It leads to eligibility for professional registration. It is one of the Faculty's twelve three-year honours programmes and the only one in which the central concept, occupation, is as much a philosophy as a clinical practice.
 
 2.2 The programme was designed in 1046 and 1047 at the time of the Faculty's reorganisation and has been taught with minor modification since. It sits alongside Physiotherapy, with which it shares two modules and a placement provider (Riverside Rehabilitation Unit), and alongside Nursing and Care, with which it shares NC204 Mental Health and Wellbeing in Care.
 
@@ -51,7 +51,7 @@ The team asks the panel to revalidate the programme for a further five years wit
 
 3.1 **Recruitment.** The programme recruits a cohort of around forty each year, with applications running at roughly three per place. Entry is by standard University requirements, health declaration, enhanced vetting and interview. Contextual offers are made. The programme attracts a higher proportion of Dwarf applicants than the Faculty average, which the team attributes to the practical and craft-adjacent character of the discipline, and welcomes.
 
-3.2 **Profile.** Current enrolment is 256 across the three years. The cohort is roughly balanced by species. A significant minority of students have a support plan with Student Wellbeing, most commonly for a specific learning difference.
+3.2 **Profile.** Current enrolment is 265 across the three years. The cohort is roughly balanced by species. A significant minority of students have a support plan with Student Wellbeing, most commonly for a specific learning difference.
 
 3.3 **Progression.** Progression from Year 1 to Year 2 and from Year 2 to Year 3 is in line with the Faculty. Withdrawal is low and clusters in the first semester of Year 1, where it is usually about the student discovering the profession is not for them rather than about the programme.
 
@@ -81,7 +81,7 @@ The team asks the panel to revalidate the programme for a further five years wit
 
 6.3 **The external examiner's recommendation.** Dr Boughwitness has recommended a reduction in Year 2 assessment load in her 1050, 1051 and 1052 reports. The programme's responses are reproduced in Appendix E. Each stated that the matter was under review. The team wishes to be honest with the panel about why the review did not conclude: changing the assessment pattern means changing six module descriptors, which under the University's modification procedure requires approval for each through the Faculty and Quality, and the team judged, in 1050 and again in 1051, that it would be more efficient to make all the changes at revalidation. In retrospect the team should have made at least some of the changes earlier, and should have said so to the external rather than repeating "under review".
 
-6.4 **Student experience.** NSS 1052 Assessment and Feedback for the programme was 3.74, from 3.82 the year before. Overall satisfaction was 3.76, from 3.87. Free text comments cluster on volume of assessment in Year 2, the time taken to return feedback, and feedback that reports the mark without saying what to do. The team recognises all three. Feedback turnaround in Year 2 semester 2 averaged nineteen working days in 1051-52 against the Faculty standard of fifteen; the cause is the coincidence of marking with placement visits, which the proposed pattern addresses by moving one assessment point out of that window.
+6.4 **Student experience.** NSS 1052 Assessment and Feedback for the programme was 3.52, from 3.7 the year before. Overall satisfaction was 3.84, from 3.77. Free text comments cluster on volume of assessment in Year 2, the time taken to return feedback, and feedback that reports the mark without saying what to do. The team recognises all three. Feedback turnaround in Year 2 semester 2 averaged nineteen working days in 1051-52 against the Faculty standard of fifteen; the cause is the coincidence of marking with placement visits, which the proposed pattern addresses by moving one assessment point out of that window.
 
 6.5 **Marking.** Marking is anonymous where the form permits and moderated by sample. The external confirms accuracy at programme level. The external has twice raised the calibration of one marker on a Year 2 module. The team has addressed this through moderation and acknowledges the external's point that moderation treats the symptom. The matter is addressed in a reserved paper to the panel and the team asks that it not be discussed in open session.
 
@@ -155,12 +155,12 @@ Year 2 summative points: 12. Year 1: 9. Year 3: 7.
 
 | Measure | Value | Source |
 |---|---|---|
-| Enrolled 1052-53, all years | 256 | Planning and Insight, Data Extracts |
-| NSS 1052 overall satisfaction | 3.76 | Planning and Insight |
-| NSS 1051 overall satisfaction | 3.87 | Planning and Insight |
-| NSS 1052 Assessment and Feedback | 3.74 | Planning and Insight |
-| NSS 1051 Assessment and Feedback | 3.82 | Planning and Insight |
-| Faculty good honours gap, 1052 graduates (pp) | 18.9 | Awarding Gap Annual Report 1051-52 |
+| Enrolled 1052-53, all years | 265 | Planning and Insight, Data Extracts |
+| NSS 1052 overall satisfaction | 3.84 | Planning and Insight |
+| NSS 1051 overall satisfaction | 3.77 | Planning and Insight |
+| NSS 1052 Assessment and Feedback | 3.52 | Planning and Insight |
+| NSS 1051 Assessment and Feedback | 3.7 | Planning and Insight |
+| Faculty good honours gap, 1052 graduates (pp) | 21.5 | Awarding Gap Annual Report 1051-52 |
 
 Programme-level good honours figures are not reproduced on Planning and Insight's advice regarding cohort size.
 

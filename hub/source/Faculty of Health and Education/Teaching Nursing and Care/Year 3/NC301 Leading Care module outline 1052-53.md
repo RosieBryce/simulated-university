@@ -17,18 +17,18 @@ skills: []
 
 # NC301 Leading Care
 
-## Module outline 1052-53 (Year 3 pathway, from 1053-54)
+## Module outline 1052-53
 
-Nursing and Care currently runs as a two-year programme with progression to registration via the partner route. The Year 3 pathway below is outlined for the revalidation submission and for students who have asked what a third year would contain. It is not running in 1052-53. This folder exists because someone created it in 1050 and nobody has deleted it.
+Year 3, 40 credits, semesters 1 and 2. Module leader: Dagna Chiselhand. The module prepares students for registration: leading care, not just giving it. This is the outline; the full handbook is on the module page and, as of April, has not been copied to this folder. (Someone created this folder in 1050 and it has had one file in it ever since.)
 
-## Proposed content
+## Content
 
 - Leading a shift: delegation, supervision of students and support workers, escalation.
 - Quality and safety: audit, incident review, learning from error.
 - Transition to registration: the first year in practice.
-- Management placement: twelve weeks.
+- Management placement: twelve weeks, allocated by the Programme Support Team alongside Year 2 placements.
 
-## Proposed assessment
+## Assessment
 
 | Component | Weighting |
 |---|---|

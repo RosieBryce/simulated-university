@@ -1,37 +1,72 @@
 department,programme_name,programme_year,year_outcome,students
 Education,Education Studies,1,fail,4
-Education,Education Studies,1,pass,104
-Education,Educational Mentorship,1,fail,8
-Education,Educational Mentorship,1,pass,81
-Education,Intergenerational Learning,1,fail,26
-Education,Intergenerational Learning,1,pass,104
-Health,Herbal Practice and Energy Work,1,fail,4
-Health,Herbal Practice and Energy Work,1,pass,117
-Health,Integrated Mind-Body,1,fail,11
-Health,Integrated Mind-Body,1,pass,81
-Health,Midwifery,1,fail,14
-Health,Midwifery,1,pass,83
-Health,Nursing and Care,1,fail,18
-Health,Nursing and Care,1,pass,103
-Health,Occupational Therapy,1,fail,10
-Health,Occupational Therapy,1,pass,78
-Health,Occupational Therapy,2,fail,4
-Health,Occupational Therapy,2,pass,77
-Health,Pharmacy,1,fail,8
-Health,Pharmacy,1,pass,55
-Health,Pharmacy,2,fail,1
-Health,Pharmacy,2,pass,50
-Health,Physiotherapy,1,fail,36
-Health,Physiotherapy,1,pass,68
-Health,Physiotherapy,2,fail,5
-Health,Physiotherapy,2,pass,77
-Health,Social Work,1,fail,15
-Health,Social Work,1,pass,65
-Health,Social Work,2,fail,17
-Health,Social Work,2,pass,65
-Health,Somatic Wellbeing Enquiry,1,fail,38
-Health,Somatic Wellbeing Enquiry,1,pass,126
-Health,Somatic Wellbeing Enquiry,2,fail,30
-Health,Somatic Wellbeing Enquiry,2,pass,133
-Health,Somatic Wellbeing Enquiry,3,fail,4
-Health,Somatic Wellbeing Enquiry,3,pass,125
+Education,Education Studies,1,pass,107
+Education,Education Studies,2,fail,6
+Education,Education Studies,2,pass,105
+Education,Education Studies,3,fail,6
+Education,Education Studies,3,pass,87
+Education,Educational Mentorship,1,fail,6
+Education,Educational Mentorship,1,pass,84
+Education,Educational Mentorship,2,fail,6
+Education,Educational Mentorship,2,pass,87
+Education,Educational Mentorship,3,fail,13
+Education,Educational Mentorship,3,pass,75
+Education,Intergenerational Learning,1,fail,9
+Education,Intergenerational Learning,1,pass,117
+Education,Intergenerational Learning,2,fail,6
+Education,Intergenerational Learning,2,pass,92
+Education,Intergenerational Learning,3,fail,12
+Education,Intergenerational Learning,3,pass,78
+Health,Herbal Practice and Energy Work,1,fail,10
+Health,Herbal Practice and Energy Work,1,pass,108
+Health,Herbal Practice and Energy Work,2,fail,8
+Health,Herbal Practice and Energy Work,2,pass,83
+Health,Herbal Practice and Energy Work,3,fail,12
+Health,Herbal Practice and Energy Work,3,pass,93
+Health,Integrated Mind-Body,1,fail,5
+Health,Integrated Mind-Body,1,pass,86
+Health,Integrated Mind-Body,2,fail,8
+Health,Integrated Mind-Body,2,pass,71
+Health,Integrated Mind-Body,3,fail,3
+Health,Integrated Mind-Body,3,pass,53
+Health,Midwifery,1,fail,5
+Health,Midwifery,1,pass,88
+Health,Midwifery,2,fail,4
+Health,Midwifery,2,pass,76
+Health,Midwifery,3,fail,16
+Health,Midwifery,3,pass,68
+Health,Nursing and Care,1,fail,8
+Health,Nursing and Care,1,pass,100
+Health,Nursing and Care,2,fail,10
+Health,Nursing and Care,2,pass,79
+Health,Nursing and Care,3,fail,8
+Health,Nursing and Care,3,pass,83
+Health,Occupational Therapy,1,fail,4
+Health,Occupational Therapy,1,pass,81
+Health,Occupational Therapy,2,fail,3
+Health,Occupational Therapy,2,pass,79
+Health,Occupational Therapy,3,fail,16
+Health,Occupational Therapy,3,pass,82
+Health,Pharmacy,1,fail,4
+Health,Pharmacy,1,pass,52
+Health,Pharmacy,2,fail,6
+Health,Pharmacy,2,pass,53
+Health,Pharmacy,3,fail,8
+Health,Pharmacy,3,pass,43
+Health,Physiotherapy,1,fail,9
+Health,Physiotherapy,1,pass,84
+Health,Physiotherapy,2,pass,88
+Health,Physiotherapy,3,fail,13
+Health,Physiotherapy,3,pass,78
+Health,Social Work,1,fail,5
+Health,Social Work,1,pass,67
+Health,Social Work,2,fail,2
+Health,Social Work,2,pass,78
+Health,Social Work,3,fail,8
+Health,Social Work,3,pass,65
+Health,Somatic Wellbeing Enquiry,1,fail,9
+Health,Somatic Wellbeing Enquiry,1,pass,142
+Health,Somatic Wellbeing Enquiry,2,fail,8
+Health,Somatic Wellbeing Enquiry,2,pass,147
+Health,Somatic Wellbeing Enquiry,3,fail,23
+Health,Somatic Wellbeing Enquiry,3,pass,124

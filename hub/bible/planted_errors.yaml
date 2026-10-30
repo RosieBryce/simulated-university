@@ -31,7 +31,7 @@ errors:
         truth: "The fall is {{ he_nss_assessment_feedback_1051 - he_nss_assessment_feedback_1052 }}; the summary doubles it."
       - kind: attribution
         text: "The decline is concentrated in the Department of Education."
-        truth: "Education has no NSS results at all (two-year programmes, no finalists). The fall is in Occupational Therapy and Somatic Wellbeing Enquiry, both Health."
+        truth: "Education's Assessment and Feedback rose ({{ education_nss_assessment_feedback_1051 }} to {{ education_nss_assessment_feedback_1052 }}). The fall is in Health ({{ health_nss_assessment_feedback_1051 }} to {{ health_nss_assessment_feedback_1052 }}), led by OT, SWE and Pharmacy."
       - kind: invented_action
         text: "The Department has committed to weekly feedback clinics from January 1053."
         truth: "No such commitment appears in any source. The action plan says fortnightly feedback workshops from February."
@@ -40,7 +40,7 @@ errors:
         truth: "23 October 1052 (T6)."
       - kind: omission
         text: ""
-        truth: "The summary omits the deep dive's main caveat: the Department of Education has no NSS-eligible students, so its action plan responds to Faculty-level results."
+        truth: "The summary omits the deep dive's main caveat: the two departments moved in opposite directions, so a Faculty-level plan applied to Education responds to a fall that was not Education's."
 
   - id: E02
     storyline: awarding-gap
@@ -65,8 +65,8 @@ errors:
         text: "{{ he_good_degree_rate_elf_1052 }}% of Dwarf graduates in the Faculty achieved a good degree."
         truth: "That is the Elf rate. The Dwarf rate is {{ he_good_degree_rate_dwarf_1052 }}%."
       - kind: unsupported_claim
-        text: "The gap has narrowed over the past three years."
-        truth: "Templated to say 'narrowed' regardless. Check against the five-year table; in the shipped seed it has not."
+        text: "The gap has narrowed steadily, year on year."
+        truth: "It has moved up and down (see the five-year table). 'Steadily' is the error; it is false for any seed in which one year rises, which in practice is all of them."
 
   - id: E03
     storyline: revalidation

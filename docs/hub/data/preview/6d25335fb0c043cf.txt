@@ -12,15 +12,15 @@ Good honours means a First or Upper Second. The awarding gap is the Elf good hon
 
 ## Headline
 
-For 1051 graduates, 70.0% of Elf graduates and 42.1% of Dwarf graduates achieved good honours. The gap is **27.9 percentage points**, from 97 graduates.
+For 1051 graduates, 57.3% of Elf graduates and 27.0% of Dwarf graduates achieved good honours. The gap is **30.2 percentage points**, from 902 graduates.
 
 ## Three years
 
 | Graduating year | Graduates | Elf % | Dwarf % | Gap (pp) |
 |---|---|---|---|---|
-| 1049 | 78 | 83.3 | 54.8 | 28.6 |
-| 1050 | 127 | 67.3 | 44.0 | 23.3 |
-| 1051 | 97 | 70.0 | 42.1 | 27.9 |
+| 1049 | 884 | 61.5 | 36.5 | 24.9 |
+| 1050 | 948 | 59.1 | 34.7 | 24.4 |
+| 1051 | 902 | 57.3 | 27.0 | 30.2 |
 
 ## Commentary
 

@@ -47,7 +47,7 @@ The gap in good honours between Elf and Dwarf graduates in the Faculty stands at
 
 Looking across the Faculty, {{ he_good_degree_rate_elf_1052 }}% of Dwarf graduates in the Faculty achieved a good degree. We believe this is a figure the Faculty can and must improve.
 
-The gap has narrowed over the past three years, which demonstrates that the Faculty's existing efforts are bearing fruit, but there is much more to do.
+The gap has narrowed steadily, year on year, which demonstrates that the Faculty's existing efforts are bearing fruit, but there is much more to do.
 
 By programme: [Elowen to get table from Quorin]
 

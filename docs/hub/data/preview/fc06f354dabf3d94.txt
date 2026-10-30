@@ -16,18 +16,18 @@ Planning and Insight. Version 01, 10 November 1052. Prepared for Council (C/1052
 
 ## Headline
 
-For 1052 graduates, 63.6% of Elf graduates and 44.8% of Dwarf graduates in the Faculty achieved good honours. The gap is **18.9 percentage points**, from 111 graduates.
+For 1052 graduates, 54.3% of Elf graduates and 32.8% of Dwarf graduates in the Faculty achieved good honours. The gap is **21.5 percentage points**, from 923 graduates.
 
-The corresponding figure for 1051 graduates was 27.9 percentage points. The movement between the two years should not be read as a trend; see the table below.
+The corresponding figure for 1051 graduates was 30.2 percentage points. The movement between the two years should not be read as a trend; see the table below.
 
 ## Five years
 
 | Graduating year | Graduates | Elf good honours % | Dwarf good honours % | Gap (pp) |
 |---|---|---|---|---|
-| 1049 | 78 | 83.3 | 54.8 | 28.6 |
-| 1050 | 127 | 67.3 | 44.0 | 23.3 |
-| 1051 | 97 | 70.0 | 42.1 | 27.9 |
-| 1052 | 111 | 63.6 | 44.8 | 18.9 |
+| 1049 | 884 | 61.5 | 36.5 | 24.9 |
+| 1050 | 948 | 59.1 | 34.7 | 24.4 |
+| 1051 | 902 | 57.3 | 27.0 | 30.2 |
+| 1052 | 923 | 54.3 | 32.8 | 21.5 |
 
 Source: institutional student record, good honours extract, 3 November 1052. The individual-level extract (student IDs only) is in Planning and Insight, Data Extracts.
 
@@ -44,7 +44,7 @@ When these are taken into account the residual difference by species is small. T
 
 ## Programme level
 
-Programme-level figures are available for programmes with 20 or more graduates in a group. For 1052 graduates in this Faculty only Somatic Wellbeing Enquiry meets the threshold in both groups; the remaining programmes are either two-year programmes without honours classification or have too few graduates to report. The Faculty should be cautious about any programme-level claim.
+Programme-level figures are available in the extract for programmes with 20 or more graduates in a group. Every programme in the Faculty graduates enough students to report overall; split by species, a few fall below the threshold in one group and are suppressed. Programmes with smaller cohorts move by several points from year to year on their own. The Faculty should be cautious about any programme-level claim, and should not set programme-level targets.
 
 ## Recommendations
 

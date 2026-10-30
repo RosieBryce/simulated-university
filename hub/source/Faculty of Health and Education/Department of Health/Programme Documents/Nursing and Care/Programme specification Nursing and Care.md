@@ -26,10 +26,10 @@ skills: [10]
 | Faculty | Faculty of Health and Education |
 | Department | Department of Health |
 | Programme title | Nursing and Care |
-| Final award | Diploma of Higher Education in Nursing and Care (two years, full time), leading to registration via the partner route |
-| Mode and duration | Full time, two years |
+| Final award | Bachelor of Science with Honours in Nursing and Care, leading to eligibility for professional registration |
+| Mode and duration | Full time, three years |
 | Programme leader | Dagna Chiselhand |
-| Last revalidated | 1051 |
+| Last revalidated | 1051 (Year 3 restructured) |
 | Next revalidation | 1056 |
 
 ## Aims
@@ -41,7 +41,7 @@ To prepare students to practise safely, competently and compassionately as regis
 On completion, students will be able to:
 
 1. Deliver fundamental care safely and with respect for the dignity of the person.
-2. Assess, plan, implement and evaluate care under supervision and, by the end of Year 2, with increasing independence.
+2. Assess, plan, implement and evaluate care under supervision and, by the end of Year 3, with the independence expected at the point of registration.
 3. Administer medicines safely and accurately, and document administration correctly.
 4. Communicate effectively with patients, families and the multidisciplinary team.
 5. Recognise and escalate deterioration.
@@ -54,6 +54,7 @@ On completion, students will be able to:
 |---|---|---|---|
 | 1 | NC101 Foundations of Nursing and Care (40); NC102 Anatomy and Physiology for Care (20); NC103 Communication and Care (20); NC104 Health and Society (20); NC105 Evidence for Practice (20) | 120 | Four-week introductory placement in semester 2 |
 | 2 | NC201 Placement Practice 2 (40); NC202 Pharmacology for Practice (20); NC203 Care of the Deteriorating Patient (20); NC204 Mental Health and Wellbeing in Care (20); NC205 Leadership and Teamworking (20) | 120 | Two six-week placements |
+| 3 | NC301 Leading Care (40); NC302 Quality Improvement Project (40); NC303 Complex Care (20); NC304 Transition to Practice (20) | 120 | Twelve-week management placement |
 
 ## Assessment
 
@@ -69,7 +70,7 @@ Standard University entry requirements plus a satisfactory health declaration an
 
 ## Progression and award
 
-Students must pass all modules to progress and to be awarded. There is no honours classification for this award.
+Students must pass all modules to progress and to be awarded. The honours classification is determined under Regulation D3 (Year 2 one third, Year 3 two thirds). A student who leaves after Year 2 having passed 240 credits is eligible for the Diploma of Higher Education as an exit award, which does not lead to registration.
 
 ## Fitness to practise
 

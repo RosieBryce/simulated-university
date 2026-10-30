@@ -29,7 +29,7 @@ D1.3 Placement and practice modules shall be passed before the student may under
 
 ## D2. Award
 
-D2.1 The Diploma of Higher Education shall be awarded to a student who has passed, or been compensated in, 240 credits across levels one and two of a two-year programme. The Diploma is not classified.
+D2.1 The Diploma of Higher Education shall be awarded as an exit award to a student who leaves a Bachelor's programme having passed, or been compensated in, 240 credits across levels one and two. The Diploma is not classified and does not confer eligibility for professional registration.
 
 D2.2 The Bachelor's degree with Honours shall be awarded to a student who has passed, or been compensated in, 360 credits across levels one, two and three of a three-year programme.
 

@@ -26,7 +26,7 @@ PROJECT = HUB.parent
 sys.path.insert(0, str(HERE))
 import renderers as R  # noqa: E402
 
-ESTATE = HUB / "output" / "estate"
+from build_estate import OUT as ESTATE  # noqa: E402
 MANIFEST = PROJECT / "docs" / "hub" / "data" / "manifest.json"
 DOWNLOADS = PROJECT / "docs" / "hub" / "downloads"
 ROOT = "stonegrove-hub"

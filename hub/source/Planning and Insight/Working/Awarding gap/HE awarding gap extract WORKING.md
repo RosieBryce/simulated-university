@@ -32,19 +32,20 @@ Graduating year,Graduates,Elf good honours pct,Dwarf good honours pct,Gap pp,QA
 ```sheet:Programme
 Programme,Graduates 1052,Elf pct,Dwarf pct,Gap,Suppress?,Note
 Somatic Wellbeing Enquiry,,,,,,see he_good_honours_by_programme_species_5yr.csv
-Occupational Therapy,,,,,,no graduates in extract?? check with Quality
-Pharmacy,,,,,,no graduates in extract?? check
-Physiotherapy,,,,,,no graduates in extract?? check
-Social Work,,,,,,no graduates in extract?? check
-Nursing and Care,0,,,,Y,two-year programme
-Midwifery,0,,,,Y,two-year programme
-Education Studies,0,,,,Y,two-year programme
+Occupational Therapy,,,,,,
+Pharmacy,,,,,Y?,Elf count small. check
+Physiotherapy,,,,,Y?,Elf count small. check
+Social Work,,,,,,
+Nursing and Care,,,,,,
+Midwifery,,,,,,
+Education Studies,,,,,,
+(other four not started),,,,,,
 ```
 
 ```sheet:Todo
 Item,Done
 Apply suppression rule (n lt 20),
-Check why only SWE has graduates in the extract. Record system issue or genuine?,
+Fill programme rows from the csv,
 Reconcile 1052 faculty figure with annual report draft,
 Add SES and prior education breakdown,
 Send to Quorin,

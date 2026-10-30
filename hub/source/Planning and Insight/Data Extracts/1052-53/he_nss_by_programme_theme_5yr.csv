@@ -1,26 +1,61 @@
 academic_year,nss_year,department,programme_name,respondents,teaching_quality,learning_opportunities,assessment_feedback,academic_support,organisation_management,learning_resources,student_voice,overall_satisfaction
-1048-49,1049,Health,Occupational Therapy,42,3.6,3.57,3.9,4.0,3.81,3.79,3.71,3.83
-1048-49,1049,Health,Pharmacy,27,3.56,3.67,3.85,3.93,3.63,3.85,3.67,3.85
-1048-49,1049,Health,Physiotherapy,44,3.75,3.68,3.86,4.05,3.93,3.7,3.64,3.95
-1048-49,1049,Health,Social Work,31,3.94,3.77,3.84,4.0,3.61,3.77,3.74,3.94
-1048-49,1049,Health,Somatic Wellbeing Enquiry,62,4.29,4.03,3.82,4.1,3.81,3.9,3.82,4.0
-1049-50,1050,Health,Occupational Therapy,51,3.76,3.84,3.88,3.78,3.78,3.8,3.67,3.8
-1049-50,1050,Health,Pharmacy,26,3.65,3.77,3.73,3.96,3.88,3.69,3.5,3.81
-1049-50,1050,Health,Physiotherapy,46,3.76,3.83,3.85,3.93,3.72,3.76,3.57,3.78
-1049-50,1050,Health,Social Work,46,3.63,3.74,3.76,4.0,3.72,3.72,3.7,3.76
-1049-50,1050,Health,Somatic Wellbeing Enquiry,93,4.06,3.85,3.82,3.88,3.73,3.82,3.82,3.81
-1050-51,1051,Health,Occupational Therapy,55,3.73,3.69,3.82,4.0,3.76,3.65,3.76,3.87
-1050-51,1051,Health,Pharmacy,36,3.64,3.64,3.83,3.92,3.64,3.83,3.81,3.64
-1050-51,1051,Health,Physiotherapy,38,3.47,3.47,3.45,3.84,3.5,3.61,3.45,3.58
-1050-51,1051,Health,Social Work,34,3.62,3.74,3.74,4.0,3.71,3.62,3.76,3.59
-1050-51,1051,Health,Somatic Wellbeing Enquiry,76,4.2,4.0,3.79,3.95,3.83,3.92,3.87,3.88
-1051-52,1052,Health,Occupational Therapy,46,3.63,3.67,3.74,3.89,3.76,3.8,3.74,3.76
-1051-52,1052,Health,Pharmacy,29,3.62,3.72,3.62,3.69,3.69,3.69,3.52,3.66
-1051-52,1052,Health,Physiotherapy,48,3.71,3.69,3.79,3.85,3.75,3.9,3.75,3.75
-1051-52,1052,Health,Social Work,43,3.7,3.74,3.6,4.05,3.67,3.7,3.65,3.72
-1051-52,1052,Health,Somatic Wellbeing Enquiry,87,4.1,3.91,3.7,3.91,3.75,3.84,3.79,3.75
-1052-53,1053,Health,Occupational Therapy,63,3.68,3.71,3.79,3.87,3.75,3.68,3.73,3.81
-1052-53,1053,Health,Pharmacy,39,3.79,3.64,3.9,4.05,3.85,3.79,3.67,4.05
-1052-53,1053,Health,Physiotherapy,57,3.77,3.82,3.91,3.89,3.81,3.74,3.67,3.89
-1052-53,1053,Health,Social Work,34,3.59,3.79,3.79,3.91,3.68,3.79,3.71,3.79
-1052-53,1053,Health,Somatic Wellbeing Enquiry,99,4.12,3.98,3.87,3.92,3.74,3.89,3.94,3.94
+1048-49,1049,Education,Education Studies,51,4.25,3.96,3.78,4.0,3.75,3.96,3.88,4.0
+1048-49,1049,Education,Educational Mentorship,63,4.13,3.9,3.63,3.97,3.67,3.81,3.81,3.86
+1048-49,1049,Education,Intergenerational Learning,89,4.18,3.93,3.82,4.03,3.9,3.83,3.84,3.93
+1048-49,1049,Health,Herbal Practice and Energy Work,53,4.08,3.94,3.68,3.91,3.72,3.81,3.83,3.91
+1048-49,1049,Health,Integrated Mind-Body,46,4.22,3.93,3.61,3.87,3.74,3.78,3.89,3.78
+1048-49,1049,Health,Midwifery,57,4.12,3.95,3.56,3.98,3.79,3.93,3.79,4.04
+1048-49,1049,Health,Nursing and Care,80,4.11,4.01,3.82,3.99,3.72,3.96,3.85,3.85
+1048-49,1049,Health,Occupational Therapy,60,4.12,3.88,3.72,3.95,3.72,3.82,3.7,3.88
+1048-49,1049,Health,Pharmacy,29,4.07,3.83,3.52,3.62,3.62,3.55,3.76,3.79
+1048-49,1049,Health,Physiotherapy,62,4.06,3.95,3.74,3.97,3.76,3.94,3.87,3.92
+1048-49,1049,Health,Social Work,53,4.23,3.98,3.79,3.85,3.64,3.87,3.83,3.96
+1048-49,1049,Health,Somatic Wellbeing Enquiry,74,4.01,3.82,3.61,3.81,3.72,3.91,3.74,3.74
+1049-50,1050,Education,Education Studies,74,4.11,4.0,3.73,3.77,3.61,3.81,3.86,3.84
+1049-50,1050,Education,Educational Mentorship,55,4.13,3.76,3.69,3.85,3.71,3.95,3.84,3.75
+1049-50,1050,Education,Intergenerational Learning,72,4.14,3.89,3.67,3.99,3.74,3.93,3.92,3.72
+1049-50,1050,Health,Herbal Practice and Energy Work,67,4.03,3.93,3.63,3.7,3.69,3.93,3.82,3.76
+1049-50,1050,Health,Integrated Mind-Body,54,4.2,3.93,3.72,3.78,3.78,3.89,3.83,3.78
+1049-50,1050,Health,Midwifery,64,4.12,3.94,3.59,3.91,3.78,4.0,3.84,3.77
+1049-50,1050,Health,Nursing and Care,63,4.13,3.86,3.7,3.89,3.7,3.86,3.67,3.84
+1049-50,1050,Health,Occupational Therapy,61,4.08,3.97,3.67,3.87,3.77,3.85,3.75,3.9
+1049-50,1050,Health,Pharmacy,34,4.06,3.88,3.59,3.82,3.59,3.74,3.88,3.79
+1049-50,1050,Health,Physiotherapy,71,4.14,3.92,3.65,3.86,3.65,3.79,3.75,3.89
+1049-50,1050,Health,Social Work,54,4.17,4.02,3.72,3.89,3.74,3.89,3.8,4.06
+1049-50,1050,Health,Somatic Wellbeing Enquiry,108,4.06,3.93,3.6,3.78,3.71,3.82,3.72,3.73
+1050-51,1051,Education,Education Studies,67,4.06,3.94,3.67,3.87,3.67,3.87,3.9,3.82
+1050-51,1051,Education,Educational Mentorship,72,3.97,3.88,3.62,3.81,3.58,3.72,3.67,3.67
+1050-51,1051,Education,Intergenerational Learning,78,4.27,4.0,3.78,4.01,3.64,3.9,3.87,3.91
+1050-51,1051,Health,Herbal Practice and Energy Work,65,4.15,3.86,3.69,3.88,3.66,3.72,3.72,3.85
+1050-51,1051,Health,Integrated Mind-Body,53,4.19,3.98,3.7,3.94,3.83,3.87,3.81,3.79
+1050-51,1051,Health,Midwifery,56,4.12,3.95,3.55,3.8,3.68,3.95,3.88,3.73
+1050-51,1051,Health,Nursing and Care,47,4.17,3.96,3.7,3.91,3.83,3.89,3.7,3.72
+1050-51,1051,Health,Occupational Therapy,57,4.19,3.84,3.7,3.89,3.68,3.89,3.79,3.77
+1050-51,1051,Health,Pharmacy,39,4.08,3.85,3.62,3.79,3.67,3.79,3.74,3.72
+1050-51,1051,Health,Physiotherapy,62,4.1,3.81,3.61,3.65,3.69,3.82,3.73,3.71
+1050-51,1051,Health,Social Work,53,4.02,3.87,3.51,3.91,3.64,3.75,3.77,3.85
+1050-51,1051,Health,Somatic Wellbeing Enquiry,94,4.15,3.97,3.63,3.97,3.67,3.87,3.77,3.83
+1051-52,1052,Education,Education Studies,72,4.21,4.01,3.74,4.0,3.86,3.81,3.79,4.01
+1051-52,1052,Education,Educational Mentorship,70,4.03,3.83,3.69,3.8,3.53,3.7,3.71,3.77
+1051-52,1052,Education,Intergenerational Learning,83,4.27,4.02,3.75,3.92,3.7,3.96,3.81,3.87
+1051-52,1052,Health,Herbal Practice and Energy Work,83,4.08,3.87,3.52,3.82,3.69,3.86,3.73,3.82
+1051-52,1052,Health,Integrated Mind-Body,47,4.19,3.94,3.53,3.81,3.51,3.83,3.68,3.79
+1051-52,1052,Health,Midwifery,61,4.13,3.87,3.69,3.89,3.75,3.85,3.79,3.84
+1051-52,1052,Health,Nursing and Care,58,4.17,4.02,3.69,3.95,3.67,3.9,3.86,3.93
+1051-52,1052,Health,Occupational Therapy,62,4.1,4.0,3.52,3.85,3.6,3.9,3.77,3.84
+1051-52,1052,Health,Pharmacy,44,3.93,3.77,3.48,3.75,3.64,3.75,3.61,3.75
+1051-52,1052,Health,Physiotherapy,51,4.2,3.98,3.65,3.8,3.61,3.92,3.78,3.8
+1051-52,1052,Health,Social Work,71,4.17,3.97,3.68,3.8,3.68,3.82,3.65,3.77
+1051-52,1052,Health,Somatic Wellbeing Enquiry,113,3.98,3.96,3.49,3.9,3.62,3.9,3.86,3.73
+1052-53,1053,Education,Education Studies,76,4.16,3.93,3.75,3.91,3.72,3.84,3.82,3.92
+1052-53,1053,Education,Educational Mentorship,64,4.11,3.94,3.64,3.83,3.78,3.77,3.69,3.84
+1052-53,1053,Education,Intergenerational Learning,70,4.11,3.87,3.53,3.87,3.51,3.81,3.69,3.71
+1052-53,1053,Health,Herbal Practice and Energy Work,80,4.1,3.9,3.54,3.81,3.65,3.79,3.75,3.81
+1052-53,1053,Health,Integrated Mind-Body,35,4.17,4.06,3.77,3.86,3.6,3.83,3.74,4.03
+1052-53,1053,Health,Midwifery,65,4.06,3.91,3.68,3.8,3.69,3.74,3.72,3.63
+1052-53,1053,Health,Nursing and Care,75,4.16,3.93,3.68,3.97,3.73,3.81,3.8,3.91
+1052-53,1053,Health,Occupational Therapy,66,4.08,3.94,3.71,3.77,3.68,3.76,3.79,3.79
+1052-53,1053,Health,Pharmacy,40,4.03,3.82,3.55,3.78,3.55,3.82,3.65,3.82
+1052-53,1053,Health,Physiotherapy,69,4.07,3.86,3.64,3.8,3.59,3.87,3.74,3.78
+1052-53,1053,Health,Social Work,52,4.17,4.0,3.73,3.79,3.63,3.9,3.79,3.88
+1052-53,1053,Health,Somatic Wellbeing Enquiry,108,4.06,3.92,3.65,3.87,3.62,3.86,3.86,3.81

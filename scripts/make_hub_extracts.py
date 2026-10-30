@@ -170,8 +170,10 @@ def build_values(t: dict[str, pd.DataFrame], ex: dict[str, pd.DataFrame]) -> dic
             p = sub[sub["programme_name"] == name]
             v[f"{slug}_nss_overall_{y}"] = mean1(p["overall_satisfaction"].mean())
             v[f"{slug}_nss_assessment_feedback_{y}"] = mean1(p["assessment_feedback"].mean())
-        edu = sub[sub["department"] == "Education"]
-        v[f"education_nss_overall_{y}"] = mean1(edu["overall_satisfaction"].mean())  # null by design: no finalists
+        for dept in ("Education", "Health"):
+            d = sub[sub["department"] == dept]
+            v[f"{dept.lower()}_nss_overall_{y}"] = mean1(d["overall_satisfaction"].mean())
+            v[f"{dept.lower()}_nss_assessment_feedback_{y}"] = mean1(d["assessment_feedback"].mean())
 
     # Enrolments
     en = t["fact_enrollment"].merge(hep, on="programme_code")
@@ -182,6 +184,7 @@ def build_values(t: dict[str, pd.DataFrame], ex: dict[str, pd.DataFrame]) -> dic
     v["nursing_enrolled_1052"] = int((snap["programme_name"] == "Nursing and Care").sum())
     v["nursing_year1_1052"] = int(((snap["programme_name"] == "Nursing and Care") & (snap["programme_year"] == 1)).sum())
     v["nursing_year2_1052"] = int(((snap["programme_name"] == "Nursing and Care") & (snap["programme_year"] == 2)).sum())
+    v["nursing_year3_1052"] = int(((snap["programme_name"] == "Nursing and Care") & (snap["programme_year"] == 3)).sum())
     v["ot_enrolled_1052"] = int((snap["programme_name"] == "Occupational Therapy").sum())
 
     # Progression, Nursing and Care, snapshot year
@@ -251,8 +254,8 @@ def write_extracts(ex: dict[str, pd.DataFrame]) -> None:
         "- **Good honours**: First or Upper Second class degree.\n"
         "- **Awarding gap**: good honours rate for Elf graduates minus the rate for Dwarf graduates, in percentage points.\n"
         "- **NSS year**: the year the survey is published. NSS 1052 surveyed finalists in 1051-52.\n"
-        "- **Finalists**: students in the final year of their programme. Two-year programmes have finalists in Year 2 "
-        "but are not surveyed; the NSS covers three-year programmes only.\n"
+        "- **Finalists**: students in Year 3. All twelve of the Faculty's programmes are three-year honours "
+        "programmes, so every programme has finalists in the NSS and graduates with a classification.\n"
         "- **Species** is recorded as declared at enrolment.\n\n"
         "## Caveats\n\n"
         "Programme-level figures with fewer than 20 graduates should not be reported externally. "

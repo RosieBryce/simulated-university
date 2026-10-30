@@ -163,7 +163,7 @@ staff:
     ext: "4200"
     voice: >
       Passionate, fast, all lower-case emails with no punctuation at the ends
-      of lines. Took the Education NSS dip personally. Produces action plans
+      of lines. Took the Faculty NSS dip personally, although her own department's scores went up. Produces action plans
       at midnight and revises them at six. Three versions of everything,
       none of them marked.
     cares_about: Her students. Being seen to act. Not being blamed for the dip.
@@ -362,7 +362,7 @@ staff:
       Files everything perfectly. Her library is the one place the naming
       convention is followed to the letter. Terse. Replies in bullet points.
       Her awarding gap extract is half finished because she was pulled onto
-      the Education NSS dip in October and never got back to it.
+      the Faculty NSS deep dive in October and never got back to it.
     cares_about: Reproducibility. Version control. The convention.
     clashes_with: [saelith-emberthorn, teylin-leafchant]
     tells: ["See attached.", "v01", "YYYY-MM-DD", "Not yet QA'd.", "Source:"]

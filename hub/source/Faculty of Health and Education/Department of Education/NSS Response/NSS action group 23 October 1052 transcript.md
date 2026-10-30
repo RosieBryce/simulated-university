@@ -30,14 +30,14 @@ mangle:
 [00:00:26] teylin-leafchant: Mostly.
 [00:00:27] erra-measurine: Teylin.
 [00:00:28] saelith-emberthorn: ok let's not. the point is the scores dropped and the dean wants an action plan from each department by the end of november and i'd rather ours was good. so. what are we doing.
-[00:00:38] erra-measurine: Saelith, before we get to actions. The thing I need to say, and I've said it in the report, is that Education doesn't have NSS results. Your programmes are two years. The NSS surveys finalists on three-year programmes. The Faculty figures are Health's figures. The drop in assessment and feedback is OT and Somatic Wellbeing.
+[00:00:38] erra-measurine: Saelith, before we get to actions. The thing I need to say, and I've said it in the report, is that Education's NSS results didn't fall. Assessment and feedback went up on all three of your programmes. The Faculty drop is Health: OT, Somatic Wellbeing, Pharmacy and the two holistic programmes.
 [00:00:55] saelith-emberthorn: i know that erra. i know. but the dean read the faculty number and asked every department for a plan. so we're writing a plan.
-[00:01:02] erra-measurine: A plan for what, though. You can't improve a score you don't have.
-[00:01:05] jaskel-doodlehook: We can improve the thing the score is about! Assessment and feedback! Our students have assessment and feedback!
-[00:01:10] erra-measurine: You can. I'd just want the plan to say that's what it's doing, rather than imply you're responding to a fall in your own scores, because you'll be asked for the before and after and there isn't one.
-[00:01:19] teylin-leafchant: The enrolment survey's got support satisfaction and belonging for all years. Education's in it. It's flat, but it's there. You could use that as the baseline.
+[00:01:02] erra-measurine: A plan for what, though. Your line went up.
+[00:01:05] jaskel-doodlehook: We can make it go up more! Assessment and feedback! Our students still say it's slow!
+[00:01:10] erra-measurine: You can. I'd just want the plan to say that's what it's doing, rather than imply you're responding to a fall in your own scores, because you'll be asked for the before and after and the before is fine.
+[00:01:19] teylin-leafchant: The enrolment survey's got support satisfaction and belonging for all years, not just finalists. It's flat, but it's there. You could use that alongside your own NSS line.
 [00:01:27] erra-measurine: That's what the report says. Section what does this not say.
-[00:01:30] saelith-emberthorn: fine. ok. baseline is the enrolment survey. put that in. actions. what are we actually going to do. jaskel.
+[00:01:30] saelith-emberthorn: fine. ok. baseline is our own nss line plus the enrolment survey. put that in. actions. what are we actually going to do. jaskel.
 [00:01:36] jaskel-doodlehook: Feedback clinics! Weekly! Students come, we go through their marked work, they leave happy!
 [00:01:41] saelith-emberthorn: weekly is a lot. who's staffing weekly.
 [00:01:43] jaskel-doodlehook: Me? Mostly?
@@ -62,7 +62,7 @@ mangle:
 [00:02:55] erra-measurine: I know. I'm saying it to the room.
 [00:02:57] saelith-emberthorn: ok. no names in notes. jaskel, the leaflet thing. not now.
 [00:03:00] jaskel-doodlehook: I wasn't going to!
-[00:03:02] saelith-emberthorn: you were. right. so actions. fortnightly feedback workshops from february, jaskel plus one. module leaders record return dates from now, erra measures termly. focus groups in november, teylin facilitates, no names in notes, i'm sitting in. baseline is the enrolment survey not the nss. and the plan says clearly that it's about our assessment and feedback practice, not a response to a score we don't have.
+[00:03:02] saelith-emberthorn: you were. right. so actions. fortnightly feedback workshops from february, jaskel plus one. module leaders record return dates from now, erra measures termly. focus groups in november, teylin facilitates, no names in notes, i'm sitting in. baseline is our own nss line and the enrolment survey, not the faculty figure. and the plan says clearly that it's about our assessment and feedback practice, not a response to a fall we didn't have.
 [00:03:24] erra-measurine: And it goes to the Dean with the deep dive attached, so he reads the caveat.
 [00:03:27] saelith-emberthorn: he won't read it.
 [00:03:28] erra-measurine: Then put the caveat on page one.

@@ -16,7 +16,7 @@ skills: [2]
 PI-1052-039 notes. E.M. 1052-10-11.
 
 - Faculty-level figures done and match annual report method. 1052 figure to be reconciled when annual report v01 is final (Nov).
-- Programme-level: only SWE returns graduates in both groups. OT, Pharmacy, Physio, SW have finalists (NSS) but no good honours rows in the extract. Either the extract is wrong or the record system is not writing classifications for those programmes. Raise with Quality before Council sees anything by programme.
-- Two-year programmes: no classification by design. Table should say so, not show blanks.
+- Programme-level: all twelve programmes return graduates. Split by species, Pharmacy and Physiotherapy look under 20 for Elf graduates in 1052; check, then suppress. Small programmes swing year to year; do not let anyone set a programme target off one year.
+- Earlier cut (Sept) had graduates for one programme only. That was a record system fault, fixed in the October refresh. Make sure nobody is still using the September cut.
 - Paused: NSS deep dive for the Dean takes priority (due 17 Oct).
 - Not yet QA'd. Not for circulation. If anyone asks for programme-level gap figures before this is finished, the answer is no.

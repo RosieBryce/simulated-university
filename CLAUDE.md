@@ -83,11 +83,11 @@ Joining key: `student_id` + `academic_year`. See `docs/PIPELINE_FLOW.md`.
 
 ```bash
 python scripts/make_hub_extracts.py          # Planning and Insight extracts + values.yaml from data/relational (also run by build_relational_outputs.py)
-python hub/build/build_estate.py --seed 42   # render source -> hub/output/estate, lint names, write docs/hub/data/manifest.json, publish to docs/hub/estate
+python hub/build/build_estate.py --seed 42   # render source -> %TEMP%/stonegrove-hub-build/estate (outside Drive; override with HUB_BUILD_DIR), lint names, write docs/hub/data/manifest.json, publish to docs/hub/estate
 python hub/build/make_zips.py                # docs/hub/downloads/*.zip
 ```
 
-Filenames in the estate must pass `hub/bible/filename_rules.yaml` (Windows-safe, ASCII, under 180 characters in the zip); the build fails otherwise. In-world documents quote dataset figures as `{{ key }}` from `hub/source/values.yaml`, never as literals. No em dashes in anything the Hub ships.
+Filenames in the estate must pass `hub/bible/filename_rules.yaml` (Windows-safe, ASCII, under 160 characters in the zip); the build fails otherwise. In-world documents quote dataset figures as `{{ key }}` from `hub/source/values.yaml`, never as literals. No em dashes in anything the Hub ships.
 
 ## Documentation
 

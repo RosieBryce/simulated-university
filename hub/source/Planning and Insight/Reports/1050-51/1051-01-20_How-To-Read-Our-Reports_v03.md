@@ -37,7 +37,7 @@ Graduating year 1052 means students who completed in academic year 1051-52. NSS 
 
 ## 5. Who is in the population
 
-Only three-year programmes produce honours classifications and NSS finalists. A department made up of two-year programmes has no awarding gap and no NSS score, and an action plan written for it on the basis of Faculty figures is responding to other people's students.
+Only graduates have an honours classification and only finalists answer the NSS. A Year 1 student's experience appears in neither; for that, use the enrolment survey. And a Faculty figure is an average of departments: an action plan written for one department on the basis of the Faculty figure may be responding to other people's students.
 
 ## 6. Correlation, cause and what to do
 

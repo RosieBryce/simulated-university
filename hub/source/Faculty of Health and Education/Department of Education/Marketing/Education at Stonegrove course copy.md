@@ -23,15 +23,15 @@ we educate the people who help others learn: in schools, in communities, across 
 
 ## education studies
 
-two years. the study of how people learn, how schools and other institutions shape that, and how it could be better. placements in a school or community setting in both years. graduates go on to teacher training, to work in schools in non-teaching roles, to community education and to further study
+three years. the study of how people learn, how schools and other institutions shape that, and how it could be better. placements in a school or community setting in every year, and a dissertation in year 3. graduates go on to teacher training, to work in schools in non-teaching roles, to community education and to further study
 
 ## educational mentorship
 
-two years. for people who want to support learners one to one or in small groups: mentors, learning support staff, youth workers. a strong practical thread with a supervised mentoring placement in year 2
+three years. for people who want to support learners one to one or in small groups: mentors, learning support staff, youth workers. a strong practical thread with a supervised mentoring placement in year 2
 
 ## intergenerational learning
 
-two years. the only programme of its kind in the vale. how older and younger people learn from each other, and how to design settings where they do. placements in elder care, in schools and in the community projects that bring them together
+three years. the only programme of its kind in the vale. how older and younger people learn from each other, and how to design settings where they do. placements in elder care, in schools and in the community projects that bring them together
 
 ## how we teach
 

@@ -29,7 +29,7 @@ Confidential. Papers identify students by student number only. Papers to members
 | 4 | Chair's report: regulations in force, compensation and classification rules, extenuating circumstances outcomes (numbers only) | To note | EB/1053/01 | Chair |
 | 5 | External examiners' oral reports | To note | Oral | Externals |
 | 6 | Module marks: Year 2, all Health programmes, by module | To confirm | EB/1053/02 (marks tables) | Programme leaders |
-| 7 | Progression decisions: Year 2 to Year 3; Diploma awards for two-year programmes | To determine | EB/1053/03 | Chair |
+| 7 | Progression decisions: Year 2 to Year 3; exit awards | To determine | EB/1053/03 | Chair |
 | 8 | Module marks: Year 3 | To confirm | EB/1053/04 | Programme leaders |
 | 9 | Classification and award: Year 3 | To determine | EB/1053/05 | Chair |
 | 10 | Fitness to practise: confirmation that no outstanding matters prevent award (numbers only) | To note | Oral | FtP Lead |

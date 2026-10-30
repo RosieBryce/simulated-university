@@ -26,7 +26,9 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import shutil
+import tempfile
 import sys
 import time
 from pathlib import Path
@@ -43,7 +45,11 @@ from lint_filenames import Rules, lint_tree  # noqa: E402
 
 BIBLE = HUB / "bible"
 SOURCE = HUB / "source"
-OUT = HUB / "output" / "estate"
+# Built outside the repo: the repo lives in a Google Drive folder, which
+# holds handles on freshly written directories and leaves them behind on
+# delete. The build is an intermediate; only docs/hub/ is published.
+BUILD_ROOT = Path(os.environ.get("HUB_BUILD_DIR") or Path(tempfile.gettempdir()) / "stonegrove-hub-build")
+OUT = BUILD_ROOT / "estate"
 DOCS_HUB = PROJECT / "docs" / "hub"
 MANIFEST = DOCS_HUB / "data" / "manifest.json"
 PREVIEWS = DOCS_HUB / "data" / "preview"
@@ -76,6 +82,43 @@ def site_index(sites: dict) -> tuple[dict, dict, dict]:
 
 def date_str(d: dt.date) -> str:
     return d.isoformat()
+
+
+def clear_tree(root: Path, strict: bool) -> None:
+    """Empty and remove a directory tree.
+
+    The repo lives in a Google Drive folder, which holds handles on recently
+    written files and directories, so shutil.rmtree fails part-way and leaves
+    empty directories behind. Those would be picked up by collect_folders()
+    as phantom junk folders and make the build non-reproducible. So: delete
+    files, then remove directories deepest first, retrying each a few times.
+    With strict=True, anything that survives is an error.
+    """
+    if not root.exists():
+        return
+    attempts = 3 if strict else 1
+    for p in sorted(root.rglob("*"), key=lambda x: len(x.parts), reverse=True):
+        for attempt in range(attempts):
+            try:
+                if p.is_dir():
+                    p.rmdir()
+                else:
+                    p.unlink()
+                break
+            except FileNotFoundError:
+                break
+            except OSError:
+                if attempt + 1 < attempts:
+                    time.sleep(0.2)
+    try:
+        root.rmdir()
+    except OSError:
+        pass
+    left = list(root.rglob("*")) if root.exists() else []
+    if left and strict:
+        sample = ", ".join(str(p.relative_to(root)) for p in left[:5])
+        raise SystemExit(f"could not clear {root} ({len(left)} entries left, e.g. {sample}). "
+                         "Pause Google Drive sync or close Explorer windows on it and retry.")
 
 
 # ----------------------------------------------------------------------
@@ -123,18 +166,7 @@ class Builder:
 
     # ------------------------------------------------------------------
     def build(self) -> None:
-        # The repo lives in a Google Drive folder, which holds handles on
-        # recently written directories, so rmtree can fail with WinError 5.
-        # Delete files first, then try the tree, and tolerate leftover dirs.
-        if OUT.exists():
-            for p in OUT.rglob("*"):
-                if p.is_file():
-                    try:
-                        p.unlink()
-                    except PermissionError:
-                        time.sleep(0.5)
-                        p.unlink()
-            shutil.rmtree(OUT, ignore_errors=True)
+        clear_tree(OUT, strict=True)
         OUT.mkdir(parents=True, exist_ok=True)
         PREVIEWS.mkdir(parents=True, exist_ok=True)
         for old in PREVIEWS.glob("*.txt"):
@@ -183,15 +215,9 @@ class Builder:
         """Mirror the built tree into docs/hub/estate/ so the explorer can serve
         individual files and build folder zips in the browser."""
         pub = DOCS_HUB / "estate"
-        if pub.exists():
-            for p in pub.rglob("*"):
-                if p.is_file():
-                    try:
-                        p.unlink()
-                    except PermissionError:
-                        time.sleep(0.5)
-                        p.unlink()
-            shutil.rmtree(pub, ignore_errors=True)
+        # Not strict: git does not track empty directories, and the explorer
+        # reads the manifest, so a stale empty folder here is harmless.
+        clear_tree(pub, strict=False)
         shutil.copytree(OUT, pub, dirs_exist_ok=True)
         print(f"published estate -> {pub.relative_to(PROJECT)}")
 

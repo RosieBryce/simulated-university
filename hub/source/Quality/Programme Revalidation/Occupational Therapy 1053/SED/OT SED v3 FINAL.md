@@ -50,7 +50,7 @@ Appendix F: Proposed Year 2 assessment pattern
 
 ## 1. Summary
 
-The Occupational Therapy programme has run since 1047 and was last revalidated in that year. It recruits well, its students progress and achieve at rates comparable with the University's other three-year health programmes, its external examiner confirms standards every year, and its graduates are employed in the profession. The programme team is proud of it.
+The Occupational Therapy programme has run since 1047 and was last revalidated in that year. It recruits well, its students progress and achieve at rates comparable with the Faculty's other health programmes, its external examiner confirms standards every year, and its graduates are employed in the profession. The programme team is proud of it.
 
 The programme also has a problem it has not solved. Year 2 carries twelve summative assessment points across six modules. The external examiner has recommended a reduction in each of the last three reports. Students' NSS responses on Assessment and Feedback fell in 1052 and their free text says what the external says. The programme's annual monitoring has recorded the matter as "under review" three times. The team accepts that this is not good enough and that the honest reason is not disagreement with the recommendation but the difficulty of changing six module descriptors outside a revalidation. This revalidation is the opportunity, and section 11 and Appendix F set out a Year 2 pattern with seven assessment points rather than twelve.
 
@@ -60,7 +60,7 @@ The team asks the panel to revalidate the programme for a further five years wit
 
 ## 2. The programme and its context
 
-2.1 Occupational Therapy is a three-year honours programme in the Department of Health, Faculty of Health and Education. It leads to eligibility for professional registration. It is one of five three-year programmes in the Faculty and the only one in which the central concept, occupation, is as much a philosophy as a clinical practice.
+2.1 Occupational Therapy is a three-year honours programme in the Department of Health, Faculty of Health and Education. It leads to eligibility for professional registration. It is one of the Faculty's twelve three-year honours programmes and the only one in which the central concept, occupation, is as much a philosophy as a clinical practice.
 
 2.2 The programme was designed in 1046 and 1047 at the time of the Faculty's reorganisation and has been taught with minor modification since. It sits alongside Physiotherapy, with which it shares two modules and a placement provider (Riverside Rehabilitation Unit), and alongside Nursing and Care, with which it shares NC204 Mental Health and Wellbeing in Care.
 
