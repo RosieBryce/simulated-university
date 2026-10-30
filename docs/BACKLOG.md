@@ -7,7 +7,7 @@ Items here are deferred because they require design decisions, interact with oth
 ## BUG: Mis-coded Modules sheet strands two thirds of students before graduation
 
 **Added**: 2026-10-29
-**Status**: Fixed and re-run on branch `claude/stoic-dirac-b41913` (2026-10-30, 138 min). `data/relational/` is regenerated and passes the Section 0 integrity checks; docs and site counts updated. **Release not yet cut** (see "Still to do").
+**Status**: Fixed and re-run on branch `claude/stoic-dirac-b41913` (2026-10-30, 138 min). `data/relational/` is regenerated and passes the Section 0 integrity checks; docs and site counts updated. **Released as v2.7.0** (Hub re-profile still to do, see below).
 
 **What happens.** In the v2.6.0 dataset 27 of the 55 programmes never have a `programme_year` 3 enrolment, and `fact_good_honours` has rows for only 21 programmes. Science & Engineering has **zero** graduates; Health & Education has graduates from Somatic Wellbeing Enquiry only (538); Culture & Social Sciences from Geography and History only. Of 35,000 students, **16,873 simply vanish**: their last `fact_enrollment` row is status `enrolled` (14,885 at Year 2, 1,988 at Year 3) with no `fact_progression` row and nothing afterwards — not withdrawn, not graduated. 84% of the 6,039 graduates come from two faculties (Craft, Art & Architecture 3,648; Business & Law 1,451).
 
@@ -34,7 +34,7 @@ Items here are deferred because they require design decisions, interact with oth
 
 **Still to do.**
 1. Re-profile the Stonegrove Hub. The Hub lives on `feat/hub-phase0`, which does not have this branch's fix, so merge this branch into it first, then run `make_hub_extracts.py`, `generate_sources.py`, `build_estate.py`, `make_zips.py` and check `hub/source/values.yaml` for new null keys. Its storylines and in-world documents quote programme structure that has now changed (all 55 programmes graduate).
-2. Cut a new GitHub release and point the download button in `docs/download.html` at it (it still names v2.6.0).
+2. ~~Cut a new GitHub release~~ Done: v2.7.0, download button updated.
 3. Module characteristics are keyed by module title alone: 23 titles shared across programmes differ in difficulty and collapse to one row, so `dim_modules.assessment_type` for 523801 shows the Year 3 value. Key them by (programme, year, title).
 4. Resits are not modelled; Year 3 fails run at 1.8x Year 1.
 
